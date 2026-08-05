@@ -18,91 +18,64 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a reservation resource.  A reservation ensures that capacity is
-  /// held in a specific zone even if the reserved VMs are not running. For more
-  /// information, read  Reserving zonal
-  /// resources.
+  /// Represents a reservation resource. A reservation ensures that capacity is held in a specific zone even if the reserved VMs are not running. For more information, read Reserving zonal resources.
   public struct Reservation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Advanced control for cluster management, applicable only to DENSE
-    /// deployment type reservations.
+    /// Advanced control for cluster management, applicable only to DENSE deployment type reservations.
     public var advancedDeploymentControl: ReservationAdvancedDeploymentControl? = nil
 
     /// Reservation for aggregated resources, providing shape flexibility.
     public var aggregateReservation: AllocationAggregateReservation? = nil
 
-    /// Output only. [Output Only] Full or partial URL to a parent commitment. This field
-    /// displays for reservations that are tied to a commitment.
+    /// Output only. [Output Only] Full or partial URL to a parent commitment. This field displays for reservations that are tied to a commitment.
     public var commitment: Swift.String? = nil
 
     public var confidentialComputeType: Reservation.ConfidentialComputeType? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// Duration time relative to reservation creation when Compute Engine will
-    /// automatically delete this resource.
+    /// Duration time relative to reservation creation when Compute Engine will automatically delete this resource.
     public var deleteAfterDuration: Duration? = nil
 
-    /// Absolute time in future when the reservation will be
-    ///  auto-deleted by Compute Engine. Timestamp is represented inRFC3339 text format.
+    /// Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp is represented in RFC3339 text format.
     public var deleteAtTime: Swift.String? = nil
 
     /// Specifies the deployment strategy for this reservation.
     public var deploymentType: Reservation.DeploymentType? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Indicates the early access maintenance for the reservation.
-    /// If this field is absent or set to NO_EARLY_ACCESS, the reservation is not
-    /// enrolled in early access maintenance and the standard notice applies.
+    /// Indicates the early access maintenance for the reservation. If this field is absent or set to NO_EARLY_ACCESS, the reservation is not enrolled in early access maintenance and the standard notice applies.
     public var earlyAccessMaintenance: Reservation.EarlyAccessMaintenance? = nil
 
-    /// Indicates whether Compute Engine allows unplanned maintenance for your VMs;
-    /// for example, to fix hardware errors.
+    /// Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix hardware errors.
     public var enableEmergentMaintenance: Swift.Bool? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#reservations for reservations.
+    /// Output only. [Output Only] Type of the resource. Always compute#reservations for reservations.
     public var kind: Swift.String? = nil
 
-    /// Output only. [Output Only] Full or partial URL to parent commitments. This field
-    /// displays for reservations that are tied to multiple commitments.
+    /// Output only. [Output Only] Full or partial URL to parent commitments. This field displays for reservations that are tied to multiple commitments.
     public var linkedCommitments: [Swift.String] = []
 
-    /// The name of the resource, provided by the client when initially creating
-    /// the resource. The resource name must be 1-63 characters long, and comply
-    /// withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Input only. Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. Additional params passed with the request, but not persisted as part of resource payload.
     public var params: ReservationParams? = nil
 
-    /// Protection tier for the workload which specifies the workload expectations
-    /// in the event of infrastructure failures at data center (e.g. power
-    /// and/or cooling failures).
+    /// Protection tier for the workload which specifies the workload expectations in the event of infrastructure failures at data center (e.g. power and/or cooling failures).
     public var protectionTier: Reservation.ProtectionTier? = nil
 
-    /// Specify the reservation sharing policy. If unspecified, the reservation
-    /// will not be shared with Google Cloud managed services.
+    /// Specify the reservation sharing policy. If unspecified, the reservation will not be shared with Google Cloud managed services.
     public var reservationSharingPolicy: AllocationReservationSharingPolicy? = nil
 
-    /// Resource policies to be added to this reservation. The key is defined by
-    /// user, and the value is resource policy url. This is to define placement
-    /// policy with reservation.
+    /// Resource policies to be added to this reservation. The key is defined by user, and the value is resource policy url. This is to define placement policy with reservation.
     public var resourcePolicies: [Swift.String: Swift.String] = [:]
 
     /// Output only. [Output Only] Status information for Reservation resource.
@@ -117,33 +90,19 @@
     /// Output only. [Output Only] Server-defined fully-qualified URL for this resource.
     public var selfLink: Swift.String? = nil
 
-    /// Specify share-settings to create a shared reservation. This property is
-    /// optional. For more information about the syntax and options for this
-    /// field and its subfields, see the guide for creating
-    /// a shared reservation.
+    /// Specify share-settings to create a shared reservation. This property is optional. For more information about the syntax and options for this field and its subfields, see the guide for creating a shared reservation.
     public var shareSettings: ShareSettings? = nil
 
     /// Reservation for instances with specific machine shapes.
     public var specificReservation: AllocationSpecificSKUReservation? = nil
 
-    /// Indicates whether the reservation can be consumed by VMs with affinity
-    /// for "any" reservation. If the field is set, then only VMs that target
-    /// the reservation by name can consume from this reservation.
+    /// Indicates whether the reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from this reservation.
     public var specificReservationRequired: Swift.Bool? = nil
 
-    /// Output only. [Output Only] The status of the reservation.
-    ///
-    ///
-    ///      - CREATING: Reservation resources are being
-    ///        allocated.
-    ///      - READY: Reservation resources have been allocated,
-    ///        and the reservation is ready for use.
-    ///      - DELETING: Reservation deletion is in progress.
-    ///      - UPDATING: Reservation update is in progress.
+    /// Output only. [Output Only] The status of the reservation. - CREATING: Reservation resources are being allocated. - READY: Reservation resources have been allocated, and the reservation is ready for use. - DELETING: Reservation deletion is in progress. - UPDATING: Reservation update is in progress.
     public var status: Reservation.Status? = nil
 
-    /// Zone in which the reservation resides. A zone must be provided if the
-    /// reservation is created within a commitment.
+    /// Zone in which the reservation resides. A zone must be provided if the reservation is created within a commitment.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `Reservation`.
@@ -471,19 +430,11 @@
     ///
     /// [google.cloud.compute.v1.Reservation.protectionTier]: <doc:Reservation/ProtectionTier>
     public enum ProtectionTier: Codable, Equatable, Sendable {
-      /// CAPACITY_OPTIMIZED capacity leverages redundancies (e.g. power, cooling)
-      /// at the data center during normal operating conditions. In the event of
-      /// infrastructure failures at data center (e.g. power and/or cooling
-      /// failures), this workload may be disrupted. As a consequence, it has a
-      /// weaker availability SLO than STANDARD.
+      /// CAPACITY_OPTIMIZED capacity leverages redundancies (e.g. power, cooling) at the data center during normal operating conditions. In the event of infrastructure failures at data center (e.g. power and/or cooling failures), this workload may be disrupted. As a consequence, it has a weaker availability SLO than STANDARD.
       case capacityOptimized
       /// Unspecified protection tier.
       case unspecified
-      /// STANDARD protection for workload that should be protected by redundancies
-      /// (e.g. power, cooling) at the data center level. In the event of
-      /// infrastructure failures at data center (e.g. power and/or cooling
-      /// failures), this workload is expected to continue as normal using the
-      /// redundancies.
+      /// STANDARD protection for workload that should be protected by redundancies (e.g. power, cooling) at the data center level. In the event of infrastructure failures at data center (e.g. power and/or cooling failures), this workload is expected to continue as normal using the redundancies.
       case standard
       /// Encodes an unknown integer value.
       ///
@@ -590,8 +541,7 @@
       case grouped
       /// Unknown maintenance type.
       case groupMaintenanceTypeUnspecified
-      /// Maintenance is not synchronized for this reservation. Instead, each
-      /// instance has its own maintenance window.
+      /// Maintenance is not synchronized for this reservation. Instead, each instance has its own maintenance window.
       case independent
       /// Encodes an unknown integer value.
       ///
@@ -699,8 +649,7 @@
       /// Reservation deletion is in progress.
       case deleting
       case invalid
-      /// Reservation resources have been allocated, and the reservation is ready
-      /// for use.
+      /// Reservation resources have been allocated, and the reservation is ready for use.
       case ready
       /// Reservation update is in progress.
       case updating

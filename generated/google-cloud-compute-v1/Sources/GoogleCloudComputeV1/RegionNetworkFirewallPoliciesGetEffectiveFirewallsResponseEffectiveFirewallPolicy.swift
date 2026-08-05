@@ -31,15 +31,13 @@
     /// Output only. [Output only] The packet mirroring rules that apply to the network.
     public var packetMirroringRules: [FirewallPolicyRule] = []
 
-    /// Output only. [Output only] Priority of firewall policy association. Not applicable for
-    /// type=HIERARCHY.
+    /// Output only. [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
     public var priority: Swift.Int32? = nil
 
     /// Output only. [Output only] The rules that apply to the network.
     public var rules: [FirewallPolicyRule] = []
 
-    /// Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-    /// NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+    /// Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
     public var type:
       RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Type_? = nil
 

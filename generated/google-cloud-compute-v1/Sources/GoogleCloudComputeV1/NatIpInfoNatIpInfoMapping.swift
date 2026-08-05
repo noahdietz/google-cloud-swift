@@ -28,8 +28,7 @@
     /// Output only. NAT IP address. For example: 203.0.113.11.
     public var natIp: Swift.String? = nil
 
-    /// Output only. Specifies whether NAT IP is currently serving at least one endpoint or
-    /// not.
+    /// Output only. Specifies whether NAT IP is currently serving at least one endpoint or not.
     public var usage: NatIpInfoNatIpInfoMapping.Usage? = nil
 
     /// Initialize a new instance of `NatIpInfoNatIpInfoMapping`.

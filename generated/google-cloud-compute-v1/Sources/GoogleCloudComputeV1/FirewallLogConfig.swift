@@ -22,13 +22,10 @@
   public struct FirewallLogConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// This field denotes whether to enable logging for a particular firewall
-    /// rule.
+    /// This field denotes whether to enable logging for a particular firewall rule.
     public var enable: Swift.Bool? = nil
 
-    /// This field can only be specified for a particular firewall rule if
-    /// logging is enabled for that rule. This field denotes whether to include
-    /// or exclude metadata for firewall logs.
+    /// This field can only be specified for a particular firewall rule if logging is enabled for that rule. This field denotes whether to include or exclude metadata for firewall logs.
     public var metadata: FirewallLogConfig.Metadata? = nil
 
     /// Initialize a new instance of `FirewallLogConfig`.

@@ -22,10 +22,7 @@
   public struct FutureResourcesSpecLocationPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Preferences for specified locations.
-    /// Keys of the map are locations - zones, in format of 'zones/'.
-    /// Values are preferences for the zones.
-    /// If a zone is not specified in this map, it is ALLOWed.
+    /// Preferences for specified locations. Keys of the map are locations - zones, in format of 'zones/'. Values are preferences for the zones. If a zone is not specified in this map, it is ALLOWed.
     public var locations: [Swift.String: FutureResourcesSpecLocationPolicyLocation] = [:]
 
     /// Initialize a new instance of `FutureResourcesSpecLocationPolicy`.

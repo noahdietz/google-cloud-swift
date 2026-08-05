@@ -125,10 +125,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/addAssociation"
+          return "/compute/v1/locations/global/\(pathVariable0)/addAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -156,10 +157,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/addRule"
+          return "/compute/v1/locations/global/\(pathVariable0)/addRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -184,10 +186,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/cloneRules"
+          return "/compute/v1/locations/global/\(pathVariable0)/cloneRules"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -211,10 +214,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)"
+          return "/compute/v1/locations/global/\(pathVariable0)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -235,10 +239,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)"
+          return "/compute/v1/locations/global/\(pathVariable0)"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -258,10 +263,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/getAssociation"
+          return "/compute/v1/locations/global/\(pathVariable0)/getAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.name, prefix: "name"))
@@ -280,10 +286,11 @@
           guard let pathVariable0 = request.resource as Swift.String?, !pathVariable0.isEmpty else {
             throw GoogleCloudGax.RequestError.binding("'request.resource' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/getIamPolicy"
+          return "/compute/v1/locations/global/\(pathVariable0)/getIamPolicy"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -306,10 +313,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/getRule"
+          return "/compute/v1/locations/global/\(pathVariable0)/getRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -328,7 +336,8 @@
           return "/compute/v1/locations/global/firewallPolicies"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.parentId, prefix: "parentId"))
@@ -352,7 +361,8 @@
           return "/compute/v1/locations/global/firewallPolicies"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -379,7 +389,8 @@
           return "/compute/v1/locations/global/firewallPolicies/listAssociations"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -404,10 +415,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/move"
+          return "/compute/v1/locations/global/\(pathVariable0)/move"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.parentId, prefix: "parentId"))
@@ -429,10 +441,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)"
+          return "/compute/v1/locations/global/\(pathVariable0)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -457,10 +470,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/patchRule"
+          return "/compute/v1/locations/global/\(pathVariable0)/patchRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -487,10 +501,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/removeAssociation"
+          return "/compute/v1/locations/global/\(pathVariable0)/removeAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.name, prefix: "name"))
@@ -512,10 +527,11 @@
             throw GoogleCloudGax.RequestError.binding(
               "'request.firewallPolicy' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/removeRule"
+          return "/compute/v1/locations/global/\(pathVariable0)/removeRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -535,10 +551,11 @@
           guard let pathVariable0 = request.resource as Swift.String?, !pathVariable0.isEmpty else {
             throw GoogleCloudGax.RequestError.binding("'request.resource' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/setIamPolicy"
+          return "/compute/v1/locations/global/\(pathVariable0)/setIamPolicy"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"
@@ -560,10 +577,11 @@
           guard let pathVariable0 = request.resource as Swift.String?, !pathVariable0.isEmpty else {
             throw GoogleCloudGax.RequestError.binding("'request.resource' is not set or is empty")
           }
-          return "/compute/v1/locations/global/firewallPolicies/\(pathVariable0)/testIamPermissions"
+          return "/compute/v1/locations/global/\(pathVariable0)/testIamPermissions"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"

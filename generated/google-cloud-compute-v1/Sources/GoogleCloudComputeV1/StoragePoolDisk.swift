@@ -24,8 +24,7 @@
     /// Output only. [Output Only] Instances this disk is attached to.
     public var attachedInstances: [Swift.String] = []
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. [Output Only] The URL of the disk.
@@ -40,8 +39,7 @@
     /// Output only. [Output Only] The throughput provisioned for the disk.
     public var provisionedThroughput: Swift.Int64? = nil
 
-    /// Output only. [Output Only] Resource policies applied to disk for automatic snapshot
-    /// creations.
+    /// Output only. [Output Only] Resource policies applied to disk for automatic snapshot creations.
     public var resourcePolicies: [Swift.String] = []
 
     /// Output only. [Output Only] The disk size, in GB.
@@ -86,8 +84,7 @@
       case ready
       /// Source data is being copied into the disk.
       case restoring
-      /// Disk is currently unavailable and cannot be accessed, attached or
-      /// detached.
+      /// Disk is currently unavailable and cannot be accessed, attached or detached.
       case unavailable
       /// Encodes an unknown integer value.
       ///

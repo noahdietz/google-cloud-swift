@@ -18,155 +18,65 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Input Only] Specifies the parameters for a new disk that will be created
-  /// alongside the new instance. Use initialization parameters to create boot
-  /// disks or local SSDs attached to the new instance.
-  ///
-  /// This field is persisted and returned for instanceTemplate and not returned
-  /// in the context of instance.
-  ///
-  /// This property is mutually exclusive with the source property;
-  /// you can only define one or the other, but not both.
+  /// [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This field is persisted and returned for instanceTemplate and not returned in the context of instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
   public struct AttachedDiskInitializeParams: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The architecture of the attached disk. Valid values are
-    /// arm64 or x86_64.
+    /// The architecture of the attached disk. Valid values are arm64 or x86_64.
     public var architecture: AttachedDiskInitializeParams.Architecture? = nil
 
     /// An optional description. Provide this property when creating the disk.
     public var description: Swift.String? = nil
 
-    /// Specifies the disk name. If not specified, the default is to use the name
-    /// of the instance. If a disk with the same name already exists in the given
-    /// region, the existing disk is attached to the new instance and the
-    /// new disk is not created.
+    /// Specifies the disk name. If not specified, the default is to use the name of the instance. If a disk with the same name already exists in the given region, the existing disk is attached to the new instance and the new disk is not created.
     public var diskName: Swift.String? = nil
 
-    /// Specifies the size of the disk in base-2 GB. The size must be at least
-    /// 10 GB. If you specify a sourceImage, which is required for
-    /// boot disks, the default size is the size of the sourceImage.
-    /// If you do not specify a sourceImage, the default disk size
-    /// is 500 GB.
+    /// Specifies the size of the disk in base-2 GB. The size must be at least 10 GB. If you specify a sourceImage, which is required for boot disks, the default size is the size of the sourceImage. If you do not specify a sourceImage, the default disk size is 500 GB.
     public var diskSizeGb: Swift.Int64? = nil
 
+    /// Specifies the disk type used for the boot disk or an additional data disk. For valid disk type values, see Supported types for Hyperdisk volumes and Persistent Disk type variables. When creating a single instance, you must provide either the full or partial URL of the disk type. For example, the following values are valid: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /diskTypes/diskType - projects/project/zones/zone/diskTypes/diskType - zones/zone/diskTypes/diskType When creating an instance template, instance flexibility policy, or when creating or updating an all-instances configuration, you specify the disk type without a URL, for example, hyperdisk-balanced. If you omit this field for a disk, the default disk type depends on the instance's machine series, as follows. - For first- and second-generation machine series like N1, N2, T2, and M1, the default disk type is Standard Persistent Disk (pd-standard). - For C3, C3D, and M3 the default is Balanced Persistent Disk ( pd-balanced). - For other third-generation machine series like A3, H3, Z3, all fourth-generation types like C4, N4, M4, and newer machine series, the default is Hyperdisk Balanced (hyperdisk-balanced). The disk type you specify must be compatible with the instance's machine series. For a list of machine series that support Persistent Disk, see Machine series support for Persistent Disk. For a list of machine series that support Hyperdisk, see Machine series support for Hyperdisk.
     public var diskType: Swift.String? = nil
 
     /// Whether this disk is using confidential compute mode.
     public var enableConfidentialCompute: Swift.Bool? = nil
 
-    /// Labels to apply to this disk. These can be later modified by thedisks.setLabels method. This field is only applicable for
-    /// persistent disks.
+    /// Labels to apply to this disk. These can be later modified by the disks.setLabels method. This field is only applicable for persistent disks.
     public var labels: [Swift.String: Swift.String] = [:]
 
     /// A list of publicly visible licenses. Reserved for Google's use.
     public var licenses: [Swift.String] = []
 
-    /// Specifies which action to take on instance update with this disk. Default
-    /// is to use the existing disk.
+    /// Specifies which action to take on instance update with this disk. Default is to use the existing disk.
     public var onUpdateAction: AttachedDiskInitializeParams.OnUpdateAction? = nil
 
-    /// Indicates how many IOPS to provision for the disk. This sets the number
-    /// of I/O operations per second that the disk can handle. Values must be
-    /// between 10,000 and 120,000. For more details, see theExtreme persistent
-    /// disk documentation.
+    /// Indicates how many IOPS to provision for the disk. This sets the number of I/O operations per second that the disk can handle. Values must be between 10,000 and 120,000. For more details, see the Extreme persistent disk documentation.
     public var provisionedIops: Swift.Int64? = nil
 
-    /// Indicates how much throughput to provision for the disk. This sets the
-    /// number of throughput mb per second that the disk can handle. Values must
-    /// greater than or equal to 1.
+    /// Indicates how much throughput to provision for the disk. This sets the number of throughput mb per second that the disk can handle. Values must greater than or equal to 1.
     public var provisionedThroughput: Swift.Int64? = nil
 
-    /// Required for each regional disk associated with the instance. Specify
-    /// the URLs of the zones where the disk should be replicated to.
-    /// You must provide exactly two replica zones, and one zone must be the same
-    /// as the instance zone.
+    /// Required for each regional disk associated with the instance. Specify the URLs of the zones where the disk should be replicated to. You must provide exactly two replica zones, and one zone must be the same as the instance zone.
     public var replicaZones: [Swift.String] = []
 
-    /// Input only. Resource manager tags to be bound to the disk. Tag keys and values
-    /// have the same definition as resource
-    /// manager tags. Keys and values can be either in numeric format,
-    /// such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in
-    /// namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and
-    /// `{tag_value_short_name}`. The field is ignored (both PUT & PATCH) when
-    /// empty.
+    /// Input only. Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys and values can be either in numeric format, such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored (both PUT & PATCH) when empty.
     public var resourceManagerTags: [Swift.String: Swift.String] = [:]
 
-    /// Resource policies applied to this disk for automatic snapshot creations.
-    /// Specified using the full or partial URL. For instance template, specify
-    /// only the resource policy name.
+    /// Resource policies applied to this disk for automatic snapshot creations. Specified using the full or partial URL. For instance template, specify only the resource policy name.
     public var resourcePolicies: [Swift.String] = []
 
-    /// The source image to create this disk. When creating a new instance boot
-    /// disk, one of initializeParams.sourceImage orinitializeParams.sourceSnapshot or disks.source
-    /// is required.
-    ///
-    /// To create a disk with one of the public operating system
-    /// images, specify the image by its family name. For example, specifyfamily/debian-9 to use the latest Debian 9 image:
-    ///
-    /// projects/debian-cloud/global/images/family/debian-9
-    ///
-    ///
-    /// Alternatively, use a specific version of a public operating system image:
-    ///
-    /// projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD
-    ///
-    ///
-    /// To create a disk with a custom image that you created, specify the
-    /// image name in the following format:
-    ///
-    /// global/images/my-custom-image
-    ///
-    ///
-    /// You can also specify a custom image by its image family, which returns
-    /// the latest version of the image in that family. Replace the image name
-    /// with family/family-name:
-    ///
-    /// global/images/family/my-image-family
-    ///
-    ///
-    /// If the source image is deleted later, this field will not be set.
+    /// The source image to create this disk. When creating a new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required. To create a disk with one of the public operating system images, specify the image by its family name. For example, specify family/debian-9 to use the latest Debian 9 image: projects/debian-cloud/global/images/family/debian-9 Alternatively, use a specific version of a public operating system image: projects/debian-cloud/global/images/debian-9-stretch-vYYYYMMDD To create a disk with a custom image that you created, specify the image name in the following format: global/images/my-custom-image You can also specify a custom image by its image family, which returns the latest version of the image in that family. Replace the image name with family/family-name: global/images/family/my-image-family If the source image is deleted later, this field will not be set.
     public var sourceImage: Swift.String? = nil
 
-    /// Thecustomer-supplied
-    /// encryption key of the source image. Required if the source image is
-    /// protected by a customer-supplied encryption key.
-    ///
-    /// InstanceTemplate and InstancePropertiesPatch do not storecustomer-supplied
-    /// encryption keys, so you cannot create disks for instances in a managed instance group if the
-    /// source images are encrypted with your own keys.
+    /// The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key. InstanceTemplate and InstancePropertiesPatch do not store customer-supplied encryption keys, so you cannot create disks for instances in a managed instance group if the source images are encrypted with your own keys.
     public var sourceImageEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// The source snapshot to create this disk. When creating a new instance
-    /// boot disk, one of initializeParams.sourceSnapshot orinitializeParams.sourceImage or disks.source
-    /// is required.
-    ///
-    /// To create a disk with a snapshot that you created, specify the
-    /// snapshot name in the following format:
-    ///
-    /// global/snapshots/my-backup
-    ///
-    ///
-    /// If the source snapshot is deleted later, this field will not be set.
-    ///
-    /// Note: You cannot create VMs in bulk using a snapshot as the source. Use
-    /// an image instead when you create VMs using
-    /// the bulk
-    /// insert method.
+    /// The source snapshot to create this disk. When creating a new instance boot disk, one of initializeParams.sourceSnapshot or initializeParams.sourceImage or disks.source is required. To create a disk with a snapshot that you created, specify the snapshot name in the following format: global/snapshots/my-backup If the source snapshot is deleted later, this field will not be set. Note: You cannot create VMs in bulk using a snapshot as the source. Use an image instead when you create VMs using the bulk insert method.
     public var sourceSnapshot: Swift.String? = nil
 
-    /// Thecustomer-supplied
-    /// encryption key of the source snapshot.
+    /// The customer-supplied encryption key of the source snapshot.
     public var sourceSnapshotEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// The storage pool in which the new disk is created. You can provide
-    /// this as a partial or full URL to the resource. For example, the following
-    /// are valid values:
-    ///
-    ///
-    ///      - https://www.googleapis.com/compute/v1/projects/project/zones/zone/storagePools/storagePool
-    ///      - projects/project/zones/zone/storagePools/storagePool
-    ///    - zones/zone/storagePools/storagePool
+    /// The storage pool in which the new disk is created. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool - projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool
     public var storagePool: Swift.String? = nil
 
     /// Initialize a new instance of `AttachedDiskInitializeParams`.
@@ -298,8 +208,7 @@
     public enum OnUpdateAction: Codable, Equatable, Sendable {
       /// Always recreate the disk.
       case recreateDisk
-      /// Recreate the disk if source (image, snapshot) of this disk is different
-      /// from source of existing disk.
+      /// Recreate the disk if source (image, snapshot) of this disk is different from source of existing disk.
       case recreateDiskIfSourceChanged
       /// Use the existing disk, this is the default behaviour.
       case useExistingDisk

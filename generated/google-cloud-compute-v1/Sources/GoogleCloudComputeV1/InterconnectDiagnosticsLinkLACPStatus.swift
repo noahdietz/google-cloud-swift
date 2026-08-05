@@ -28,11 +28,7 @@
     /// System ID of the port on the neighbor's side of the LACP exchange.
     public var neighborSystemId: Swift.String? = nil
 
-    /// The state of a LACP link, which can take one of the following values:
-    ///
-    ///    - ACTIVE: The link is configured and active within the bundle.
-    ///    - DETACHED: The link is not configured within the bundle. This means
-    ///    that the rest of the object should be empty.
+    /// The state of a LACP link, which can take one of the following values: - ACTIVE: The link is configured and active within the bundle. - DETACHED: The link is not configured within the bundle. This means that the rest of the object should be empty.
     public var state: InterconnectDiagnosticsLinkLACPStatus.State? = nil
 
     /// Initialize a new instance of `InterconnectDiagnosticsLinkLACPStatus`.
@@ -57,8 +53,7 @@
     public enum State: Codable, Equatable, Sendable {
       /// The link is configured and active within the bundle.
       case active
-      /// The link is not configured within the bundle, this means the rest of
-      /// the object should be empty.
+      /// The link is not configured within the bundle, this means the rest of the object should be empty.
       case detached
       /// Encodes an unknown integer value.
       ///

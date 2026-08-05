@@ -22,13 +22,10 @@
   public struct NetworkAttachmentConnectedEndpoint: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The IPv4 address assigned to the producer instance network interface.
-    /// This value will be a range in case of Serverless.
+    /// The IPv4 address assigned to the producer instance network interface. This value will be a range in case of Serverless.
     public var ipAddress: Swift.String? = nil
 
-    /// The IPv6 address assigned to the producer instance network interface.
-    /// This is only assigned when the stack types of both the instance network
-    /// interface and the consumer subnet are IPv4_IPv6.
+    /// The IPv6 address assigned to the producer instance network interface. This is only assigned when the stack types of both the instance network interface and the consumer subnet are IPv4_IPv6.
     public var ipv6Address: Swift.String? = nil
 
     /// The project id or number of the interface to which the IP was assigned.
@@ -37,19 +34,16 @@
     /// Alias IP ranges from the same subnetwork.
     public var secondaryIpCidrRanges: [Swift.String] = []
 
-    /// The service class id of the producer service to which the IP was
-    /// assigned.
+    /// The service class id of the producer service to which the IP was assigned.
     public var serviceClassId: Swift.String? = nil
 
     /// The status of a connected endpoint to this network attachment.
     public var status: NetworkAttachmentConnectedEndpoint.Status? = nil
 
-    /// The subnetwork used to assign the IP to the producer
-    /// instance network interface.
+    /// The subnetwork used to assign the IP to the producer instance network interface.
     public var subnetwork: Swift.String? = nil
 
-    /// Output only. [Output Only] The CIDR range of the subnet from which the IPv4 internal
-    /// IP was allocated from.
+    /// Output only. [Output Only] The CIDR range of the subnet from which the IPv4 internal IP was allocated from.
     public var subnetworkCidrRange: Swift.String? = nil
 
     /// Initialize a new instance of `NetworkAttachmentConnectedEndpoint`.
@@ -78,8 +72,7 @@
       case closed
       /// The consumer needs to take further action before traffic can be served.
       case needsAttention
-      /// The consumer neither allows nor prohibits traffic
-      /// from the producer to reach its VPC.
+      /// The consumer neither allows nor prohibits traffic from the producer to reach its VPC.
       case pending
       /// The consumer prohibits traffic from the producer to reach its VPC.
       case rejected

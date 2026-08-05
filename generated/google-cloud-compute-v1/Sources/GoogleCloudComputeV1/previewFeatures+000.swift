@@ -75,8 +75,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the given PreviewFeature. This method is used to enable or disable
-    /// a PreviewFeature.
+    /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
     ///
     /// @Snippet(path: "previewFeatures_update")
     public func update(
@@ -85,8 +84,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Patches the given PreviewFeature. This method is used to enable or disable
-    /// a PreviewFeature.
+    /// Patches the given PreviewFeature. This method is used to enable or disable a PreviewFeature.
     ///
     /// @Snippet(path: "previewFeatures_update")
     public func update(

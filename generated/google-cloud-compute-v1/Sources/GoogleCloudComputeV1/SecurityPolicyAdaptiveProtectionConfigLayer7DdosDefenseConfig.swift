@@ -18,28 +18,19 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration options for L7 DDoS detection.
-  /// This field is only supported in Global Security Policies of type
-  /// CLOUD_ARMOR.
+  /// Configuration options for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
   public struct SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// If set to true, enables CAAP for L7 DDoS detection.
-    /// This field is only supported in Global Security Policies of type
-    /// CLOUD_ARMOR.
+    /// If set to true, enables CAAP for L7 DDoS detection. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
     public var enable: Swift.Bool? = nil
 
-    /// Rule visibility can be one of the following:
-    /// STANDARD - opaque rules. (default)
-    /// PREMIUM - transparent rules.
-    /// This field is only supported in Global Security Policies of type
-    /// CLOUD_ARMOR.
+    /// Rule visibility can be one of the following: STANDARD - opaque rules. (default) PREMIUM - transparent rules. This field is only supported in Global Security Policies of type CLOUD_ARMOR.
     public var ruleVisibility:
       SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig.RuleVisibility? = nil
 
-    /// Configuration options for layer7 adaptive protection for various
-    /// customizable thresholds.
+    /// Configuration options for layer7 adaptive protection for various customizable thresholds.
     public var thresholdConfigs:
       [SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig] = []
 

@@ -25,9 +25,7 @@
     /// Specifies the size of the disk in base-2 GB.
     public var diskSizeGb: Swift.Int64? = nil
 
-    /// Specifies the disk interface to use for attaching this disk, which is
-    /// either SCSI or NVME. The default isSCSI.
-    /// For performance characteristics of SCSI over NVMe, seeLocal SSD performance.
+    /// Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. The default is SCSI. For performance characteristics of SCSI over NVMe, see Local SSD performance.
     public var interface:
       AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk.Interface? = nil
 

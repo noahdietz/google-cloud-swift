@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of resource policies.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "resourcePolicies_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of resource policies.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of resource policies. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "resourcePolicies_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "resourcePolicies_getIamPolicy")
     public func getIamPolicy(
@@ -191,8 +184,7 @@
       )
     }
 
-    /// A list all the resource policies that have been configured for the
-    /// specified project in specified region.
+    /// A list all the resource policies that have been configured for the specified project in specified region.
     ///
     /// @Snippet(path: "resourcePolicies_list")
     public func list(
@@ -201,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// A list all the resource policies that have been configured for the
-    /// specified project in specified region.
+    /// A list all the resource policies that have been configured for the specified project in specified region.
     ///
     /// @Snippet(path: "resourcePolicies_list")
     public func list(
@@ -267,8 +258,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "resourcePolicies_setIamPolicy")
     public func setIamPolicy(

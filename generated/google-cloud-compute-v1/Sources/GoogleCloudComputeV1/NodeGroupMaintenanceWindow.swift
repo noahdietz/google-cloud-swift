@@ -18,18 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Time window specified for daily maintenance operations. GCE's internal
-  /// maintenance will be performed within this window.
+  /// Time window specified for daily maintenance operations. GCE's internal maintenance will be performed within this window.
   public struct NodeGroupMaintenanceWindow: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output only] A predetermined duration for the window, automatically
-    /// chosen to be the smallest possible in the given scenario.
+    /// Output only. [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
     public var maintenanceDuration: Duration? = nil
 
-    /// Start time of the window. This must be in UTC format that resolves to one
-    /// of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For
-    /// example, both 13:00-5 and 08:00 are valid.
+    /// Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
     public var startTime: Swift.String? = nil
 
     /// Initialize a new instance of `NodeGroupMaintenanceWindow`.

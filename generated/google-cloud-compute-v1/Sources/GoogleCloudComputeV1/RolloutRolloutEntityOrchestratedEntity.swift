@@ -18,35 +18,18 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// This message is used if the resource type follows the Orchestrated
-  /// integration model with ProgressiveRollout.
+  /// This message is used if the resource type follows the Orchestrated integration model with ProgressiveRollout.
   public struct RolloutRolloutEntityOrchestratedEntity: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Required. Specifies the behavior of the Rollout if an out of band update is
-    /// detected in a project during a Rollout. It can be one of the following
-    /// values:
-    /// 1) overwrite : Overwrite the local value with the rollout value.
-    /// 2) no_overwrite : Do not overwrite the local value with the rollout
-    /// value.
+    /// Required. Specifies the behavior of the Rollout if an out of band update is detected in a project during a Rollout. It can be one of the following values: 1) overwrite : Overwrite the local value with the rollout value. 2) no_overwrite : Do not overwrite the local value with the rollout value.
     public var conflictBehavior: Swift.String? = nil
 
-    /// Required. Orchestration action during the Rollout. It can be one of the following
-    /// values:
-    /// 1) "update": Resources will be updated by the rollout.
-    /// 2) "delete": Resources will be deleted by the rollout.
+    /// Required. Orchestration action during the Rollout. It can be one of the following values: 1) "update": Resources will be updated by the rollout. 2) "delete": Resources will be deleted by the rollout.
     public var orchestrationAction: Swift.String? = nil
 
-    /// Required. Fully qualified resource name of the resource which contains the source
-    /// of truth of the configuration being rolled out across
-    /// locations/projects. For example, in the case of a global Rollout which
-    /// is applied across regions, this contains the name of the global
-    /// resource created by the user which contains a payload for a resource
-    /// that is orchestrated across regions. This follows the following format:
-    /// //.googleapis.com/projects//locations/global//
-    /// e.g.
-    /// //osconfig.googleapis.com/projects/1/locations/global/policyOrchestrators/po1
+    /// Required. Fully qualified resource name of the resource which contains the source of truth of the configuration being rolled out across locations/projects. For example, in the case of a global Rollout which is applied across regions, this contains the name of the global resource created by the user which contains a payload for a resource that is orchestrated across regions. This follows the following format: //.googleapis.com/projects//locations/global// e.g. //osconfig.googleapis.com/projects/1/locations/global/policyOrchestrators/po1
     public var orchestrationSource: Swift.String? = nil
 
     /// Initialize a new instance of `RolloutRolloutEntityOrchestratedEntity`.

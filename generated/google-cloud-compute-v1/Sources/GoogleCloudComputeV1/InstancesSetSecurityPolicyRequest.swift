@@ -21,14 +21,10 @@
   public struct InstancesSetSecurityPolicyRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The network interfaces that the security policy will be applied to. Network
-    /// interfaces use the nicN naming format. You can only set a
-    /// security policy for network interfaces with an access config.
+    /// The network interfaces that the security policy will be applied to. Network interfaces use the nicN naming format. You can only set a security policy for network interfaces with an access config.
     public var networkInterfaces: [Swift.String] = []
 
-    /// A full or partial URL to a security policy to add to this instance.
-    /// If this field is set to an empty string it will remove the associated
-    /// security policy.
+    /// A full or partial URL to a security policy to add to this instance. If this field is set to an empty string it will remove the associated security policy.
     public var securityPolicy: Swift.String? = nil
 
     /// Initialize a new instance of `InstancesSetSecurityPolicyRequest`.

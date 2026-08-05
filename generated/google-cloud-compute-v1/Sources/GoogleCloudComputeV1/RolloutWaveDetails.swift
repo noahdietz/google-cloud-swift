@@ -22,12 +22,10 @@
   public struct RolloutWaveDetails: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. Additional details of the wave for products using the Orchestrated
-    /// Integration model.
+    /// Output only. Additional details of the wave for products using the Orchestrated Integration model.
     public var orchestratedWaveDetails: RolloutWaveDetailsOrchestratedWaveDetails? = nil
 
-    /// Output only. Wave name.
-    /// Ex. wave1
+    /// Output only. Wave name. Ex. wave1
     public var waveDisplayName: Swift.String? = nil
 
     /// Output only. System generated number for the wave.

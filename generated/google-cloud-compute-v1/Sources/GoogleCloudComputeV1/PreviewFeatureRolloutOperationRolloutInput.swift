@@ -23,13 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The name of the rollout plan
-    /// Ex.
-    /// organizations//locations/global/rolloutPlans/
-    /// Ex.
-    /// folders//locations/global/rolloutPlans/
-    /// Ex.
-    /// projects//locations/global/rolloutPlans/.
+    /// The name of the rollout plan Ex. organizations//locations/global/rolloutPlans/ Ex. folders//locations/global/rolloutPlans/ Ex. projects//locations/global/rolloutPlans/.
     public var name: Swift.String? = nil
 
     /// Predefined rollout plan.

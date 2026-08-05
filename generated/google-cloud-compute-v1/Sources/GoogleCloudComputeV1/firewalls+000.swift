@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a firewall rule in the specified project using the data
-    /// included in the request.
+    /// Creates a firewall rule in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "firewalls_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a firewall rule in the specified project using the data
-    /// included in the request.
+    /// Creates a firewall rule in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "firewalls_insert")
     public func insert(
@@ -151,8 +149,7 @@
       )
     }
 
-    /// Retrieves the list of firewall rules available to the specified
-    /// project.
+    /// Retrieves the list of firewall rules available to the specified project.
     ///
     /// @Snippet(path: "firewalls_list")
     public func list(
@@ -161,8 +158,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of firewall rules available to the specified
-    /// project.
+    /// Retrieves the list of firewall rules available to the specified project.
     ///
     /// @Snippet(path: "firewalls_list")
     public func list(
@@ -176,10 +172,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified firewall rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified firewall rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "firewalls_patch")
     public func patch(
@@ -188,10 +181,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified firewall rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified firewall rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "firewalls_patch")
     public func patch(
@@ -240,10 +230,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified firewall rule with the data included in the
-    /// request.
-    /// Note that all fields will be updated if using PUT, even fields that are not
-    /// specified. To update individual fields, please use PATCH instead.
+    /// Updates the specified firewall rule with the data included in the request. Note that all fields will be updated if using PUT, even fields that are not specified. To update individual fields, please use PATCH instead.
     ///
     /// @Snippet(path: "firewalls_update")
     public func update(
@@ -252,10 +239,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified firewall rule with the data included in the
-    /// request.
-    /// Note that all fields will be updated if using PUT, even fields that are not
-    /// specified. To update individual fields, please use PATCH instead.
+    /// Updates the specified firewall rule with the data included in the request. Note that all fields will be updated if using PUT, even fields that are not specified. To update individual fields, please use PATCH instead.
     ///
     /// @Snippet(path: "firewalls_update")
     public func update(

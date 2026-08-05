@@ -18,103 +18,62 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A PublicDelegatedPrefix resource represents an IP block within a
-  /// PublicAdvertisedPrefix that is configured within a single cloud scope
-  /// (global or region). IPs in the block can be allocated to resources within
-  /// that scope. Public delegated prefixes may be further broken up into
-  /// smaller IP blocks in the same scope as the parent block.
+  /// A PublicDelegatedPrefix resource represents an IP block within a PublicAdvertisedPrefix that is configured within a single cloud scope (global or region). IPs in the block can be allocated to resources within that scope. Public delegated prefixes may be further broken up into smaller IP blocks in the same scope as the parent block.
   public struct PublicDelegatedPrefix: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The allocatable prefix length supported by this public delegated prefix.
-    /// This field is optional and cannot be set for prefixes in DELEGATION mode.
-    /// It cannot be set for IPv4 prefixes either, and it always defaults to 32.
+    /// The allocatable prefix length supported by this public delegated prefix. This field is optional and cannot be set for prefixes in DELEGATION mode. It cannot be set for IPv4 prefixes either, and it always defaults to 32.
     public var allocatablePrefixLength: Swift.Int32? = nil
 
     /// Output only. [Output Only] The version of BYOIP API.
     public var byoipApiVersion: PublicDelegatedPrefix.ByoipApiVersion? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations.
-    /// Applicable for IPv4 PDPs only.
+    /// Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs only.
     public var enableEnhancedIpv4Allocation: Swift.Bool? = nil
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a new PublicDelegatedPrefix. An up-to-date
-    /// fingerprint must be provided in order to update thePublicDelegatedPrefix, otherwise the request will fail with
-    /// error 412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve a PublicDelegatedPrefix.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicDelegatedPrefix. An up-to-date fingerprint must be provided in order to update the PublicDelegatedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicDelegatedPrefix.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource type. The server
-    /// generates this identifier.
+    /// Output only. [Output Only] The unique identifier for the resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// The IP address range, in CIDR format, represented by this public
-    /// delegated prefix.
+    /// The IP address range, in CIDR format, represented by this public delegated prefix.
     public var ipCidrRange: Swift.String? = nil
 
-    /// Output only. [Output Only] The internet access type for IPv6 Public Delegated Prefixes.
-    /// Inherited from parent prefix.
+    /// Output only. [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from parent prefix.
     public var ipv6AccessType: PublicDelegatedPrefix.Ipv6AccessType? = nil
 
     /// If true, the prefix will be live migrated.
     public var isLiveMigration: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#publicDelegatedPrefix for public delegated prefixes.
+    /// Output only. [Output Only] Type of the resource. Always compute#publicDelegatedPrefix for public delegated prefixes.
     public var kind: Swift.String? = nil
 
     /// The public delegated prefix mode for IPv6 only.
     public var mode: PublicDelegatedPrefix.Mode? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The URL of parent prefix. Either PublicAdvertisedPrefix or
-    /// PublicDelegatedPrefix.
+    /// The URL of parent prefix. Either PublicAdvertisedPrefix or PublicDelegatedPrefix.
     public var parentPrefix: Swift.String? = nil
 
-    /// The list of sub public delegated prefixes that exist for this public
-    /// delegated prefix.
+    /// The list of sub public delegated prefixes that exist for this public delegated prefix.
     public var publicDelegatedSubPrefixs: [PublicDelegatedPrefixPublicDelegatedSubPrefix] = []
 
-    /// Output only. [Output Only] URL of the region where the public delegated prefix resides.
-    /// This field applies only to the region resource. You must specify this
-    /// field as part of the HTTP request URL. It is not settable as a field in
-    /// the request body.
+    /// Output only. [Output Only] URL of the region where the public delegated prefix resides. This field applies only to the region resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// [Output Only] The status of the public delegated prefix, which can be one
-    /// of following values:
-    ///
-    ///
-    ///      - `INITIALIZING` The public delegated prefix is being initialized and
-    ///      addresses cannot be created yet.
-    ///      - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration
-    ///      prefix and is active.
-    ///      - `ANNOUNCED` The public delegated prefix is announced and ready to
-    ///      use.
-    ///      - `DELETING` The public delegated prefix is being deprovsioned.
-    ///      - `ACTIVE` The public delegated prefix is ready to use.
+    /// [Output Only] The status of the public delegated prefix, which can be one of following values: - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. - `DELETING` The public delegated prefix is being deprovsioned. - `ACTIVE` The public delegated prefix is ready to use.
     public var status: PublicDelegatedPrefix.Status? = nil
 
     /// Initialize a new instance of `PublicDelegatedPrefix`.
@@ -222,12 +181,9 @@
     ///
     /// [google.cloud.compute.v1.PublicDelegatedPrefix.byoipApiVersion]: <doc:PublicDelegatedPrefix/ByoipApiVersion>
     public enum ByoipApiVersion: Codable, Equatable, Sendable {
-      /// This public delegated prefix usually takes 4 weeks to delete, and the BGP
-      /// status cannot be changed. Announce and Withdraw APIs can not be used on
-      /// this prefix.
+      /// This public delegated prefix usually takes 4 weeks to delete, and the BGP status cannot be changed. Announce and Withdraw APIs can not be used on this prefix.
       case v1
-      /// This public delegated prefix takes minutes to delete. Announce and
-      /// Withdraw APIs can be used on this prefix to change the BGP status.
+      /// This public delegated prefix takes minutes to delete. Announce and Withdraw APIs can be used on this prefix to change the BGP status.
       case v2
       /// Encodes an unknown integer value.
       ///
@@ -325,13 +281,9 @@
     ///
     /// [google.cloud.compute.v1.PublicDelegatedPrefix.ipv6AccessType]: <doc:PublicDelegatedPrefix/Ipv6AccessType>
     public enum Ipv6AccessType: Codable, Equatable, Sendable {
-      /// The parent public advertised prefix will be announced to the internet.
-      /// All children public delegated prefixes will have IPv6 access type as
-      /// EXTERNAL.
+      /// The parent public advertised prefix will be announced to the internet. All children public delegated prefixes will have IPv6 access type as EXTERNAL.
       case external
-      /// The parent public advertised prefix will not be announced to the
-      /// internet. Prefix will be used privately within Cloud. All children
-      /// public delegated prefixes will have IPv6 access type as INTERNAL.
+      /// The parent public advertised prefix will not be announced to the internet. Prefix will be used privately within Cloud. All children public delegated prefixes will have IPv6 access type as INTERNAL.
       case `internal`
       /// Encodes an unknown integer value.
       ///
@@ -429,21 +381,13 @@
     ///
     /// [google.cloud.compute.v1.PublicDelegatedPrefix.mode]: <doc:PublicDelegatedPrefix/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// The public delegated prefix is used for further sub-delegation only. Such
-      /// prefixes cannot set allocatablePrefixLength.
+      /// The public delegated prefix is used for further sub-delegation only. Such prefixes cannot set allocatablePrefixLength.
       case delegation
-      /// The public delegated prefix is used for creating forwarding rules only.
-      /// Such prefixes cannot set publicDelegatedSubPrefixes. Parent public
-      /// delegated prefix must have IPv6 access type as EXTERNAL.
+      /// The public delegated prefix is used for creating forwarding rules only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public delegated prefix must have IPv6 access type as EXTERNAL.
       case externalIpv6ForwardingRuleCreation
-      /// The public delegated prefix is used for creating dual-mode subnetworks
-      /// only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public
-      /// delegated prefix must have IPv6 access type as EXTERNAL.
+      /// The public delegated prefix is used for creating dual-mode subnetworks only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public delegated prefix must have IPv6 access type as EXTERNAL.
       case externalIpv6SubnetworkCreation
-      /// The public delegated prefix is used for creating dual stack or IPv6-only
-      /// subnetwork with internal access only. Such prefixes cannot set
-      /// publicDelegatedSubPrefixes and allocatablePrefixLength. Parent public
-      /// delegated prefix must have IPv6 access type as INTERNAL.
+      /// The public delegated prefix is used for creating dual stack or IPv6-only subnetwork with internal access only. Such prefixes cannot set publicDelegatedSubPrefixes and allocatablePrefixLength. Parent public delegated prefix must have IPv6 access type as INTERNAL.
       case internalIpv6SubnetworkCreation
       /// Encodes an unknown integer value.
       ///
@@ -561,11 +505,9 @@
       case announcedToInternet
       /// The public delegated prefix is being deprovsioned.
       case deleting
-      /// The public delegated prefix is being initialized and addresses cannot be
-      /// created yet.
+      /// The public delegated prefix is being initialized and addresses cannot be created yet.
       case initializing
-      /// The public delegated prefix is currently withdrawn but ready to be
-      /// announced.
+      /// The public delegated prefix is currently withdrawn but ready to be announced.
       case readyToAnnounce
       /// Encodes an unknown integer value.
       ///

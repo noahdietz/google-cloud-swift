@@ -18,23 +18,17 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] Describes the state of a peering connection, not just the
-  /// local peering. This field provides information about the effective settings
-  /// for the connection as a whole, including pending delete/update requests for
-  /// CONSENSUS peerings.
+  /// [Output Only] Describes the state of a peering connection, not just the local peering. This field provides information about the effective settings for the connection as a whole, including pending delete/update requests for CONSENSUS peerings.
   public struct NetworkPeeringConnectionStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The consensus state contains information about the status of update
-    /// and delete for a consensus peering connection.
+    /// The consensus state contains information about the status of update and delete for a consensus peering connection.
     public var consensusState: NetworkPeeringConnectionStatusConsensusState? = nil
 
-    /// The active connectivity settings for the peering connection based on the
-    /// settings of the network peerings.
+    /// The active connectivity settings for the peering connection based on the settings of the network peerings.
     public var trafficConfiguration: NetworkPeeringConnectionStatusTrafficConfiguration? = nil
 
-    /// The update strategy determines the update/delete semantics for this
-    /// peering connection.
+    /// The update strategy determines the update/delete semantics for this peering connection.
     public var updateStrategy: NetworkPeeringConnectionStatus.UpdateStrategy? = nil
 
     /// Initialize a new instance of `NetworkPeeringConnectionStatus`.
@@ -57,19 +51,11 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeeringConnectionStatus.updateStrategy]: <doc:NetworkPeeringConnectionStatus/UpdateStrategy>
     public enum UpdateStrategy: Codable, Equatable, Sendable {
-      /// Updates are reflected in the local peering but aren't applied to the
-      /// peering connection until a complementary change is made to the
-      /// matching peering.
-      /// To delete a peering with the consensus update strategy, both the peerings
-      /// must request the deletion of the peering before the peering can be
-      /// deleted.
+      /// Updates are reflected in the local peering but aren't applied to the peering connection until a complementary change is made to the matching peering. To delete a peering with the consensus update strategy, both the peerings must request the deletion of the peering before the peering can be deleted.
       case consensus
-      /// In this mode, changes to the peering configuration can
-      /// be unilaterally altered by changing either side of the peering.
-      /// This is the default value if the field is unspecified.
+      /// In this mode, changes to the peering configuration can be unilaterally altered by changing either side of the peering. This is the default value if the field is unspecified.
       case independent
-      /// Peerings with update strategy UNSPECIFIED are created with
-      /// update strategy INDEPENDENT.
+      /// Peerings with update strategy UNSPECIFIED are created with update strategy INDEPENDENT.
       case unspecified
       /// Encodes an unknown integer value.
       ///

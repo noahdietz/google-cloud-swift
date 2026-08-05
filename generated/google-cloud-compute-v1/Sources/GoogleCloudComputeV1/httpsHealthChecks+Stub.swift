@@ -82,7 +82,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -110,7 +111,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks/\(pathVariable1)"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -130,7 +132,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -156,7 +159,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -190,7 +194,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -221,7 +226,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks/\(pathVariable1)/testIamPermissions"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"
@@ -251,7 +257,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/httpsHealthChecks/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))

@@ -18,53 +18,24 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a health check resource.
-  ///
-  /// Google Compute Engine has two health check resources:
-  ///
-  /// * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks)
-  /// * [Global](/compute/docs/reference/rest/v1/healthChecks)
-  ///
-  /// These health check resources can be used for load balancing and for
-  /// autohealing VMs in a managed instance group (MIG).
-  ///
-  /// **Load balancing**
-  ///
-  /// Health check requirements vary depending on the type of load balancer. For
-  /// details about the type of health check supported for
-  /// each load balancer and corresponding backend type,
-  /// see Health
-  /// checks overview: Load balancer guide.
-  ///
-  /// **Autohealing in MIGs**
-  ///
-  /// The health checks that you use for autohealing VMs in a MIG can be either
-  /// regional or global. For more information, see  Set up an
-  /// application health check and autohealing.
-  ///
-  /// For more information, seeHealth checks
-  /// overview.
+  /// Represents a health check resource. Google Compute Engine has two health check resources: * [Regional](/compute/docs/reference/rest/v1/regionHealthChecks) * [Global](/compute/docs/reference/rest/v1/healthChecks) These health check resources can be used for load balancing and for autohealing VMs in a managed instance group (MIG). **Load balancing** Health check requirements vary depending on the type of load balancer. For details about the type of health check supported for each load balancer and corresponding backend type, see Health checks overview: Load balancer guide. **Autohealing in MIGs** The health checks that you use for autohealing VMs in a MIG can be either regional or global. For more information, see Set up an application health check and autohealing. For more information, see Health checks overview.
   public struct HealthCheck: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// How often (in seconds) to send a health check. The default value is 5
-    /// seconds.
+    /// How often (in seconds) to send a health check. The default value is 5 seconds.
     public var checkIntervalSec: Swift.Int32? = nil
 
-    /// Output only. [Output Only] Creation timestamp in3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in 3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     public var grpcHealthCheck: GRPCHealthCheck? = nil
 
     public var grpcTlsHealthCheck: GRPCTLSHealthCheck? = nil
 
-    /// A so-far unhealthy instance will be marked healthy after this
-    /// many consecutive successes. The default value is 2.
+    /// A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
     public var healthyThreshold: Swift.Int32? = nil
 
     public var http2HealthCheck: HTTP2HealthCheck? = nil
@@ -73,8 +44,7 @@
 
     public var httpsHealthCheck: HTTPSHealthCheck? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
     /// Output only. Type of the resource.
@@ -83,54 +53,29 @@
     /// Configure logging on this health check.
     public var logConfig: HealthCheckLogConfig? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// For example, a name that is 1-63 characters long, matches the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with
-    /// RFC1035. This regular expression describes a name where the first
-    /// character is a lowercase letter, and all following characters are a dash,
-    /// lowercase letter, or digit, except the last character, which isn't a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. For example, a name that is 1-63 characters long, matches the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This regular expression describes a name where the first character is a lowercase letter, and all following characters are a dash, lowercase letter, or digit, except the last character, which isn't a dash.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] Region where the health check resides.  Not applicable to
-    /// global health checks.
+    /// Output only. [Output Only] Region where the health check resides. Not applicable to global health checks.
     public var region: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// The list of cloud regions from which health checks are performed. If any
-    /// regions are specified, then exactly 3 regions should be specified. The
-    /// region names must be valid names of Google Cloud regions.
-    /// This can only be set for global health check.
-    /// If this list is non-empty, then there are restrictions
-    /// on what other health check fields are supported and what other resources
-    /// can use this health check:
-    ///
-    ///    - SSL, HTTP2, and GRPC protocols are not supported.
-    ///    - The TCP request field is not supported.
-    ///    - The proxyHeader field for HTTP, HTTPS, and TCP is not
-    ///    supported.
-    ///    - The checkIntervalSec field must be at least 30.
-    ///    - The health check cannot be used with BackendService nor with managed
-    ///    instance group auto-healing.
+    /// The list of cloud regions from which health checks are performed. If any regions are specified, then exactly 3 regions should be specified. The region names must be valid names of Google Cloud regions. This can only be set for global health check. If this list is non-empty, then there are restrictions on what other health check fields are supported and what other resources can use this health check: - SSL, HTTP2, GRPC, and GRPC_WITH_TLS protocols are not supported. - The TCP request field is not supported. - The proxyHeader field for HTTP, HTTPS, and TCP is not supported. - The checkIntervalSec field must be at least 30. - The health check cannot be used with BackendService nor with managed instance group auto-healing.
     public var sourceRegions: [Swift.String] = []
 
     public var sslHealthCheck: SSLHealthCheck? = nil
 
     public var tcpHealthCheck: TCPHealthCheck? = nil
 
-    /// How long (in seconds) to wait before claiming failure. The default value is
-    /// 5 seconds. It is invalid for timeoutSec to have greater
-    /// value than checkIntervalSec.
+    /// How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have greater value than checkIntervalSec.
     public var timeoutSec: Swift.Int32? = nil
 
-    /// Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or GRPC. Exactly one of the
-    /// protocol-specific health check fields must be specified, which must matchtype field.
+    /// Specifies the type of the healthCheck, either TCP, SSL, HTTP, HTTPS, HTTP2, GRPC or GRPC_WITH_TLS. Exactly one of the protocol-specific health check fields must be specified, which must match type field.
     public var type: HealthCheck.Type_? = nil
 
-    /// A so-far healthy instance will be marked unhealthy after this many
-    /// consecutive failures. The default value is 2.
+    /// A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
     public var unhealthyThreshold: Swift.Int32? = nil
 
     /// Initialize a new instance of `HealthCheck`.

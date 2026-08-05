@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all VM Extension Policy resources
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it's recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all VM Extension Policy resources available to the specified project. To prevent failure, it's recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "globalVmExtensionPolicies_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all VM Extension Policy resources
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it's recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all VM Extension Policy resources available to the specified project. To prevent failure, it's recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "globalVmExtensionPolicies_aggregatedList")
     public func aggregatedList(
@@ -78,12 +70,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Purge scoped resources (zonal policies) from a global VM extension
-    /// policy, and then delete the global VM extension policy. Purge of the scoped
-    /// resources is a pre-condition of the global VM extension policy deletion.
-    /// The deletion of the global VM extension policy happens after the purge
-    /// rollout is done, so it's not a part of the LRO. It's an automatic process
-    /// that triggers in the backend.
+    /// Purge scoped resources (zonal policies) from a global VM extension policy, and then delete the global VM extension policy. Purge of the scoped resources is a pre-condition of the global VM extension policy deletion. The deletion of the global VM extension policy happens after the purge rollout is done, so it's not a part of the LRO. It's an automatic process that triggers in the backend.
     ///
     /// @Snippet(path: "globalVmExtensionPolicies_delete")
     public func delete(
@@ -92,12 +79,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Purge scoped resources (zonal policies) from a global VM extension
-    /// policy, and then delete the global VM extension policy. Purge of the scoped
-    /// resources is a pre-condition of the global VM extension policy deletion.
-    /// The deletion of the global VM extension policy happens after the purge
-    /// rollout is done, so it's not a part of the LRO. It's an automatic process
-    /// that triggers in the backend.
+    /// Purge scoped resources (zonal policies) from a global VM extension policy, and then delete the global VM extension policy. Purge of the scoped resources is a pre-condition of the global VM extension policy deletion. The deletion of the global VM extension policy happens after the purge rollout is done, so it's not a part of the LRO. It's an automatic process that triggers in the backend.
     ///
     /// @Snippet(path: "globalVmExtensionPolicies_delete")
     public func delete(

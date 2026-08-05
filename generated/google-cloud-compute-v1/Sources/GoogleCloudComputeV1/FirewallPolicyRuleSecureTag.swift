@@ -24,9 +24,7 @@
     /// Name of the secure tag, created with TagManager's TagValue API.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or
-    /// `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted
-    /// or its network is deleted.
+    /// Output only. [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`. A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
     public var state: FirewallPolicyRuleSecureTag.State? = nil
 
     /// Initialize a new instance of `FirewallPolicyRuleSecureTag`.

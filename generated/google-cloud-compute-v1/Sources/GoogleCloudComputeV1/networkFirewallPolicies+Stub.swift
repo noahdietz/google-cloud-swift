@@ -154,7 +154,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/addAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -190,7 +191,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/addPacketMirroringRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.maxPriority, prefix: "maxPriority"))
@@ -225,7 +227,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/addRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.maxPriority, prefix: "maxPriority"))
@@ -254,7 +257,8 @@
           return "/compute/v1/projects/\(pathVariable0)/aggregated/firewallPolicies"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -294,7 +298,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/cloneRules"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -324,7 +329,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -351,7 +357,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -378,7 +385,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/getAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.name, prefix: "name"))
@@ -405,7 +413,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/getIamPolicy"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -436,7 +445,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/getPacketMirroringRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -465,7 +475,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/getRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -487,7 +498,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -513,7 +525,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -546,7 +559,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -579,7 +593,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/patchPacketMirroringRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -613,7 +628,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/patchRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -647,7 +663,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/removeAssociation"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.name, prefix: "name"))
@@ -677,7 +694,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/removePacketMirroringRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -707,7 +725,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/removeRule"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.priority, prefix: "priority"))
@@ -735,7 +754,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/setIamPolicy"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"
@@ -764,7 +784,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/firewallPolicies/\(pathVariable1)/testIamPermissions"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"

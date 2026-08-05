@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of node templates.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "nodeTemplates_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of node templates.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of node templates. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "nodeTemplates_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "nodeTemplates_getIamPolicy")
     public func getIamPolicy(
@@ -141,8 +134,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a NodeTemplate resource in the specified project using the data
-    /// included in the request.
+    /// Creates a NodeTemplate resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "nodeTemplates_insert")
     public func insert(
@@ -151,8 +143,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a NodeTemplate resource in the specified project using the data
-    /// included in the request.
+    /// Creates a NodeTemplate resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "nodeTemplates_insert")
     public func insert(
@@ -193,8 +184,7 @@
       )
     }
 
-    /// Retrieves a list of node templates available to the specified
-    /// project.
+    /// Retrieves a list of node templates available to the specified project.
     ///
     /// @Snippet(path: "nodeTemplates_list")
     public func list(
@@ -203,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of node templates available to the specified
-    /// project.
+    /// Retrieves a list of node templates available to the specified project.
     ///
     /// @Snippet(path: "nodeTemplates_list")
     public func list(
@@ -218,8 +207,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "nodeTemplates_setIamPolicy")
     public func setIamPolicy(

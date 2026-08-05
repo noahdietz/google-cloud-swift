@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of forwarding rules.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of forwarding rules. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "forwardingRules_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of forwarding rules.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of forwarding rules. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "forwardingRules_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a ForwardingRule resource in the specified project and region using
-    /// the data included in the request.
+    /// Creates a ForwardingRule resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "forwardingRules_insert")
     public func insert(
@@ -141,8 +134,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a ForwardingRule resource in the specified project and region using
-    /// the data included in the request.
+    /// Creates a ForwardingRule resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "forwardingRules_insert")
     public func insert(
@@ -183,8 +175,7 @@
       )
     }
 
-    /// Retrieves a list of ForwardingRule resources available to the specified
-    /// project and region.
+    /// Retrieves a list of ForwardingRule resources available to the specified project and region.
     ///
     /// @Snippet(path: "forwardingRules_list")
     public func list(
@@ -193,8 +184,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of ForwardingRule resources available to the specified
-    /// project and region.
+    /// Retrieves a list of ForwardingRule resources available to the specified project and region.
     ///
     /// @Snippet(path: "forwardingRules_list")
     public func list(
@@ -209,11 +199,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified forwarding rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules. Currently, you can only
-    /// patch the network_tier field.
+    /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
     ///
     /// @Snippet(path: "forwardingRules_patch")
     public func patch(
@@ -222,11 +208,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified forwarding rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules. Currently, you can only
-    /// patch the network_tier field.
+    /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
     ///
     /// @Snippet(path: "forwardingRules_patch")
     public func patch(
@@ -267,9 +249,7 @@
       )
     }
 
-    /// Sets the labels on the specified resource. To learn more about labels,
-    /// read the
-    /// Labeling Resources documentation.
+    /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "forwardingRules_setLabels")
     public func setLabels(
@@ -278,9 +258,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on the specified resource. To learn more about labels,
-    /// read the
-    /// Labeling Resources documentation.
+    /// Sets the labels on the specified resource. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "forwardingRules_setLabels")
     public func setLabels(
@@ -321,8 +299,7 @@
       )
     }
 
-    /// Changes target URL for forwarding rule. The new target should be of the
-    /// same type as the old target.
+    /// Changes target URL for forwarding rule. The new target should be of the same type as the old target.
     ///
     /// @Snippet(path: "forwardingRules_setTarget")
     public func setTarget(
@@ -331,8 +308,7 @@
       try await self.inner.setTarget(request: request, options: options)
     }
 
-    /// Changes target URL for forwarding rule. The new target should be of the
-    /// same type as the old target.
+    /// Changes target URL for forwarding rule. The new target should be of the same type as the old target.
     ///
     /// @Snippet(path: "forwardingRules_setTarget")
     public func setTarget(

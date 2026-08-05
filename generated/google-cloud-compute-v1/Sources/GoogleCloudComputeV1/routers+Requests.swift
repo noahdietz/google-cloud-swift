@@ -25,113 +25,28 @@
     public struct AggregatedListRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// Indicates whether every visible scope for each scope type (zone, region,
-      /// global) should be included in the response. For new resource types added
-      /// after this field, the flag has no effect as new resource types will always
-      /// include every visible scope for each scope type in response. For resource
-      /// types which predate this field, if this flag is omitted or false, only
-      /// scopes of the scope types where the resource type is expected to be found
-      /// will be included.
+      /// Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.
       public var includeAllScopes: Swift.Bool? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The Shared VPC service project id or service project number for which
-      /// aggregated list request is invoked for subnetworks list-usable api.
+      /// The Shared VPC service project id or service project number for which aggregated list request is invoked for subnetworks list-usable api.
       public var serviceProjectNumber: Swift.Int64? = nil
 
       /// Initialize a new instance of `AggregatedListRequest`.
@@ -173,19 +88,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource to delete.
@@ -233,19 +136,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Named Set is defined.
@@ -293,19 +184,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Route Policy is defined.
@@ -395,8 +274,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Name of the Router resource to query for the named set. The name should
-      /// conform to RFC1035.
+      /// Name of the Router resource to query for the named set. The name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `GetNamedSetRequest`.
@@ -432,9 +310,7 @@
     public struct GetNatIpInfoRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// Name of the nat service to filter the NAT IP information.
-      /// If it is omitted, all nats for this router will be returned.
-      /// Name should conform to RFC1035.
+      /// Name of the nat service to filter the NAT IP information. If it is omitted, all nats for this router will be returned. Name should conform to RFC1035.
       public var natName: Swift.String? = nil
 
       /// Project ID for this request.
@@ -443,8 +319,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Name of the Router resource to query for Nat IP information. The name
-      /// should conform to RFC1035.
+      /// Name of the Router resource to query for Nat IP information. The name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `GetNatIpInfoRequest`.
@@ -480,94 +355,19 @@
     public struct GetNatMappingInfoRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Name of the nat service to filter the Nat Mapping information.
-      /// If it is omitted, all nats for this router will be returned.
-      /// Name should conform to RFC1035.
+      /// Name of the nat service to filter the Nat Mapping information. If it is omitted, all nats for this router will be returned. Name should conform to RFC1035.
       public var natName: Swift.String? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
@@ -576,16 +376,10 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// Name of the Router resource to query for Nat Mapping information of
-      /// VM endpoints.
+      /// Name of the Router resource to query for Nat Mapping information of VM endpoints.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `GetNatMappingInfoRequest`.
@@ -630,8 +424,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Name of the Router resource to query for the route policy. The name should
-      /// conform to RFC1035.
+      /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `GetRoutePolicyRequest`.
@@ -715,19 +508,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Synthetic request body field for the [insert()][google.cloud.compute.v1.routers.insert] method.
@@ -768,89 +549,16 @@
     public struct ListRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
@@ -859,12 +567,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
       /// Initialize a new instance of `ListRequest`.
@@ -906,97 +609,22 @@
       /// Limit results to destinations that are subnets of this CIDR range
       public var destinationPrefix: Swift.String? = nil
 
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
-      /// (Required) limit results to the BGP peer with the given name.
-      /// Name should conform to RFC1035.
+      /// (Required) limit results to the BGP peer with the given name. Name should conform to RFC1035.
       public var peer: Swift.String? = nil
 
-      /// When true, the method returns post-policy routes. Otherwise, it returns
-      /// pre-policy routes.
+      /// When true, the method returns post-policy routes. Otherwise, it returns pre-policy routes.
       public var policyApplied: Swift.Bool? = nil
 
       /// Project ID for this request.
@@ -1005,20 +633,13 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// (Required) limit results to this type of route (either LEARNED or
-      /// ADVERTISED)
+      /// (Required) limit results to this type of route (either LEARNED or ADVERTISED)
       public var routeType: RoutersClient.ListBgpRoutesRequest.RouteType? = nil
 
-      /// Name or id of the resource for this request.
-      /// Name should conform to RFC1035.
+      /// Name or id of the resource for this request. Name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListBgpRoutesRequest`.
@@ -1262,89 +883,16 @@
     public struct ListNamedSetsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
@@ -1353,16 +901,10 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// Name or id of the resource for this request.
-      /// Name should conform to RFC1035.
+      /// Name or id of the resource for this request. Name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListNamedSetsRequest`.
@@ -1398,89 +940,16 @@
     public struct ListRoutePoliciesRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
@@ -1489,16 +958,10 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// Name or id of the resource for this request.
-      /// Name should conform to RFC1035.
+      /// Name or id of the resource for this request. Name should conform to RFC1035.
       public var router: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListRoutePoliciesRequest`.
@@ -1540,19 +1003,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource to patch.
@@ -1602,19 +1053,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Named Set is defined.
@@ -1664,19 +1103,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Route Policy is defined.
@@ -1773,19 +1200,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource to update.
@@ -1835,19 +1250,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Named Set is defined.
@@ -1897,19 +1300,7 @@
       /// Name of the region for this request.
       public var region: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
       /// Name of the Router resource where Route Policy is defined.

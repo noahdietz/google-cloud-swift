@@ -21,75 +21,31 @@
   public struct RouterInterface: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// IP address and range of the interface.
-    ///
-    ///    - For Internet Protocol version 4 (IPv4), the IP range must be in theRFC3927 link-local IP address space. The value must
-    ///    be a CIDR-formatted string, for example, 169.254.0.1/30.
-    ///    Note: Do not truncate the IP address, as it represents the IP address of
-    ///    the interface.
-    ///    - For Internet Protocol version 6 (IPv6), the value
-    ///    must be a unique local address (ULA) range from fdff:1::/64
-    ///    with a mask length of 126 or less. This value should be a CIDR-formatted
-    ///    string, for example, fdff:1::1/112. Within the router's
-    ///    VPC, this IPv6 prefix will be reserved exclusively for this connection
-    ///    and cannot be used for any other purpose.
+    /// IP address and range of the interface. - For Internet Protocol version 4 (IPv4), the IP range must be in the RFC3927 link-local IP address space. The value must be a CIDR-formatted string, for example, 169.254.0.1/30. Note: Do not truncate the IP address, as it represents the IP address of the interface. - For Internet Protocol version 6 (IPv6), the value must be a unique local address (ULA) range from fdff:1::/64 with a mask length of 126 or less. This value should be a CIDR-formatted string, for example, fdff:1::1/112. Within the router's VPC, this IPv6 prefix will be reserved exclusively for this connection and cannot be used for any other purpose.
     public var ipRange: Swift.String? = nil
 
     /// IP version of this interface.
     public var ipVersion: RouterInterface.IpVersion? = nil
 
-    /// URI of the linked Interconnect attachment. It must be in the same region
-    /// as the router. Each interface can have one linked resource, which can be
-    /// a VPN tunnel, an Interconnect attachment, or a subnetwork.
+    /// URI of the linked Interconnect attachment. It must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a subnetwork.
     public var linkedInterconnectAttachment: Swift.String? = nil
 
-    /// URI of the linked VPN tunnel, which must be in the same region as the
-    /// router. Each interface can have one linked resource, which can be
-    /// a VPN tunnel, an Interconnect attachment, or a subnetwork.
+    /// URI of the linked VPN tunnel, which must be in the same region as the router. Each interface can have one linked resource, which can be a VPN tunnel, an Interconnect attachment, or a subnetwork.
     public var linkedVpnTunnel: Swift.String? = nil
 
-    /// Output only. [Output Only] The resource that configures and manages this interface.
-    ///
-    ///    - MANAGED_BY_USER is the default value and can be managed directly
-    ///    by users.
-    ///    - MANAGED_BY_ATTACHMENT is an interface that is configured and
-    ///    managed by Cloud Interconnect, specifically, by an InterconnectAttachment
-    ///    of type PARTNER. Google automatically creates, updates, and deletes
-    ///    this type of interface when the PARTNER InterconnectAttachment is
-    ///    created, updated, or deleted.
+    /// Output only. [Output Only] The resource that configures and manages this interface. - MANAGED_BY_USER is the default value and can be managed directly by users. - MANAGED_BY_ATTACHMENT is an interface that is configured and managed by Cloud Interconnect, specifically, by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type of interface when the PARTNER InterconnectAttachment is created, updated, or deleted.
     public var managementType: RouterInterface.ManagementType? = nil
 
-    /// Name of this interface entry.
-    /// The name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63
-    /// characters long and match the regular expression
-    /// `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-    /// lowercase letter, and all following characters must be a dash, lowercase
-    /// letter, or digit, except the last character, which cannot be a dash.
+    /// Name of this interface entry. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The regional private internal IP address that is used to establish
-    /// BGP sessions to a VM instance acting as a third-party
-    /// Router Appliance, such as a Next Gen Firewall, a Virtual Router, or
-    /// an SD-WAN VM.
+    /// The regional private internal IP address that is used to establish BGP sessions to a VM instance acting as a third-party Router Appliance, such as a Next Gen Firewall, a Virtual Router, or an SD-WAN VM.
     public var privateIpAddress: Swift.String? = nil
 
-    /// Name of the interface that will be redundant with the current interface
-    /// you are creating. The redundantInterface must belong to the same Cloud
-    /// Router as the interface here. To establish the BGP session to a Router
-    /// Appliance VM, you must create two BGP peers. The two BGP peers must be
-    /// attached to two separate interfaces that are redundant with each other.
-    /// The redundant_interface must be 1-63 characters long, and comply withRFC1035. Specifically, the redundant_interface must
-    /// be 1-63 characters long and match the regular expression
-    /// `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-    /// lowercase letter, and all following characters must be a dash, lowercase
-    /// letter, or digit, except the last character, which cannot be a dash.
+    /// Name of the interface that will be redundant with the current interface you are creating. The redundantInterface must belong to the same Cloud Router as the interface here. To establish the BGP session to a Router Appliance VM, you must create two BGP peers. The two BGP peers must be attached to two separate interfaces that are redundant with each other. The redundant_interface must be 1-63 characters long, and comply with RFC1035. Specifically, the redundant_interface must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var redundantInterface: Swift.String? = nil
 
-    /// The URI of the subnetwork resource that this interface belongs to, which
-    /// must be in the same region as the Cloud Router.
-    /// When you establish a BGP session to a VM instance using this interface,
-    /// the VM instance must belong to the same subnetwork as the subnetwork
-    /// specified here.
+    /// The URI of the subnetwork resource that this interface belongs to, which must be in the same region as the Cloud Router. When you establish a BGP session to a VM instance using this interface, the VM instance must belong to the same subnetwork as the subnetwork specified here.
     public var subnetwork: Swift.String? = nil
 
     /// Initialize a new instance of `RouterInterface`.
@@ -210,11 +166,7 @@
     ///
     /// [google.cloud.compute.v1.RouterInterface.managementType]: <doc:RouterInterface/ManagementType>
     public enum ManagementType: Codable, Equatable, Sendable {
-      /// The interface is automatically created for PARTNER type
-      /// InterconnectAttachment, Google will automatically create/update/delete
-      /// this interface when the PARTNER InterconnectAttachment is
-      /// created/provisioned/deleted.
-      /// This type of interface cannot be manually managed by user.
+      /// The interface is automatically created for PARTNER type InterconnectAttachment, Google will automatically create/update/delete this interface when the PARTNER InterconnectAttachment is created/provisioned/deleted. This type of interface cannot be manually managed by user.
       case managedByAttachment
       /// Default value, the interface is manually created and managed by user.
       case managedByUser

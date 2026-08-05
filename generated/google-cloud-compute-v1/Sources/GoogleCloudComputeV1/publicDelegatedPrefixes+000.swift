@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Lists all PublicDelegatedPrefix resources owned by the specific project
-    /// across all scopes.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Lists all PublicDelegatedPrefix resources owned by the specific project
-    /// across all scopes.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Lists all PublicDelegatedPrefix resources owned by the specific project across all scopes. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_aggregatedList")
     public func aggregatedList(
@@ -189,8 +181,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a PublicDelegatedPrefix in the specified project in the given
-    /// region using the parameters that are included in the request.
+    /// Creates a PublicDelegatedPrefix in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_insert")
     public func insert(
@@ -199,8 +190,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a PublicDelegatedPrefix in the specified project in the given
-    /// region using the parameters that are included in the request.
+    /// Creates a PublicDelegatedPrefix in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_insert")
     public func insert(
@@ -266,10 +256,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified PublicDelegatedPrefix resource with the data included
-    /// in the request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_patch")
     public func patch(
@@ -278,10 +265,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified PublicDelegatedPrefix resource with the data included
-    /// in the request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified PublicDelegatedPrefix resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "publicDelegatedPrefixes_patch")
     public func patch(

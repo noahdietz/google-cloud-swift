@@ -21,13 +21,10 @@
   public struct ManagedInstanceShutdownDetails: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. The duration for graceful shutdown. Only applicable when the instance is
-    /// in `PENDING_STOP` state.
+    /// Output only. The duration for graceful shutdown. Only applicable when the instance is in `PENDING_STOP` state.
     public var maxDuration: Duration? = nil
 
-    /// Output only. Past timestamp indicating the beginning of `PENDING_STOP` state of
-    /// instance in RFC3339
-    /// text format.
+    /// Output only. Past timestamp indicating the beginning of `PENDING_STOP` state of instance in RFC3339 text format.
     public var requestTimestamp: GoogleCloudWkt.Timestamp? = nil
 
     /// Initialize a new instance of `ManagedInstanceShutdownDetails`.

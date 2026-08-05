@@ -21,8 +21,7 @@
   public struct TestPermissionsResponse: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A subset of `TestPermissionsRequest.permissions` that the caller is
-    /// allowed.
+    /// A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
     public var permissions: [Swift.String] = []
 
     /// Initialize a new instance of `TestPermissionsResponse`.

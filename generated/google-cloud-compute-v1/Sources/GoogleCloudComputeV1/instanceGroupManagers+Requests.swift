@@ -31,23 +31,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [abandonInstances()][google.cloud.compute.v1.instanceGroupManagers.abandonInstances] method.
@@ -89,113 +76,28 @@
     public struct AggregatedListRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// Indicates whether every visible scope for each scope type (zone, region,
-      /// global) should be included in the response. For new resource types added
-      /// after this field, the flag has no effect as new resource types will always
-      /// include every visible scope for each scope type in response. For resource
-      /// types which predate this field, if this flag is omitted or false, only
-      /// scopes of the scope types where the resource type is expected to be found
-      /// will be included.
+      /// Indicates whether every visible scope for each scope type (zone, region, global) should be included in the response. For new resource types added after this field, the flag has no effect as new resource types will always include every visible scope for each scope type in response. For resource types which predate this field, if this flag is omitted or false, only scopes of the scope types where the resource type is expected to be found will be included.
       public var includeAllScopes: Swift.Bool? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The Shared VPC service project id or service project number for which
-      /// aggregated list request is invoked for subnetworks list-usable api.
+      /// The Shared VPC service project id or service project number for which aggregated list request is invoked for subnetworks list-usable api.
       public var serviceProjectNumber: Swift.Int64? = nil
 
       /// Initialize a new instance of `AggregatedListRequest`.
@@ -238,8 +140,7 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// The name of thezone
-      /// where the managed instance group is located. Should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. Should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [applyUpdatesToInstances()][google.cloud.compute.v1.instanceGroupManagers.applyUpdatesToInstances] method.
@@ -281,30 +182,16 @@
     public struct CreateInstancesRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// The name of the managed instance group.
-      /// It should conform to RFC1035.
+      /// The name of the managed instance group. It should conform to RFC1035.
       public var instanceGroupManager: Swift.String = Swift.String()
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone
-      /// where the managed instance group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [createInstances()][google.cloud.compute.v1.instanceGroupManagers.createInstances] method.
@@ -349,30 +236,16 @@
       /// The name of the managed instance group to delete.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// When set, graceful shutdown is skipped for instance deletion even if it's
-      /// configured for the instances.
+      /// When set, graceful shutdown is skipped for instance deletion even if it's configured for the instances.
       public var noGracefulShutdown: Swift.Bool? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `DeleteRequest`.
@@ -411,30 +284,16 @@
       /// The name of the managed instance group.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// When set, graceful shutdown is skipped for instance deletion even if it's
-      /// configured for the instances.
+      /// When set, graceful shutdown is skipped for instance deletion even if it's configured for the instances.
       public var noGracefulShutdown: Swift.Bool? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [deleteInstances()][google.cloud.compute.v1.instanceGroupManagers.deleteInstances] method.
@@ -476,17 +335,13 @@
     public struct DeletePerInstanceConfigsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// The name of the managed instance group.
-      /// It should conform to RFC1035.
+      /// The name of the managed instance group. It should conform to RFC1035.
       public var instanceGroupManager: Swift.String = Swift.String()
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// The name of thezone
-      /// where the managed instance
-      /// group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [deletePerInstanceConfigs()][google.cloud.compute.v1.instanceGroupManagers.deletePerInstanceConfigs] method.
@@ -534,8 +389,7 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `GetRequest`.
@@ -574,23 +428,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of the zone
-      /// where you want to create the managed instance group.
+      /// The name of the zone where you want to create the managed instance group.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [insert()][google.cloud.compute.v1.instanceGroupManagers.insert] method.
@@ -631,104 +472,25 @@
     public struct ListRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListRequest`.
@@ -764,111 +526,28 @@
     public struct ListErrorsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
-      /// The name of the managed instance group.
-      /// It must be a string that meets the requirements in RFC1035, or an
-      /// unsigned long integer: must match regexp pattern:
-      /// (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
+      /// The name of the managed instance group. It must be a string that meets the requirements in RFC1035, or an unsigned long integer: must match regexp pattern: (?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?)|1-9{0,19}.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListErrorsRequest`.
@@ -904,107 +583,28 @@
     public struct ListManagedInstancesRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
       /// The name of the managed instance group.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListManagedInstancesRequest`.
@@ -1041,108 +641,28 @@
     public struct ListPerInstanceConfigsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// A filter expression that filters resources listed in the response. Most
-      /// Compute resources support two types of filter expressions:
-      /// expressions that support regular expressions and expressions that follow
-      /// API improvement proposal AIP-160.
-      /// These two types of filter expressions cannot be mixed in one request.
-      ///
-      /// If you want to use AIP-160, your expression must specify the field name, an
-      /// operator, and the value that you want to use for filtering. The value
-      /// must be a string, a number, or a boolean. The operator
-      /// must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
-      ///
-      /// For example, if you are filtering Compute Engine instances, you can
-      /// exclude instances named `example-instance` by specifying
-      /// `name != example-instance`.
-      ///
-      /// The `:*` comparison can be used to test whether a key has been defined.
-      /// For example, to find all objects with `owner` label use:
-      /// ```
-      /// labels.owner:*
-      /// ```
-      ///
-      /// You can also filter nested fields. For example, you could specify
-      /// `scheduling.automaticRestart = false` to include instances only
-      /// if they are not scheduled for automatic restarts. You can use filtering
-      /// on nested fields to filter based onresource labels.
-      ///
-      /// To filter on multiple expressions, provide each separate expression within
-      /// parentheses. For example:
-      /// ```
-      /// (scheduling.automaticRestart = true)
-      /// (cpuPlatform = "Intel Skylake")
-      /// ```
-      /// By default, each expression is an `AND` expression. However, you
-      /// can include `AND` and `OR` expressions explicitly.
-      /// For example:
-      /// ```
-      /// (cpuPlatform = "Intel Skylake") OR
-      /// (cpuPlatform = "Intel Broadwell") AND
-      /// (scheduling.automaticRestart = true)
-      /// ```
-      ///
-      /// If you want to use a regular expression, use the `eq` (equal) or `ne`
-      /// (not equal) operator against a single un-parenthesized expression with or
-      /// without quotes or against multiple parenthesized expressions. Examples:
-      ///
-      /// `fieldname eq unquoted literal`
-      /// `fieldname eq 'single quoted literal'`
-      /// `fieldname eq "double quoted literal"`
-      /// `(fieldname1 eq literal) (fieldname2 ne "literal")`
-      ///
-      /// The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
-      /// The literal value must match the entire field.
-      ///
-      /// For example, to filter for instances that do not end with name "instance",
-      /// you would use `name ne .*instance`.
-      ///
-      /// You cannot combine constraints on multiple fields using regular
-      /// expressions.
+      /// A filter expression that filters resources listed in the response. Most Compute resources support two types of filter expressions: expressions that support regular expressions and expressions that follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in one request. If you want to use AIP-160, your expression must specify the field name, an operator, and the value that you want to use for filtering. The value must be a string, a number, or a boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`. For example, if you are filtering Compute Engine instances, you can exclude instances named `example-instance` by specifying `name != example-instance`. The `:*` comparison can be used to test whether a key has been defined. For example, to find all objects with `owner` label use: ``` labels.owner:* ``` You can also filter nested fields. For example, you could specify `scheduling.automaticRestart = false` to include instances only if they are not scheduled for automatic restarts. You can use filtering on nested fields to filter based on resource labels. To filter on multiple expressions, provide each separate expression within parentheses. For example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default, each expression is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell") AND (scheduling.automaticRestart = true) ``` If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against a single un-parenthesized expression with or without quotes or against multiple parenthesized expressions. Examples: `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")` The literal value is interpreted as a regular expression using Google RE2 library syntax. The literal value must match the entire field. For example, to filter for instances that do not end with name "instance", you would use `name ne .*instance`. You cannot combine constraints on multiple fields using regular expressions.
       public var filter: Swift.String? = nil
 
       /// The name of the managed instance group. It should conform to RFC1035.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// The maximum number of results per page that should be returned.
-      /// If the number of available results is larger than `maxResults`,
-      /// Compute Engine returns a `nextPageToken` that can be used to get
-      /// the next page of results in subsequent list requests. Acceptable values are
-      /// `0` to `500`, inclusive. (Default: `500`)
+      /// The maximum number of results per page that should be returned. If the number of available results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive. (Default: `500`)
       public var maxResults: Swift.UInt32? = nil
 
-      /// Sorts list results by a certain order. By default, results
-      /// are returned in alphanumerical order based on the resource name.
-      ///
-      /// You can also sort results in descending order based on the creation
-      /// timestamp using `orderBy="creationTimestamp desc"`. This sorts
-      /// results based on the `creationTimestamp` field in
-      /// reverse chronological order (newest result first). Use this to sort
-      /// resources like operations so that the newest operation is returned first.
-      ///
-      /// Currently, only sorting by `name` or
-      /// `creationTimestamp desc` is supported.
+      /// Sorts list results by a certain order. By default, results are returned in alphanumerical order based on the resource name. You can also sort results in descending order based on the creation timestamp using `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in reverse chronological order (newest result first). Use this to sort resources like operations so that the newest operation is returned first. Currently, only sorting by `name` or `creationTimestamp desc` is supported.
       public var orderBy: Swift.String? = nil
 
-      /// Specifies a page token to use. Set `pageToken` to the
-      /// `nextPageToken` returned by a previous list request to get
-      /// the next page of results.
+      /// Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list request to get the next page of results.
       public var pageToken: Swift.String? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// Opt-in for partial success behavior which provides partial results in case
-      /// of failure. The default value is false.
-      ///
-      /// For example, when partial success behavior is enabled, aggregatedList for a
-      /// single zone scope either returns all resources in the zone or no resources,
-      /// with an error code.
+      /// Opt-in for partial success behavior which provides partial results in case of failure. The default value is false. For example, when partial success behavior is enabled, aggregatedList for a single zone scope either returns all resources in the zone or no resources, with an error code.
       public var returnPartialSuccess: Swift.Bool? = nil
 
-      /// The name of thezone
-      /// where the managed instance group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ListPerInstanceConfigsRequest`.
@@ -1185,23 +705,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of the zone where
-      /// you want to create the managed instance group.
+      /// The name of the zone where you want to create the managed instance group.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [patch()][google.cloud.compute.v1.instanceGroupManagers.patch] method.
@@ -1242,31 +749,16 @@
     public struct PatchPerInstanceConfigsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// The name of the managed instance group.
-      /// It should conform to RFC1035.
+      /// The name of the managed instance group. It should conform to RFC1035.
       public var instanceGroupManager: Swift.String = Swift.String()
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone
-      /// where the managed instance group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [patchPerInstanceConfigs()][google.cloud.compute.v1.instanceGroupManagers.patchPerInstanceConfigs] method.
@@ -1311,30 +803,16 @@
       /// The name of the managed instance group.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// When set, graceful shutdown is skipped for instance recreation even if it's
-      /// configured for the instances.
+      /// When set, graceful shutdown is skipped for instance recreation even if it's configured for the instances.
       public var noGracefulShutdown: Swift.Bool? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [recreateInstances()][google.cloud.compute.v1.instanceGroupManagers.recreateInstances] method.
@@ -1382,28 +860,13 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The number of running instances that the managed instance group should
-      /// maintain at any given time. The group automatically adds or removes
-      /// instances to maintain the number of instances specified by this parameter.
+      /// The number of running instances that the managed instance group should maintain at any given time. The group automatically adds or removes instances to maintain the number of instances specified by this parameter.
       public var size: Swift.Int32 = Swift.Int32()
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Initialize a new instance of `ResizeRequest`.
@@ -1445,23 +908,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [resumeInstances()][google.cloud.compute.v1.instanceGroupManagers.resumeInstances] method.
@@ -1509,23 +959,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [setInstanceTemplate()][google.cloud.compute.v1.instanceGroupManagers.setInstanceTemplate] method.
@@ -1573,23 +1010,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [setTargetPools()][google.cloud.compute.v1.instanceGroupManagers.setTargetPools] method.
@@ -1637,23 +1061,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [startInstances()][google.cloud.compute.v1.instanceGroupManagers.startInstances] method.
@@ -1698,30 +1109,16 @@
       /// The name of the managed instance group.
       public var instanceGroupManager: Swift.String = Swift.String()
 
-      /// When set, graceful shutdown is skipped for instance stopping even if it's
-      /// configured for the instances.
+      /// When set, graceful shutdown is skipped for instance stopping even if it's configured for the instances.
       public var noGracefulShutdown: Swift.Bool? = nil
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [stopInstances()][google.cloud.compute.v1.instanceGroupManagers.stopInstances] method.
@@ -1769,23 +1166,10 @@
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone where the managed
-      /// instance group is located.
+      /// The name of the zone where the managed instance group is located.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [suspendInstances()][google.cloud.compute.v1.instanceGroupManagers.suspendInstances] method.
@@ -1827,31 +1211,16 @@
     public struct UpdatePerInstanceConfigsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// The name of the managed instance group.
-      /// It should conform to RFC1035.
+      /// The name of the managed instance group. It should conform to RFC1035.
       public var instanceGroupManager: Swift.String = Swift.String()
 
       /// Project ID for this request.
       public var project: Swift.String = Swift.String()
 
-      /// An optional request ID to identify requests. Specify a unique request ID so
-      /// that if you must retry your request, the server will know to ignore the
-      /// request if it has already been completed.
-      ///
-      /// For example, consider a situation where you make an initial request and
-      /// the request times out. If you make the request again with the same
-      /// request ID, the server can check if original operation with the same
-      /// request ID was received, and if so, will ignore the second request. This
-      /// prevents clients from accidentally creating duplicate commitments.
-      ///
-      /// The request ID must be
-      /// a valid UUID with the exception that zero UUID is not supported
-      /// (00000000-0000-0000-0000-000000000000).
+      /// An optional request ID to identify requests. Specify a unique request ID so that if you must retry your request, the server will know to ignore the request if it has already been completed. For example, consider a situation where you make an initial request and the request times out. If you make the request again with the same request ID, the server can check if original operation with the same request ID was received, and if so, will ignore the second request. This prevents clients from accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception that zero UUID is not supported ( 00000000-0000-0000-0000-000000000000).
       public var requestId: Swift.String? = nil
 
-      /// The name of thezone
-      /// where the managed instance group is located.
-      /// It should conform to RFC1035.
+      /// The name of the zone where the managed instance group is located. It should conform to RFC1035.
       public var zone: Swift.String = Swift.String()
 
       /// Synthetic request body field for the [updatePerInstanceConfigs()][google.cloud.compute.v1.instanceGroupManagers.updatePerInstanceConfigs] method.

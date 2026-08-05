@@ -101,8 +101,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates an autoscaler in the specified project using
-    /// the data included in the request.
+    /// Creates an autoscaler in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionAutoscalers_insert")
     public func insert(
@@ -111,8 +110,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an autoscaler in the specified project using
-    /// the data included in the request.
+    /// Creates an autoscaler in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionAutoscalers_insert")
     public func insert(
@@ -153,8 +151,7 @@
       )
     }
 
-    /// Retrieves a list of autoscalers contained within
-    /// the specified region.
+    /// Retrieves a list of autoscalers contained within the specified region.
     ///
     /// @Snippet(path: "regionAutoscalers_list")
     public func list(
@@ -163,8 +160,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of autoscalers contained within
-    /// the specified region.
+    /// Retrieves a list of autoscalers contained within the specified region.
     ///
     /// @Snippet(path: "regionAutoscalers_list")
     public func list(
@@ -179,10 +175,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates an autoscaler in the specified project using
-    /// the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionAutoscalers_patch")
     public func patch(
@@ -191,10 +184,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates an autoscaler in the specified project using
-    /// the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates an autoscaler in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionAutoscalers_patch")
     public func patch(
@@ -245,8 +235,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates an autoscaler in the specified project using
-    /// the data included in the request.
+    /// Updates an autoscaler in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionAutoscalers_update")
     public func update(
@@ -255,8 +244,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates an autoscaler in the specified project using
-    /// the data included in the request.
+    /// Updates an autoscaler in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionAutoscalers_update")
     public func update(

@@ -21,8 +21,7 @@
   public struct ManagedInstanceLastAttempt: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Encountered errors during the last attempt to create or
-    /// delete the instance.
+    /// Output only. [Output Only] Encountered errors during the last attempt to create or delete the instance.
     public var errors: ManagedInstanceLastAttempt.Errors? = nil
 
     /// Initialize a new instance of `ManagedInstanceLastAttempt`.
@@ -47,8 +46,7 @@
     public struct Errors: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] The array of errors encountered while processing this
-      /// operation.
+      /// [Output Only] The array of errors encountered while processing this operation.
       public var errors: [ManagedInstanceLastAttempt.Errors.Errors] = []
 
       /// Initialize a new instance of `Errors`.
@@ -76,15 +74,10 @@
         /// [Output Only] The error type identifier for this error.
         public var code: Swift.String? = nil
 
-        /// [Output Only] An optional list of messages that contain the error
-        /// details. There is a set of defined message types to use for providing
-        /// details.The syntax depends on the error code. For example,
-        /// QuotaExceededInfo will have details when the error code is
-        /// QUOTA_EXCEEDED.
+        /// [Output Only] An optional list of messages that contain the error details. There is a set of defined message types to use for providing details.The syntax depends on the error code. For example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
         public var errorDetails: [ManagedInstanceLastAttempt.Errors.Errors.ErrorDetails] = []
 
-        /// [Output Only] Indicates the field in the request that caused the error.
-        /// This property is optional.
+        /// [Output Only] Indicates the field in the request that caused the error. This property is optional.
         public var location: Swift.String? = nil
 
         /// [Output Only] An optional, human-readable error message.

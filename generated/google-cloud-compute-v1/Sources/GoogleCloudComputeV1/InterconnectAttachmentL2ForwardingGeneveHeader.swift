@@ -23,8 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Optional. VNI is a 24-bit unique virtual network identifier, from 0 to
-    /// 16,777,215.
+    /// Optional. VNI is a 24-bit unique virtual network identifier, from 0 to 16,777,215.
     public var vni: Swift.UInt32? = nil
 
     /// Initialize a new instance of `InterconnectAttachmentL2ForwardingGeneveHeader`.

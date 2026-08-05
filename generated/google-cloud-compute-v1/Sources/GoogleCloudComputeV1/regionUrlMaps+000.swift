@@ -101,8 +101,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a UrlMap resource in the specified project using
-    /// the data included in the request.
+    /// Creates a UrlMap resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionUrlMaps_insert")
     public func insert(
@@ -111,8 +110,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a UrlMap resource in the specified project using
-    /// the data included in the request.
+    /// Creates a UrlMap resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionUrlMaps_insert")
     public func insert(
@@ -153,8 +151,7 @@
       )
     }
 
-    /// Retrieves the list of UrlMap resources available to the specified
-    /// project in the specified region.
+    /// Retrieves the list of UrlMap resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionUrlMaps_list")
     public func list(
@@ -163,8 +160,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of UrlMap resources available to the specified
-    /// project in the specified region.
+    /// Retrieves the list of UrlMap resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionUrlMaps_list")
     public func list(
@@ -178,10 +174,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified UrlMap resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified UrlMap resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionUrlMaps_patch")
     public func patch(
@@ -190,10 +183,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified UrlMap resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified UrlMap resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionUrlMaps_patch")
     public func patch(
@@ -234,8 +224,7 @@
       )
     }
 
-    /// Updates the specified UrlMap resource with the data included in the
-    /// request.
+    /// Updates the specified UrlMap resource with the data included in the request.
     ///
     /// @Snippet(path: "regionUrlMaps_update")
     public func update(
@@ -244,8 +233,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified UrlMap resource with the data included in the
-    /// request.
+    /// Updates the specified UrlMap resource with the data included in the request.
     ///
     /// @Snippet(path: "regionUrlMaps_update")
     public func update(
@@ -286,9 +274,7 @@
       )
     }
 
-    /// Runs static validation for the UrlMap. In particular, the tests of the
-    /// provided UrlMap will be run. Calling this method does NOT create the
-    /// UrlMap.
+    /// Runs static validation for the UrlMap. In particular, the tests of the provided UrlMap will be run. Calling this method does NOT create the UrlMap.
     ///
     /// @Snippet(path: "regionUrlMaps_validate")
     public func validate(

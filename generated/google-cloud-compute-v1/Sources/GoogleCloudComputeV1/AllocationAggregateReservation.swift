@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// This reservation type is specified by total resource amounts (e.g. total
-  /// count of CPUs) and can account for multiple instance SKUs. In other words,
-  /// one can create instances of varying shapes against this reservation.
+  /// This reservation type is specified by total resource amounts (e.g. total count of CPUs) and can account for multiple instance SKUs. In other words, one can create instances of varying shapes against this reservation.
   public struct AllocationAggregateReservation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -30,8 +28,7 @@
     /// List of reserved resources (CPUs, memory, accelerators).
     public var reservedResources: [AllocationAggregateReservationReservedResourceInfo] = []
 
-    /// The VM family that all instances scheduled against this reservation must
-    /// belong to.
+    /// The VM family that all instances scheduled against this reservation must belong to.
     public var vmFamily: AllocationAggregateReservation.VmFamily? = nil
 
     /// The workload type of the instances that will target this reservation.
@@ -191,11 +188,9 @@
     ///
     /// [google.cloud.compute.v1.AllocationAggregateReservation.workloadType]: <doc:AllocationAggregateReservation/WorkloadType>
     public enum WorkloadType: Codable, Equatable, Sendable {
-      /// Reserved resources will be optimized for BATCH workloads, such as ML
-      /// training.
+      /// Reserved resources will be optimized for BATCH workloads, such as ML training.
       case batch
-      /// Reserved resources will be optimized for SERVING workloads, such as ML
-      /// inference.
+      /// Reserved resources will be optimized for SERVING workloads, such as ML inference.
       case serving
       case unspecified
       /// Encodes an unknown integer value.

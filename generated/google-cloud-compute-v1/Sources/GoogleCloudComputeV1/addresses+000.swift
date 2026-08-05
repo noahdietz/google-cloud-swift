@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of addresses.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of addresses. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "addresses_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of addresses.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of addresses. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "addresses_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates an address resource in the specified project by using the data
-    /// included in the request.
+    /// Creates an address resource in the specified project by using the data included in the request.
     ///
     /// @Snippet(path: "addresses_insert")
     public func insert(
@@ -141,8 +134,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an address resource in the specified project by using the data
-    /// included in the request.
+    /// Creates an address resource in the specified project by using the data included in the request.
     ///
     /// @Snippet(path: "addresses_insert")
     public func insert(
@@ -183,8 +175,7 @@
       )
     }
 
-    /// Retrieves a list of addresses contained within
-    /// the specified region.
+    /// Retrieves a list of addresses contained within the specified region.
     ///
     /// @Snippet(path: "addresses_list")
     public func list(
@@ -193,8 +184,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of addresses contained within
-    /// the specified region.
+    /// Retrieves a list of addresses contained within the specified region.
     ///
     /// @Snippet(path: "addresses_list")
     public func list(
@@ -258,8 +248,7 @@
       )
     }
 
-    /// Sets the labels on an Address. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "addresses_setLabels")
     public func setLabels(
@@ -268,8 +257,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on an Address. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on an Address. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "addresses_setLabels")
     public func setLabels(

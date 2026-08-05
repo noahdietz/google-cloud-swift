@@ -22,13 +22,7 @@
   public struct DiskParams: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Input only. Resource manager tags to be bound to the disk. Tag keys and values
-    /// have the same definition as resource
-    /// manager tags. Keys and values can be either in numeric format,
-    /// such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in
-    /// namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and
-    /// `{tag_value_short_name}`. The field is ignored (both PUT &
-    /// PATCH) when empty.
+    /// Input only. Resource manager tags to be bound to the disk. Tag keys and values have the same definition as resource manager tags. Keys and values can be either in numeric format, such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored (both PUT & PATCH) when empty.
     public var resourceManagerTags: [Swift.String: Swift.String] = [:]
 
     /// Initialize a new instance of `DiskParams`.

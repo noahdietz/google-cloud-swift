@@ -25,15 +25,10 @@
     /// Size of the request, in instance count.
     public var instanceCount: Swift.Int64? = nil
 
-    /// Local SSD partitions. You do not have to include SSD partitions that
-    /// are built in the machine type.
+    /// Local SSD partitions. You do not have to include SSD partitions that are built in the machine type.
     public var localSsdPartitions: [FutureResourcesSpecLocalSsdPartition] = []
 
-    /// The machine type to use for instances that will use the reservation.
-    /// This field only accepts machine type names. e.g. n2-standard-4
-    /// and does not accept machine type full or partial url. e.g.
-    /// projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4.
-    /// Use for GPU reservations.
+    /// The machine type to use for instances that will use the reservation. This field only accepts machine type names. e.g. n2-standard-4 and does not accept machine type full or partial url. e.g. projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4. Use for GPU reservations.
     public var machineType: Swift.String? = nil
 
     /// Initialize a new instance of `FutureResourcesSpecSpecificSKUResources`.

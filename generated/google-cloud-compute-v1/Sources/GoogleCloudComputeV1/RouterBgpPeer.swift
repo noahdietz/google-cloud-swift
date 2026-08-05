@@ -24,70 +24,37 @@
     /// User-specified flag to indicate which mode to use for advertisement.
     public var advertiseMode: RouterBgpPeer.AdvertiseMode? = nil
 
-    /// User-specified list of prefix groups to advertise in custom mode,
-    /// which currently supports the following option:
-    ///
-    ///    - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This
-    ///    excludes any routes learned for subnets that use
-    ///    VPC Network Peering.
-    ///
-    ///
-    /// Note that this field can only be populated if advertise_mode is CUSTOM
-    /// and overrides the list defined for the router (in the "bgp" message).
-    /// These groups are advertised in addition to any specified prefixes.
-    /// Leave this field blank to advertise no custom groups.
+    /// User-specified list of prefix groups to advertise in custom mode, which currently supports the following option: - ALL_SUBNETS: Advertises all of the router's own VPC subnets. This excludes any routes learned for subnets that use VPC Network Peering. Note that this field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These groups are advertised in addition to any specified prefixes. Leave this field blank to advertise no custom groups.
     public var advertisedGroups: [RouterBgpPeer.AdvertisedGroups] = []
 
-    /// User-specified list of individual IP ranges to advertise in custom mode.
-    /// This field can only be populated if advertise_mode is CUSTOM and
-    /// overrides the list defined for the router (in the "bgp" message).
-    /// These IP ranges are advertised in addition to any specified groups.
-    /// Leave this field blank to advertise no custom IP ranges.
+    /// User-specified list of individual IP ranges to advertise in custom mode. This field can only be populated if advertise_mode is CUSTOM and overrides the list defined for the router (in the "bgp" message). These IP ranges are advertised in addition to any specified groups. Leave this field blank to advertise no custom IP ranges.
     public var advertisedIpRanges: [RouterAdvertisedIpRange] = []
 
-    /// The priority of routes advertised to this BGP peer. Where there is more
-    /// than one matching route of maximum length, the routes with the lowest
-    /// priority value win.
+    /// The priority of routes advertised to this BGP peer. Where there is more than one matching route of maximum length, the routes with the lowest priority value win.
     public var advertisedRoutePriority: Swift.UInt32? = nil
 
     /// BFD configuration for the BGP peering.
     public var bfd: RouterBgpPeerBfd? = nil
 
-    /// A list of user-defined custom learned route IP address ranges for a BGP
-    /// session.
+    /// A list of user-defined custom learned route IP address ranges for a BGP session.
     public var customLearnedIpRanges: [RouterBgpPeerCustomLearnedIpRange] = []
 
-    /// The user-defined custom learned route priority for a BGP session. This
-    /// value is applied to all custom learned route ranges for the session.
-    /// You can choose a value from `0` to `65335`. If you don't provide a
-    /// value, Google Cloud assigns a priority of `100` to the ranges.
+    /// The user-defined custom learned route priority for a BGP session. This value is applied to all custom learned route ranges for the session. You can choose a value from `0` to `65335`. If you don't provide a value, Google Cloud assigns a priority of `100` to the ranges.
     public var customLearnedRoutePriority: Swift.Int32? = nil
 
-    /// The status of the BGP peer connection.
-    ///
-    ///
-    /// If set to FALSE, any active session with the peer is terminated and
-    /// all associated routing information is removed. If set to TRUE, the
-    /// peer connection can be established with routing information. The default
-    /// is TRUE.
+    /// The status of the BGP peer connection. If set to FALSE, any active session with the peer is terminated and all associated routing information is removed. If set to TRUE, the peer connection can be established with routing information. The default is TRUE.
     public var enable: RouterBgpPeer.Enable? = nil
 
-    /// Enable IPv4 traffic over BGP Peer. It is enabled by default if
-    /// the peerIpAddress is version 4.
+    /// Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
     public var enableIpv4: Swift.Bool? = nil
 
-    /// Enable IPv6 traffic over BGP Peer. It is enabled by default if the
-    /// peerIpAddress is version 6.
+    /// Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
     public var enableIpv6: Swift.Bool? = nil
 
-    /// List of export policies applied to this peer, in the order they must be
-    /// evaluated. The name must correspond to an existing policy that has
-    /// ROUTE_POLICY_TYPE_EXPORT type.
+    /// List of export policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
     public var exportPolicies: [Swift.String] = []
 
-    /// List of import policies applied to this peer, in the order they must be
-    /// evaluated. The name must correspond to an existing policy that has
-    /// ROUTE_POLICY_TYPE_IMPORT type.
+    /// List of import policies applied to this peer, in the order they must be evaluated. The name must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
     public var importPolicies: [Swift.String] = []
 
     /// Name of the interface the BGP peer is associated with.
@@ -102,32 +69,16 @@
     /// IPv6 address of the interface inside Google Cloud Platform.
     public var ipv6NexthopAddress: Swift.String? = nil
 
-    /// Output only. [Output Only] The resource that configures and manages this BGP peer.
-    ///
-    ///    -  MANAGED_BY_USER is the default value and can be managed by you
-    ///    or other users
-    ///    - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed
-    ///    by Cloud Interconnect, specifically by an InterconnectAttachment of type
-    ///    PARTNER. Google automatically creates, updates, and deletes this type of
-    ///    BGP peer when the PARTNER InterconnectAttachment is created, updated,
-    ///    or deleted.
+    /// Output only. [Output Only] The resource that configures and manages this BGP peer. - MANAGED_BY_USER is the default value and can be managed by you or other users - MANAGED_BY_ATTACHMENT is a BGP peer that is configured and managed by Cloud Interconnect, specifically by an InterconnectAttachment of type PARTNER. Google automatically creates, updates, and deletes this type of BGP peer when the PARTNER InterconnectAttachment is created, updated, or deleted.
     public var managementType: RouterBgpPeer.ManagementType? = nil
 
-    /// Present if MD5 authentication is enabled for the peering. Must be the
-    /// name of one of the entries in the Router.md5_authentication_keys. The
-    /// field must comply with RFC1035.
+    /// Present if MD5 authentication is enabled for the peering. Must be the name of one of the entries in the Router.md5_authentication_keys. The field must comply with RFC1035.
     public var md5AuthenticationKeyName: Swift.String? = nil
 
-    /// Name of this BGP peer.
-    /// The name must be 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63
-    /// characters long and match the regular expression
-    /// `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
-    /// lowercase letter, and all following characters must be a dash, lowercase
-    /// letter, or digit, except the last character, which cannot be a dash.
+    /// Name of this BGP peer. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Peer BGP Autonomous System Number (ASN). Each BGP interface may use
-    /// a different value.
+    /// Peer BGP Autonomous System Number (ASN). Each BGP interface may use a different value.
     public var peerAsn: Swift.UInt32? = nil
 
     /// IP address of the BGP interface outside Google Cloud Platform.
@@ -139,11 +90,7 @@
     /// IPv6 address of the BGP interface outside Google Cloud Platform.
     public var peerIpv6NexthopAddress: Swift.String? = nil
 
-    /// URI of the VM instance that is used as third-party router
-    /// appliances such as Next Gen Firewalls, Virtual Routers, or Router
-    /// Appliances. The VM instance must be located in zones contained in the
-    /// same region as this Cloud Router.
-    /// The VM instance is the peer side of the BGP session.
+    /// URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance must be located in zones contained in the same region as this Cloud Router. The VM instance is the peer side of the BGP session.
     public var routerApplianceInstance: Swift.String? = nil
 
     /// Initialize a new instance of `RouterBgpPeer`.
@@ -455,13 +402,7 @@
     ///
     /// [google.cloud.compute.v1.RouterBgpPeer.managementType]: <doc:RouterBgpPeer/ManagementType>
     public enum ManagementType: Codable, Equatable, Sendable {
-      /// The BGP peer is automatically created for PARTNER type
-      /// InterconnectAttachment; Google will automatically create/delete
-      /// this BGP peer when the PARTNER InterconnectAttachment is
-      /// created/deleted, and Google will update the ipAddress and
-      /// peerIpAddress when the PARTNER InterconnectAttachment is provisioned.
-      /// This type of BGP peer cannot be created or deleted, but can be
-      /// modified for all fields except for name, ipAddress and peerIpAddress.
+      /// The BGP peer is automatically created for PARTNER type InterconnectAttachment; Google will automatically create/delete this BGP peer when the PARTNER InterconnectAttachment is created/deleted, and Google will update the ipAddress and peerIpAddress when the PARTNER InterconnectAttachment is provisioned. This type of BGP peer cannot be created or deleted, but can be modified for all fields except for name, ipAddress and peerIpAddress.
       case managedByAttachment
       /// Default value, the BGP peer is manually created and managed by user.
       case managedByUser

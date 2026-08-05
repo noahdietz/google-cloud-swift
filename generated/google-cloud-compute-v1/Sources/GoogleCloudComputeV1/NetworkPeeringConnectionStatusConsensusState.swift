@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The status of update/delete for a consensus peering connection. Only set
-  /// when connection_status.update_strategy isCONSENSUS or a network peering is proposing to update the
-  /// strategy to CONSENSUS.
+  /// The status of update/delete for a consensus peering connection. Only set when connection_status.update_strategy is CONSENSUS or a network peering is proposing to update the strategy to CONSENSUS.
   public struct NetworkPeeringConnectionStatusConsensusState: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -51,20 +49,16 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeeringConnectionStatusConsensusState.deleteStatus]: <doc:NetworkPeeringConnectionStatusConsensusState/DeleteStatus>
     public enum DeleteStatus: Codable, Equatable, Sendable {
-      /// Both network admins have agreed this consensus peering connection can
-      /// be deleted.
+      /// Both network admins have agreed this consensus peering connection can be deleted.
       case deleteAcknowledged
       case unspecified
-      /// The local network admin requested to cancel their delete request
-      /// after DELETE_ACKNOWLEDGED.
+      /// The local network admin requested to cancel their delete request after DELETE_ACKNOWLEDGED.
       case localCancelRequested
       /// Network admin has requested deletion of this peering connection.
       case localDeleteRequested
-      /// The peer network admin requested to cancel their delete request after
-      /// DELETE_ACKNOWLEDGED.
+      /// The peer network admin requested to cancel their delete request after DELETE_ACKNOWLEDGED.
       case peerCancelRequested
-      /// The peer network admin has requested deletion of this peering
-      /// connection.
+      /// The peer network admin has requested deletion of this peering connection.
       case peerDeleteRequested
       /// Encodes an unknown integer value.
       ///
@@ -182,13 +176,11 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeeringConnectionStatusConsensusState.updateStatus]: <doc:NetworkPeeringConnectionStatusConsensusState/UpdateStatus>
     public enum UpdateStatus: Codable, Equatable, Sendable {
-      /// No pending configuration update proposals to the  peering connection.
+      /// No pending configuration update proposals to the peering connection.
       case inSync
-      /// The peer network admin has made an updatePeering call. The change is
-      /// awaiting acknowledgment from this peering's network admin.
+      /// The peer network admin has made an updatePeering call. The change is awaiting acknowledgment from this peering's network admin.
       case pendingLocalAcknowledment
-      /// The local network admin has made an updatePeering call. The change
-      /// is awaiting acknowledgment from the peer network admin.
+      /// The local network admin has made an updatePeering call. The change is awaiting acknowledgment from the peer network admin.
       case pendingPeerAcknowledgement
       case unspecified
       /// Encodes an unknown integer value.

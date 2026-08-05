@@ -21,8 +21,7 @@
   public struct DisksAddResourcePoliciesRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Full or relative path to the resource policy to be added to this disk. You
-    /// can only specify one resource policy.
+    /// Full or relative path to the resource policy to be added to this disk. You can only specify one resource policy.
     public var resourcePolicies: [Swift.String] = []
 
     /// Initialize a new instance of `DisksAddResourcePoliciesRequest`.

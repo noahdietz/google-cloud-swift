@@ -22,17 +22,13 @@
   public struct ResourcePolicyDailyCycle: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Defines a schedule with units measured in days. The value determines
-    /// how many days pass between the start of each cycle.
+    /// Defines a schedule with units measured in days. The value determines how many days pass between the start of each cycle.
     public var daysInCycle: Swift.Int32? = nil
 
-    /// Output only. [Output only] A predetermined duration for the window, automatically
-    /// chosen to be the smallest possible in the given scenario.
+    /// Output only. [Output only] A predetermined duration for the window, automatically chosen to be the smallest possible in the given scenario.
     public var duration: Swift.String? = nil
 
-    /// Start time of the window. This must be in UTC format that resolves to one
-    /// of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For
-    /// example, both 13:00-5 and 08:00 are valid.
+    /// Start time of the window. This must be in UTC format that resolves to one of 00:00, 04:00, 08:00, 12:00, 16:00, or 20:00. For example, both 13:00-5 and 08:00 are valid.
     public var startTime: Swift.String? = nil
 
     /// Initialize a new instance of `ResourcePolicyDailyCycle`.

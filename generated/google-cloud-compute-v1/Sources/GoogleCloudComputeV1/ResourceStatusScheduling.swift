@@ -21,10 +21,14 @@
   public struct ResourceStatusScheduling: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies the availability domain to place the instance in. The value
-    /// must be a number between 1 and the number of availability domains
-    /// specified in the spread placement policy attached to the instance.
+    /// Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
     public var availabilityDomain: Swift.Int32? = nil
+
+    /// Output only. Specifies the timestamp, when the instance will start graceful shutdown process, in RFC3339 text format.
+    public var gracefulShutdownTimestamp: Swift.String? = nil
+
+    /// Time in future when the instance will be terminated in RFC3339 text format.
+    public var terminationTimestamp: Swift.String? = nil
 
     /// Initialize a new instance of `ResourceStatusScheduling`.
     public init() {}

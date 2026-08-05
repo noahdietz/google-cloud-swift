@@ -18,10 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Cloud Storage Bucket resource.
-  ///
-  /// This Cloud Storage bucket resource is referenced by a URL map of a load
-  /// balancer. For more information, readBackend Buckets.
+  /// Represents a Cloud Storage Bucket resource. This Cloud Storage bucket resource is referenced by a URL map of a load balancer. For more information, read Backend Buckets.
   public struct BackendBucket: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -31,23 +28,19 @@
     /// Cloud CDN configuration for this BackendBucket.
     public var cdnPolicy: BackendBucketCdnPolicy? = nil
 
-    /// Compress text responses using Brotli or gzip compression, based on
-    /// the client's Accept-Encoding header.
+    /// Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
     public var compressionMode: BackendBucket.CompressionMode? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Headers that the Application Load Balancer should add to proxied responses.
     public var customResponseHeaders: [Swift.String] = []
 
-    /// An optional textual description of the resource; provided by the client
-    /// when the resource is created.
+    /// An optional textual description of the resource; provided by the client when the resource is created.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The resource URL for the edge security policy associated with
-    /// this backend bucket.
+    /// [Output Only] The resource URL for the edge security policy associated with this backend bucket.
     public var edgeSecurityPolicy: Swift.String? = nil
 
     /// If true, enable Cloud CDN for this BackendBucket.
@@ -59,31 +52,16 @@
     /// Output only. Type of the resource.
     public var kind: Swift.String? = nil
 
-    /// The value can only be INTERNAL_MANAGED for cross-region internal layer 7
-    /// load balancer.
-    ///
-    /// If loadBalancingScheme is not specified, the backend bucket can be used by
-    /// classic global external load balancers, or global application external load
-    /// balancers, or both.
+    /// The value can only be INTERNAL_MANAGED for cross-region internal layer 7 load balancer. If loadBalancingScheme is not specified, the backend bucket can be used by classic global external load balancers, or global application external load balancers, or both.
     public var loadBalancingScheme: BackendBucket.LoadBalancingScheme? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Input only. [Input Only] Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
     public var params: BackendBucketParams? = nil
 
-    /// Output only. [Output Only] URL of the region where the regional backend bucket
-    /// resides. This field is not applicable to global backend buckets.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// Output only. [Output Only] URL of the region where the regional backend bucket resides. This field is not applicable to global backend buckets. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.
@@ -112,11 +90,9 @@
     ///
     /// [google.cloud.compute.v1.BackendBucket.compressionMode]: <doc:BackendBucket/CompressionMode>
     public enum CompressionMode: Codable, Equatable, Sendable {
-      /// Automatically uses the best compression based on the Accept-Encoding
-      /// header sent by the client.
+      /// Automatically uses the best compression based on the Accept-Encoding header sent by the client.
       case automatic
-      /// Disables compression. Existing compressed responses cached by
-      /// Cloud CDN will not be served to clients.
+      /// Disables compression. Existing compressed responses cached by Cloud CDN will not be served to clients.
       case disabled
       /// Encodes an unknown integer value.
       ///
@@ -214,8 +190,7 @@
     ///
     /// [google.cloud.compute.v1.BackendBucket.loadBalancingScheme]: <doc:BackendBucket/LoadBalancingScheme>
     public enum LoadBalancingScheme: Codable, Equatable, Sendable {
-      /// Signifies that this will be used for regional external Application Load
-      /// Balancers.
+      /// Signifies that this will be used for regional external Application Load Balancers.
       case externalManaged
       /// Signifies that this will be used for internal Application Load Balancers.
       case internalManaged

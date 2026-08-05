@@ -24,13 +24,10 @@
     /// CEL expressions to evaluate to modify a route when this term matches.
     public var actions: [Expr] = []
 
-    /// CEL expression evaluated against a route to determine if this term
-    /// applies. When not set, the term applies to all
-    /// routes.
+    /// CEL expression evaluated against a route to determine if this term applies. When not set, the term applies to all routes.
     public var match: Expr? = nil
 
-    /// The evaluation priority for this term, which must be between 0
-    /// (inclusive) and 2^31 (exclusive), and unique within the list.
+    /// The evaluation priority for this term, which must be between 0 (inclusive) and 2^31 (exclusive), and unique within the list.
     public var priority: Swift.Int32? = nil
 
     /// Initialize a new instance of `RoutePolicyPolicyTerm`.

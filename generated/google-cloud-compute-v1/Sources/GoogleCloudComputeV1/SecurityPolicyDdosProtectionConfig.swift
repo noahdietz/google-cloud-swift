@@ -24,21 +24,7 @@
     public var ddosAdaptiveProtection: SecurityPolicyDdosProtectionConfig.DdosAdaptiveProtection? =
       nil
 
-    /// DDoS Protection for Network Load Balancers (and VMs with public IPs)
-    /// builds DDoS mitigations that minimize collateral damage. It quantifies
-    /// this as the fraction of a non-abuse baseline that's inadvertently
-    /// blocked.
-    ///
-    /// Rules whose collateral damage exceeds ddosImpactedBaselineThreshold will
-    /// not be deployed. Using a lower value will prioritize keeping collateral
-    /// damage low, possibly at the cost of its effectiveness in rate limiting
-    /// some or all of the attack. It should typically be unset, so Advanced DDoS
-    /// (and Adaptive Protection) uses the best mitigation it can find. Setting
-    /// the threshold is advised if there are logs for false positive detections
-    /// with high collateral damage, and will cause Advanced DDoS to attempt to
-    /// find a less aggressive rule that satisfies the constraint. If a suitable
-    /// rule cannot be found, the system falls back to either no mitigation for
-    /// smaller attacks or broader network throttles for larger ones.
+    /// DDoS Protection for Network Load Balancers (and VMs with public IPs) builds DDoS mitigations that minimize collateral damage. It quantifies this as the fraction of a non-abuse baseline that's inadvertently blocked. Rules whose collateral damage exceeds ddosImpactedBaselineThreshold will not be deployed. Using a lower value will prioritize keeping collateral damage low, possibly at the cost of its effectiveness in rate limiting some or all of the attack. It should typically be unset, so Advanced DDoS (and Adaptive Protection) uses the best mitigation it can find. Setting the threshold is advised if there are logs for false positive detections with high collateral damage, and will cause Advanced DDoS to attempt to find a less aggressive rule that satisfies the constraint. If a suitable rule cannot be found, the system falls back to either no mitigation for smaller attacks or broader network throttles for larger ones.
     public var ddosImpactedBaselineThreshold: Swift.Float? = nil
 
     public var ddosProtection: SecurityPolicyDdosProtectionConfig.DdosProtection? = nil

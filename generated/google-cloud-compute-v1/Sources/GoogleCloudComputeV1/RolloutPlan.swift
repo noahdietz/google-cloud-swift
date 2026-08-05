@@ -18,42 +18,26 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// RolloutPlan resource.
-  ///
-  /// A RolloutPlan is the customer-defined strategy to divide a large-scale change
-  /// into smaller increments, referred to as "waves". Each wave targets a specific
-  /// portion of the overall affected area and defines criteria that must be met
-  /// before progressing to the subsequent wave.
+  /// RolloutPlan resource. A RolloutPlan is the customer-defined strategy to divide a large-scale change into smaller increments, referred to as "waves". Each wave targets a specific portion of the overall affected area and defines criteria that must be met before progressing to the subsequent wave.
   public struct RolloutPlan: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#rolloutPlan
-    /// for rolloutPlans.
+    /// Output only. [Output Only] Type of the resource. Always compute#rolloutPlan for rolloutPlans.
     public var kind: Swift.String? = nil
 
-    /// The location scope of the rollout plan. If not specified, the location
-    /// scope is considered as ZONAL.
+    /// The location scope of the rollout plan. If not specified, the location scope is considered as ZONAL.
     public var locationScope: RolloutPlan.LocationScope? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-    /// which means the first character must be a lowercase letter, and all
-    /// following characters must be a dash, lowercase letter, or digit, except
-    /// the last character, which cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined fully-qualified URL for this resource.

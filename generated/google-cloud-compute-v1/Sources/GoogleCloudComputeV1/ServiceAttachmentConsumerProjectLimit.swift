@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The value of the limit to set. For endpoint_url, the limit should be no
-    /// more than 1.
+    /// The value of the limit to set. For endpoint_url, the limit should be no more than 1.
     public var connectionLimit: Swift.UInt32? = nil
 
     /// The URL for the PSC endpoint to accept

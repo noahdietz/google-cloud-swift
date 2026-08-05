@@ -28,8 +28,7 @@
     /// Health state of the CompositeHealthCheck.
     public var healthState: CompositeHealthCheckHealth.HealthState? = nil
 
-    /// Output only. [Output Only] Type of resource. Alwayscompute#compositeHealthCheckHealth for the health of
-    /// composite health checks.
+    /// Output only. [Output Only] Type of resource. Always compute#compositeHealthCheckHealth for the health of composite health checks.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `CompositeHealthCheckHealth`.

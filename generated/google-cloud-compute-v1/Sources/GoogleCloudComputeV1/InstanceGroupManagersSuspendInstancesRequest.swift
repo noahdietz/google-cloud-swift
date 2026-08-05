@@ -22,12 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// If this flag is set to true, the Instance Group Manager will proceed to
-    /// suspend the instances, skipping initialization on them.
+    /// If this flag is set to true, the Instance Group Manager will proceed to suspend the instances, skipping initialization on them.
     public var forceSuspend: Swift.Bool? = nil
 
-    /// The URLs of one or more instances to suspend. This can be a full URL or
-    /// a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
+    /// The URLs of one or more instances to suspend. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
     public var instances: [Swift.String] = []
 
     /// Initialize a new instance of `InstanceGroupManagersSuspendInstancesRequest`.

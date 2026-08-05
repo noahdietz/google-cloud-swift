@@ -22,39 +22,20 @@
   public struct InterconnectAttachmentL2Forwarding: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. A map of VLAN tags to appliances and optional inner mapping
-    /// rules. If VLANs are not explicitly mapped to any appliance, the
-    /// defaultApplianceIpAddress is used.
-    ///
-    /// Each VLAN tag can be a single number or a range of numbers in the range
-    /// of 1 to 4094, e.g., "1" or "4001-4094". Non-empty and non-overlapping
-    /// VLAN tag ranges are enforced, and violating operations will be rejected.
-    ///
-    /// The VLAN tags in the Ethernet header must use an ethertype value of
-    /// 0x88A8 or 0x8100.
+    /// Optional. A map of VLAN tags to appliances and optional inner mapping rules. If VLANs are not explicitly mapped to any appliance, the defaultApplianceIpAddress is used. Each VLAN tag can be a single number or a range of numbers in the range of 1 to 4094, e.g., "1" or "4001-4094". Non-empty and non-overlapping VLAN tag ranges are enforced, and violating operations will be rejected. The VLAN tags in the Ethernet header must use an ethertype value of 0x88A8 or 0x8100.
     public var applianceMappings:
       [Swift.String: InterconnectAttachmentL2ForwardingApplianceMapping] = [:]
 
-    /// Optional. A single IPv4 or IPv6 address used as the default destination
-    /// IP when there is no VLAN mapping result found.
-    ///
-    /// Unset field (null-value) indicates the unmatched packet should be
-    /// dropped.
+    /// Optional. A single IPv4 or IPv6 address used as the default destination IP when there is no VLAN mapping result found. Unset field (null-value) indicates the unmatched packet should be dropped.
     public var defaultApplianceIpAddress: Swift.String? = nil
 
-    /// Optional. It represents the structure of a Geneve (Generic Network
-    /// Virtualization Encapsulation) header, as defined in RFC8926. It encapsulates packets from various
-    /// protocols (e.g., Ethernet, IPv4, IPv6) for use in network virtualization
-    /// environments.
+    /// Optional. It represents the structure of a Geneve (Generic Network Virtualization Encapsulation) header, as defined in RFC8926. It encapsulates packets from various protocols (e.g., Ethernet, IPv4, IPv6) for use in network virtualization environments.
     public var geneveHeader: InterconnectAttachmentL2ForwardingGeneveHeader? = nil
 
     /// Required. Resource URL of the network to which this attachment belongs.
     public var network: Swift.String? = nil
 
-    /// Required. A single IPv4 or IPv6 address. This address will be used as the
-    /// source IP address for packets sent to the appliances, and must be used as
-    /// the destination IP address for packets that should be sent out through
-    /// this attachment.
+    /// Required. A single IPv4 or IPv6 address. This address will be used as the source IP address for packets sent to the appliances, and must be used as the destination IP address for packets that should be sent out through this attachment.
     public var tunnelEndpointIpAddress: Swift.String? = nil
 
     /// Initialize a new instance of `InterconnectAttachmentL2Forwarding`.

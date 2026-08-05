@@ -25,8 +25,7 @@
     /// A list of associations.
     public var associations: [SecurityPolicyAssociation] = []
 
-    /// Output only. [Output Only] Type of securityPolicy associations. Alwayscompute#organizationSecurityPoliciesListAssociations for lists
-    /// of securityPolicy associations.
+    /// Output only. [Output Only] Type of securityPolicy associations. Always compute#organizationSecurityPoliciesListAssociations for lists of securityPolicy associations.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `OrganizationSecurityPoliciesListAssociationsResponse`.

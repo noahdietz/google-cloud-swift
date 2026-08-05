@@ -24,8 +24,7 @@
     /// The target that the firewall policy is attached to.
     public var attachmentTarget: Swift.String? = nil
 
-    /// [Output Only] Deprecated, please use short name instead. The display name
-    /// of the firewall policy of the association.
+    /// [Output Only] Deprecated, please use short name instead. The display name of the firewall policy of the association.
     @available(*, deprecated)
     public var displayName: Swift.String? = nil
 

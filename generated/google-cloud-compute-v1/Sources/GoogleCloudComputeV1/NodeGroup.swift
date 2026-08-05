@@ -18,63 +18,39 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a sole-tenant Node Group resource.
-  ///
-  /// A sole-tenant node is a physical server that is dedicated to
-  /// hosting VM instances only for your specific project. Use sole-tenant nodes to
-  /// keep your instances physically separated from instances in other projects, or
-  /// to group your instances together on the same host hardware. For more
-  /// information, readSole-tenant nodes.
+  /// Represents a sole-tenant Node Group resource. A sole-tenant node is a physical server that is dedicated to hosting VM instances only for your specific project. Use sole-tenant nodes to keep your instances physically separated from instances in other projects, or to group your instances together on the same host hardware. For more information, read Sole-tenant nodes.
   public struct NodeGroup: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Specifies how autoscaling should behave.
     public var autoscalingPolicy: NodeGroupAutoscalingPolicy? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     public var fingerprint: Foundation.Data? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] The type of the resource. Alwayscompute#nodeGroup for node group.
+    /// Output only. [Output Only] The type of the resource. Always compute#nodeGroup for node group.
     public var kind: Swift.String? = nil
 
-    /// An opaque location hint used to place the Node close to other
-    /// resources.
-    /// This field is for use by internal tools that use the public API.
-    /// The location hint here on the NodeGroup overrides any location_hint
-    /// present in the NodeTemplate.
+    /// An opaque location hint used to place the Node close to other resources. This field is for use by internal tools that use the public API. The location hint here on the NodeGroup overrides any location_hint present in the NodeTemplate.
     public var locationHint: Swift.String? = nil
 
-    /// Specifies the frequency of planned maintenance events. The accepted values
-    /// are: `AS_NEEDED` and `RECURRENT`.
+    /// Specifies the frequency of planned maintenance events. The accepted values are: `AS_NEEDED` and `RECURRENT`.
     public var maintenanceInterval: NodeGroup.MaintenanceInterval? = nil
 
-    /// Specifies how to handle instances when a node in the group undergoes
-    /// maintenance. Set to one of: DEFAULT,RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP.
-    /// The default value is DEFAULT. For more information, see
-    /// Maintenance policies.
+    /// Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT. For more information, see Maintenance policies.
     public var maintenancePolicy: NodeGroup.MaintenancePolicy? = nil
 
     public var maintenanceWindow: NodeGroupMaintenanceWindow? = nil
 
-    /// The name of the resource, provided by the client when initially creating
-    /// the resource. The resource name must be 1-63 characters long, and comply
-    /// withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     /// URL of the node template to create the node group from.
@@ -91,8 +67,7 @@
 
     public var status: NodeGroup.Status? = nil
 
-    /// Output only. [Output Only] The name of the zone where the node group resides,
-    /// such as us-central1-a.
+    /// Output only. [Output Only] The name of the zone where the node group resides, such as us-central1-a.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `NodeGroup`.
@@ -194,16 +169,9 @@
     ///
     /// [google.cloud.compute.v1.NodeGroup.maintenanceInterval]: <doc:NodeGroup/MaintenanceInterval>
     public enum MaintenanceInterval: Codable, Equatable, Sendable {
-      /// VMs are eligible to receive infrastructure and hypervisor updates as they
-      /// become available.  This may result in more maintenance operations (live
-      /// migrations or terminations) for the VM than the PERIODIC andRECURRENT options.
+      /// VMs are eligible to receive infrastructure and hypervisor updates as they become available. This may result in more maintenance operations (live migrations or terminations) for the VM than the PERIODIC and RECURRENT options.
       case asNeeded
-      /// VMs receive infrastructure and hypervisor updates on a periodic basis,
-      /// minimizing the number of maintenance operations (live migrations or
-      /// terminations) on an individual VM.  This may mean a VM will take longer
-      /// to receive an update than if it was configured forAS_NEEDED.  Security updates will still be applied as soon
-      /// as they are available. RECURRENT is used for GEN3 and Slice
-      /// of Hardware VMs.
+      /// VMs receive infrastructure and hypervisor updates on a periodic basis, minimizing the number of maintenance operations (live migrations or terminations) on an individual VM. This may mean a VM will take longer to receive an update than if it was configured for AS_NEEDED. Security updates will still be applied as soon as they are available. RECURRENT is used for GEN3 and Slice of Hardware VMs.
       case recurrent
       /// Encodes an unknown integer value.
       ///
@@ -301,20 +269,12 @@
     ///
     /// [google.cloud.compute.v1.NodeGroup.maintenancePolicy]: <doc:NodeGroup/MaintenancePolicy>
     public enum MaintenancePolicy: Codable, Equatable, Sendable {
-      /// Allow the node and corresponding instances to retain default
-      /// maintenance behavior.
+      /// Allow the node and corresponding instances to retain default maintenance behavior.
       case `default`
       case unspecified
-      /// When maintenance must be done on a node, the instances on that node will
-      /// be moved to other nodes in the group.
-      /// Instances with onHostMaintenance = MIGRATE will live migrate to their
-      /// destinations while instances with onHostMaintenance = TERMINATE will
-      /// terminate and then restart on their destination nodes if
-      /// automaticRestart = true.
+      /// When maintenance must be done on a node, the instances on that node will be moved to other nodes in the group. Instances with onHostMaintenance = MIGRATE will live migrate to their destinations while instances with onHostMaintenance = TERMINATE will terminate and then restart on their destination nodes if automaticRestart = true.
       case migrateWithinNodeGroup
-      /// Instances in this group will restart on the same node when maintenance
-      /// has completed. Instances must have onHostMaintenance = TERMINATE, and
-      /// they will only restart if automaticRestart = true.
+      /// Instances in this group will restart on the same node when maintenance has completed. Instances must have onHostMaintenance = TERMINATE, and they will only restart if automaticRestart = true.
       case restartInPlace
       /// Encodes an unknown integer value.
       ///

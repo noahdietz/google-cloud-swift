@@ -18,64 +18,38 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Cloud Router resource.
-  ///
-  /// For more information about Cloud Router, read theCloud
-  /// Router overview.
+  /// Represents a Cloud Router resource. For more information about Cloud Router, read the Cloud Router overview.
   public struct Router: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// BGP information specific to this router.
     public var bgp: RouterBgp? = nil
 
-    /// BGP information that must be configured into the routing stack to
-    /// establish BGP peering. This information must specify the peer ASN and
-    /// either the interface name, IP address, or peer IP address. Please refer toRFC4273.
+    /// BGP information that must be configured into the routing stack to establish BGP peering. This information must specify the peer ASN and either the interface name, IP address, or peer IP address. Please refer to RFC4273.
     public var bgpPeers: [RouterBgpPeer] = []
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Indicates if a router is dedicated for use with encrypted VLAN
-    /// attachments (interconnectAttachments).
+    /// Indicates if a router is dedicated for use with encrypted VLAN attachments (interconnectAttachments).
     public var encryptedInterconnectRouter: Swift.Bool? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Router interfaces.
-    /// To create a BGP peer that uses a router interface,
-    /// the interface must have one of the following fields specified:
-    ///
-    ///    - linkedVpnTunnel
-    ///    - linkedInterconnectAttachment
-    ///    - subnetwork
-    ///
-    ///
-    /// You can create a router interface without any of these fields specified.
-    /// However, you cannot create a BGP peer that uses that interface.
+    /// Router interfaces. To create a BGP peer that uses a router interface, the interface must have one of the following fields specified: - linkedVpnTunnel - linkedInterconnectAttachment - subnetwork You can create a router interface without any of these fields specified. However, you cannot create a BGP peer that uses that interface.
     public var interfaces: [RouterInterface] = []
 
-    /// Output only. [Output Only] Type of resource. Always compute#router for
-    /// routers.
+    /// Output only. [Output Only] Type of resource. Always compute#router for routers.
     public var kind: Swift.String? = nil
 
     /// Keys used for MD5 authentication.
     public var md5AuthenticationKeys: [RouterMd5AuthenticationKey] = []
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     /// A list of NAT services created in this router.
@@ -87,13 +61,10 @@
     /// URI of the network to which this router belongs.
     public var network: Swift.String? = nil
 
-    /// Input only. [Input Only] Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
     public var params: RouterParams? = nil
 
-    /// [Output Only] URI of the region where the router resides.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// [Output Only] URI of the region where the router resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.

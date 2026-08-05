@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] An analysis of the physical layout of Interconnects in this
-  /// group. Every Interconnect in the group is shown once in this structure.
+  /// [Output Only] An analysis of the physical layout of Interconnects in this group. Every Interconnect in the group is shown once in this structure.
   public struct InterconnectGroupPhysicalStructure: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

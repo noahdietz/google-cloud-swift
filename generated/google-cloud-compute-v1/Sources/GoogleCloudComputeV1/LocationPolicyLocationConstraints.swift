@@ -22,8 +22,7 @@
   public struct LocationPolicyLocationConstraints: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Maximum number of items that are allowed to be placed in this zone.
-    /// The value must be non-negative.
+    /// Maximum number of items that are allowed to be placed in this zone. The value must be non-negative.
     public var maxCount: Swift.Int32? = nil
 
     /// Initialize a new instance of `LocationPolicyLocationConstraints`.

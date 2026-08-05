@@ -102,8 +102,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "regionBackendBuckets_getIamPolicy")
     public func getIamPolicy(
@@ -113,8 +112,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a RegionBackendBucket in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a RegionBackendBucket in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionBackendBuckets_insert")
     public func insert(
@@ -123,8 +121,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a RegionBackendBucket in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a RegionBackendBucket in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionBackendBuckets_insert")
     public func insert(
@@ -165,8 +162,7 @@
       )
     }
 
-    /// Retrieves the list of BackendBucket resources available to the specified
-    /// project in the given region.
+    /// Retrieves the list of BackendBucket resources available to the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendBuckets_list")
     public func list(
@@ -175,8 +171,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of BackendBucket resources available to the specified
-    /// project in the given region.
+    /// Retrieves the list of BackendBucket resources available to the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendBuckets_list")
     public func list(
@@ -191,8 +186,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of all usable backend buckets in the specified project in
-    /// the given region.
+    /// Retrieves a list of all usable backend buckets in the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendBuckets_listUsable")
     public func listUsable(
@@ -201,8 +195,7 @@
       try await self.inner.listUsable(request: request, options: options)
     }
 
-    /// Retrieves a list of all usable backend buckets in the specified project in
-    /// the given region.
+    /// Retrieves a list of all usable backend buckets in the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendBuckets_listUsable")
     public func listUsable(
@@ -217,10 +210,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified  BackendBucket resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified BackendBucket resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionBackendBuckets_patch")
     public func patch(
@@ -229,10 +219,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified  BackendBucket resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified BackendBucket resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionBackendBuckets_patch")
     public func patch(
@@ -273,8 +260,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "regionBackendBuckets_setIamPolicy")
     public func setIamPolicy(

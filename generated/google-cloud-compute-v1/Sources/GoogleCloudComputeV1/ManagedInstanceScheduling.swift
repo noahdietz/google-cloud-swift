@@ -21,13 +21,10 @@
   public struct ManagedInstanceScheduling: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. The timestamp at which the underlying instance will be
-    /// triggered for graceful shutdown if it is configured. This is in RFC3339 text format.
+    /// Output only. The timestamp at which the underlying instance will be triggered for graceful shutdown if it is configured. This is in RFC3339 text format.
     public var gracefulShutdownTimestamp: GoogleCloudWkt.Timestamp? = nil
 
-    /// Output only. The timestamp at which the managed instance will be terminated. This is
-    /// in RFC3339 text
-    /// format.
+    /// Output only. The timestamp at which the managed instance will be terminated. This is in RFC3339 text format.
     public var terminationTimestamp: GoogleCloudWkt.Timestamp? = nil
 
     /// Initialize a new instance of `ManagedInstanceScheduling`.

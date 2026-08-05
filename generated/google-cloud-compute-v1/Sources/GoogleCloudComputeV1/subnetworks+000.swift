@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of subnetworks.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "subnetworks_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of subnetworks.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of subnetworks. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "subnetworks_aggregatedList")
     public func aggregatedList(
@@ -182,8 +176,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "subnetworks_getIamPolicy")
     public func getIamPolicy(
@@ -192,8 +185,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a subnetwork in the specified project using the data
-    /// included in the request.
+    /// Creates a subnetwork in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "subnetworks_insert")
     public func insert(
@@ -202,8 +194,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a subnetwork in the specified project using the data
-    /// included in the request.
+    /// Creates a subnetwork in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "subnetworks_insert")
     public func insert(
@@ -244,8 +235,7 @@
       )
     }
 
-    /// Retrieves a list of subnetworks available to the specified
-    /// project.
+    /// Retrieves a list of subnetworks available to the specified project.
     ///
     /// @Snippet(path: "subnetworks_list")
     public func list(
@@ -254,8 +244,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of subnetworks available to the specified
-    /// project.
+    /// Retrieves a list of subnetworks available to the specified project.
     ///
     /// @Snippet(path: "subnetworks_list")
     public func list(
@@ -294,11 +283,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified subnetwork with the data included in the request.
-    /// Only certain fields can be updated with a patch request
-    /// as indicated in the field descriptions.
-    /// You must specify the current fingerprint of the
-    /// subnetwork resource being patched.
+    /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
     ///
     /// @Snippet(path: "subnetworks_patch")
     public func patch(
@@ -307,11 +292,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified subnetwork with the data included in the request.
-    /// Only certain fields can be updated with a patch request
-    /// as indicated in the field descriptions.
-    /// You must specify the current fingerprint of the
-    /// subnetwork resource being patched.
+    /// Patches the specified subnetwork with the data included in the request. Only certain fields can be updated with a patch request as indicated in the field descriptions. You must specify the current fingerprint of the subnetwork resource being patched.
     ///
     /// @Snippet(path: "subnetworks_patch")
     public func patch(
@@ -352,8 +333,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "subnetworks_setIamPolicy")
     public func setIamPolicy(
@@ -362,8 +342,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Set whether VMs in this subnet can access Google services without assigning
-    /// external IP addresses through Private Google Access.
+    /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
     ///
     /// @Snippet(path: "subnetworks_setPrivateIpGoogleAccess")
     public func setPrivateIpGoogleAccess(
@@ -373,8 +352,7 @@
       try await self.inner.setPrivateIpGoogleAccess(request: request, options: options)
     }
 
-    /// Set whether VMs in this subnet can access Google services without assigning
-    /// external IP addresses through Private Google Access.
+    /// Set whether VMs in this subnet can access Google services without assigning external IP addresses through Private Google Access.
     ///
     /// @Snippet(path: "subnetworks_setPrivateIpGoogleAccess")
     public func setPrivateIpGoogleAccess(

@@ -22,9 +22,7 @@
   public struct XpnResourceId: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The ID of the service resource. In the case of projects, this field
-    /// supports project id (e.g., my-project-123) and project number
-    /// (e.g. 12345678).
+    /// The ID of the service resource. In the case of projects, this field supports project id (e.g., my-project-123) and project number (e.g. 12345678).
     public var id: Swift.String? = nil
 
     /// The type of the service resource.

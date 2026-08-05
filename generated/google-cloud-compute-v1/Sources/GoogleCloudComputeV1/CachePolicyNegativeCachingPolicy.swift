@@ -22,16 +22,10 @@
   public struct CachePolicyNegativeCachingPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The HTTP status code to define a TTL against. Only HTTP status codes
-    /// 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 can be
-    /// specified as values, and you cannot specify a status code more than
-    /// once.
+    /// The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 302, 307, 308, 404, 405, 410, 421, 451 and 501 can be specified as values, and you cannot specify a status code more than once.
     public var code: Swift.Int32? = nil
 
-    /// The TTL (in seconds) for which to cache responses with the
-    /// corresponding status code.
-    /// The maximum allowed value is 1800s (30 minutes). Infrequently accessed
-    /// objects may be evicted from the cache before the defined TTL.
+    /// The TTL (in seconds) for which to cache responses with the corresponding status code. The maximum allowed value is 1800s (30 minutes). Infrequently accessed objects may be evicted from the cache before the defined TTL.
     public var ttl: Duration? = nil
 
     /// Initialize a new instance of `CachePolicyNegativeCachingPolicy`.

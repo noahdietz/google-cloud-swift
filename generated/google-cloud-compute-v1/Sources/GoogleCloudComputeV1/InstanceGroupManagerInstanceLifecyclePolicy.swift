@@ -22,43 +22,15 @@
       ._AnyPackable,
     Sendable
   {
-    /// The action that a MIG performs on a failed VM. If the value of the
-    /// onFailedHealthCheck field is `DEFAULT_ACTION`, then the same action also
-    /// applies to the VMs on which your application fails a health check.
-    /// Valid values are
-    ///
-    ///    - REPAIR (default): MIG automatically repairs a failed VM
-    ///    by recreating it. For more information, see About
-    ///    repairing VMs in a MIG.
-    ///    - DO_NOTHING: MIG does not repair a failed VM.
+    /// The action that a MIG performs on a failed VM. If the value of the onFailedHealthCheck field is `DEFAULT_ACTION`, then the same action also applies to the VMs on which your application fails a health check. Valid values are - REPAIR (default): MIG automatically repairs a failed VM by recreating it. For more information, see About repairing VMs in a MIG. - DO_NOTHING: MIG does not repair a failed VM.
     public var defaultActionOnFailure:
       InstanceGroupManagerInstanceLifecyclePolicy.DefaultActionOnFailure? = nil
 
-    /// A bit indicating whether to forcefully apply the group's latest
-    /// configuration when repairing a VM. Valid options are:
-    ///
-    ///
-    ///
-    ///      -  NO (default): If configuration updates are available, they are not
-    ///      forcefully applied during repair. Instead, configuration updates are
-    ///      applied according to the group's update policy.
-    ///
-    ///      -  YES: If configuration updates are available, they are applied
-    ///      during repair.
+    /// A bit indicating whether to forcefully apply the group's latest configuration when repairing a VM. Valid options are: - NO (default): If configuration updates are available, they are not forcefully applied during repair. Instead, configuration updates are applied according to the group's update policy. - YES: If configuration updates are available, they are applied during repair.
     public var forceUpdateOnRepair:
       InstanceGroupManagerInstanceLifecyclePolicy.ForceUpdateOnRepair? = nil
 
-    /// The action that a MIG performs on an unhealthy VM. A VM is marked as
-    /// unhealthy when the application running on that VM fails a health check.
-    /// Valid values are:
-    ///
-    ///    - DEFAULT_ACTION (default): MIG uses the same action
-    ///    configured for instanceLifecyclePolicy.defaultActionOnFailure field.
-    ///    - REPAIR: MIG automatically repairs an unhealthy VM by
-    ///    recreating it.
-    ///    - DO_NOTHING: MIG doesn't repair an unhealthy VM.
-    ///    For more information, see
-    ///    About repairing VMs in a MIG.
+    /// The action that a MIG performs on an unhealthy VM. A VM is marked as unhealthy when the application running on that VM fails a health check. Valid values are: - DEFAULT_ACTION (default): MIG uses the same action configured for instanceLifecyclePolicy.defaultActionOnFailure field. - REPAIR: MIG automatically repairs an unhealthy VM by recreating it. - DO_NOTHING: MIG doesn't repair an unhealthy VM. For more information, see About repairing VMs in a MIG.
     public var onFailedHealthCheck:
       InstanceGroupManagerInstanceLifecyclePolicy.OnFailedHealthCheck? = nil
 
@@ -87,9 +59,7 @@
     public enum DefaultActionOnFailure: Codable, Equatable, Sendable {
       /// MIG does not repair a failed VM.
       case doNothing
-      /// (default): MIG automatically repairs a failed VM by recreating it.
-      /// For more information, see About
-      /// repairing VMs in a MIG.
+      /// (default): MIG automatically repairs a failed VM by recreating it. For more information, see About repairing VMs in a MIG.
       case repair
       /// Encodes an unknown integer value.
       ///
@@ -285,8 +255,7 @@
     ///
     /// [google.cloud.compute.v1.InstanceGroupManagerInstanceLifecyclePolicy.onFailedHealthCheck]: <doc:InstanceGroupManagerInstanceLifecyclePolicy/OnFailedHealthCheck>
     public enum OnFailedHealthCheck: Codable, Equatable, Sendable {
-      /// (Default) MIG uses the same action configured for
-      /// instanceLifecyclePolicy.defaultActionOnFailure field.
+      /// (Default) MIG uses the same action configured for instanceLifecyclePolicy.defaultActionOnFailure field.
       case defaultAction
       /// MIG doesn't repair an unhealthy VM.
       case doNothing

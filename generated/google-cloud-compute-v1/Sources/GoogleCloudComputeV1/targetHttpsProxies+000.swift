@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetHttpsProxies_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all TargetHttpsProxy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all TargetHttpsProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetHttpsProxies_aggregatedList")
     public func aggregatedList(
@@ -134,8 +126,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetHttpsProxy resource in the specified
-    /// project using the data included in the request.
+    /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetHttpsProxies_insert")
     public func insert(
@@ -144,8 +135,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetHttpsProxy resource in the specified
-    /// project using the data included in the request.
+    /// Creates a TargetHttpsProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetHttpsProxies_insert")
     public func insert(
@@ -185,8 +175,7 @@
       )
     }
 
-    /// Retrieves the list of TargetHttpsProxy resources
-    /// available to the specified project.
+    /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetHttpsProxies_list")
     public func list(
@@ -195,8 +184,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of TargetHttpsProxy resources
-    /// available to the specified project.
+    /// Retrieves the list of TargetHttpsProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetHttpsProxies_list")
     public func list(
@@ -211,10 +199,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified TargetHttpsProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetHttpsProxies_patch")
     public func patch(
@@ -223,10 +208,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified TargetHttpsProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetHttpsProxies_patch")
     public func patch(
@@ -419,10 +401,7 @@
       )
     }
 
-    /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
-    /// server-side support for SSL features. This affects connections between
-    /// clients and the HTTPS proxy load balancer. They do not affect the
-    /// connection between the load balancer and the backends.
+    /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
     ///
     /// @Snippet(path: "targetHttpsProxies_setSslPolicy")
     public func setSslPolicy(
@@ -431,10 +410,7 @@
       try await self.inner.setSslPolicy(request: request, options: options)
     }
 
-    /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the
-    /// server-side support for SSL features. This affects connections between
-    /// clients and the HTTPS proxy load balancer. They do not affect the
-    /// connection between the load balancer and the backends.
+    /// Sets the SSL policy for TargetHttpsProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the HTTPS proxy load balancer. They do not affect the connection between the load balancer and the backends.
     ///
     /// @Snippet(path: "targetHttpsProxies_setSslPolicy")
     public func setSslPolicy(

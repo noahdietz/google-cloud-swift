@@ -18,14 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Per-instance properties to be set on individual instances.
-  /// To be extended in the future.
+  /// Per-instance properties to be set on individual instances. To be extended in the future.
   public struct BulkInsertInstanceResourcePerInstanceProperties: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Specifies the hostname of the instance. More details in:
-    /// https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
+    /// Specifies the hostname of the instance. More details in: https://cloud.google.com/compute/docs/instances/custom-hostname-vm#naming_convention
     public var hostname: Swift.String? = nil
 
     /// Output only. This field is only temporary. It will be removed. Do not use it.

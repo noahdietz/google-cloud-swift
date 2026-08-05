@@ -23,8 +23,7 @@
     Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Name of the location. It should be one of the Cloud Storage buckets.
-    /// Only one location can be specified.
+    /// Name of the location. It should be one of the Cloud Storage buckets. Only one location can be specified.
     public var name: Swift.String? = nil
 
     /// Initialize a new instance of `SnapshotSettingsStorageLocationSettingsStorageLocationPreference`.

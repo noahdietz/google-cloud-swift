@@ -18,31 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Contains the configurations necessary to generate a signature for access to
-  /// private storage buckets that support Signature Version 4 for authentication.
-  /// The service name for generating the authentication header will always default
-  /// to 's3'.
+  /// Contains the configurations necessary to generate a signature for access to private storage buckets that support Signature Version 4 for authentication. The service name for generating the authentication header will always default to 's3'.
   public struct AWSV4Signature: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The access key used for s3 bucket authentication. Required for updating or
-    /// creating a backend that uses AWS v4 signature authentication, but will not
-    /// be returned as part of the configuration when queried with a REST API GET
-    /// request.
-    ///
-    /// @InputOnly
+    /// The access key used for s3 bucket authentication. Required for updating or creating a backend that uses AWS v4 signature authentication, but will not be returned as part of the configuration when queried with a REST API GET request. @InputOnly
     public var accessKey: Swift.String? = nil
 
     /// The identifier of an access key used for s3 bucket authentication.
     public var accessKeyId: Swift.String? = nil
 
-    /// The optional version identifier for the access key. You can use this to
-    /// keep track of different iterations of your access key.
+    /// The optional version identifier for the access key. You can use this to keep track of different iterations of your access key.
     public var accessKeyVersion: Swift.String? = nil
 
-    /// The name of the cloud region of your origin. This is a free-form field with
-    /// the name of the region your cloud uses to host your origin.  For example,
-    /// "us-east-1" for AWS or "us-ashburn-1" for OCI.
+    /// The name of the cloud region of your origin. This is a free-form field with the name of the region your cloud uses to host your origin. For example, "us-east-1" for AWS or "us-ashburn-1" for OCI.
     public var originRegion: Swift.String? = nil
 
     /// Initialize a new instance of `AWSV4Signature`.

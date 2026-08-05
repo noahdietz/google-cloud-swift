@@ -18,15 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Bypass the cache when the specified request headers are present,
-  /// e.g. Pragma or Authorization headers. Values are case insensitive.
-  /// The presence of such a header overrides the cache_mode setting.
+  /// Bypass the cache when the specified request headers are present, e.g. Pragma or Authorization headers. Values are case insensitive. The presence of such a header overrides the cache_mode setting.
   public struct BackendServiceCdnPolicyBypassCacheOnRequestHeader: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The header field name to match on when bypassing cache.
-    /// Values are case-insensitive.
+    /// The header field name to match on when bypassing cache. Values are case-insensitive.
     public var headerName: Swift.String? = nil
 
     /// Initialize a new instance of `BackendServiceCdnPolicyBypassCacheOnRequestHeader`.

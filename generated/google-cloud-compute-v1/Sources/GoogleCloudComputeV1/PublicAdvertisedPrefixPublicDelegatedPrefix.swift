@@ -32,14 +32,10 @@
     /// The project number of the public delegated prefix
     public var project: Swift.String? = nil
 
-    /// The region of the public delegated prefix if it is regional. If absent,
-    /// the prefix is global.
+    /// The region of the public delegated prefix if it is regional. If absent, the prefix is global.
     public var region: Swift.String? = nil
 
-    /// The status of the public delegated prefix. Possible values are:
-    ///   INITIALIZING: The public delegated prefix is being initialized and
-    ///     addresses cannot be created yet.
-    ///   ANNOUNCED: The public delegated prefix is active.
+    /// The status of the public delegated prefix. Possible values are: INITIALIZING: The public delegated prefix is being initialized and addresses cannot be created yet. ANNOUNCED: The public delegated prefix is active.
     public var status: Swift.String? = nil
 
     /// Initialize a new instance of `PublicAdvertisedPrefixPublicDelegatedPrefix`.

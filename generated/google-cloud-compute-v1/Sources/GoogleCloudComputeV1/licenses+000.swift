@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Deletes the specified license.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Deletes the specified license. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_delete")
     public func delete(
@@ -54,10 +51,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified license.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Deletes the specified license. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_delete")
     public func delete(
@@ -97,10 +91,7 @@
       )
     }
 
-    /// Returns the specified License resource.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Returns the specified License resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_get")
     public func `get`(
@@ -109,11 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_getIamPolicy")
     public func getIamPolicy(
@@ -122,10 +109,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Create a License resource in the specified project.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Create a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_insert")
     public func insert(
@@ -134,10 +118,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Create a License resource in the specified project.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Create a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_insert")
     public func insert(
@@ -177,15 +158,7 @@
       )
     }
 
-    /// Retrieves the list of licenses
-    /// available in the specified project. This method does not
-    /// get any licenses that belong to other projects, including licenses attached
-    /// to publicly-available images, like Debian 9. If you want to get a list of
-    /// publicly-available licenses, use this method to make a request to the
-    /// respective image project, such as debian-cloud orwindows-cloud.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Retrieves the list of licenses available in the specified project. This method does not get any licenses that belong to other projects, including licenses attached to publicly-available images, like Debian 9. If you want to get a list of publicly-available licenses, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_list")
     public func list(
@@ -194,15 +167,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of licenses
-    /// available in the specified project. This method does not
-    /// get any licenses that belong to other projects, including licenses attached
-    /// to publicly-available images, like Debian 9. If you want to get a list of
-    /// publicly-available licenses, use this method to make a request to the
-    /// respective image project, such as debian-cloud orwindows-cloud.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Retrieves the list of licenses available in the specified project. This method does not get any licenses that belong to other projects, including licenses attached to publicly-available images, like Debian 9. If you want to get a list of publicly-available licenses, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_list")
     public func list(
@@ -217,11 +182,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_setIamPolicy")
     public func setIamPolicy(
@@ -230,10 +191,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Returns permissions that a caller has on the specified resource.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_testIamPermissions")
     public func testIamPermissions(
@@ -242,10 +200,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates a License resource in the specified project.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Updates a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_update")
     public func update(
@@ -254,10 +209,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates a License resource in the specified project.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Updates a License resource in the specified project. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenses_update")
     public func update(

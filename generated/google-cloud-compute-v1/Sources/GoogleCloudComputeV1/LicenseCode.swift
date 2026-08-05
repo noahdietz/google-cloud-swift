@@ -18,70 +18,50 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a License Code resource.
-  ///
-  /// A License Code is a unique identifier used to represent alicense
-  /// resource.
-  ///  *Caution* This resource is intended for
-  /// use only by third-party partners who are creatingCloud Marketplace
-  /// images.
+  /// Represents a License Code resource. A License Code is a unique identifier used to represent a license resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
   public struct LicenseCode: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies licenseCodes of licenses that can replace this license. Note:
-    /// such replacements are allowed even if removable_from_disk is false.
+    /// Specifies licenseCodes of licenses that can replace this license. Note: such replacements are allowed even if removable_from_disk is false.
     public var allowedReplacementLicenses: [Swift.String] = []
 
-    /// If true, this license can be appended to an existing disk's set of
-    /// licenses.
+    /// If true, this license can be appended to an existing disk's set of licenses.
     public var appendableToDisk: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. [Output Only] Description of this License Code.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Specifies licenseCodes of licenses that are incompatible with this license.
-    /// If a license is incompatible with this license, it cannot be attached to
-    /// the same disk or image.
+    /// Specifies licenseCodes of licenses that are incompatible with this license. If a license is incompatible with this license, it cannot be attached to the same disk or image.
     public var incompatibleLicenses: [Swift.String] = []
 
-    /// Output only. [Output Only] Type of resource. Always compute#licenseCode for
-    /// licenses.
+    /// Output only. [Output Only] Type of resource. Always compute#licenseCode for licenses.
     public var kind: Swift.String? = nil
 
-    /// [Output Only] URL and description aliases of Licenses with the same
-    /// License Code.
+    /// [Output Only] URL and description aliases of Licenses with the same License Code.
     public var licenseAlias: [LicenseCodeLicenseAlias] = []
 
-    /// If set, this license will be unable to be removed or replaced once attached
-    /// to a disk until the minimum_retention period has passed.
+    /// If set, this license will be unable to be removed or replaced once attached to a disk until the minimum_retention period has passed.
     public var minimumRetention: Duration? = nil
 
     /// If true, this license can only be used on VMs on multi tenant nodes.
     public var multiTenantOnly: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Name of the resource. The name is 1-20 characters long and
-    /// must be a valid 64 bit integer.
+    /// Output only. [Output Only] Name of the resource. The name is 1-20 characters long and must be a valid 64 bit integer.
     public var name: Swift.String? = nil
 
-    /// If true, indicates this is an OS license. Only one OS license can be
-    /// attached to a disk or image at a time.
+    /// If true, indicates this is an OS license. Only one OS license can be attached to a disk or image at a time.
     public var osLicense: Swift.Bool? = nil
 
-    /// If true, this license can be removed from a disk's set of licenses, with no
-    /// replacement license needed.
+    /// If true, this license can be removed from a disk's set of licenses, with no replacement license needed.
     public var removableFromDisk: Swift.Bool? = nil
 
-    /// Specifies the set of permissible coattached licenseCodes of licenses that
-    /// satisfy the coattachment requirement of this license. At least one license
-    /// from the set must be attached to the same disk or image as this license.
+    /// Specifies the set of permissible coattached licenseCodes of licenses that satisfy the coattachment requirement of this license. At least one license from the set must be attached to the same disk or image as this license.
     public var requiredCoattachedLicenses: [Swift.String] = []
 
     /// Output only. [Output Only] Server-defined URL for the resource.
@@ -93,12 +73,10 @@
     /// Output only. [Output Only] Current state of this License Code.
     public var state: LicenseCode.State? = nil
 
-    /// Output only. [Output Only] If true, the license will remain attached when creating
-    /// images or snapshots from disks. Otherwise, the license is not transferred.
+    /// Output only. [Output Only] If true, the license will remain attached when creating images or snapshots from disks. Otherwise, the license is not transferred.
     public var transferable: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Last update timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Last update timestamp in RFC3339 text format.
     public var updateTimestamp: Swift.String? = nil
 
     /// Initialize a new instance of `LicenseCode`.
@@ -121,8 +99,7 @@
     ///
     /// [google.cloud.compute.v1.LicenseCode.state]: <doc:LicenseCode/State>
     public enum State: Codable, Equatable, Sendable {
-      /// Machines are not allowed to attach boot disks with this License Code.
-      /// Requests to create new resources with this license will be rejected.
+      /// Machines are not allowed to attach boot disks with this License Code. Requests to create new resources with this license will be rejected.
       case disabled
       /// Use is allowed for anyone with USE_READ_ONLY access to this License Code.
       case enabled

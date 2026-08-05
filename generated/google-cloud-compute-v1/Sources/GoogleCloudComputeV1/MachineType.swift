@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Machine Type resource.
-  ///
-  /// You can use specific machine types for your VM instances based on performance
-  /// and pricing requirements. For more information, readMachine Types.
+  /// Represents a Machine Type resource. You can use specific machine types for your VM instances based on performance and pricing requirements. For more information, read Machine Types.
   public struct MachineType: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] A list of accelerator configurations assigned to this
-    /// machine type.
+    /// [Output Only] A list of accelerator configurations assigned to this machine type.
     public var accelerators: [MachineType.Accelerators] = []
 
     /// [Output Only] The architecture of the machine type.
@@ -35,34 +31,28 @@
     /// [Output Only] The configuration of bundled local SSD for the machine type.
     public var bundledLocalSsds: BundledLocalSsds? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// [Output Only] The deprecation status associated with this machine type.
-    /// Only applicable if the machine type is unavailable.
+    /// [Output Only] The deprecation status associated with this machine type. Only applicable if the machine type is unavailable.
     public var deprecated: DeprecationStatus? = nil
 
     /// [Output Only] An optional textual description of the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The number of virtual CPUs that are available to the
-    /// instance.
+    /// [Output Only] The number of virtual CPUs that are available to the instance.
     public var guestCpus: Swift.Int32? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// [Deprecated] This property is deprecated and will never be populated with
-    /// any relevant values.
+    /// [Deprecated] This property is deprecated and will never be populated with any relevant values.
     public var imageSpaceGb: Swift.Int32? = nil
 
-    /// [Output Only] Whether this machine type has a shared CPU. SeeShared-core machine
-    /// types for more information.
+    /// [Output Only] Whether this machine type has a shared CPU. See Shared-core machine types for more information.
     public var isSharedCpu: Swift.Bool? = nil
 
-    /// Output only. [Output Only] The type of the resource. Alwayscompute#machineType for machine types.
+    /// Output only. [Output Only] The type of the resource. Always compute#machineType for machine types.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Maximum persistent disks allowed.
@@ -71,8 +61,7 @@
     /// [Output Only] Maximum total persistent disks size (GB) allowed.
     public var maximumPersistentDisksSizeGb: Swift.Int64? = nil
 
-    /// [Output Only] The amount of physical memory available to the instance,
-    /// defined in MB.
+    /// [Output Only] The amount of physical memory available to the instance, defined in MB.
     public var memoryMb: Swift.Int32? = nil
 
     /// [Output Only] Name of the resource.
@@ -81,8 +70,7 @@
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// [Output Only] The name of the zone where the machine type resides,
-    /// such as us-central1-a.
+    /// [Output Only] The name of the zone where the machine type resides, such as us-central1-a.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `MachineType`.
@@ -110,7 +98,7 @@
       /// Number of accelerator cards exposed to the guest.
       public var guestAcceleratorCount: Swift.Int32? = nil
 
-      /// The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
+      /// The accelerator type resource name, not a full URL, e.g. nvidia-tesla-t4.
       public var guestAcceleratorType: Swift.String? = nil
 
       /// Initialize a new instance of `Accelerators`.

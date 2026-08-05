@@ -18,31 +18,17 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A transient resource used in compute.disks.bulkInsert and
-  /// compute.regionDisks.bulkInsert. It is only used to process
-  /// requests and is not persisted.
+  /// A transient resource used in compute.disks.bulkInsert and compute.regionDisks.bulkInsert. It is only used to process requests and is not persisted.
   public struct BulkInsertDiskResource: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// The parameters for the instant snapshot group.
     public var instantSnapshotGroupParameters: InstantSnapshotGroupParameters? = nil
 
-    /// The parameters for the snapshot group. The usage of snapshot group feature
-    /// is restricted.
+    /// The parameters for the snapshot group. The usage of snapshot group feature is restricted.
     public var snapshotGroupParameters: SnapshotGroupParameters? = nil
 
-    /// The URL of the DiskConsistencyGroupPolicy for the group of disks to clone.
-    /// This may be a full or partial URL, such as:
-    ///
-    ///
-    ///      -
-    ///        https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///
-    ///      -
-    ///        projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///
-    ///      -
-    ///        regions/region/resourcePolicies/resourcePolicy
+    /// The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full or partial URL, such as: - https://www.googleapis.com/compute/v1/projects/project/regions/region /resourcePolicies/resourcePolicy - projects/project/regions/region/resourcePolicies/resourcePolicy - regions/region/resourcePolicies/resourcePolicy
     public var sourceConsistencyGroupPolicy: Swift.String? = nil
 
     /// Initialize a new instance of `BulkInsertDiskResource`.

@@ -36,12 +36,10 @@
 
     public var detectionRelativeToBaselineQps: Swift.Float? = nil
 
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// The name must be unique within the security policy.
+    /// The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the security policy.
     public var name: Swift.String? = nil
 
-    /// Configuration options for enabling Adaptive Protection to operate
-    /// on specified granular traffic units.
+    /// Configuration options for enabling Adaptive Protection to operate on specified granular traffic units.
     public var trafficGranularityConfigs:
       [SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigTrafficGranularityConfig] =
         []

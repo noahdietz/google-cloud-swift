@@ -28,27 +28,19 @@
     /// Describes number of instances that have pending maintenance.
     public var instanceMaintenancePendingCount: Swift.Int32? = nil
 
-    /// Progress for ongoing maintenance for this group of VMs/hosts.
-    /// Describes number of hosts in the block that have ongoing maintenance.
+    /// Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the block that have ongoing maintenance.
     public var maintenanceOngoingCount: Swift.Int32? = nil
 
-    /// Progress for ongoing maintenance for this group of VMs/hosts.
-    /// Describes number of hosts in the block that have pending maintenance.
+    /// Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the block that have pending maintenance.
     public var maintenancePendingCount: Swift.Int32? = nil
 
     /// The type of maintenance for the reservation.
     public var schedulingType: GroupMaintenanceInfo.SchedulingType? = nil
 
-    /// Describes number of subblock Infrastructure that has ongoing maintenance.
-    /// Here, Subblock Infrastructure Maintenance pertains to upstream hardware
-    /// contained in the Subblock that is necessary for a VM Family(e.g. NVLink
-    /// Domains). Not all VM Families will support this field.
+    /// Describes number of subblock Infrastructure that has ongoing maintenance. Here, Subblock Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is necessary for a VM Family(e.g. NVLink Domains). Not all VM Families will support this field.
     public var subblockInfraMaintenanceOngoingCount: Swift.Int32? = nil
 
-    /// Describes number of subblock Infrastructure that has pending maintenance.
-    ///  Here, Subblock Infrastructure Maintenance pertains to upstream hardware
-    ///  contained in the Subblock that is necessary for a VM Family (e.g. NVLink
-    ///  Domains). Not all VM Families will support this field.
+    /// Describes number of subblock Infrastructure that has pending maintenance. Here, Subblock Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is necessary for a VM Family (e.g. NVLink Domains). Not all VM Families will support this field.
     public var subblockInfraMaintenancePendingCount: Swift.Int32? = nil
 
     /// Maintenance information on this group of VMs.
@@ -78,8 +70,7 @@
       case grouped
       /// Unknown maintenance type.
       case groupMaintenanceTypeUnspecified
-      /// Maintenance is not synchronized for this reservation. Instead, each
-      /// instance has its own maintenance window.
+      /// Maintenance is not synchronized for this reservation. Instead, each instance has its own maintenance window.
       case independent
       /// Encodes an unknown integer value.
       ///

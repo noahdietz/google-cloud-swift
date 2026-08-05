@@ -24,14 +24,10 @@
     /// name of the commitment where capacity is being delivered to.
     public var commitmentName: Swift.String? = nil
 
-    /// Indicates if a Commitment needs to be created as part of FR delivery. If
-    /// this field is not present, then no
-    /// commitment needs to be created.
+    /// Indicates if a Commitment needs to be created as part of FR delivery. If this field is not present, then no commitment needs to be created.
     public var commitmentPlan: FutureReservationCommitmentInfo.CommitmentPlan? = nil
 
-    /// Only applicable if FR is delivering to the same reservation. If set, all
-    /// parent commitments will be extended to match the end date of the plan for
-    /// this commitment.
+    /// Only applicable if FR is delivering to the same reservation. If set, all parent commitments will be extended to match the end date of the plan for this commitment.
     public var previousCommitmentTerms: FutureReservationCommitmentInfo.PreviousCommitmentTerms? =
       nil
 
@@ -159,9 +155,7 @@
     ///
     /// [google.cloud.compute.v1.FutureReservationCommitmentInfo.previousCommitmentTerms]: <doc:FutureReservationCommitmentInfo/PreviousCommitmentTerms>
     public enum PreviousCommitmentTerms: Codable, Equatable, Sendable {
-      /// All associated parent Committed Used Discount(s) end-date/term will be
-      /// extended to the end-time of this future reservation. Default is to
-      /// extend previous commitment(s) time to the end_time of the reservation.
+      /// All associated parent Committed Used Discount(s) end-date/term will be extended to the end-time of this future reservation. Default is to extend previous commitment(s) time to the end_time of the reservation.
       case extend
       /// No changes to associated parents Committed Used Discount(s) terms.
       case previouscommitmenttermUnspecified

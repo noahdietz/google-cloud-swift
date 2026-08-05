@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a Route resource in the specified project using the data included
-    /// in the request.
+    /// Creates a Route resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "routes_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a Route resource in the specified project using the data included
-    /// in the request.
+    /// Creates a Route resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "routes_insert")
     public func insert(

@@ -22,27 +22,13 @@
   public struct WireProperties: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The configuration of the bandwidth allocation, one of the following:
-    ///
-    ///    - ALLOCATE_PER_WIRE: configures a separate unmetered bandwidth allocation
-    ///    (and associated charges) for each wire in the group.
-    ///    - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures
-    ///    one unmetered bandwidth allocation for the wire group. The unmetered
-    ///    bandwidth is divided equally across each wire in the group, but dynamic
-    ///    throttling reallocates unused unmetered bandwidth from unused or underused
-    ///    wires to other wires in the group.
+    /// The configuration of the bandwidth allocation, one of the following: - ALLOCATE_PER_WIRE: configures a separate unmetered bandwidth allocation (and associated charges) for each wire in the group. - SHARED_WITH_WIRE_GROUP: this is the default behavior, which configures one unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth from unused or underused wires to other wires in the group.
     public var bandwidthAllocation: WireProperties.BandwidthAllocation? = nil
 
-    /// The unmetered bandwidth in Gigabits per second, using decimal units. `10`
-    /// is 10 Gbps, `100` is 100 Gbps. The bandwidth must be greater than 0.
+    /// The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is 100 Gbps. The bandwidth must be greater than 0.
     public var bandwidthUnmetered: Swift.Int64? = nil
 
-    /// Response when a fault is detected in a pseudowire:
-    ///
-    ///    - NONE: default.
-    ///    - DISABLE_PORT: set the port line protocol down when inline probes
-    ///    detect a fault. This setting is only permitted on port mode
-    ///    pseudowires.
+    /// Response when a fault is detected in a pseudowire: - NONE: default. - DISABLE_PORT: set the port line protocol down when inline probes detect a fault. This setting is only permitted on port mode pseudowires.
     public var faultResponse: WireProperties.FaultResponse? = nil
 
     /// Initialize a new instance of `WireProperties`.
@@ -65,14 +51,9 @@
     ///
     /// [google.cloud.compute.v1.WireProperties.bandwidthAllocation]: <doc:WireProperties/BandwidthAllocation>
     public enum BandwidthAllocation: Codable, Equatable, Sendable {
-      /// Configures a separate unmetered bandwidth allocation (and associated
-      /// charges) for each wire in the group.
+      /// Configures a separate unmetered bandwidth allocation (and associated charges) for each wire in the group.
       case allocatePerWire
-      /// This is the default behavior. Configures one unmetered bandwidth
-      /// allocation for the wire group. The unmetered bandwidth is divided equally
-      /// across each wire in the group, but dynamic throttling reallocates unused
-      /// unmetered bandwidth from unused or underused wires to other wires in the
-      /// group.
+      /// This is the default behavior. Configures one unmetered bandwidth allocation for the wire group. The unmetered bandwidth is divided equally across each wire in the group, but dynamic throttling reallocates unused unmetered bandwidth from unused or underused wires to other wires in the group.
       case sharedWithWireGroup
       /// Encodes an unknown integer value.
       ///
@@ -170,8 +151,7 @@
     ///
     /// [google.cloud.compute.v1.WireProperties.faultResponse]: <doc:WireProperties/FaultResponse>
     public enum FaultResponse: Codable, Equatable, Sendable {
-      /// Set the port line protocol down when inline probes detect a fault. This
-      /// setting is only permitted on port mode pseudowires.
+      /// Set the port line protocol down when inline probes detect a fault. This setting is only permitted on port mode pseudowires.
       case disablePort
       /// Default.
       case `none`

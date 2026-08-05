@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// When configured, new connections are load balanced across healthy backend
-    /// endpoints in the local zone.
+    /// When configured, new connections are load balanced across healthy backend endpoints in the local zone.
     public var zonalAffinity: BackendServiceNetworkPassThroughLbTrafficPolicyZonalAffinity? = nil
 
     /// Initialize a new instance of `BackendServiceNetworkPassThroughLbTrafficPolicy`.

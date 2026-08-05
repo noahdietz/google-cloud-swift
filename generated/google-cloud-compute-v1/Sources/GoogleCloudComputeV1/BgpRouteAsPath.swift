@@ -21,13 +21,10 @@
   public struct BgpRouteAsPath: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output only] ASNs in the path segment. When type is SEQUENCE, these are
-    /// ordered.
+    /// Output only. [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
     public var asns: [Swift.Int32] = []
 
-    /// Output only. [Output only] ASNs in the path segment. This field is for better
-    /// support of 32 bit ASNs as the other asns field suffers from overflow when
-    /// the ASN is larger. When type is SEQUENCE, these are ordered.
+    /// Output only. [Output only] ASNs in the path segment. This field is for better support of 32 bit ASNs as the other asns field suffers from overflow when the ASN is larger. When type is SEQUENCE, these are ordered.
     public var asns32: [Swift.UInt32] = []
 
     /// Output only. [Output only] Type of AS-PATH segment (SEQUENCE or SET)

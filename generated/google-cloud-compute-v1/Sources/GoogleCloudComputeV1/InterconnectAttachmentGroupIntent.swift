@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The user's intent for this AttachmentGroup. This is the only required field
-  /// besides the name that must be specified on group creation.
+  /// The user's intent for this AttachmentGroup. This is the only required field besides the name that must be specified on group creation.
   public struct InterconnectAttachmentGroupIntent: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

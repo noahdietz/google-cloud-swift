@@ -21,20 +21,16 @@
   public struct BfdStatusPacketCounts: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Number of packets received since the beginning of the current BFD
-    /// session.
+    /// Number of packets received since the beginning of the current BFD session.
     public var numRx: Swift.UInt32? = nil
 
-    /// Number of packets received that were rejected because of errors since the
-    /// beginning of the current BFD session.
+    /// Number of packets received that were rejected because of errors since the beginning of the current BFD session.
     public var numRxRejected: Swift.UInt32? = nil
 
-    /// Number of packets received that were successfully processed since the
-    /// beginning of the current BFD session.
+    /// Number of packets received that were successfully processed since the beginning of the current BFD session.
     public var numRxSuccessful: Swift.UInt32? = nil
 
-    /// Number of packets transmitted since the beginning of the current BFD
-    /// session.
+    /// Number of packets transmitted since the beginning of the current BFD session.
     public var numTx: Swift.UInt32? = nil
 
     /// Initialize a new instance of `BfdStatusPacketCounts`.

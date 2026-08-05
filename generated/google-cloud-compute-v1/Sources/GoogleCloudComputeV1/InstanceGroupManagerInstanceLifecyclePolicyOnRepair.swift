@@ -23,13 +23,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies whether the MIG can change a VM's zone during a repair.
-    /// Valid values are:
-    ///
-    ///    - NO (default): MIG cannot change a VM's zone during a
-    ///    repair.
-    ///    - YES: MIG can select a different zone for the VM during
-    ///    a repair.
+    /// Specifies whether the MIG can change a VM's zone during a repair. Valid values are: - NO (default): MIG cannot change a VM's zone during a repair. - YES: MIG can select a different zone for the VM during a repair.
     public var allowChangingZone:
       InstanceGroupManagerInstanceLifecyclePolicyOnRepair.AllowChangingZone? = nil
 

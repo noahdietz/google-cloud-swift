@@ -18,144 +18,79 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a regional resource-based commitment resource.
-  ///
-  /// Creating this commitment resource means that you are purchasing a
-  /// resource-based committed use contract, with an explicit start and end time.
-  /// You can purchase resource-based commitments for both hardware and software
-  /// resources. For more information, read
-  /// Resource-based committed use discounts
+  /// Represents a regional resource-based commitment resource. Creating this commitment resource means that you are purchasing a resource-based committed use contract, with an explicit start and end time. You can purchase resource-based commitments for both hardware and software resources. For more information, read Resource-based committed use discounts
   public struct Commitment: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies whether to automatically renew the commitment at the end of its
-    /// current term. The default value is false. If you set the field
-    /// to true, each time your commitment reaches the end of its
-    /// term, Compute Engine automatically renews it for another term. You can
-    /// update this field anytime before the commitment expires. For example, if
-    /// the commitment is set to expire at 12 AM UTC-8 on January 3, 2027, you can
-    /// update this field until 11:59 PM UTC-8 on January 2, 2027.
+    /// Specifies whether to automatically renew the commitment at the end of its current term. The default value is false. If you set the field to true, each time your commitment reaches the end of its term, Compute Engine automatically renews it for another term. You can update this field anytime before the commitment expires. For example, if the commitment is set to expire at 12 AM UTC-8 on January 3, 2027, you can update this field until 11:59 PM UTC-8 on January 2, 2027.
     public var autoRenew: Swift.Bool? = nil
 
-    /// The category of the commitment; specifies whether the commitment is for
-    /// hardware or software resources. Category MACHINE specifies
-    /// that you are committing to hardware machine resources such asVCPU or MEMORY, listed in resources.
-    /// Category LICENSE specifies that you are committing to software
-    /// licenses, listed in licenseResources.
-    /// Note that if you specify MACHINE commitments, then you must
-    /// also specify a type to indicate the machine series of the
-    /// hardware resource that you are committing to.
+    /// The category of the commitment; specifies whether the commitment is for hardware or software resources. Category MACHINE specifies that you are committing to hardware machine resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies that you are committing to software licenses, listed in licenseResources. Note that if you specify MACHINE commitments, then you must also specify a type to indicate the machine series of the hardware resource that you are committing to.
     public var category: Commitment.Category? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// [Input Only] Optional, specifies the requested commitment end time inRFC3339 text format. Use this option when the desired
-    /// commitment's end date is later than the start date + term duration.
+    /// [Input Only] Optional, specifies the requested commitment end time in RFC3339 text format. Use this option when the desired commitment's end date is later than the start date + term duration.
     public var customEndTimestamp: Swift.String? = nil
 
-    /// An optional description of the commitment. You can provide this property
-    /// when you create the resource.
+    /// An optional description of the commitment. You can provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] Commitment end time inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Commitment end time in RFC3339 text format.
     public var endTimestamp: Swift.String? = nil
 
     public var existingReservations: [Swift.String] = []
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#commitment
-    /// for commitments.
+    /// Output only. [Output Only] Type of the resource. Always compute#commitment for commitments.
     public var kind: Swift.String? = nil
 
     /// The license specification required as part of a license commitment.
     public var licenseResource: LicenseResourceCommitment? = nil
 
-    /// The list of source commitments that you are merging to create the new
-    /// merged commitment. For more information, see
-    /// Merging commitments.
+    /// The list of source commitments that you are merging to create the new merged commitment. For more information, see Merging commitments.
     public var mergeSourceCommitments: [Swift.String] = []
 
-    /// Name of the commitment. You must specify a name when you purchase the
-    /// commitment. The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the commitment. You must specify a name when you purchase the commitment. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Input only. Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. Additional params passed with the request, but not persisted as part of resource payload.
     public var params: CommitmentParams? = nil
 
-    /// The minimum time duration that you commit to purchasing resources.
-    /// The plan that you choose determines the preset term length of the
-    /// commitment (which is 1 year or 3 years) and affects the discount rate that
-    /// you receive for your resources. Committing to a longer time duration
-    /// typically gives you a higher discount rate. The supported values for this
-    /// field are TWELVE_MONTH (1 year), andTHIRTY_SIX_MONTH (3 years).
+    /// The minimum time duration that you commit to purchasing resources. The plan that you choose determines the preset term length of the commitment (which is 1 year or 3 years) and affects the discount rate that you receive for your resources. Committing to a longer time duration typically gives you a higher discount rate. The supported values for this field are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
     public var plan: Commitment.Plan? = nil
 
-    /// Output only. [Output Only] URL of the region where the commitment and committed
-    /// resources are located.
+    /// Output only. [Output Only] URL of the region where the commitment and committed resources are located.
     public var region: Swift.String? = nil
 
-    /// The list of new reservations that you want to create and attach to this
-    /// commitment.
-    ///
-    /// You must attach reservations to your commitment if your commitment
-    /// specifies any GPUs or Local SSD disks. For more information, see
-    /// Attach reservations to resource-based commitments.
-    ///
-    /// Specify this property only if you want to create new
-    /// reservations to attach. To attach existing reservations, specify theexistingReservations property instead.
+    /// The list of new reservations that you want to create and attach to this commitment. You must attach reservations to your commitment if your commitment specifies any GPUs or Local SSD disks. For more information, see Attach reservations to resource-based commitments. Specify this property only if you want to create new reservations to attach. To attach existing reservations, specify the existingReservations property instead.
     public var reservations: [Reservation] = []
 
     /// Output only. [Output Only] Status information for Commitment resource.
     public var resourceStatus: CommitmentResourceStatus? = nil
 
-    /// The list of all the hardware resources, with their types and amounts, that
-    /// you want to commit to. Specify as a separate entry in the list for each
-    /// individual resource type.
+    /// The list of all the hardware resources, with their types and amounts, that you want to commit to. Specify as a separate entry in the list for each individual resource type.
     public var resources: [ResourceCommitment] = []
 
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// The source commitment from which you are transferring resources to create
-    /// the new split commitment. For more information, see
-    /// Split commitments.
+    /// The source commitment from which you are transferring resources to create the new split commitment. For more information, see Split commitments.
     public var splitSourceCommitment: Swift.String? = nil
 
-    /// Output only. [Output Only] Commitment start time inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Commitment start time in RFC3339 text format.
     public var startTimestamp: Swift.String? = nil
 
-    /// Output only. [Output Only] Status of the commitment with regards to eventual expiration
-    /// (each commitment has an end date defined). Status can be one of the
-    /// following values: NOT_YET_ACTIVE, ACTIVE, orEXPIRED.
+    /// Output only. [Output Only] Status of the commitment with regards to eventual expiration (each commitment has an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE, or EXPIRED.
     public var status: Commitment.Status? = nil
 
     /// Output only. [Output Only] An optional, human-readable explanation of the status.
     public var statusMessage: Swift.String? = nil
 
-    /// The type of commitment; specifies the
-    /// machine series for which you want to commit to purchasing resources.
-    /// The choice of machine series affects the discount rate and the eligible
-    /// resource types.
-    ///
-    ///  The type must be one of the following:ACCELERATOR_OPTIMIZED, ACCELERATOR_OPTIMIZED_A3,ACCELERATOR_OPTIMIZED_A3_MEGA,COMPUTE_OPTIMIZED, COMPUTE_OPTIMIZED_C2D,
-    ///  COMPUTE_OPTIMIZED_C3, COMPUTE_OPTIMIZED_C3D,COMPUTE_OPTIMIZED_H3, GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED, GRAPHICS_OPTIMIZED_G4,GRAPHICS_OPTIMIZED_G4_VGPU,MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For
-    /// example, type MEMORY_OPTIMIZED specifies a commitment that
-    /// applies only to eligible resources of memory optimized M1 and M2 machine
-    /// series. Type GENERAL_PURPOSE specifies a commitment that
-    /// applies only to eligible resources of general purpose N1 machine series.
+    /// The type of commitment; specifies the machine series for which you want to commit to purchasing resources. The choice of machine series affects the discount rate and the eligible resource types. The type must be one of the following: ACCELERATOR_OPTIMIZED, ACCELERATOR_OPTIMIZED_A3, ACCELERATOR_OPTIMIZED_A3_MEGA, COMPUTE_OPTIMIZED, COMPUTE_OPTIMIZED_C2D, COMPUTE_OPTIMIZED_C3, COMPUTE_OPTIMIZED_C3D, COMPUTE_OPTIMIZED_H3, GENERAL_PURPOSE, GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2, GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D, GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D, GRAPHICS_OPTIMIZED, GRAPHICS_OPTIMIZED_G4, GRAPHICS_OPTIMIZED_G4_VGPU, MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3, MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of general purpose N1 machine series.
     public var type: Commitment.Type_? = nil
 
     /// Initialize a new instance of `Commitment`.
@@ -387,8 +322,7 @@
     /// [google.cloud.compute.v1.Commitment.status]: <doc:Commitment/Status>
     public enum Status: Codable, Equatable, Sendable {
       case active
-      /// Deprecate CANCELED status. Will use separate status to differentiate
-      /// cancel by mergeCud or manual cancellation.
+      /// Deprecate CANCELED status. Will use separate status to differentiate cancel by mergeCud or manual cancellation.
       case cancelled
       case creating
       case expired
@@ -548,10 +482,10 @@
       case memoryOptimizedX496012T
       /// CUD bucket for X4 machine with 960 vCPUs and 16TB of memory.
       case memoryOptimizedX496016T
+      /// CUD bucket for C4N (dual Diorite) machines.
+      case networkOptimizedC4N
       case storageOptimizedZ3
-      /// Note for internal users: When adding a new enum Type for v1, make sure
-      /// to also add it in the comment for the `optional Type type` definition.
-      /// This ensures that the public documentation displays the new enum Type.
+      /// Note for internal users: When adding a new enum Type for v1, make sure to also add it in the comment for the `optional Type type` definition. This ensures that the public documentation displays the new enum Type.
       case unspecified
       /// Encodes an unknown integer value.
       ///
@@ -613,8 +547,9 @@
         case .memoryOptimizedX44808T: return 35
         case .memoryOptimizedX496012T: return 36
         case .memoryOptimizedX496016T: return 37
-        case .storageOptimizedZ3: return 38
-        case .unspecified: return 39
+        case .networkOptimizedC4N: return 38
+        case .storageOptimizedZ3: return 39
+        case .unspecified: return 40
         case .unknownIntValue(let v): return v
         case .unknownStringValue: return nil
         }
@@ -663,6 +598,7 @@
         case .memoryOptimizedX44808T: return "MEMORY_OPTIMIZED_X4_480_8T"
         case .memoryOptimizedX496012T: return "MEMORY_OPTIMIZED_X4_960_12T"
         case .memoryOptimizedX496016T: return "MEMORY_OPTIMIZED_X4_960_16T"
+        case .networkOptimizedC4N: return "NETWORK_OPTIMIZED_C4N"
         case .storageOptimizedZ3: return "STORAGE_OPTIMIZED_Z3"
         case .unspecified: return "TYPE_UNSPECIFIED"
         case .unknownIntValue: return nil
@@ -713,6 +649,7 @@
         case "MEMORY_OPTIMIZED_X4_480_8T": self = .memoryOptimizedX44808T
         case "MEMORY_OPTIMIZED_X4_960_12T": self = .memoryOptimizedX496012T
         case "MEMORY_OPTIMIZED_X4_960_16T": self = .memoryOptimizedX496016T
+        case "NETWORK_OPTIMIZED_C4N": self = .networkOptimizedC4N
         case "STORAGE_OPTIMIZED_Z3": self = .storageOptimizedZ3
         case "TYPE_UNSPECIFIED": self = .unspecified
         default: self = .unknownStringValue(stringValue)
@@ -762,8 +699,9 @@
         case 35: self = .memoryOptimizedX44808T
         case 36: self = .memoryOptimizedX496012T
         case 37: self = .memoryOptimizedX496016T
-        case 38: self = .storageOptimizedZ3
-        case 39: self = .unspecified
+        case 38: self = .networkOptimizedC4N
+        case 39: self = .storageOptimizedZ3
+        case 40: self = .unspecified
         default: self = .unknownIntValue(intValue)
         }
       }
@@ -827,8 +765,9 @@
         case .memoryOptimizedX44808T: return try container.encode(35)
         case .memoryOptimizedX496012T: return try container.encode(36)
         case .memoryOptimizedX496016T: return try container.encode(37)
-        case .storageOptimizedZ3: return try container.encode(38)
-        case .unspecified: return try container.encode(39)
+        case .networkOptimizedC4N: return try container.encode(38)
+        case .storageOptimizedZ3: return try container.encode(39)
+        case .unspecified: return try container.encode(40)
         case .unknownIntValue(let v): return try container.encode(v)
         case .unknownStringValue(let v): return try container.encode(v)
         }

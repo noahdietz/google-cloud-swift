@@ -23,8 +23,7 @@
   {
     public var healthStatus: [HealthStatus] = []
 
-    /// Output only. [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when checking the health of
-    /// an instance.
+    /// Output only. [Output Only] Type of resource. Always compute#targetPoolInstanceHealth when checking the health of an instance.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `TargetPoolInstanceHealth`.

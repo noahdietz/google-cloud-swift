@@ -21,20 +21,13 @@
   public struct PreservedStatePreservedDisk: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// These stateful disks will never be deleted during autohealing,
-    /// update, instance recreate operations. This flag is used to configure
-    /// if the disk should be deleted after it is no longer used by the group,
-    /// e.g. when the given instance or the whole MIG is deleted.
-    /// Note: disks attached in READ_ONLY mode cannot be
-    /// auto-deleted.
+    /// These stateful disks will never be deleted during autohealing, update, instance recreate operations. This flag is used to configure if the disk should be deleted after it is no longer used by the group, e.g. when the given instance or the whole MIG is deleted. Note: disks attached in READ_ONLY mode cannot be auto-deleted.
     public var autoDelete: PreservedStatePreservedDisk.AutoDelete? = nil
 
-    /// The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the default is to attach the
-    /// disk in READ_WRITE mode.
+    /// The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
     public var mode: PreservedStatePreservedDisk.Mode? = nil
 
-    /// The URL of the disk resource that is stateful and should be attached
-    /// to the VM instance.
+    /// The URL of the disk resource that is stateful and should be attached to the VM instance.
     public var source: Swift.String? = nil
 
     /// Initialize a new instance of `PreservedStatePreservedDisk`.
@@ -155,11 +148,9 @@
     ///
     /// [google.cloud.compute.v1.PreservedStatePreservedDisk.mode]: <doc:PreservedStatePreservedDisk/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// Attaches this disk in read-only mode. Multiple VM instances can use
-      /// a disk in READ_ONLY mode at a time.
+      /// Attaches this disk in read-only mode. Multiple VM instances can use a disk in READ_ONLY mode at a time.
       case readOnly
-      /// *[Default]* Attaches this disk in READ_WRITE mode. Only
-      /// one VM instance at a time can be attached to a disk inREAD_WRITE mode.
+      /// *[Default]* Attaches this disk in READ_WRITE mode. Only one VM instance at a time can be attached to a disk in READ_WRITE mode.
       case readWrite
       /// Encodes an unknown integer value.
       ///

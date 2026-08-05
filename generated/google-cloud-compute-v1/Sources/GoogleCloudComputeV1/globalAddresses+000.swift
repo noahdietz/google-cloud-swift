@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates an address resource in the specified project by using the data
-    /// included in the request.
+    /// Creates an address resource in the specified project by using the data included in the request.
     ///
     /// @Snippet(path: "globalAddresses_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an address resource in the specified project by using the data
-    /// included in the request.
+    /// Creates an address resource in the specified project by using the data included in the request.
     ///
     /// @Snippet(path: "globalAddresses_insert")
     public func insert(
@@ -223,8 +221,7 @@
       )
     }
 
-    /// Sets the labels on a GlobalAddress. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a GlobalAddress. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "globalAddresses_setLabels")
     public func setLabels(
@@ -233,8 +230,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a GlobalAddress. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a GlobalAddress. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "globalAddresses_setLabels")
     public func setLabels(

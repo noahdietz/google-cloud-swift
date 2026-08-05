@@ -22,16 +22,13 @@
   public struct PreservedState: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Preserved disks defined for this instance.
-    /// This map is keyed with the device names of the disks.
+    /// Preserved disks defined for this instance. This map is keyed with the device names of the disks.
     public var disks: [Swift.String: PreservedStatePreservedDisk] = [:]
 
-    /// Preserved external IPs defined for this instance.
-    /// This map is keyed with the name of the network interface.
+    /// Preserved external IPs defined for this instance. This map is keyed with the name of the network interface.
     public var externalIps: [Swift.String: PreservedStatePreservedNetworkIp] = [:]
 
-    /// Preserved internal IPs defined for this instance.
-    /// This map is keyed with the name of the network interface.
+    /// Preserved internal IPs defined for this instance. This map is keyed with the name of the network interface.
     public var internalIps: [Swift.String: PreservedStatePreservedNetworkIp] = [:]
 
     /// Preserved metadata defined for this instance.

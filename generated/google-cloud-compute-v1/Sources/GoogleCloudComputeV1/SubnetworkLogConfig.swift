@@ -22,40 +22,22 @@
   public struct SubnetworkLogConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Can only be specified if VPC flow logging for this subnetwork is enabled.
-    /// Toggles the aggregation interval for collecting flow logs. Increasing the
-    /// interval time will reduce the amount of generated flow logs for long
-    /// lasting connections. Default is an interval of 5 seconds per connection.
+    /// Can only be specified if VPC flow logging for this subnetwork is enabled. Toggles the aggregation interval for collecting flow logs. Increasing the interval time will reduce the amount of generated flow logs for long lasting connections. Default is an interval of 5 seconds per connection.
     public var aggregationInterval: SubnetworkLogConfig.AggregationInterval? = nil
 
-    /// Whether to enable flow logging for this subnetwork. If this field is not
-    /// explicitly set, it will not appear in get listings. If not
-    /// set the default behavior is determined by the org policy, if there is no
-    /// org policy specified, then it will default to disabled.
-    /// Flow logging isn't supported if the subnet purpose field is
-    /// set to REGIONAL_MANAGED_PROXY.
+    /// Whether to enable flow logging for this subnetwork. If this field is not explicitly set, it will not appear in get listings. If not set the default behavior is determined by the org policy, if there is no org policy specified, then it will default to disabled. Flow logging isn't supported if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
     public var enable: Swift.Bool? = nil
 
-    /// Can only be specified if VPC flow logs for this subnetwork is enabled.
-    /// The filter expression is used to define which VPC flow logs should be
-    /// exported to Cloud Logging.
+    /// Can only be specified if VPC flow logs for this subnetwork is enabled. The filter expression is used to define which VPC flow logs should be exported to Cloud Logging.
     public var filterExpr: Swift.String? = nil
 
-    /// Can only be specified if VPC flow logging for this subnetwork is enabled.
-    /// The value of the field must be in [0, 1]. Set the sampling rate of VPC
-    /// flow logs within the subnetwork where 1.0 means all collected logs are
-    /// reported and 0.0 means no logs are reported. Default is 0.5 unless
-    /// otherwise specified by the org policy, which means half of all collected
-    /// logs are reported.
+    /// Can only be specified if VPC flow logging for this subnetwork is enabled. The value of the field must be in [0, 1]. Set the sampling rate of VPC flow logs within the subnetwork where 1.0 means all collected logs are reported and 0.0 means no logs are reported. Default is 0.5 unless otherwise specified by the org policy, which means half of all collected logs are reported.
     public var flowSampling: Swift.Float? = nil
 
-    /// Can only be specified if VPC flow logs for this subnetwork is enabled.
-    /// Configures whether all, none or a subset of metadata fields should be
-    /// added to the reported VPC flow logs. Default isEXCLUDE_ALL_METADATA.
+    /// Can only be specified if VPC flow logs for this subnetwork is enabled. Configures whether all, none or a subset of metadata fields should be added to the reported VPC flow logs. Default is EXCLUDE_ALL_METADATA.
     public var metadata: SubnetworkLogConfig.Metadata? = nil
 
-    /// Can only be specified if VPC flow logs for this subnetwork is enabled and
-    /// "metadata" was set to CUSTOM_METADATA.
+    /// Can only be specified if VPC flow logs for this subnetwork is enabled and "metadata" was set to CUSTOM_METADATA.
     public var metadataFields: [Swift.String] = []
 
     /// Initialize a new instance of `SubnetworkLogConfig`.

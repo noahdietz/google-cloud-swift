@@ -142,10 +142,7 @@
       )
     }
 
-    /// Retrieves an aggregated list of target pools.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetPools_aggregatedList")
     public func aggregatedList(
@@ -154,10 +151,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of target pools.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of target pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetPools_aggregatedList")
     public func aggregatedList(
@@ -231,8 +225,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the most recent health check results for each IP for the
-    /// instance that is referenced by the given target pool.
+    /// Gets the most recent health check results for each IP for the instance that is referenced by the given target pool.
     ///
     /// @Snippet(path: "targetPools_getHealth")
     public func getHealth(
@@ -241,8 +234,7 @@
       try await self.inner.getHealth(request: request, options: options)
     }
 
-    /// Creates a target pool in the specified project and region using
-    /// the data included in the request.
+    /// Creates a target pool in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "targetPools_insert")
     public func insert(
@@ -251,8 +243,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a target pool in the specified project and region using
-    /// the data included in the request.
+    /// Creates a target pool in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "targetPools_insert")
     public func insert(
@@ -293,8 +284,7 @@
       )
     }
 
-    /// Retrieves a list of target pools available to the specified
-    /// project and region.
+    /// Retrieves a list of target pools available to the specified project and region.
     ///
     /// @Snippet(path: "targetPools_list")
     public func list(
@@ -303,8 +293,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of target pools available to the specified
-    /// project and region.
+    /// Retrieves a list of target pools available to the specified project and region.
     ///
     /// @Snippet(path: "targetPools_list")
     public func list(
@@ -469,9 +458,7 @@
       )
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified target pool.
-    /// For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "targetPools_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -480,9 +467,7 @@
       try await self.inner.setSecurityPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified target pool.
-    /// For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified target pool. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "targetPools_setSecurityPolicy")
     public func setSecurityPolicy(

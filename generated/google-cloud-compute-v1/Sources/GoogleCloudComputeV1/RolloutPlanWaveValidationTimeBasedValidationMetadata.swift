@@ -23,8 +23,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. The duration that the system waits in between waves. This wait starts
-    /// after all changes in the wave are rolled out.
+    /// Optional. The duration that the system waits in between waves. This wait starts after all changes in the wave are rolled out.
     public var waitDuration: GoogleCloudWkt.Duration? = nil
 
     /// Initialize a new instance of `RolloutPlanWaveValidationTimeBasedValidationMetadata`.

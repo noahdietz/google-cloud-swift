@@ -21,8 +21,7 @@
   public struct InterconnectGroupsCreateMembers: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// How to behave when configured.topologyCapability.supportedSLA would not
-    /// equal intent.topologyCapability after this call.
+    /// How to behave when configured.topologyCapability.supportedSLA would not equal intent.topologyCapability after this call.
     public var intentMismatchBehavior: InterconnectGroupsCreateMembers.IntentMismatchBehavior? = nil
 
     public var interconnects: [InterconnectGroupsCreateMembersInterconnectInput] = []

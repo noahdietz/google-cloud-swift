@@ -18,44 +18,27 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Cross-Cloud Interconnect Remote Location resource.
-  ///
-  /// You can use this resource to find remote location details about an
-  /// Interconnect attachment (VLAN).
+  /// Represents a Cross-Cloud Interconnect Remote Location resource. You can use this resource to find remote location details about an Interconnect attachment (VLAN).
   public struct InterconnectRemoteLocation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The postal address of the Point of Presence, each line in
-    /// the address is separated by a newline character.
+    /// Output only. [Output Only] The postal address of the Point of Presence, each line in the address is separated by a newline character.
     public var address: Swift.String? = nil
 
-    /// Output only. [Output Only] Subset of fields from InterconnectAttachment's
-    /// |configurationConstraints| field that apply to all attachments for this
-    /// remote location.
+    /// Output only. [Output Only] Subset of fields from InterconnectAttachment's |configurationConstraints| field that apply to all attachments for this remote location.
     public var attachmentConfigurationConstraints: InterconnectAttachmentConfigurationConstraints? =
       nil
 
-    /// Output only. [Output Only] Metropolitan area designator that indicates which city an
-    /// interconnect is located.
-    /// For example: "Chicago, IL", "Amsterdam, Netherlands".
+    /// Output only. [Output Only] Metropolitan area designator that indicates which city an interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
     public var city: Swift.String? = nil
 
-    /// Output only. [Output Only] Constraints on the parameters for creating Cross-Cloud
-    /// Interconnect and associated InterconnectAttachments.
+    /// Output only. [Output Only] Constraints on the parameters for creating Cross-Cloud Interconnect and associated InterconnectAttachments.
     public var constraints: InterconnectRemoteLocationConstraints? = nil
 
-    /// Output only. [Output Only] Continent for this location, which can take one of the
-    /// following values:
-    ///
-    ///    - AFRICA
-    ///    - ASIA_PAC
-    ///    - EUROPE
-    ///    - NORTH_AMERICA
-    ///    - SOUTH_AMERICA
+    /// Output only. [Output Only] Continent for this location, which can take one of the following values: - AFRICA - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
     public var continent: InterconnectRemoteLocation.Continent? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. [Output Only] An optional description of the resource.
@@ -64,65 +47,43 @@
     /// Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
     public var facilityProvider: Swift.String? = nil
 
-    /// Output only. [Output Only] A provider-assigned Identifier for this facility (e.g.,
-    /// Ashburn-DC1).
+    /// Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
     public var facilityProviderFacilityId: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#interconnectRemoteLocation for interconnect remote
-    /// locations.
+    /// Output only. [Output Only] Type of the resource. Always compute#interconnectRemoteLocation for interconnect remote locations.
     public var kind: Swift.String? = nil
 
-    /// Output only. [Output Only] Link Aggregation Control Protocol (LACP) constraints, which
-    /// can take one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
+    /// Output only. [Output Only] Link Aggregation Control Protocol (LACP) constraints, which can take one of the following values: LACP_SUPPORTED, LACP_UNSUPPORTED
     public var lacp: InterconnectRemoteLocation.Lacp? = nil
 
-    /// Output only. [Output Only]
-    /// The maximum number of 100 Gbps ports supported in a link aggregation group
-    /// (LAG). When linkType is 100 Gbps, requestedLinkCount cannot exceed
-    /// max_lag_size_100_gbps.
+    /// Output only. [Output Only] The maximum number of 100 Gbps ports supported in a link aggregation group (LAG). When linkType is 100 Gbps, requestedLinkCount cannot exceed max_lag_size_100_gbps.
     public var maxLagSize100Gbps: Swift.Int32? = nil
 
-    /// Output only. [Output Only]
-    /// The maximum number of 10 Gbps ports supported in a link aggregation group
-    /// (LAG). When linkType is 10 Gbps, requestedLinkCount cannot exceed
-    /// max_lag_size_10_gbps.
+    /// Output only. [Output Only] The maximum number of 10 Gbps ports supported in a link aggregation group (LAG). When linkType is 10 Gbps, requestedLinkCount cannot exceed max_lag_size_10_gbps.
     public var maxLagSize10Gbps: Swift.Int32? = nil
 
-    /// Output only. [Output Only]
-    /// The maximum number of 400 Gbps ports supported in a link aggregation group
-    /// (LAG). When linkType is 400 Gbps, requestedLinkCount cannot exceed
-    /// max_lag_size_400_gbps.
+    /// Output only. [Output Only] The maximum number of 400 Gbps ports supported in a link aggregation group (LAG). When linkType is 400 Gbps, requestedLinkCount cannot exceed max_lag_size_400_gbps.
     public var maxLagSize400Gbps: Swift.Int32? = nil
 
     /// Output only. [Output Only] Name of the resource.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] The peeringdb identifier for this facility (corresponding
-    /// with a netfac type in peeringdb).
+    /// Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in peeringdb).
     public var peeringdbFacilityId: Swift.String? = nil
 
     /// Output only. [Output Only] Permitted connections.
     public var permittedConnections: [InterconnectRemoteLocationPermittedConnections] = []
 
-    /// Output only. [Output Only] Indicates the service provider present at the remote
-    /// location. Example values: "Amazon Web Services", "Microsoft Azure".
+    /// Output only. [Output Only] Indicates the service provider present at the remote location. Example values: "Amazon Web Services", "Microsoft Azure".
     public var remoteService: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] The status of this InterconnectRemoteLocation, which can take
-    /// one of the following values:
-    ///
-    ///    - CLOSED: The InterconnectRemoteLocation is closed and is unavailable
-    ///    for provisioning new Cross-Cloud Interconnects.
-    ///    - AVAILABLE: The
-    ///    InterconnectRemoteLocation is available for provisioning new
-    ///    Cross-Cloud Interconnects.
+    /// Output only. [Output Only] The status of this InterconnectRemoteLocation, which can take one of the following values: - CLOSED: The InterconnectRemoteLocation is closed and is unavailable for provisioning new Cross-Cloud Interconnects. - AVAILABLE: The InterconnectRemoteLocation is available for provisioning new Cross-Cloud Interconnects.
     public var status: InterconnectRemoteLocation.Status? = nil
 
     /// Initialize a new instance of `InterconnectRemoteLocation`.
@@ -261,12 +222,9 @@
     ///
     /// [google.cloud.compute.v1.InterconnectRemoteLocation.lacp]: <doc:InterconnectRemoteLocation/Lacp>
     public enum Lacp: Codable, Equatable, Sendable {
-      /// LACP_SUPPORTED: LACP is supported, and enabled by default on
-      /// the Cross-Cloud Interconnect.
+      /// LACP_SUPPORTED: LACP is supported, and enabled by default on the Cross-Cloud Interconnect.
       case supported
-      /// LACP_UNSUPPORTED: LACP is not supported and is not be enabled on this
-      /// port. GetDiagnostics shows bundleAggregationType as "static". GCP does
-      /// not support LAGs without LACP, so requestedLinkCount must be 1.
+      /// LACP_UNSUPPORTED: LACP is not supported and is not be enabled on this port. GetDiagnostics shows bundleAggregationType as "static". GCP does not support LAGs without LACP, so requestedLinkCount must be 1.
       case unsupported
       /// Encodes an unknown integer value.
       ///
@@ -364,11 +322,9 @@
     ///
     /// [google.cloud.compute.v1.InterconnectRemoteLocation.status]: <doc:InterconnectRemoteLocation/Status>
     public enum Status: Codable, Equatable, Sendable {
-      /// The InterconnectRemoteLocation is available for provisioning new
-      /// Cross-Cloud Interconnects.
+      /// The InterconnectRemoteLocation is available for provisioning new Cross-Cloud Interconnects.
       case available
-      /// The InterconnectRemoteLocation is closed for provisioning new
-      /// Cross-Cloud Interconnects.
+      /// The InterconnectRemoteLocation is closed for provisioning new Cross-Cloud Interconnects.
       case closed
       /// Encodes an unknown integer value.
       ///

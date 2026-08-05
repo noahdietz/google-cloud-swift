@@ -39,8 +39,7 @@
       self.inner = inner
     }
 
-    /// Returns the details for the specified interconnect remote location. Gets a
-    /// list of available interconnect remote locations by making alist() request.
+    /// Returns the details for the specified interconnect remote location. Gets a list of available interconnect remote locations by making a list() request.
     ///
     /// @Snippet(path: "interconnectRemoteLocations_get")
     public func `get`(
@@ -49,8 +48,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves the list of interconnect remote locations available to the
-    /// specified project.
+    /// Retrieves the list of interconnect remote locations available to the specified project.
     ///
     /// @Snippet(path: "interconnectRemoteLocations_list")
     public func list(
@@ -59,8 +57,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of interconnect remote locations available to the
-    /// specified project.
+    /// Retrieves the list of interconnect remote locations available to the specified project.
     ///
     /// @Snippet(path: "interconnectRemoteLocations_list")
     public func list(

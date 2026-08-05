@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Describes a pre-shared key used to setup MACsec in static connectivity
-  /// association key (CAK) mode.
+  /// Describes a pre-shared key used to setup MACsec in static connectivity association key (CAK) mode.
   public struct InterconnectMacsecConfigPreSharedKey: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

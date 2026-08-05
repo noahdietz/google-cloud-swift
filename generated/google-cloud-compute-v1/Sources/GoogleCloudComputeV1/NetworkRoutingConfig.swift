@@ -18,39 +18,26 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A routing configuration attached to a network resource. The message
-  /// includes the list of routers associated with the network, and a flag
-  /// indicating the type of routing behavior to enforce network-wide.
+  /// A routing configuration attached to a network resource. The message includes the list of routers associated with the network, and a flag indicating the type of routing behavior to enforce network-wide.
   public struct NetworkRoutingConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Enable comparison of Multi-Exit Discriminators (MED) across routes with
-    /// different neighbor ASNs when using the STANDARD BGP best path selection
-    /// algorithm.
+    /// Enable comparison of Multi-Exit Discriminators (MED) across routes with different neighbor ASNs when using the STANDARD BGP best path selection algorithm.
     public var bgpAlwaysCompareMed: Swift.Bool? = nil
 
-    /// The BGP best path selection algorithm to be employed within this network
-    /// for dynamic routes learned by Cloud Routers. Can be LEGACY
-    /// (default) or STANDARD.
+    /// The BGP best path selection algorithm to be employed within this network for dynamic routes learned by Cloud Routers. Can be LEGACY (default) or STANDARD.
     public var bgpBestPathSelectionMode: NetworkRoutingConfig.BgpBestPathSelectionMode? = nil
 
-    /// Allows to define a preferred approach for handling inter-region cost in
-    /// the selection process when using the STANDARD BGP best path
-    /// selection algorithm. Can be DEFAULT orADD_COST_TO_MED.
+    /// Allows to define a preferred approach for handling inter-region cost in the selection process when using the STANDARD BGP best path selection algorithm. Can be DEFAULT or ADD_COST_TO_MED.
     public var bgpInterRegionCost: NetworkRoutingConfig.BgpInterRegionCost? = nil
 
-    /// Output only. [Output Only] Effective value of the bgp_always_compare_med
-    /// field.
+    /// Output only. [Output Only] Effective value of the bgp_always_compare_med field.
     public var effectiveBgpAlwaysCompareMed: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Effective value of the bgp_inter_region_cost
-    /// field.
+    /// Output only. [Output Only] Effective value of the bgp_inter_region_cost field.
     public var effectiveBgpInterRegionCost: NetworkRoutingConfig.EffectiveBgpInterRegionCost? = nil
 
-    /// The network-wide routing mode to use. If set to REGIONAL,
-    /// this network's Cloud Routers will only advertise routes with subnets
-    /// of this network in the same region as the router. If set toGLOBAL, this network's Cloud Routers will advertise
-    /// routes with all subnets of this network, across regions.
+    /// The network-wide routing mode to use. If set to REGIONAL, this network's Cloud Routers will only advertise routes with subnets of this network in the same region as the router. If set to GLOBAL, this network's Cloud Routers will advertise routes with all subnets of this network, across regions.
     public var routingMode: NetworkRoutingConfig.RoutingMode? = nil
 
     /// Initialize a new instance of `NetworkRoutingConfig`.

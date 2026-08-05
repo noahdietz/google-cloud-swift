@@ -21,9 +21,7 @@
   public struct BackendServiceUsedBy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Server-defined URL for resources referencing given
-    /// BackendService like UrlMaps, TargetTcpProxies, TargetSslProxies
-    /// and ForwardingRule.
+    /// Output only. [Output Only] Server-defined URL for resources referencing given BackendService like UrlMaps, TargetTcpProxies, TargetSslProxies and ForwardingRule.
     public var reference: Swift.String? = nil
 
     /// Initialize a new instance of `BackendServiceUsedBy`.

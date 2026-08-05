@@ -21,9 +21,7 @@
   public struct InstancesSetLabelsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Fingerprint of the previous set of labels for this resource,
-    /// used to prevent conflicts. Provide the latest fingerprint value when making
-    /// a request to add or change labels.
+    /// Fingerprint of the previous set of labels for this resource, used to prevent conflicts. Provide the latest fingerprint value when making a request to add or change labels.
     public var labelFingerprint: Foundation.Data? = nil
 
     public var labels: [Swift.String: Swift.String] = [:]

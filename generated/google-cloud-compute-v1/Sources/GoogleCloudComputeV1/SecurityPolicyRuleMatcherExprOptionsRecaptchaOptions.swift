@@ -22,16 +22,10 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A list of site keys to be used during the validation of reCAPTCHA
-    /// action-tokens. The provided site keys need to be created from
-    /// reCAPTCHA API under the same project where the security policy is
-    /// created.
+    /// A list of site keys to be used during the validation of reCAPTCHA action-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.
     public var actionTokenSiteKeys: [Swift.String] = []
 
-    /// A list of site keys to be used during the validation of reCAPTCHA
-    /// session-tokens. The provided site keys need to be created from
-    /// reCAPTCHA API under the same project where the security policy is
-    /// created.
+    /// A list of site keys to be used during the validation of reCAPTCHA session-tokens. The provided site keys need to be created from reCAPTCHA API under the same project where the security policy is created.
     public var sessionTokenSiteKeys: [Swift.String] = []
 
     /// Initialize a new instance of `SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions`.

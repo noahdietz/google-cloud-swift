@@ -22,79 +22,53 @@
   public struct Scheduling: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies whether the instance should be automatically restarted if it is
-    /// terminated by Compute Engine (not terminated by a user). You can only set
-    /// the automatic restart option for standard instances.Preemptible instances
-    /// cannot be automatically restarted.
-    ///
-    /// By default, this is set to true so an instance is
-    /// automatically restarted if it is terminated by Compute Engine.
+    /// Specifies whether the instance should be automatically restarted if it is terminated by Compute Engine (not terminated by a user). You can only set the automatic restart option for standard instances. Preemptible instances cannot be automatically restarted. By default, this is set to true so an instance is automatically restarted if it is terminated by Compute Engine.
     public var automaticRestart: Swift.Bool? = nil
 
-    /// Specifies the availability domain to place the instance in. The value
-    /// must be a number between 1 and the number of availability domains
-    /// specified in the spread placement policy attached to the instance.
+    /// Specifies the availability domain to place the instance in. The value must be a number between 1 and the number of availability domains specified in the spread placement policy attached to the instance.
     public var availabilityDomain: Swift.Int32? = nil
 
-    /// Specify the time in seconds for host error detection, the value must be
-    /// within the range of [90, 330] with the increment of 30, if unset, the
-    /// default behavior of host error recovery will be used.
+    public var gracefulShutdown: SchedulingGracefulShutdown? = nil
+
+    /// Specify the time in seconds for host error detection, the value must be within the range of [90, 330] with the increment of 30, if unset, the default behavior of host error recovery will be used.
     public var hostErrorTimeoutSeconds: Swift.Int32? = nil
 
     /// Specifies the termination action for the instance.
     public var instanceTerminationAction: Scheduling.InstanceTerminationAction? = nil
 
-    /// Specifies the maximum amount of time a Local Ssd Vm should wait while
-    /// recovery of the Local Ssd state is attempted. Its value should be in
-    /// between 0 and 168 hours with hour granularity and the default value being 1
-    /// hour.
+    /// Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour.
     public var localSsdRecoveryTimeout: Duration? = nil
 
-    /// An opaque location hint used to place the instance close to other
-    /// resources.
-    /// This field is for use by internal tools that use the public API.
+    /// An opaque location hint used to place the instance close to other resources. This field is for use by internal tools that use the public API.
     public var locationHint: Swift.String? = nil
 
-    /// Specifies the max run duration for the given instance. If specified,
-    /// the instance termination action will be performed at the end of the run
-    /// duration.
+    /// Specifies the max run duration for the given instance. If specified, the instance termination action will be performed at the end of the run duration.
     public var maxRunDuration: Duration? = nil
 
-    /// The minimum number of virtual CPUs this instance will consume when running
-    /// on a sole-tenant node.
+    /// The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
     public var minNodeCpus: Swift.Int32? = nil
 
-    /// A set of node affinity and anti-affinity configurations. Refer toConfiguring node
-    /// affinity for more information.
-    /// Overrides reservationAffinity.
+    /// A set of node affinity and anti-affinity configurations. Refer to Configuring node affinity for more information. Overrides reservationAffinity.
     public var nodeAffinities: [SchedulingNodeAffinity] = []
 
-    /// Defines the maintenance behavior for this instance. For standard instances,
-    /// the default behavior is MIGRATE. Forpreemptible instances,
-    /// the default and only possible behavior is TERMINATE. For more
-    /// information, see
-    ///  Set
-    ///  VM host maintenance policy.
+    /// Defines the maintenance behavior for this instance. For standard instances, the default behavior is MIGRATE. For preemptible instances, the default and only possible behavior is TERMINATE. For more information, see Set VM host maintenance policy.
     public var onHostMaintenance: Scheduling.OnHostMaintenance? = nil
 
     public var onInstanceStopAction: SchedulingOnInstanceStopAction? = nil
 
-    /// Defines whether the instance is preemptible. This can only be set during
-    /// instance creation or while the instance isstopped and
-    /// therefore, in a `TERMINATED` state. SeeInstance Life
-    /// Cycle for more information on the possible instance states.
+    /// Defines whether the instance is preemptible. This can only be set during instance creation or while the instance is stopped and therefore, in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states.
     public var preemptible: Swift.Bool? = nil
+
+    /// Specifies the Metadata Service preemption notice duration before the GCE ACPI G2 Soft Off signal is triggered for Spot VMs only. If not specified, there will be no wait before the G2 Soft Off signal is triggered.
+    public var preemptionNoticeDuration: Duration? = nil
 
     /// Specifies the provisioning model of the instance.
     public var provisioningModel: Scheduling.ProvisioningModel? = nil
 
-    /// Default is false and there will be 120 seconds between GCE ACPI G2 Soft
-    /// Off and ACPI G3 Mechanical
-    /// Off for Standard VMs and 30 seconds for Spot VMs.
+    /// Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
     public var skipGuestOsShutdown: Swift.Bool? = nil
 
-    /// Specifies the timestamp, when the instance will be terminated, inRFC3339 text format. If specified, the instance
-    /// termination action will be performed at the termination time.
+    /// Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If specified, the instance termination action will be performed at the termination time.
     public var terminationTime: Swift.String? = nil
 
     /// Initialize a new instance of `Scheduling`.
@@ -224,14 +198,9 @@
     ///
     /// [google.cloud.compute.v1.Scheduling.onHostMaintenance]: <doc:Scheduling/OnHostMaintenance>
     public enum OnHostMaintenance: Codable, Equatable, Sendable {
-      /// *[Default]* Allows Compute Engine to automatically migrate instances
-      /// out of the way of maintenance events.
+      /// *[Default]* Allows Compute Engine to automatically migrate instances out of the way of maintenance events.
       case migrate
-      /// Tells Compute Engine to terminate and (optionally) restart the instance
-      /// away from the maintenance activity. If you would like your instance to be
-      /// restarted, set the automaticRestart flag to true. Your
-      /// instance may be restarted more than once, and it may be restarted outside
-      /// the window of maintenance events.
+      /// Tells Compute Engine to terminate and (optionally) restart the instance away from the maintenance activity. If you would like your instance to be restarted, set the automaticRestart flag to true. Your instance may be restarted more than once, and it may be restarted outside the window of maintenance events.
       case terminate
       /// Encodes an unknown integer value.
       ///
@@ -329,8 +298,7 @@
     ///
     /// [google.cloud.compute.v1.Scheduling.provisioningModel]: <doc:Scheduling/ProvisioningModel>
     public enum ProvisioningModel: Codable, Equatable, Sendable {
-      /// Instance is provisioned using the Flex Start provisioning model and
-      /// has a limited runtime.
+      /// Instance is provisioned using the Flex Start provisioning model and has a limited runtime.
       case flexStart
       /// Bound to the lifecycle of the reservation in which it is provisioned.
       case reservationBound

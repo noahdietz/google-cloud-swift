@@ -22,23 +22,10 @@
   public struct AutoscalingPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The number of seconds that your application takes to initialize on a VM
-    /// instance. This is referred to as the
-    /// [initialization period](/compute/docs/autoscaler#cool_down_period).
-    /// Specifying an accurate initialization period improves
-    /// autoscaler decisions. For example, when scaling out, the autoscaler ignores
-    /// data from VMs that are still initializing because those VMs might not yet
-    /// represent normal usage of your application. The default initialization
-    /// period is 60 seconds.
-    ///
-    /// Initialization periods might vary because of numerous
-    /// factors. We recommend that you test how long your application takes to
-    /// initialize. To do this, create a VM and time your application's startup
-    /// process.
+    /// The number of seconds that your application takes to initialize on a VM instance. This is referred to as the [initialization period](/compute/docs/autoscaler#cool_down_period). Specifying an accurate initialization period improves autoscaler decisions. For example, when scaling out, the autoscaler ignores data from VMs that are still initializing because those VMs might not yet represent normal usage of your application. The default initialization period is 60 seconds. Initialization periods might vary because of numerous factors. We recommend that you test how long your application takes to initialize. To do this, create a VM and time your application's startup process.
     public var coolDownPeriodSec: Swift.Int32? = nil
 
-    /// Defines the CPU utilization policy that allows the autoscaler to scale
-    /// based on the average CPU utilization of a managed instance group.
+    /// Defines the CPU utilization policy that allows the autoscaler to scale based on the average CPU utilization of a managed instance group.
     public var cpuUtilization: AutoscalingPolicyCpuUtilization? = nil
 
     /// Configuration parameters of autoscaling based on a custom metric.
@@ -47,47 +34,21 @@
     /// Configuration parameters of autoscaling based on load balancer.
     public var loadBalancingUtilization: AutoscalingPolicyLoadBalancingUtilization? = nil
 
-    /// The maximum number of instances that the autoscaler can scale out to. This
-    /// is required when creating or updating an autoscaler. The maximum number
-    /// of replicas must not be lower than minimal number of replicas.
+    /// The maximum number of instances that the autoscaler can scale out to. This is required when creating or updating an autoscaler. The maximum number of replicas must not be lower than minimal number of replicas.
     public var maxNumReplicas: Swift.Int32? = nil
 
-    /// The minimum number of replicas that the autoscaler can scale in to.
-    /// This cannot be less than 0. If not provided, autoscaler chooses a
-    /// default value depending on maximum number of instances allowed.
+    /// The minimum number of replicas that the autoscaler can scale in to. This cannot be less than 0. If not provided, autoscaler chooses a default value depending on maximum number of instances allowed.
     public var minNumReplicas: Swift.Int32? = nil
 
-    /// Defines the operating mode for this policy.
-    /// The following modes are available:
-    ///
-    ///    - OFF: Disables the autoscaler but maintains its
-    ///    configuration.
-    ///    - ONLY_SCALE_OUT: Restricts the autoscaler to add
-    ///    VM instances only.
-    ///    - ON: Enables all autoscaler activities according to its
-    ///    policy.
-    ///
-    ///
-    /// For more information, see
-    /// "Turning off or restricting an autoscaler"
+    /// Defines the operating mode for this policy. The following modes are available: - OFF: Disables the autoscaler but maintains its configuration. - ONLY_SCALE_OUT: Restricts the autoscaler to add VM instances only. - ON: Enables all autoscaler activities according to its policy. For more information, see "Turning off or restricting an autoscaler"
     public var mode: AutoscalingPolicy.Mode? = nil
 
     public var scaleInControl: AutoscalingPolicyScaleInControl? = nil
 
-    /// Scaling schedules defined for an autoscaler. Multiple schedules
-    /// can be set on an autoscaler, and they can overlap. During overlapping
-    /// periods the greatest min_required_replicas of all scaling schedules is
-    /// applied. Up to 128 scaling schedules are allowed.
+    /// Scaling schedules defined for an autoscaler. Multiple schedules can be set on an autoscaler, and they can overlap. During overlapping periods the greatest min_required_replicas of all scaling schedules is applied. Up to 128 scaling schedules are allowed.
     public var scalingSchedules: [Swift.String: AutoscalingPolicyScalingSchedule] = [:]
 
-    /// The number of seconds that autoscaler waits for load stabilization before
-    /// making scale-in decisions. This is referred to as the
-    /// [stabilization period](/compute/docs/autoscaler#stabilization_period).
-    /// This might appear as a delay in scaling in but it is an important mechanism
-    /// for your application to not have fluctuating size due to short term load
-    /// fluctuations.
-    ///
-    /// The default stabilization period is 600 seconds.
+    /// The number of seconds that autoscaler waits for load stabilization before making scale-in decisions. This is referred to as the [stabilization period](/compute/docs/autoscaler#stabilization_period). This might appear as a delay in scaling in but it is an important mechanism for your application to not have fluctuating size due to short term load fluctuations. The default stabilization period is 600 seconds.
     public var stabilizationPeriodSec: Swift.Int32? = nil
 
     /// Initialize a new instance of `AutoscalingPolicy`.
@@ -110,18 +71,13 @@
     ///
     /// [google.cloud.compute.v1.AutoscalingPolicy.mode]: <doc:AutoscalingPolicy/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// Do not automatically scale the MIG in or out.
-      /// The recommended_size field contains the size of MIG that would be set if
-      /// the actuation mode was enabled.
+      /// Do not automatically scale the MIG in or out. The recommended_size field contains the size of MIG that would be set if the actuation mode was enabled.
       case off
       /// Automatically scale the MIG in and out according to the policy.
       case on
-      /// Automatically create VMs according to the policy, but do not scale
-      /// the MIG in.
+      /// Automatically create VMs according to the policy, but do not scale the MIG in.
       case onlyScaleOut
-      /// Automatically create VMs according to the policy, but do not scale
-      /// the MIG in.
-      /// It's recommended to use ONLY_SCALE_OUT instead of ONLY_UP.
+      /// Automatically create VMs according to the policy, but do not scale the MIG in. It's recommended to use ONLY_SCALE_OUT instead of ONLY_UP.
       case onlyUp
       /// Encodes an unknown integer value.
       ///

@@ -21,8 +21,7 @@
   public struct SnapshotSettingsAccessLocation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// List of regions that can restore a regional
-    ///  snapshot from the current region
+    /// List of regions that can restore a regional snapshot from the current region
     public var locations: [Swift.String: SnapshotSettingsAccessLocationAccessLocationPreference] =
       [:]
 
@@ -52,8 +51,7 @@
       /// Any regions will be able to access the source location.
       case allRegions
       case unspecified
-      /// Only allowlisted regions will be able to restore region scoped
-      /// snapshots
+      /// Only allowlisted regions will be able to restore region scoped snapshots
       case specificRegions
       /// Encodes an unknown integer value.
       ///

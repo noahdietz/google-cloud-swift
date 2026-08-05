@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] Reasons why configuration.topologyCapability.sla differs
-  /// from intent.topologyCapability. This list is empty if and only if those
-  /// are the same.
+  /// [Output Only] Reasons why configuration.topologyCapability.sla differs from intent.topologyCapability. This list is empty if and only if those are the same.
   public struct InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers: Codable,
     Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
@@ -28,31 +26,22 @@
     public var blockerType:
       InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers.BlockerType? = nil
 
-    /// Output only. [Output Only] The url of Google Cloud public documentation explaining
-    /// this requirement. This is set for every type of requirement.
+    /// Output only. [Output Only] The url of Google Cloud public documentation explaining this requirement. This is set for every type of requirement.
     public var documentationLink: Swift.String? = nil
 
-    /// Output only. [Output Only] A human-readable explanation of this requirement and
-    /// why it's not met. This is set for every type of requirement.
+    /// Output only. [Output Only] A human-readable explanation of this requirement and why it's not met. This is set for every type of requirement.
     public var explanation: Swift.String? = nil
 
-    /// Output only. [Output Only] Facilities used to explain this blocker in more detail.
-    /// Like physicalStructure.metros.facilities.facility, this is a numeric
-    /// string like "5467".
+    /// Output only. [Output Only] Facilities used to explain this blocker in more detail. Like physicalStructure.metros.facilities.facility, this is a numeric string like "5467".
     public var facilities: [Swift.String] = []
 
-    /// Output only. [Output Only] Interconnects used to explain this blocker in more
-    /// detail.
+    /// Output only. [Output Only] Interconnects used to explain this blocker in more detail.
     public var interconnects: [Swift.String] = []
 
-    /// Output only. [Output Only] Metros used to explain this blocker in more detail.
-    /// These are three-letter lowercase strings like "iad". A blocker like
-    /// INCOMPATIBLE_METROS will specify the problematic metros in this
-    /// field.
+    /// Output only. [Output Only] Metros used to explain this blocker in more detail. These are three-letter lowercase strings like "iad". A blocker like INCOMPATIBLE_METROS will specify the problematic metros in this field.
     public var metros: [Swift.String] = []
 
-    /// Output only. [Output Only] Zones used to explain this blocker in more detail.
-    /// Zone names are "zone1" and/or "zone2".
+    /// Output only. [Output Only] Zones used to explain this blocker in more detail. Zone names are "zone1" and/or "zone2".
     public var zones: [Swift.String] = []
 
     /// Initialize a new instance of `InterconnectGroupConfiguredTopologyCapabilityIntendedCapabilityBlockers`.

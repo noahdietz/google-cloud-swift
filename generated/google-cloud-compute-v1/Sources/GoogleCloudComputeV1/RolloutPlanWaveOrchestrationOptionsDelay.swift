@@ -23,22 +23,13 @@
       ._AnyPackable,
     Sendable
   {
-    /// Optional. Controls whether the delay should only be added between batches of
-    /// projects corresponding to different locations, or also between
-    /// batches of projects corresponding to the same location.
-    ///
-    /// Must be set to DELIMITER_UNSPECIFIED if no delay is to be added.
+    /// Optional. Controls whether the delay should only be added between batches of projects corresponding to different locations, or also between batches of projects corresponding to the same location. Must be set to DELIMITER_UNSPECIFIED if no delay is to be added.
     public var delimiter: RolloutPlanWaveOrchestrationOptionsDelay.Delimiter? = nil
 
-    /// Optional. The duration of the delay, if any, to be added between batches of
-    /// projects. A zero duration corresponds to no delay.
+    /// Optional. The duration of the delay, if any, to be added between batches of projects. A zero duration corresponds to no delay.
     public var duration: GoogleCloudWkt.Duration? = nil
 
-    /// Optional. Controls whether the specified duration is to be added at the end of
-    /// each batch, or if the total processing time for each batch will be
-    /// padded if needed to meet the specified duration.
-    ///
-    /// Must be set to TYPE_UNSPECIFIED if no delay is to be added.
+    /// Optional. Controls whether the specified duration is to be added at the end of each batch, or if the total processing time for each batch will be padded if needed to meet the specified duration. Must be set to TYPE_UNSPECIFIED if no delay is to be added.
     public var type: RolloutPlanWaveOrchestrationOptionsDelay.Type_? = nil
 
     /// Initialize a new instance of `RolloutPlanWaveOrchestrationOptionsDelay`.
@@ -61,15 +52,11 @@
     ///
     /// [google.cloud.compute.v1.RolloutPlanWaveOrchestrationOptionsDelay.delimiter]: <doc:RolloutPlanWaveOrchestrationOptionsDelay/Delimiter>
     public enum Delimiter: Codable, Equatable, Sendable {
-      /// The delay will also be added between batches of projects
-      /// corresponding to the same location.
+      /// The delay will also be added between batches of projects corresponding to the same location.
       case batch
-      /// The delay will only be added between batches of projects
-      /// corresponding to different locations.
+      /// The delay will only be added between batches of projects corresponding to different locations.
       case location
-      /// No delay will be added between batches of projects. Processing will
-      /// continue with the next batch as soon as the previous batch of LROs
-      /// is done.
+      /// No delay will be added between batches of projects. Processing will continue with the next batch as soon as the previous batch of LROs is done.
       case unspecified
       /// Encodes an unknown integer value.
       ///
@@ -172,15 +159,11 @@
     ///
     /// [google.cloud.compute.v1.RolloutPlanWaveOrchestrationOptionsDelay.type]: <doc:RolloutPlanWaveOrchestrationOptionsDelay/Type_>
     public enum Type_: Codable, Equatable, Sendable {
-      /// The total processing time for each batch of projects will be padded
-      /// if needed to meet the specified delay duration.
+      /// The total processing time for each batch of projects will be padded if needed to meet the specified delay duration.
       case minimum
-      /// The specified delay will directly be added after each batch of
-      /// projects as specified by the delimiter.
+      /// The specified delay will directly be added after each batch of projects as specified by the delimiter.
       case offset
-      /// No delay will be added between batches of projects. Processing will
-      /// continue with the next batch as soon as the previous batch of LROs
-      /// is done.
+      /// No delay will be added between batches of projects. Processing will continue with the next batch as soon as the previous batch of LROs is done.
       case unspecified
       /// Encodes an unknown integer value.
       ///

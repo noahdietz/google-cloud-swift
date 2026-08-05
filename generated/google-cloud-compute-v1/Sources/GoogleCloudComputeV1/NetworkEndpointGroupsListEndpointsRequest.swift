@@ -22,10 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Optional query parameter for showing the health status of each network
-    /// endpoint. Valid options are SKIP or SHOW. If you
-    /// don't specify this parameter, the health status of network endpoints will
-    /// not be provided.
+    /// Optional query parameter for showing the health status of each network endpoint. Valid options are SKIP or SHOW. If you don't specify this parameter, the health status of network endpoints will not be provided.
     public var healthStatus: NetworkEndpointGroupsListEndpointsRequest.HealthStatus? = nil
 
     /// Initialize a new instance of `NetworkEndpointGroupsListEndpointsRequest`.
@@ -48,8 +45,7 @@
     ///
     /// [google.cloud.compute.v1.NetworkEndpointGroupsListEndpointsRequest.healthStatus]: <doc:NetworkEndpointGroupsListEndpointsRequest/HealthStatus>
     public enum HealthStatus: Codable, Equatable, Sendable {
-      /// Show the health status for each network endpoint. Impacts latency of the
-      /// call.
+      /// Show the health status for each network endpoint. Impacts latency of the call.
       case show
       /// Health status for network endpoints will not be provided.
       case skip

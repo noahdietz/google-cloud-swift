@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetGrpcProxy in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a TargetGrpcProxy in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "targetGrpcProxies_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetGrpcProxy in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a TargetGrpcProxy in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "targetGrpcProxies_insert")
     public func insert(
@@ -175,10 +173,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified TargetGrpcProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetGrpcProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetGrpcProxies_patch")
     public func patch(
@@ -187,10 +182,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified TargetGrpcProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetGrpcProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetGrpcProxies_patch")
     public func patch(

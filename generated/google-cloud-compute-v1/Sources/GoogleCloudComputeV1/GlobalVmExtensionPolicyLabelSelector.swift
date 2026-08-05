@@ -18,15 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A LabelSelector is applicable for a VM only if it matches all labels in
-  /// the LabelSelector.
+  /// A LabelSelector is applicable for a VM only if it matches all labels in the LabelSelector.
   public struct GlobalVmExtensionPolicyLabelSelector: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Optional. Labels as key value pairs.
-    /// A VM should contain all the pairs specified in this map to be selected;
-    /// Labels within the LabelSelector are OR'ed.
+    /// Optional. Labels as key value pairs. A VM should contain all the pairs specified in this map to be selected; Labels within the LabelSelector are OR'ed.
     public var inclusionLabels: [Swift.String: Swift.String] = [:]
 
     /// Initialize a new instance of `GlobalVmExtensionPolicyLabelSelector`.

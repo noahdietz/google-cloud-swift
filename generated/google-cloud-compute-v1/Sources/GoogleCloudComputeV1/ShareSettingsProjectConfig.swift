@@ -22,8 +22,7 @@
   public struct ShareSettingsProjectConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The project ID, should be same as the key of this project config in the
-    /// parent map.
+    /// The project ID, should be same as the key of this project config in the parent map.
     public var projectId: Swift.String? = nil
 
     /// Initialize a new instance of `ShareSettingsProjectConfig`.

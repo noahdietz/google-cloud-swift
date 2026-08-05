@@ -22,15 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The URL of the workload policy that is specified for this managed
-    /// instance group.
-    /// It can be a full or partial URL. For example, the following are
-    /// all valid URLs to a workload policy:
-    ///
-    ///
-    ///       - https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///       - projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///       - regions/region/resourcePolicies/resourcePolicy
+    /// The URL of the workload policy that is specified for this managed instance group. It can be a full or partial URL. For example, the following are all valid URLs to a workload policy: - https://www.googleapis.com/compute/v1/projects/project/regions/region /resourcePolicies/resourcePolicy - projects/project/regions/region/resourcePolicies/resourcePolicy - regions/region/resourcePolicies/resourcePolicy
     public var workloadPolicy: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerResourcePolicies`.

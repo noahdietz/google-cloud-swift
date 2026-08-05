@@ -24,87 +24,54 @@
     /// Aggregate reservation details for the future reservation.
     public var aggregateReservation: AllocationAggregateReservation? = nil
 
-    /// Future timestamp when the FR auto-created reservations will be deleted by
-    /// Compute Engine. Format of this field must be a valid
-    /// href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
+    /// Future timestamp when the FR auto-created reservations will be deleted by Compute Engine. Format of this field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
     public var autoCreatedReservationsDeleteTime: Swift.String? = nil
 
-    /// Specifies the duration of auto-created reservations.
-    /// It represents relative time to future reservation start_time when
-    /// auto-created reservations will be automatically deleted by Compute
-    /// Engine. Duration time unit is represented as a count of seconds
-    /// and fractions of seconds at nanosecond resolution.
+    /// Specifies the duration of auto-created reservations. It represents relative time to future reservation start_time when auto-created reservations will be automatically deleted by Compute Engine. Duration time unit is represented as a count of seconds and fractions of seconds at nanosecond resolution.
     public var autoCreatedReservationsDuration: Duration? = nil
 
-    /// Setting for enabling or disabling automatic deletion for auto-created
-    /// reservation. If set to true, auto-created reservations will be
-    /// deleted at Future Reservation's end time (default) or at user's defined
-    /// timestamp if any of the
-    /// [auto_created_reservations_delete_time, auto_created_reservations_duration]
-    /// values is specified.
-    /// For keeping auto-created reservation indefinitely, this value should be set
-    /// to false.
+    /// Setting for enabling or disabling automatic deletion for auto-created reservation. If set to true, auto-created reservations will be deleted at Future Reservation's end time (default) or at user's defined timestamp if any of the [auto_created_reservations_delete_time, auto_created_reservations_duration] values is specified. For keeping auto-created reservation indefinitely, this value should be set to false.
     public var autoDeleteAutoCreatedReservations: Swift.Bool? = nil
 
-    /// If not present, then FR will not deliver a new commitment or update an
-    /// existing commitment.
+    /// If not present, then FR will not deliver a new commitment or update an existing commitment.
     public var commitmentInfo: FutureReservationCommitmentInfo? = nil
 
     public var confidentialComputeType: FutureReservation.ConfidentialComputeType? = nil
 
-    /// Output only. [Output Only] The creation timestamp for this future reservation inRFC3339
-    /// text format.
+    /// Output only. [Output Only] The creation timestamp for this future reservation in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Type of the deployment requested as part of future reservation.
     public var deploymentType: FutureReservation.DeploymentType? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the future reservation.
+    /// An optional description of this resource. Provide this property when you create the future reservation.
     public var description: Swift.String? = nil
 
     /// Indicates if this group of VMs have emergent maintenance enabled.
     public var enableEmergentMaintenance: Swift.Bool? = nil
 
-    /// Output only. [Output Only] A unique identifier for this future reservation. The server
-    /// defines this identifier.
+    /// Output only. [Output Only] A unique identifier for this future reservation. The server defines this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#futureReservation for future reservations.
+    /// Output only. [Output Only] Type of the resource. Always compute#futureReservation for future reservations.
     public var kind: Swift.String? = nil
 
-    /// The name of the resource, provided by the client when initially creating
-    /// the resource. The resource name must be 1-63 characters long, and comply
-    /// withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Name prefix for the reservations to be created at the time of
-    /// delivery. The name prefix must comply with RFC1035.
-    /// Maximum allowed length for name prefix is 20. Automatically created
-    /// reservations name format will be -date-####.
+    /// Name prefix for the reservations to be created at the time of delivery. The name prefix must comply with RFC1035. Maximum allowed length for name prefix is 20. Automatically created reservations name format will be -date-####.
     public var namePrefix: Swift.String? = nil
 
-    /// Input only. Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. Additional params passed with the request, but not persisted as part of resource payload.
     public var params: FutureReservationParams? = nil
 
     /// Planning state before being submitted for evaluation
     public var planningStatus: FutureReservation.PlanningStatus? = nil
 
-    /// The reservation mode which determines reservation-termination behavior and
-    /// expected pricing.
+    /// The reservation mode which determines reservation-termination behavior and expected pricing.
     public var reservationMode: FutureReservation.ReservationMode? = nil
 
-    /// Name of reservations where the capacity is provisioned at the time of
-    /// delivery of  future reservations. If the reservation with the given name
-    /// does not exist already, it is created automatically at the time of Approval
-    /// with INACTIVE state till specified start-time. Either provide the
-    /// reservation_name or a name_prefix.
+    /// Name of reservations where the capacity is provisioned at the time of delivery of future reservations. If the reservation with the given name does not exist already, it is created automatically at the time of Approval with INACTIVE state till specified start-time. Either provide the reservation_name or a name_prefix.
     public var reservationName: Swift.String? = nil
 
     /// Maintenance information for this reservation
@@ -119,13 +86,10 @@
     /// List of Projects/Folders to share with.
     public var shareSettings: ShareSettings? = nil
 
-    /// Indicates whether the auto-created reservation can be consumed by VMs with
-    /// affinity for "any" reservation. If the field is set, then only VMs that
-    /// target the reservation by name can consume from the delivered reservation.
+    /// Indicates whether the auto-created reservation can be consumed by VMs with affinity for "any" reservation. If the field is set, then only VMs that target the reservation by name can consume from the delivered reservation.
     public var specificReservationRequired: Swift.Bool? = nil
 
-    /// Future Reservation configuration to indicate instance properties and
-    /// total count.
+    /// Future Reservation configuration to indicate instance properties and total count.
     public var specificSkuProperties: FutureReservationSpecificSKUProperties? = nil
 
     /// Output only. [Output only] Status of the Future Reservation
@@ -461,12 +425,9 @@
     ///
     /// [google.cloud.compute.v1.FutureReservation.reservationMode]: <doc:FutureReservation/ReservationMode>
     public enum ReservationMode: Codable, Equatable, Sendable {
-      /// The delivered reservations will delivered at specified start time and
-      /// terminated at specified end time along with terminating the VMs running
-      /// on it.
+      /// The delivered reservations will delivered at specified start time and terminated at specified end time along with terminating the VMs running on it.
       case calendar
-      /// The delivered reservations do not terminate VMs at the end of
-      /// reservations. This is default mode.
+      /// The delivered reservations do not terminate VMs at the end of reservations. This is default mode.
       case `default`
       case unspecified
       /// Encodes an unknown integer value.
@@ -574,8 +535,7 @@
       case grouped
       /// Unknown maintenance type.
       case groupMaintenanceTypeUnspecified
-      /// Maintenance is not synchronized for this reservation. Instead, each
-      /// instance has its own maintenance window.
+      /// Maintenance is not synchronized for this reservation. Instead, each instance has its own maintenance window.
       case independent
       /// Encodes an unknown integer value.
       ///

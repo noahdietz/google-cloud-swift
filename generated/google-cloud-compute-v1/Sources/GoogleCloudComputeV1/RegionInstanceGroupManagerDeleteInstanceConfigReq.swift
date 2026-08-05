@@ -23,8 +23,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The list of instance names for which we want to delete per-instance configs
-    /// on this managed instance group.
+    /// The list of instance names for which we want to delete per-instance configs on this managed instance group.
     public var names: [Swift.String] = []
 
     /// Initialize a new instance of `RegionInstanceGroupManagerDeleteInstanceConfigReq`.

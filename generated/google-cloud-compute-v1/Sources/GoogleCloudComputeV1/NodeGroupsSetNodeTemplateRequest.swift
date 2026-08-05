@@ -21,8 +21,7 @@
   public struct NodeGroupsSetNodeTemplateRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Full or partial URL of the node template resource to be updated for this
-    /// node group.
+    /// Full or partial URL of the node template resource to be updated for this node group.
     public var nodeTemplate: Swift.String? = nil
 
     /// Initialize a new instance of `NodeGroupsSetNodeTemplateRequest`.

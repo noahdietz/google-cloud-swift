@@ -22,129 +22,70 @@
   public struct NetworkInterface: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// An array of configurations for this interface. Currently, only one access
-    /// config, ONE_TO_ONE_NAT, is supported. If there are noaccessConfigs specified, then this instance will have
-    /// no external internet access.
+    /// An array of configurations for this interface. Currently, only one access config, ONE_TO_ONE_NAT, is supported. If there are no accessConfigs specified, then this instance will have no external internet access.
     public var accessConfigs: [AccessConfig] = []
 
-    /// An array of alias IP ranges for this network interface.
-    /// You can only specify this field for network interfaces in VPC networks.
+    /// An array of alias IP ranges for this network interface. You can only specify this field for network interfaces in VPC networks.
     public var aliasIpRanges: [AliasIpRange] = []
 
-    /// An array of alias IPv6 ranges for this network interface.
-    /// You can only specify this field for network interfaces in VPC networks.
+    /// An array of alias IPv6 ranges for this network interface. You can only specify this field for network interfaces in VPC networks.
     public var aliasIpv6Ranges: [AliasIpRange] = []
 
-    /// Optional. If true, DNS resolution will be enabled over this interface. Only valid
-    /// with network_attachment.
+    /// Optional. If true, DNS resolution will be enabled over this interface. Only valid with network_attachment.
     public var enableVpcScopedDns: Swift.Bool? = nil
 
-    /// Fingerprint hash of contents stored in this network interface.
-    /// This field will be ignored when inserting an Instance or
-    /// adding a NetworkInterface. An up-to-date
-    /// fingerprint must be provided in order to update theNetworkInterface. The request will fail with error400 Bad Request if the fingerprint is not provided, or412 Precondition Failed if the fingerprint is out of date.
+    /// Fingerprint hash of contents stored in this network interface. This field will be ignored when inserting an Instance or adding a NetworkInterface. An up-to-date fingerprint must be provided in order to update the NetworkInterface. The request will fail with error 400 Bad Request if the fingerprint is not provided, or 412 Precondition Failed if the fingerprint is out of date.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Indicate whether igmp query is enabled on the network interface
-    /// or not. If enabled, also indicates the version of IGMP supported.
+    /// Indicate whether igmp query is enabled on the network interface or not. If enabled, also indicates the version of IGMP supported.
     public var igmpQuery: NetworkInterface.IgmpQuery? = nil
 
     /// The prefix length of the primary internal IPv6 range.
     public var internalIpv6PrefixLength: Swift.Int32? = nil
 
-    /// An array of IPv6 access configurations for this interface. Currently, only
-    /// one IPv6 access config, DIRECT_IPV6, is supported. If there
-    /// is no ipv6AccessConfig specified, then this instance will
-    /// have no external IPv6 Internet access.
+    /// An array of IPv6 access configurations for this interface. Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this instance will have no external IPv6 Internet access.
     public var ipv6AccessConfigs: [AccessConfig] = []
 
-    /// Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be
-    /// accessed from the Internet. This field is always inherited from its
-    /// subnetwork.
-    ///
-    /// Valid only if stackType is IPV4_IPV6.
+    /// Output only. [Output Only] One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet. This field is always inherited from its subnetwork. Valid only if stackType is IPV4_IPV6.
     public var ipv6AccessType: NetworkInterface.Ipv6AccessType? = nil
 
-    /// An IPv6 internal network address for this network interface. To
-    /// use a static internal IP address, it must be unused and in the same region
-    /// as the instance's zone. If not specified, Google Cloud will automatically
-    /// assign an internal IPv6 address from the instance's subnetwork.
+    /// An IPv6 internal network address for this network interface. To use a static internal IP address, it must be unused and in the same region as the instance's zone. If not specified, Google Cloud will automatically assign an internal IPv6 address from the instance's subnetwork.
     public var ipv6Address: Swift.String? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#networkInterface for network interfaces.
+    /// Output only. [Output Only] Type of the resource. Always compute#networkInterface for network interfaces.
     public var kind: Swift.String? = nil
 
-    /// [Output Only] The name of the network interface, which is generated by the
-    /// server. For a VM, the network interface uses the nicN naming
-    /// format. Where N is a value between 0 and7. The default interface value is nic0.
+    /// [Output Only] The name of the network interface, which is generated by the server. For a VM, the network interface uses the nicN naming format. Where N is a value between 0 and 7. The default interface value is nic0.
     public var name: Swift.String? = nil
 
-    /// URL of the VPC network resource for this instance. When creating an
-    /// instance, if neither the network nor the subnetwork is specified, the
-    /// default network global/networks/default is used. If the
-    /// selected project doesn't have the default network, you must specify a
-    /// network or subnet. If the network is not specified but the subnetwork is
-    /// specified, the network is inferred.
-    ///
-    /// If you specify this property, you can specify the network as
-    /// a full or partial URL. For example, the following are all valid URLs:
-    ///
-    ///
-    ///       - https://www.googleapis.com/compute/v1/projects/project/global/networks/network
-    ///       - projects/project/global/networks/network
-    ///       - global/networks/default
+    /// URL of the VPC network resource for this instance. When creating an instance, if neither the network nor the subnetwork is specified, the default network global/networks/default is used. If the selected project doesn't have the default network, you must specify a network or subnet. If the network is not specified but the subnetwork is specified, the network is inferred. If you specify this property, you can specify the network as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/global/networks/ network - projects/project/global/networks/network - global/networks/default
     public var network: Swift.String? = nil
 
-    /// The URL of the network attachment that this interface should connect
-    /// to in the following format:
-    /// projects/{project_number}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+    /// The URL of the network attachment that this interface should connect to in the following format: projects/{project_number}/regions/{region_name}/networkAttachments/{network_attachment_name}.
     public var networkAttachment: Swift.String? = nil
 
-    /// An IPv4 internal IP address to assign to the instance for this network
-    /// interface. If not specified by the user, an unused internal IP is
-    /// assigned by the system.
+    /// An IPv4 internal IP address to assign to the instance for this network interface. If not specified by the user, an unused internal IP is assigned by the system.
     public var networkIp: Swift.String? = nil
 
-    /// The type of vNIC to be used on this interface. This may be gVNIC or
-    /// VirtioNet.
+    /// The type of vNIC to be used on this interface. This may be gVNIC or VirtioNet.
     public var nicType: NetworkInterface.NicType? = nil
 
     /// Name of the parent network interface of a dynamic network interface.
     public var parentNicName: Swift.String? = nil
 
-    /// The networking queue count that's specified by users for the network
-    /// interface. Both Rx and Tx queues will be set to this number. It'll be empty
-    /// if not specified by the users.
+    /// The networking queue count that's specified by users for the network interface. Both Rx and Tx queues will be set to this number. It'll be empty if not specified by the users.
     public var queueCount: Swift.Int32? = nil
 
-    /// Optional. Producer Service's Service class Id for the region of this network
-    /// interface. Can only be used with network_attachment. It is not possible to
-    /// use on its own however, network_attachment can be used without
-    /// service_class_id.
+    /// Optional. Producer Service's Service class Id for the region of this network interface. Can only be used with network_attachment. It is not possible to use on its own however, network_attachment can be used without service_class_id.
     public var serviceClassId: Swift.String? = nil
 
-    /// The stack type for this network interface. To assign only IPv4 addresses,
-    /// use IPV4_ONLY. To assign both IPv4 and IPv6 addresses, useIPV4_IPV6. If not specified, IPV4_ONLY is used.
-    ///
-    /// This field can be both set at instance creation and update network
-    /// interface operations.
+    /// The stack type for this network interface. To assign only IPv4 addresses, use IPV4_ONLY. To assign both IPv4 and IPv6 addresses, use IPV4_IPV6. If not specified, IPV4_ONLY is used. This field can be both set at instance creation and update network interface operations.
     public var stackType: NetworkInterface.StackType? = nil
 
-    /// The URL of the Subnetwork resource for this instance. If the network
-    /// resource is inlegacy
-    /// mode, do not specify this field. If the network is in auto subnet
-    /// mode, specifying the subnetwork is optional. If the network is in custom
-    /// subnet mode, specifying the subnetwork is required. If you specify this
-    /// field, you can specify the subnetwork as a full or partial URL. For
-    /// example, the following are all valid URLs:
-    ///
-    ///
-    ///       - https://www.googleapis.com/compute/v1/projects/project/regions/region/subnetworks/subnetwork
-    ///    - regions/region/subnetworks/subnetwork
+    /// The URL of the Subnetwork resource for this instance. If the network resource is in legacy mode, do not specify this field. If the network is in auto subnet mode, specifying the subnetwork is optional. If the network is in custom subnet mode, specifying the subnetwork is required. If you specify this field, you can specify the subnetwork as a full or partial URL. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /subnetworks/subnetwork - regions/region/subnetworks/subnetwork
     public var subnetwork: Swift.String? = nil
 
-    /// VLAN tag of a dynamic network interface, must be  an integer in the range
-    /// from 2 to 255 inclusively.
+    /// VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255 inclusively.
     public var vlan: Swift.Int32? = nil
 
     /// Initialize a new instance of `NetworkInterface`.

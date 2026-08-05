@@ -21,17 +21,10 @@
   public struct DistributionPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The distribution shape to which the group converges either proactively or
-    /// on resize events (depending on the value set inupdatePolicy.instanceRedistributionType).
+    /// The distribution shape to which the group converges either proactively or on resize events (depending on the value set in updatePolicy.instanceRedistributionType).
     public var targetShape: DistributionPolicy.TargetShape? = nil
 
-    /// Zones where the regional managed instance group will create and manage
-    /// its instances.
-    /// By default, a regional MIG doesn't automatically select an AI zone to create
-    /// instances, even if an AI zone is available in the specified region. To
-    /// create instances in an AI zone in the selected region, you must explicitly
-    /// specify it in the distribution policy together with the other preferred
-    /// zones.
+    /// Zones where the regional managed instance group will create and manage its instances. By default, a regional MIG doesn't automatically select an AI zone to create instances, even if an AI zone is available in the specified region. To create instances in an AI zone in the selected region, you must explicitly specify it in the distribution policy together with the other preferred zones.
     public var zones: [DistributionPolicyZoneConfiguration] = []
 
     /// Initialize a new instance of `DistributionPolicy`.
@@ -54,26 +47,13 @@
     ///
     /// [google.cloud.compute.v1.DistributionPolicy.targetShape]: <doc:DistributionPolicy/TargetShape>
     public enum TargetShape: Codable, Equatable, Sendable {
-      /// The group picks zones for creating VM instances to fulfill the requested
-      /// number of VMs within present resource constraints and to maximize
-      /// utilization of unused zonal reservations. Recommended for batch workloads
-      /// that do not require high availability.
+      /// The group picks zones for creating VM instances to fulfill the requested number of VMs within present resource constraints and to maximize utilization of unused zonal reservations. Recommended for batch workloads that do not require high availability.
       case any
-      /// The group creates all VM instances within a single zone. The zone is
-      /// selected based on the present resource constraints and to maximize
-      /// utilization of unused zonal reservations.
-      /// Recommended for batch workloads with heavy interprocess communication.
+      /// The group creates all VM instances within a single zone. The zone is selected based on the present resource constraints and to maximize utilization of unused zonal reservations. Recommended for batch workloads with heavy interprocess communication.
       case anySingleZone
-      /// The group prioritizes acquisition of resources, scheduling VMs in zones
-      /// where resources are available while distributing VMs as evenly as
-      /// possible across selected zones to minimize the impact of zonal failure.
-      /// Recommended for highly available serving workloads.
+      /// The group prioritizes acquisition of resources, scheduling VMs in zones where resources are available while distributing VMs as evenly as possible across selected zones to minimize the impact of zonal failure. Recommended for highly available serving workloads.
       case balanced
-      /// The group schedules VM instance creation and deletion to achieve and
-      /// maintain an even number of managed instances across the selected zones.
-      /// The distribution is even when the number of managed instances does not
-      /// differ by more than 1 between any two zones. Recommended for highly
-      /// available serving workloads.
+      /// The group schedules VM instance creation and deletion to achieve and maintain an even number of managed instances across the selected zones. The distribution is even when the number of managed instances does not differ by more than 1 between any two zones. Recommended for highly available serving workloads.
       case even
       /// Encodes an unknown integer value.
       ///

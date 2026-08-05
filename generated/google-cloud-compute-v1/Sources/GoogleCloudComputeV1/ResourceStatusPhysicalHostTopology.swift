@@ -18,30 +18,23 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents the physical host topology of the host on which the VM is
-  /// running.
+  /// Represents the physical host topology of the host on which the VM is running.
   public struct ResourceStatusPhysicalHostTopology: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Output only. [Output Only] Additional location information of the running instance.
     public var additionalAttributes: ResourceStatusPhysicalHostTopologyAdditionalAttributes? = nil
 
-    /// [Output Only] The ID of the block in which the running instance is
-    /// located. Instances within the same block experience low network latency.
+    /// [Output Only] The ID of the block in which the running instance is located. Instances within the same block experience low network latency.
     public var block: Swift.String? = nil
 
-    /// [Output Only] The global name of the Compute Engine cluster where the
-    /// running instance is located.
+    /// [Output Only] The global name of the Compute Engine cluster where the running instance is located.
     public var cluster: Swift.String? = nil
 
-    /// [Output Only] The ID of the host on which the running instance is located.
-    /// Instances on the same host experience the lowest possible network
-    /// latency.
+    /// [Output Only] The ID of the host on which the running instance is located. Instances on the same host experience the lowest possible network latency.
     public var host: Swift.String? = nil
 
-    /// [Output Only] The ID of the sub-block in which the running instance is
-    /// located. Instances in the same sub-block experience lower network latency
-    /// than instances in the same block.
+    /// [Output Only] The ID of the sub-block in which the running instance is located. Instances in the same sub-block experience lower network latency than instances in the same block.
     public var subblock: Swift.String? = nil
 
     /// Initialize a new instance of `ResourceStatusPhysicalHostTopology`.

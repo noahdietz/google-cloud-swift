@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Named instance selections configuring properties that the group will use
-    /// when creating new VMs.
+    /// Named instance selections configuring properties that the group will use when creating new VMs.
     public var instanceSelections:
       [Swift.String: InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection] = [:]
 

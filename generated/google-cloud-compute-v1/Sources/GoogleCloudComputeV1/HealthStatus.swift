@@ -24,8 +24,7 @@
     /// Metadata defined as annotations for network endpoint.
     public var annotations: [Swift.String: Swift.String] = [:]
 
-    /// URL of the forwarding rule associated with the health status of the
-    /// instance.
+    /// URL of the forwarding rule associated with the health status of the instance.
     public var forwardingRule: Swift.String? = nil
 
     /// A forwarding rule IP address assigned to this instance.
@@ -37,9 +36,7 @@
     /// URL of the instance resource.
     public var instance: Swift.String? = nil
 
-    /// For target pool based Network Load Balancing, it indicates the forwarding
-    /// rule's IP address assigned to this instance. For other types of load
-    /// balancing, the field indicates VM internal ip.
+    /// For target pool based Network Load Balancing, it indicates the forwarding rule's IP address assigned to this instance. For other types of load balancing, the field indicates VM internal ip.
     public var ipAddress: Swift.String? = nil
 
     public var ipv6Address: Swift.String? = nil
@@ -47,8 +44,7 @@
     /// Health state of the IPv6 address of the instance.
     public var ipv6HealthState: HealthStatus.Ipv6HealthState? = nil
 
-    /// The named port of the instance group, not necessarily the port that is
-    /// health-checked.
+    /// The named port of the instance group, not necessarily the port that is health-checked.
     public var port: Swift.Int32? = nil
 
     public var weight: Swift.String? = nil
@@ -271,25 +267,13 @@
     ///
     /// [google.cloud.compute.v1.HealthStatus.weightError]: <doc:HealthStatus/WeightError>
     public enum WeightError: Codable, Equatable, Sendable {
-      /// The response to a Health Check probe had the HTTP response header field
-      /// X-Load-Balancing-Endpoint-Weight, but its content was invalid (i.e., not
-      /// a non-negative single-precision floating-point number in decimal string
-      /// representation).
+      /// The response to a Health Check probe had the HTTP response header field X-Load-Balancing-Endpoint-Weight, but its content was invalid (i.e., not a non-negative single-precision floating-point number in decimal string representation).
       case invalidWeight
-      /// The response to a Health Check probe did not have the HTTP response
-      /// header field X-Load-Balancing-Endpoint-Weight.
+      /// The response to a Health Check probe did not have the HTTP response header field X-Load-Balancing-Endpoint-Weight.
       case missingWeight
-      /// This is the value when the accompanied health status is either TIMEOUT
-      /// (i.e.,the Health Check probe was not able to get a response in time) or
-      /// UNKNOWN. For the latter, it should be typically because there has not
-      /// been sufficient time to parse and report the weight for a new backend
-      /// (which is with 0.0.0.0 ip address). However, it can be also due to an
-      /// outage case for which the health status is explicitly reset to UNKNOWN.
+      /// This is the value when the accompanied health status is either TIMEOUT (i.e.,the Health Check probe was not able to get a response in time) or UNKNOWN. For the latter, it should be typically because there has not been sufficient time to parse and report the weight for a new backend (which is with 0.0.0.0 ip address). However, it can be also due to an outage case for which the health status is explicitly reset to UNKNOWN.
       case unavailableWeight
-      /// This is the default value when WeightReportMode is DISABLE,
-      /// and is also the initial value when WeightReportMode has just updated to
-      /// ENABLE or DRY_RUN and there has not been
-      /// sufficient time to parse and report the backend weight.
+      /// This is the default value when WeightReportMode is DISABLE, and is also the initial value when WeightReportMode has just updated to ENABLE or DRY_RUN and there has not been sufficient time to parse and report the backend weight.
       case weightNone
       /// Encodes an unknown integer value.
       ///

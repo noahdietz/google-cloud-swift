@@ -24,12 +24,10 @@
     /// Output only. The number of virtual CPUs that are available to the instance.
     public var guestCpus: Swift.Int32? = nil
 
-    /// Output only. The amount of local SSD storage available to the instance,
-    /// defined in GiB.
+    /// Output only. The amount of local SSD storage available to the instance, defined in GiB.
     public var localSsdGb: Swift.Int32? = nil
 
-    /// Output only. The amount of physical memory available to the instance,
-    /// defined in MiB.
+    /// Output only. The amount of physical memory available to the instance, defined in MiB.
     public var memoryMb: Swift.Int32? = nil
 
     /// Output only. The minimal guaranteed number of virtual CPUs that are reserved.

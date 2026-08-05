@@ -18,104 +18,59 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a match condition that incoming traffic is evaluated against.
-  /// Exactly one field must be specified.
+  /// Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
   public struct FirewallPolicyRuleMatcher: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Address groups which should be matched against the traffic destination.
-    /// Maximum number of destination address groups is 10.
+    /// Address groups which should be matched against the traffic destination. Maximum number of destination address groups is 10.
     public var destAddressGroups: [Swift.String] = []
 
-    /// Fully Qualified Domain Name (FQDN) which should be matched against
-    /// traffic destination.
-    /// Maximum number of destination fqdn allowed is 100.
+    /// Fully Qualified Domain Name (FQDN) which should be matched against traffic destination. Maximum number of destination fqdn allowed is 100.
     public var destFqdns: [Swift.String] = []
 
-    /// CIDR IP address range.
-    /// Maximum number of destination CIDR IP ranges allowed is 5000.
+    /// CIDR IP address range. Maximum number of destination CIDR IP ranges allowed is 5000.
     public var destIpRanges: [Swift.String] = []
 
-    /// Network context of the traffic destination. Allowed values are:
-    ///
-    ///
-    ///      - UNSPECIFIED
-    ///      - INTERNET
-    ///      - NON_INTERNET
+    /// Network context of the traffic destination. Allowed values are: - UNSPECIFIED - INTERNET - NON_INTERNET
     public var destNetworkContext: FirewallPolicyRuleMatcher.DestNetworkContext? = nil
 
-    /// Network type of the traffic destination. Allowed values are:
-    ///
-    ///
-    ///      - UNSPECIFIED
-    ///      - INTERNET
-    ///      - NON_INTERNET
+    /// Network type of the traffic destination. Allowed values are: - UNSPECIFIED - INTERNET - NON_INTERNET
     public var destNetworkType: FirewallPolicyRuleMatcher.DestNetworkType? = nil
 
-    /// Region codes whose IP addresses will be used to match for destination
-    /// of traffic. Should be specified as 2 letter country code defined as per
-    /// ISO 3166 alpha-2 country codes. ex."US"
-    /// Maximum number of dest region codes allowed is 5000.
+    /// Region codes whose IP addresses will be used to match for destination of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of dest region codes allowed is 5000.
     public var destRegionCodes: [Swift.String] = []
 
-    /// Names of Network Threat Intelligence lists.
-    /// The IPs in these lists will be matched against traffic destination.
+    /// Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic destination.
     public var destThreatIntelligences: [Swift.String] = []
 
     /// Pairs of IP protocols and ports that the rule should match.
     public var layer4Configs: [FirewallPolicyRuleMatcherLayer4Config] = []
 
-    /// Address groups which should be matched against the traffic source.
-    /// Maximum number of source address groups is 10.
+    /// Address groups which should be matched against the traffic source. Maximum number of source address groups is 10.
     public var srcAddressGroups: [Swift.String] = []
 
-    /// Fully Qualified Domain Name (FQDN) which should be matched against
-    /// traffic source.
-    /// Maximum number of source fqdn allowed is 100.
+    /// Fully Qualified Domain Name (FQDN) which should be matched against traffic source. Maximum number of source fqdn allowed is 100.
     public var srcFqdns: [Swift.String] = []
 
-    /// CIDR IP address range.
-    /// Maximum number of source CIDR IP ranges allowed is 5000.
+    /// CIDR IP address range. Maximum number of source CIDR IP ranges allowed is 5000.
     public var srcIpRanges: [Swift.String] = []
 
-    /// Network context of the traffic source. Allowed values are:
-    ///
-    ///
-    ///      - UNSPECIFIED
-    ///      - INTERNET
-    ///      - INTRA_VPC
-    ///      - NON_INTERNET
-    ///      - VPC_NETWORKS
+    /// Network context of the traffic source. Allowed values are: - UNSPECIFIED - INTERNET - INTRA_VPC - NON_INTERNET - VPC_NETWORKS
     public var srcNetworkContext: FirewallPolicyRuleMatcher.SrcNetworkContext? = nil
 
-    /// Network type of the traffic source. Allowed values are:
-    ///
-    ///
-    ///      - UNSPECIFIED
-    ///      - INTERNET
-    ///      - INTRA_VPC
-    ///      - NON_INTERNET
-    ///      - VPC_NETWORKS
+    /// Network type of the traffic source. Allowed values are: - UNSPECIFIED - INTERNET - INTRA_VPC - NON_INTERNET - VPC_NETWORKS
     public var srcNetworkType: FirewallPolicyRuleMatcher.SrcNetworkType? = nil
 
     /// Networks of the traffic source. It can be either a full or partial url.
     public var srcNetworks: [Swift.String] = []
 
-    /// Region codes whose IP addresses will be used to match for source
-    /// of traffic. Should be specified as 2 letter country code defined as per
-    /// ISO 3166 alpha-2 country codes. ex."US"
-    /// Maximum number of source region codes allowed is 5000.
+    /// Region codes whose IP addresses will be used to match for source of traffic. Should be specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US" Maximum number of source region codes allowed is 5000.
     public var srcRegionCodes: [Swift.String] = []
 
-    /// List of secure tag values, which should be matched at the source
-    /// of the traffic.
-    /// For INGRESS rule, if all the srcSecureTag are INEFFECTIVE,
-    /// and there is no srcIpRange, this rule will be ignored.
-    /// Maximum number of source tag values allowed is 256.
+    /// List of secure tag values, which should be matched at the source of the traffic. For INGRESS rule, if all the srcSecureTag are INEFFECTIVE, and there is no srcIpRange, this rule will be ignored. Maximum number of source tag values allowed is 256.
     public var srcSecureTags: [FirewallPolicyRuleSecureTag] = []
 
-    /// Names of Network Threat Intelligence lists.
-    /// The IPs in these lists will be matched against traffic source.
+    /// Names of Network Threat Intelligence lists. The IPs in these lists will be matched against traffic source.
     public var srcThreatIntelligences: [Swift.String] = []
 
     /// Initialize a new instance of `FirewallPolicyRuleMatcher`.

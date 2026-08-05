@@ -21,8 +21,7 @@
   public struct BackendBucketUsedBy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Server-defined URL for UrlMaps referencing that
-    /// BackendBucket.
+    /// Output only. [Output Only] Server-defined URL for UrlMaps referencing that BackendBucket.
     public var reference: Swift.String? = nil
 
     /// Initialize a new instance of `BackendBucketUsedBy`.

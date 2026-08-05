@@ -21,15 +21,10 @@
   public struct InstanceGroupManagerStandbyPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies the number of seconds that the MIG should wait to suspend or
-    /// stop a VM after that VM was created. The initial delay gives the
-    /// initialization script the time to prepare your VM for a quick scale out.
-    /// The value of initial delay must be between 0 and 3600 seconds. The
-    /// default value is 0.
+    /// Specifies the number of seconds that the MIG should wait to suspend or stop a VM after that VM was created. The initial delay gives the initialization script the time to prepare your VM for a quick scale out. The value of initial delay must be between 0 and 3600 seconds. The default value is 0.
     public var initialDelaySec: Swift.Int32? = nil
 
-    /// Defines how a MIG resumes or starts VMs from a standby pool when the
-    /// group scales out. The default mode is `MANUAL`.
+    /// Defines how a MIG resumes or starts VMs from a standby pool when the group scales out. The default mode is `MANUAL`.
     public var mode: InstanceGroupManagerStandbyPolicy.Mode? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStandbyPolicy`.
@@ -52,11 +47,9 @@
     ///
     /// [google.cloud.compute.v1.InstanceGroupManagerStandbyPolicy.mode]: <doc:InstanceGroupManagerStandbyPolicy/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// MIG does not automatically resume or start VMs in the standby pool when
-      /// the group scales out.
+      /// MIG does not automatically resume or start VMs in the standby pool when the group scales out.
       case manual
-      /// MIG automatically resumes or starts VMs in the standby pool when the
-      /// group scales out, and replenishes the standby pool afterwards.
+      /// MIG automatically resumes or starts VMs in the standby pool when the group scales out, and replenishes the standby pool afterwards.
       case scaleOutPool
       /// Encodes an unknown integer value.
       ///

@@ -21,64 +21,40 @@
   public struct InstanceProperties: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Controls for advanced machine-related behavior features.
-    /// Note that for MachineImage, this is not supported yet.
+    /// Controls for advanced machine-related behavior features. Note that for MachineImage, this is not supported yet.
     public var advancedMachineFeatures: AdvancedMachineFeatures? = nil
 
-    /// Enables instances created based on these properties to send packets with
-    /// source IP addresses other than their own and receive packets with
-    /// destination IP addresses other than their own. If these instances will be
-    /// used as an IP gateway or it will be set as the next-hop in a Route
-    /// resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
-    /// documentation for more information.
+    /// Enables instances created based on these properties to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
     public var canIpForward: Swift.Bool? = nil
 
-    /// Specifies the Confidential Instance options.
-    /// Note that for MachineImage, this is not supported yet.
+    /// Specifies the Confidential Instance options. Note that for MachineImage, this is not supported yet.
     public var confidentialInstanceConfig: ConfidentialInstanceConfig? = nil
 
-    /// An optional text description for the instances that are created from these
-    /// properties.
+    /// An optional text description for the instances that are created from these properties.
     public var description: Swift.String? = nil
 
-    /// An array of disks that are associated with the instances that are created
-    /// from these properties.
+    /// An array of disks that are associated with the instances that are created from these properties.
     public var disks: [AttachedDisk] = []
 
-    /// A list of guest accelerator cards' type and count to use for instances
-    /// created from these properties.
+    /// A list of guest accelerator cards' type and count to use for instances created from these properties.
     public var guestAccelerators: [AcceleratorConfig] = []
 
-    /// KeyRevocationActionType of the instance. Supported options are "STOP" and
-    /// "NONE". The default value is "NONE" if it is not specified.
+    /// KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default value is "NONE" if it is not specified.
     public var keyRevocationActionType: InstanceProperties.KeyRevocationActionType? = nil
 
     /// Labels to apply to instances that are created from these properties.
     public var labels: [Swift.String: Swift.String] = [:]
 
-    /// Specifies which method should be used for encrypting the
-    /// Local SSDs attached to the VM.
+    /// Specifies which method should be used for encrypting the Local SSDs attached to the VM.
     public var localSsdEncryptionMode: InstanceProperties.LocalSsdEncryptionMode? = nil
 
-    /// The machine type to use for instances that are created from these
-    /// properties.
-    /// This field only accepts a machine type name, for example `n2-standard-4`.
-    /// If you use the machine type full or partial URL, for example
-    /// `projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4`,
-    /// the request will result in an `INTERNAL_ERROR`.
+    /// The machine type to use for instances that are created from these properties. This field only accepts a machine type name, for example `n2-standard-4`. If you use the machine type full or partial URL, for example `projects/my-l7ilb-project/zones/us-central1-a/machineTypes/n2-standard-4`, the request will result in an `INTERNAL_ERROR`.
     public var machineType: Swift.String? = nil
 
-    /// The metadata key/value pairs to assign to instances that are created from
-    /// these properties. These pairs can consist of custom metadata or predefined
-    /// keys. SeeProject and
-    /// instance metadata for more information.
+    /// The metadata key/value pairs to assign to instances that are created from these properties. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
     public var metadata: Metadata? = nil
 
-    /// Minimum cpu/platform to be used by instances. The instance may be
-    /// scheduled on the specified or newer cpu/platform. Applicable values are the
-    /// friendly names of CPU platforms, such asminCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy Bridge". For more
-    /// information, read Specifying a
-    /// Minimum CPU Platform.
+    /// Minimum cpu/platform to be used by instances. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
     public var minCpuPlatform: Swift.String? = nil
 
     /// An array of network access configurations for this interface.
@@ -87,46 +63,28 @@
     /// Note that for MachineImage, this is not supported yet.
     public var networkPerformanceConfig: NetworkPerformanceConfig? = nil
 
-    /// The private IPv6 google access type for VMs.
-    /// If not specified, use  INHERIT_FROM_SUBNETWORK as default.
-    /// Note that for MachineImage, this is not supported yet.
+    /// The private IPv6 google access type for VMs. If not specified, use INHERIT_FROM_SUBNETWORK as default. Note that for MachineImage, this is not supported yet.
     public var privateIpv6GoogleAccess: InstanceProperties.PrivateIpv6GoogleAccess? = nil
 
-    /// Specifies the reservations that instances can consume from.
-    /// Note that for MachineImage, this is not supported yet.
+    /// Specifies the reservations that instances can consume from. Note that for MachineImage, this is not supported yet.
     public var reservationAffinity: ReservationAffinity? = nil
 
-    /// Input only. Resource manager tags to be bound to the instance. Tag keys and values
-    /// have the same definition as resource
-    /// manager tags. Keys and values can be either in numeric format,
-    /// such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in
-    /// namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and
-    /// `{tag_value_short_name}`. The field is ignored (both PUT &
-    /// PATCH) when empty.
+    /// Input only. Resource manager tags to be bound to the instance. Tag keys and values have the same definition as resource manager tags. Keys and values can be either in numeric format, such as `tagKeys/{tag_key_id}` and `tagValues/{tag_value_id}` or in namespaced format such as `{org_id|project_id}/{tag_key_short_name}` and `{tag_value_short_name}`. The field is ignored (both PUT & PATCH) when empty.
     public var resourceManagerTags: [Swift.String: Swift.String] = [:]
 
-    /// Resource policies (names, not URLs) applied to instances created from
-    /// these properties.
-    /// Note that for MachineImage, this is not supported yet.
+    /// Resource policies (names, not URLs) applied to instances created from these properties. Note that for MachineImage, this is not supported yet.
     public var resourcePolicies: [Swift.String] = []
 
-    /// Specifies the scheduling options for the instances that are created from
-    /// these properties.
+    /// Specifies the scheduling options for the instances that are created from these properties.
     public var scheduling: Scheduling? = nil
 
-    /// A list of service accounts with specified scopes. Access tokens for these
-    /// service accounts are available to the instances that are created from
-    /// these properties. Use metadata queries to obtain the access tokens for
-    /// these instances.
+    /// A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from these properties. Use metadata queries to obtain the access tokens for these instances.
     public var serviceAccounts: [ServiceAccount] = []
 
     /// Note that for MachineImage, this is not supported yet.
     public var shieldedInstanceConfig: ShieldedInstanceConfig? = nil
 
-    /// A list of tags to apply to the instances that are created from these
-    /// properties. The tags identify valid sources or targets for network
-    /// firewalls. The setTags method can modify this list of tags. Each tag within
-    /// the list must comply with RFC1035.
+    /// A list of tags to apply to the instances that are created from these properties. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
     public var tags: Tags? = nil
 
     public var workloadIdentityConfig: WorkloadIdentityConfig? = nil
@@ -258,18 +216,11 @@
     ///
     /// [google.cloud.compute.v1.InstanceProperties.localSsdEncryptionMode]: <doc:InstanceProperties/LocalSsdEncryptionMode>
     public enum LocalSsdEncryptionMode: Codable, Equatable, Sendable {
-      /// The given VM will opt-in for using ephemeral key for
-      /// encryption of Local SSDs.
-      /// The Local SSDs will not be able to recover data in case of VM
-      /// crash.
+      /// The given VM will opt-in for using ephemeral key for encryption of Local SSDs. The Local SSDs will not be able to recover data in case of VM crash.
       case ephemeralKeyEncryption
-      /// The given VM will be encrypted using keys managed by the cloud
-      /// infrastructure and the keys will be deleted when the VM is
-      /// deleted.
+      /// The given VM will be encrypted using keys managed by the cloud infrastructure and the keys will be deleted when the VM is deleted.
       case unspecified
-      /// The given VM will be encrypted using keys managed by the cloud
-      /// infrastructure and the keys will be deleted when the VM is
-      /// deleted.
+      /// The given VM will be encrypted using keys managed by the cloud infrastructure and the keys will be deleted when the VM is deleted.
       case standardEncryption
       /// Encodes an unknown integer value.
       ///
@@ -372,18 +323,11 @@
     ///
     /// [google.cloud.compute.v1.InstanceProperties.privateIpv6GoogleAccess]: <doc:InstanceProperties/PrivateIpv6GoogleAccess>
     public enum PrivateIpv6GoogleAccess: Codable, Equatable, Sendable {
-      /// Bidirectional private IPv6 access to/from Google services. If
-      /// specified, the subnetwork who is attached to the instance's default network
-      /// interface will be assigned an internal IPv6 prefix if it doesn't have
-      /// before.
+      /// Bidirectional private IPv6 access to/from Google services. If specified, the subnetwork who is attached to the instance's default network interface will be assigned an internal IPv6 prefix if it doesn't have before.
       case enableBidirectionalAccessToGoogle
-      /// Outbound private IPv6 access from VMs in this subnet to Google services. If
-      /// specified, the subnetwork who is attached to the instance's default network
-      /// interface will be assigned an internal IPv6 prefix if it doesn't have
-      /// before.
+      /// Outbound private IPv6 access from VMs in this subnet to Google services. If specified, the subnetwork who is attached to the instance's default network interface will be assigned an internal IPv6 prefix if it doesn't have before.
       case enableOutboundVmAccessToGoogle
-      /// Each network interface inherits PrivateIpv6GoogleAccess from its
-      /// subnetwork.
+      /// Each network interface inherits PrivateIpv6GoogleAccess from its subnetwork.
       case inheritFromSubnetwork
       /// Encodes an unknown integer value.
       ///

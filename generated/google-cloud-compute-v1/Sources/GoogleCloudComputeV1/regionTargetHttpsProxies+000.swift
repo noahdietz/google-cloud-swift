@@ -103,8 +103,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetHttpsProxy resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_insert")
     public func insert(
@@ -113,8 +112,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetHttpsProxy resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a TargetHttpsProxy resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_insert")
     public func insert(
@@ -156,8 +154,7 @@
       )
     }
 
-    /// Retrieves the list of TargetHttpsProxy resources available
-    /// to the specified project in the specified region.
+    /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_list")
     public func list(
@@ -166,8 +163,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of TargetHttpsProxy resources available
-    /// to the specified project in the specified region.
+    /// Retrieves the list of TargetHttpsProxy resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_list")
     public func list(
@@ -182,10 +178,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified regional TargetHttpsProxy resource with the data
-    /// included in the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_patch")
     public func patch(
@@ -194,10 +187,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified regional TargetHttpsProxy resource with the data
-    /// included in the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified regional TargetHttpsProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionTargetHttpsProxies_patch")
     public func patch(

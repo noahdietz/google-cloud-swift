@@ -22,14 +22,11 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The current rollouts for the latest version of the
-    /// resource. There should be only one current rollout, but for
-    /// scalability, we make it repeated.
+    /// Output only. [Output Only] The current rollouts for the latest version of the resource. There should be only one current rollout, but for scalability, we make it repeated.
     public var currentRollouts:
       [GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata] = []
 
-    /// Output only. [Output Only] The last completed rollout resource. This field will not
-    /// be populated until the first rollout is completed.
+    /// Output only. [Output Only] The last completed rollout resource. This field will not be populated until the first rollout is completed.
     public var previousRollout:
       GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadata? = nil
 

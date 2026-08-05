@@ -22,8 +22,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// New set of SslCertificate resources to associate
-    /// with this TargetHttpsProxy resource.
+    /// New set of SslCertificate resources to associate with this TargetHttpsProxy resource.
     public var sslCertificates: [Swift.String] = []
 
     /// Initialize a new instance of `RegionTargetHttpsProxiesSetSslCertificatesRequest`.

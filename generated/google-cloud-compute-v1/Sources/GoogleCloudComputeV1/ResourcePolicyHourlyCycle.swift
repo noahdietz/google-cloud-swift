@@ -22,16 +22,13 @@
   public struct ResourcePolicyHourlyCycle: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output only] Duration of the time window, automatically chosen to be
-    /// smallest possible in the given scenario.
+    /// Output only. [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
     public var duration: Swift.String? = nil
 
-    /// Defines a schedule with units measured in hours. The value determines
-    /// how many hours pass between the start of each cycle.
+    /// Defines a schedule with units measured in hours. The value determines how many hours pass between the start of each cycle.
     public var hoursInCycle: Swift.Int32? = nil
 
-    /// Time within the window to start the operations.
-    /// It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    /// Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     public var startTime: Swift.String? = nil
 
     /// Initialize a new instance of `ResourcePolicyHourlyCycle`.

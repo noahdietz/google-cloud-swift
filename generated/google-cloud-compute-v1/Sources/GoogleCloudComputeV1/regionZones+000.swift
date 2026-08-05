@@ -38,8 +38,7 @@
       self.inner = inner
     }
 
-    /// Retrieves the list of Zone resources under the specific region available to
-    /// the specified project.
+    /// Retrieves the list of Zone resources under the specific region available to the specified project.
     ///
     /// @Snippet(path: "regionZones_list")
     public func list(
@@ -48,8 +47,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of Zone resources under the specific region available to
-    /// the specified project.
+    /// Retrieves the list of Zone resources under the specific region available to the specified project.
     ///
     /// @Snippet(path: "regionZones_list")
     public func list(

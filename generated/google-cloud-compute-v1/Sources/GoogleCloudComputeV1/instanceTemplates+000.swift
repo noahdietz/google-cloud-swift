@@ -42,11 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all InstanceTemplates resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instanceTemplates_aggregatedList")
     public func aggregatedList(
@@ -55,11 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all InstanceTemplates resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all InstanceTemplates resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instanceTemplates_aggregatedList")
     public func aggregatedList(
@@ -74,9 +66,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Deletes the specified instance template. Deleting an instance template is
-    /// permanent and cannot be undone. It is not possible to delete templates
-    /// that are already in use by a managed instance group.
+    /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone. It is not possible to delete templates that are already in use by a managed instance group.
     ///
     /// @Snippet(path: "instanceTemplates_delete")
     public func delete(
@@ -85,9 +75,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified instance template. Deleting an instance template is
-    /// permanent and cannot be undone. It is not possible to delete templates
-    /// that are already in use by a managed instance group.
+    /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone. It is not possible to delete templates that are already in use by a managed instance group.
     ///
     /// @Snippet(path: "instanceTemplates_delete")
     public func delete(
@@ -136,8 +124,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "instanceTemplates_getIamPolicy")
     public func getIamPolicy(
@@ -146,11 +133,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates an instance template in the specified project using the
-    /// data that is included in the request. If you are creating a new template to
-    /// update an existing instance group, your new instance template must use the
-    /// same network or, if applicable, the same subnetwork as the original
-    /// template.
+    /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
     ///
     /// @Snippet(path: "instanceTemplates_insert")
     public func insert(
@@ -159,11 +142,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an instance template in the specified project using the
-    /// data that is included in the request. If you are creating a new template to
-    /// update an existing instance group, your new instance template must use the
-    /// same network or, if applicable, the same subnetwork as the original
-    /// template.
+    /// Creates an instance template in the specified project using the data that is included in the request. If you are creating a new template to update an existing instance group, your new instance template must use the same network or, if applicable, the same subnetwork as the original template.
     ///
     /// @Snippet(path: "instanceTemplates_insert")
     public func insert(
@@ -203,8 +182,7 @@
       )
     }
 
-    /// Retrieves a list of instance templates that are contained within
-    /// the specified project.
+    /// Retrieves a list of instance templates that are contained within the specified project.
     ///
     /// @Snippet(path: "instanceTemplates_list")
     public func list(
@@ -213,8 +191,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of instance templates that are contained within
-    /// the specified project.
+    /// Retrieves a list of instance templates that are contained within the specified project.
     ///
     /// @Snippet(path: "instanceTemplates_list")
     public func list(
@@ -229,8 +206,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "instanceTemplates_setIamPolicy")
     public func setIamPolicy(

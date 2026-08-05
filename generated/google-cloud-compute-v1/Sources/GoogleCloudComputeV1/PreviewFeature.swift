@@ -25,19 +25,16 @@
     /// Specifies whether the feature is enabled or disabled.
     public var activationStatus: PreviewFeature.ActivationStatus? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. [Output Only] Description of the feature.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output only] The type of the feature. Always "compute#previewFeature" for
-    /// preview features.
+    /// Output only. [Output only] The type of the feature. Always "compute#previewFeature" for preview features.
     public var kind: Swift.String? = nil
 
     /// Name of the feature.

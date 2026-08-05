@@ -22,8 +22,7 @@
   public struct InterconnectGroupInterconnect: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The URL of an Interconnect in this group. All Interconnects in the group
-    /// are unique.
+    /// The URL of an Interconnect in this group. All Interconnects in the group are unique.
     public var interconnect: Swift.String? = nil
 
     /// Initialize a new instance of `InterconnectGroupInterconnect`.

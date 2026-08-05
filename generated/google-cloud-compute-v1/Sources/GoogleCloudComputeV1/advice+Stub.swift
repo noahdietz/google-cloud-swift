@@ -51,7 +51,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/advice/calendarMode"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"

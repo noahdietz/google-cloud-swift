@@ -22,19 +22,13 @@
   public struct BackendServiceIAP: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Whether the serving infrastructure will authenticate and authorize all
-    /// incoming requests.
+    /// Whether the serving infrastructure will authenticate and authorize all incoming requests.
     public var enabled: Swift.Bool? = nil
 
     /// OAuth2 client ID to use for the authentication flow.
     public var oauth2ClientId: Swift.String? = nil
 
-    /// OAuth2 client secret to use for the authentication flow.
-    /// For security reasons, this value cannot be retrieved via the API.
-    /// Instead, the SHA-256 hash of the value is returned in the
-    /// oauth2ClientSecretSha256 field.
-    ///
-    /// @InputOnly
+    /// OAuth2 client secret to use for the authentication flow. For security reasons, this value cannot be retrieved via the API. Instead, the SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field. @InputOnly
     public var oauth2ClientSecret: Swift.String? = nil
 
     /// Output only. [Output Only] SHA256 hash value for the field oauth2_client_secret above.

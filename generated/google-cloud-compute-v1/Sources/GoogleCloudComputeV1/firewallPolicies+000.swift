@@ -253,8 +253,7 @@
       try await self.inner.getAssociation(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "firewallPolicies_getIamPolicy")
     public func getIamPolicy(
@@ -272,8 +271,7 @@
       try await self.inner.getRule(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "firewallPolicies_insert")
     public func insert(
@@ -282,8 +280,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "firewallPolicies_insert")
     public func insert(
@@ -322,8 +319,7 @@
       )
     }
 
-    /// Lists all the policies that have been configured for the specified
-    /// folder or organization.
+    /// Lists all the policies that have been configured for the specified folder or organization.
     ///
     /// @Snippet(path: "firewallPolicies_list")
     public func list(
@@ -332,8 +328,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Lists all the policies that have been configured for the specified
-    /// folder or organization.
+    /// Lists all the policies that have been configured for the specified folder or organization.
     ///
     /// @Snippet(path: "firewallPolicies_list")
     public func list(
@@ -600,8 +595,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "firewallPolicies_setIamPolicy")
     public func setIamPolicy(
@@ -620,8 +614,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Retrieves the specified Operations resource. Gets a list of operations
-    /// by making a `list()` request.
+    /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
     ///
     /// @Snippet(path: "firewallPolicies_getOperation")
     func getOperation(

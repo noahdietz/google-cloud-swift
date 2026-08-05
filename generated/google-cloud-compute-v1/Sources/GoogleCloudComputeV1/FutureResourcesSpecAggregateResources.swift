@@ -25,8 +25,7 @@
     /// Size of the request, in accelerator (chip) count.
     public var acceleratorCount: Swift.Int64? = nil
 
-    /// The VM family that all instances scheduled against this reservation
-    /// must belong to. Use for TPU reservations.
+    /// The VM family that all instances scheduled against this reservation must belong to. Use for TPU reservations.
     public var vmFamily: FutureResourcesSpecAggregateResources.VmFamily? = nil
 
     /// Workload type. Use for TPU reservations.
@@ -186,11 +185,9 @@
     ///
     /// [google.cloud.compute.v1.FutureResourcesSpecAggregateResources.workloadType]: <doc:FutureResourcesSpecAggregateResources/WorkloadType>
     public enum WorkloadType: Codable, Equatable, Sendable {
-      /// Reserved resources will be optimized for BATCH workloads, such as ML
-      /// training.
+      /// Reserved resources will be optimized for BATCH workloads, such as ML training.
       case batch
-      /// Reserved resources will be optimized for SERVING workloads, such as ML
-      /// inference.
+      /// Reserved resources will be optimized for SERVING workloads, such as ML inference.
       case serving
       case unspecified
       /// Encodes an unknown integer value.

@@ -22,16 +22,13 @@
   public struct ShieldedInstanceConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Defines whether the instance has integrity monitoring enabled.Enabled by
-    /// default.
+    /// Defines whether the instance has integrity monitoring enabled. Enabled by default.
     public var enableIntegrityMonitoring: Swift.Bool? = nil
 
-    /// Defines whether the instance has Secure Boot enabled.Disabled by
-    /// default.
+    /// Defines whether the instance has Secure Boot enabled. Disabled by default.
     public var enableSecureBoot: Swift.Bool? = nil
 
-    /// Defines whether the instance has the vTPM enabled.Enabled by
-    /// default.
+    /// Defines whether the instance has the vTPM enabled. Enabled by default.
     public var enableVtpm: Swift.Bool? = nil
 
     /// Initialize a new instance of `ShieldedInstanceConfig`.

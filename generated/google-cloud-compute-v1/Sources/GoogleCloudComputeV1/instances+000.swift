@@ -143,9 +143,7 @@
       )
     }
 
-    /// Adds existing resource policies to an instance. You can only add one
-    /// policy right now which will be applied to this instance for scheduling live
-    /// migrations.
+    /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
     ///
     /// @Snippet(path: "instances_addResourcePolicies")
     public func addResourcePolicies(
@@ -154,9 +152,7 @@
       try await self.inner.addResourcePolicies(request: request, options: options)
     }
 
-    /// Adds existing resource policies to an instance. You can only add one
-    /// policy right now which will be applied to this instance for scheduling live
-    /// migrations.
+    /// Adds existing resource policies to an instance. You can only add one policy right now which will be applied to this instance for scheduling live migrations.
     ///
     /// @Snippet(path: "instances_addResourcePolicies")
     public func addResourcePolicies(
@@ -198,14 +194,7 @@
       )
     }
 
-    /// Retrieves an aggregated list of all of the instances in your project
-    /// across all regions and zones.
-    ///
-    /// The performance of this method degrades when a filter is specified on a
-    /// project that has a very large number of instances.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instances_aggregatedList")
     public func aggregatedList(
@@ -214,14 +203,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of all of the instances in your project
-    /// across all regions and zones.
-    ///
-    /// The performance of this method degrades when a filter is specified on a
-    /// project that has a very large number of instances.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instances_aggregatedList")
     public func aggregatedList(
@@ -236,10 +218,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Attaches an existing Disk resource to an instance. You must first
-    /// create the disk before you can attach it. It is not possible to create
-    /// and attach a disk at the same time. For more information, readAdding a
-    /// persistent disk to your instance.
+    /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
     ///
     /// @Snippet(path: "instances_attachDisk")
     public func attachDisk(
@@ -248,10 +227,7 @@
       try await self.inner.attachDisk(request: request, options: options)
     }
 
-    /// Attaches an existing Disk resource to an instance. You must first
-    /// create the disk before you can attach it. It is not possible to create
-    /// and attach a disk at the same time. For more information, readAdding a
-    /// persistent disk to your instance.
+    /// Attaches an existing Disk resource to an instance. You must first create the disk before you can attach it. It is not possible to create and attach a disk at the same time. For more information, read Adding a persistent disk to your instance.
     ///
     /// @Snippet(path: "instances_attachDisk")
     public func attachDisk(
@@ -292,9 +268,7 @@
       )
     }
 
-    /// Creates multiple instances. Count specifies the number of instances to
-    /// create. For more information, seeAbout bulk
-    /// creation of VMs.
+    /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
     ///
     /// @Snippet(path: "instances_bulkInsert")
     public func bulkInsert(
@@ -303,9 +277,7 @@
       try await self.inner.bulkInsert(request: request, options: options)
     }
 
-    /// Creates multiple instances. Count specifies the number of instances to
-    /// create. For more information, seeAbout bulk
-    /// creation of VMs.
+    /// Creates multiple instances. Count specifies the number of instances to create. For more information, see About bulk creation of VMs.
     ///
     /// @Snippet(path: "instances_bulkInsert")
     public func bulkInsert(
@@ -346,8 +318,7 @@
       )
     }
 
-    /// Deletes the specified Instance resource. For more information, seeDeleting
-    /// an instance.
+    /// Deletes the specified Instance resource. For more information, see Deleting an instance.
     ///
     /// @Snippet(path: "instances_delete")
     public func delete(
@@ -356,8 +327,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified Instance resource. For more information, seeDeleting
-    /// an instance.
+    /// Deletes the specified Instance resource. For more information, see Deleting an instance.
     ///
     /// @Snippet(path: "instances_delete")
     public func delete(
@@ -448,11 +418,7 @@
       )
     }
 
-    /// Deletes one dynamic network interface from an active instance.
-    /// InstancesDeleteNetworkInterfaceRequest indicates:
-    /// - instance from which to delete, using project+zone+resource_id fields;
-    /// - dynamic network interface to be deleted, using network_interface_name
-    /// field;
+    /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
     ///
     /// @Snippet(path: "instances_deleteNetworkInterface")
     public func deleteNetworkInterface(
@@ -461,11 +427,7 @@
       try await self.inner.deleteNetworkInterface(request: request, options: options)
     }
 
-    /// Deletes one dynamic network interface from an active instance.
-    /// InstancesDeleteNetworkInterfaceRequest indicates:
-    /// - instance from which to delete, using project+zone+resource_id fields;
-    /// - dynamic network interface to be deleted, using network_interface_name
-    /// field;
+    /// Deletes one dynamic network interface from an active instance. InstancesDeleteNetworkInterfaceRequest indicates: - instance from which to delete, using project+zone+resource_id fields; - dynamic network interface to be deleted, using network_interface_name field;
     ///
     /// @Snippet(path: "instances_deleteNetworkInterface")
     public func deleteNetworkInterface(
@@ -584,8 +546,7 @@
       try await self.inner.getGuestAttributes(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "instances_getIamPolicy")
     public func getIamPolicy(
@@ -622,8 +583,7 @@
       try await self.inner.getShieldedInstanceIdentity(request: request, options: options)
     }
 
-    /// Creates an instance resource in the specified project using the data
-    /// included in the request.
+    /// Creates an instance resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "instances_insert")
     public func insert(
@@ -632,8 +592,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an instance resource in the specified project using the data
-    /// included in the request.
+    /// Creates an instance resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "instances_insert")
     public func insert(
@@ -674,8 +633,7 @@
       )
     }
 
-    /// Retrieves the list of instances contained within
-    /// the specified zone.
+    /// Retrieves the list of instances contained within the specified zone.
     ///
     /// @Snippet(path: "instances_list")
     public func list(
@@ -684,8 +642,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of instances contained within
-    /// the specified zone.
+    /// Retrieves the list of instances contained within the specified zone.
     ///
     /// @Snippet(path: "instances_list")
     public func list(
@@ -699,11 +656,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of resources that refer to the VM instance specified in
-    /// the request. For example, if the VM instance is part of a managed or
-    /// unmanaged instance group, the referrers list includes the instance group.
-    /// For more information, readViewing
-    /// referrers to VM instances.
+    /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
     ///
     /// @Snippet(path: "instances_listReferrers")
     public func listReferrers(
@@ -712,11 +665,7 @@
       try await self.inner.listReferrers(request: request, options: options)
     }
 
-    /// Retrieves a list of resources that refer to the VM instance specified in
-    /// the request. For example, if the VM instance is part of a managed or
-    /// unmanaged instance group, the referrers list includes the instance group.
-    /// For more information, readViewing
-    /// referrers to VM instances.
+    /// Retrieves a list of resources that refer to the VM instance specified in the request. For example, if the VM instance is part of a managed or unmanaged instance group, the referrers list includes the instance group. For more information, read Viewing referrers to VM instances.
     ///
     /// @Snippet(path: "instances_listReferrers")
     public func listReferrers(
@@ -882,9 +831,7 @@
       )
     }
 
-    /// Performs a reset on the instance. This is a hard reset. The VM
-    /// does not do a graceful shutdown. For more information, seeResetting
-    /// an instance.
+    /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
     ///
     /// @Snippet(path: "instances_reset")
     public func reset(
@@ -893,9 +840,7 @@
       try await self.inner.reset(request: request, options: options)
     }
 
-    /// Performs a reset on the instance. This is a hard reset. The VM
-    /// does not do a graceful shutdown. For more information, seeResetting
-    /// an instance.
+    /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
     ///
     /// @Snippet(path: "instances_reset")
     public func reset(
@@ -936,8 +881,7 @@
       )
     }
 
-    /// Resumes an instance that was suspended using theinstances().suspend
-    /// method.
+    /// Resumes an instance that was suspended using the instances().suspend method.
     ///
     /// @Snippet(path: "instances_resume")
     public func resume(
@@ -946,8 +890,7 @@
       try await self.inner.resume(request: request, options: options)
     }
 
-    /// Resumes an instance that was suspended using theinstances().suspend
-    /// method.
+    /// Resumes an instance that was suspended using the instances().suspend method.
     ///
     /// @Snippet(path: "instances_resume")
     public func resume(
@@ -1099,8 +1042,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "instances_setIamPolicy")
     public func setIamPolicy(
@@ -1109,8 +1051,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets labels on an instance.  To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "instances_setLabels")
     public func setLabels(
@@ -1119,8 +1060,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets labels on an instance.  To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets labels on an instance. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "instances_setLabels")
     public func setLabels(
@@ -1161,8 +1101,7 @@
       )
     }
 
-    /// Changes the number and/or type of accelerator for a stopped instance to the
-    /// values specified in the request.
+    /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
     ///
     /// @Snippet(path: "instances_setMachineResources")
     public func setMachineResources(
@@ -1171,8 +1110,7 @@
       try await self.inner.setMachineResources(request: request, options: options)
     }
 
-    /// Changes the number and/or type of accelerator for a stopped instance to the
-    /// values specified in the request.
+    /// Changes the number and/or type of accelerator for a stopped instance to the values specified in the request.
     ///
     /// @Snippet(path: "instances_setMachineResources")
     public func setMachineResources(
@@ -1214,8 +1152,7 @@
       )
     }
 
-    /// Changes the machine type for a stopped instance to the machine
-    /// type specified in the request.
+    /// Changes the machine type for a stopped instance to the machine type specified in the request.
     ///
     /// @Snippet(path: "instances_setMachineType")
     public func setMachineType(
@@ -1224,8 +1161,7 @@
       try await self.inner.setMachineType(request: request, options: options)
     }
 
-    /// Changes the machine type for a stopped instance to the machine
-    /// type specified in the request.
+    /// Changes the machine type for a stopped instance to the machine type specified in the request.
     ///
     /// @Snippet(path: "instances_setMachineType")
     public func setMachineType(
@@ -1266,8 +1202,7 @@
       )
     }
 
-    /// Sets metadata for the specified instance to the data included
-    /// in the request.
+    /// Sets metadata for the specified instance to the data included in the request.
     ///
     /// @Snippet(path: "instances_setMetadata")
     public func setMetadata(
@@ -1276,8 +1211,7 @@
       try await self.inner.setMetadata(request: request, options: options)
     }
 
-    /// Sets metadata for the specified instance to the data included
-    /// in the request.
+    /// Sets metadata for the specified instance to the data included in the request.
     ///
     /// @Snippet(path: "instances_setMetadata")
     public func setMetadata(
@@ -1318,10 +1252,7 @@
       )
     }
 
-    /// Changes the minimum CPU platform that this instance should use.
-    /// This method can only
-    /// be called on a stopped instance. For more information, readSpecifying a
-    /// Minimum CPU Platform.
+    /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
     ///
     /// @Snippet(path: "instances_setMinCpuPlatform")
     public func setMinCpuPlatform(
@@ -1330,10 +1261,7 @@
       try await self.inner.setMinCpuPlatform(request: request, options: options)
     }
 
-    /// Changes the minimum CPU platform that this instance should use.
-    /// This method can only
-    /// be called on a stopped instance. For more information, readSpecifying a
-    /// Minimum CPU Platform.
+    /// Changes the minimum CPU platform that this instance should use. This method can only be called on a stopped instance. For more information, read Specifying a Minimum CPU Platform.
     ///
     /// @Snippet(path: "instances_setMinCpuPlatform")
     public func setMinCpuPlatform(
@@ -1424,11 +1352,7 @@
       )
     }
 
-    /// Sets an instance's scheduling options. You can only call this method on astopped instance,
-    /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
-    /// Cycle for more information on the possible instance states.
-    /// For more information about setting scheduling options for a VM, seeSet
-    /// VM host maintenance policy.
+    /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
     ///
     /// @Snippet(path: "instances_setScheduling")
     public func setScheduling(
@@ -1437,11 +1361,7 @@
       try await self.inner.setScheduling(request: request, options: options)
     }
 
-    /// Sets an instance's scheduling options. You can only call this method on astopped instance,
-    /// that is, a VM instance that is in a `TERMINATED` state. SeeInstance Life
-    /// Cycle for more information on the possible instance states.
-    /// For more information about setting scheduling options for a VM, seeSet
-    /// VM host maintenance policy.
+    /// Sets an instance's scheduling options. You can only call this method on a stopped instance, that is, a VM instance that is in a `TERMINATED` state. See Instance Life Cycle for more information on the possible instance states. For more information about setting scheduling options for a VM, see Set VM host maintenance policy.
     ///
     /// @Snippet(path: "instances_setScheduling")
     public func setScheduling(
@@ -1482,9 +1402,7 @@
       )
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified instance.
-    /// For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "instances_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -1493,9 +1411,7 @@
       try await self.inner.setSecurityPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified instance.
-    /// For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified instance. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "instances_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -1536,9 +1452,7 @@
       )
     }
 
-    /// Sets the service account on the instance. For more information,
-    /// readChanging
-    /// the service account and access scopes for an instance.
+    /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
     ///
     /// @Snippet(path: "instances_setServiceAccount")
     public func setServiceAccount(
@@ -1547,9 +1461,7 @@
       try await self.inner.setServiceAccount(request: request, options: options)
     }
 
-    /// Sets the service account on the instance. For more information,
-    /// readChanging
-    /// the service account and access scopes for an instance.
+    /// Sets the service account on the instance. For more information, read Changing the service account and access scopes for an instance.
     ///
     /// @Snippet(path: "instances_setServiceAccount")
     public func setServiceAccount(
@@ -1590,10 +1502,7 @@
       )
     }
 
-    /// Sets the Shielded Instance integrity policy for an instance. You can
-    /// only use this method on a running instance. This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_setShieldedInstanceIntegrityPolicy")
     public func setShieldedInstanceIntegrityPolicy(
@@ -1603,10 +1512,7 @@
       try await self.inner.setShieldedInstanceIntegrityPolicy(request: request, options: options)
     }
 
-    /// Sets the Shielded Instance integrity policy for an instance. You can
-    /// only use this method on a running instance. This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Sets the Shielded Instance integrity policy for an instance. You can only use this method on a running instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_setShieldedInstanceIntegrityPolicy")
     public func setShieldedInstanceIntegrityPolicy(
@@ -1649,8 +1555,7 @@
       )
     }
 
-    /// Sets network tags
-    /// for the specified instance to the data included in the request.
+    /// Sets network tags for the specified instance to the data included in the request.
     ///
     /// @Snippet(path: "instances_setTags")
     public func setTags(
@@ -1659,8 +1564,7 @@
       try await self.inner.setTags(request: request, options: options)
     }
 
-    /// Sets network tags
-    /// for the specified instance to the data included in the request.
+    /// Sets network tags for the specified instance to the data included in the request.
     ///
     /// @Snippet(path: "instances_setTags")
     public func setTags(
@@ -1701,8 +1605,7 @@
       )
     }
 
-    /// Simulates a host maintenance event on a VM. For more information, see
-    /// Simulate a host maintenance event.
+    /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
     ///
     /// @Snippet(path: "instances_simulateMaintenanceEvent")
     public func simulateMaintenanceEvent(
@@ -1712,8 +1615,7 @@
       try await self.inner.simulateMaintenanceEvent(request: request, options: options)
     }
 
-    /// Simulates a host maintenance event on a VM. For more information, see
-    /// Simulate a host maintenance event.
+    /// Simulates a host maintenance event on a VM. For more information, see Simulate a host maintenance event.
     ///
     /// @Snippet(path: "instances_simulateMaintenanceEvent")
     public func simulateMaintenanceEvent(
@@ -1755,9 +1657,7 @@
       )
     }
 
-    /// Starts an instance that was stopped using theinstances().stop
-    /// method. For more information, seeRestart an
-    /// instance.
+    /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
     ///
     /// @Snippet(path: "instances_start")
     public func start(
@@ -1766,9 +1666,7 @@
       try await self.inner.start(request: request, options: options)
     }
 
-    /// Starts an instance that was stopped using theinstances().stop
-    /// method. For more information, seeRestart an
-    /// instance.
+    /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
     ///
     /// @Snippet(path: "instances_start")
     public func start(
@@ -1809,9 +1707,7 @@
       )
     }
 
-    /// Starts an instance that was stopped using theinstances().stop
-    /// method. For more information, seeRestart an
-    /// instance.
+    /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
     ///
     /// @Snippet(path: "instances_startWithEncryptionKey")
     public func startWithEncryptionKey(
@@ -1820,9 +1716,7 @@
       try await self.inner.startWithEncryptionKey(request: request, options: options)
     }
 
-    /// Starts an instance that was stopped using theinstances().stop
-    /// method. For more information, seeRestart an
-    /// instance.
+    /// Starts an instance that was stopped using the instances().stop method. For more information, see Restart an instance.
     ///
     /// @Snippet(path: "instances_startWithEncryptionKey")
     public func startWithEncryptionKey(
@@ -1864,12 +1758,7 @@
       )
     }
 
-    /// Stops a running instance, shutting it down cleanly, and allows
-    /// you to restart the instance at a later time. Stopped instances do not incur
-    /// VM usage charges while they are stopped. However, resources that the VM is
-    /// using, such as persistent disks and static IP addresses, will continue to
-    /// be charged until they are deleted. For more information, seeStopping
-    /// an instance.
+    /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
     ///
     /// @Snippet(path: "instances_stop")
     public func stop(
@@ -1878,12 +1767,7 @@
       try await self.inner.stop(request: request, options: options)
     }
 
-    /// Stops a running instance, shutting it down cleanly, and allows
-    /// you to restart the instance at a later time. Stopped instances do not incur
-    /// VM usage charges while they are stopped. However, resources that the VM is
-    /// using, such as persistent disks and static IP addresses, will continue to
-    /// be charged until they are deleted. For more information, seeStopping
-    /// an instance.
+    /// Stops a running instance, shutting it down cleanly, and allows you to restart the instance at a later time. Stopped instances do not incur VM usage charges while they are stopped. However, resources that the VM is using, such as persistent disks and static IP addresses, will continue to be charged until they are deleted. For more information, see Stopping an instance.
     ///
     /// @Snippet(path: "instances_stop")
     public func stop(
@@ -1924,14 +1808,7 @@
       )
     }
 
-    /// This method suspends a running instance, saving its state to persistent
-    /// storage, and allows you to resume the instance at a later time. Suspended
-    /// instances have no compute costs (cores or RAM), and incur only storage
-    /// charges for the saved VM memory and localSSD data. Any charged resources
-    /// the virtual machine was using, such as persistent disks and static IP
-    /// addresses, will continue to be charged while the instance is suspended.
-    /// For more information, see
-    /// Suspending and resuming an instance.
+    /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
     ///
     /// @Snippet(path: "instances_suspend")
     public func suspend(
@@ -1940,14 +1817,7 @@
       try await self.inner.suspend(request: request, options: options)
     }
 
-    /// This method suspends a running instance, saving its state to persistent
-    /// storage, and allows you to resume the instance at a later time. Suspended
-    /// instances have no compute costs (cores or RAM), and incur only storage
-    /// charges for the saved VM memory and localSSD data. Any charged resources
-    /// the virtual machine was using, such as persistent disks and static IP
-    /// addresses, will continue to be charged while the instance is suspended.
-    /// For more information, see
-    /// Suspending and resuming an instance.
+    /// This method suspends a running instance, saving its state to persistent storage, and allows you to resume the instance at a later time. Suspended instances have no compute costs (cores or RAM), and incur only storage charges for the saved VM memory and localSSD data. Any charged resources the virtual machine was using, such as persistent disks and static IP addresses, will continue to be charged while the instance is suspended. For more information, see Suspending and resuming an instance.
     ///
     /// @Snippet(path: "instances_suspend")
     public func suspend(
@@ -1997,10 +1867,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates an instance only if the necessary resources are available. This
-    /// method can update only a specific set of instance properties. See
-    /// Updating a running instance for a list of updatable instance
-    /// properties.
+    /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
     ///
     /// @Snippet(path: "instances_update")
     public func update(
@@ -2009,10 +1876,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates an instance only if the necessary resources are available. This
-    /// method can update only a specific set of instance properties. See
-    /// Updating a running instance for a list of updatable instance
-    /// properties.
+    /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
     ///
     /// @Snippet(path: "instances_update")
     public func update(
@@ -2053,10 +1917,7 @@
       )
     }
 
-    /// Updates the specified access config from an instance's network interface
-    /// with the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateAccessConfig")
     public func updateAccessConfig(
@@ -2065,10 +1926,7 @@
       try await self.inner.updateAccessConfig(request: request, options: options)
     }
 
-    /// Updates the specified access config from an instance's network interface
-    /// with the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified access config from an instance's network interface with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateAccessConfig")
     public func updateAccessConfig(
@@ -2109,10 +1967,7 @@
       )
     }
 
-    /// Updates the Display config for a VM instance. You can
-    /// only use this method on a stopped VM instance. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateDisplayDevice")
     public func updateDisplayDevice(
@@ -2121,10 +1976,7 @@
       try await self.inner.updateDisplayDevice(request: request, options: options)
     }
 
-    /// Updates the Display config for a VM instance. You can
-    /// only use this method on a stopped VM instance. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the Display config for a VM instance. You can only use this method on a stopped VM instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateDisplayDevice")
     public func updateDisplayDevice(
@@ -2166,12 +2018,7 @@
       )
     }
 
-    /// Updates an instance's network interface. This method can only update an
-    /// interface's alias IP range and attached network. See Modifying
-    /// alias IP ranges for an existing instance for instructions on
-    /// changing alias IP ranges. See Migrating
-    /// a VM between networks for instructions on migrating an interface.
-    /// This method follows PATCH semantics.
+    /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
     ///
     /// @Snippet(path: "instances_updateNetworkInterface")
     public func updateNetworkInterface(
@@ -2180,12 +2027,7 @@
       try await self.inner.updateNetworkInterface(request: request, options: options)
     }
 
-    /// Updates an instance's network interface. This method can only update an
-    /// interface's alias IP range and attached network. See Modifying
-    /// alias IP ranges for an existing instance for instructions on
-    /// changing alias IP ranges. See Migrating
-    /// a VM between networks for instructions on migrating an interface.
-    /// This method follows PATCH semantics.
+    /// Updates an instance's network interface. This method can only update an interface's alias IP range and attached network. See Modifying alias IP ranges for an existing instance for instructions on changing alias IP ranges. See Migrating a VM between networks for instructions on migrating an interface. This method follows PATCH semantics.
     ///
     /// @Snippet(path: "instances_updateNetworkInterface")
     public func updateNetworkInterface(
@@ -2227,10 +2069,7 @@
       )
     }
 
-    /// Updates the Shielded Instance config for an instance. You can
-    /// only use this method on a stopped instance. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateShieldedInstanceConfig")
     public func updateShieldedInstanceConfig(
@@ -2240,10 +2079,7 @@
       try await self.inner.updateShieldedInstanceConfig(request: request, options: options)
     }
 
-    /// Updates the Shielded Instance config for an instance. You can
-    /// only use this method on a stopped instance. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the Shielded Instance config for an instance. You can only use this method on a stopped instance. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "instances_updateShieldedInstanceConfig")
     public func updateShieldedInstanceConfig(

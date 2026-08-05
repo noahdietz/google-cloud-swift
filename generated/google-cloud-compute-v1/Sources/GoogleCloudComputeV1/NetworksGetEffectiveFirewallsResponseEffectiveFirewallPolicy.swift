@@ -22,8 +22,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Deprecated, please use short name instead. The display name
-    /// of the firewall policy.
+    /// Output only. [Output Only] Deprecated, please use short name instead. The display name of the firewall policy.
     @available(*, deprecated)
     public var displayName: Swift.String? = nil
 
@@ -33,8 +32,7 @@
     /// Output only. [Output Only] The packet mirroring rules that apply to the network.
     public var packetMirroringRules: [FirewallPolicyRule] = []
 
-    /// Output only. [Output only] Priority of firewall policy association. Not applicable for
-    /// type=HIERARCHY.
+    /// Output only. [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
     public var priority: Swift.Int32? = nil
 
     /// [Output Only] The rules that apply to the network.

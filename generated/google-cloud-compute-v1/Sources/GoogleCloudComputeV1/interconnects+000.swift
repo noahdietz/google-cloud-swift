@@ -91,8 +91,7 @@
       )
     }
 
-    /// Returns the specified Interconnect. Get a list of available Interconnects
-    /// by making a list() request.
+    /// Returns the specified Interconnect. Get a list of available Interconnects by making a list() request.
     ///
     /// @Snippet(path: "interconnects_get")
     public func `get`(
@@ -101,16 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Returns the interconnectDiagnostics for the specified
-    /// Interconnect.
-    ///
-    /// In the event of a
-    /// global outage, do not use this API to make decisions about where to
-    /// redirect your network traffic.
-    ///
-    /// Unlike a VLAN attachment, which is regional, a Cloud Interconnect
-    /// connection is a global resource. A global outage can prevent this
-    /// API from functioning properly.
+    /// Returns the interconnectDiagnostics for the specified Interconnect. In the event of a global outage, do not use this API to make decisions about where to redirect your network traffic. Unlike a VLAN attachment, which is regional, a Cloud Interconnect connection is a global resource. A global outage can prevent this API from functioning properly.
     ///
     /// @Snippet(path: "interconnects_getDiagnostics")
     public func getDiagnostics(
@@ -119,8 +109,7 @@
       try await self.inner.getDiagnostics(request: request, options: options)
     }
 
-    /// Returns the interconnectMacsecConfig for the specified
-    /// Interconnect.
+    /// Returns the interconnectMacsecConfig for the specified Interconnect.
     ///
     /// @Snippet(path: "interconnects_getMacsecConfig")
     public func getMacsecConfig(
@@ -129,8 +118,7 @@
       try await self.inner.getMacsecConfig(request: request, options: options)
     }
 
-    /// Creates an Interconnect in the specified project using
-    /// the data included in the request.
+    /// Creates an Interconnect in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "interconnects_insert")
     public func insert(
@@ -139,8 +127,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an Interconnect in the specified project using
-    /// the data included in the request.
+    /// Creates an Interconnect in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "interconnects_insert")
     public func insert(
@@ -203,10 +190,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified Interconnect with the data included in the request.
-    /// This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnects_patch")
     public func patch(
@@ -215,10 +199,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified Interconnect with the data included in the request.
-    /// This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified Interconnect with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnects_patch")
     public func patch(
@@ -258,9 +239,7 @@
       )
     }
 
-    /// Sets the labels on an Interconnect. To learn more about labels,
-    /// read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "interconnects_setLabels")
     public func setLabels(
@@ -269,9 +248,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on an Interconnect. To learn more about labels,
-    /// read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on an Interconnect. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "interconnects_setLabels")
     public func setLabels(

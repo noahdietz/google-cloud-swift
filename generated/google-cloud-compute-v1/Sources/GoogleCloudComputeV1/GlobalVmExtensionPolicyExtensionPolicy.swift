@@ -23,13 +23,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Optional. The version pinning for the extension.
-    /// If empty, the extension will be installed with the latest version
-    /// released by the extension producer.
+    /// Optional. The version pinning for the extension. If empty, the extension will be installed with the latest version released by the extension producer.
     public var pinnedVersion: Swift.String? = nil
 
-    /// Optional. String configuration. Any string payload that the extension
-    /// understands.
+    /// Optional. String configuration. Any string payload that the extension understands.
     public var stringConfig: Swift.String? = nil
 
     /// Initialize a new instance of `GlobalVmExtensionPolicyExtensionPolicy`.

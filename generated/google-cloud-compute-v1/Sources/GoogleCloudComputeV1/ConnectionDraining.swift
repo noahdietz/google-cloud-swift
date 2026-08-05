@@ -22,9 +22,7 @@
   public struct ConnectionDraining: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Configures a duration timeout for existing requests on a removed backend
-    /// instance. For supported load balancers and protocols, as described inEnabling
-    /// connection draining.
+    /// Configures a duration timeout for existing requests on a removed backend instance. For supported load balancers and protocols, as described in Enabling connection draining.
     public var drainingTimeoutSec: Swift.Int32? = nil
 
     /// Initialize a new instance of `ConnectionDraining`.

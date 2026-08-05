@@ -18,31 +18,26 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Contains output only fields.
-  /// Use this sub-message for actual values set on Instance attributes as compared
-  /// to the value requested by the user (intent) in their instance CRUD calls.
+  /// Contains output only fields. Use this sub-message for actual values set on Instance attributes as compared to the value requested by the user (intent) in their instance CRUD calls.
   public struct ResourceStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Effective metadata is a field that consolidates project,
-    /// zonal instance settings, and instance-level predefined metadata keys to
-    /// provide the overridden value for those metadata keys at the instance level.
+    /// Output only. [Output Only] Effective metadata is a field that consolidates project, zonal instance settings, and instance-level predefined metadata keys to provide the overridden value for those metadata keys at the instance level.
     public var effectiveInstanceMetadata: ResourceStatusEffectiveInstanceMetadata? = nil
 
-    /// Output only. [Output Only] The precise location of your instance within the zone's data
-    /// center, including the block, sub-block, and host. The field is formatted as
-    /// follows: blockId/subBlockId/hostId.
+    /// Output only. [Output Only] The precise location of your instance within the zone's data center, including the block, sub-block, and host. The field is formatted as follows: blockId/subBlockId/hostId.
     public var physicalHost: Swift.String? = nil
 
-    /// Output only. [Output Only] A series of fields containing the global name of the Compute
-    /// Engine cluster, as well as the ID of the block, sub-block, and host on
-    /// which the running instance is located.
+    /// Output only. [Output Only] A series of fields containing the global name of the Compute Engine cluster, as well as the ID of the block, sub-block, and host on which the running instance is located.
     public var physicalHostTopology: ResourceStatusPhysicalHostTopology? = nil
 
     /// Output only. [Output Only] Reservation information that the instance is consuming from.
     public var reservationConsumptionInfo: ResourceStatusReservationConsumptionInfo? = nil
 
     public var scheduling: ResourceStatusScheduling? = nil
+
+    /// Output only. [Output Only] Details about the instance stopping state.
+    public var shutdownDetails: ResourceStatusShutdownDetails? = nil
 
     public var upcomingMaintenance: UpcomingMaintenance? = nil
 

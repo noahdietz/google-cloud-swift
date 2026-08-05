@@ -23,10 +23,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. The IDs of the accelerator topologies the instance belongs to. For
-    /// example
-    /// The key will be topologies like "4x4", "2x2x2" and the value will be
-    /// the location ID of the topologies.
+    /// Output only. The IDs of the accelerator topologies the instance belongs to. For example The key will be topologies like "4x4", "2x2x2" and the value will be the location ID of the topologies.
     public var acceleratorTopologyIds: [Swift.String: Swift.String] = [:]
 
     /// Initialize a new instance of `ResourceStatusPhysicalHostTopologyAdditionalAttributes`.

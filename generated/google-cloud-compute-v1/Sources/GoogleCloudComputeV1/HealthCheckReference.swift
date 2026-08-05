@@ -18,12 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A full or valid partial URL to a health check. For example, the following are
-  /// valid URLs:
-  ///
-  ///    - https://www.googleapis.com/compute/beta/projects/project-id/global/httpHealthChecks/health-check
-  ///    - projects/project-id/global/httpHealthChecks/health-check
-  ///    - global/httpHealthChecks/health-check
+  /// A full or valid partial URL to a health check. For example, the following are valid URLs: - https://www.googleapis.com/compute/beta/projects/project-id/global/httpHealthChecks/health-check - projects/project-id/global/httpHealthChecks/health-check - global/httpHealthChecks/health-check
   public struct HealthCheckReference: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

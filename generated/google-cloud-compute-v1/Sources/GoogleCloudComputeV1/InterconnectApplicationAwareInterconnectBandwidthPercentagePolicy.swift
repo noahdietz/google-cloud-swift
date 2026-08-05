@@ -22,8 +22,7 @@
     Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specify bandwidth percentages for various traffic classes for queuing
-    /// type Bandwidth Percent.
+    /// Specify bandwidth percentages for various traffic classes for queuing type Bandwidth Percent.
     public var bandwidthPercentages: [InterconnectApplicationAwareInterconnectBandwidthPercentage] =
       []
 

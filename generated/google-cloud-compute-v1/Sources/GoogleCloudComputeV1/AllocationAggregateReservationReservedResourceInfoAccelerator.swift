@@ -25,8 +25,7 @@
     /// Number of accelerators of specified type.
     public var acceleratorCount: Swift.Int32? = nil
 
-    /// Full or partial URL to accelerator type. e.g.
-    /// "projects/{PROJECT}/zones/{ZONE}/acceleratorTypes/ct4l"
+    /// Full or partial URL to accelerator type. e.g. "projects/{PROJECT}/zones/{ZONE}/acceleratorTypes/ct4l"
     public var acceleratorType: Swift.String? = nil
 
     /// Initialize a new instance of `AllocationAggregateReservationReservedResourceInfoAccelerator`.

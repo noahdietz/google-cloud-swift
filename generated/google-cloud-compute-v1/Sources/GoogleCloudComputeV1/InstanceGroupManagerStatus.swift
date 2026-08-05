@@ -24,36 +24,25 @@
     /// Output only. Status of all-instances configuration on the group.
     public var allInstancesConfig: InstanceGroupManagerStatusAllInstancesConfig? = nil
 
-    /// Output only. The accelerator topology applied to this MIG.
-    /// Currently only one accelerator topology is supported.
+    /// Output only. The accelerator topology applied to this MIG. Currently only one accelerator topology is supported.
     public var appliedAcceleratorTopologies: [InstanceGroupManagerStatusAcceleratorTopology] = []
 
-    /// Output only. The URL of theAutoscaler
-    /// that targets this instance group manager.
+    /// Output only. The URL of the Autoscaler that targets this instance group manager.
     public var autoscaler: Swift.String? = nil
 
     /// Output only. The status of bulk instance operation.
     public var bulkInstanceOperation: InstanceGroupManagerStatusBulkInstanceOperation? = nil
 
-    /// Output only. The list of instance statuses and the number of instances
-    /// in this managed instance group that have the status. Currently only shown
-    /// for TPU MIGs
+    /// Output only. The list of instance statuses and the number of instances in this managed instance group that have the status. Currently only shown for TPU MIGs
     public var currentInstanceStatuses: InstanceGroupManagerStatusInstanceStatusSummary? = nil
 
-    /// Output only. A bit indicating whether the managed instance group is in a
-    /// stable state. A stable state means that: none of the instances in the
-    /// managed instance group is currently undergoing any type of change (for
-    /// example, creation, restart, or deletion); no future changes are scheduled
-    /// for instances in the managed instance group; and the managed instance
-    /// group itself is not being modified.
+    /// Output only. A bit indicating whether the managed instance group is in a stable state. A stable state means that: none of the instances in the managed instance group is currently undergoing any type of change (for example, creation, restart, or deletion); no future changes are scheduled for instances in the managed instance group; and the managed instance group itself is not being modified.
     public var isStable: Swift.Bool? = nil
 
     /// Output only. Stateful status of the given Instance Group Manager.
     public var stateful: InstanceGroupManagerStatusStateful? = nil
 
-    /// Output only. A status of consistency of Instances' versions with their
-    /// target version specified by version field on Instance Group
-    /// Manager.
+    /// Output only. A status of consistency of Instances' versions with their target version specified by version field on Instance Group Manager.
     public var versionTarget: InstanceGroupManagerStatusVersionTarget? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStatus`.

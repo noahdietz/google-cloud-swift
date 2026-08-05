@@ -28,8 +28,7 @@
     /// [Output Only] Name of the quota metric.
     public var metric: Quota.Metric? = nil
 
-    /// [Output Only] Owning resource. This is the resource on which this quota
-    /// is applied.
+    /// [Output Only] Owning resource. This is the resource on which this quota is applied.
     public var owner: Swift.String? = nil
 
     /// [Output Only] Current usage of this metric.

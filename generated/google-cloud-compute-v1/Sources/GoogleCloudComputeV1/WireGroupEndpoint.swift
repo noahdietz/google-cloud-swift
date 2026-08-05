@@ -18,17 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A logical endpoint for the wire group. An endpoint represents a metro that
-  /// contains redundant Interconnect connections. A wire group is created
-  /// between two endpoints.
+  /// A logical endpoint for the wire group. An endpoint represents a metro that contains redundant Interconnect connections. A wire group is created between two endpoints.
   public struct WireGroupEndpoint: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A map that contains the redundant Interconnect connections. Specify
-    /// key-value pairs for the map as follows:
-    ///
-    ///    - Key: an RFC1035 user-specified label.
-    ///    - Value: an Interconnect object.
+    /// A map that contains the redundant Interconnect connections. Specify key-value pairs for the map as follows: - Key: an RFC1035 user-specified label. - Value: an Interconnect object.
     public var interconnects: [Swift.String: WireGroupEndpointInterconnect] = [:]
 
     /// Initialize a new instance of `WireGroupEndpoint`.

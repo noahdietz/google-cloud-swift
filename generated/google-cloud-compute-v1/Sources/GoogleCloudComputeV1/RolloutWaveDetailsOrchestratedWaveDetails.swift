@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Details of the wave for products using the Orchestrated integration
-  /// model.
+  /// Details of the wave for products using the Orchestrated integration model.
   public struct RolloutWaveDetailsOrchestratedWaveDetails: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -27,23 +26,19 @@
     /// Output only. Resource completed so far.
     public var completedResourcesCount: Swift.Int64? = nil
 
-    /// Output only. Estimated timestamp at which the wave will complete. Extrapolated from
-    /// current progress.
+    /// Output only. Estimated timestamp at which the wave will complete. Extrapolated from current progress.
     public var estimatedCompletionTime: Swift.String? = nil
 
     /// Output only. Estimated total count of resources.
     public var estimatedTotalResourcesCount: Swift.Int64? = nil
 
-    /// Output only. Locations that failed during orchestration, and ProgressiveRollout
-    /// stopped retrying. There may be some successful resources rolled out in
-    /// the wave as the location may have failed later in the Rollout.
+    /// Output only. Locations that failed during orchestration, and ProgressiveRollout stopped retrying. There may be some successful resources rolled out in the wave as the location may have failed later in the Rollout.
     public var failedLocations: [Swift.String] = []
 
     /// Output only. Resources failed.
     public var failedResourcesCount: Swift.Int64? = nil
 
-    /// Output only. Status of each location in the wave. Map keys (locations) must be
-    /// specified like "us-east1" or "asia-west1-a".
+    /// Output only. Status of each location in the wave. Map keys (locations) must be specified like "us-east1" or "asia-west1-a".
     public var locationStatus:
       [Swift.String: RolloutWaveDetailsOrchestratedWaveDetailsLocationStatus] = [:]
 

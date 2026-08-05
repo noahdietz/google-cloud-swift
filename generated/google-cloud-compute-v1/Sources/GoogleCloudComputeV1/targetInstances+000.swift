@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of target instances.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of target instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetInstances_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of target instances.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of target instances. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetInstances_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetInstance resource in the specified project and zone using
-    /// the data included in the request.
+    /// Creates a TargetInstance resource in the specified project and zone using the data included in the request.
     ///
     /// @Snippet(path: "targetInstances_insert")
     public func insert(
@@ -141,8 +134,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetInstance resource in the specified project and zone using
-    /// the data included in the request.
+    /// Creates a TargetInstance resource in the specified project and zone using the data included in the request.
     ///
     /// @Snippet(path: "targetInstances_insert")
     public func insert(
@@ -183,8 +175,7 @@
       )
     }
 
-    /// Retrieves a list of TargetInstance resources available to the specified
-    /// project and zone.
+    /// Retrieves a list of TargetInstance resources available to the specified project and zone.
     ///
     /// @Snippet(path: "targetInstances_list")
     public func list(
@@ -193,8 +184,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of TargetInstance resources available to the specified
-    /// project and zone.
+    /// Retrieves a list of TargetInstance resources available to the specified project and zone.
     ///
     /// @Snippet(path: "targetInstances_list")
     public func list(
@@ -209,9 +199,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified target
-    /// instance. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified target instance. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "targetInstances_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -221,9 +209,7 @@
       try await self.inner.setSecurityPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified target
-    /// instance. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified target instance. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "targetInstances_setSecurityPolicy")
     public func setSecurityPolicy(

@@ -25,7 +25,7 @@
     /// Health state of the HealthSource.
     public var healthState: HealthSourceHealth.HealthState? = nil
 
-    /// Output only. [Output Only] Type of resource. Alwayscompute#healthSourceHealth for the health of health sources.
+    /// Output only. [Output Only] Type of resource. Always compute#healthSourceHealth for the health of health sources.
     public var kind: Swift.String? = nil
 
     /// Health state details of the sources.

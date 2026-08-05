@@ -31,9 +31,7 @@
     /// Optional. The orchestration options for this wave.
     public var orchestrationOptions: RolloutPlanWaveOrchestrationOptions? = nil
 
-    /// Required. The selectors for this wave. There is a logical AND between each selector
-    /// defined in a wave, so a resource must satisfy the criteria of *all* the
-    /// specified selectors to be in scope for the wave.
+    /// Required. The selectors for this wave. There is a logical AND between each selector defined in a wave, so a resource must satisfy the criteria of *all* the specified selectors to be in scope for the wave.
     public var selectors: [RolloutPlanWaveSelector] = []
 
     /// Required. The validation to be performed at the end of this wave.

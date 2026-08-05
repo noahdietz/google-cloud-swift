@@ -25,19 +25,16 @@
     /// Whether custom routes are being exported to the peer network.
     public var exportCustomRoutesToPeer: Swift.Bool? = nil
 
-    /// Whether subnet routes with public IP ranges are being exported to the
-    /// peer network.
+    /// Whether subnet routes with public IP ranges are being exported to the peer network.
     public var exportSubnetRoutesWithPublicIpToPeer: Swift.Bool? = nil
 
     /// Whether custom routes are being imported from the peer network.
     public var importCustomRoutesFromPeer: Swift.Bool? = nil
 
-    /// Whether subnet routes with public IP ranges are being imported
-    /// from the peer network.
+    /// Whether subnet routes with public IP ranges are being imported from the peer network.
     public var importSubnetRoutesWithPublicIpFromPeer: Swift.Bool? = nil
 
-    /// Which IP version(s) of traffic and routes are being imported or
-    /// exported between peer networks.
+    /// Which IP version(s) of traffic and routes are being imported or exported between peer networks.
     public var stackType: NetworkPeeringConnectionStatusTrafficConfiguration.StackType? = nil
 
     /// Initialize a new instance of `NetworkPeeringConnectionStatusTrafficConfiguration`.
@@ -60,13 +57,9 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeeringConnectionStatusTrafficConfiguration.stackType]: <doc:NetworkPeeringConnectionStatusTrafficConfiguration/StackType>
     public enum StackType: Codable, Equatable, Sendable {
-      /// This Peering will allow IPv4 traffic and routes to be
-      /// exchanged. Additionally if the matching peering is
-      /// IPV4_IPV6, IPv6 traffic and routes will be exchanged as
-      /// well.
+      /// This Peering will allow IPv4 traffic and routes to be exchanged. Additionally if the matching peering is IPV4_IPV6, IPv6 traffic and routes will be exchanged as well.
       case ipv4Ipv6
-      /// This Peering will only allow IPv4 traffic and routes to be
-      /// exchanged, even if the matching peering is IPV4_IPV6.
+      /// This Peering will only allow IPv4 traffic and routes to be exchanged, even if the matching peering is IPV4_IPV6.
       case ipv4Only
       /// Encodes an unknown integer value.
       ///

@@ -22,25 +22,13 @@
   public struct Wire: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Indicates whether the wire is enabled.
-    /// When false, the wire is disabled. When true and when the wire group of
-    /// the wire is also enabled, the wire is enabled. Defaults to true.
+    /// Output only. [Output Only] Indicates whether the wire is enabled. When false, the wire is disabled. When true and when the wire group of the wire is also enabled, the wire is enabled. Defaults to true.
     public var adminEnabled: Swift.Bool? = nil
 
     /// Output only. Wire endpoints are specific Interconnect connections.
     public var endpoints: [WireEndpoint] = []
 
-    /// Output only. [Output Only] A label that identifies the wire. The format of this label
-    /// combines the existing labels of the wire group endpoints and Interconnect
-    /// connections used by this wire in alphabetical order as follows:
-    /// `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where:
-    ///
-    ///    - ENDPOINT_A and ENDPOINT_B: are the labels
-    ///    that you entered as map keys when you specified the wire group endpoint
-    ///    objects.
-    ///    - CONNECTION_A1 and CONNECTION_B1: are the
-    ///    labels that you entered as map keys when you specified the wire group
-    ///    Interconnect objects.
+    /// Output only. [Output Only] A label that identifies the wire. The format of this label combines the existing labels of the wire group endpoints and Interconnect connections used by this wire in alphabetical order as follows: `ENDPOINT_A+CONNECTION_A1,ENDPOINT_B+CONNECTION_B1`, where: - ENDPOINT_A and ENDPOINT_B: are the labels that you entered as map keys when you specified the wire group endpoint objects. - CONNECTION_A1 and CONNECTION_B1: are the labels that you entered as map keys when you specified the wire group Interconnect objects.
     public var label: Swift.String? = nil
 
     /// Output only. [Output Only] Properties of the wire.

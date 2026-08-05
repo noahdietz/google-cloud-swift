@@ -22,12 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Unique identifier for the subnetwork; defined by the
-    /// server.
+    /// Output only. [Output Only] Unique identifier for the subnetwork; defined by the server.
     public var canonicalUrl: Swift.String? = nil
 
-    /// Resource URL to the subnetwork for which
-    /// traffic from/to all VM instances will be mirrored.
+    /// Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
     public var url: Swift.String? = nil
 
     /// Initialize a new instance of `PacketMirroringMirroredResourceInfoSubnetInfo`.

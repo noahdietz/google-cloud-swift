@@ -21,8 +21,7 @@
   public struct ManagedInstanceVersion: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The intended template of the instance. This field is empty
-    /// when current_action is one of { DELETING, ABANDONING }.
+    /// Output only. [Output Only] The intended template of the instance. This field is empty when current_action is one of { DELETING, ABANDONING }.
     public var instanceTemplate: Swift.String? = nil
 
     /// Output only. [Output Only] Name of the version.

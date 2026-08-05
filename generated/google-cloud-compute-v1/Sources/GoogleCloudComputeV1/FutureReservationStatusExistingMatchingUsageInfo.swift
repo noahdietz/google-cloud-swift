@@ -18,14 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] Represents the existing matching usage for the future
-  /// reservation.
+  /// [Output Only] Represents the existing matching usage for the future reservation.
   public struct FutureReservationStatusExistingMatchingUsageInfo: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Output only. Count to represent min(FR total_count,
-    /// matching_reserved_capacity+matching_unreserved_instances)
+    /// Output only. Count to represent min(FR total_count, matching_reserved_capacity+matching_unreserved_instances)
     public var count: Swift.Int64? = nil
 
     /// Output only. Timestamp when the matching usage was calculated

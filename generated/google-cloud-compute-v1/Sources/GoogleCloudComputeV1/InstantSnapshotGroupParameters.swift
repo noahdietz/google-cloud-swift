@@ -21,14 +21,7 @@
   public struct InstantSnapshotGroupParameters: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The source instant snapshot group used to create disks. You can provide
-    /// this as a partial or full URL to the resource. For example, the following
-    /// are valid values:
-    ///
-    ///
-    ///      - https://www.googleapis.com/compute/v1/projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup
-    ///      - projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup
-    ///      - zones/zone/instantSnapshotGroups/instantSnapshotGroup
+    /// The source instant snapshot group used to create disks. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /instantSnapshotGroups/instantSnapshotGroup - projects/project/zones/zone/instantSnapshotGroups/instantSnapshotGroup - zones/zone/instantSnapshotGroups/instantSnapshotGroup
     public var sourceInstantSnapshotGroup: Swift.String? = nil
 
     /// Initialize a new instance of `InstantSnapshotGroupParameters`.

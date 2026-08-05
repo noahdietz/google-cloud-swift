@@ -18,15 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Node Affinity: the configuration of desired nodes onto which this Instance
-  ///  could be scheduled.
+  /// Node Affinity: the configuration of desired nodes onto which this Instance could be scheduled.
   public struct SchedulingNodeAffinity: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Corresponds to the label key of Node resource.
     public var key: Swift.String? = nil
 
-    /// Defines the operation of node selection. Valid operators areIN for affinity and NOT_IN for anti-affinity.
+    /// Defines the operation of node selection. Valid operators are IN for affinity and NOT_IN for anti-affinity.
     public var `operator`: SchedulingNodeAffinity.Operator? = nil
 
     /// Corresponds to the label values of Node resource.

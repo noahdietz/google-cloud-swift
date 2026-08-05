@@ -18,24 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The request and response header transformations that take effect before
-  /// the request is passed along to the selected backendService.
+  /// The request and response header transformations that take effect before the request is passed along to the selected backendService.
   public struct HttpHeaderAction: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Headers to add to a matching request before forwarding the request to thebackendService.
+    /// Headers to add to a matching request before forwarding the request to the backendService.
     public var requestHeadersToAdd: [HttpHeaderOption] = []
 
-    /// A list of header names for headers that need to be removed from the
-    /// request before forwarding the request to the backendService.
+    /// A list of header names for headers that need to be removed from the request before forwarding the request to the backendService.
     public var requestHeadersToRemove: [Swift.String] = []
 
-    /// Headers to add the response before sending the response back to the
-    /// client.
+    /// Headers to add the response before sending the response back to the client.
     public var responseHeadersToAdd: [HttpHeaderOption] = []
 
-    /// A list of header names for headers that need to be removed from the
-    /// response before sending the response back to the client.
+    /// A list of header names for headers that need to be removed from the response before sending the response back to the client.
     public var responseHeadersToRemove: [Swift.String] = []
 
     /// Initialize a new instance of `HttpHeaderAction`.

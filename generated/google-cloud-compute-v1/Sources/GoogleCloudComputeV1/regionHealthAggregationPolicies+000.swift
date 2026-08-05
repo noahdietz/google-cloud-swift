@@ -45,11 +45,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all HealthAggregationPolicy resources,
-    /// regional and global, available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthAggregationPolicy resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_aggregatedList")
     public func aggregatedList(
@@ -59,11 +55,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all HealthAggregationPolicy resources,
-    /// regional and global, available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthAggregationPolicy resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_aggregatedList")
     public func aggregatedList(
@@ -143,8 +135,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Create a HealthAggregationPolicy in the specified project in the given
-    /// region using the parameters that are included in the request.
+    /// Create a HealthAggregationPolicy in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_insert")
     public func insert(
@@ -154,8 +145,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Create a HealthAggregationPolicy in the specified project in the given
-    /// region using the parameters that are included in the request.
+    /// Create a HealthAggregationPolicy in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_insert")
     public func insert(
@@ -223,10 +213,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified regional HealthAggregationPolicy
-    /// resource with the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthAggregationPolicy resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_patch")
     public func patch(
@@ -236,10 +223,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified regional HealthAggregationPolicy
-    /// resource with the data included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthAggregationPolicy resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthAggregationPolicies_patch")
     public func patch(

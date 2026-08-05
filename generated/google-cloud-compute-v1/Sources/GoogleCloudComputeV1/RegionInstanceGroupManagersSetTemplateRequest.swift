@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// URL of the InstanceTemplate resource from which all new instances will be
-    /// created.
+    /// URL of the InstanceTemplate resource from which all new instances will be created.
     public var instanceTemplate: Swift.String? = nil
 
     /// Initialize a new instance of `RegionInstanceGroupManagersSetTemplateRequest`.

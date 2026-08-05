@@ -94,8 +94,7 @@
       )
     }
 
-    /// Returns the specified InterconnectAttachmentGroup resource in the given
-    /// scope.
+    /// Returns the specified InterconnectAttachmentGroup resource in the given scope.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_get")
     public func `get`(
@@ -104,8 +103,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_getIamPolicy")
     public func getIamPolicy(
@@ -115,8 +113,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Returns the InterconnectAttachmentStatuses for the specified
-    /// InterconnectAttachmentGroup resource.
+    /// Returns the InterconnectAttachmentStatuses for the specified InterconnectAttachmentGroup resource.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_getOperationalStatus")
     public func getOperationalStatus(
@@ -127,8 +124,7 @@
       try await self.inner.getOperationalStatus(request: request, options: options)
     }
 
-    /// Creates a InterconnectAttachmentGroup in the specified project in the given
-    /// scope using the parameters that are included in the request.
+    /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_insert")
     public func insert(
@@ -138,8 +134,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a InterconnectAttachmentGroup in the specified project in the given
-    /// scope using the parameters that are included in the request.
+    /// Creates a InterconnectAttachmentGroup in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_insert")
     public func insert(
@@ -206,10 +201,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified InterconnectAttachmentGroup resource with the data
-    /// included in the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_patch")
     public func patch(
@@ -219,10 +211,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified InterconnectAttachmentGroup resource with the data
-    /// included in the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified InterconnectAttachmentGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_patch")
     public func patch(
@@ -263,8 +252,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "interconnectAttachmentGroups_setIamPolicy")
     public func setIamPolicy(

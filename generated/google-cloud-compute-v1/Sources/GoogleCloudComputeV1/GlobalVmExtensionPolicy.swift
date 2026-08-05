@@ -22,50 +22,34 @@
   public struct GlobalVmExtensionPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Required. Map from extension (eg: "cloudops") to its policy configuration.
-    /// The key is the name of the extension.
+    /// Required. Map from extension (eg: "cloudops") to its policy configuration. The key is the name of the extension.
     public var extensionPolicies: [Swift.String: GlobalVmExtensionPolicyExtensionPolicy] = [:]
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Optional. Selector to target VMs for a policy.
-    /// There is a logical "AND" between instance_selectors.
+    /// Optional. Selector to target VMs for a policy. There is a logical "AND" between instance_selectors.
     public var instanceSelectors: [GlobalVmExtensionPolicyInstanceSelector] = []
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#globalVmExtensionPolicy for globalVmExtensionPolicies.
+    /// Output only. [Output Only] Type of the resource. Always compute#globalVmExtensionPolicy for globalVmExtensionPolicies.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-    /// which means the first character must be a lowercase letter, and all
-    /// following characters must be a dash, lowercase letter, or digit, except
-    /// the last character, which cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Optional. Used to resolve conflicts when multiple policies are active for the same
-    /// extension. Defaults to 0.
-    ///
-    /// Larger the number, higher the priority. When the priority is the same,
-    /// the policy with the newer create time has higher priority.
+    /// Optional. Used to resolve conflicts when multiple policies are active for the same extension. Defaults to 0. Larger the number, higher the priority. When the priority is the same, the policy with the newer create time has higher priority.
     public var priority: Swift.Int32? = nil
 
     /// Required. The rollout strategy and status.
     public var rolloutOperation: GlobalVmExtensionPolicyRolloutOperation? = nil
 
-    /// Output only. [Output Only] The scoped resource status. It's only for tracking the
-    /// purging status of the policy.
+    /// Output only. [Output Only] The scoped resource status. It's only for tracking the purging status of the policy.
     public var scopedResourceStatus: GlobalVmExtensionPolicy.ScopedResourceStatus? = nil
 
     /// Output only. [Output Only] Server-defined fully-qualified URL for this resource.
@@ -74,8 +58,7 @@
     /// Output only. [Output Only] Server-defined URL for this resource's resource id.
     public var selfLinkWithId: Swift.String? = nil
 
-    /// Output only. [Output Only] Update timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Update timestamp in RFC3339 text format.
     public var updateTimestamp: Swift.String? = nil
 
     /// Initialize a new instance of `GlobalVmExtensionPolicy`.

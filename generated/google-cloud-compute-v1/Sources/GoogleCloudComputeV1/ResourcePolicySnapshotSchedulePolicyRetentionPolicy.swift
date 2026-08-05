@@ -26,8 +26,7 @@
     /// Maximum age of the snapshot that is allowed to be kept.
     public var maxRetentionDays: Swift.Int32? = nil
 
-    /// Specifies the behavior to apply to scheduled snapshots when
-    /// the source disk is deleted.
+    /// Specifies the behavior to apply to scheduled snapshots when the source disk is deleted.
     public var onSourceDiskDelete:
       ResourcePolicySnapshotSchedulePolicyRetentionPolicy.OnSourceDiskDelete? = nil
 

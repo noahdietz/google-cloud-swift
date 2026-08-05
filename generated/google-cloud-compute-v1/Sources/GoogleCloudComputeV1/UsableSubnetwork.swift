@@ -22,20 +22,16 @@
   public struct UsableSubnetwork: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The external IPv6 address range that is assigned to this
-    /// subnetwork.
+    /// Output only. [Output Only] The external IPv6 address range that is assigned to this subnetwork.
     public var externalIpv6Prefix: Swift.String? = nil
 
-    /// Output only. [Output Only] The internal IPv6 address range that is assigned to this
-    /// subnetwork.
+    /// Output only. [Output Only] The internal IPv6 address range that is assigned to this subnetwork.
     public var internalIpv6Prefix: Swift.String? = nil
 
     /// The range of internal addresses that are owned by this subnetwork.
     public var ipCidrRange: Swift.String? = nil
 
-    /// The access type of IPv6 address this subnet holds. It's immutable and can
-    /// only be specified during creation or the first time the subnet is updated
-    /// into IPV4_IPV6 dual stack.
+    /// The access type of IPv6 address this subnet holds. It's immutable and can only be specified during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
     public var ipv6AccessType: UsableSubnetwork.Ipv6AccessType? = nil
 
     /// Network URL.
@@ -43,22 +39,13 @@
 
     public var purpose: UsableSubnetwork.Purpose? = nil
 
-    /// The role of subnetwork. Currently, this field is only used when
-    /// purpose is set to GLOBAL_MANAGED_PROXY orREGIONAL_MANAGED_PROXY. The value can be set toACTIVE or BACKUP. An ACTIVE
-    /// subnetwork is one that is currently being used for Envoy-based load
-    /// balancers in a region. A BACKUP subnetwork is one that is
-    /// ready to be promoted to ACTIVE or is currently draining.
-    /// This field can be updated with a patch request.
+    /// The role of subnetwork. Currently, this field is only used when purpose is set to GLOBAL_MANAGED_PROXY or REGIONAL_MANAGED_PROXY. The value can be set to ACTIVE or BACKUP. An ACTIVE subnetwork is one that is currently being used for Envoy-based load balancers in a region. A BACKUP subnetwork is one that is ready to be promoted to ACTIVE or is currently draining. This field can be updated with a patch request.
     public var role: UsableSubnetwork.Role? = nil
 
     /// Secondary IP ranges.
     public var secondaryIpRanges: [UsableSubnetworkSecondaryRange] = []
 
-    /// The stack type for the subnet. If set to IPV4_ONLY, new VMs
-    /// in the subnet are assigned IPv4 addresses only. If set toIPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and
-    /// IPv6 addresses. If not specified, IPV4_ONLY is used.
-    ///
-    /// This field can be both set at resource creation time and updated usingpatch.
+    /// The stack type for the subnet. If set to IPV4_ONLY, new VMs in the subnet are assigned IPv4 addresses only. If set to IPV4_IPV6, new VMs in the subnet can be assigned both IPv4 and IPv6 addresses. If not specified, IPV4_ONLY is used. This field can be both set at resource creation time and updated using patch.
     public var stackType: UsableSubnetwork.StackType? = nil
 
     /// Subnetwork URL.
@@ -84,11 +71,9 @@
     ///
     /// [google.cloud.compute.v1.UsableSubnetwork.ipv6AccessType]: <doc:UsableSubnetwork/Ipv6AccessType>
     public enum Ipv6AccessType: Codable, Equatable, Sendable {
-      /// VMs on this subnet will be assigned IPv6 addresses that are accessible
-      /// via the Internet, as well as the VPC network.
+      /// VMs on this subnet will be assigned IPv6 addresses that are accessible via the Internet, as well as the VPC network.
       case external
-      /// VMs on this subnet will be assigned IPv6 addresses that are only
-      /// accessible over the VPC network.
+      /// VMs on this subnet will be assigned IPv6 addresses that are only accessible over the VPC network.
       case `internal`
       /// Encodes an unknown integer value.
       ///
@@ -188,12 +173,9 @@
     public enum Purpose: Codable, Equatable, Sendable {
       /// Subnet reserved for Global Envoy-based Load Balancing.
       case globalManagedProxy
-      /// Subnet reserved for Internal HTTP(S) Load Balancing. This is a legacy
-      /// purpose, please use REGIONAL_MANAGED_PROXY instead.
+      /// Subnet reserved for Internal HTTP(S) Load Balancing. This is a legacy purpose, please use REGIONAL_MANAGED_PROXY instead.
       case internalHttpsLoadBalancer
-      /// Subnetwork will be used for Migration from one peered VPC to another.
-      /// (a transient state of subnetwork
-      /// while migrating resources from one project to another).
+      /// Subnetwork will be used for Migration from one peered VPC to another. (a transient state of subnetwork while migrating resources from one project to another).
       case peerMigration
       /// Regular user created or automatically created subnet.
       case `private`

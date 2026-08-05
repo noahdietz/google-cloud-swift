@@ -18,58 +18,38 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// DEPRECATED: Please use compute#instanceProperties instead.
-  /// New properties will not be added to this field.
+  /// DEPRECATED: Please use compute#instanceProperties instead. New properties will not be added to this field.
   public struct SourceInstanceProperties: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Enables instances created based on this machine image to send packets with
-    /// source IP addresses other than their own and receive packets with
-    /// destination IP addresses other than their own. If these instances will be
-    /// used as an IP gateway or it will be set as the next-hop in a Route
-    /// resource, specify true. If unsure, leave this set tofalse. See theEnable IP forwarding
-    /// documentation for more information.
+    /// Enables instances created based on this machine image to send packets with source IP addresses other than their own and receive packets with destination IP addresses other than their own. If these instances will be used as an IP gateway or it will be set as the next-hop in a Route resource, specify true. If unsure, leave this set to false. See the Enable IP forwarding documentation for more information.
     public var canIpForward: Swift.Bool? = nil
 
-    /// Whether the instance created from this machine image should be protected
-    /// against deletion.
+    /// Whether the instance created from this machine image should be protected against deletion.
     public var deletionProtection: Swift.Bool? = nil
 
-    /// An optional text description for the instances that are created from this
-    /// machine image.
+    /// An optional text description for the instances that are created from this machine image.
     public var description: Swift.String? = nil
 
-    /// An array of disks that are associated with the instances that are created
-    /// from this machine image.
+    /// An array of disks that are associated with the instances that are created from this machine image.
     public var disks: [SavedAttachedDisk] = []
 
-    /// A list of guest accelerator cards' type and count to use for instances
-    /// created from this machine image.
+    /// A list of guest accelerator cards' type and count to use for instances created from this machine image.
     public var guestAccelerators: [AcceleratorConfig] = []
 
-    /// KeyRevocationActionType of the instance. Supported options are "STOP" and
-    /// "NONE". The default value is "NONE" if it is not specified.
+    /// KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default value is "NONE" if it is not specified.
     public var keyRevocationActionType: SourceInstanceProperties.KeyRevocationActionType? = nil
 
     /// Labels to apply to instances that are created from this machine image.
     public var labels: [Swift.String: Swift.String] = [:]
 
-    /// The machine type to use for instances that are created from this machine
-    /// image.
+    /// The machine type to use for instances that are created from this machine image.
     public var machineType: Swift.String? = nil
 
-    /// The metadata key/value pairs to assign to instances that are created from
-    /// this machine image. These pairs can consist of custom metadata or
-    /// predefined keys. SeeProject and
-    /// instance metadata for more information.
+    /// The metadata key/value pairs to assign to instances that are created from this machine image. These pairs can consist of custom metadata or predefined keys. See Project and instance metadata for more information.
     public var metadata: Metadata? = nil
 
-    /// Minimum cpu/platform to be used by instances created from this machine
-    /// image. The instance may be scheduled on the specified or newer
-    /// cpu/platform. Applicable values are the friendly names of CPU platforms,
-    /// such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy Bridge". For more
-    /// information, read Specifying a
-    /// Minimum CPU Platform.
+    /// Minimum cpu/platform to be used by instances created from this machine image. The instance may be scheduled on the specified or newer cpu/platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: "Intel Haswell" or minCpuPlatform: "Intel Sandy Bridge". For more information, read Specifying a Minimum CPU Platform.
     public var minCpuPlatform: Swift.String? = nil
 
     /// An array of network access configurations for this interface.
@@ -79,20 +59,13 @@
     public var postKeyRevocationActionType: SourceInstanceProperties.PostKeyRevocationActionType? =
       nil
 
-    /// Specifies the scheduling options for the instances that are created from
-    /// this machine image.
+    /// Specifies the scheduling options for the instances that are created from this machine image.
     public var scheduling: Scheduling? = nil
 
-    /// A list of service accounts with specified scopes. Access tokens for these
-    /// service accounts are available to the instances that are created from this
-    /// machine image. Use metadata queries to obtain the access tokens for these
-    /// instances.
+    /// A list of service accounts with specified scopes. Access tokens for these service accounts are available to the instances that are created from this machine image. Use metadata queries to obtain the access tokens for these instances.
     public var serviceAccounts: [ServiceAccount] = []
 
-    /// A list of tags to apply to the instances that are created from this machine
-    /// image. The tags identify valid sources or targets for network firewalls.
-    /// The setTags method can modify this list of tags. Each tag within the list
-    /// must comply withRFC1035.
+    /// A list of tags to apply to the instances that are created from this machine image. The tags identify valid sources or targets for network firewalls. The setTags method can modify this list of tags. Each tag within the list must comply with RFC1035.
     public var tags: Tags? = nil
 
     /// Initialize a new instance of `SourceInstanceProperties`.

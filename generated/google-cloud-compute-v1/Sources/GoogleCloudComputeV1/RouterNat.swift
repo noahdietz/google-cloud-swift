@@ -18,52 +18,25 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Nat resource. It enables the VMs within the specified
-  /// subnetworks to access Internet without external IP addresses. It specifies
-  /// a list of subnetworks (and the ranges within) that want to use NAT.
-  /// Customers can also provide the external IPs that would be used for NAT. GCP
-  /// would auto-allocate ephemeral IPs if no external IPs are provided.
+  /// Represents a Nat resource. It enables the VMs within the specified subnetworks to access Internet without external IP addresses. It specifies a list of subnetworks (and the ranges within) that want to use NAT. Customers can also provide the external IPs that would be used for NAT. GCP would auto-allocate ephemeral IPs if no external IPs are provided.
   public struct RouterNat: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The network tier to use when automatically reserving NAT IP addresses.
-    /// Must be one of: PREMIUM, STANDARD.
-    /// If not specified, then the current
-    /// project-level default tier is used.
+    /// The network tier to use when automatically reserving NAT IP addresses. Must be one of: PREMIUM, STANDARD. If not specified, then the current project-level default tier is used.
     public var autoNetworkTier: RouterNat.AutoNetworkTier? = nil
 
-    /// A list of URLs of the IP resources to be drained. These IPs
-    /// must be valid static external IPs that have been assigned to the NAT.
-    /// These IPs should be used for updating/patching a NAT only.
+    /// A list of URLs of the IP resources to be drained. These IPs must be valid static external IPs that have been assigned to the NAT. These IPs should be used for updating/patching a NAT only.
     public var drainNatIps: [Swift.String] = []
 
-    /// Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT
-    /// state. This value is equal to tcp_time_wait_timeout_sec.
-    /// If tcp_time_wait_timeout_sec isn't set, the effective timeout is 30s or
-    /// 120s. The field is output only.
+    /// Output only. Effective timeout (in seconds) for TCP connections that are in TIME_WAIT state. This value is equal to tcp_time_wait_timeout_sec. If tcp_time_wait_timeout_sec isn't set, the effective timeout is 30s or 120s. The field is output only.
     public var effectiveTcpTimeWaitTimeoutSec: Swift.Int32? = nil
 
-    /// Enable Dynamic Port Allocation.
-    ///
-    ///
-    /// If not specified, it is disabled by default.
-    ///
-    ///
-    /// If set to true,
-    ///
-    ///    - Dynamic Port Allocation will be enabled on this NAT
-    ///    config.
-    ///    - enableEndpointIndependentMapping cannot be set to true.
-    ///    - If minPorts is set, minPortsPerVm must be set to a
-    ///    power of two greater than or equal to 32. If minPortsPerVm is not set, a
-    ///    minimum of 32 ports will be allocated to a VM from this NAT
-    ///    config.
+    /// Enable Dynamic Port Allocation. If not specified, it is disabled by default. If set to true, - Dynamic Port Allocation will be enabled on this NAT config. - enableEndpointIndependentMapping cannot be set to true. - If minPorts is set, minPortsPerVm must be set to a power of two greater than or equal to 32. If minPortsPerVm is not set, a minimum of 32 ports will be allocated to a VM from this NAT config.
     public var enableDynamicPortAllocation: Swift.Bool? = nil
 
     public var enableEndpointIndependentMapping: Swift.Bool? = nil
 
-    /// List of NAT-ted endpoint types supported by the Nat Gateway. If the list
-    /// is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
+    /// List of NAT-ted endpoint types supported by the Nat Gateway. If the list is empty, then it will be equivalent to include ENDPOINT_TYPE_VM
     public var endpointTypes: [RouterNat.EndpointTypes] = []
 
     /// Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
@@ -72,108 +45,46 @@
     /// Configure logging on this NAT.
     public var logConfig: RouterNatLogConfig? = nil
 
-    /// Maximum number of ports allocated to a VM from this NAT config when
-    /// Dynamic Port Allocation is enabled.
-    ///
-    ///
-    /// If Dynamic Port Allocation is not enabled, this field has no effect.
-    ///
-    ///
-    /// If Dynamic Port Allocation is enabled, and this field is set, it must be
-    /// set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm
-    /// is not set.
-    ///
-    ///
-    /// If Dynamic Port Allocation is enabled and this field is not set,
-    /// a maximum of 65536 ports will be allocated to a VM from this NAT
-    /// config.
+    /// Maximum number of ports allocated to a VM from this NAT config when Dynamic Port Allocation is enabled. If Dynamic Port Allocation is not enabled, this field has no effect. If Dynamic Port Allocation is enabled, and this field is set, it must be set to a power of two greater than minPortsPerVm, or 64 if minPortsPerVm is not set. If Dynamic Port Allocation is enabled and this field is not set, a maximum of 65536 ports will be allocated to a VM from this NAT config.
     public var maxPortsPerVm: Swift.Int32? = nil
 
-    /// Minimum number of ports allocated to a VM from this NAT config. If not
-    /// set, a default number of ports is allocated to a VM. This is rounded
-    /// up to the nearest power of 2. For example, if the value of this field is
-    /// 50, at least 64 ports are allocated to a VM.
+    /// Minimum number of ports allocated to a VM from this NAT config. If not set, a default number of ports is allocated to a VM. This is rounded up to the nearest power of 2. For example, if the value of this field is 50, at least 64 ports are allocated to a VM.
     public var minPortsPerVm: Swift.Int32? = nil
 
-    /// Unique name of this Nat service.
-    /// The name must be 1-63 characters long and comply withRFC1035.
+    /// Unique name of this Nat service. The name must be 1-63 characters long and comply with RFC1035.
     public var name: Swift.String? = nil
 
-    /// List of Subnetwork resources whose traffic should be translated by NAT64
-    /// Gateway. It is used only when LIST_OF_IPV6_SUBNETWORKS is
-    /// selected for the SubnetworkIpRangeToNat64Option above.
+    /// List of Subnetwork resources whose traffic should be translated by NAT64 Gateway. It is used only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
     public var nat64Subnetworks: [RouterNatSubnetworkToNat64] = []
 
-    /// Specify the NatIpAllocateOption, which can take one of the following
-    /// values:
-    ///
-    ///    - MANUAL_ONLY: Uses only Nat IP addresses provided by
-    ///    customers. When there are not enough specified Nat IPs, the Nat service
-    ///    fails for new VMs.
-    ///    - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers
-    ///    can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should
-    ///    be empty.
+    /// Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY: Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs, the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform; customers can't specify any Nat IPs. When choosing AUTO_ONLY, then nat_ip should be empty.
     public var natIpAllocateOption: RouterNat.NatIpAllocateOption? = nil
 
-    /// A list of URLs of the IP resources used for this Nat service. These IP
-    /// addresses must be valid static external IP addresses assigned to the
-    /// project.
+    /// A list of URLs of the IP resources used for this Nat service. These IP addresses must be valid static external IP addresses assigned to the project.
     public var natIps: [Swift.String] = []
 
     /// A list of rules associated with this NAT.
     public var rules: [RouterNatRule] = []
 
-    /// Specify the Nat option, which can take one of the following values:
-    ///
-    ///    - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every
-    ///    Subnetwork are allowed to Nat.
-    ///    - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges
-    ///    in every Subnetwork are allowed to Nat.
-    ///    - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat
-    ///    (specified in the field subnetwork below)
-    ///
-    ///
-    /// The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED.
-    /// Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES then there
-    /// should not be any other Router.Nat section in any Router for this network
-    /// in this region.
+    /// Specify the Nat option, which can take one of the following values: - ALL_SUBNETWORKS_ALL_IP_RANGES: All of the IP ranges in every Subnetwork are allowed to Nat. - ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES: All of the primary IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field subnetwork below) The default is SUBNETWORK_IP_RANGE_TO_NAT_OPTION_UNSPECIFIED. Note that if this field contains ALL_SUBNETWORKS_ALL_IP_RANGES then there should not be any other Router.Nat section in any Router for this network in this region.
     public var sourceSubnetworkIpRangesToNat: RouterNat.SourceSubnetworkIpRangesToNat? = nil
 
-    /// Specify the Nat option for NAT64, which can take one of the following
-    /// values:
-    ///
-    ///    - ALL_IPV6_SUBNETWORKS: All of the IP ranges in
-    ///    every Subnetwork are allowed to Nat.
-    ///    - LIST_OF_IPV6_SUBNETWORKS: A list of Subnetworks are allowed to Nat
-    ///    (specified in the field nat64_subnetwork below)
-    ///
-    ///
-    /// The default is NAT64_OPTION_UNSPECIFIED.
-    /// Note that if this field contains NAT64_ALL_V6_SUBNETWORKS no other
-    /// Router.Nat section in this region can also enable NAT64 for any
-    /// Subnetworks in this network. Other Router.Nat sections can still be
-    /// present to enable NAT44 only.
+    /// Specify the Nat option for NAT64, which can take one of the following values: - ALL_IPV6_SUBNETWORKS: All of the IP ranges in every Subnetwork are allowed to Nat. - LIST_OF_IPV6_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field nat64_subnetwork below) The default is NAT64_OPTION_UNSPECIFIED. Note that if this field contains NAT64_ALL_V6_SUBNETWORKS no other Router.Nat section in this region can also enable NAT64 for any Subnetworks in this network. Other Router.Nat sections can still be present to enable NAT44 only.
     public var sourceSubnetworkIpRangesToNat64: RouterNat.SourceSubnetworkIpRangesToNat64? = nil
 
-    /// A list of Subnetwork resources whose traffic should be translated by NAT
-    /// Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the
-    /// SubnetworkIpRangeToNatOption above.
+    /// A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used only when LIST_OF_SUBNETWORKS is selected for the SubnetworkIpRangeToNatOption above.
     public var subnetworks: [RouterNatSubnetworkToNat] = []
 
-    /// Timeout (in seconds) for TCP established connections. Defaults to 1200s
-    /// if not set.
+    /// Timeout (in seconds) for TCP established connections. Defaults to 1200s if not set.
     public var tcpEstablishedIdleTimeoutSec: Swift.Int32? = nil
 
-    /// Timeout (in seconds) for TCP connections that are in TIME_WAIT state.
-    /// Defaults to 120s if not set.
+    /// Timeout (in seconds) for TCP connections that are in TIME_WAIT state. Defaults to 120s if not set.
     public var tcpTimeWaitTimeoutSec: Swift.Int32? = nil
 
-    /// Timeout (in seconds) for TCP transitory connections. Defaults to 30s if
-    /// not set.
+    /// Timeout (in seconds) for TCP transitory connections. Defaults to 30s if not set.
     public var tcpTransitoryIdleTimeoutSec: Swift.Int32? = nil
 
-    /// Indicates whether this NAT is used for public or private IP
-    /// translation. If unspecified, it defaults to PUBLIC.
+    /// Indicates whether this NAT is used for public or private IP translation. If unspecified, it defaults to PUBLIC.
     public var type: RouterNat.Type_? = nil
 
     /// Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
@@ -201,14 +112,11 @@
     public enum AutoNetworkTier: Codable, Equatable, Sendable {
       /// Public internet quality with fixed bandwidth.
       case fixedStandard
-      /// High quality, Google-grade network tier, support for all networking
-      /// products.
+      /// High quality, Google-grade network tier, support for all networking products.
       case premium
-      /// Public internet quality, only limited support for other networking
-      /// products.
+      /// Public internet quality, only limited support for other networking products.
       case standard
-      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier
-      /// is expired or not configured.
+      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier is expired or not configured.
       case standardOverridesFixedStandard
       /// Encodes an unknown integer value.
       ///
@@ -316,9 +224,7 @@
     ///
     /// [google.cloud.compute.v1.RouterNat.endpointTypes]: <doc:RouterNat/EndpointTypes>
     public enum EndpointTypes: Codable, Equatable, Sendable {
-      /// This is used for regional Application Load Balancers (internal and
-      /// external) and regional proxy Network Load Balancers (internal and
-      /// external) endpoints.
+      /// This is used for regional Application Load Balancers (internal and external) and regional proxy Network Load Balancers (internal and external) endpoints.
       case endpointTypeManagedProxyLb
       /// This is used for Secure Web Gateway endpoints.
       case endpointTypeSwg
@@ -427,8 +333,7 @@
     public enum NatIpAllocateOption: Codable, Equatable, Sendable {
       /// Nat IPs are allocated by GCP; customers can not specify any Nat IPs.
       case autoOnly
-      /// Only use Nat IPs provided by customers. When specified Nat IPs are not
-      /// enough then the Nat service fails for new VMs.
+      /// Only use Nat IPs provided by customers. When specified Nat IPs are not enough then the Nat service fails for new VMs.
       case manualOnly
       /// Encodes an unknown integer value.
       ///
@@ -530,8 +435,7 @@
       case allSubnetworksAllIpRanges
       /// All the primary IP ranges in every Subnetwork are allowed to Nat.
       case allSubnetworksAllPrimaryIpRanges
-      /// A list of Subnetworks are allowed to Nat (specified in the field
-      /// subnetwork below)
+      /// A list of Subnetworks are allowed to Nat (specified in the field subnetwork below)
       case listOfSubnetworks
       /// Encodes an unknown integer value.
       ///
@@ -634,12 +538,9 @@
     ///
     /// [google.cloud.compute.v1.RouterNat.sourceSubnetworkIpRangesToNat64]: <doc:RouterNat/SourceSubnetworkIpRangesToNat64>
     public enum SourceSubnetworkIpRangesToNat64: Codable, Equatable, Sendable {
-      /// NAT64 is enabled for all the IPv6 subnet ranges.
-      /// In dual stack subnets, NAT64 will only be enabled for IPv6-only VMs.
+      /// NAT64 is enabled for all the IPv6 subnet ranges. In dual stack subnets, NAT64 will only be enabled for IPv6-only VMs.
       case allIpv6Subnetworks
-      /// NAT64 is enabled for a list of IPv6 subnet ranges.
-      /// In dual stack subnets, NAT64 will only be enabled for IPv6-only VMs.
-      /// If this option is used, the nat64_subnetworks field must be specified.
+      /// NAT64 is enabled for a list of IPv6 subnet ranges. In dual stack subnets, NAT64 will only be enabled for IPv6-only VMs. If this option is used, the nat64_subnetworks field must be specified.
       case listOfIpv6Subnetworks
       /// Encodes an unknown integer value.
       ///
@@ -739,8 +640,7 @@
     public enum Type_: Codable, Equatable, Sendable {
       /// NAT used for private IP translation.
       case `private`
-      /// NAT used for public IP translation.
-      /// This is the default.
+      /// NAT used for public IP translation. This is the default.
       case `public`
       /// Encodes an unknown integer value.
       ///

@@ -18,10 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] The status of the group as configured. This has the same
-  /// structure as the operational field reported by the OperationalStatus
-  /// method, but does not take into account the operational status of each
-  /// resource.
+  /// [Output Only] The status of the group as configured. This has the same structure as the operational field reported by the OperationalStatus method, but does not take into account the operational status of each resource.
   public struct InterconnectGroupConfigured: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

@@ -21,10 +21,7 @@
   public struct NetworkEndpointWithHealthStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output only] The health status of network endpoint.
-    ///
-    /// Optional. Displayed only if the network endpoint has centralized health
-    /// checking configured.
+    /// Output only. [Output only] The health status of network endpoint. Optional. Displayed only if the network endpoint has centralized health checking configured.
     public var healths: [HealthStatusForNetworkEndpoint] = []
 
     /// Output only. [Output only] The network endpoint.

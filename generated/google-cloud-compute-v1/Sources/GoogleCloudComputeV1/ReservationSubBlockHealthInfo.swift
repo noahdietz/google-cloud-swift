@@ -25,8 +25,7 @@
     /// The number of degraded hosts in the reservation subBlock.
     public var degradedHostCount: Swift.Int32? = nil
 
-    /// The number of degraded infrastructure (e.g NV link domain) in the
-    /// reservation subblock.
+    /// The number of degraded infrastructure (e.g NV link domain) in the reservation subblock.
     public var degradedInfraCount: Swift.Int32? = nil
 
     /// The health status of the reservation subBlock.
@@ -35,8 +34,7 @@
     /// The number of healthy hosts in the reservation subBlock.
     public var healthyHostCount: Swift.Int32? = nil
 
-    /// The number of healthy infrastructure (e.g NV link domain) in the
-    /// reservation subblock.
+    /// The number of healthy infrastructure (e.g NV link domain) in the reservation subblock.
     public var healthyInfraCount: Swift.Int32? = nil
 
     /// Initialize a new instance of `ReservationSubBlockHealthInfo`.

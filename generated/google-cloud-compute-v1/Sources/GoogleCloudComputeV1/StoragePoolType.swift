@@ -21,22 +21,19 @@
   public struct StoragePoolType: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// [Output Only] The deprecation status associated with this storage pool
-    /// type.
+    /// [Output Only] The deprecation status associated with this storage pool type.
     public var deprecated: DeprecationStatus? = nil
 
     /// [Output Only] An optional description of this resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#storagePoolType for storage pool types.
+    /// Output only. [Output Only] Type of the resource. Always compute#storagePoolType for storage pool types.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Maximum storage pool size in GB.
@@ -57,8 +54,7 @@
     /// [Output Only] Minimum provisioned throughput.
     public var minPoolProvisionedThroughput: Swift.Int64? = nil
 
-    /// [Deprecated] This field is deprecated. Use minPoolProvisionedCapacityGb
-    /// instead.
+    /// [Deprecated] This field is deprecated. Use minPoolProvisionedCapacityGb instead.
     public var minSizeGb: Swift.Int64? = nil
 
     /// [Output Only] Name of the resource.
@@ -73,9 +69,7 @@
     /// [Output Only] The list of disk types supported in this storage pool type.
     public var supportedDiskTypes: [Swift.String] = []
 
-    /// [Output Only] URL of the zone where the storage pool type resides.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// [Output Only] URL of the zone where the storage pool type resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `StoragePoolType`.

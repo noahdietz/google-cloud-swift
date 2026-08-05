@@ -23,8 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Indicates the Connectivity Association Key Name (CKN)
-    /// currently being used if MACsec is operational.
+    /// Indicates the Connectivity Association Key Name (CKN) currently being used if MACsec is operational.
     public var ckn: Swift.String? = nil
 
     /// Indicates whether or not MACsec is operational on this link.

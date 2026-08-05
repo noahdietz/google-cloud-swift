@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// reCAPTCHA configuration options to be applied for the rule. If the
-    /// rule does not evaluate reCAPTCHA tokens, this field has no effect.
+    /// reCAPTCHA configuration options to be applied for the rule. If the rule does not evaluate reCAPTCHA tokens, this field has no effect.
     public var recaptchaOptions: SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions? = nil
 
     /// Initialize a new instance of `SecurityPolicyRuleMatcherExprOptions`.

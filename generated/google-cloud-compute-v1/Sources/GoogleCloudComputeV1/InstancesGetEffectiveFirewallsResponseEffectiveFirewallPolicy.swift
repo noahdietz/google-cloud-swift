@@ -22,8 +22,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Deprecated, please use short name instead. The display name
-    /// of the firewall policy.
+    /// Output only. [Output Only] Deprecated, please use short name instead. The display name of the firewall policy.
     @available(*, deprecated)
     public var displayName: Swift.String? = nil
 
@@ -33,20 +32,16 @@
     /// Output only. [Output Only] The packet mirroring rules that apply to the instance.
     public var packetMirroringRules: [FirewallPolicyRule] = []
 
-    /// Output only. [Output only] Priority of firewall policy association. Not applicable for
-    /// type=HIERARCHY.
+    /// Output only. [Output only] Priority of firewall policy association. Not applicable for type=HIERARCHY.
     public var priority: Swift.Int32? = nil
 
-    /// [Output Only] The rules that apply to the instance. Only rules that
-    /// target the specific VM instance are returned if target service accounts
-    /// or target secure tags are specified in the rules.
+    /// [Output Only] The rules that apply to the instance. Only rules that target the specific VM instance are returned if target service accounts or target secure tags are specified in the rules.
     public var rules: [FirewallPolicyRule] = []
 
     /// Output only. [Output Only] The short name of the firewall policy.
     public var shortName: Swift.String? = nil
 
-    /// Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY,
-    /// NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
+    /// Output only. [Output Only] The type of the firewall policy. Can be one of HIERARCHY, NETWORK, NETWORK_REGIONAL, SYSTEM_GLOBAL, SYSTEM_REGIONAL.
     public var type: InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Type_? = nil
 
     /// Initialize a new instance of `InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy`.

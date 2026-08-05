@@ -18,78 +18,56 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a License resource.
-  ///
-  /// A License represents billing and aggregate usage data forpublic andmarketplace images.
-  ///  *Caution* This resource is intended for
-  /// use only by third-party partners who are creatingCloud Marketplace
-  /// images.
+  /// Represents a License resource. A License represents billing and aggregate usage data for public and marketplace images. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
   public struct License: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies licenseCodes of licenses that can replace this license. Note:
-    /// such replacements are allowed even if removable_from_disk is false.
+    /// Specifies licenseCodes of licenses that can replace this license. Note: such replacements are allowed even if removable_from_disk is false.
     public var allowedReplacementLicenses: [Swift.String] = []
 
-    /// If true, this license can be appended to an existing disk's set of
-    /// licenses.
+    /// If true, this license can be appended to an existing disk's set of licenses.
     public var appendableToDisk: Swift.Bool? = nil
 
-    /// [Output Only] Deprecated. This field no longer reflects whether a license
-    /// charges a usage fee.
+    /// [Output Only] Deprecated. This field no longer reflects whether a license charges a usage fee.
     public var chargesUseFee: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional textual description of the resource; provided by the client
-    /// when the resource is created.
+    /// An optional textual description of the resource; provided by the client when the resource is created.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Specifies licenseCodes of licenses that are incompatible with this license.
-    /// If a license is incompatible with this license, it cannot be attached to
-    /// the same disk or image.
+    /// Specifies licenseCodes of licenses that are incompatible with this license. If a license is incompatible with this license, it cannot be attached to the same disk or image.
     public var incompatibleLicenses: [Swift.String] = []
 
-    /// Output only. [Output Only] Type of resource. Always compute#license for
-    /// licenses.
+    /// Output only. [Output Only] Type of resource. Always compute#license for licenses.
     public var kind: Swift.String? = nil
 
-    /// [Output Only] The unique code used to attach this license to images,
-    /// snapshots, and disks.
+    /// [Output Only] The unique code used to attach this license to images, snapshots, and disks.
     public var licenseCode: Swift.UInt64? = nil
 
-    /// If set, this license will be unable to be removed or replaced once attached
-    /// to a disk until the minimum_retention period has passed.
+    /// If set, this license will be unable to be removed or replaced once attached to a disk until the minimum_retention period has passed.
     public var minimumRetention: Duration? = nil
 
     /// If true, this license can only be used on VMs on multi tenant nodes.
     public var multiTenantOnly: Swift.Bool? = nil
 
-    /// Name of the resource. The name must be 1-63 characters long and
-    /// comply withRFC1035.
+    /// Name of the resource. The name must be 1-63 characters long and comply with RFC1035.
     public var name: Swift.String? = nil
 
-    /// If true, indicates this is an OS license. Only one OS license can be
-    /// attached to a disk or image at a time.
+    /// If true, indicates this is an OS license. Only one OS license can be attached to a disk or image at a time.
     public var osLicense: Swift.Bool? = nil
 
-    /// Input only. Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. Additional params passed with the request, but not persisted as part of resource payload.
     public var params: LicenseParams? = nil
 
-    /// If true, this license can be removed from a disk's set of licenses, with no
-    /// replacement license needed.
+    /// If true, this license can be removed from a disk's set of licenses, with no replacement license needed.
     public var removableFromDisk: Swift.Bool? = nil
 
-    /// Specifies the set of permissible coattached licenseCodes of licenses that
-    /// satisfy the coattachment requirement of this license. At least one license
-    /// from the set must be attached to the same disk or image as this license.
+    /// Specifies the set of permissible coattached licenseCodes of licenses that satisfy the coattachment requirement of this license. At least one license from the set must be attached to the same disk or image as this license.
     public var requiredCoattachedLicenses: [Swift.String] = []
 
     /// [Input Only] Deprecated.
@@ -104,12 +82,10 @@
     /// If true, this license can only be used on VMs on sole tenant nodes.
     public var soleTenantOnly: Swift.Bool? = nil
 
-    /// If false, licenses will not be copied from the source resource when
-    /// creating an image from a disk, disk from snapshot, or snapshot from disk.
+    /// If false, licenses will not be copied from the source resource when creating an image from a disk, disk from snapshot, or snapshot from disk.
     public var transferable: Swift.Bool? = nil
 
-    /// Output only. [Output Only] Last update timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Last update timestamp in RFC3339 text format.
     public var updateTimestamp: Swift.String? = nil
 
     /// Initialize a new instance of `License`.

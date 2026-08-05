@@ -22,17 +22,13 @@
       ._AnyPackable,
     Sendable
   {
-    /// Represents an instance group or network endpoint group behind the source
-    /// backend service. Only used if the sourceType of the regionHealthSource
-    /// is BACKEND_SERVICE.
+    /// Represents an instance group or network endpoint group behind the source backend service. Only used if the sourceType of the regionHealthSource is BACKEND_SERVICE.
     public var backends: [HealthSourcesGetHealthResponseSourceInfoBackendInfo] = []
 
-    /// Fully qualified URL of the forwarding rule associated with the source
-    /// resource if it is a L4ILB backend service.
+    /// Fully qualified URL of the forwarding rule associated with the source resource if it is a L4ILB backend service.
     public var forwardingRule: Swift.String? = nil
 
-    /// Fully qualified URL of the associated source resource. This is always a
-    /// backend service URL.
+    /// Fully qualified URL of the associated source resource. This is always a backend service URL.
     public var source: Swift.String? = nil
 
     /// Initialize a new instance of `HealthSourcesGetHealthResponseSourceInfo`.

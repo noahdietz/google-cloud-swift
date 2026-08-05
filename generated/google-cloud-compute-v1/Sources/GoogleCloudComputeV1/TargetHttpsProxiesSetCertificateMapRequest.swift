@@ -22,9 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// URL of the Certificate Map to associate with this TargetHttpsProxy.
-    ///
-    ///  Accepted format is//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}.
+    /// URL of the Certificate Map to associate with this TargetHttpsProxy. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
     public var certificateMap: Swift.String? = nil
 
     /// Initialize a new instance of `TargetHttpsProxiesSetCertificateMapRequest`.

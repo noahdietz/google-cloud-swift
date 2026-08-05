@@ -18,74 +18,44 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A public advertised prefix represents an aggregated IP prefix or netblock
-  /// which customers bring to cloud. The IP prefix is a single unit of route
-  /// advertisement and is announced globally to the internet.
+  /// A public advertised prefix represents an aggregated IP prefix or netblock which customers bring to cloud. The IP prefix is a single unit of route advertisement and is announced globally to the internet.
   public struct PublicAdvertisedPrefix: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Output only. [Output Only] The version of BYOIP API.
     public var byoipApiVersion: PublicAdvertisedPrefix.ByoipApiVersion? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     /// The address to be used for reverse DNS verification.
     public var dnsVerificationIp: Swift.String? = nil
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a new PublicAdvertisedPrefix. An up-to-date
-    /// fingerprint must be provided in order to update thePublicAdvertisedPrefix, otherwise the request will fail with
-    /// error 412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve a PublicAdvertisedPrefix.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a new PublicAdvertisedPrefix. An up-to-date fingerprint must be provided in order to update the PublicAdvertisedPrefix, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a PublicAdvertisedPrefix.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource type. The server
-    /// generates this identifier.
+    /// Output only. [Output Only] The unique identifier for the resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// The address range, in CIDR format, represented by this public advertised
-    /// prefix.
+    /// The address range, in CIDR format, represented by this public advertised prefix.
     public var ipCidrRange: Swift.String? = nil
 
     /// The internet access type for IPv6 Public Advertised Prefixes.
     public var ipv6AccessType: PublicAdvertisedPrefix.Ipv6AccessType? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#publicAdvertisedPrefix for public advertised prefixes.
+    /// Output only. [Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised prefixes.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Specifies how child public delegated prefix will be scoped. It could
-    /// be one of following values:
-    ///
-    ///
-    ///      - `REGIONAL`: The public delegated prefix is regional only. The
-    ///      provisioning will take a few minutes.
-    ///      - `GLOBAL`: The public delegated prefix is global only. The
-    ///      provisioning will take ~4 weeks.
-    ///      - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is
-    ///       BYOIP V1 legacy prefix. This is output only value and no longer
-    ///       supported in BYOIP V2.
+    /// Specifies how child public delegated prefix will be scoped. It could be one of following values: - `REGIONAL`: The public delegated prefix is regional only. The provisioning will take a few minutes. - `GLOBAL`: The public delegated prefix is global only. The provisioning will take ~4 weeks. - `GLOBAL_AND_REGIONAL` [output only]: The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
     public var pdpScope: PublicAdvertisedPrefix.PdpScope? = nil
 
-    /// Output only. [Output Only] The list of public delegated prefixes that exist for this
-    /// public advertised prefix.
+    /// Output only. [Output Only] The list of public delegated prefixes that exist for this public advertised prefix.
     public var publicDelegatedPrefixs: [PublicAdvertisedPrefixPublicDelegatedPrefix] = []
 
     /// Output only. [Output Only] Server-defined URL for the resource.
@@ -94,17 +64,7 @@
     /// [Output Only] The shared secret to be used for reverse DNS verification.
     public var sharedSecret: Swift.String? = nil
 
-    /// The status of the public advertised prefix. Possible values include:
-    ///
-    ///
-    ///      - `INITIAL`: RPKI validation is complete.
-    ///      - `PTR_CONFIGURED`: User has configured the PTR.
-    ///      - `VALIDATED`: Reverse DNS lookup is successful.
-    ///      - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed.
-    ///      - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being
-    ///      configured.
-    ///      - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured.
-    ///      - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
+    /// The status of the public advertised prefix. Possible values include: - `INITIAL`: RPKI validation is complete. - `PTR_CONFIGURED`: User has configured the PTR. - `VALIDATED`: Reverse DNS lookup is successful. - `REVERSE_DNS_LOOKUP_FAILED`: Reverse DNS lookup failed. - `PREFIX_CONFIGURATION_IN_PROGRESS`: The prefix is being configured. - `PREFIX_CONFIGURATION_COMPLETE`: The prefix is fully configured. - `PREFIX_REMOVAL_IN_PROGRESS`: The prefix is being removed.
     public var status: PublicAdvertisedPrefix.Status? = nil
 
     /// Initialize a new instance of `PublicAdvertisedPrefix`.
@@ -202,13 +162,9 @@
     ///
     /// [google.cloud.compute.v1.PublicAdvertisedPrefix.byoipApiVersion]: <doc:PublicAdvertisedPrefix/ByoipApiVersion>
     public enum ByoipApiVersion: Codable, Equatable, Sendable {
-      /// This public advertised prefix can be used to create both regional and
-      /// global public delegated prefixes. It usually takes 4 weeks to create or
-      /// delete a public delegated prefix. The BGP status cannot be changed.
+      /// This public advertised prefix can be used to create both regional and global public delegated prefixes. It usually takes 4 weeks to create or delete a public delegated prefix. The BGP status cannot be changed.
       case v1
-      /// This public advertised prefix can only be used to create regional public
-      /// delegated prefixes. Public delegated prefix creation and deletion takes
-      /// minutes and the BGP status can be modified.
+      /// This public advertised prefix can only be used to create regional public delegated prefixes. Public delegated prefix creation and deletion takes minutes and the BGP status can be modified.
       case v2
       /// Encodes an unknown integer value.
       ///
@@ -306,13 +262,9 @@
     ///
     /// [google.cloud.compute.v1.PublicAdvertisedPrefix.ipv6AccessType]: <doc:PublicAdvertisedPrefix/Ipv6AccessType>
     public enum Ipv6AccessType: Codable, Equatable, Sendable {
-      /// Default IPv6 access type. The prefix will be announced to the internet.
-      /// All children Public Delegated Prefixes will have IPv6 access type as
-      /// EXTERNAL.
+      /// Default IPv6 access type. The prefix will be announced to the internet. All children Public Delegated Prefixes will have IPv6 access type as EXTERNAL.
       case external
-      /// The prefix will not be announced to the internet. Prefix will be used
-      /// privately within Cloud. All children Public Delegated Prefixes
-      /// will have IPv6 access type as INTERNAL.
+      /// The prefix will not be announced to the internet. Prefix will be used privately within Cloud. All children Public Delegated Prefixes will have IPv6 access type as INTERNAL.
       case `internal`
       /// Encodes an unknown integer value.
       ///
@@ -410,14 +362,11 @@
     ///
     /// [google.cloud.compute.v1.PublicAdvertisedPrefix.pdpScope]: <doc:PublicAdvertisedPrefix/PdpScope>
     public enum PdpScope: Codable, Equatable, Sendable {
-      /// The public delegated prefix is global only. The provisioning will take ~4
-      /// weeks.
+      /// The public delegated prefix is global only. The provisioning will take ~4 weeks.
       case global
-      /// The public delegated prefixes is BYOIP V1 legacy prefix. This is output
-      /// only value and no longer supported in BYOIP V2.
+      /// The public delegated prefixes is BYOIP V1 legacy prefix. This is output only value and no longer supported in BYOIP V2.
       case globalAndRegional
-      /// The public delegated prefix is regional only. The provisioning will take
-      /// a few minutes.
+      /// The public delegated prefix is regional only. The provisioning will take a few minutes.
       case regional
       /// Encodes an unknown integer value.
       ///

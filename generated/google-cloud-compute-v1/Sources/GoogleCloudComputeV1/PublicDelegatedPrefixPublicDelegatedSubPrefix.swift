@@ -29,24 +29,19 @@
     /// Name of the project scoping this PublicDelegatedSubPrefix.
     public var delegateeProject: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations.
-    /// Applicable for IPv4 PDPs only.
+    /// Output only. [Output Only] Whether this PDP supports enhanced IPv4 allocations. Applicable for IPv4 PDPs only.
     public var enableEnhancedIpv4Allocation: Swift.Bool? = nil
 
-    /// The IP address range, in CIDR format, represented by this sub public
-    /// delegated prefix.
+    /// The IP address range, in CIDR format, represented by this sub public delegated prefix.
     public var ipCidrRange: Swift.String? = nil
 
-    /// Output only. [Output Only] The internet access type for IPv6 Public Delegated Sub
-    /// Prefixes. Inherited from parent prefix.
+    /// Output only. [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from parent prefix.
     public var ipv6AccessType: PublicDelegatedPrefixPublicDelegatedSubPrefix.Ipv6AccessType? = nil
 
-    /// Whether the sub prefix is delegated to create Address resources in the
-    /// delegatee project.
+    /// Whether the sub prefix is delegated to create Address resources in the delegatee project.
     public var isAddress: Swift.Bool? = nil
 
     /// The PublicDelegatedSubPrefix mode for IPv6 only.
@@ -55,8 +50,7 @@
     /// The name of the sub public delegated prefix.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] The region of the sub public delegated prefix if it is
-    /// regional. If absent, the sub prefix is global.
+    /// Output only. [Output Only] The region of the sub public delegated prefix if it is regional. If absent, the sub prefix is global.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] The status of the sub public delegated prefix.
@@ -82,13 +76,9 @@
     ///
     /// [google.cloud.compute.v1.PublicDelegatedPrefixPublicDelegatedSubPrefix.ipv6AccessType]: <doc:PublicDelegatedPrefixPublicDelegatedSubPrefix/Ipv6AccessType>
     public enum Ipv6AccessType: Codable, Equatable, Sendable {
-      /// The parent public advertised prefix will be announced to the internet.
-      /// All children public delegated prefixes will have IPv6 access type as
-      /// EXTERNAL.
+      /// The parent public advertised prefix will be announced to the internet. All children public delegated prefixes will have IPv6 access type as EXTERNAL.
       case external
-      /// The parent public advertised prefix will not be announced to the
-      /// internet. Prefix will be used privately within Cloud. All children
-      /// public delegated prefixes will have IPv6 access type as INTERNAL.
+      /// The parent public advertised prefix will not be announced to the internet. Prefix will be used privately within Cloud. All children public delegated prefixes will have IPv6 access type as INTERNAL.
       case `internal`
       /// Encodes an unknown integer value.
       ///
@@ -186,21 +176,13 @@
     ///
     /// [google.cloud.compute.v1.PublicDelegatedPrefixPublicDelegatedSubPrefix.mode]: <doc:PublicDelegatedPrefixPublicDelegatedSubPrefix/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// The public delegated prefix is used for further sub-delegation only. Such
-      /// prefixes cannot set allocatablePrefixLength.
+      /// The public delegated prefix is used for further sub-delegation only. Such prefixes cannot set allocatablePrefixLength.
       case delegation
-      /// The public delegated prefix is used for creating forwarding rules only.
-      /// Such prefixes cannot set publicDelegatedSubPrefixes. Parent public
-      /// delegated prefix must have IPv6 access type as EXTERNAL.
+      /// The public delegated prefix is used for creating forwarding rules only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public delegated prefix must have IPv6 access type as EXTERNAL.
       case externalIpv6ForwardingRuleCreation
-      /// The public delegated prefix is used for creating dual-mode subnetworks
-      /// only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public
-      /// delegated prefix must have IPv6 access type as EXTERNAL.
+      /// The public delegated prefix is used for creating dual-mode subnetworks only. Such prefixes cannot set publicDelegatedSubPrefixes. Parent public delegated prefix must have IPv6 access type as EXTERNAL.
       case externalIpv6SubnetworkCreation
-      /// The public delegated prefix is used for creating dual stack or IPv6-only
-      /// subnetwork with internal access only. Such prefixes cannot set
-      /// publicDelegatedSubPrefixes and allocatablePrefixLength. Parent public
-      /// delegated prefix must have IPv6 access type as INTERNAL.
+      /// The public delegated prefix is used for creating dual stack or IPv6-only subnetwork with internal access only. Such prefixes cannot set publicDelegatedSubPrefixes and allocatablePrefixLength. Parent public delegated prefix must have IPv6 access type as INTERNAL.
       case internalIpv6SubnetworkCreation
       /// Encodes an unknown integer value.
       ///

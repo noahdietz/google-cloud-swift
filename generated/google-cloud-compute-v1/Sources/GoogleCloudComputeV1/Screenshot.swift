@@ -25,8 +25,7 @@
     /// [Output Only] The Base64-encoded screenshot data.
     public var contents: Swift.String? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#screenshot
-    /// for the screenshots.
+    /// Output only. [Output Only] Type of the resource. Always compute#screenshot for the screenshots.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `Screenshot`.

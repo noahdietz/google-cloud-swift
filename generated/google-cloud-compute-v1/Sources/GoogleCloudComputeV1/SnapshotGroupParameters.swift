@@ -21,23 +21,13 @@
   public struct SnapshotGroupParameters: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// URLs of the zones where disks should be replicated to. Only applicable
-    /// for regional resources.
+    /// URLs of the zones where disks should be replicated to. Only applicable for regional resources.
     public var replicaZones: [Swift.String] = []
 
-    /// The source snapshot group used to create disks. You can provide this as a
-    /// partial or full URL to the resource. For example, the following are valid
-    /// values:
-    ///
-    ///
-    ///      - https://www.googleapis.com/compute/v1/projects/project/global/snapshotGroups/snapshotGroup
-    ///    - projects/project/global/snapshotGroups/snapshotGroup
-    ///      - global/snapshotGroups/snapshotGroup
+    /// The source snapshot group used to create disks. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project /global/snapshotGroups/snapshotGroup - projects/project/global/snapshotGroups/snapshotGroup - global/snapshotGroups/snapshotGroup
     public var sourceSnapshotGroup: Swift.String? = nil
 
-    /// URL of the disk type resource describing which disk type to use to create
-    /// disks. Provide this when creating the disk. For example:projects/project/zones/zone/diskTypes/pd-ssd. See Persistent disk
-    /// types.
+    /// URL of the disk type resource describing which disk type to use to create disks. Provide this when creating the disk. For example: projects/project /zones/zone/diskTypes/pd-ssd . See Persistent disk types.
     public var type: Swift.String? = nil
 
     /// Initialize a new instance of `SnapshotGroupParameters`.

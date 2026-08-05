@@ -283,8 +283,7 @@
       try await self.inner.getEffectiveFirewalls(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "regionNetworkFirewallPolicies_getIamPolicy")
     public func getIamPolicy(
@@ -356,8 +355,7 @@
       )
     }
 
-    /// Lists all the network firewall policies that have been configured
-    /// for the specified project in the given region.
+    /// Lists all the network firewall policies that have been configured for the specified project in the given region.
     ///
     /// @Snippet(path: "regionNetworkFirewallPolicies_list")
     public func list(
@@ -367,8 +365,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Lists all the network firewall policies that have been configured
-    /// for the specified project in the given region.
+    /// Lists all the network firewall policies that have been configured for the specified project in the given region.
     ///
     /// @Snippet(path: "regionNetworkFirewallPolicies_list")
     public func list(
@@ -592,8 +589,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "regionNetworkFirewallPolicies_setIamPolicy")
     public func setIamPolicy(

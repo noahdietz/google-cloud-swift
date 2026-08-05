@@ -22,14 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Instances in which state should be returned. Valid options are:
-    /// 'ALL', 'RUNNING'. By default, it lists all instances.
+    /// Instances in which state should be returned. Valid options are: 'ALL', 'RUNNING'. By default, it lists all instances.
     public var instanceState: RegionInstanceGroupsListInstancesRequest.InstanceState? = nil
 
-    /// Name of port user is interested in. It is optional. If it is set, only
-    /// information about this ports will be returned. If it is not set, all the
-    /// named ports will be returned.
-    /// Always lists all instances.
+    /// Name of port user is interested in. It is optional. If it is set, only information about this ports will be returned. If it is not set, all the named ports will be returned. Always lists all instances.
     public var portName: Swift.String? = nil
 
     /// Initialize a new instance of `RegionInstanceGroupsListInstancesRequest`.

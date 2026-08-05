@@ -18,34 +18,23 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A resource that represents a cross-site network.
-  ///
-  /// You can use cross-site networks to connect your on-premises networks to
-  /// each other through Interconnect connections.
+  /// A resource that represents a cross-site network. You can use cross-site networks to connect your on-premises networks to each other through Interconnect connections.
   public struct CrossSiteNetwork: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// An optional description of the cross-site network.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource type. The server
-    /// generates this identifier.
+    /// Output only. [Output Only] The unique identifier for the resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for cross-site networks.
+    /// Output only. [Output Only] Type of the resource. Always compute#crossSiteNetwork for cross-site networks.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.

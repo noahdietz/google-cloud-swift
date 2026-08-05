@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Bulk instance operation is the creation of VMs in a MIG when the
-  /// targetSizePolicy.mode is set to BULK.
+  /// Bulk instance operation is the creation of VMs in a MIG when the targetSizePolicy.mode is set to BULK.
   public struct InstanceGroupManagerStatusBulkInstanceOperation: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -27,8 +26,7 @@
     /// Output only. Informs whether bulk instance operation is in progress.
     public var inProgress: Swift.Bool? = nil
 
-    /// Output only. Information from the last progress check of bulk instance
-    /// operation.
+    /// Output only. Information from the last progress check of bulk instance operation.
     public var lastProgressCheck:
       InstanceGroupManagerStatusBulkInstanceOperationLastProgressCheck? = nil
 

@@ -18,84 +18,38 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an SSL certificate resource.
-  ///
-  /// Google Compute Engine has two SSL certificate resources:
-  ///
-  /// * [Global](/compute/docs/reference/rest/v1/sslCertificates)
-  /// * [Regional](/compute/docs/reference/rest/v1/regionSslCertificates)
-  ///
-  ///
-  /// The global SSL certificates (sslCertificates) are used by:
-  ///
-  ///    - Global external Application Load Balancers
-  ///    - Classic Application Load Balancers
-  ///    - Proxy Network Load Balancers (with target SSL proxies)
-  ///
-  ///
-  ///
-  /// The regional SSL certificates (regionSslCertificates) are used
-  /// by:
-  ///
-  ///    - Regional external Application Load Balancers
-  ///    - Regional internal Application Load Balancers
-  ///
-  ///
-  ///
-  /// Optionally, certificate file contents that you upload can contain a set of up
-  /// to five PEM-encoded certificates.
-  /// The API call creates an object (sslCertificate) that holds this data.
-  /// You can use SSL keys and certificates to secure connections to a load
-  /// balancer.
-  /// For more information, read
-  /// Creating and using SSL certificates,SSL certificates
-  /// quotas and limits, and
-  /// Troubleshooting SSL certificates.
+  /// Represents an SSL certificate resource. Google Compute Engine has two SSL certificate resources: * [Global](/compute/docs/reference/rest/v1/sslCertificates) * [Regional](/compute/docs/reference/rest/v1/regionSslCertificates) The global SSL certificates (sslCertificates) are used by: - Global external Application Load Balancers - Classic Application Load Balancers - Proxy Network Load Balancers (with target SSL proxies) The regional SSL certificates (regionSslCertificates) are used by: - Regional external Application Load Balancers - Regional internal Application Load Balancers Optionally, certificate file contents that you upload can contain a set of up to five PEM-encoded certificates. The API call creates an object (sslCertificate) that holds this data. You can use SSL keys and certificates to secure connections to a load balancer. For more information, read Creating and using SSL certificates, SSL certificates quotas and limits, and Troubleshooting SSL certificates.
   public struct SslCertificate: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A value read into memory from a certificate file. The certificate file must
-    /// be in PEM format. The certificate chain must be no greater than 5 certs
-    /// long. The chain must include at least one intermediate cert.
+    /// A value read into memory from a certificate file. The certificate file must be in PEM format. The certificate chain must be no greater than 5 certs long. The chain must include at least one intermediate cert.
     public var certificate: Swift.String? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     /// Output only. [Output Only] Expire time of the certificate. RFC3339
     public var expireTime: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#sslCertificate for SSL certificates.
+    /// Output only. [Output Only] Type of the resource. Always compute#sslCertificate for SSL certificates.
     public var kind: Swift.String? = nil
 
     /// Configuration and status of a managed SSL certificate.
     public var managed: SslCertificateManagedSslCertificate? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// A value read into memory from a write-only private key file. The private
-    /// key file must be in PEM format. For security, only insert
-    /// requests include this field.
+    /// A value read into memory from a write-only private key file. The private key file must be in PEM format. For security, only insert requests include this field.
     public var privateKey: Swift.String? = nil
 
-    /// Output only. [Output Only] URL of the region where the regional SSL Certificate
-    /// resides. This field is not applicable to global SSL Certificate.
+    /// Output only. [Output Only] URL of the region where the regional SSL Certificate resides. This field is not applicable to global SSL Certificate.
     public var region: Swift.String? = nil
 
     /// [Output only] Server-defined URL for the resource.
@@ -104,12 +58,10 @@
     /// Configuration and status of a self-managed SSL certificate.
     public var selfManaged: SslCertificateSelfManagedSslCertificate? = nil
 
-    /// Output only. [Output Only] Domains associated with the certificate via Subject
-    /// Alternative Name.
+    /// Output only. [Output Only] Domains associated with the certificate via Subject Alternative Name.
     public var subjectAlternativeNames: [Swift.String] = []
 
-    /// (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or
-    /// "MANAGED". If not specified, the certificate is self-managed and the fieldscertificate and private_key are used.
+    /// (Optional) Specifies the type of SSL certificate, either "SELF_MANAGED" or "MANAGED". If not specified, the certificate is self-managed and the fields certificate and private_key are used.
     public var type: SslCertificate.Type_? = nil
 
     /// Initialize a new instance of `SslCertificate`.

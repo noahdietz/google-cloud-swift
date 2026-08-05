@@ -18,23 +18,17 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a match condition that incoming network traffic is evaluated
-  /// against.
+  /// Represents a match condition that incoming network traffic is evaluated against.
   public struct SecurityPolicyRuleNetworkMatcher: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Destination IPv4/IPv6 addresses or CIDR prefixes, in standard text
-    /// format.
+    /// Destination IPv4/IPv6 addresses or CIDR prefixes, in standard text format.
     public var destIpRanges: [Swift.String] = []
 
-    /// Destination port numbers for TCP/UDP/SCTP. Each element can be a 16-bit
-    /// unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
+    /// Destination port numbers for TCP/UDP/SCTP. Each element can be a 16-bit unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
     public var destPorts: [Swift.String] = []
 
-    /// IPv4 protocol / IPv6 next header (after extension headers). Each
-    /// element can be an 8-bit unsigned decimal number (e.g. "6"), range (e.g.
-    /// "253-254"), or one of the following protocol names: "tcp", "udp",
-    /// "icmp", "esp", "ah", "ipip", or "sctp".
+    /// IPv4 protocol / IPv6 next header (after extension headers). Each element can be an 8-bit unsigned decimal number (e.g. "6"), range (e.g. "253-254"), or one of the following protocol names: "tcp", "udp", "icmp", "esp", "ah", "ipip", or "sctp".
     public var ipProtocols: [Swift.String] = []
 
     /// BGP Autonomous System Number associated with the source IP address.
@@ -43,16 +37,13 @@
     /// Source IPv4/IPv6 addresses or CIDR prefixes, in standard text format.
     public var srcIpRanges: [Swift.String] = []
 
-    /// Source port numbers for TCP/UDP/SCTP. Each element can be a 16-bit
-    /// unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
+    /// Source port numbers for TCP/UDP/SCTP. Each element can be a 16-bit unsigned decimal number (e.g. "80") or range (e.g. "0-1023").
     public var srcPorts: [Swift.String] = []
 
-    /// Two-letter ISO 3166-1 alpha-2 country code associated with the source
-    /// IP address.
+    /// Two-letter ISO 3166-1 alpha-2 country code associated with the source IP address.
     public var srcRegionCodes: [Swift.String] = []
 
-    /// User-defined fields. Each element names a defined field and lists the
-    /// matching values for that field.
+    /// User-defined fields. Each element names a defined field and lists the matching values for that field.
     public var userDefinedFields: [SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch] = []
 
     /// Initialize a new instance of `SecurityPolicyRuleNetworkMatcher`.

@@ -22,26 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// The status of the current value when compared to the warning and alarm
-    /// levels for the receiving or transmitting transceiver. Possible states
-    /// include:
-    ///
-    ///
-    ///     - OK: The value has not crossed a warning threshold.
-    ///     - LOW_WARNING: The value has crossed below the low
-    ///     warning threshold.
-    ///    - HIGH_WARNING: The value has
-    ///     crossed above the high warning threshold.
-    ///     - LOW_ALARM: The value has crossed below the low alarm
-    ///     threshold.
-    ///     - HIGH_ALARM: The value has crossed above the high alarm
-    ///     threshold.
+    /// The status of the current value when compared to the warning and alarm levels for the receiving or transmitting transceiver. Possible states include: - OK: The value has not crossed a warning threshold. - LOW_WARNING: The value has crossed below the low warning threshold. - HIGH_WARNING: The value has crossed above the high warning threshold. - LOW_ALARM: The value has crossed below the low alarm threshold. - HIGH_ALARM: The value has crossed above the high alarm threshold.
     public var state: InterconnectDiagnosticsLinkOpticalPower.State? = nil
 
-    /// Value of the current receiving or transmitting optical power, read in
-    /// dBm. Take a known good optical value, give it a 10% margin and trigger
-    /// warnings relative to that value. In general, a -7dBm warning and a -11dBm
-    /// alarm are good optical value estimates for most links.
+    /// Value of the current receiving or transmitting optical power, read in dBm. Take a known good optical value, give it a 10% margin and trigger warnings relative to that value. In general, a -7dBm warning and a -11dBm alarm are good optical value estimates for most links.
     public var value: Swift.Float? = nil
 
     /// Initialize a new instance of `InterconnectDiagnosticsLinkOpticalPower`.
@@ -66,17 +50,13 @@
     public enum State: Codable, Equatable, Sendable {
       /// The value has crossed above the high alarm threshold.
       case highAlarm
-      /// The value of the current optical power has crossed above the high
-      /// warning threshold.
+      /// The value of the current optical power has crossed above the high warning threshold.
       case highWarning
-      /// The value of the current optical power has crossed below the low alarm
-      /// threshold.
+      /// The value of the current optical power has crossed below the low alarm threshold.
       case lowAlarm
-      /// The value of the current optical power has crossed below the low
-      /// warning threshold.
+      /// The value of the current optical power has crossed below the low warning threshold.
       case lowWarning
-      /// The value of the current optical power has not crossed a warning
-      /// threshold.
+      /// The value of the current optical power has not crossed a warning threshold.
       case ok
       /// Encodes an unknown integer value.
       ///

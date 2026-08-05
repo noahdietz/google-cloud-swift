@@ -21,8 +21,7 @@
   public struct ResourceGroupReference: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A URI referencing one of the instance groups or network endpoint groups
-    /// listed in the backend service.
+    /// A URI referencing one of the instance groups or network endpoint groups listed in the backend service.
     public var group: Swift.String? = nil
 
     /// Initialize a new instance of `ResourceGroupReference`.

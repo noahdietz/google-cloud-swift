@@ -22,51 +22,34 @@
   public struct VmExtensionPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// An optional description of this resource.
     public var description: Swift.String? = nil
 
-    /// Required. A map of extension names (for example, "ops-agent") to their corresponding
-    /// policy configurations.
+    /// Required. A map of extension names (for example, "ops-agent") to their corresponding policy configurations.
     public var extensionPolicies: [Swift.String: VmExtensionPolicyExtensionPolicy] = [:]
 
-    /// Optional. Output only. [Output Only] Link to the global policy that manages this zone policy, if
-    /// applicable.
+    /// Optional. Output only. [Output Only] Link to the global policy that manages this zone policy, if applicable.
     public var globalResourceLink: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Optional. Selectors to target VMs for this policy. VMs are selected if they match
-    /// *any* of the provided selectors (logical OR). If this list is empty, the
-    /// policy applies to all VMs.
+    /// Optional. Selectors to target VMs for this policy. VMs are selected if they match *any* of the provided selectors (logical OR). If this list is empty, the policy applies to all VMs.
     public var instanceSelectors: [VmExtensionPolicyInstanceSelector] = []
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#vmExtensionPolicy.
+    /// Output only. [Output Only] Type of the resource. Always compute#vmExtensionPolicy.
     public var kind: Swift.String? = nil
 
     /// Optional. Output only. [Output Only] Indicates if this policy is managed by a global policy.
     public var managedByGlobal: Swift.Bool? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-    /// which means the first character must be a lowercase letter, and all
-    /// following characters must be a dash, lowercase letter, or digit, except
-    /// the last character, which cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Optional. Priority of this policy. Used to resolve conflicts when multiple policies
-    /// apply to the same extension.
-    /// The policy priority is an integer from 0 to 65535, inclusive. Lower
-    /// integers indicate higher priorities. If you do not specify a priority when
-    /// creating a rule, it is assigned a priority of 1000. If priorities are
-    /// equal, the policy with the most recent creation timestamp takes precedence.
+    /// Optional. Priority of this policy. Used to resolve conflicts when multiple policies apply to the same extension. The policy priority is an integer from 0 to 65535, inclusive. Lower integers indicate higher priorities. If you do not specify a priority when creating a rule, it is assigned a priority of 1000. If priorities are equal, the policy with the most recent creation timestamp takes precedence.
     public var priority: Swift.Int32? = nil
 
     /// Output only. [Output Only] Server-defined fully-qualified URL for this resource.
@@ -78,8 +61,7 @@
     /// Optional. Output only. [Output Only] Current state of the policy: ACTIVE or DELETING.
     public var state: VmExtensionPolicy.State? = nil
 
-    /// Output only. [Output Only] Update timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Update timestamp in RFC3339 text format.
     public var updateTimestamp: Swift.String? = nil
 
     /// Initialize a new instance of `VmExtensionPolicy`.
@@ -102,12 +84,9 @@
     ///
     /// [google.cloud.compute.v1.VmExtensionPolicy.state]: <doc:VmExtensionPolicy/State>
     public enum State: Codable, Equatable, Sendable {
-      /// The policy is active and applied to matching VMs.
-      /// Newly created VMs that match the policy will also receive the
-      /// extension policy.
+      /// The policy is active and applied to matching VMs. Newly created VMs that match the policy will also receive the extension policy.
       case active
-      /// The policy is in the process of being deleted. After the extension is
-      /// removed from all matching VMs, the policy will be deleted.
+      /// The policy is in the process of being deleted. After the extension is removed from all matching VMs, the policy will be deleted.
       case deleting
       /// Default value. Do not use.
       case unspecified

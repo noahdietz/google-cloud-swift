@@ -18,29 +18,17 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration for location policy among multiple possible locations
-  /// (e.g. preferences for zone selection among zones in a single region).
+  /// Configuration for location policy among multiple possible locations (e.g. preferences for zone selection among zones in a single region).
   public struct LocationPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Location configurations mapped by location name.
-    /// Currently only zone names are supported and must be represented as valid
-    /// internal URLs, such as zones/us-central1-a.
-    /// The bulkInsert operation doesn't create instances in an AI zone, even if
-    /// an AI zone is available in the specified region. For example, if you set a
-    /// DENY preference for us-central1-a, Compute Engine will consider
-    /// us-central1-b and us-central1-c for instance creation, but not
-    /// us-central1-ai1a. Also, you can't use the locations[] configuration to
-    /// allow instance creation in an AI zone. To include an AI zone in bulkInsert
-    /// operations, use the locationPolicy.zones[] field.
+    /// Location configurations mapped by location name. Currently only zone names are supported and must be represented as valid internal URLs, such as zones/us-central1-a. The bulkInsert operation doesn't create instances in an AI zone, even if an AI zone is available in the specified region. For example, if you set a DENY preference for us-central1-a, Compute Engine will consider us-central1-b and us-central1-c for instance creation, but not us-central1-ai1a. Also, you can't use the locations[] configuration to allow instance creation in an AI zone. To include an AI zone in bulkInsert operations, use the locationPolicy.zones[] field.
     public var locations: [Swift.String: LocationPolicyLocation] = [:]
 
     /// Strategy for distributing VMs across zones in a region.
     public var targetShape: LocationPolicy.TargetShape? = nil
 
-    /// The bulkInsert operation applies any preferences set in the locations
-    /// field to the specific zones listed in the zones field if the same zones
-    /// are specified in both fields.
+    /// The bulkInsert operation applies any preferences set in the locations field to the specific zones listed in the zones field if the same zones are specified in both fields.
     public var zones: [LocationPolicyZoneConfiguration] = []
 
     /// Initialize a new instance of `LocationPolicy`.
@@ -63,20 +51,11 @@
     ///
     /// [google.cloud.compute.v1.LocationPolicy.targetShape]: <doc:LocationPolicy/TargetShape>
     public enum TargetShape: Codable, Equatable, Sendable {
-      /// GCE picks zones for creating VM instances to fulfill the requested
-      /// number of VMs within present resource constraints and to maximize
-      /// utilization of unused zonal reservations. Recommended for batch workloads
-      /// that do not require high availability.
+      /// GCE picks zones for creating VM instances to fulfill the requested number of VMs within present resource constraints and to maximize utilization of unused zonal reservations. Recommended for batch workloads that do not require high availability.
       case any
-      /// GCE always selects a single zone for all the VMs, optimizing for resource
-      /// quotas, available reservations and general capacity. Recommended for
-      /// batch workloads that cannot tollerate distribution over multiple zones.
-      /// This the default shape in Bulk Insert and Capacity Advisor APIs.
+      /// GCE always selects a single zone for all the VMs, optimizing for resource quotas, available reservations and general capacity. Recommended for batch workloads that cannot tollerate distribution over multiple zones. This the default shape in Bulk Insert and Capacity Advisor APIs.
       case anySingleZone
-      /// GCE prioritizes acquisition of resources, scheduling VMs in zones
-      /// where resources are available while distributing VMs as evenly as
-      /// possible across allowed zones to minimize the impact of zonal failure.
-      /// Recommended for highly available serving workloads.
+      /// GCE prioritizes acquisition of resources, scheduling VMs in zones where resources are available while distributing VMs as evenly as possible across allowed zones to minimize the impact of zonal failure. Recommended for highly available serving workloads.
       case balanced
       /// Encodes an unknown integer value.
       ///

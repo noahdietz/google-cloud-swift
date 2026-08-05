@@ -18,165 +18,68 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an IP Address resource.
-  ///
-  /// Google Compute Engine has two IP Address resources:
-  ///
-  /// * [Global (external and
-  /// internal)](https://cloud.google.com/compute/docs/reference/rest/v1/globalAddresses)
-  /// * [Regional (external and
-  /// internal)](https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
-  ///
-  /// For more information, see
-  /// Reserving a static external IP address.
+  /// Represents an IP Address resource. Google Compute Engine has two IP Address resources: * [Global (external and internal)](https://cloud.google.com/compute/docs/reference/rest/v1/globalAddresses) * [Regional (external and internal)](https://cloud.google.com/compute/docs/reference/rest/v1/addresses) For more information, see Reserving a static external IP address.
   public struct Address: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// The static IP address represented by this resource.
     public var address: Swift.String? = nil
 
-    /// The type of address to reserve, either INTERNAL orEXTERNAL. If unspecified, defaults to EXTERNAL.
+    /// The type of address to reserve, either INTERNAL or EXTERNAL. If unspecified, defaults to EXTERNAL.
     public var addressType: Address.AddressType? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this field when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this field when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Reference to the source of IP addresses.
-    ///
-    /// It supports the following cases:
-    ///
-    ///    -
-    ///      Case 1: PublicDelegatedPrefix (PDP) for BYOIP external IPv4
-    ///      addresses. The PDP must support enhanced IPv4 allocations.
-    ///    -
-    ///      Case 2: Internal Range for global internal addresses.
-    ///
-    ///
-    ///
-    /// Use one of the following formats to specify the resource:
-    ///
-    /// For a Public Delegated Prefix:
-    ///
-    ///    -
-    ///    Full resource URL:https://www.googleapis.com/compute/v1/projects/projectId/regions/region/publicDelegatedPrefixes/pdp
-    ///    - Partial URL:
-    ///       - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name
-    ///       - regions/region/publicDelegatedPrefixes/pdp-name
-    ///
-    ///
-    ///
-    /// For an Internal Range:
-    ///
-    ///    - Full URL:https://networkconnectivity.googleapis.com/v1/projects/project/locations/global/internalRanges/internal-range
-    ///    - Partial URL:projects/project/locations/global/internalRanges/internal-range
+    /// Reference to the source of IP addresses. It supports the following cases: - Case 1: PublicDelegatedPrefix (PDP) for BYOIP external addresses. If an IPv4 PDP is used, the PDP must support enhanced IPv4 allocations. If an IPv6 PDP is used, the PDP must be in EXTERNAL_IPV6_FORWARDING_RULE_CREATION mode. - Case 2: Internal Range for global internal addresses. Use one of the following formats to specify the resource: For a Public Delegated Prefix: - Full resource URL: https://www.googleapis.com/compute/v1/projects/ projectId/regions/region/publicDelegatedPrefixes/pdp - Partial URL: - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name - regions/region/publicDelegatedPrefixes/pdp-name For an Internal Range: - Full URL: https://networkconnectivity.googleapis.com/v1/projects/ project/locations/global/internalRanges/internal-range - Partial URL: projects/project/locations/global/internalRanges/ internal-range
     public var ipCollection: Swift.String? = nil
 
-    /// The IP version that will be used by this address. Valid options areIPV4 or IPV6.
+    /// The IP version that will be used by this address. Valid options are IPV4 or IPV6.
     public var ipVersion: Address.IpVersion? = nil
 
-    /// The endpoint type of this address, which should be VM
-    /// or NETLB. This is used for deciding which type of endpoint
-    /// this address can be used after the external IPv6 address reservation.
+    /// The endpoint type of this address, which should be VM or NETLB. This is used for deciding which type of endpoint this address can be used after the external IPv6 address reservation.
     public var ipv6EndpointType: Address.Ipv6EndpointType? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#address for
-    /// addresses.
+    /// Output only. [Output Only] Type of the resource. Always compute#address for addresses.
     public var kind: Swift.String? = nil
 
-    /// A fingerprint for the labels being applied to this Address, which is
-    /// essentially a hash of the labels set used for optimistic locking. The
-    /// fingerprint is initially generated by Compute Engine and changes after
-    /// every request to modify or update labels. You must always provide an
-    /// up-to-date fingerprint hash in order to update or change labels,
-    /// otherwise the request will fail with error412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve an Address.
+    /// A fingerprint for the labels being applied to this Address, which is essentially a hash of the labels set used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an Address.
     public var labelFingerprint: Foundation.Data? = nil
 
-    /// Labels for this resource. These can only be added or modified by thesetLabels method. Each label key/value pair must comply withRFC1035.
-    /// Label values may be empty.
+    /// Labels for this resource. These can only be added or modified by the setLabels method. Each label key/value pair must comply with RFC1035. Label values may be empty.
     public var labels: [Swift.String: Swift.String] = [:]
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character
-    /// must be a lowercase letter, and all following characters (except for the
-    /// last character) must be a dash, lowercase letter, or digit. The last
-    /// character must be a lowercase letter or digit.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
     public var name: Swift.String? = nil
 
-    /// The URL of the network in which to reserve the address. This field can
-    /// only be used with INTERNAL type with theVPC_PEERING purpose.
+    /// The URL of the network in which to reserve the address. This field can only be used with INTERNAL type with the VPC_PEERING purpose.
     public var network: Swift.String? = nil
 
-    /// This signifies the networking tier used for configuring this address and
-    /// can only take the following values: PREMIUM orSTANDARD. Internal IP addresses are always Premium Tier;
-    /// global external IP addresses are always Premium Tier; regional external IP
-    /// addresses can be either Standard or Premium Tier.
-    ///
-    /// If this field is not specified, it is assumed to be PREMIUM.
+    /// This signifies the networking tier used for configuring this address and can only take the following values: PREMIUM or STANDARD. Internal IP addresses are always Premium Tier; global external IP addresses are always Premium Tier; regional external IP addresses can be either Standard or Premium Tier. If this field is not specified, it is assumed to be PREMIUM.
     public var networkTier: Address.NetworkTier? = nil
 
     /// The prefix length if the resource represents an IP range.
     public var prefixLength: Swift.Int32? = nil
 
-    /// The purpose of this resource, which can be one of the following values:
-    ///
-    ///
-    ///      - GCE_ENDPOINT for addresses that are used by VM
-    ///      instances, alias IP ranges, load balancers, and similar resources.
-    ///      - DNS_RESOLVER for a DNS resolver address in a subnetwork
-    ///        for a Cloud DNS  inbound
-    ///        forwarder IP addresses (regional internal IP address in a subnet of
-    ///        a VPC network)
-    ///      - VPC_PEERING for global internal IP addresses used for
-    ///
-    ///           private services access allocated ranges.
-    ///      - NAT_AUTO for the regional external IP addresses used by
-    ///           Cloud NAT when allocating addresses using
-    ///
-    ///           automatic NAT IP address allocation.
-    ///      - IPSEC_INTERCONNECT for addresses created from a private
-    ///      IP range that are reserved for a VLAN attachment in an
-    ///      *HA VPN over Cloud Interconnect* configuration. These addresses
-    ///      are regional resources.
-    ///      - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned
-    ///      to multiple internal forwarding rules.
-    ///      - `PRIVATE_SERVICE_CONNECT` for a private network address that is
-    ///      used to configure Private Service Connect. Only global internal addresses
-    ///      can use this purpose.
+    /// The purpose of this resource, which can be one of the following values: - GCE_ENDPOINT for addresses that are used by VM instances, alias IP ranges, load balancers, and similar resources. - DNS_RESOLVER for a DNS resolver address in a subnetwork for a Cloud DNS inbound forwarder IP addresses (regional internal IP address in a subnet of a VPC network) - VPC_PEERING for global internal IP addresses used for private services access allocated ranges. - NAT_AUTO for the regional external IP addresses used by Cloud NAT when allocating addresses using automatic NAT IP address allocation. - IPSEC_INTERCONNECT for addresses created from a private IP range that are reserved for a VLAN attachment in an *HA VPN over Cloud Interconnect* configuration. These addresses are regional resources. - `SHARED_LOADBALANCER_VIP` for an internal IP address that is assigned to multiple internal forwarding rules. - `PRIVATE_SERVICE_CONNECT` for a private network address that is used to configure Private Service Connect. Only global internal addresses can use this purpose. - `PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0` for addresses that can only be assigned to global external Passthrough Network Load Balancer forwarding rules, as an Availability Group 0 address. - `PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1` for addresses that can only be assigned to global external Passthrough Network Load Balancer forwarding rules, as an Availability Group 1 address.
     public var purpose: Address.Purpose? = nil
 
-    /// Output only. [Output Only] The URL of the region where a regional address resides.
-    /// For regional addresses, you must specify the region as a path parameter in
-    /// the HTTP request URL. *This field is not applicable to global
-    /// addresses.*
+    /// Output only. [Output Only] The URL of the region where a regional address resides. For regional addresses, you must specify the region as a path parameter in the HTTP request URL. *This field is not applicable to global addresses.*
     public var region: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] The status of the address, which can be one ofRESERVING, RESERVED, or IN_USE.
-    /// An address that is RESERVING is currently in the process of
-    /// being reserved. A RESERVED address is currently reserved and
-    /// available to use. An IN_USE address is currently being used
-    /// by another resource and is not available.
+    /// Output only. [Output Only] The status of the address, which can be one of RESERVING, RESERVED, or IN_USE. An address that is RESERVING is currently in the process of being reserved. A RESERVED address is currently reserved and available to use. An IN_USE address is currently being used by another resource and is not available.
     public var status: Address.Status? = nil
 
-    /// The URL of the subnetwork in which to reserve the address. If an IP address
-    /// is specified, it must be within the subnetwork's IP range. This field can
-    /// only be used with INTERNAL type with aGCE_ENDPOINT or DNS_RESOLVER purpose.
+    /// The URL of the subnetwork in which to reserve the address. If an IP address is specified, it must be within the subnetwork's IP range. This field can only be used with INTERNAL type with a GCE_ENDPOINT or DNS_RESOLVER purpose.
     public var subnetwork: Swift.String? = nil
 
     /// [Output Only] The URLs of the resources that are using this address.
@@ -294,8 +197,7 @@
     public enum AddressType: Codable, Equatable, Sendable {
       /// A publicly visible external IP address.
       case external
-      /// A private network IP address, for use with an Instance or Internal Load
-      /// Balancer forwarding rule.
+      /// A private network IP address, for use with an Instance or Internal Load Balancer forwarding rule.
       case `internal`
       case unspecifiedType
       /// Encodes an unknown integer value.
@@ -605,14 +507,11 @@
     public enum NetworkTier: Codable, Equatable, Sendable {
       /// Public internet quality with fixed bandwidth.
       case fixedStandard
-      /// High quality, Google-grade network tier, support for all networking
-      /// products.
+      /// High quality, Google-grade network tier, support for all networking products.
       case premium
-      /// Public internet quality, only limited support for other networking
-      /// products.
+      /// Public internet quality, only limited support for other networking products.
       case standard
-      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier
-      /// is expired or not configured.
+      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier is expired or not configured.
       case standardOverridesFixedStandard
       /// Encodes an unknown integer value.
       ///
@@ -724,23 +623,15 @@
       case dnsResolver
       /// VM internal/alias IP, Internal LB service IP, etc.
       case gceEndpoint
-      /// A regional internal IP address range reserved for the VLAN attachment
-      /// that is used in HA VPN over Cloud Interconnect. This regional
-      /// internal IP address range must not overlap with any IP address range
-      /// of subnet/route in the VPC network and its peering networks. After the
-      /// VLAN attachment is created with the reserved IP address range, when
-      /// creating a new VPN gateway, its interface IP address is allocated
-      /// from the associated VLAN attachment’s IP address range.
+      /// A regional internal IP address range reserved for the VLAN attachment that is used in HA VPN over Cloud Interconnect. This regional internal IP address range must not overlap with any IP address range of subnet/route in the VPC network and its peering networks. After the VLAN attachment is created with the reserved IP address range, when creating a new VPN gateway, its interface IP address is allocated from the associated VLAN attachment's IP address range.
       case ipsecInterconnect
       /// External IP automatically reserved for Cloud NAT.
       case natAuto
-      /// A private network IP address that can be used to configure Private
-      /// Service Connect. This purpose can be specified only forGLOBAL addresses of Type INTERNAL
+      /// A private network IP address that can be used to configure Private Service Connect. This purpose can be specified only for GLOBAL addresses of Type INTERNAL
       case privateServiceConnect
       /// A regional internal IP address range reserved for Serverless.
       case serverless
-      /// A private network IP address that can be shared by multiple Internal
-      /// Load Balancer forwarding rules.
+      /// A private network IP address that can be shared by multiple Internal Load Balancer forwarding rules.
       case sharedLoadbalancerVip
       /// IP range for peer networks.
       case vpcPeering

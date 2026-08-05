@@ -21,18 +21,7 @@
   public struct DiskUpdateKmsKeyRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. The new KMS key to replace the current one on the disk. If empty, the disk
-    /// will be re-encrypted using the primary version of the disk's current KMS
-    /// key.
-    ///
-    /// The KMS key can be provided in the following formats:
-    ///
-    ///
-    ///      - projects/project_id/locations/location/keyRings/key_ring/cryptoKeys/key
-    ///
-    ///
-    /// Where project is the project ID or
-    /// project number.
+    /// Optional. The new KMS key to replace the current one on the disk. If empty, the disk will be re-encrypted using the primary version of the disk's current KMS key. The KMS key can be provided in the following formats: - projects/project_id/locations/location/keyRings/key_ring/cryptoKeys/key Where project is the project ID or project number.
     public var kmsKeyName: Swift.String? = nil
 
     /// Initialize a new instance of `DiskUpdateKmsKeyRequest`.

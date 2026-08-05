@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The URLs of one or more instances to start. This can be a full URL or
-    /// a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
+    /// The URLs of one or more instances to start. This can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
     public var instances: [Swift.String] = []
 
     /// Initialize a new instance of `InstanceGroupManagersStartInstancesRequest`.

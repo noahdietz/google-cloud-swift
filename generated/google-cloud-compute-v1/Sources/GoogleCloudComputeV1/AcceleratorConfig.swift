@@ -18,20 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A specification of the type and number of accelerator cards attached to the
-  /// instance.
+  /// A specification of the type and number of accelerator cards attached to the instance.
   public struct AcceleratorConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// The number of the guest accelerator cards exposed to this instance.
     public var acceleratorCount: Swift.Int32? = nil
 
-    /// Full or partial URL of the accelerator type resource to attach to this
-    /// instance. For example:projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-    /// If you are creating an instance template, specify only the
-    /// accelerator name.
-    /// See GPUs on Compute Engine
-    /// for a full list of accelerator types.
+    /// Full or partial URL of the accelerator type resource to attach to this instance. For example: projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100 If you are creating an instance template, specify only the accelerator name. See GPUs on Compute Engine for a full list of accelerator types.
     public var acceleratorType: Swift.String? = nil
 
     /// Initialize a new instance of `AcceleratorConfig`.

@@ -18,24 +18,18 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Options to control the pace of orchestration of a wave. These options are
-  /// required only if the resource being rolled out follows the Orchestrated
-  /// pattern.
+  /// Options to control the pace of orchestration of a wave. These options are required only if the resource being rolled out follows the Orchestrated pattern.
   public struct RolloutPlanWaveOrchestrationOptions: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Optional. Delays, if any, to be added between batches of projects. We allow
-    /// multiple Delays to be specified, letting users set separate delays
-    /// between batches of projects corresponding to different locations and
-    /// batches of projects corresponding to the same location.
+    /// Optional. Delays, if any, to be added between batches of projects. We allow multiple Delays to be specified, letting users set separate delays between batches of projects corresponding to different locations and batches of projects corresponding to the same location.
     public var delays: [RolloutPlanWaveOrchestrationOptionsDelay] = []
 
     /// Optional. Maximum number of locations to be orchestrated in parallel.
     public var maxConcurrentLocations: Swift.Int64? = nil
 
-    /// Optional. Maximum number of resources to be orchestrated per location in
-    /// parallel.
+    /// Optional. Maximum number of resources to be orchestrated per location in parallel.
     public var maxConcurrentResourcesPerLocation: Swift.Int64? = nil
 
     /// Initialize a new instance of `RolloutPlanWaveOrchestrationOptions`.

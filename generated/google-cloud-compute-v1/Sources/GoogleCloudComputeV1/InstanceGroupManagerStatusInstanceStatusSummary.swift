@@ -18,70 +18,48 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The list of instance statuses and the number of instances in this managed
-  /// instance group that have the status. For more information about how to
-  /// interpret each status check the instance lifecycle documentation.
-  /// Currently only shown for TPU MIGs.
+  /// The list of instance statuses and the number of instances in this managed instance group that have the status. For more information about how to interpret each status check the instance lifecycle documentation. Currently only shown for TPU MIGs.
   public struct InstanceGroupManagerStatusInstanceStatusSummary: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Output only. The number of instances in the managed instance group
-    /// that have DEPROVISIONING status.
+    /// Output only. The number of instances in the managed instance group that have DEPROVISIONING status.
     public var deprovisioning: Swift.Int32? = nil
 
-    /// Output only. The number of instances that have not been created yet or
-    /// have been deleted. Includes only instances that would be shown in the
-    /// listManagedInstances method and not all instances that have been
-    /// deleted in the lifetime of the MIG.
-    /// Does not include FlexStart instances that are waiting for the resources
-    /// availability, they are considered as 'pending'.
+    /// Output only. The number of instances that have not been created yet or have been deleted. Includes only instances that would be shown in the listManagedInstances method and not all instances that have been deleted in the lifetime of the MIG. Does not include FlexStart instances that are waiting for the resources availability, they are considered as 'pending'.
     public var nonExistent: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have PENDING status, that is FlexStart instances that are waiting
-    /// for resources. Instances that do not exist because of the other reasons
-    /// are counted as 'non_existent'.
+    /// Output only. The number of instances in the managed instance group that have PENDING status, that is FlexStart instances that are waiting for resources. Instances that do not exist because of the other reasons are counted as 'non_existent'.
     public var pending: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have PENDING_STOP status.
+    /// Output only. The number of instances in the managed instance group that have PENDING_STOP status.
     public var pendingStop: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have PROVISIONING status.
+    /// Output only. The number of instances in the managed instance group that have PROVISIONING status.
     public var provisioning: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have REPAIRING status.
+    /// Output only. The number of instances in the managed instance group that have REPAIRING status.
     public var repairing: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have RUNNING status.
+    /// Output only. The number of instances in the managed instance group that have RUNNING status.
     public var running: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have STAGING status.
+    /// Output only. The number of instances in the managed instance group that have STAGING status.
     public var staging: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have STOPPED status.
+    /// Output only. The number of instances in the managed instance group that have STOPPED status.
     public var stopped: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have STOPPING status.
+    /// Output only. The number of instances in the managed instance group that have STOPPING status.
     public var stopping: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have SUSPENDED status.
+    /// Output only. The number of instances in the managed instance group that have SUSPENDED status.
     public var suspended: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have SUSPENDING status.
+    /// Output only. The number of instances in the managed instance group that have SUSPENDING status.
     public var suspending: Swift.Int32? = nil
 
-    /// Output only. The number of instances in the managed instance group
-    /// that have TERMINATED status.
+    /// Output only. The number of instances in the managed instance group that have TERMINATED status.
     public var terminated: Swift.Int32? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStatusInstanceStatusSummary`.

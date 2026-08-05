@@ -22,12 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. Current all-instances configuration revision.
-    /// This value is in RFC3339 text format.
+    /// Output only. Current all-instances configuration revision. This value is in RFC3339 text format.
     public var currentRevision: Swift.String? = nil
 
-    /// Output only. A bit indicating whether this configuration has
-    /// been applied to all managed instances in the group.
+    /// Output only. A bit indicating whether this configuration has been applied to all managed instances in the group.
     public var effective: Swift.Bool? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStatusAllInstancesConfig`.

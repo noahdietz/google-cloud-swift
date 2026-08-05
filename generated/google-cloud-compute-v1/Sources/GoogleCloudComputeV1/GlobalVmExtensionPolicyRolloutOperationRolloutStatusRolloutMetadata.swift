@@ -22,20 +22,16 @@
     Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The rollout status for each location. The list of the
-    /// locations is the same as the list of locations in the rollout plan.
+    /// Output only. [Output Only] The rollout status for each location. The list of the locations is the same as the list of locations in the rollout plan.
     public var locationRolloutStatus:
       [Swift.String:
         GlobalVmExtensionPolicyRolloutOperationRolloutStatusRolloutMetadataLocationRolloutStatus] =
         [:]
 
-    /// Output only. [Output Only] The name of the rollout.
-    /// Ex. projects//locations/global/rollouts/.
+    /// Output only. [Output Only] The name of the rollout. Ex. projects//locations/global/rollouts/.
     public var rollout: Swift.String? = nil
 
-    /// Output only. [Output Only] The name of the rollout plan.
-    /// Ex.
-    /// projects//locations/global/rolloutPlans/.
+    /// Output only. [Output Only] The name of the rollout plan. Ex. projects//locations/global/rolloutPlans/.
     public var rolloutPlan: Swift.String? = nil
 
     /// Output only. [Output Only] The overall state of the rollout.

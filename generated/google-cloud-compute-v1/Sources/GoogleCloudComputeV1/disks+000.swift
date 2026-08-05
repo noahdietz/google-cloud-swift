@@ -42,9 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Adds existing resource policies to a disk. You can only add one
-    /// policy which will be applied to this disk for scheduling snapshot
-    /// creation.
+    /// Adds existing resource policies to a disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
     ///
     /// @Snippet(path: "disks_addResourcePolicies")
     public func addResourcePolicies(
@@ -53,9 +51,7 @@
       try await self.inner.addResourcePolicies(request: request, options: options)
     }
 
-    /// Adds existing resource policies to a disk. You can only add one
-    /// policy which will be applied to this disk for scheduling snapshot
-    /// creation.
+    /// Adds existing resource policies to a disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
     ///
     /// @Snippet(path: "disks_addResourcePolicies")
     public func addResourcePolicies(
@@ -96,10 +92,7 @@
       )
     }
 
-    /// Retrieves an aggregated list of persistent disks.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of persistent disks. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "disks_aggregatedList")
     public func aggregatedList(
@@ -108,10 +101,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of persistent disks.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of persistent disks. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "disks_aggregatedList")
     public func aggregatedList(
@@ -176,8 +166,7 @@
       )
     }
 
-    /// Sets the labels on many disks at once. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "disks_bulkSetLabels")
     public func bulkSetLabels(
@@ -186,8 +175,7 @@
       try await self.inner.bulkSetLabels(request: request, options: options)
     }
 
-    /// Sets the labels on many disks at once. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on many disks at once. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "disks_bulkSetLabels")
     public func bulkSetLabels(
@@ -228,10 +216,7 @@
       )
     }
 
-    /// Creates a snapshot of a specified persistent disk. For regular snapshot
-    /// creation, consider using snapshots.insert
-    /// instead, as that method supports more features, such as creating snapshots
-    /// in a project different from the source disk project.
+    /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "disks_createSnapshot")
     public func createSnapshot(
@@ -240,10 +225,7 @@
       try await self.inner.createSnapshot(request: request, options: options)
     }
 
-    /// Creates a snapshot of a specified persistent disk. For regular snapshot
-    /// creation, consider using snapshots.insert
-    /// instead, as that method supports more features, such as creating snapshots
-    /// in a project different from the source disk project.
+    /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "disks_createSnapshot")
     public func createSnapshot(
@@ -284,11 +266,7 @@
       )
     }
 
-    /// Deletes the specified persistent disk. Deleting a disk removes its data
-    /// permanently and is irreversible. However, deleting a disk does not
-    /// delete any snapshots
-    /// previously made from the disk. You must separatelydelete
-    /// snapshots.
+    /// Deletes the specified persistent disk. Deleting a disk removes its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
     ///
     /// @Snippet(path: "disks_delete")
     public func delete(
@@ -297,11 +275,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified persistent disk. Deleting a disk removes its data
-    /// permanently and is irreversible. However, deleting a disk does not
-    /// delete any snapshots
-    /// previously made from the disk. You must separatelydelete
-    /// snapshots.
+    /// Deletes the specified persistent disk. Deleting a disk removes its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
     ///
     /// @Snippet(path: "disks_delete")
     public func delete(
@@ -351,8 +325,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "disks_getIamPolicy")
     public func getIamPolicy(
@@ -361,11 +334,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a persistent disk in the specified project using the data
-    /// in the request. You can create a disk from a source
-    /// (sourceImage, sourceSnapshot, orsourceDisk) or create an empty 500 GB data disk by
-    /// omitting all properties. You can also create a disk that is larger than
-    /// the default size by specifying the sizeGb property.
+    /// Creates a persistent disk in the specified project using the data in the request. You can create a disk from a source (sourceImage, sourceSnapshot, or sourceDisk) or create an empty 500 GB data disk by omitting all properties. You can also create a disk that is larger than the default size by specifying the sizeGb property.
     ///
     /// @Snippet(path: "disks_insert")
     public func insert(
@@ -374,11 +343,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a persistent disk in the specified project using the data
-    /// in the request. You can create a disk from a source
-    /// (sourceImage, sourceSnapshot, orsourceDisk) or create an empty 500 GB data disk by
-    /// omitting all properties. You can also create a disk that is larger than
-    /// the default size by specifying the sizeGb property.
+    /// Creates a persistent disk in the specified project using the data in the request. You can create a disk from a source (sourceImage, sourceSnapshot, or sourceDisk) or create an empty 500 GB data disk by omitting all properties. You can also create a disk that is larger than the default size by specifying the sizeGb property.
     ///
     /// @Snippet(path: "disks_insert")
     public func insert(
@@ -419,8 +384,7 @@
       )
     }
 
-    /// Retrieves a list of persistent disks contained within
-    /// the specified zone.
+    /// Retrieves a list of persistent disks contained within the specified zone.
     ///
     /// @Snippet(path: "disks_list")
     public func list(
@@ -429,8 +393,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of persistent disks contained within
-    /// the specified zone.
+    /// Retrieves a list of persistent disks contained within the specified zone.
     ///
     /// @Snippet(path: "disks_list")
     public func list(
@@ -494,8 +457,7 @@
       )
     }
 
-    /// Resizes the specified persistent disk.
-    /// You can only increase the size of the disk.
+    /// Resizes the specified persistent disk. You can only increase the size of the disk.
     ///
     /// @Snippet(path: "disks_resize")
     public func resize(
@@ -504,8 +466,7 @@
       try await self.inner.resize(request: request, options: options)
     }
 
-    /// Resizes the specified persistent disk.
-    /// You can only increase the size of the disk.
+    /// Resizes the specified persistent disk. You can only increase the size of the disk.
     ///
     /// @Snippet(path: "disks_resize")
     public func resize(
@@ -546,8 +507,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "disks_setIamPolicy")
     public func setIamPolicy(
@@ -556,8 +516,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the labels on a disk. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a disk. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "disks_setLabels")
     public func setLabels(
@@ -566,8 +525,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a disk. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a disk. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "disks_setLabels")
     public func setLabels(
@@ -608,8 +566,7 @@
       )
     }
 
-    /// Starts asynchronous replication.
-    /// Must be invoked on the primary disk.
+    /// Starts asynchronous replication. Must be invoked on the primary disk.
     ///
     /// @Snippet(path: "disks_startAsyncReplication")
     public func startAsyncReplication(
@@ -618,8 +575,7 @@
       try await self.inner.startAsyncReplication(request: request, options: options)
     }
 
-    /// Starts asynchronous replication.
-    /// Must be invoked on the primary disk.
+    /// Starts asynchronous replication. Must be invoked on the primary disk.
     ///
     /// @Snippet(path: "disks_startAsyncReplication")
     public func startAsyncReplication(
@@ -660,8 +616,7 @@
       )
     }
 
-    /// Stops asynchronous replication.
-    /// Can be invoked either on the primary or on the secondary disk.
+    /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
     ///
     /// @Snippet(path: "disks_stopAsyncReplication")
     public func stopAsyncReplication(
@@ -670,8 +625,7 @@
       try await self.inner.stopAsyncReplication(request: request, options: options)
     }
 
-    /// Stops asynchronous replication.
-    /// Can be invoked either on the primary or on the secondary disk.
+    /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
     ///
     /// @Snippet(path: "disks_stopAsyncReplication")
     public func stopAsyncReplication(
@@ -712,8 +666,7 @@
       )
     }
 
-    /// Stops asynchronous replication for a consistency group of disks.
-    /// Can be invoked either in the primary or secondary scope.
+    /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
     ///
     /// @Snippet(path: "disks_stopGroupAsyncReplication")
     public func stopGroupAsyncReplication(
@@ -722,8 +675,7 @@
       try await self.inner.stopGroupAsyncReplication(request: request, options: options)
     }
 
-    /// Stops asynchronous replication for a consistency group of disks.
-    /// Can be invoked either in the primary or secondary scope.
+    /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
     ///
     /// @Snippet(path: "disks_stopGroupAsyncReplication")
     public func stopGroupAsyncReplication(
@@ -774,9 +726,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified disk with the data included in the request.
-    /// The update is performed only on selected fields included as part
-    /// of update-mask.
+    /// Updates the specified disk with the data included in the request. The update is performed only on selected fields included as part of update-mask.
     ///
     /// @Snippet(path: "disks_update")
     public func update(
@@ -785,9 +735,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified disk with the data included in the request.
-    /// The update is performed only on selected fields included as part
-    /// of update-mask.
+    /// Updates the specified disk with the data included in the request. The update is performed only on selected fields included as part of update-mask.
     ///
     /// @Snippet(path: "disks_update")
     public func update(
@@ -828,8 +776,7 @@
       )
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified persistent disk.
+    /// Rotates the customer-managed encryption key to the latest version for the specified persistent disk.
     ///
     /// @Snippet(path: "disks_updateKmsKey")
     public func updateKmsKey(
@@ -838,8 +785,7 @@
       try await self.inner.updateKmsKey(request: request, options: options)
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified persistent disk.
+    /// Rotates the customer-managed encryption key to the latest version for the specified persistent disk.
     ///
     /// @Snippet(path: "disks_updateKmsKey")
     public func updateKmsKey(

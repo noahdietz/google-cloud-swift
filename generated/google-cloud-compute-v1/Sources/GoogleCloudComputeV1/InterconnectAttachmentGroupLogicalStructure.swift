@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] An analysis of the logical layout of Attachments in this
-  /// group. Every Attachment in the group is shown once in this structure.
+  /// [Output Only] An analysis of the logical layout of Attachments in this group. Every Attachment in the group is shown once in this structure.
   public struct InterconnectAttachmentGroupLogicalStructure: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

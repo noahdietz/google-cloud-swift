@@ -22,15 +22,10 @@
   public struct Reference: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Type of the resource. Always compute#reference
-    /// for references.
+    /// Output only. [Output Only] Type of the resource. Always compute#reference for references.
     public var kind: Swift.String? = nil
 
-    /// A description of the reference type with no implied semantics. Possible
-    /// values include:
-    ///
-    ///
-    ///     1. MEMBER_OF
+    /// A description of the reference type with no implied semantics. Possible values include: 1. MEMBER_OF
     public var referenceType: Swift.String? = nil
 
     /// URL of the resource which refers to the target.

@@ -18,43 +18,23 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Settings controlling the volume of requests, connections and retries to this
-  /// backend service.
+  /// Settings controlling the volume of requests, connections and retries to this backend service.
   public struct CircuitBreakers: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The maximum number of connections to the backend service. If not specified,
-    /// there is no limit.
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// The maximum number of connections to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var maxConnections: Swift.Int32? = nil
 
-    /// The maximum number of pending requests allowed to the backend service. If
-    /// not specified, there is no limit.
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// The maximum number of pending requests allowed to the backend service. If not specified, there is no limit. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var maxPendingRequests: Swift.Int32? = nil
 
-    /// The maximum number of parallel requests that allowed to the backend
-    /// service. If not specified, there is no limit.
+    /// The maximum number of parallel requests that allowed to the backend service. If not specified, there is no limit.
     public var maxRequests: Swift.Int32? = nil
 
-    /// Maximum requests for a single connection to the backend service.
-    /// This parameter is respected by both the HTTP/1.1 and HTTP/2
-    /// implementations. If not specified, there is no limit. Setting this
-    /// parameter to 1 will effectively disable keep alive.
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// Maximum requests for a single connection to the backend service. This parameter is respected by both the HTTP/1.1 and HTTP/2 implementations. If not specified, there is no limit. Setting this parameter to 1 will effectively disable keep alive. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var maxRequestsPerConnection: Swift.Int32? = nil
 
-    /// The maximum number of parallel retries allowed to the backend cluster. If
-    /// not specified, the default is 1.
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// The maximum number of parallel retries allowed to the backend cluster. If not specified, the default is 1. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var maxRetries: Swift.Int32? = nil
 
     /// Initialize a new instance of `CircuitBreakers`.

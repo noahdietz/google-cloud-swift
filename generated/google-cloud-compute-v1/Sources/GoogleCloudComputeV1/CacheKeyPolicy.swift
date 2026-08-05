@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Message containing what to include in the cache key for a request for Cloud
-  /// CDN.
+  /// Message containing what to include in the cache key for a request for Cloud CDN.
   public struct CacheKeyPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -29,29 +28,19 @@
     /// Allows HTTP request headers (by name) to be used in the cache key.
     public var includeHttpHeaders: [Swift.String] = []
 
-    /// Allows HTTP cookies (by name) to be used in the cache key.
-    /// The name=value pair will be used in the cache key Cloud CDN generates.
+    /// Allows HTTP cookies (by name) to be used in the cache key. The name=value pair will be used in the cache key Cloud CDN generates.
     public var includeNamedCookies: [Swift.String] = []
 
     /// If true, http and https requests will be cached separately.
     public var includeProtocol: Swift.Bool? = nil
 
-    /// If true, include query string parameters in the cache key according to
-    /// query_string_whitelist and query_string_blacklist. If neither is set, the
-    /// entire query string will be included. If false, the query string will be
-    /// excluded from the cache key entirely.
+    /// If true, include query string parameters in the cache key according to query_string_whitelist and query_string_blacklist. If neither is set, the entire query string will be included. If false, the query string will be excluded from the cache key entirely.
     public var includeQueryString: Swift.Bool? = nil
 
-    /// Names of query string parameters to exclude in cache keys. All other
-    /// parameters will be included. Either specify query_string_whitelist or
-    /// query_string_blacklist, not both. '&' and '=' will be percent encoded and
-    /// not treated as delimiters.
+    /// Names of query string parameters to exclude in cache keys. All other parameters will be included. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
     public var queryStringBlacklist: [Swift.String] = []
 
-    /// Names of query string parameters to include in cache keys. All other
-    /// parameters will be excluded. Either specify query_string_whitelist or
-    /// query_string_blacklist, not both. '&' and '=' will be percent encoded and
-    /// not treated as delimiters.
+    /// Names of query string parameters to include in cache keys. All other parameters will be excluded. Either specify query_string_whitelist or query_string_blacklist, not both. '&' and '=' will be percent encoded and not treated as delimiters.
     public var queryStringWhitelist: [Swift.String] = []
 
     /// Initialize a new instance of `CacheKeyPolicy`.

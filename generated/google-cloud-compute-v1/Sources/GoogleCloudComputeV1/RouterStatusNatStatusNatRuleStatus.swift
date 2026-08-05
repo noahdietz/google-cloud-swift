@@ -22,21 +22,16 @@
   public struct RouterStatusNatStatusNatRuleStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. A list of active IPs for NAT.
-    /// Example: ["1.1.1.1", "179.12.26.133"].
+    /// Output only. A list of active IPs for NAT. Example: ["1.1.1.1", "179.12.26.133"].
     public var activeNatIps: [Swift.String] = []
 
-    /// Output only. A list of IPs for NAT that are in drain mode.
-    /// Example: ["1.1.1.1", "179.12.26.133"].
+    /// Output only. A list of IPs for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
     public var drainNatIps: [Swift.String] = []
 
-    /// Output only. The number of extra IPs to allocate. This will be greater than 0 only
-    /// if the existing IPs in this NAT Rule are NOT enough to allow all
-    /// configured VMs to use NAT.
+    /// Output only. The number of extra IPs to allocate. This will be greater than 0 only if the existing IPs in this NAT Rule are NOT enough to allow all configured VMs to use NAT.
     public var minExtraIpsNeeded: Swift.Int32? = nil
 
-    /// Output only. Number of VM endpoints (i.e., NICs) that have NAT Mappings from this
-    /// NAT Rule.
+    /// Output only. Number of VM endpoints (i.e., NICs) that have NAT Mappings from this NAT Rule.
     public var numVmEndpointsWithNatMappings: Swift.Int32? = nil
 
     /// Output only. Rule number of the rule.

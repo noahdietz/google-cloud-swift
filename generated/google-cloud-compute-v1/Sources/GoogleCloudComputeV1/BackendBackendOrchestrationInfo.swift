@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A message containing information about the resource or system that manages
-  /// the backend.
+  /// A message containing information about the resource or system that manages the backend.
   public struct BackendBackendOrchestrationInfo: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

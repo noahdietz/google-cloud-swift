@@ -42,11 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all SslPolicy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "sslPolicies_aggregatedList")
     public func aggregatedList(
@@ -55,11 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all SslPolicy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SslPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "sslPolicies_aggregatedList")
     public func aggregatedList(
@@ -74,9 +66,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Deletes the specified SSL policy. The SSL policy resource can be deleted
-    /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
-    /// resources.
+    /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
     ///
     /// @Snippet(path: "sslPolicies_delete")
     public func delete(
@@ -85,9 +75,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified SSL policy. The SSL policy resource can be deleted
-    /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
-    /// resources.
+    /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
     ///
     /// @Snippet(path: "sslPolicies_delete")
     public func delete(
@@ -185,8 +173,7 @@
       )
     }
 
-    /// Lists all the SSL policies that have been configured for the specified
-    /// project.
+    /// Lists all the SSL policies that have been configured for the specified project.
     ///
     /// @Snippet(path: "sslPolicies_list")
     public func list(
@@ -195,8 +182,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Lists all the SSL policies that have been configured for the specified
-    /// project.
+    /// Lists all the SSL policies that have been configured for the specified project.
     ///
     /// @Snippet(path: "sslPolicies_list")
     public func list(
@@ -210,8 +196,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists all features that can be specified in the SSL policy when using
-    /// custom profile.
+    /// Lists all features that can be specified in the SSL policy when using custom profile.
     ///
     /// @Snippet(path: "sslPolicies_listAvailableFeatures")
     public func listAvailableFeatures(

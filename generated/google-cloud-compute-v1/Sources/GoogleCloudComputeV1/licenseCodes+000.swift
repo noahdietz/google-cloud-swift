@@ -38,11 +38,7 @@
       self.inner = inner
     }
 
-    /// Return a specified license code. License codes are mirrored across
-    /// all projects that have permissions to read the License Code.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Return a specified license code. License codes are mirrored across all projects that have permissions to read the License Code. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenseCodes_get")
     public func `get`(
@@ -51,11 +47,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenseCodes_getIamPolicy")
     public func getIamPolicy(
@@ -64,11 +56,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenseCodes_setIamPolicy")
     public func setIamPolicy(
@@ -77,10 +65,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Returns permissions that a caller has on the specified resource.
-    ///  *Caution* This resource is intended
-    /// for use only by third-party partners who are creatingCloud Marketplace
-    /// images.
+    /// Returns permissions that a caller has on the specified resource. *Caution* This resource is intended for use only by third-party partners who are creating Cloud Marketplace images.
     ///
     /// @Snippet(path: "licenseCodes_testIamPermissions")
     public func testIamPermissions(

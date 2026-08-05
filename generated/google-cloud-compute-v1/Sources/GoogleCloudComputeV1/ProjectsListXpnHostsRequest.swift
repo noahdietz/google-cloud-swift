@@ -21,9 +21,7 @@
   public struct ProjectsListXpnHostsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional organization ID managed by Cloud Resource Manager, for which to
-    /// list shared VPC host projects. If not specified, the organization will be
-    /// inferred from the project.
+    /// Optional organization ID managed by Cloud Resource Manager, for which to list shared VPC host projects. If not specified, the organization will be inferred from the project.
     public var organization: Swift.String? = nil
 
     /// Initialize a new instance of `ProjectsListXpnHostsRequest`.

@@ -18,32 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Project resource.
-  ///
-  /// A project is used to organize resources in a Google Cloud Platform
-  /// environment. For more information, read about the
-  /// Resource Hierarchy.
+  /// Represents a Project resource. A project is used to organize resources in a Google Cloud Platform environment. For more information, read about the Resource Hierarchy.
   public struct Project: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The Cloud Armor tier for this project. It can be one of the
-    /// following values: CA_STANDARD,CA_ENTERPRISE_PAYGO.
-    ///
-    /// If this field is not specified, it is assumed to beCA_STANDARD.
+    /// Output only. [Output Only] The Cloud Armor tier for this project. It can be one of the following values: CA_STANDARD, CA_ENTERPRISE_PAYGO. If this field is not specified, it is assumed to be CA_STANDARD.
     public var cloudArmorTier: Project.CloudArmorTier? = nil
 
-    /// Metadata key/value pairs available to all instances contained in this
-    /// project. See Custom
-    /// metadata for more information.
+    /// Metadata key/value pairs available to all instances contained in this project. See Custom metadata for more information.
     public var commonInstanceMetadata: Metadata? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// This signifies the default network tier used for configuring resources of
-    /// the project and can only take the following values:PREMIUM, STANDARD. Initially the default network
-    /// tier is PREMIUM.
+    /// This signifies the default network tier used for configuring resources of the project and can only take the following values: PREMIUM, STANDARD. Initially the default network tier is PREMIUM.
     public var defaultNetworkTier: Project.DefaultNetworkTier? = nil
 
     /// [Output Only] Default service account used by VMs running in this project.
@@ -55,17 +43,13 @@
     /// An optional list of restricted features enabled for use on this project.
     public var enabledFeatures: [Swift.String] = []
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server. This is *not* the project ID, and is
-    /// just a unique ID used by Compute Engine to identify resources.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server. This is *not* the project ID, and is just a unique ID used by Compute Engine to identify resources.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#project for
-    /// projects.
+    /// Output only. [Output Only] Type of the resource. Always compute#project for projects.
     public var kind: Swift.String? = nil
 
-    /// The project ID. For example: my-example-project. Use the
-    /// project ID to make requests to Compute Engine.
+    /// The project ID. For example: my-example-project. Use the project ID to make requests to Compute Engine.
     public var name: Swift.String? = nil
 
     /// [Output Only] Quotas assigned to this project.
@@ -74,17 +58,13 @@
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// An optional naming prefix for daily usage reports and the Google Cloud
-    /// Storage bucket where they are stored.
+    /// An optional naming prefix for daily usage reports and the Google Cloud Storage bucket where they are stored.
     public var usageExportLocation: UsageExportLocation? = nil
 
-    /// Output only. [Output Only] Default internal DNS setting used by VMs running in
-    /// this project.
+    /// Output only. [Output Only] Default internal DNS setting used by VMs running in this project.
     public var vmDnsSetting: Project.VmDnsSetting? = nil
 
-    /// [Output Only] The role this project has in a shared VPC configuration.
-    /// Currently, only projects with the host role, which is specified by the
-    /// value HOST, are differentiated.
+    /// [Output Only] The role this project has in a shared VPC configuration. Currently, only projects with the host role, which is specified by the value HOST, are differentiated.
     public var xpnProjectStatus: Project.XpnProjectStatus? = nil
 
     /// Initialize a new instance of `Project`.
@@ -216,14 +196,11 @@
     public enum DefaultNetworkTier: Codable, Equatable, Sendable {
       /// Public internet quality with fixed bandwidth.
       case fixedStandard
-      /// High quality, Google-grade network tier, support for all networking
-      /// products.
+      /// High quality, Google-grade network tier, support for all networking products.
       case premium
-      /// Public internet quality, only limited support for other networking
-      /// products.
+      /// Public internet quality, only limited support for other networking products.
       case standard
-      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier
-      /// is expired or not configured.
+      /// (Output only) Temporary tier for FIXED_STANDARD when fixed standard tier is expired or not configured.
       case standardOverridesFixedStandard
       /// Encodes an unknown integer value.
       ///

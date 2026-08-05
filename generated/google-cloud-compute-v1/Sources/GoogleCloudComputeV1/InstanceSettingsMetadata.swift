@@ -21,12 +21,10 @@
   public struct InstanceSettingsMetadata: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A metadata key/value items map.
-    /// The total size of all keys and values must be less than 512KB.
+    /// A metadata key/value items map. The total size of all keys and values must be less than 512KB.
     public var items: [Swift.String: Swift.String] = [:]
 
-    /// Output only. [Output Only] Type of the resource. Always compute#metadata
-    /// for metadata.
+    /// Output only. [Output Only] Type of the resource. Always compute#metadata for metadata.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceSettingsMetadata`.

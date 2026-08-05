@@ -79,7 +79,8 @@
           return "/compute/v1/projects/\(pathVariable0)/aggregated/forwardingRules"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -121,7 +122,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules/\(pathVariable2)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -152,7 +154,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules/\(pathVariable2)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.view, prefix: "view"))
@@ -177,7 +180,8 @@
           return "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -206,7 +210,8 @@
           return "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -243,7 +248,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules/\(pathVariable2)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -276,7 +282,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules/\(pathVariable2)/setLabels"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -311,7 +318,8 @@
             "/compute/v1/projects/\(pathVariable0)/regions/\(pathVariable1)/forwardingRules/\(pathVariable2)/setTarget"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))

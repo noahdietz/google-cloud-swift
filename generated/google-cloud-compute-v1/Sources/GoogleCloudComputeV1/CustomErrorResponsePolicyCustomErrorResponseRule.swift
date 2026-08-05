@@ -18,46 +18,18 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specifies the mapping between the response code that will be returned along
-  /// with the custom error content and the response code returned by the backend
-  /// service.
+  /// Specifies the mapping between the response code that will be returned along with the custom error content and the response code returned by the backend service.
   public struct CustomErrorResponsePolicyCustomErrorResponseRule: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Valid values include:
-    ///
-    ///
-    ///      - A number between 400 and 599: For example
-    ///      401 or 503, in which case the load balancer
-    ///      applies the policy if the error code exactly matches this value.
-    ///      - 5xx: Load Balancer will apply the policy if the
-    ///      backend service responds with any response code in the range of
-    ///      500 to 599.
-    ///    - 4xx: Load
-    ///      Balancer will apply the policy if the backend service responds with any
-    ///      response code in the range of 400 to
-    ///      499.
-    ///
-    /// Values must be unique within matchResponseCodes and across allerrorResponseRules ofCustomErrorResponsePolicy.
+    /// Valid values include: - A number between 400 and 599: For example 401 or 503, in which case the load balancer applies the policy if the error code exactly matches this value. - 5xx: Load Balancer will apply the policy if the backend service responds with any response code in the range of 500 to 599. - 4xx: Load Balancer will apply the policy if the backend service responds with any response code in the range of 400 to 499. Values must be unique within matchResponseCodes and across all errorResponseRules of CustomErrorResponsePolicy.
     public var matchResponseCodes: [Swift.String] = []
 
-    /// The HTTP status code returned with the response containing the custom
-    /// error content. If overrideResponseCode is not supplied, the
-    /// same response code returned by the original backend bucket or backend
-    /// service is returned to the client.
+    /// The HTTP status code returned with the response containing the custom error content. If overrideResponseCode is not supplied, the same response code returned by the original backend bucket or backend service is returned to the client.
     public var overrideResponseCode: Swift.Int32? = nil
 
-    /// The full path to a file within backendBucket . For example:/errors/defaultError.html
-    ///
-    /// path must start
-    /// with a leading slash. path cannot have trailing slashes.
-    ///
-    /// If the file is not available in backendBucket  or the
-    /// load balancer cannot reach the BackendBucket, a simpleNot Found Error is returned to the client.
-    ///
-    /// The value must
-    /// be from 1 to 1024 characters
+    /// The full path to a file within backendBucket . For example: /errors/defaultError.html path must start with a leading slash. path cannot have trailing slashes. If the file is not available in backendBucket or the load balancer cannot reach the BackendBucket, a simple Not Found Error is returned to the client. The value must be from 1 to 1024 characters
     public var path: Swift.String? = nil
 
     /// Initialize a new instance of `CustomErrorResponsePolicyCustomErrorResponseRule`.

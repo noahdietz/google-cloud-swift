@@ -23,8 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// ID of the instance template used to populate the Future Reservation
-    /// properties.
+    /// ID of the instance template used to populate the Future Reservation properties.
     public var sourceInstanceTemplateId: Swift.String? = nil
 
     /// Initialize a new instance of `FutureReservationStatusSpecificSKUProperties`.

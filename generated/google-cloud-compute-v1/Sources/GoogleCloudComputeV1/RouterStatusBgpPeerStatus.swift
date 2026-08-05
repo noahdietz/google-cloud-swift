@@ -26,12 +26,10 @@
 
     public var bfdStatus: BfdStatus? = nil
 
-    /// Output only. Enable IPv4 traffic over BGP Peer.
-    /// It is enabled by default if the peerIpAddress is version 4.
+    /// Output only. Enable IPv4 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 4.
     public var enableIpv4: Swift.Bool? = nil
 
-    /// Output only. Enable IPv6 traffic over BGP Peer.
-    /// It is enabled by default if the peerIpAddress is version 6.
+    /// Output only. Enable IPv6 traffic over BGP Peer. It is enabled by default if the peerIpAddress is version 6.
     public var enableIpv6: Swift.Bool? = nil
 
     /// Output only. IP address of the local BGP interface.
@@ -64,14 +62,10 @@
     /// Output only. IPv6 address of the remote BGP interface.
     public var peerIpv6NexthopAddress: Swift.String? = nil
 
-    /// Output only. [Output only] URI of the VM instance that is used as third-party router
-    /// appliances such as Next Gen Firewalls, Virtual Routers, or Router
-    /// Appliances.
-    /// The VM instance is the peer side of the BGP session.
+    /// Output only. [Output only] URI of the VM instance that is used as third-party router appliances such as Next Gen Firewalls, Virtual Routers, or Router Appliances. The VM instance is the peer side of the BGP session.
     public var routerApplianceInstance: Swift.String? = nil
 
-    /// Output only. The state of the BGP session. For a list of possible values for this
-    /// field, seeBGP session states.
+    /// Output only. The state of the BGP session. For a list of possible values for this field, see BGP session states.
     public var state: Swift.String? = nil
 
     /// Output only. Status of the BGP peer: {UP, DOWN}
@@ -80,14 +74,10 @@
     /// Indicates why particular status was returned.
     public var statusReason: RouterStatusBgpPeerStatus.StatusReason? = nil
 
-    /// Output only. Time this session has been up.
-    /// Format:
-    ///  14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59 seconds
+    /// Output only. Time this session has been up. Format: 14 years, 51 weeks, 6 days, 23 hours, 59 minutes, 59 seconds
     public var uptime: Swift.String? = nil
 
-    /// Output only. Time this session has been up, in seconds.
-    /// Format:
-    ///  145
+    /// Output only. Time this session has been up, in seconds. Format: 145
     public var uptimeSeconds: Swift.String? = nil
 
     /// Initialize a new instance of `RouterStatusBgpPeerStatus`.
@@ -214,15 +204,11 @@
     ///
     /// [google.cloud.compute.v1.RouterStatusBgpPeerStatus.statusReason]: <doc:RouterStatusBgpPeerStatus/StatusReason>
     public enum StatusReason: Codable, Equatable, Sendable {
-      /// BGP peer disabled because it requires IPv4 but the underlying
-      /// connection is IPv6-only.
+      /// BGP peer disabled because it requires IPv4 but the underlying connection is IPv6-only.
       case ipv4PeerOnIpv6OnlyConnection
-      /// BGP peer disabled because it requires IPv6 but the underlying
-      /// connection is IPv4-only.
+      /// BGP peer disabled because it requires IPv6 but the underlying connection is IPv4-only.
       case ipv6PeerOnIpv4OnlyConnection
-      /// Indicates internal problems with configuration of MD5 authentication.
-      /// This particular reason can only be returned when md5AuthEnabled is true
-      /// and status is DOWN.
+      /// Indicates internal problems with configuration of MD5 authentication. This particular reason can only be returned when md5AuthEnabled is true and status is DOWN.
       case md5AuthInternalProblem
       case unspecified
       /// Encodes an unknown integer value.

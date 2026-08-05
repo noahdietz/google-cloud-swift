@@ -18,20 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A VPN connection contains all VPN tunnels connected from this VpnGateway
-  /// to the same peer gateway. The peer gateway could either be an external VPN
-  /// gateway or a Google Cloud VPN gateway.
+  /// A VPN connection contains all VPN tunnels connected from this VpnGateway to the same peer gateway. The peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
   public struct VpnGatewayStatusVpnConnection: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. URL reference to the peer external VPN gateways to which the VPN tunnels
-    /// in this VPN connection are connected.
-    /// This field is mutually exclusive with peer_gcp_gateway.
+    /// Output only. URL reference to the peer external VPN gateways to which the VPN tunnels in this VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
     public var peerExternalGateway: Swift.String? = nil
 
-    /// Output only. URL reference to the peer side VPN gateways to which the VPN tunnels in
-    /// this VPN connection are connected.
-    /// This field is mutually exclusive with peer_gcp_gateway.
+    /// Output only. URL reference to the peer side VPN gateways to which the VPN tunnels in this VPN connection are connected. This field is mutually exclusive with peer_gcp_gateway.
     public var peerGcpGateway: Swift.String? = nil
 
     /// HighAvailabilityRequirementState for the VPN connection.

@@ -25,8 +25,7 @@
     /// Indicates if the maintenance can be customer triggered.
     public var canReschedule: Swift.Bool? = nil
 
-    /// The latest time for the planned maintenance window to start.
-    /// This timestamp value is in RFC3339 text format.
+    /// The latest time for the planned maintenance window to start. This timestamp value is in RFC3339 text format.
     public var latestWindowStartTime: Swift.String? = nil
 
     /// Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
@@ -40,12 +39,10 @@
     /// Defines the type of maintenance.
     public var type: UpcomingMaintenance.Type_? = nil
 
-    /// The time by which the maintenance disruption will be completed.
-    /// This timestamp value is in RFC3339 text format.
+    /// The time by which the maintenance disruption will be completed. This timestamp value is in RFC3339 text format.
     public var windowEndTime: Swift.String? = nil
 
-    /// The current start time of the maintenance window.
-    /// This timestamp value is in RFC3339 text format.
+    /// The current start time of the maintenance window. This timestamp value is in RFC3339 text format.
     public var windowStartTime: Swift.String? = nil
 
     /// Initialize a new instance of `UpcomingMaintenance`.
@@ -72,11 +69,9 @@
       case failureDisk
       /// Maintenance due to GPU errors.
       case failureGpu
-      /// Maintenance due to customer reported multiple faulty hosts via R&R
-      /// Subblock API.
+      /// Maintenance due to customer reported multiple faulty hosts via R&R Subblock API.
       case failureGpuMultipleFaultyHostsCustomerReported
-      /// Maintenance due to customer reported NVLink switch failure via R&R
-      /// Subblock API.
+      /// Maintenance due to customer reported NVLink switch failure via R&R Subblock API.
       case failureGpuNvlinkSwitchCustomerReported
       /// Maintenance due to high GPU temperature.
       case failureGpuTemperature
@@ -386,16 +381,13 @@
     ///
     /// [google.cloud.compute.v1.UpcomingMaintenance.type]: <doc:UpcomingMaintenance/Type_>
     public enum Type_: Codable, Equatable, Sendable {
-      /// Multiple maintenance types in one window.
-      /// This is only intended to be used for groups.
+      /// Multiple maintenance types in one window. This is only intended to be used for groups.
       case multiple
-      /// Scheduled maintenance (e.g. maintenance after uptime guarantee is
-      /// complete).
+      /// Scheduled maintenance (e.g. maintenance after uptime guarantee is complete).
       case scheduled
       /// No type specified. Do not use this value.
       case unknownType
-      /// Unscheduled maintenance (e.g. emergency maintenance during
-      /// uptime guarantee).
+      /// Unscheduled maintenance (e.g. emergency maintenance during uptime guarantee).
       case unscheduled
       /// Encodes an unknown integer value.
       ///

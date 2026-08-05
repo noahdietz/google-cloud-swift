@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A request to recommend the best way to consume the specified resources in the
-  /// future.
+  /// A request to recommend the best way to consume the specified resources in the future.
   public struct CalendarModeAdviceRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specification of resources to create in the future.
-    /// The key of the map is an arbitrary string specified by the caller.
-    /// Value of the map is a specification of required resources and their
-    /// constraints. Currently only one value is allowed in this map.
+    /// Specification of resources to create in the future. The key of the map is an arbitrary string specified by the caller. Value of the map is a specification of required resources and their constraints. Currently only one value is allowed in this map.
     public var futureResourcesSpecs: [Swift.String: FutureResourcesSpec] = [:]
 
     /// Initialize a new instance of `CalendarModeAdviceRequest`.

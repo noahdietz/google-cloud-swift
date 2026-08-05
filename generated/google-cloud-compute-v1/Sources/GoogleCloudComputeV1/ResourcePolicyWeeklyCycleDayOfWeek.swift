@@ -21,17 +21,13 @@
   public struct ResourcePolicyWeeklyCycleDayOfWeek: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Defines a schedule that runs on specific days of the week. Specify
-    /// one or more days. The following options are available:
-    /// MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
+    /// Defines a schedule that runs on specific days of the week. Specify one or more days. The following options are available: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
     public var day: ResourcePolicyWeeklyCycleDayOfWeek.Day? = nil
 
-    /// Output only. [Output only] Duration of the time window, automatically chosen to be
-    /// smallest possible in the given scenario.
+    /// Output only. [Output only] Duration of the time window, automatically chosen to be smallest possible in the given scenario.
     public var duration: Swift.String? = nil
 
-    /// Time within the window to start the operations.
-    /// It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
+    /// Time within the window to start the operations. It must be in format "HH:MM", where HH : [00-23] and MM : [00-00] GMT.
     public var startTime: Swift.String? = nil
 
     /// Initialize a new instance of `ResourcePolicyWeeklyCycleDayOfWeek`.

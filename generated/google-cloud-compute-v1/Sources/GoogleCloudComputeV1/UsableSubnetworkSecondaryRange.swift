@@ -22,14 +22,10 @@
   public struct UsableSubnetworkSecondaryRange: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The range of IP addresses belonging to this subnetwork secondary range.
-    /// Can be Ipv4 or Ipv6 range.
+    /// The range of IP addresses belonging to this subnetwork secondary range. Can be Ipv4 or Ipv6 range.
     public var ipCidrRange: Swift.String? = nil
 
-    /// The name associated with this subnetwork secondary range, used when adding
-    /// an alias IP range to a VM instance.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// The name must be unique within the subnetwork.
+    /// The name associated with this subnetwork secondary range, used when adding an alias IP range to a VM instance. The name must be 1-63 characters long, and comply with RFC1035. The name must be unique within the subnetwork.
     public var rangeName: Swift.String? = nil
 
     /// Initialize a new instance of `UsableSubnetworkSecondaryRange`.

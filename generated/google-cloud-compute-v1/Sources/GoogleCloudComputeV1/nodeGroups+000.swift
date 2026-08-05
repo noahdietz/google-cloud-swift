@@ -92,11 +92,7 @@
       )
     }
 
-    /// Retrieves an aggregated list of node groups.
-    /// Note: use nodeGroups.listNodes for more details about each group.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "nodeGroups_aggregatedList")
     public func aggregatedList(
@@ -105,11 +101,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of node groups.
-    /// Note: use nodeGroups.listNodes for more details about each group.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of node groups. Note: use nodeGroups.listNodes for more details about each group. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "nodeGroups_aggregatedList")
     public func aggregatedList(
@@ -224,10 +216,7 @@
       )
     }
 
-    /// Returns the specified NodeGroup. Get a list of available NodeGroups
-    /// by making a list() request.
-    /// Note: the "nodes" field should not be used. Use nodeGroups.listNodes
-    /// instead.
+    /// Returns the specified NodeGroup. Get a list of available NodeGroups by making a list() request. Note: the "nodes" field should not be used. Use nodeGroups.listNodes instead.
     ///
     /// @Snippet(path: "nodeGroups_get")
     public func `get`(
@@ -236,8 +225,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "nodeGroups_getIamPolicy")
     public func getIamPolicy(
@@ -246,8 +234,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a NodeGroup resource in the specified project using the data
-    /// included in the request.
+    /// Creates a NodeGroup resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "nodeGroups_insert")
     public func insert(
@@ -256,8 +243,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a NodeGroup resource in the specified project using the data
-    /// included in the request.
+    /// Creates a NodeGroup resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "nodeGroups_insert")
     public func insert(
@@ -298,8 +284,7 @@
       )
     }
 
-    /// Retrieves a list of node groups available to the specified project.
-    /// Note: use nodeGroups.listNodes for more details about each group.
+    /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
     ///
     /// @Snippet(path: "nodeGroups_list")
     public func list(
@@ -308,8 +293,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of node groups available to the specified project.
-    /// Note: use nodeGroups.listNodes for more details about each group.
+    /// Retrieves a list of node groups available to the specified project. Note: use nodeGroups.listNodes for more details about each group.
     ///
     /// @Snippet(path: "nodeGroups_list")
     public func list(
@@ -448,8 +432,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "nodeGroups_setIamPolicy")
     public func setIamPolicy(

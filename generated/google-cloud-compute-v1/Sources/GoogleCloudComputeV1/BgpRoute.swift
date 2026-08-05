@@ -27,8 +27,7 @@
     /// Output only. [Output only] BGP communities in human-readable A:B format.
     public var communities: [Swift.String] = []
 
-    /// Output only. [Output only] Destination IP range for the route, in human-readable CIDR
-    /// format
+    /// Output only. [Output only] Destination IP range for the route, in human-readable CIDR format
     public var destination: BgpRouteNetworkLayerReachabilityInformation? = nil
 
     /// Output only. [Output only] BGP multi-exit discriminator

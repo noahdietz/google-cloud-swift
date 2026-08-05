@@ -18,31 +18,24 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A GroupPlacementPolicy specifies resource placement configuration.
-  /// It specifies the failure bucket separation
+  /// A GroupPlacementPolicy specifies resource placement configuration. It specifies the failure bucket separation
   public struct ResourcePolicyGroupPlacementPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies the connection mode for the accelerator topology. If not
-    /// specified, the default is AUTO_CONNECT.
+    /// Specifies the connection mode for the accelerator topology. If not specified, the default is AUTO_CONNECT.
     public var acceleratorTopologyMode:
       ResourcePolicyGroupPlacementPolicy.AcceleratorTopologyMode? = nil
 
-    /// The number of availability domains to spread instances across. If two
-    /// instances are in different availability domain, they are not in the same
-    /// low latency network.
+    /// The number of availability domains to spread instances across. If two instances are in different availability domain, they are not in the same low latency network.
     public var availabilityDomainCount: Swift.Int32? = nil
 
     /// Specifies network collocation
     public var collocation: ResourcePolicyGroupPlacementPolicy.Collocation? = nil
 
-    /// Specifies the shape of the GPU slice, in slice based GPU families eg.
-    /// A4X.
+    /// Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
     public var gpuTopology: Swift.String? = nil
 
-    /// Number of VMs in this placement group. Google does not recommend that you
-    /// use this field unless you use a compact policy and you want your policy
-    /// to work only if it contains this exact number of VMs.
+    /// Number of VMs in this placement group. Google does not recommend that you use this field unless you use a compact policy and you want your policy to work only if it contains this exact number of VMs.
     public var vmCount: Swift.Int32? = nil
 
     /// Initialize a new instance of `ResourcePolicyGroupPlacementPolicy`.
@@ -67,8 +60,7 @@
     public enum AcceleratorTopologyMode: Codable, Equatable, Sendable {
       /// The interconnected chips are pre-configured at the time of VM creation.
       case autoConnect
-      /// The interconnected chips are connected on demand. At the time of VM
-      /// creation, the chips are not connected.
+      /// The interconnected chips are connected on demand. At the time of VM creation, the chips are not connected.
       case provisionOnly
       /// Encodes an unknown integer value.
       ///

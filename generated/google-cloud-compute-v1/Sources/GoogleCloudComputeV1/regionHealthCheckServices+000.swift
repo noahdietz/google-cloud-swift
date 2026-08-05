@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all HealthCheckService resources,
-    /// regional and global, available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthCheckService resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthCheckServices_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all HealthCheckService resources,
-    /// regional and global, available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthCheckService resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthCheckServices_aggregatedList")
     public func aggregatedList(
@@ -138,8 +130,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a regional HealthCheckService resource in the
-    /// specified project and region using the data included in the request.
+    /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionHealthCheckServices_insert")
     public func insert(
@@ -148,8 +139,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a regional HealthCheckService resource in the
-    /// specified project and region using the data included in the request.
+    /// Creates a regional HealthCheckService resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionHealthCheckServices_insert")
     public func insert(
@@ -191,8 +181,7 @@
       )
     }
 
-    /// Lists all the HealthCheckService resources that have been
-    /// configured for the specified project in the given region.
+    /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
     ///
     /// @Snippet(path: "regionHealthCheckServices_list")
     public func list(
@@ -201,8 +190,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Lists all the HealthCheckService resources that have been
-    /// configured for the specified project in the given region.
+    /// Lists all the HealthCheckService resources that have been configured for the specified project in the given region.
     ///
     /// @Snippet(path: "regionHealthCheckServices_list")
     public func list(
@@ -217,10 +205,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified regional HealthCheckService resource
-    /// with the data included in the request.  This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthCheckServices_patch")
     public func patch(
@@ -229,10 +214,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified regional HealthCheckService resource
-    /// with the data included in the request.  This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthCheckService resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthCheckServices_patch")
     public func patch(

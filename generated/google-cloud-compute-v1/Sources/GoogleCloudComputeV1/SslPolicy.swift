@@ -18,86 +18,50 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an SSL Policy resource.
-  ///
-  /// Use SSL policies to control SSL features, such as versions and cipher
-  /// suites, that are offered by Application Load Balancers and proxy Network Load
-  /// Balancers. For more information, read
-  /// SSL policies overview.
+  /// Represents an SSL Policy resource. Use SSL policies to control SSL features, such as versions and cipher suites, that are offered by Application Load Balancers and proxy Network Load Balancers. For more information, read SSL policies overview.
   public struct SslPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// A list of features enabled when the selected profile is CUSTOM. The
-    ///  method returns the set of features that can be
-    /// specified in this list. This field must be empty if the profile is notCUSTOM.
+    /// A list of features enabled when the selected profile is CUSTOM. The method returns the set of features that can be specified in this list. This field must be empty if the profile is not CUSTOM.
     public var customFeatures: [Swift.String] = []
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     /// Output only. [Output Only] The list of features enabled in the SSL policy.
     public var enabledFeatures: [Swift.String] = []
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a SslPolicy. An up-to-date fingerprint must be
-    /// provided in order to update the SslPolicy, otherwise the
-    /// request will fail with error 412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve an SslPolicy.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a SslPolicy. An up-to-date fingerprint must be provided in order to update the SslPolicy, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an SslPolicy.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output only] Type of the resource. Alwayscompute#sslPolicyfor SSL policies.
+    /// Output only. [Output only] Type of the resource. Always compute#sslPolicyfor SSL policies.
     public var kind: Swift.String? = nil
 
-    /// The minimum version of SSL protocol that can be used by the clients to
-    /// establish a connection with the load balancer. This can be one ofTLS_1_0, TLS_1_1, TLS_1_2,TLS_1_3. When set to TLS_1_3, the profile field
-    /// must be set to RESTRICTED.
+    /// The minimum version of SSL protocol that can be used by the clients to establish a connection with the load balancer. This can be one of TLS_1_0, TLS_1_1, TLS_1_2, TLS_1_3. When set to TLS_1_3, the profile field must be set to RESTRICTED.
     public var minTlsVersion: SslPolicy.MinTlsVersion? = nil
 
-    /// Name of the resource. The name must be 1-63 characters long, and comply
-    /// with RFC1035. Specifically, the name must be 1-63 characters
-    /// long and match the regular expression
-    /// `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
-    /// must be a lowercase letter, and all following characters must be a dash,
-    /// lowercase letter, or digit, except the last character, which cannot be a
-    /// dash.
+    /// Name of the resource. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// One of DEFAULT, ENABLED, orDEFERRED. Controls whether the load balancer negotiates
-    /// X25519MLKEM768 key exchange when clients advertise support for it. When set
-    /// to DEFAULT, or if no SSL Policy is attached to the target
-    /// proxy, the load balancer disallows X25519MLKEM768 key exchange before
-    /// October 2026, and allows it afterward. When set to ENABLED,
-    /// the load balancer allows X25519MLKEM768 key exchange. When set toDEFERRED, the load balancer disallows X25519MLKEM768 key
-    /// exchange until October 2027, and allows it afterward.
+    /// One of DEFAULT, ENABLED, or DEFERRED. Controls whether the load balancer negotiates X25519MLKEM768 key exchange when clients advertise support for it. When set to DEFAULT, or if no SSL Policy is attached to the target proxy, the load balancer disallows X25519MLKEM768 key exchange before October 2026, and allows it afterward. When set to ENABLED, the load balancer allows X25519MLKEM768 key exchange. When set to DEFERRED, the load balancer disallows X25519MLKEM768 key exchange until October 2027, and allows it afterward.
     public var postQuantumKeyExchange: SslPolicy.PostQuantumKeyExchange? = nil
 
-    /// Profile specifies the set of SSL features that can be used by the load
-    /// balancer when negotiating SSL with clients. This can be one ofCOMPATIBLE, MODERN, RESTRICTED,FIPS_202205, or CUSTOM. If usingCUSTOM, the set of SSL features to enable must be specified in
-    /// the customFeatures field. If using FIPS_202205,
-    /// the min_tls_version field must be set to TLS_1_2.
+    /// Profile specifies the set of SSL features that can be used by the load balancer when negotiating SSL with clients. This can be one of COMPATIBLE, MODERN, RESTRICTED, FIPS_202205, or CUSTOM. If using CUSTOM, the set of SSL features to enable must be specified in the customFeatures field. If using FIPS_202205, the min_tls_version field must be set to TLS_1_2.
     public var profile: SslPolicy.Profile? = nil
 
-    /// Output only. [Output Only] URL of the region where the regional SSL policy
-    /// resides. This field is not applicable to global SSL policies.
+    /// Output only. [Output Only] URL of the region where the regional SSL policy resides. This field is not applicable to global SSL policies.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] If potential misconfigurations are detected for this
-    /// SSL policy, this field will be populated with warning messages.
+    /// Output only. [Output Only] If potential misconfigurations are detected for this SSL policy, this field will be populated with warning messages.
     public var warnings: [SslPolicy.Warnings] = []
 
     /// Initialize a new instance of `SslPolicy`.
@@ -190,19 +154,10 @@
     public struct Warnings: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] A warning code, if applicable. For example, Compute
-      /// Engine returns NO_RESULTS_ON_PAGE if there
-      /// are no results in the response.
+      /// [Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
       public var code: SslPolicy.Warnings.Code? = nil
 
-      /// [Output Only] Metadata about this warning in key:
-      /// value format. For example:
-      ///
-      /// "data": [
-      ///   {
-      ///    "key": "scope",
-      ///    "value": "zones/us-east1-d"
-      ///   }
+      /// [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
       public var data: [SslPolicy.Warnings.Data] = []
 
       /// [Output Only] A human-readable description of the warning code.
@@ -230,13 +185,7 @@
       public struct Data: Codable, Equatable, GoogleCloudWkt._AnyPackable,
         Sendable
       {
-        /// [Output Only] A key that provides more detail on the warning being
-        /// returned. For example, for warnings where there are no results in a list
-        /// request for a particular zone, this key might be scope and
-        /// the key value might be the zone name. Other examples might be a key
-        /// indicating a deprecated resource and a suggested replacement, or a
-        /// warning about invalid network settings (for example, if an instance
-        /// attempts to perform IP forwarding but is not enabled for IP forwarding).
+        /// [Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
         public var key: Swift.String? = nil
 
         /// [Output Only] A warning data value corresponding to the key.
@@ -273,76 +222,60 @@
       ///
       /// [google.cloud.compute.v1.SslPolicy.warnings.code]: <doc:SslPolicy/Warnings/Code>
       public enum Code: Codable, Equatable, Sendable {
-        /// Warning about failed cleanup of transient changes made by a failed
-        /// operation.
+        /// Warning about failed cleanup of transient changes made by a failed operation.
         case cleanupFailed
         /// A link to a deprecated resource was created.
         case deprecatedResourceUsed
-        /// When deploying and at least one of the resources has a type marked as
-        /// deprecated
+        /// When deploying and at least one of the resources has a type marked as deprecated
         case deprecatedTypeUsed
         /// The user created a boot disk that is larger than image size.
         case diskSizeLargerThanImageSize
-        /// When deploying and at least one of the resources has a type marked as
-        /// experimental
+        /// When deploying and at least one of the resources has a type marked as experimental
         case experimentalTypeUsed
         /// Warning that is present in an external api call
         case externalApiWarning
-        /// Warning that value of a field has been overridden.
-        /// Deprecated unused field.
+        /// Warning that value of a field has been overridden. Deprecated unused field.
         @available(*, deprecated)
         case fieldValueOverriden
         /// The operation involved use of an injected kernel, which is deprecated.
         case injectedKernelsDeprecated
-        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is
-        /// not of type HTTP/HTTPS/HTTP2.
+        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is not of type HTTP/HTTPS/HTTP2.
         case invalidHealthCheckForDynamicWieghtedLb
         /// When deploying a deployment with a exceedingly large number of resources
         case largeDeploymentWarning
-        /// Resource can't be retrieved due to list overhead quota exceed
-        /// which captures the amount of resources filtered out by
-        /// user-defined list filter.
+        /// Resource can't be retrieved due to list overhead quota exceed which captures the amount of resources filtered out by user-defined list filter.
         case listOverheadQuotaExceed
         /// A resource depends on a missing type
         case missingTypeDependency
-        /// The route's nextHopIp address is not assigned to an instance on the
-        /// network.
+        /// The route's nextHopIp address is not assigned to an instance on the network.
         case nextHopAddressNotAssigned
         /// The route's next hop instance cannot ip forward.
         case nextHopCannotIpForward
-        /// The route's nextHopInstance URL refers to an instance that does not have an
-        /// ipv6 interface on the same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that does not have an ipv6 interface on the same network as the route.
         case nextHopInstanceHasNoIpv6Interface
         /// The route's nextHopInstance URL refers to an instance that does not exist.
         case nextHopInstanceNotFound
-        /// The route's nextHopInstance URL refers to an instance that is not on the
-        /// same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that is not on the same network as the route.
         case nextHopInstanceNotOnNetwork
         /// The route's next hop instance does not have a status of RUNNING.
         case nextHopNotRunning
-        /// Error which is not critical. We decided to continue the process despite
-        /// the mentioned error.
+        /// Error which is not critical. We decided to continue the process despite the mentioned error.
         case notCriticalError
         /// No results are present on a particular list page.
         case noResultsOnPage
         /// Success is reported, but some results may be missing due to errors
         case partialSuccess
-        /// Quota information is not available to client requests (e.g:
-        /// regions.list).
+        /// Quota information is not available to client requests (e.g: regions.list).
         case quotaInfoUnavailable
-        /// The user attempted to use a resource that requires a TOS they have not
-        /// accepted.
+        /// The user attempted to use a resource that requires a TOS they have not accepted.
         case requiredTosAgreement
         /// Warning that a resource is in use.
         case resourceInUseByOtherResourceWarning
-        /// One or more of the resources set to auto-delete could not be deleted
-        /// because they were in use.
+        /// One or more of the resources set to auto-delete could not be deleted because they were in use.
         case resourceNotDeleted
         /// When a resource schema validation is ignored.
         case schemaValidationIgnored
-        /// Instance template used in instance group manager is valid as such, but
-        /// its application does not make a lot of sense, because it allows only
-        /// single instance in instance group.
+        /// Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.
         case singleInstancePropertyTemplate
         /// When undeclared properties in the schema are present
         case undeclaredProperties
@@ -815,21 +748,15 @@
     ///
     /// [google.cloud.compute.v1.SslPolicy.profile]: <doc:SslPolicy/Profile>
     public enum Profile: Codable, Equatable, Sendable {
-      /// Compatible profile. Allows the broadset set of clients, even those which
-      /// support only out-of-date SSL features to negotiate with the load
-      /// balancer.
+      /// Compatible profile. Allows the broadset set of clients, even those which support only out-of-date SSL features to negotiate with the load balancer.
       case compatible
-      /// Custom profile. Allow only the set of allowed SSL features specified in
-      /// the customFeatures field.
+      /// Custom profile. Allow only the set of allowed SSL features specified in the customFeatures field.
       case custom
-      /// FIPS compatible profile. Supports a reduced set of SSL features,
-      /// intended to meet FIPS 140-3 compliance requirements.
+      /// FIPS compatible profile. Supports a reduced set of SSL features, intended to meet FIPS 140-3 compliance requirements.
       case fips202205
-      /// Modern profile. Supports a wide set of SSL features, allowing modern
-      /// clients to negotiate SSL with the load balancer.
+      /// Modern profile. Supports a wide set of SSL features, allowing modern clients to negotiate SSL with the load balancer.
       case modern
-      /// Restricted profile. Supports a reduced set of SSL features, intended to
-      /// meet stricter compliance requirements.
+      /// Restricted profile. Supports a reduced set of SSL features, intended to meet stricter compliance requirements.
       case restricted
       /// Encodes an unknown integer value.
       ///

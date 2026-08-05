@@ -22,8 +22,7 @@
   public struct NetworkProfile: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. [Output Only] An optional description of this resource.
@@ -32,11 +31,10 @@
     /// Output only. [Output Only] Features supported by the network.
     public var features: NetworkProfileNetworkFeatures? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#networkProfile for network profiles.
+    /// Output only. [Output Only] Type of the resource. Always compute#networkProfile for network profiles.
     public var kind: Swift.String? = nil
 
     /// Output only. [Output Only] Location to which the network is restricted.

@@ -27,12 +27,7 @@
     /// Output only. The list of errors of the managed instance group.
     public var items: [InstanceManagedByIgmError] = []
 
-    /// Output only. This token allows you to get the next page of results for list requests.
-    /// If the number of results is larger than maxResults
-    /// , then use the nextPageToken as a value for
-    /// the query parameter pageToken in the next list request.
-    /// Subsequent list requests will have their own nextPageToken to
-    /// continue paging through the results.
+    /// Output only. This token allows you to get the next page of results for list requests. If the number of results is larger than maxResults , then use the nextPageToken as a value for the query parameter pageToken in the next list request. Subsequent list requests will have their own nextPageToken to continue paging through the results.
     public var nextPageToken: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceGroupManagersListErrorsResponse`.

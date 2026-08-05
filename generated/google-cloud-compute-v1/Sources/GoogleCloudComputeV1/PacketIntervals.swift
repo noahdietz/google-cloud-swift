@@ -171,8 +171,7 @@
     ///
     /// [google.cloud.compute.v1.PacketIntervals.type]: <doc:PacketIntervals/Type_>
     public enum Type_: Codable, Equatable, Sendable {
-      /// Only applies to Echo packets. This shows the intervals between sending
-      /// and receiving the same packet.
+      /// Only applies to Echo packets. This shows the intervals between sending and receiving the same packet.
       case loopback
       /// Intervals between received packets.
       case receive

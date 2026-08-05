@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request.
+    /// Creates a HttpHealthCheck resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "httpHealthChecks_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request.
+    /// Creates a HttpHealthCheck resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "httpHealthChecks_insert")
     public func insert(
@@ -151,8 +149,7 @@
       )
     }
 
-    /// Retrieves the list of HttpHealthCheck resources available to the specified
-    /// project.
+    /// Retrieves the list of HttpHealthCheck resources available to the specified project.
     ///
     /// @Snippet(path: "httpHealthChecks_list")
     public func list(
@@ -161,8 +158,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of HttpHealthCheck resources available to the specified
-    /// project.
+    /// Retrieves the list of HttpHealthCheck resources available to the specified project.
     ///
     /// @Snippet(path: "httpHealthChecks_list")
     public func list(
@@ -177,10 +173,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates a HttpHealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "httpHealthChecks_patch")
     public func patch(
@@ -189,10 +182,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates a HttpHealthCheck resource in the specified project using the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "httpHealthChecks_patch")
     public func patch(
@@ -242,8 +232,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request.
+    /// Updates a HttpHealthCheck resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "httpHealthChecks_update")
     public func update(
@@ -252,8 +241,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates a HttpHealthCheck resource in the specified project using the data
-    /// included in the request.
+    /// Updates a HttpHealthCheck resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "httpHealthChecks_update")
     public func update(

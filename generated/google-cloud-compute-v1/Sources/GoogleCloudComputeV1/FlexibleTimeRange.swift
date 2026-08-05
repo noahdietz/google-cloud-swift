@@ -18,10 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specifies a flexible time range with flexible start time and duration.
-  ///
-  /// It is possible to specify a contradictory time range that cannot be matched
-  /// by any Interval. This causes a validation error.
+  /// Specifies a flexible time range with flexible start time and duration. It is possible to specify a contradictory time range that cannot be matched by any Interval. This causes a validation error.
   public struct FlexibleTimeRange: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

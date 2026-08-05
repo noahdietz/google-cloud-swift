@@ -18,50 +18,29 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Target SSL Proxy resource.
-  ///
-  /// A target SSL proxy is a component of a Proxy Network Load Balancer.
-  /// The forwarding rule references the target SSL proxy, and the target proxy
-  /// then references a backend service. For more information, readProxy Network
-  /// Load Balancer overview.
+  /// Represents a Target SSL Proxy resource. A target SSL proxy is a component of a Proxy Network Load Balancer. The forwarding rule references the target SSL proxy, and the target proxy then references a backend service. For more information, read Proxy Network Load Balancer overview.
   public struct TargetSslProxy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// URL of a certificate map that identifies a certificate map associated with
-    /// the given target proxy.
-    /// This field can only be set for global target proxies.
-    /// If set, sslCertificates will be ignored.
-    ///
-    ///  Accepted format is//certificatemanager.googleapis.com/projects/{project}/locations/{location}/certificateMaps/{resourceName}.
+    /// URL of a certificate map that identifies a certificate map associated with the given target proxy. This field can only be set for global target proxies. If set, sslCertificates will be ignored. Accepted format is //certificatemanager.googleapis.com/projects/{project }/locations/{location}/certificateMaps/{resourceName}.
     public var certificateMap: Swift.String? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#targetSslProxy for target SSL proxies.
+    /// Output only. [Output Only] Type of the resource. Always compute#targetSslProxy for target SSL proxies.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Specifies the type of proxy header to append before sending data to the
-    /// backend, either NONE or PROXY_V1. The default
-    /// is NONE.
+    /// Specifies the type of proxy header to append before sending data to the backend, either NONE or PROXY_V1. The default is NONE.
     public var proxyHeader: TargetSslProxy.ProxyHeader? = nil
 
     /// [Output Only] Server-defined URL for the resource.
@@ -70,16 +49,10 @@
     /// URL to the BackendService resource.
     public var service: Swift.String? = nil
 
-    /// URLs to SslCertificate resources that are used to
-    /// authenticate connections to Backends. At least one SSL certificate
-    /// must be specified. Currently, you may specify up to 15 SSL certificates.
-    /// sslCertificates do not apply when the load balancing scheme is set to
-    /// INTERNAL_SELF_MANAGED.
+    /// URLs to SslCertificate resources that are used to authenticate connections to Backends. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates. sslCertificates do not apply when the load balancing scheme is set to INTERNAL_SELF_MANAGED.
     public var sslCertificates: [Swift.String] = []
 
-    /// URL of SslPolicy resource that will be associated with the TargetSslProxy
-    /// resource. If not set, the TargetSslProxy resource will not have any
-    /// SSL policy configured.
+    /// URL of SslPolicy resource that will be associated with the TargetSslProxy resource. If not set, the TargetSslProxy resource will not have any SSL policy configured.
     public var sslPolicy: Swift.String? = nil
 
     /// Initialize a new instance of `TargetSslProxy`.

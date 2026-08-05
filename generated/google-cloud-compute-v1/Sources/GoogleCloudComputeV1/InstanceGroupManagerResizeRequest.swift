@@ -18,50 +18,35 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// InstanceGroupManagerResizeRequest represents a request to create
-  /// a number of VMs: either immediately or by queuing the request for the
-  /// specified time. This resize request is nested under InstanceGroupManager
-  /// and the VMs created by this request are added to the owning
-  /// InstanceGroupManager.
+  /// InstanceGroupManagerResizeRequest represents a request to create a number of VMs: either immediately or by queuing the request for the specified time. This resize request is nested under InstanceGroupManager and the VMs created by this request are added to the owning InstanceGroupManager.
   public struct InstanceGroupManagerResizeRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. The creation timestamp for this resize request inRFC3339
-    /// text format.
+    /// Output only. The creation timestamp for this resize request in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// An optional description of this resource.
     public var description: Swift.String? = nil
 
-    /// Output only. A unique identifier for this resource type. The server generates this
-    /// identifier.
+    /// Output only. A unique identifier for this resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// The names of instances to be created by this resize request. The number of
-    /// names specified determines the number of instances to create. The group's
-    /// target size will be increased by this number. This field cannot be used
-    /// together with 'resize_by'.
+    /// The names of instances to be created by this resize request. The number of names specified determines the number of instances to create. The group's target size will be increased by this number. This field cannot be used together with 'resize_by'.
     public var instances: [PerInstanceConfig] = []
 
-    /// Output only. The resource type, which is alwayscompute#instanceGroupManagerResizeRequest for resize requests.
+    /// Output only. The resource type, which is always compute#instanceGroupManagerResizeRequest for resize requests.
     public var kind: Swift.String? = nil
 
-    /// The name of this resize request. The name must be 1-63 characters
-    /// long, and comply withRFC1035.
+    /// The name of this resize request. The name must be 1-63 characters long, and comply with RFC1035.
     public var name: Swift.String? = nil
 
-    /// Output only. The URL of a region
-    /// where the resize request is located. Populated only for regional resize
-    /// requests.
+    /// Output only. The URL of a region where the resize request is located. Populated only for regional resize requests.
     public var region: Swift.String? = nil
 
-    /// Requested run duration for instances that will be created by this request.
-    /// At the end of the run duration instance will be deleted.
+    /// Requested run duration for instances that will be created by this request. At the end of the run duration instance will be deleted.
     public var requestedRunDuration: Duration? = nil
 
-    /// The number of instances to be created by this resize request. The group's
-    /// target size will be increased by this number. This field cannot be used
-    /// together with 'instances'.
+    /// The number of instances to be created by this resize request. The group's target size will be increased by this number. This field cannot be used together with 'instances'.
     public var resizeBy: Swift.Int32? = nil
 
     /// Output only. The URL for this resize request. The server defines this URL.
@@ -76,9 +61,7 @@
     /// Output only. Status of the request.
     public var status: InstanceGroupManagerResizeRequestStatus? = nil
 
-    /// Output only. The URL of a zone
-    /// where the resize request is located. Populated only for zonal resize
-    /// requests.
+    /// Output only. The URL of a zone where the resize request is located. Populated only for zonal resize requests.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerResizeRequest`.
@@ -101,16 +84,13 @@
     ///
     /// [google.cloud.compute.v1.InstanceGroupManagerResizeRequest.state]: <doc:InstanceGroupManagerResizeRequest/State>
     public enum State: Codable, Equatable, Sendable {
-      /// The request was created successfully and was accepted for provisioning
-      /// when the capacity becomes available.
+      /// The request was created successfully and was accepted for provisioning when the capacity becomes available.
       case accepted
       /// The request is cancelled.
       case cancelled
       /// Resize request is being created and may still fail creation.
       case creating
-      /// The request failed before or during provisioning. If the request fails
-      /// during provisioning, any VMs that were created during provisioning are
-      /// rolled back and removed from the MIG.
+      /// The request failed before or during provisioning. If the request fails during provisioning, any VMs that were created during provisioning are rolled back and removed from the MIG.
       case failed
       /// Default value. This value should never be returned.
       case unspecified

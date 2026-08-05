@@ -24,9 +24,7 @@
     /// Output only. Contents of the error.
     public var error: InstanceManagedByIgmErrorManagedInstanceError? = nil
 
-    /// Output only. Details of the instance action that triggered this error.
-    /// May be null, if the error was not caused by an action on an instance.
-    /// This field is optional.
+    /// Output only. Details of the instance action that triggered this error. May be null, if the error was not caused by an action on an instance. This field is optional.
     public var instanceActionDetails: InstanceManagedByIgmErrorInstanceActionDetails? = nil
 
     /// Output only. The time that this error occurred. This value is in RFC3339 text format.

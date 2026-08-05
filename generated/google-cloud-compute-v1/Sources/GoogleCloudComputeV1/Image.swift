@@ -18,90 +18,50 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an Image resource.
-  ///
-  /// You can use images to create boot disks for your VM instances.
-  /// For more information, read Images.
+  /// Represents an Image resource. You can use images to create boot disks for your VM instances. For more information, read Images.
   public struct Image: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The architecture of the image. Valid values are
-    /// ARM64 or X86_64.
+    /// The architecture of the image. Valid values are ARM64 or X86_64.
     public var architecture: Image.Architecture? = nil
 
-    /// Size of the image tar.gz archive stored in Google Cloud
-    /// Storage (in bytes).
+    /// Size of the image tar.gz archive stored in Google Cloud Storage (in bytes).
     public var archiveSizeBytes: Swift.Int64? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// Output only. The deprecation status associated with this image.
     public var deprecated: DeprecationStatus? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
     /// Size of the image when restored onto a persistent disk (in GB).
     public var diskSizeGb: Swift.Int64? = nil
 
-    /// Output only. Whether this image is created from a confidential compute mode disk.
-    /// [Output Only]: This field is not set by user, but from source disk.
+    /// Output only. Whether this image is created from a confidential compute mode disk. [Output Only]: This field is not set by user, but from source disk.
     public var enableConfidentialCompute: Swift.Bool? = nil
 
-    /// The name of the image family to which this image belongs. The image
-    /// family name can be from a publicly managed image family provided by
-    /// Compute Engine, or from a custom image family you create. For example,centos-stream-9 is a publicly available image family.
-    /// For more information, see Image
-    /// family best practices.
-    ///
-    /// When creating disks, you can specify an image family instead of a specific
-    /// image name. The image family always returns its latest image that is not
-    /// deprecated. The name of the image family must comply with RFC1035.
+    /// The name of the image family to which this image belongs. The image family name can be from a publicly managed image family provided by Compute Engine, or from a custom image family you create. For example, centos-stream-9 is a publicly available image family. For more information, see Image family best practices. When creating disks, you can specify an image family instead of a specific image name. The image family always returns its latest image that is not deprecated. The name of the image family must comply with RFC1035.
     public var family: Swift.String? = nil
 
-    /// A list of features to enable on the guest operating system. Applicable
-    /// only for bootable images. To see a list of available options, see theguestOSfeatures[].type parameter.
+    /// A list of features to enable on the guest operating system. Applicable only for bootable images. To see a list of available options, see the guestOSfeatures[].type parameter.
     public var guestOsFeatures: [GuestOsFeature] = []
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Encrypts the image using acustomer-supplied
-    /// encryption key.
-    ///
-    /// After you encrypt an image with a customer-supplied key, you must provide
-    /// the same key if you use the image later (e.g. to create a disk from
-    /// the image).
-    ///
-    /// Customer-supplied encryption keys do not protect access to metadata
-    /// of the disk.
-    ///
-    /// If you do not provide an encryption key when creating the image, then the
-    /// disk will be encrypted using an automatically generated key and you do not
-    /// need to provide a key to use the image later.
+    /// Encrypts the image using a customer-supplied encryption key. After you encrypt an image with a customer-supplied key, you must provide the same key if you use the image later (e.g. to create a disk from the image). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not provide an encryption key when creating the image, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the image later.
     public var imageEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#image for
-    /// images.
+    /// Output only. [Output Only] Type of the resource. Always compute#image for images.
     public var kind: Swift.String? = nil
 
-    /// A fingerprint for the labels being applied to this image, which is
-    /// essentially a hash of the labels used for optimistic locking. The
-    /// fingerprint is initially generated by Compute Engine and changes after
-    /// every request to modify or update labels. You must always provide an
-    /// up-to-date fingerprint hash in order to update or change labels,
-    /// otherwise the request will fail with error412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve an image.
+    /// A fingerprint for the labels being applied to this image, which is essentially a hash of the labels used for optimistic locking. The fingerprint is initially generated by Compute Engine and changes after every request to modify or update labels. You must always provide an up-to-date fingerprint hash in order to update or change labels, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an image.
     public var labelFingerprint: Foundation.Data? = nil
 
-    /// Labels to apply to this image. These can be later modified by
-    /// the setLabels method.
+    /// Labels to apply to this image. These can be later modified by the setLabels method.
     public var labels: [Swift.String: Swift.String] = [:]
 
     /// Integer license codes indicating which licenses are attached to this image.
@@ -110,17 +70,10 @@
     /// Any applicable license URI.
     public var licenses: [Swift.String] = []
 
-    /// Name of the resource; provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Input only. [Input Only] Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
     public var params: ImageParams? = nil
 
     /// The parameters of the raw disk image.
@@ -138,103 +91,40 @@
     /// Set the secure boot keys of shielded instance.
     public var shieldedInstanceInitialState: InitialStateConfig? = nil
 
-    /// URL of the source disk used to create this image.
-    /// For example, the following are valid values:
-    ///
-    ///    - https://www.googleapis.com/compute/v1/projects/project/zones/zone/disks/disk
-    ///    - projects/project/zones/zone/disks/disk
-    ///    - zones/zone/disks/disk
-    ///
-    ///
-    ///
-    /// In order to create an image, you must provide the full or partial URL of
-    /// one of the following:
-    ///
-    ///    - The rawDisk.source URL
-    ///    - The sourceDisk URL
-    ///    - The sourceImage URL
-    ///    - The sourceSnapshot URL
+    /// URL of the source disk used to create this image. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /disks/disk - projects/project/zones/zone/disks/disk - zones/zone/disks/disk In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
     public var sourceDisk: Swift.String? = nil
 
-    /// Thecustomer-supplied
-    /// encryption key of the source disk. Required if the source disk is
-    /// protected by a customer-supplied encryption key.
+    /// The customer-supplied encryption key of the source disk. Required if the source disk is protected by a customer-supplied encryption key.
     public var sourceDiskEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// Output only. [Output Only]
-    /// The ID value of the disk used to create this image. This value may be used
-    /// to determine whether the image was taken from the current or a previous
-    /// instance of a given disk name.
+    /// Output only. [Output Only] The ID value of the disk used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given disk name.
     public var sourceDiskId: Swift.String? = nil
 
-    /// URL of the source image used to create this image.
-    /// The following are valid formats for the URL:
-    ///
-    ///    - https://www.googleapis.com/compute/v1/projects/project_id/global/
-    ///    images/image_name
-    ///    - projects/project_id/global/images/image_name
-    ///
-    ///
-    ///
-    /// In order to create an image, you must provide the full or partial URL of
-    /// one of the following:
-    ///
-    ///    - The rawDisk.source URL
-    ///    - The sourceDisk URL
-    ///    - The sourceImage URL
-    ///    - The sourceSnapshot URL
+    /// URL of the source image used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ images/image_name - projects/project_id/global/images/image_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
     public var sourceImage: Swift.String? = nil
 
-    /// The customer-supplied encryption key of the source image. Required if the
-    /// source image is protected by a customer-supplied encryption key.
+    /// The customer-supplied encryption key of the source image. Required if the source image is protected by a customer-supplied encryption key.
     public var sourceImageEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// Output only. [Output Only]
-    /// The ID value of the image used to create this image. This value may be used
-    /// to determine whether the image was taken from the current or a previous
-    /// instance of a given image name.
+    /// Output only. [Output Only] The ID value of the image used to create this image. This value may be used to determine whether the image was taken from the current or a previous instance of a given image name.
     public var sourceImageId: Swift.String? = nil
 
-    /// URL of the source snapshot used to create this image.
-    /// The following are valid formats for the URL:
-    ///
-    ///    - https://www.googleapis.com/compute/v1/projects/project_id/global/
-    ///    snapshots/snapshot_name
-    ///    - projects/project_id/global/snapshots/snapshot_name
-    ///
-    ///
-    ///
-    /// In order to create an image, you must provide the full or partial URL of
-    /// one of the following:
-    ///
-    ///    - The rawDisk.source URL
-    ///    - The sourceDisk URL
-    ///    - The sourceImage URL
-    ///    - The sourceSnapshot URL
+    /// URL of the source snapshot used to create this image. The following are valid formats for the URL: - https://www.googleapis.com/compute/v1/projects/project_id/global/ snapshots/snapshot_name - projects/project_id/global/snapshots/snapshot_name In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
     public var sourceSnapshot: Swift.String? = nil
 
-    /// The customer-supplied encryption key of the source snapshot. Required if
-    /// the source snapshot is protected by a customer-supplied encryption key.
+    /// The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a customer-supplied encryption key.
     public var sourceSnapshotEncryptionKey: CustomerEncryptionKey? = nil
 
-    /// Output only. [Output Only]
-    /// The ID value of the snapshot used to create this image. This value may be
-    /// used to determine whether the snapshot was taken from the current or a
-    /// previous instance of a given snapshot name.
+    /// Output only. [Output Only] The ID value of the snapshot used to create this image. This value may be used to determine whether the snapshot was taken from the current or a previous instance of a given snapshot name.
     public var sourceSnapshotId: Swift.String? = nil
 
-    /// The type of the image used to create this disk. The
-    /// default and only valid value is RAW.
+    /// The type of the image used to create this disk. The default and only valid value is RAW.
     public var sourceType: Image.SourceType? = nil
 
-    /// Output only. [Output Only] The status of the image. An image can be used to create other
-    /// resources, such as instances, only after the image has been successfully
-    /// created and the status is set to READY. Possible
-    /// values are FAILED, PENDING, orREADY.
+    /// Output only. [Output Only] The status of the image. An image can be used to create other resources, such as instances, only after the image has been successfully created and the status is set to READY. Possible values are FAILED, PENDING, or READY.
     public var status: Image.Status? = nil
 
-    /// Cloud Storage bucket storage location of the image (regional or
-    /// multi-regional).
+    /// Cloud Storage bucket storage location of the image (regional or multi-regional).
     public var storageLocations: [Swift.String] = []
 
     /// Initialize a new instance of `Image`.
@@ -398,34 +288,14 @@
     public struct RawDisk: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// The format used to encode and transmit the block device, which should beTAR. This is just a container and transmission format and not
-      /// a runtime format. Provided by the client when the disk image is created.
+      /// The format used to encode and transmit the block device, which should be TAR. This is just a container and transmission format and not a runtime format. Provided by the client when the disk image is created.
       public var containerType: Image.RawDisk.ContainerType? = nil
 
-      /// [Deprecated] This field is deprecated.
-      /// An optional SHA1 checksum of the disk image before unpackaging provided
-      /// by the client when the disk image is created.
+      /// [Deprecated] This field is deprecated. An optional SHA1 checksum of the disk image before unpackaging provided by the client when the disk image is created.
       @available(*, deprecated)
       public var sha1Checksum: Swift.String? = nil
 
-      /// The full Google Cloud Storage URL or Artifact Registry path where the raw
-      /// disk image archive is stored.
-      /// The following are valid formats:
-      ///
-      ///    - https://storage.googleapis.com/bucket_name/image_archive_name
-      ///    - https://storage.googleapis.com/bucket_name/folder_name/image_archive_name
-      ///    - projects/project/locations/location/repositories/repo/packages/package/versions/version_id
-      ///    - projects/project/locations/location/repositories/repo/packages/package/versions/version_id@dirsum_sha256:hex_value
-      ///
-      ///
-      ///
-      /// In order to create an image, you must provide the full or partial URL of
-      /// one of the following:
-      ///
-      ///    - The rawDisk.source URL
-      ///    - The sourceDisk URL
-      ///    - The sourceImage URL
-      ///    - The sourceSnapshot URL
+      /// The full Google Cloud Storage URL or Artifact Registry path where the raw disk image archive is stored. The following are valid formats: - https://storage.googleapis.com/bucket_name/image_archive_name - https://storage.googleapis.com/bucket_name/folder_name/ image_archive_name - projects/project/locations/location/repositories/repo/packages/package /versions/version_id - projects/project/locations/location/repositories/repo/packages/package /versions/version_id@dirsum_sha256:hex_value In order to create an image, you must provide the full or partial URL of one of the following: - The rawDisk.source URL - The sourceDisk URL - The sourceImage URL - The sourceSnapshot URL
       public var source: Swift.String? = nil
 
       /// Initialize a new instance of `RawDisk`.

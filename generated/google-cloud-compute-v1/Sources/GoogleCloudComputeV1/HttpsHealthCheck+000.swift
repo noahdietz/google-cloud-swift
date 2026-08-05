@@ -18,74 +18,47 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a legacy HTTPS Health Check resource.
-  ///
-  /// Legacy HTTPS health checks have been deprecated. If you are using a target
-  /// pool-based network load balancer, you must use a legacy HTTP (not HTTPS)
-  /// health check. For all other load balancers, including backend service-based
-  /// network load balancers, and for managed instance group auto-healing, you must
-  /// use modern (non-legacy) health checks.
-  ///
-  /// For more information, seeHealth checks
-  /// overview.
+  /// Represents a legacy HTTPS Health Check resource. Legacy HTTPS health checks have been deprecated. If you are using a target pool-based network load balancer, you must use a legacy HTTP (not HTTPS) health check. For all other load balancers, including backend service-based network load balancers, and for managed instance group auto-healing, you must use modern (non-legacy) health checks. For more information, see Health checks overview .
   public struct HttpsHealthCheck: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// How often (in seconds) to send a health check. The default value is 5
-    /// seconds.
+    /// How often (in seconds) to send a health check. The default value is 5 seconds.
     public var checkIntervalSec: Swift.Int32? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// A so-far unhealthy instance will be marked healthy after this
-    /// many consecutive successes. The default value is 2.
+    /// A so-far unhealthy instance will be marked healthy after this many consecutive successes. The default value is 2.
     public var healthyThreshold: Swift.Int32? = nil
 
-    /// The value of the host header in the HTTPS health check request. If left
-    /// empty (default value), the public IP on behalf of which this health check
-    /// is performed will be used.
+    /// The value of the host header in the HTTPS health check request. If left empty (default value), the public IP on behalf of which this health check is performed will be used.
     public var host: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
     /// Output only. Type of the resource.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The TCP port number for the HTTPS health check request. The default value
-    /// is 443.
+    /// The TCP port number for the HTTPS health check request. The default value is 443.
     public var port: Swift.Int32? = nil
 
-    /// The request path of the HTTPS health check request. The default value is
-    /// "/". Must comply withRFC3986.
+    /// The request path of the HTTPS health check request. The default value is "/". Must comply with RFC3986.
     public var requestPath: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// How long (in seconds) to wait before claiming failure. The default value is
-    /// 5 seconds. It is invalid for timeoutSec to have a greater value than
-    /// checkIntervalSec.
+    /// How long (in seconds) to wait before claiming failure. The default value is 5 seconds. It is invalid for timeoutSec to have a greater value than checkIntervalSec.
     public var timeoutSec: Swift.Int32? = nil
 
-    /// A so-far healthy instance will be marked unhealthy after this
-    /// many consecutive failures. The default value is 2.
+    /// A so-far healthy instance will be marked unhealthy after this many consecutive failures. The default value is 2.
     public var unhealthyThreshold: Swift.Int32? = nil
 
     /// Initialize a new instance of `HttpsHealthCheck`.

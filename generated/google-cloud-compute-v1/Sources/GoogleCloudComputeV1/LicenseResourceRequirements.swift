@@ -21,12 +21,10 @@
   public struct LicenseResourceRequirements: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Input Only] Deprecated. This field no longer reflects the minimum number
-    /// of guest cpus required to use the Instance.
+    /// [Input Only] Deprecated. This field no longer reflects the minimum number of guest cpus required to use the Instance.
     public var minGuestCpuCount: Swift.Int32? = nil
 
-    /// [Input Only] Deprecated. This field no longer reflects the minimum memory
-    /// required to use the Instance.
+    /// [Input Only] Deprecated. This field no longer reflects the minimum memory required to use the Instance.
     public var minMemoryMb: Swift.Int32? = nil
 
     /// Initialize a new instance of `LicenseResourceRequirements`.

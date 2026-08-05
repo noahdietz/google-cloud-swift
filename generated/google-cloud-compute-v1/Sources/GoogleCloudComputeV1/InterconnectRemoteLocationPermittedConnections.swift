@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] URL of an Interconnect location that is permitted to
-    /// connect to this Interconnect remote location.
+    /// Output only. [Output Only] URL of an Interconnect location that is permitted to connect to this Interconnect remote location.
     public var interconnectLocation: Swift.String? = nil
 
     /// Initialize a new instance of `InterconnectRemoteLocationPermittedConnections`.

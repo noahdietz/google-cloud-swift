@@ -22,21 +22,17 @@
       ._AnyPackable,
     Sendable
   {
-    /// Custom configuration to apply the JSON parsing. Only applicable when
-    /// json_parsing is set to STANDARD.
+    /// Custom configuration to apply the JSON parsing. Only applicable when json_parsing is set to STANDARD.
     public var jsonCustomConfig: SecurityPolicyAdvancedOptionsConfigJsonCustomConfig? = nil
 
     public var jsonParsing: SecurityPolicyAdvancedOptionsConfig.JsonParsing? = nil
 
     public var logLevel: SecurityPolicyAdvancedOptionsConfig.LogLevel? = nil
 
-    /// The maximum request size chosen by the customer with Waf enabled.
-    /// Values supported are "8KB", "16KB, "32KB", "48KB" and "64KB".
-    /// Values are case insensitive.
+    /// The maximum request size chosen by the customer with Waf enabled. Values supported are "8KB", "16KB, "32KB", "48KB" and "64KB". Values are case insensitive.
     public var requestBodyInspectionSize: Swift.String? = nil
 
-    /// An optional list of case-insensitive request header names to use for
-    /// resolving the callers client IP address.
+    /// An optional list of case-insensitive request header names to use for resolving the callers client IP address.
     public var userIpRequestHeaders: [Swift.String] = []
 
     /// Initialize a new instance of `SecurityPolicyAdvancedOptionsConfig`.

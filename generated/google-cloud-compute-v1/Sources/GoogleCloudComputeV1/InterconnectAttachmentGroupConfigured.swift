@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] The redundancy this group is configured to support. The way a
-  /// user queries what SLA their Attachment gets is by looking at this field of
-  /// the Attachment's AttachmentGroup.
+  /// [Output Only] The redundancy this group is configured to support. The way a user queries what SLA their Attachment gets is by looking at this field of the Attachment's AttachmentGroup.
   public struct InterconnectAttachmentGroupConfigured: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

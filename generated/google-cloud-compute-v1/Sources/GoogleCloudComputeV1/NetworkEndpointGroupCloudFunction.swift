@@ -18,32 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration for a Cloud Function network endpoint group (NEG).
-  /// The function must be provided explicitly or in the URL mask.
-  ///
-  /// Note: Cloud Function must be in the same project and located in the same
-  /// region as the Serverless NEG.
+  /// Configuration for a Cloud Function network endpoint group (NEG). The function must be provided explicitly or in the URL mask. Note: Cloud Function must be in the same project and located in the same region as the Serverless NEG.
   public struct NetworkEndpointGroupCloudFunction: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A user-defined name of the Cloud Function.
-    ///
-    /// The function name is case-sensitive and must be 1-63
-    /// characters long.
-    ///
-    /// Example value: func1.
+    /// A user-defined name of the Cloud Function. The function name is case-sensitive and must be 1-63 characters long. Example value: func1.
     public var function: Swift.String? = nil
 
-    /// An URL
-    /// mask is one of the main components of the Cloud Function.
-    ///
-    /// A template to parse function field from a request URL. URL
-    /// mask allows for routing to multiple Cloud Functions without having to
-    /// create multiple Network Endpoint Groups and backend services.
-    ///
-    /// For example, request URLs mydomain.com/function1 andmydomain.com/function2 can be backed by the same
-    /// Serverless NEG with URL mask /<function>. The URL
-    /// mask will parse them to { function = "function1" } and{ function = "function2" } respectively.
+    /// An URL mask is one of the main components of the Cloud Function. A template to parse function field from a request URL. URL mask allows for routing to multiple Cloud Functions without having to create multiple Network Endpoint Groups and backend services. For example, request URLs mydomain.com/function1 and mydomain.com/function2 can be backed by the same Serverless NEG with URL mask /<function>. The URL mask will parse them to { function = "function1" } and { function = "function2" } respectively.
     public var urlMask: Swift.String? = nil
 
     /// Initialize a new instance of `NetworkEndpointGroupCloudFunction`.

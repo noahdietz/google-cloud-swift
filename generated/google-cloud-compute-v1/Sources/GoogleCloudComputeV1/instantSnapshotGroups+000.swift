@@ -102,8 +102,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "instantSnapshotGroups_getIamPolicy")
     public func getIamPolicy(
@@ -163,8 +162,7 @@
       )
     }
 
-    /// retrieves the list of InstantSnapshotGroup resources contained within
-    /// the specified zone.
+    /// retrieves the list of InstantSnapshotGroup resources contained within the specified zone.
     ///
     /// @Snippet(path: "instantSnapshotGroups_list")
     public func list(
@@ -173,8 +171,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// retrieves the list of InstantSnapshotGroup resources contained within
-    /// the specified zone.
+    /// retrieves the list of InstantSnapshotGroup resources contained within the specified zone.
     ///
     /// @Snippet(path: "instantSnapshotGroups_list")
     public func list(
@@ -189,8 +186,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "instantSnapshotGroups_setIamPolicy")
     public func setIamPolicy(

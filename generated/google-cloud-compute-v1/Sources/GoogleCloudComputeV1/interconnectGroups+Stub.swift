@@ -100,7 +100,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)/createMembers"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"
@@ -130,7 +131,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -158,7 +160,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -183,7 +186,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)/getIamPolicy"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(
@@ -215,7 +219,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)/getOperationalStatus"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -235,7 +240,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -261,7 +267,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -295,7 +302,8 @@
           return "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -327,7 +335,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)/setIamPolicy"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"
@@ -356,7 +365,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/interconnectGroups/\(pathVariable1)/testIamPermissions"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "POST"

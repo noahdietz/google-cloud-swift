@@ -22,9 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// When the policy is SPECIFIC_LOCATIONS, snapshots will be stored
-    /// in the locations listed in this field. Keys are Cloud Storage bucket
-    /// locations. Only one location can be specified.
+    /// When the policy is SPECIFIC_LOCATIONS, snapshots will be stored in the locations listed in this field. Keys are Cloud Storage bucket locations. Only one location can be specified.
     public var locations:
       [Swift.String: SnapshotSettingsStorageLocationSettingsStorageLocationPreference] = [:]
 
@@ -51,15 +49,11 @@
     ///
     /// [google.cloud.compute.v1.SnapshotSettingsStorageLocationSettings.policy]: <doc:SnapshotSettingsStorageLocationSettings/Policy>
     public enum Policy: Codable, Equatable, Sendable {
-      /// Store snapshot in the same region as with the originating disk.
-      /// No additional parameters are needed.
+      /// Store snapshot in the same region as with the originating disk. No additional parameters are needed.
       case localRegion
-      /// Store snapshot in the nearest multi region Cloud Storage bucket,
-      /// relative to the originating disk. No additional parameters are needed.
+      /// Store snapshot in the nearest multi region Cloud Storage bucket, relative to the originating disk. No additional parameters are needed.
       case nearestMultiRegion
-      /// Store snapshot in the specific locations, as specified by the user.
-      /// The list of regions to store must be defined under the `locations`
-      /// field.
+      /// Store snapshot in the specific locations, as specified by the user. The list of regions to store must be defined under the `locations` field.
       case specificLocations
       case storageLocationPolicyUnspecified
       /// Encodes an unknown integer value.

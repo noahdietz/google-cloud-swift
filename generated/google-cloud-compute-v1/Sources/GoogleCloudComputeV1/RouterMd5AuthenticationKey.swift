@@ -21,18 +21,10 @@
   public struct RouterMd5AuthenticationKey: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Input only] Value of the key.
-    ///
-    /// For patch and update calls, it can be skipped to
-    /// copy the value from the previous configuration. This is allowed if the
-    /// key with the same name existed before the operation. Maximum length is 80
-    /// characters. Can only contain printable ASCII characters.
+    /// [Input only] Value of the key. For patch and update calls, it can be skipped to copy the value from the previous configuration. This is allowed if the key with the same name existed before the operation. Maximum length is 80 characters. Can only contain printable ASCII characters.
     public var key: Swift.String? = nil
 
-    /// Name used to identify the key.
-    ///
-    /// Must be unique within a router. Must be referenced by exactly
-    /// one bgpPeer. Must comply withRFC1035.
+    /// Name used to identify the key. Must be unique within a router. Must be referenced by exactly one bgpPeer. Must comply with RFC1035.
     public var name: Swift.String? = nil
 
     /// Initialize a new instance of `RouterMd5AuthenticationKey`.

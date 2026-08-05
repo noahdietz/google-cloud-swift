@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of storage pools.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of storage pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "storagePools_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of storage pools.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of storage pools. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "storagePools_aggregatedList")
     public func aggregatedList(
@@ -72,11 +66,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Deletes the specified storage pool. Deleting a storagePool
-    /// removes its data permanently and is irreversible. However, deleting a
-    /// storagePool does not delete any snapshots previously
-    /// made from the storagePool. You must separately delete
-    /// snapshots.
+    /// Deletes the specified storage pool. Deleting a storagePool removes its data permanently and is irreversible. However, deleting a storagePool does not delete any snapshots previously made from the storagePool. You must separately delete snapshots.
     ///
     /// @Snippet(path: "storagePools_delete")
     public func delete(
@@ -85,11 +75,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified storage pool. Deleting a storagePool
-    /// removes its data permanently and is irreversible. However, deleting a
-    /// storagePool does not delete any snapshots previously
-    /// made from the storagePool. You must separately delete
-    /// snapshots.
+    /// Deletes the specified storage pool. Deleting a storagePool removes its data permanently and is irreversible. However, deleting a storagePool does not delete any snapshots previously made from the storagePool. You must separately delete snapshots.
     ///
     /// @Snippet(path: "storagePools_delete")
     public func delete(
@@ -130,8 +116,7 @@
       )
     }
 
-    /// Returns a specified storage pool. Gets a list of available
-    /// storage pools by making a list() request.
+    /// Returns a specified storage pool. Gets a list of available storage pools by making a list() request.
     ///
     /// @Snippet(path: "storagePools_get")
     public func `get`(
@@ -140,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "storagePools_getIamPolicy")
     public func getIamPolicy(
@@ -150,8 +134,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a storage pool in the specified project using the data
-    /// in the request.
+    /// Creates a storage pool in the specified project using the data in the request.
     ///
     /// @Snippet(path: "storagePools_insert")
     public func insert(
@@ -160,8 +143,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a storage pool in the specified project using the data
-    /// in the request.
+    /// Creates a storage pool in the specified project using the data in the request.
     ///
     /// @Snippet(path: "storagePools_insert")
     public func insert(
@@ -202,8 +184,7 @@
       )
     }
 
-    /// Retrieves a list of storage pools contained within
-    /// the specified zone.
+    /// Retrieves a list of storage pools contained within the specified zone.
     ///
     /// @Snippet(path: "storagePools_list")
     public func list(
@@ -212,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of storage pools contained within
-    /// the specified zone.
+    /// Retrieves a list of storage pools contained within the specified zone.
     ///
     /// @Snippet(path: "storagePools_list")
     public func list(
@@ -251,8 +231,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "storagePools_setIamPolicy")
     public func setIamPolicy(
@@ -270,11 +249,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified storagePool with the data included in the request.
-    /// The update is performed only on selected fields included as part
-    /// of update-mask. Only the following fields can be modified:
-    /// pool_provisioned_capacity_gb, pool_provisioned_iops and
-    /// pool_provisioned_throughput.
+    /// Updates the specified storagePool with the data included in the request. The update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: pool_provisioned_capacity_gb, pool_provisioned_iops and pool_provisioned_throughput.
     ///
     /// @Snippet(path: "storagePools_update")
     public func update(
@@ -283,11 +258,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified storagePool with the data included in the request.
-    /// The update is performed only on selected fields included as part
-    /// of update-mask. Only the following fields can be modified:
-    /// pool_provisioned_capacity_gb, pool_provisioned_iops and
-    /// pool_provisioned_throughput.
+    /// Updates the specified storagePool with the data included in the request. The update is performed only on selected fields included as part of update-mask. Only the following fields can be modified: pool_provisioned_capacity_gb, pool_provisioned_iops and pool_provisioned_throughput.
     ///
     /// @Snippet(path: "storagePools_update")
     public func update(

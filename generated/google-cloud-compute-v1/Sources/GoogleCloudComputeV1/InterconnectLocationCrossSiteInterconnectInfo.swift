@@ -18,15 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Information about Cross-Site Interconnect wires which may be created
-  /// between the containing location and another remote location.
+  /// Information about Cross-Site Interconnect wires which may be created between the containing location and another remote location.
   public struct InterconnectLocationCrossSiteInterconnectInfo: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Output only. The remote location for Cross-Site Interconnect wires. This specifies an
-    /// InterconnectLocation city (metropolitan area designator), which itself
-    /// may match multiple InterconnectLocations.
+    /// Output only. The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation city (metropolitan area designator), which itself may match multiple InterconnectLocations.
     public var city: Swift.String? = nil
 
     /// Initialize a new instance of `InterconnectLocationCrossSiteInterconnectInfo`.

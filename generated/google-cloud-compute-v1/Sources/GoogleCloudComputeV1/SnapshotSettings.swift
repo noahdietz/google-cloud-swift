@@ -21,12 +21,10 @@
   public struct SnapshotSettings: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// (Regional snapshots use only)Policy of which location is allowed to access
-    /// snapshot.
+    /// (Regional snapshots use only)Policy of which location is allowed to access snapshot.
     public var accessLocation: SnapshotSettingsAccessLocation? = nil
 
-    /// Policy of which storage location is going to be resolved, and additional
-    /// data that particularizes how the policy is going to be carried out.
+    /// Policy of which storage location is going to be resolved, and additional data that particularizes how the policy is going to be carried out.
     public var storageLocation: SnapshotSettingsStorageLocationSettings? = nil
 
     /// Initialize a new instance of `SnapshotSettings`.

@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A single recommendation to create requested resources. Contains detailed
-  /// recommendations for every future resources specification specified in
-  /// CalendarModeAdviceRequest.
+  /// A single recommendation to create requested resources. Contains detailed recommendations for every future resources specification specified in CalendarModeAdviceRequest.
   public struct CalendarModeRecommendation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Recommendations for every future resource specification passed in
-    /// CalendarModeAdviceRequest. Keys of the map correspond to keys
-    /// specified in the request.
+    /// Recommendations for every future resource specification passed in CalendarModeAdviceRequest. Keys of the map correspond to keys specified in the request.
     public var recommendationsPerSpec: [Swift.String: FutureResourcesRecommendation] = [:]
 
     /// Initialize a new instance of `CalendarModeRecommendation`.

@@ -163,8 +163,7 @@
       try await self.inner.getRule(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionSecurityPolicies_insert")
     public func insert(
@@ -173,8 +172,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionSecurityPolicies_insert")
     public func insert(
@@ -216,8 +214,7 @@
       )
     }
 
-    /// List all the policies that have been configured for the specified project
-    /// and region.
+    /// List all the policies that have been configured for the specified project and region.
     ///
     /// @Snippet(path: "regionSecurityPolicies_list")
     public func list(
@@ -226,8 +223,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// List all the policies that have been configured for the specified project
-    /// and region.
+    /// List all the policies that have been configured for the specified project and region.
     ///
     /// @Snippet(path: "regionSecurityPolicies_list")
     public func list(
@@ -242,11 +238,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified policy with the data included in the request. To
-    /// clear fields in the policy, leave the fields empty and specify them in the
-    /// updateMask. This cannot be used to be update the rules in the policy.
-    /// Please use the per rule methods like addRule, patchRule, and removeRule
-    /// instead.
+    /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
     ///
     /// @Snippet(path: "regionSecurityPolicies_patch")
     public func patch(
@@ -255,11 +247,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified policy with the data included in the request. To
-    /// clear fields in the policy, leave the fields empty and specify them in the
-    /// updateMask. This cannot be used to be update the rules in the policy.
-    /// Please use the per rule methods like addRule, patchRule, and removeRule
-    /// instead.
+    /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
     ///
     /// @Snippet(path: "regionSecurityPolicies_patch")
     public func patch(
@@ -300,8 +288,7 @@
       )
     }
 
-    /// Patches a rule at the specified priority. To clear fields in the rule,
-    /// leave the fields empty and specify them in the updateMask.
+    /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
     ///
     /// @Snippet(path: "regionSecurityPolicies_patchRule")
     public func patchRule(
@@ -310,8 +297,7 @@
       try await self.inner.patchRule(request: request, options: options)
     }
 
-    /// Patches a rule at the specified priority. To clear fields in the rule,
-    /// leave the fields empty and specify them in the updateMask.
+    /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
     ///
     /// @Snippet(path: "regionSecurityPolicies_patchRule")
     public func patchRule(
@@ -405,9 +391,7 @@
       )
     }
 
-    /// Sets the labels on a security policy. To learn more about labels,
-    /// read the Labeling Resources
-    /// documentation.
+    /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "regionSecurityPolicies_setLabels")
     public func setLabels(
@@ -416,9 +400,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a security policy. To learn more about labels,
-    /// read the Labeling Resources
-    /// documentation.
+    /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "regionSecurityPolicies_setLabels")
     public func setLabels(

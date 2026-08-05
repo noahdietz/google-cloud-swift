@@ -25,12 +25,10 @@
     /// Properties of the SKU instances being reserved.
     public var instanceProperties: AllocationSpecificSKUAllocationReservedInstanceProperties? = nil
 
-    /// The instance template that will be used to populate the
-    /// ReservedInstanceProperties of the future reservation
+    /// The instance template that will be used to populate the ReservedInstanceProperties of the future reservation
     public var sourceInstanceTemplate: Swift.String? = nil
 
-    /// Total number of instances for which capacity assurance is requested at a
-    /// future time period.
+    /// Total number of instances for which capacity assurance is requested at a future time period.
     public var totalCount: Swift.Int64? = nil
 
     /// Initialize a new instance of `FutureReservationSpecificSKUProperties`.

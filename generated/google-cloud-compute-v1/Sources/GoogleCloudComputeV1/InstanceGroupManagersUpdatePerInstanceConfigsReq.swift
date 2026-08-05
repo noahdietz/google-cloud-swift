@@ -23,8 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The list of per-instance configurations to insert or patch on this managed
-    /// instance group.
+    /// The list of per-instance configurations to insert or patch on this managed instance group.
     public var perInstanceConfigs: [PerInstanceConfig] = []
 
     /// Initialize a new instance of `InstanceGroupManagersUpdatePerInstanceConfigsReq`.

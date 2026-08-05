@@ -25,31 +25,19 @@
     /// Output only. [Output Only] The current status of the requested amendment.
     public var amendmentStatus: FutureReservationStatus.AmendmentStatus? = nil
 
-    /// Output only. Fully qualified urls of the automatically created reservations at
-    /// start_time.
+    /// Output only. Fully qualified urls of the automatically created reservations at start_time.
     public var autoCreatedReservations: [Swift.String] = []
 
-    /// Output only. [Output Only] Represents the existing matching usage for the future
-    /// reservation.
+    /// Output only. [Output Only] Represents the existing matching usage for the future reservation.
     public var existingMatchingUsageInfo: FutureReservationStatusExistingMatchingUsageInfo? = nil
 
-    /// Output only. This count indicates the fulfilled capacity so far. This is set during
-    /// "PROVISIONING" state. This count also includes capacity delivered as part
-    /// of existing matching reservations.
+    /// Output only. This count indicates the fulfilled capacity so far. This is set during "PROVISIONING" state. This count also includes capacity delivered as part of existing matching reservations.
     public var fulfilledCount: Swift.Int64? = nil
 
-    /// Output only. [Output Only] This field represents the future reservation before an
-    /// amendment was requested. If the amendment is declined, the Future
-    /// Reservation will be reverted to the last known good state. The last known
-    /// good state is not set when updating a future reservation whose
-    /// Procurement Status is DRAFTING.
+    /// Output only. [Output Only] This field represents the future reservation before an amendment was requested. If the amendment is declined, the Future Reservation will be reverted to the last known good state. The last known good state is not set when updating a future reservation whose Procurement Status is DRAFTING.
     public var lastKnownGoodState: FutureReservationStatusLastKnownGoodState? = nil
 
-    /// Output only. Time when Future Reservation would become LOCKED, after which no
-    /// modifications to Future Reservation will be allowed. Applicable only
-    /// after the Future Reservation is in the APPROVED state. The lock_time is
-    /// an RFC3339 string. The procurement_status will transition to PROCURING
-    /// state at this time.
+    /// Output only. Time when Future Reservation would become LOCKED, after which no modifications to Future Reservation will be allowed. Applicable only after the Future Reservation is in the APPROVED state. The lock_time is an RFC3339 string. The procurement_status will transition to PROCURING state at this time.
     public var lockTime: Swift.String? = nil
 
     /// Output only. Current state of this Future Reservation
@@ -77,14 +65,11 @@
     ///
     /// [google.cloud.compute.v1.FutureReservationStatus.amendmentStatus]: <doc:FutureReservationStatus/AmendmentStatus>
     public enum AmendmentStatus: Codable, Equatable, Sendable {
-      /// The requested amendment to the Future Resevation has been approved and
-      /// applied by GCP.
+      /// The requested amendment to the Future Resevation has been approved and applied by GCP.
       case amendmentApproved
-      /// The requested amendment to the Future Reservation has been declined by
-      /// GCP and the original state was restored.
+      /// The requested amendment to the Future Reservation has been declined by GCP and the original state was restored.
       case amendmentDeclined
-      /// The requested amendment to the Future Reservation is currently being
-      /// reviewd by GCP.
+      /// The requested amendment to the Future Reservation is currently being reviewd by GCP.
       case amendmentInReview
       case unspecified
       /// Encodes an unknown integer value.
@@ -201,30 +186,22 @@
       case committed
       /// Future reservation is rejected by GCP.
       case declined
-      /// Related status for PlanningStatus.Draft. Transitions to
-      /// PENDING_APPROVAL upon user submitting FR.
+      /// Related status for PlanningStatus.Draft. Transitions to PENDING_APPROVAL upon user submitting FR.
       case drafting
       /// Future reservation failed. No additional reservations were provided.
       case failed
-      /// Future reservation is partially fulfilled. Additional reservations were
-      /// provided but did not reach total_count reserved instance slots.
+      /// Future reservation is partially fulfilled. Additional reservations were provided but did not reach total_count reserved instance slots.
       case failedPartiallyFulfilled
       /// Future reservation is fulfilled completely.
       case fulfilled
-      /// An Amendment to the Future Reservation has been requested. If the
-      /// Amendment is declined, the Future Reservation will be restored to the
-      /// last known good state.
+      /// An Amendment to the Future Reservation has been requested. If the Amendment is declined, the Future Reservation will be restored to the last known good state.
       case pendingAmendmentApproval
       /// Future reservation is pending approval by GCP.
       case pendingApproval
       case unspecified
-      /// Future reservation is being procured by GCP. Beyond this point, Future
-      /// reservation is locked and no further modifications are allowed.
+      /// Future reservation is being procured by GCP. Beyond this point, Future reservation is locked and no further modifications are allowed.
       case procuring
-      /// Future reservation capacity is being provisioned. This state will be
-      /// entered after start_time, while reservations are being created to
-      /// provide total_count reserved instance slots. This state will not
-      /// persist past start_time + 24h.
+      /// Future reservation capacity is being provisioned. This state will be entered after start_time, while reservations are being created to provide total_count reserved instance slots. This state will not persist past start_time + 24h.
       case provisioning
       /// Encodes an unknown integer value.
       ///

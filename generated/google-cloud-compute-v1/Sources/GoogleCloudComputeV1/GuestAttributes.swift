@@ -22,12 +22,10 @@
   public struct GuestAttributes: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#guestAttributes for guest attributes entry.
+    /// Output only. [Output Only] Type of the resource. Always compute#guestAttributes for guest attributes entry.
     public var kind: Swift.String? = nil
 
-    /// The path to be queried. This can be the default namespace ('') or a
-    /// nested namespace ('\/') or a specified key
-    /// ('\/\').
+    /// The path to be queried. This can be the default namespace ('') or a nested namespace ('\/') or a specified key ('\/\').
     public var queryPath: Swift.String? = nil
 
     /// Output only. [Output Only] The value of the requested queried path.

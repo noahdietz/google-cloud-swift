@@ -22,8 +22,7 @@
   public struct WireGroupTopologyEndpoint: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. The InterconnectLocation.city (metropolitan area designator) that all
-    /// interconnects are located in.
+    /// Output only. The InterconnectLocation.city (metropolitan area designator) that all interconnects are located in.
     public var city: Swift.String? = nil
 
     /// Output only. Endpoint label from the wire group.

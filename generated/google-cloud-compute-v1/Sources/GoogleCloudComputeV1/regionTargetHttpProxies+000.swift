@@ -103,8 +103,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetHttpProxy resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a TargetHttpProxy resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionTargetHttpProxies_insert")
     public func insert(
@@ -113,8 +112,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetHttpProxy resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a TargetHttpProxy resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionTargetHttpProxies_insert")
     public func insert(
@@ -156,8 +154,7 @@
       )
     }
 
-    /// Retrieves the list of TargetHttpProxy resources available
-    /// to the specified project in the specified region.
+    /// Retrieves the list of TargetHttpProxy resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionTargetHttpProxies_list")
     public func list(
@@ -166,8 +163,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of TargetHttpProxy resources available
-    /// to the specified project in the specified region.
+    /// Retrieves the list of TargetHttpProxy resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionTargetHttpProxies_list")
     public func list(

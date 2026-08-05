@@ -21,65 +21,52 @@
   public struct BfdPacket: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The Authentication Present bit of the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The Authentication Present bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var authenticationPresent: Swift.Bool? = nil
 
-    /// The Control Plane Independent bit of the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The Control Plane Independent bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var controlPlaneIndependent: Swift.Bool? = nil
 
-    /// The demand bit of the BFD packet. This is specified in section 4.1 ofRFC5880
+    /// The demand bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var demand: Swift.Bool? = nil
 
-    /// The diagnostic code specifies the local system's reason for the last change
-    /// in session state. This allows remote systems to determine the reason that
-    /// the previous session failed, for example. These diagnostic codes are
-    /// specified in section 4.1 ofRFC5880
+    /// The diagnostic code specifies the local system's reason for the last change in session state. This allows remote systems to determine the reason that the previous session failed, for example. These diagnostic codes are specified in section 4.1 of RFC5880
     public var diagnostic: BfdPacket.Diagnostic? = nil
 
-    /// The Final bit of the BFD packet. This is specified in section 4.1 ofRFC5880
+    /// The Final bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var `final`: Swift.Bool? = nil
 
-    /// The length of the BFD Control packet in bytes. This is specified in section
-    /// 4.1 ofRFC5880
+    /// The length of the BFD Control packet in bytes. This is specified in section 4.1 of RFC5880
     public var length: Swift.UInt32? = nil
 
-    /// The Required Min Echo RX Interval value in the BFD packet. This is
-    /// specified in section 4.1 ofRFC5880
+    /// The Required Min Echo RX Interval value in the BFD packet. This is specified in section 4.1 of RFC5880
     public var minEchoRxIntervalMs: Swift.UInt32? = nil
 
-    /// The Required Min RX Interval value in the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The Required Min RX Interval value in the BFD packet. This is specified in section 4.1 of RFC5880
     public var minRxIntervalMs: Swift.UInt32? = nil
 
-    /// The Desired Min TX Interval value in the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The Desired Min TX Interval value in the BFD packet. This is specified in section 4.1 of RFC5880
     public var minTxIntervalMs: Swift.UInt32? = nil
 
-    /// The detection time multiplier of the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The detection time multiplier of the BFD packet. This is specified in section 4.1 of RFC5880
     public var multiplier: Swift.UInt32? = nil
 
-    /// The multipoint bit of the BFD packet. This is specified in section 4.1 ofRFC5880
+    /// The multipoint bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var multipoint: Swift.Bool? = nil
 
-    /// The My Discriminator value in the BFD packet. This is specified in section
-    /// 4.1 ofRFC5880
+    /// The My Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
     public var myDiscriminator: Swift.UInt32? = nil
 
-    /// The Poll bit of the BFD packet. This is specified in section 4.1 ofRFC5880
+    /// The Poll bit of the BFD packet. This is specified in section 4.1 of RFC5880
     public var poll: Swift.Bool? = nil
 
-    /// The current BFD session state as seen by the transmitting system. These
-    /// states are specified in section 4.1 ofRFC5880
+    /// The current BFD session state as seen by the transmitting system. These states are specified in section 4.1 of RFC5880
     public var state: BfdPacket.State? = nil
 
-    /// The version number of the BFD protocol, as specified in section 4.1 ofRFC5880.
+    /// The version number of the BFD protocol, as specified in section 4.1 of RFC5880.
     public var version: Swift.UInt32? = nil
 
-    /// The Your Discriminator value in the BFD packet. This is specified in
-    /// section 4.1 ofRFC5880
+    /// The Your Discriminator value in the BFD packet. This is specified in section 4.1 of RFC5880
     public var yourDiscriminator: Swift.UInt32? = nil
 
     /// Initialize a new instance of `BfdPacket`.

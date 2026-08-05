@@ -18,16 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Information about recommendation status for locations
-  /// that were allowed but not used by the response.
+  /// Information about recommendation status for locations that were allowed but not used by the response.
   public struct FutureResourcesRecommendationOtherLocation: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Details (human readable) describing the situation.
-    /// For example, if status is CONDITION_NOT_MET, then
-    /// details contain information about the parameters of the time window
-    /// that did not meet the required conditions.
+    /// Details (human readable) describing the situation. For example, if status is CONDITION_NOT_MET, then details contain information about the parameters of the time window that did not meet the required conditions.
     public var details: Swift.String? = nil
 
     /// Status of recommendation in this location.
@@ -53,21 +49,15 @@
     ///
     /// [google.cloud.compute.v1.FutureResourcesRecommendationOtherLocation.status]: <doc:FutureResourcesRecommendationOtherLocation/Status>
     public enum Status: Codable, Equatable, Sendable {
-      /// The requested resources are offered in this location
-      /// but the requested time window is does not meet the required conditions.
+      /// The requested resources are offered in this location but the requested time window is does not meet the required conditions.
       case conditionsNotMet
-      /// The requested resources are not offered in this location.
-      /// Retrying the request will not change this status.
+      /// The requested resources are not offered in this location. Retrying the request will not change this status.
       case notSupported
-      /// The requested resources are offered in this location
-      /// and the requested time window is accepted
-      /// but there is no capacity within the requested time window.
+      /// The requested resources are offered in this location and the requested time window is accepted but there is no capacity within the requested time window.
       case noCapacity
       /// Default value, unused.
       case otherLocationStatusUndefined
-      /// The requested resources are offered in this location
-      /// and it is possible to request them. However, another location
-      /// was better and was recommended.
+      /// The requested resources are offered in this location and it is possible to request them. However, another location was better and was recommended.
       case recommended
       /// Encodes an unknown integer value.
       ///

@@ -18,40 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A specification of the desired way to instantiate a disk in the instance
-  /// template when its created from a source instance.
+  /// A specification of the desired way to instantiate a disk in the instance template when its created from a source instance.
   public struct DiskInstantiationConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies whether the disk will be auto-deleted when the instance is
-    /// deleted (but not when the disk is detached from the instance).
+    /// Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
     public var autoDelete: Swift.Bool? = nil
 
-    /// The custom source image to be used to restore this disk when instantiating
-    /// this instance template.
+    /// The custom source image to be used to restore this disk when instantiating this instance template.
     public var customImage: Swift.String? = nil
 
     /// Specifies the device name of the disk to which the configurations apply to.
     public var deviceName: Swift.String? = nil
 
-    /// Specifies whether to include the disk and what image to use. Possible
-    /// values are:
-    ///
-    ///
-    ///      - source-image: to use the same image that was used to
-    ///      create the source instance's corresponding disk. Applicable to the boot
-    ///      disk and additional read-write disks.
-    ///      - source-image-family: to use the same image family that
-    ///      was used to create the source instance's corresponding disk. Applicable
-    ///      to the boot disk and additional read-write disks.
-    ///      - custom-image: to use a user-provided image url for disk
-    ///      creation. Applicable to the boot disk and additional read-write
-    ///      disks.
-    ///    - attach-read-only: to attach a read-only
-    ///      disk. Applicable to read-only disks.
-    ///      - do-not-include: to exclude a disk from the template.
-    ///      Applicable to additional read-write disks, local SSDs, and read-only
-    ///      disks.
+    /// Specifies whether to include the disk and what image to use. Possible values are: - source-image: to use the same image that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - source-image-family: to use the same image family that was used to create the source instance's corresponding disk. Applicable to the boot disk and additional read-write disks. - custom-image: to use a user-provided image url for disk creation. Applicable to the boot disk and additional read-write disks. - attach-read-only: to attach a read-only disk. Applicable to read-only disks. - do-not-include: to exclude a disk from the template. Applicable to additional read-write disks, local SSDs, and read-only disks.
     public var instantiateFrom: DiskInstantiationConfig.InstantiateFrom? = nil
 
     /// Initialize a new instance of `DiskInstantiationConfig`.
@@ -74,33 +54,19 @@
     ///
     /// [google.cloud.compute.v1.DiskInstantiationConfig.instantiateFrom]: <doc:DiskInstantiationConfig/InstantiateFrom>
     public enum InstantiateFrom: Codable, Equatable, Sendable {
-      /// Attach the existing disk in read-only mode. The request will fail if the
-      /// disk was attached in read-write mode on the source instance. Applicable
-      /// to: read-only disks.
+      /// Attach the existing disk in read-only mode. The request will fail if the disk was attached in read-write mode on the source instance. Applicable to: read-only disks.
       case attachReadOnly
-      /// Create a blank disk. The disk will be created unformatted. Applicable to:
-      /// additional read-write disks, local SSDs.
+      /// Create a blank disk. The disk will be created unformatted. Applicable to: additional read-write disks, local SSDs.
       case blank
-      /// Use the custom image specified in the custom_image field. Applicable to:
-      /// boot disk, additional read-write disks.
+      /// Use the custom image specified in the custom_image field. Applicable to: boot disk, additional read-write disks.
       case customImage
-      /// Use the default instantiation option for the corresponding type of disk.
-      /// For boot disk and any other R/W disks, new custom images will be created
-      /// from each disk. For read-only disks, they will be attached in read-only
-      /// mode. Local SSD disks will be created as blank volumes.
+      /// Use the default instantiation option for the corresponding type of disk. For boot disk and any other R/W disks, new custom images will be created from each disk. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
       case `default`
-      /// Do not include the disk in the instance template. Applicable to:
-      /// additional read-write disks, local SSDs, read-only disks.
+      /// Do not include the disk in the instance template. Applicable to: additional read-write disks, local SSDs, read-only disks.
       case doNotInclude
-      /// Use the same source image used for creation of the source instance's
-      /// corresponding disk. The request will fail if the source VM's disk was
-      /// created from a snapshot. Applicable to: boot disk, additional read-write
-      /// disks.
+      /// Use the same source image used for creation of the source instance's corresponding disk. The request will fail if the source VM's disk was created from a snapshot. Applicable to: boot disk, additional read-write disks.
       case sourceImage
-      /// Use the same source image family used for creation of the source
-      /// instance's corresponding disk. The request will fail if the source image
-      /// of the source disk does not belong to any image family. Applicable to:
-      /// boot disk, additional read-write disks.
+      /// Use the same source image family used for creation of the source instance's corresponding disk. The request will fail if the source image of the source disk does not belong to any image family. Applicable to: boot disk, additional read-write disks.
       case sourceImageFamily
       /// Encodes an unknown integer value.
       ///

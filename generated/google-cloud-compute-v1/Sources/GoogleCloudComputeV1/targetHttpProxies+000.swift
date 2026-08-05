@@ -42,11 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all TargetHttpProxy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all TargetHttpProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetHttpProxies_aggregatedList")
     public func aggregatedList(
@@ -55,11 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all TargetHttpProxy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all TargetHttpProxy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "targetHttpProxies_aggregatedList")
     public func aggregatedList(
@@ -132,8 +124,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetHttpProxy resource in the specified
-    /// project using the data included in the request.
+    /// Creates a TargetHttpProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetHttpProxies_insert")
     public func insert(
@@ -142,8 +133,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetHttpProxy resource in the specified
-    /// project using the data included in the request.
+    /// Creates a TargetHttpProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetHttpProxies_insert")
     public func insert(
@@ -183,8 +173,7 @@
       )
     }
 
-    /// Retrieves the list of TargetHttpProxy resources available
-    /// to the specified project.
+    /// Retrieves the list of TargetHttpProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetHttpProxies_list")
     public func list(
@@ -193,8 +182,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of TargetHttpProxy resources available
-    /// to the specified project.
+    /// Retrieves the list of TargetHttpProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetHttpProxies_list")
     public func list(
@@ -209,10 +197,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified TargetHttpProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetHttpProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetHttpProxies_patch")
     public func patch(
@@ -221,10 +206,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified TargetHttpProxy resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified TargetHttpProxy resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "targetHttpProxies_patch")
     public func patch(

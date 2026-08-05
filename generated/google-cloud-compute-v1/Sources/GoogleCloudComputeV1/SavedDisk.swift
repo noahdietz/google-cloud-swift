@@ -25,22 +25,16 @@
     /// Output only. [Output Only] The architecture of the attached disk.
     public var architecture: SavedDisk.Architecture? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#savedDisk
-    /// for attached disks.
+    /// Output only. [Output Only] Type of the resource. Always compute#savedDisk for attached disks.
     public var kind: Swift.String? = nil
 
     /// Output only. Specifies a URL of the disk attached to the source instance.
     public var sourceDisk: Swift.String? = nil
 
-    /// Output only. [Output Only] Size of the individual disk snapshot used by this machine
-    /// image.
+    /// Output only. [Output Only] Size of the individual disk snapshot used by this machine image.
     public var storageBytes: Swift.Int64? = nil
 
-    /// Output only. [Output Only] An indicator whether storageBytes is in a
-    /// stable state or it is being adjusted as a result of shared storage
-    /// reallocation. This status can either be UPDATING, meaning
-    /// the size of the snapshot is being updated, or UP_TO_DATE,
-    /// meaning the size of the snapshot is up-to-date.
+    /// Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
     public var storageBytesStatus: SavedDisk.StorageBytesStatus? = nil
 
     /// Initialize a new instance of `SavedDisk`.

@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The policy describes the baseline against which
-  /// Instance boot integrity is measured.
+  /// The policy describes the baseline against which Instance boot integrity is measured.
   public struct ShieldedInstanceIntegrityPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Updates the integrity policy baseline using the
-    /// measurements from the VM instance's most recent boot.
+    /// Updates the integrity policy baseline using the measurements from the VM instance's most recent boot.
     public var updateAutoLearnPolicy: Swift.Bool? = nil
 
     /// Initialize a new instance of `ShieldedInstanceIntegrityPolicy`.

@@ -18,16 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Diagnostics information about the Interconnect connection, which contains
-  /// detailed and current technical information about Google's side of the
-  /// connection.
+  /// Diagnostics information about the Interconnect connection, which contains detailed and current technical information about Google's side of the connection.
   public struct InterconnectDiagnostics: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A list of InterconnectDiagnostics.ARPEntry objects,
-    /// describing individual neighbors currently seen by the Google router in
-    /// the ARP cache for the Interconnect.
-    /// This will be empty when the Interconnect is not bundled.
+    /// A list of InterconnectDiagnostics.ARPEntry objects, describing individual neighbors currently seen by the Google router in the ARP cache for the Interconnect. This will be empty when the Interconnect is not bundled.
     public var arpCaches: [InterconnectDiagnosticsARPEntry] = []
 
     /// The aggregation type of the bundle interface.
@@ -36,8 +31,7 @@
     /// The operational status of the bundle interface.
     public var bundleOperationalStatus: InterconnectDiagnostics.BundleOperationalStatus? = nil
 
-    /// A list of InterconnectDiagnostics.LinkStatus objects,
-    /// describing the status for each link on the Interconnect.
+    /// A list of InterconnectDiagnostics.LinkStatus objects, describing the status for each link on the Interconnect.
     public var links: [InterconnectDiagnosticsLinkStatus] = []
 
     /// The MAC address of the Interconnect's bundle interface.
@@ -163,15 +157,9 @@
     ///
     /// [google.cloud.compute.v1.InterconnectDiagnostics.bundleOperationalStatus]: <doc:InterconnectDiagnostics/BundleOperationalStatus>
     public enum BundleOperationalStatus: Codable, Equatable, Sendable {
-      /// If bundleAggregationType is LACP: LACP is not established and/or all
-      /// links in the bundle have DOWN operational status. If
-      /// bundleAggregationType is STATIC: one or more links in the bundle has
-      /// DOWN operational status.
+      /// If bundleAggregationType is LACP: LACP is not established and/or all links in the bundle have DOWN operational status. If bundleAggregationType is STATIC: one or more links in the bundle has DOWN operational status.
       case down
-      /// If bundleAggregationType is LACP: LACP is established and at least one
-      /// link in the bundle has UP operational status. If bundleAggregationType
-      /// is STATIC: all links in the bundle (typically just one) have UP
-      /// operational status.
+      /// If bundleAggregationType is LACP: LACP is established and at least one link in the bundle has UP operational status. If bundleAggregationType is STATIC: all links in the bundle (typically just one) have UP operational status.
       case up
       /// Encodes an unknown integer value.
       ///

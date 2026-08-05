@@ -18,94 +18,53 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a collection of network endpoints.
-  ///
-  /// A network endpoint group (NEG) defines how a set of endpoints should be
-  /// reached, whether they are reachable, and where they are located.
-  /// For more information about using NEGs for different use cases, seeNetwork endpoint groups overview.
-  ///
-  /// Note: Use the following APIs to manage network endpoint groups:
-  ///
-  ///    -
-  ///    To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
-  ///    NEGs): zonal
-  ///    API
-  ///    -
-  ///    To manage NEGs with regional scope (such as regional internet NEGs,
-  ///    serverless NEGs, Private Service Connect NEGs): regional
-  ///    API
-  ///    -
-  ///    To manage NEGs with global scope (such as global internet NEGs):global
-  ///    API
+  /// Represents a collection of network endpoints. A network endpoint group (NEG) defines how a set of endpoints should be reached, whether they are reachable, and where they are located. For more information about using NEGs for different use cases, see Network endpoint groups overview. Note: Use the following APIs to manage network endpoint groups: - To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity NEGs): zonal API - To manage NEGs with regional scope (such as regional internet NEGs, serverless NEGs, Private Service Connect NEGs): regional API - To manage NEGs with global scope (such as global internet NEGs): global API
   public struct NetworkEndpointGroup: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Optional. Metadata defined as annotations on the network endpoint group.
     public var annotations: [Swift.String: Swift.String] = [:]
 
-    /// Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or cloudFunction may be set.
+    /// Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or cloudFunction may be set.
     public var appEngine: NetworkEndpointGroupAppEngine? = nil
 
-    /// Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or cloudFunction may be set.
+    /// Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or cloudFunction may be set.
     public var cloudFunction: NetworkEndpointGroupCloudFunction? = nil
 
-    /// Optional. Only valid when networkEndpointType isSERVERLESS. Only one of cloudRun,appEngine or cloudFunction may be set.
+    /// Optional. Only valid when networkEndpointType is SERVERLESS. Only one of cloudRun, appEngine or cloudFunction may be set.
     public var cloudRun: NetworkEndpointGroupCloudRun? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// The default port used if the port number is not specified in the network
-    /// endpoint.
-    ///
-    /// Optional. If the network endpoint type is either GCE_VM_IP,SERVERLESS or PRIVATE_SERVICE_CONNECT, this
-    /// field must not be specified.
+    /// The default port used if the port number is not specified in the network endpoint. Optional. If the network endpoint type is either GCE_VM_IP, SERVERLESS or PRIVATE_SERVICE_CONNECT, this field must not be specified.
     public var defaultPort: Swift.Int32? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#networkEndpointGroup for network endpoint group.
+    /// Output only. [Output Only] Type of the resource. Always compute#networkEndpointGroup for network endpoint group.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource; provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The URL of the network to which all network endpoints in the NEG belong.
-    /// For networkEndpointType GCE_VM_IP_PORT,GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT,
-    /// if this field is not specified, a default network will be used.
-    /// This field cannot be set for NEGs with networkEndpointType set toSERVERLESS or PRIVATE_SERVICE_CONNECT and for
-    /// global NEGs.
-    /// For all other network endpoint types, this field is required.
+    /// The URL of the network to which all network endpoints in the NEG belong. For networkEndpointType GCE_VM_IP_PORT, GCE_VM_IP_PORTMAP or NON_GCP_PRIVATE_IP_PORT, if this field is not specified, a default network will be used. This field cannot be set for NEGs with networkEndpointType set to SERVERLESS or PRIVATE_SERVICE_CONNECT and for global NEGs. For all other network endpoint types, this field is required.
     public var network: Swift.String? = nil
 
-    /// Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP, GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT, SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
+    /// Type of network endpoints in this network endpoint group. Can be one of GCE_VM_IP, GCE_VM_IP_PORT, NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT, INTERNET_IP_PORT, SERVERLESS, PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
     public var networkEndpointType: NetworkEndpointGroup.NetworkEndpointType? = nil
 
-    /// Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
+    /// Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
     public var pscData: NetworkEndpointGroupPscData? = nil
 
-    /// The target service url used to set up private service connection to
-    /// a Google API or a PSC Producer Service Attachment.
-    /// An example value is: asia-northeast3-cloudkms.googleapis.com.
-    ///
-    /// Optional. Only valid when networkEndpointType isPRIVATE_SERVICE_CONNECT.
+    /// The target service url used to set up private service connection to a Google API or a PSC Producer Service Attachment. An example value is: asia-northeast3-cloudkms.googleapis.com. Optional. Only valid when networkEndpointType is PRIVATE_SERVICE_CONNECT.
     public var pscTargetService: Swift.String? = nil
 
-    /// Output only. [Output Only] The URL of theregion
-    /// where the network endpoint group is located.
+    /// Output only. [Output Only] The URL of the region where the network endpoint group is located.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.
@@ -114,12 +73,10 @@
     /// Output only. [Output only] Number of network endpoints in the network endpoint group.
     public var size: Swift.Int32? = nil
 
-    /// Optional URL of the subnetwork to which all network endpoints in the NEG
-    /// belong.
+    /// Optional URL of the subnetwork to which all network endpoints in the NEG belong.
     public var subnetwork: Swift.String? = nil
 
-    /// Output only. [Output Only] The URL of thezone
-    /// where the network endpoint group is located.
+    /// Output only. [Output Only] The URL of the zone where the network endpoint group is located.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `NetworkEndpointGroup`.
@@ -146,20 +103,15 @@
       case gceVmIp
       /// The network endpoint is represented by IP address and port pair.
       case gceVmIpPort
-      /// The network endpoint is represented by an IP, Port and Client Destination
-      /// Port.
+      /// The network endpoint is represented by an IP, Port and Client Destination Port.
       case gceVmIpPortmap
-      /// The network endpoint is represented by fully qualified domain name and
-      /// port.
+      /// The network endpoint is represented by fully qualified domain name and port.
       case internetFqdnPort
       /// The network endpoint is represented by an internet IP address and port.
       case internetIpPort
-      /// The network endpoint is represented by an IP address and port. The
-      /// endpoint belongs to a VM or pod running in a customer's on-premises.
+      /// The network endpoint is represented by an IP address and port. The endpoint belongs to a VM or pod running in a customer's on-premises.
       case nonGcpPrivateIpPort
-      /// The network endpoint is either public Google APIs or
-      /// services exposed by other GCP Project with a Service Attachment.
-      /// The connection is set up by private service connect
+      /// The network endpoint is either public Google APIs or services exposed by other GCP Project with a Service Attachment. The connection is set up by private service connect
       case privateServiceConnect
       /// The network endpoint is handled by specified serverless infrastructure.
       case serverless

@@ -18,20 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration that allows for slower scale in so that even if Autoscaler
-  /// recommends an abrupt scale in of a MIG, it will be throttled as specified
-  /// by the parameters below.
+  /// Configuration that allows for slower scale in so that even if Autoscaler recommends an abrupt scale in of a MIG, it will be throttled as specified by the parameters below.
   public struct AutoscalingPolicyScaleInControl: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Maximum allowed number (or %) of VMs that can be deducted from the peak
-    /// recommendation during the window autoscaler looks at when computing
-    /// recommendations. Possibly all these VMs can be deleted at once so user
-    /// service needs to be prepared to lose that many VMs in one step.
+    /// Maximum allowed number (or %) of VMs that can be deducted from the peak recommendation during the window autoscaler looks at when computing recommendations. Possibly all these VMs can be deleted at once so user service needs to be prepared to lose that many VMs in one step.
     public var maxScaledInReplicas: FixedOrPercent? = nil
 
-    /// How far back autoscaling looks when computing recommendations to
-    /// include directives regarding slower scale in, as described above.
+    /// How far back autoscaling looks when computing recommendations to include directives regarding slower scale in, as described above.
     public var timeWindowSec: Swift.Int32? = nil
 
     /// Initialize a new instance of `AutoscalingPolicyScaleInControl`.

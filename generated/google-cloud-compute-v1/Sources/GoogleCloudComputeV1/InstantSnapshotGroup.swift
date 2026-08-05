@@ -18,41 +18,26 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an InstantSnapshotGroup resource.
-  ///
-  /// An instant snapshot group is a set of instant snapshots that represents a
-  /// point in time state of a consistency group.
+  /// Represents an InstantSnapshotGroup resource. An instant snapshot group is a set of instant snapshots that represents a point in time state of a consistency group.
   public struct InstantSnapshotGroup: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// Optional. An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// Optional. An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#instantSnapshotGroup for InstantSnapshotGroup
-    /// resources.
+    /// Output only. [Output Only] Type of the resource. Always compute#instantSnapshotGroup for InstantSnapshotGroup resources.
     public var kind: Swift.String? = nil
 
-    /// Identifier. Name of the resource; provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// Identifier. Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] URL of the region where the instant snapshot group resides.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// Output only. [Output Only] URL of the region where the instant snapshot group resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     public var resourceStatus: InstantSnapshotGroupResourceStatus? = nil
@@ -68,9 +53,7 @@
     /// Output only. [Output Only]
     public var status: InstantSnapshotGroup.Status? = nil
 
-    /// Output only. [Output Only] URL of the zone where the instant snapshot group resides.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// Output only. [Output Only] URL of the zone where the instant snapshot group resides. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `InstantSnapshotGroup`.

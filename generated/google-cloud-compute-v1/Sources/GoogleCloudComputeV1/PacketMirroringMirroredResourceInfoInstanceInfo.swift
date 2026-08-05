@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Unique identifier for the instance; defined by the
-    /// server.
+    /// Output only. [Output Only] Unique identifier for the instance; defined by the server.
     public var canonicalUrl: Swift.String? = nil
 
     /// Resource URL to the virtual machine instance which is being mirrored.

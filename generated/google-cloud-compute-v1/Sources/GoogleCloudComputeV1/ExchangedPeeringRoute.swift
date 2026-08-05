@@ -24,11 +24,7 @@
     /// The destination range of the route.
     public var destRange: Swift.String? = nil
 
-    /// True if the peering route has been imported from a peer. The actual import
-    /// happens if the field networkPeering.importCustomRoutes is true
-    /// for this network, and networkPeering.exportCustomRoutes is
-    /// true for the peer network, and the import does not result in a route
-    /// conflict.
+    /// True if the peering route has been imported from a peer. The actual import happens if the field networkPeering.importCustomRoutes is true for this network, and networkPeering.exportCustomRoutes is true for the peer network, and the import does not result in a route conflict.
     public var imported: Swift.Bool? = nil
 
     /// The region of peering route next hop, only applies to dynamic routes.

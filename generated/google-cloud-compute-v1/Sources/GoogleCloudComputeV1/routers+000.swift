@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of routers.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "routers_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of routers.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "routers_aggregatedList")
     public func aggregatedList(
@@ -291,8 +285,7 @@
       try await self.inner.getRouterStatus(request: request, options: options)
     }
 
-    /// Creates a Router resource in the specified project and region using
-    /// the data included in the request.
+    /// Creates a Router resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "routers_insert")
     public func insert(
@@ -301,8 +294,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a Router resource in the specified project and region using
-    /// the data included in the request.
+    /// Creates a Router resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "routers_insert")
     public func insert(
@@ -390,8 +382,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of router named set subresources available to the
-    /// specified project.
+    /// Retrieves a list of router named set subresources available to the specified project.
     ///
     /// @Snippet(path: "routers_listNamedSets")
     public func listNamedSets(
@@ -400,8 +391,7 @@
       try await self.inner.listNamedSets(request: request, options: options)
     }
 
-    /// Retrieves a list of router named set subresources available to the
-    /// specified project.
+    /// Retrieves a list of router named set subresources available to the specified project.
     ///
     /// @Snippet(path: "routers_listNamedSets")
     public func listNamedSets(
@@ -416,8 +406,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of router route policy subresources available to the
-    /// specified project.
+    /// Retrieves a list of router route policy subresources available to the specified project.
     ///
     /// @Snippet(path: "routers_listRoutePolicies")
     public func listRoutePolicies(
@@ -426,8 +415,7 @@
       try await self.inner.listRoutePolicies(request: request, options: options)
     }
 
-    /// Retrieves a list of router route policy subresources available to the
-    /// specified project.
+    /// Retrieves a list of router route policy subresources available to the specified project.
     ///
     /// @Snippet(path: "routers_listRoutePolicies")
     public func listRoutePolicies(
@@ -442,10 +430,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified Router resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "routers_patch")
     public func patch(
@@ -454,10 +439,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified Router resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "routers_patch")
     public func patch(
@@ -598,8 +580,7 @@
       )
     }
 
-    /// Preview fields auto-generated during router create andupdate operations.
-    /// Calling this method does NOT create or update the router.
+    /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
     ///
     /// @Snippet(path: "routers_preview")
     public func preview(
@@ -608,10 +589,7 @@
       try await self.inner.preview(request: request, options: options)
     }
 
-    /// Updates the specified Router resource with the data included in the
-    /// request.  This method conforms toPUT semantics, which requests that the state of the
-    /// target resource be created or replaced with the state defined by the
-    /// representation enclosed in the request message payload.
+    /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
     ///
     /// @Snippet(path: "routers_update")
     public func update(
@@ -620,10 +598,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified Router resource with the data included in the
-    /// request.  This method conforms toPUT semantics, which requests that the state of the
-    /// target resource be created or replaced with the state defined by the
-    /// representation enclosed in the request message payload.
+    /// Updates the specified Router resource with the data included in the request. This method conforms to PUT semantics, which requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.
     ///
     /// @Snippet(path: "routers_update")
     public func update(

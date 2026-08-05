@@ -18,73 +18,38 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Managed Instance Group resource.
-  ///
-  /// An instance group is a collection of VM instances that you can manage as a
-  /// single entity. For more information, readInstance groups.
-  ///
-  /// For zonal Managed Instance Group, use the instanceGroupManagers
-  /// resource.
-  ///
-  /// For regional Managed Instance Group, use theregionInstanceGroupManagers resource.
+  /// Represents a Managed Instance Group resource. An instance group is a collection of VM instances that you can manage as a single entity. For more information, read Instance groups. For zonal Managed Instance Group, use the instanceGroupManagers resource. For regional Managed Instance Group, use the regionInstanceGroupManagers resource.
   public struct InstanceGroupManager: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies configuration that overrides the instance template configuration
-    /// for the group.
+    /// Specifies configuration that overrides the instance template configuration for the group.
     public var allInstancesConfig: InstanceGroupManagerAllInstancesConfig? = nil
 
-    /// The autohealing policy for this managed instance group. You can specify
-    /// only one value.
+    /// The autohealing policy for this managed instance group. You can specify only one value.
     public var autoHealingPolicies: [InstanceGroupManagerAutoHealingPolicy] = []
 
-    /// The base instance name is a prefix that you want to attach to the names of
-    /// all VMs in a MIG. The maximum character length is 58 and the name must
-    /// comply with RFC1035 format.
-    ///
-    /// When a VM is created in the group, the MIG appends a hyphen and a random
-    /// four-character string to the base instance name. If you want the MIG to
-    /// assign sequential numbers instead of a random string, then end the base
-    /// instance name with a hyphen followed by one or more hash symbols. The hash
-    /// symbols indicate the number of digits. For example, a base instance name of
-    /// "vm-###" results in "vm-001" as a VM name.
-    /// @pattern
-    /// [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
+    /// The base instance name is a prefix that you want to attach to the names of all VMs in a MIG. The maximum character length is 58 and the name must comply with RFC1035 format. When a VM is created in the group, the MIG appends a hyphen and a random four-character string to the base instance name. If you want the MIG to assign sequential numbers instead of a random string, then end the base instance name with a hyphen followed by one or more hash symbols. The hash symbols indicate the number of digits. For example, a base instance name of "vm-###" results in "vm-001" as a VM name. @pattern [a-z](([-a-z0-9]{0,57})|([-a-z0-9]{0,51}-#{1,10}(\\[[0-9]{1,10}\\])?))
     public var baseInstanceName: Swift.String? = nil
 
-    /// Output only. The creation timestamp for this managed instance group inRFC3339
-    /// text format.
+    /// Output only. The creation timestamp for this managed instance group in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// Output only. The list of instance actions and the number of instances
-    /// in this managed instance group that are scheduled for each of those
-    /// actions.
+    /// Output only. The list of instance actions and the number of instances in this managed instance group that are scheduled for each of those actions.
     public var currentActions: InstanceGroupManagerActionsSummary? = nil
 
     /// An optional description of this resource.
     public var description: Swift.String? = nil
 
-    /// Policy specifying the intended distribution of managed instances across
-    /// zones in a regional managed instance group.
+    /// Policy specifying the intended distribution of managed instances across zones in a regional managed instance group.
     public var distributionPolicy: DistributionPolicy? = nil
 
-    /// Fingerprint of this resource. This field may be used in optimistic locking.
-    /// It will be ignored when inserting an InstanceGroupManager. An up-to-date
-    /// fingerprint must be provided in order to update the InstanceGroupManager,
-    /// otherwise the request will fail with error412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve an InstanceGroupManager.
+    /// Fingerprint of this resource. This field may be used in optimistic locking. It will be ignored when inserting an InstanceGroupManager. An up-to-date fingerprint must be provided in order to update the InstanceGroupManager, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve an InstanceGroupManager.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Output only. A unique identifier for this resource type. The server
-    /// generates this identifier.
+    /// Output only. A unique identifier for this resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// Instance flexibility allowing MIG to create VMs from multiple
-    /// types of machines.
-    /// Instance flexibility configuration on MIG overrides instance
-    /// template configuration.
+    /// Instance flexibility allowing MIG to create VMs from multiple types of machines. Instance flexibility configuration on MIG overrides instance template configuration.
     public var instanceFlexibilityPolicy: InstanceGroupManagerInstanceFlexibilityPolicy? = nil
 
     /// Output only. The URL of the Instance Group resource.
@@ -93,29 +58,22 @@
     /// The repair policy for this managed instance group.
     public var instanceLifecyclePolicy: InstanceGroupManagerInstanceLifecyclePolicy? = nil
 
-    /// The URL of the instance template that is specified for this managed
-    /// instance group. The group uses this template to create all new instances
-    /// in the managed instance group. The templates for existing instances in the
-    /// group do not change unless you run recreateInstances, runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
+    /// The URL of the instance template that is specified for this managed instance group. The group uses this template to create all new instances in the managed instance group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
     public var instanceTemplate: Swift.String? = nil
 
-    /// Output only. The resource type, which is alwayscompute#instanceGroupManager for managed instance groups.
+    /// Output only. The resource type, which is always compute#instanceGroupManager for managed instance groups.
     public var kind: Swift.String? = nil
 
-    /// Pagination behavior of the listManagedInstances API method for
-    /// this managed instance group.
+    /// Pagination behavior of the listManagedInstances API method for this managed instance group.
     public var listManagedInstancesResults: InstanceGroupManager.ListManagedInstancesResults? = nil
 
-    /// The name of the managed instance group. The name must be 1-63 characters
-    /// long, and comply withRFC1035.
+    /// The name of the managed instance group. The name must be 1-63 characters long, and comply with RFC1035.
     public var name: Swift.String? = nil
 
-    /// [Output Only] Named ports configured on the Instance Groups complementary
-    /// to this Instance Group Manager.
+    /// [Output Only] Named ports configured on the Instance Groups complementary to this Instance Group Manager.
     public var namedPorts: [NamedPort] = []
 
-    /// Output only. [Output Only] The URL of theregion
-    /// where the managed instance group resides (for regional resources).
+    /// Output only. [Output Only] The URL of the region where the managed instance group resides (for regional resources).
     public var region: Swift.String? = nil
 
     /// Resource policies for this managed instance group.
@@ -127,8 +85,7 @@
     /// Output only. Reserved for future use.
     public var satisfiesPzs: Swift.Bool? = nil
 
-    /// Output only. The URL for this managed instance group. The server defines
-    /// this URL.
+    /// Output only. The URL for this managed instance group. The server defines this URL.
     public var selfLink: Swift.String? = nil
 
     /// Standby policy for stopped and suspended instances.
@@ -140,56 +97,28 @@
     /// Output only. The status of this managed instance group.
     public var status: InstanceGroupManagerStatus? = nil
 
-    /// The URLs for all TargetPool resources to which instances in theinstanceGroup field are added. The target pools automatically
-    /// apply to all of the instances in the managed instance group.
+    /// The URLs for all TargetPool resources to which instances in the instanceGroup field are added. The target pools automatically apply to all of the instances in the managed instance group.
     public var targetPools: [Swift.String] = []
 
-    /// The target number of running instances for this managed instance group.
-    /// You can reduce this number by using the instanceGroupManager
-    /// deleteInstances or abandonInstances methods. Resizing the group also
-    /// changes this number.
+    /// The target number of running instances for this managed instance group. You can reduce this number by using the instanceGroupManager deleteInstances or abandonInstances methods. Resizing the group also changes this number.
     public var targetSize: Swift.Int32? = nil
 
-    /// The policy that specifies how the MIG creates its VMs to achieve the target
-    /// size.
+    /// The policy that specifies how the MIG creates its VMs to achieve the target size.
     public var targetSizePolicy: InstanceGroupManagerTargetSizePolicy? = nil
 
-    /// The target number of stopped instances for this managed instance group.
-    /// This number changes when you:
-    ///
-    ///    - Stop instance using the stopInstances
-    ///    method or start instances using the startInstances
-    ///    method.
-    ///    - Manually change the targetStoppedSize using the update
-    ///    method.
+    /// The target number of stopped instances for this managed instance group. This number changes when you: - Stop instance using the stopInstances method or start instances using the startInstances method. - Manually change the targetStoppedSize using the update method.
     public var targetStoppedSize: Swift.Int32? = nil
 
-    /// The target number of suspended instances for this managed instance group.
-    /// This number changes when you:
-    ///
-    ///    - Suspend instance using the suspendInstances
-    ///    method or resume instances using the resumeInstances
-    ///    method.
-    ///    - Manually change the targetSuspendedSize using the update
-    ///    method.
+    /// The target number of suspended instances for this managed instance group. This number changes when you: - Suspend instance using the suspendInstances method or resume instances using the resumeInstances method. - Manually change the targetSuspendedSize using the update method.
     public var targetSuspendedSize: Swift.Int32? = nil
 
     /// The update policy for this managed instance group.
     public var updatePolicy: InstanceGroupManagerUpdatePolicy? = nil
 
-    /// Specifies the instance templates used by this managed instance group to
-    /// create instances.
-    ///
-    /// Each version is defined by an instanceTemplate and aname. Every version can appear at most once per instance
-    /// group. This field overrides the top-level instanceTemplate
-    /// field. Read more about therelationships
-    /// between these fields. Exactly one version must leave thetargetSize field unset. That version will be applied to all
-    /// remaining instances. For more information, read aboutcanary
-    /// updates.
+    /// Specifies the instance templates used by this managed instance group to create instances. Each version is defined by an instanceTemplate and a name. Every version can appear at most once per instance group. This field overrides the top-level instanceTemplate field. Read more about the relationships between these fields. Exactly one version must leave the targetSize field unset. That version will be applied to all remaining instances. For more information, read about canary updates.
     public var versions: [InstanceGroupManagerVersion] = []
 
-    /// Output only. The URL of azone
-    /// where the managed instance group is located (for zonal resources).
+    /// Output only. The URL of a zone where the managed instance group is located (for zonal resources).
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceGroupManager`.
@@ -351,13 +280,9 @@
     ///
     /// [google.cloud.compute.v1.InstanceGroupManager.listManagedInstancesResults]: <doc:InstanceGroupManager/ListManagedInstancesResults>
     public enum ListManagedInstancesResults: Codable, Equatable, Sendable {
-      /// (Default) Pagination is disabled for the group'slistManagedInstances API method. maxResults
-      /// and pageToken query parameters are ignored and all
-      /// instances are returned in a single response.
+      /// (Default) Pagination is disabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are ignored and all instances are returned in a single response.
       case pageless
-      /// Pagination is enabled for the group's listManagedInstances
-      /// API method. maxResults and pageToken query
-      /// parameters are respected.
+      /// Pagination is enabled for the group's listManagedInstances API method. maxResults and pageToken query parameters are respected.
       case paginated
       /// Encodes an unknown integer value.
       ///

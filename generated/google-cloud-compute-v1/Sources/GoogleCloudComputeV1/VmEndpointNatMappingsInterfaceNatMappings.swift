@@ -23,33 +23,22 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. List of all drain IP:port-range mappings assigned to this interface.
-    /// These ranges are inclusive, that is, both the first and the last
-    /// ports can be used for NAT. Example: ["2.2.2.2:12345-12355",
-    /// "1.1.1.1:2234-2234"].
+    /// Output only. List of all drain IP:port-range mappings assigned to this interface. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
     public var drainNatIpPortRanges: [Swift.String] = []
 
-    /// Output only. A list of all IP:port-range mappings assigned to this interface.
-    /// These ranges are inclusive, that is, both the first and the last
-    /// ports can be used for NAT. Example: ["2.2.2.2:12345-12355",
-    /// "1.1.1.1:2234-2234"].
+    /// Output only. A list of all IP:port-range mappings assigned to this interface. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
     public var natIpPortRanges: [Swift.String] = []
 
-    /// Output only. Total number of drain ports across all NAT IPs allocated to this
-    /// interface. It equals to the aggregated port number in the field
-    /// drain_nat_ip_port_ranges.
+    /// Output only. Total number of drain ports across all NAT IPs allocated to this interface. It equals to the aggregated port number in the field drain_nat_ip_port_ranges.
     public var numTotalDrainNatPorts: Swift.Int32? = nil
 
-    /// Output only. Total number of ports across all NAT IPs allocated to this interface.
-    /// It equals to the aggregated port number in the field nat_ip_port_ranges.
+    /// Output only. Total number of ports across all NAT IPs allocated to this interface. It equals to the aggregated port number in the field nat_ip_port_ranges.
     public var numTotalNatPorts: Swift.Int32? = nil
 
     /// Output only. Information about mappings provided by rules in this NAT.
     public var ruleMappings: [VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings] = []
 
-    /// Output only. Alias IP range for this interface endpoint.
-    /// It will be a private (RFC 1918) IP range.
-    /// Examples: "10.33.4.55/32", or "192.168.5.0/24".
+    /// Output only. Alias IP range for this interface endpoint. It will be a private (RFC 1918) IP range. Examples: "10.33.4.55/32", or "192.168.5.0/24".
     public var sourceAliasIpRange: Swift.String? = nil
 
     /// Output only. Primary IP of the VM for this NIC.

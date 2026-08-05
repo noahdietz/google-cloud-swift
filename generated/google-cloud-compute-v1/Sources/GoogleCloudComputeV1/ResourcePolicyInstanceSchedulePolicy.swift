@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// An InstanceSchedulePolicy specifies when and how frequent certain
-  /// operations are performed on the instance.
+  /// An InstanceSchedulePolicy specifies when and how frequent certain operations are performed on the instance.
   public struct ResourcePolicyInstanceSchedulePolicy: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -30,9 +29,7 @@
     /// The start time of the schedule. The timestamp is an RFC3339 string.
     public var startTime: Swift.String? = nil
 
-    /// Specifies the time zone to be used in interpreting Schedule.schedule.
-    /// The value of this field must be a time zone name from the tz database:
-    /// https://wikipedia.org/wiki/Tz_database.
+    /// Specifies the time zone to be used in interpreting Schedule.schedule. The value of this field must be a time zone name from the tz database: https://wikipedia.org/wiki/Tz_database.
     public var timeZone: Swift.String? = nil
 
     /// Specifies the schedule for starting instances.

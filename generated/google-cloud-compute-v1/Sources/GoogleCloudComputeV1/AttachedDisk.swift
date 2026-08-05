@@ -22,122 +22,58 @@
   public struct AttachedDisk: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The architecture of the attached disk. Valid values are ARM64
-    /// or X86_64.
+    /// Output only. [Output Only] The architecture of the attached disk. Valid values are ARM64 or X86_64.
     public var architecture: AttachedDisk.Architecture? = nil
 
-    /// Specifies whether the disk will be auto-deleted when the instance is
-    /// deleted (but not when the disk is detached from the instance).
+    /// Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
     public var autoDelete: Swift.Bool? = nil
 
-    /// Indicates that this is a boot disk. The virtual machine will use the first
-    /// partition of the disk for its root filesystem.
+    /// Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
     public var boot: Swift.Bool? = nil
 
-    /// Specifies a unique device name of your choice that is reflected into the/dev/disk/by-id/google-* tree of a Linux operating system
-    /// running within the instance. This name can be used to reference the device
-    /// for mounting, resizing, and so on, from within the instance.
-    ///
-    /// If not specified, the server chooses a default device name to apply to this
-    /// disk, in the form persistent-disk-x, where x is a number
-    /// assigned by Google Compute Engine. This field is only applicable for
-    /// persistent disks.
+    /// Specifies a unique device name of your choice that is reflected into the /dev/disk/by-id/google-* tree of a Linux operating system running within the instance. This name can be used to reference the device for mounting, resizing, and so on, from within the instance. If not specified, the server chooses a default device name to apply to this disk, in the form persistent-disk-x, where x is a number assigned by Google Compute Engine. This field is only applicable for persistent disks.
     public var deviceName: Swift.String? = nil
 
-    /// Encrypts or decrypts a disk using acustomer-supplied
-    /// encryption key.
-    ///
-    /// If you are creating a new disk, this field encrypts the new disk using
-    /// an encryption key that you provide. If you are attaching an existing
-    /// disk that is already encrypted, this field decrypts the disk using
-    /// the customer-supplied encryption key.
-    ///
-    /// If you encrypt a disk using a customer-supplied key, you must provide the
-    /// same key again when you attempt to use this resource at a later time. For
-    /// example, you must provide the key when you create a snapshot or an image
-    /// from the disk or when you attach the disk to a virtual machine instance.
-    ///
-    /// If you do not provide an encryption key, then the disk will be encrypted
-    /// using an automatically generated key and you do not need to provide a key
-    /// to use the disk later.
-    ///
-    /// Note:
-    ///
-    /// Instance templates do not storecustomer-supplied
-    /// encryption keys, so you cannot use your own keys to encrypt disks in amanaged instance group.
-    ///
-    /// You cannot create VMs that have disks with customer-supplied keys using
-    /// the bulk
-    /// insert method.
+    /// Encrypts or decrypts a disk using a customer-supplied encryption key. If you are creating a new disk, this field encrypts the new disk using an encryption key that you provide. If you are attaching an existing disk that is already encrypted, this field decrypts the disk using the customer-supplied encryption key. If you encrypt a disk using a customer-supplied key, you must provide the same key again when you attempt to use this resource at a later time. For example, you must provide the key when you create a snapshot or an image from the disk or when you attach the disk to a virtual machine instance. If you do not provide an encryption key, then the disk will be encrypted using an automatically generated key and you do not need to provide a key to use the disk later. Note: Instance templates do not store customer-supplied encryption keys, so you cannot use your own keys to encrypt disks in a managed instance group. You cannot create VMs that have disks with customer-supplied keys using the bulk insert method.
     public var diskEncryptionKey: CustomerEncryptionKey? = nil
 
     /// The size of the disk in GB.
     public var diskSizeGb: Swift.Int64? = nil
 
-    /// [Input Only] Whether to force attach the regional disk even if it's
-    /// currently attached to another instance. If you try to force attach a zonal
-    /// disk to an instance, you will receive an error.
+    /// [Input Only] Whether to force attach the regional disk even if it's currently attached to another instance. If you try to force attach a zonal disk to an instance, you will receive an error.
     public var forceAttach: Swift.Bool? = nil
 
-    /// A list of features to enable on the guest operating system. Applicable
-    /// only for bootable images. Read
-    /// Enabling guest operating system features to see a list of available
-    /// options.
+    /// A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
     public var guestOsFeatures: [GuestOsFeature] = []
 
-    /// Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the
-    /// boot disk. If you have many disks attached to an instance, each
-    /// disk would have a unique index number.
+    /// Output only. [Output Only] A zero-based index to this disk, where 0 is reserved for the boot disk. If you have many disks attached to an instance, each disk would have a unique index number.
     public var index: Swift.Int32? = nil
 
-    /// [Input Only] Specifies the parameters for a new disk that will be created
-    /// alongside the new instance. Use initialization parameters to create boot
-    /// disks or local SSDs attached to the new instance.
-    ///
-    /// This property is mutually exclusive with the source property;
-    /// you can only define one or the other, but not both.
+    /// [Input Only] Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance. This property is mutually exclusive with the source property; you can only define one or the other, but not both.
     public var initializeParams: AttachedDiskInitializeParams? = nil
 
-    /// Specifies the disk interface to use for attaching this disk, which is
-    /// either SCSI or NVME. For most machine types, the
-    /// default is SCSI. Local SSDs can use either NVME or SCSI.
-    /// In certain configurations, persistent disks can use NVMe. For more
-    /// information, seeAbout
-    /// persistent disks.
+    /// Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME. For most machine types, the default is SCSI. Local SSDs can use either NVME or SCSI. In certain configurations, persistent disks can use NVMe. For more information, see About persistent disks.
     public var interface: AttachedDisk.Interface? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+    /// Output only. [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
     public var kind: Swift.String? = nil
 
     /// Output only. [Output Only] Any valid publicly visible licenses.
     public var licenses: [Swift.String] = []
 
-    /// The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If not specified, the default is to attach the disk
-    /// in READ_WRITE mode.
+    /// The mode in which to attach this disk, either READ_WRITE or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
     public var mode: AttachedDisk.Mode? = nil
 
-    /// Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this
-    /// field is set to PRESERVED if the LocalSSD data has been saved
-    /// to a persistent location by customer request.  (see the
-    /// discard_local_ssd option on Stop/Suspend).
-    /// Read-only in the api.
+    /// Output only. For LocalSSD disks on VM Instances in STOPPED or SUSPENDED state, this field is set to PRESERVED if the LocalSSD data has been saved to a persistent location by customer request. (see the discard_local_ssd option on Stop/Suspend). Read-only in the api.
     public var savedState: AttachedDisk.SavedState? = nil
 
     /// Output only. [Output Only] shielded vm initial state stored on disk
     public var shieldedInstanceInitialState: InitialStateConfig? = nil
 
-    /// Specifies a valid partial or full URL to an existing Persistent Disk
-    /// resource. When creating a new instance boot disk, one ofinitializeParams.sourceImage orinitializeParams.sourceSnapshot or disks.source
-    /// is required.
-    ///
-    /// If desired, you can also attach existing non-root persistent disks using
-    /// this property. This field is only applicable for persistent disks.
-    ///
-    /// Note that for InstanceTemplate, specify the disk name for zonal disk,
-    /// and the URL for regional disk.
+    /// Specifies a valid partial or full URL to an existing Persistent Disk resource. When creating a new instance boot disk, one of initializeParams.sourceImage or initializeParams.sourceSnapshot or disks.source is required. If desired, you can also attach existing non-root persistent disks using this property. This field is only applicable for persistent disks. Note that for InstanceTemplate, specify the disk name for zonal disk, and the URL for regional disk.
     public var source: Swift.String? = nil
 
-    /// Specifies the type of the disk, either SCRATCH orPERSISTENT. If not specified, the default isPERSISTENT.
+    /// Specifies the type of the disk, either SCRATCH or PERSISTENT. If not specified, the default is PERSISTENT.
     public var type: AttachedDisk.Type_? = nil
 
     /// Initialize a new instance of `AttachedDisk`.
@@ -365,11 +301,9 @@
     ///
     /// [google.cloud.compute.v1.AttachedDisk.mode]: <doc:AttachedDisk/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// Attaches this disk in read-only mode. Multiple virtual machines can use
-      /// a disk in read-only mode at a time.
+      /// Attaches this disk in read-only mode. Multiple virtual machines can use a disk in read-only mode at a time.
       case readOnly
-      /// *[Default]* Attaches this disk in read-write mode. Only one
-      /// virtual machine at a time can be attached to a disk in read-write mode.
+      /// *[Default]* Attaches this disk in read-write mode. Only one virtual machine at a time can be attached to a disk in read-write mode.
       case readWrite
       /// Encodes an unknown integer value.
       ///

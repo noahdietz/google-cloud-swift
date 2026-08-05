@@ -18,16 +18,13 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configurations to specifc granular traffic units processed by
-  /// Adaptive Protection.
+  /// Configurations to specifc granular traffic units processed by Adaptive Protection.
   public struct
     SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfigTrafficGranularityConfig:
       Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
   {
-    /// If enabled, traffic matching each unique value for the specified
-    /// type constitutes a separate traffic unit.
-    /// It can only be set to true if `value` is empty.
+    /// If enabled, traffic matching each unique value for the specified type constitutes a separate traffic unit. It can only be set to true if `value` is empty.
     public var enableEachUniqueValue: Swift.Bool? = nil
 
     /// Type of this configuration.

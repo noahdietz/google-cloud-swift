@@ -18,82 +18,38 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a health aggregation policy.
-  ///
-  /// A health aggregation policy resource defines a policy to aggregate health.
-  ///
-  /// For more information, see
-  /// Health checks overview.
+  /// Represents a health aggregation policy. A health aggregation policy resource defines a policy to aggregate health. For more information, see Health checks overview.
   public struct HealthAggregationPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a HealthAggregationPolicy. An up-to-date fingerprint
-    /// must be provided in order to patch the HealthAggregationPolicy; Otherwise,
-    /// the request will fail with error 412 conditionNotMet. To see
-    /// the latest fingerprint, make a get() request to retrieve the
-    /// HealthAggregationPolicy.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a HealthAggregationPolicy. An up-to-date fingerprint must be provided in order to patch the HealthAggregationPolicy; Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the HealthAggregationPolicy.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Can only be set if the policyType field isBACKEND_SERVICE_POLICY. Specifies the threshold (as a
-    /// percentage) of healthy endpoints required in order to consider the
-    /// aggregated health result HEALTHY. Defaults to 60. Must be in
-    /// range [0, 100]. Not applicable if the policyType field isDNB_PUBLIC_IP_POLICY. Can be mutated. This field is optional,
-    /// and will be set to the default if unspecified. Note that both this
-    /// threshold and minHealthyThreshold must be satisfied in order
-    /// for HEALTHY to be the aggregated result. "Endpoints" refers to network
-    /// endpoints within a Network Endpoint Group or instances within an Instance
-    /// Group.
+    /// Can only be set if the policyType field is BACKEND_SERVICE_POLICY. Specifies the threshold (as a percentage) of healthy endpoints required in order to consider the aggregated health result HEALTHY. Defaults to 60. Must be in range [0, 100]. Not applicable if the policyType field is DNB_PUBLIC_IP_POLICY. Can be mutated. This field is optional, and will be set to the default if unspecified. Note that both this threshold and minHealthyThreshold must be satisfied in order for HEALTHY to be the aggregated result. "Endpoints" refers to network endpoints within a Network Endpoint Group or instances within an Instance Group.
     public var healthyPercentThreshold: Swift.UInt32? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#healthAggregationPolicy for health aggregation
-    /// policies.
+    /// Output only. [Output Only] Type of the resource. Always compute#healthAggregationPolicy for health aggregation policies.
     public var kind: Swift.String? = nil
 
-    /// Can only be set if the policyType field isBACKEND_SERVICE_POLICY. Specifies the minimum number of
-    /// healthy endpoints required in order to consider the aggregated health
-    /// result HEALTHY. Defaults to 1. Must be positive. Not
-    /// applicable if the policyType field isDNB_PUBLIC_IP_POLICY. Can be mutated. This field is optional,
-    /// and will be set to the default if unspecified. Note that both this
-    /// threshold and healthyPercentThreshold must be satisfied in
-    /// order for HEALTHY to be the aggregated result. "Endpoints" refers to
-    /// network endpoints within a Network Endpoint Group or instances within an
-    /// Instance Group.
+    /// Can only be set if the policyType field is BACKEND_SERVICE_POLICY. Specifies the minimum number of healthy endpoints required in order to consider the aggregated health result HEALTHY. Defaults to 1. Must be positive. Not applicable if the policyType field is DNB_PUBLIC_IP_POLICY. Can be mutated. This field is optional, and will be set to the default if unspecified. Note that both this threshold and healthyPercentThreshold must be satisfied in order for HEALTHY to be the aggregated result. "Endpoints" refers to network endpoints within a Network Endpoint Group or instances within an Instance Group.
     public var minHealthyThreshold: Swift.UInt32? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Specifies the type of the healthAggregationPolicy. The only allowed value
-    /// for global resources is DNS_PUBLIC_IP_POLICY. The only allowed
-    /// value for regional resources is BACKEND_SERVICE_POLICY. Must
-    /// be specified when the healthAggregationPolicy is created, and cannot be
-    /// mutated.
+    /// Specifies the type of the healthAggregationPolicy. The only allowed value for global resources is DNS_PUBLIC_IP_POLICY. The only allowed value for regional resources is BACKEND_SERVICE_POLICY. Must be specified when the healthAggregationPolicy is created, and cannot be mutated.
     public var policyType: HealthAggregationPolicy.PolicyType? = nil
 
-    /// Output only. [Output Only] URL of the region where the health aggregation policy
-    /// resides. This field applies only to the regional resource. You must specify
-    /// this field as part of the HTTP request URL. It is not settable as a field
-    /// in the request body.
+    /// Output only. [Output Only] URL of the region where the health aggregation policy resides. This field applies only to the regional resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.

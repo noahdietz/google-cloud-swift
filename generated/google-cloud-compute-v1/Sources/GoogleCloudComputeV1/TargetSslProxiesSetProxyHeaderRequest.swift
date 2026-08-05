@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The new type of proxy header to append before sending data to the
-    /// backend.  NONE or PROXY_V1 are allowed.
+    /// The new type of proxy header to append before sending data to the backend. NONE or PROXY_V1 are allowed.
     public var proxyHeader: TargetSslProxiesSetProxyHeaderRequest.ProxyHeader? = nil
 
     /// Initialize a new instance of `TargetSslProxiesSetProxyHeaderRequest`.

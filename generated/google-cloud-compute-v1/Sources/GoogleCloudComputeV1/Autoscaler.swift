@@ -18,65 +18,32 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an Autoscaler resource.
-  ///
-  /// Google Compute Engine has two Autoscaler resources:
-  ///
-  /// * [Zonal](/compute/docs/reference/rest/v1/autoscalers)
-  /// * [Regional](/compute/docs/reference/rest/v1/regionAutoscalers)
-  ///
-  /// Use autoscalers to automatically add or delete instances from a
-  /// managed instance group according to your defined autoscaling policy.
-  /// For more information, read Autoscaling Groups of Instances.
-  ///
-  /// For zonal managed instance groups resource, use the autoscaler
-  /// resource.
-  ///
-  /// For regional managed instance groups, use theregionAutoscalers resource.
+  /// Represents an Autoscaler resource. Google Compute Engine has two Autoscaler resources: * [Zonal](/compute/docs/reference/rest/v1/autoscalers) * [Regional](/compute/docs/reference/rest/v1/regionAutoscalers) Use autoscalers to automatically add or delete instances from a managed instance group according to your defined autoscaling policy. For more information, read Autoscaling Groups of Instances. For zonal managed instance groups resource, use the autoscaler resource. For regional managed instance groups, use the regionAutoscalers resource.
   public struct Autoscaler: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The configuration parameters for the autoscaling algorithm. You can define
-    /// one or more signals for an autoscaler: cpuUtilization,customMetricUtilizations, andloadBalancingUtilization.
-    ///
-    /// If none of these are specified, the default will be to autoscale based oncpuUtilization to 0.6 or 60%.
+    /// The configuration parameters for the autoscaling algorithm. You can define one or more signals for an autoscaler: cpuUtilization, customMetricUtilizations, and loadBalancingUtilization. If none of these are specified, the default will be to autoscale based on cpuUtilization to 0.6 or 60%.
     public var autoscalingPolicy: AutoscalingPolicy? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#autoscaler
-    /// for autoscalers.
+    /// Output only. [Output Only] Type of the resource. Always compute#autoscaler for autoscalers.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] Target recommended MIG size (number of instances) computed by
-    /// autoscaler. Autoscaler calculates the recommended MIG size even when the
-    /// autoscaling policy mode is different from ON. This field is empty when
-    /// autoscaler is not connected to an existing managed instance group or
-    /// autoscaler did not generate its prediction.
+    /// Output only. [Output Only] Target recommended MIG size (number of instances) computed by autoscaler. Autoscaler calculates the recommended MIG size even when the autoscaling policy mode is different from ON. This field is empty when autoscaler is not connected to an existing managed instance group or autoscaler did not generate its prediction.
     public var recommendedSize: Swift.Int32? = nil
 
-    /// Output only. [Output Only] URL of theregion
-    /// where the instance group resides (for autoscalers living in regional
-    /// scope).
+    /// Output only. [Output Only] URL of the region where the instance group resides (for autoscalers living in regional scope).
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Status information of existing scaling schedules.
@@ -85,36 +52,16 @@
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// [Output Only] The status of the autoscaler configuration. Current set of
-    /// possible values:
-    ///
-    ///    - PENDING:
-    ///      Autoscaler backend hasn't read new/updated configuration.
-    ///    - DELETING:
-    ///      Configuration is being deleted.
-    ///    - ACTIVE:
-    ///      Configuration is acknowledged to be effective. Some warnings might
-    ///      be present in the statusDetails field.
-    ///    - ERROR:
-    ///      Configuration has errors. Actionable for users. Details are present in
-    ///      the statusDetails field.
-    ///
-    ///
-    /// New values might be added in the future.
+    /// [Output Only] The status of the autoscaler configuration. Current set of possible values: - PENDING: Autoscaler backend hasn't read new/updated configuration. - DELETING: Configuration is being deleted. - ACTIVE: Configuration is acknowledged to be effective. Some warnings might be present in the statusDetails field. - ERROR: Configuration has errors. Actionable for users. Details are present in the statusDetails field. New values might be added in the future.
     public var status: Autoscaler.Status? = nil
 
-    /// [Output Only] Human-readable details about the current state of the
-    /// autoscaler. Read the documentation forCommonly
-    /// returned status messages for examples of status messages you might
-    /// encounter.
+    /// [Output Only] Human-readable details about the current state of the autoscaler. Read the documentation for Commonly returned status messages for examples of status messages you might encounter.
     public var statusDetails: [AutoscalerStatusDetails] = []
 
-    /// URL of the managed instance group that this autoscaler will scale. This
-    /// field is required when creating an autoscaler.
+    /// URL of the managed instance group that this autoscaler will scale. This field is required when creating an autoscaler.
     public var target: Swift.String? = nil
 
-    /// Output only. [Output Only] URL of thezone
-    /// where the instance group resides (for autoscalers living in zonal scope).
+    /// Output only. [Output Only] URL of the zone where the instance group resides (for autoscalers living in zonal scope).
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `Autoscaler`.

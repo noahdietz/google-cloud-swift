@@ -18,16 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] The zones that Attachments in this group are present
-  /// in, in the given facilities.  This is inherited from their
-  /// Interconnects.
+  /// [Output Only] The zones that Attachments in this group are present in, in the given facilities. This is inherited from their Interconnects.
   public struct InterconnectAttachmentGroupLogicalStructureRegionMetroFacilityZone: Codable,
     Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] URLs of Attachments in the given zone, to the given
-    /// region, on Interconnects in the given facility and metro. Every
-    /// Attachment in the AG has such an entry.
+    /// Output only. [Output Only] URLs of Attachments in the given zone, to the given region, on Interconnects in the given facility and metro. Every Attachment in the AG has such an entry.
     public var attachments: [Swift.String] = []
 
     /// Output only. [Output Only] The name of a zone, either "zone1" or "zone2".

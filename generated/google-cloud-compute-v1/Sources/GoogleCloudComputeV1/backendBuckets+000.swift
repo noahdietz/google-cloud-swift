@@ -42,8 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Adds a key for validating requests with signed URLs for this backend
-    /// bucket.
+    /// Adds a key for validating requests with signed URLs for this backend bucket.
     ///
     /// @Snippet(path: "backendBuckets_addSignedUrlKey")
     public func addSignedUrlKey(
@@ -52,8 +51,7 @@
       try await self.inner.addSignedUrlKey(request: request, options: options)
     }
 
-    /// Adds a key for validating requests with signed URLs for this backend
-    /// bucket.
+    /// Adds a key for validating requests with signed URLs for this backend bucket.
     ///
     /// @Snippet(path: "backendBuckets_addSignedUrlKey")
     public func addSignedUrlKey(
@@ -94,11 +92,7 @@
       )
     }
 
-    /// Retrieves the list of all BackendBucket resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all BackendBucket resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "backendBuckets_aggregatedList")
     public func aggregatedList(
@@ -107,11 +101,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all BackendBucket resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all BackendBucket resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "backendBuckets_aggregatedList")
     public func aggregatedList(
@@ -175,8 +165,7 @@
       )
     }
 
-    /// Deletes a key for validating requests with signed URLs for this backend
-    /// bucket.
+    /// Deletes a key for validating requests with signed URLs for this backend bucket.
     ///
     /// @Snippet(path: "backendBuckets_deleteSignedUrlKey")
     public func deleteSignedUrlKey(
@@ -186,8 +175,7 @@
       try await self.inner.deleteSignedUrlKey(request: request, options: options)
     }
 
-    /// Deletes a key for validating requests with signed URLs for this backend
-    /// bucket.
+    /// Deletes a key for validating requests with signed URLs for this backend bucket.
     ///
     /// @Snippet(path: "backendBuckets_deleteSignedUrlKey")
     public func deleteSignedUrlKey(
@@ -237,8 +225,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "backendBuckets_getIamPolicy")
     public func getIamPolicy(
@@ -247,8 +234,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a BackendBucket resource in the specified project using
-    /// the data included in the request.
+    /// Creates a BackendBucket resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "backendBuckets_insert")
     public func insert(
@@ -257,8 +243,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a BackendBucket resource in the specified project using
-    /// the data included in the request.
+    /// Creates a BackendBucket resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "backendBuckets_insert")
     public func insert(
@@ -298,8 +283,7 @@
       )
     }
 
-    /// Retrieves the list of BackendBucket resources available to the specified
-    /// project.
+    /// Retrieves the list of BackendBucket resources available to the specified project.
     ///
     /// @Snippet(path: "backendBuckets_list")
     public func list(
@@ -308,8 +292,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of BackendBucket resources available to the specified
-    /// project.
+    /// Retrieves the list of BackendBucket resources available to the specified project.
     ///
     /// @Snippet(path: "backendBuckets_list")
     public func list(
@@ -348,10 +331,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified BackendBucket resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified BackendBucket resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "backendBuckets_patch")
     public func patch(
@@ -360,10 +340,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified BackendBucket resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified BackendBucket resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "backendBuckets_patch")
     public func patch(
@@ -454,8 +431,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "backendBuckets_setIamPolicy")
     public func setIamPolicy(
@@ -474,8 +450,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified BackendBucket resource with the data included in the
-    /// request.
+    /// Updates the specified BackendBucket resource with the data included in the request.
     ///
     /// @Snippet(path: "backendBuckets_update")
     public func update(
@@ -484,8 +459,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified BackendBucket resource with the data included in the
-    /// request.
+    /// Updates the specified BackendBucket resource with the data included in the request.
     ///
     /// @Snippet(path: "backendBuckets_update")
     public func update(

@@ -18,19 +18,15 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] The zones that Interconnects in this facility are
-  /// present in.
+  /// [Output Only] The zones that Interconnects in this facility are present in.
   public struct InterconnectGroupPhysicalStructureMetrosFacilitiesZones: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] URLs of Interconnects in this redundancy group in the
-    /// given metro, facility, and zone.
+    /// Output only. [Output Only] URLs of Interconnects in this redundancy group in the given metro, facility, and zone.
     public var interconnects: [Swift.String] = []
 
-    /// Output only. [Output Only] The name of the zone, either "zone1" or "zone2".
-    /// This is the second component of the location of Interconnects in
-    /// this facility.
+    /// Output only. [Output Only] The name of the zone, either "zone1" or "zone2". This is the second component of the location of Interconnects in this facility.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `InterconnectGroupPhysicalStructureMetrosFacilitiesZones`.

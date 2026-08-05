@@ -24,12 +24,10 @@
     /// Metadata defined as annotations on the network endpoint group.
     public var annotations: [Swift.String: Swift.String] = [:]
 
-    /// Health state of the backend instances or endpoints in requested instance or
-    /// network endpoint group, determined based on configured health checks.
+    /// Health state of the backend instances or endpoints in requested instance or network endpoint group, determined based on configured health checks.
     public var healthStatus: [HealthStatus] = []
 
-    /// Output only. [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for the health of backend
-    /// services.
+    /// Output only. [Output Only] Type of resource. Always compute#backendServiceGroupHealth for the health of backend services.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `BackendServiceGroupHealth`.

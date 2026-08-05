@@ -22,20 +22,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. Fatal errors encountered during the queueing or provisioning phases of
-    /// the ResizeRequest that caused the transition to the FAILED state.
-    /// Contrary to the last_attempt errors, this field is final and errors are
-    /// never removed from here, as the ResizeRequest is not going to retry.
+    /// Output only. Fatal errors encountered during the queueing or provisioning phases of the ResizeRequest that caused the transition to the FAILED state. Contrary to the last_attempt errors, this field is final and errors are never removed from here, as the ResizeRequest is not going to retry.
     public var error: InstanceGroupManagerResizeRequestStatus.Error? = nil
 
-    /// Output only. Information about the last attempt to fulfill the request. The value is
-    /// temporary since the ResizeRequest can retry, as long as it's still active
-    /// and the last attempt value can either be cleared or replaced with a
-    /// different error. Since ResizeRequest retries infrequently, the value may
-    /// be stale and no longer show an active problem. The value is cleared when
-    /// ResizeRequest transitions to the final state (becomes inactive). If the
-    /// final state is FAILED the error describing it will be stored in the
-    /// "error" field only.
+    /// Output only. Information about the last attempt to fulfill the request. The value is temporary since the ResizeRequest can retry, as long as it's still active and the last attempt value can either be cleared or replaced with a different error. Since ResizeRequest retries infrequently, the value may be stale and no longer show an active problem. The value is cleared when ResizeRequest transitions to the final state (becomes inactive). If the final state is FAILED the error describing it will be stored in the "error" field only.
     public var lastAttempt: InstanceGroupManagerResizeRequestStatusLastAttempt? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerResizeRequestStatus`.
@@ -60,8 +50,7 @@
     public struct Error: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] The array of errors encountered while processing this
-      /// operation.
+      /// [Output Only] The array of errors encountered while processing this operation.
       public var errors: [InstanceGroupManagerResizeRequestStatus.Error.Errors] = []
 
       /// Initialize a new instance of `Error`.
@@ -89,16 +78,11 @@
         /// [Output Only] The error type identifier for this error.
         public var code: Swift.String? = nil
 
-        /// [Output Only] An optional list of messages that contain the error
-        /// details. There is a set of defined message types to use for providing
-        /// details.The syntax depends on the error code. For example,
-        /// QuotaExceededInfo will have details when the error code is
-        /// QUOTA_EXCEEDED.
+        /// [Output Only] An optional list of messages that contain the error details. There is a set of defined message types to use for providing details.The syntax depends on the error code. For example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
         public var errorDetails:
           [InstanceGroupManagerResizeRequestStatus.Error.Errors.ErrorDetails] = []
 
-        /// [Output Only] Indicates the field in the request that caused the error.
-        /// This property is optional.
+        /// [Output Only] Indicates the field in the request that caused the error. This property is optional.
         public var location: Swift.String? = nil
 
         /// [Output Only] An optional, human-readable error message.

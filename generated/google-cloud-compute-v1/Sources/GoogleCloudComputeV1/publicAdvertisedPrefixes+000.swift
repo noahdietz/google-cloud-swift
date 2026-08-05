@@ -153,8 +153,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a PublicAdvertisedPrefix in the specified project
-    /// using the parameters that are included in the request.
+    /// Creates a PublicAdvertisedPrefix in the specified project using the parameters that are included in the request.
     ///
     /// @Snippet(path: "publicAdvertisedPrefixes_insert")
     public func insert(
@@ -163,8 +162,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a PublicAdvertisedPrefix in the specified project
-    /// using the parameters that are included in the request.
+    /// Creates a PublicAdvertisedPrefix in the specified project using the parameters that are included in the request.
     ///
     /// @Snippet(path: "publicAdvertisedPrefixes_insert")
     public func insert(
@@ -229,10 +227,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified Router resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "publicAdvertisedPrefixes_patch")
     public func patch(
@@ -241,10 +236,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified Router resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "publicAdvertisedPrefixes_patch")
     public func patch(

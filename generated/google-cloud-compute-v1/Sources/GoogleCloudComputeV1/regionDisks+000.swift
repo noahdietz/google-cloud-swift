@@ -42,9 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Adds existing resource policies to a regional disk. You can only add one
-    /// policy which will be applied to this disk for scheduling snapshot
-    /// creation.
+    /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
     ///
     /// @Snippet(path: "regionDisks_addResourcePolicies")
     public func addResourcePolicies(
@@ -53,9 +51,7 @@
       try await self.inner.addResourcePolicies(request: request, options: options)
     }
 
-    /// Adds existing resource policies to a regional disk. You can only add one
-    /// policy which will be applied to this disk for scheduling snapshot
-    /// creation.
+    /// Adds existing resource policies to a regional disk. You can only add one policy which will be applied to this disk for scheduling snapshot creation.
     ///
     /// @Snippet(path: "regionDisks_addResourcePolicies")
     public func addResourcePolicies(
@@ -147,10 +143,7 @@
       )
     }
 
-    /// Creates a snapshot of a specified persistent disk. For regular snapshot
-    /// creation, consider using snapshots.insert
-    /// instead, as that method supports more features, such as creating snapshots
-    /// in a project different from the source disk project.
+    /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "regionDisks_createSnapshot")
     public func createSnapshot(
@@ -159,10 +152,7 @@
       try await self.inner.createSnapshot(request: request, options: options)
     }
 
-    /// Creates a snapshot of a specified persistent disk. For regular snapshot
-    /// creation, consider using snapshots.insert
-    /// instead, as that method supports more features, such as creating snapshots
-    /// in a project different from the source disk project.
+    /// Creates a snapshot of a specified persistent disk. For regular snapshot creation, consider using snapshots.insert instead, as that method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "regionDisks_createSnapshot")
     public func createSnapshot(
@@ -203,11 +193,7 @@
       )
     }
 
-    /// Deletes the specified regional persistent disk. Deleting a regional disk
-    /// removes all the replicas of its data permanently and is irreversible.
-    /// However, deleting a disk does not delete anysnapshots
-    /// previously made from the disk. You must separatelydelete
-    /// snapshots.
+    /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
     ///
     /// @Snippet(path: "regionDisks_delete")
     public func delete(
@@ -216,11 +202,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified regional persistent disk. Deleting a regional disk
-    /// removes all the replicas of its data permanently and is irreversible.
-    /// However, deleting a disk does not delete anysnapshots
-    /// previously made from the disk. You must separatelydelete
-    /// snapshots.
+    /// Deletes the specified regional persistent disk. Deleting a regional disk removes all the replicas of its data permanently and is irreversible. However, deleting a disk does not delete any snapshots previously made from the disk. You must separately delete snapshots.
     ///
     /// @Snippet(path: "regionDisks_delete")
     public func delete(
@@ -270,8 +252,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "regionDisks_getIamPolicy")
     public func getIamPolicy(
@@ -280,8 +261,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a persistent regional disk in the specified project using the data
-    /// included in the request.
+    /// Creates a persistent regional disk in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionDisks_insert")
     public func insert(
@@ -290,8 +270,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a persistent regional disk in the specified project using the data
-    /// included in the request.
+    /// Creates a persistent regional disk in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "regionDisks_insert")
     public func insert(
@@ -332,8 +311,7 @@
       )
     }
 
-    /// Retrieves the list of persistent disks contained within
-    /// the specified region.
+    /// Retrieves the list of persistent disks contained within the specified region.
     ///
     /// @Snippet(path: "regionDisks_list")
     public func list(
@@ -342,8 +320,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of persistent disks contained within
-    /// the specified region.
+    /// Retrieves the list of persistent disks contained within the specified region.
     ///
     /// @Snippet(path: "regionDisks_list")
     public func list(
@@ -459,8 +436,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "regionDisks_setIamPolicy")
     public func setIamPolicy(
@@ -519,8 +495,7 @@
       )
     }
 
-    /// Starts asynchronous replication.
-    /// Must be invoked on the primary disk.
+    /// Starts asynchronous replication. Must be invoked on the primary disk.
     ///
     /// @Snippet(path: "regionDisks_startAsyncReplication")
     public func startAsyncReplication(
@@ -530,8 +505,7 @@
       try await self.inner.startAsyncReplication(request: request, options: options)
     }
 
-    /// Starts asynchronous replication.
-    /// Must be invoked on the primary disk.
+    /// Starts asynchronous replication. Must be invoked on the primary disk.
     ///
     /// @Snippet(path: "regionDisks_startAsyncReplication")
     public func startAsyncReplication(
@@ -573,8 +547,7 @@
       )
     }
 
-    /// Stops asynchronous replication.
-    /// Can be invoked either on the primary or on the secondary disk.
+    /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
     ///
     /// @Snippet(path: "regionDisks_stopAsyncReplication")
     public func stopAsyncReplication(
@@ -583,8 +556,7 @@
       try await self.inner.stopAsyncReplication(request: request, options: options)
     }
 
-    /// Stops asynchronous replication.
-    /// Can be invoked either on the primary or on the secondary disk.
+    /// Stops asynchronous replication. Can be invoked either on the primary or on the secondary disk.
     ///
     /// @Snippet(path: "regionDisks_stopAsyncReplication")
     public func stopAsyncReplication(
@@ -626,8 +598,7 @@
       )
     }
 
-    /// Stops asynchronous replication for a consistency group of disks.
-    /// Can be invoked either in the primary or secondary scope.
+    /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
     ///
     /// @Snippet(path: "regionDisks_stopGroupAsyncReplication")
     public func stopGroupAsyncReplication(
@@ -637,8 +608,7 @@
       try await self.inner.stopGroupAsyncReplication(request: request, options: options)
     }
 
-    /// Stops asynchronous replication for a consistency group of disks.
-    /// Can be invoked either in the primary or secondary scope.
+    /// Stops asynchronous replication for a consistency group of disks. Can be invoked either in the primary or secondary scope.
     ///
     /// @Snippet(path: "regionDisks_stopGroupAsyncReplication")
     public func stopGroupAsyncReplication(
@@ -689,8 +659,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Update the specified disk with the data included in the request. Update is
-    /// performed only on selected fields included as part of update-mask.
+    /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask.
     ///
     /// @Snippet(path: "regionDisks_update")
     public func update(
@@ -699,8 +668,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Update the specified disk with the data included in the request. Update is
-    /// performed only on selected fields included as part of update-mask.
+    /// Update the specified disk with the data included in the request. Update is performed only on selected fields included as part of update-mask.
     ///
     /// @Snippet(path: "regionDisks_update")
     public func update(
@@ -741,8 +709,7 @@
       )
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified persistent disk.
+    /// Rotates the customer-managed encryption key to the latest version for the specified persistent disk.
     ///
     /// @Snippet(path: "regionDisks_updateKmsKey")
     public func updateKmsKey(
@@ -751,8 +718,7 @@
       try await self.inner.updateKmsKey(request: request, options: options)
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified persistent disk.
+    /// Rotates the customer-managed encryption key to the latest version for the specified persistent disk.
     ///
     /// @Snippet(path: "regionDisks_updateKmsKey")
     public func updateKmsKey(

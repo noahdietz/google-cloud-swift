@@ -23,49 +23,16 @@
       ._AnyPackable,
     Sendable
   {
-    /// Flag to update all instances instead of specified list of "instances".
-    /// If the flag is set to true then the instances may not be specified
-    /// in the request.
+    /// Flag to update all instances instead of specified list of "instances". If the flag is set to true then the instances may not be specified in the request.
     public var allInstances: Swift.Bool? = nil
 
-    /// The list of URLs of one or more instances for which you want to apply
-    /// updates. Each URL can be a full URL or a partial URL, such aszones/[ZONE]/instances/[INSTANCE_NAME].
+    /// The list of URLs of one or more instances for which you want to apply updates. Each URL can be a full URL or a partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
     public var instances: [Swift.String] = []
 
-    /// The minimal action that you want to perform on each instance during the
-    /// update:
-    ///
-    ///
-    ///      - REPLACE: At minimum, delete the instance and create it
-    ///      again.
-    ///    - RESTART: Stop the instance and start it
-    ///      again.
-    ///    - REFRESH: Do not stop the instance and limit
-    ///      disruption as much as possible.
-    ///    - NONE: Do not
-    ///      disrupt the instance at all.
-    ///
-    ///
-    /// By default, the minimum action is NONE. If your update
-    /// requires a more disruptive action than you set with this flag, the
-    /// necessary action is performed to execute the update.
+    /// The minimal action that you want to perform on each instance during the update: - REPLACE: At minimum, delete the instance and create it again. - RESTART: Stop the instance and start it again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do not disrupt the instance at all. By default, the minimum action is NONE. If your update requires a more disruptive action than you set with this flag, the necessary action is performed to execute the update.
     public var minimalAction: InstanceGroupManagersApplyUpdatesRequest.MinimalAction? = nil
 
-    /// The most disruptive action that you want to perform on each instance during
-    /// the update:
-    ///
-    ///
-    ///      - REPLACE: Delete the instance and create it again.
-    ///      - RESTART: Stop the instance and start it again.
-    ///      - REFRESH: Do not stop the instance and limit disruption
-    ///      as much as possible.
-    ///    - NONE: Do not disrupt the
-    ///      instance at all.
-    ///
-    ///
-    /// By default, the most disruptive allowed action is REPLACE. If
-    /// your update requires a more disruptive action than you set with this flag,
-    /// the update request will fail.
+    /// The most disruptive action that you want to perform on each instance during the update: - REPLACE: Delete the instance and create it again. - RESTART: Stop the instance and start it again. - REFRESH: Do not stop the instance and limit disruption as much as possible. - NONE: Do not disrupt the instance at all. By default, the most disruptive allowed action is REPLACE. If your update requires a more disruptive action than you set with this flag, the update request will fail.
     public var mostDisruptiveAllowedAction:
       InstanceGroupManagersApplyUpdatesRequest.MostDisruptiveAllowedAction? = nil
 
@@ -93,8 +60,7 @@
       case `none`
       /// Do not stop the instance.
       case refresh
-      /// (Default.) Replace the instance according to the replacement method
-      /// option.
+      /// (Default.) Replace the instance according to the replacement method option.
       case replace
       /// Stop the instance and start it again.
       case restart
@@ -208,8 +174,7 @@
       case `none`
       /// Do not stop the instance.
       case refresh
-      /// (Default.) Replace the instance according to the replacement method
-      /// option.
+      /// (Default.) Replace the instance according to the replacement method option.
       case replace
       /// Stop the instance and start it again.
       case restart

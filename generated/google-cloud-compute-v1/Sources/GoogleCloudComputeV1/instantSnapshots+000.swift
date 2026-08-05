@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of instantSnapshots.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instantSnapshots_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of instantSnapshots.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of instantSnapshots. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instantSnapshots_aggregatedList")
     public func aggregatedList(
@@ -72,14 +66,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
-    /// a single instantSnapshot might not necessarily delete all the data on that
-    /// instantSnapshot. If any data on the instantSnapshot that is marked for
-    /// deletion is needed for subsequent instantSnapshots, the data will be moved
-    /// to the next corresponding instantSnapshot.
-    ///
-    /// For more information, seeDeleting
-    /// instantSnapshots.
+    /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
     ///
     /// @Snippet(path: "instantSnapshots_delete")
     public func delete(
@@ -88,14 +75,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting
-    /// a single instantSnapshot might not necessarily delete all the data on that
-    /// instantSnapshot. If any data on the instantSnapshot that is marked for
-    /// deletion is needed for subsequent instantSnapshots, the data will be moved
-    /// to the next corresponding instantSnapshot.
-    ///
-    /// For more information, seeDeleting
-    /// instantSnapshots.
+    /// Deletes the specified InstantSnapshot resource. Keep in mind that deleting a single instantSnapshot might not necessarily delete all the data on that instantSnapshot. If any data on the instantSnapshot that is marked for deletion is needed for subsequent instantSnapshots, the data will be moved to the next corresponding instantSnapshot. For more information, see Deleting instantSnapshots.
     ///
     /// @Snippet(path: "instantSnapshots_delete")
     public func delete(
@@ -145,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "instantSnapshots_getIamPolicy")
     public func getIamPolicy(
@@ -205,8 +184,7 @@
       )
     }
 
-    /// Retrieves the list of InstantSnapshot resources contained within
-    /// the specified zone.
+    /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
     ///
     /// @Snippet(path: "instantSnapshots_list")
     public func list(
@@ -215,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of InstantSnapshot resources contained within
-    /// the specified zone.
+    /// Retrieves the list of InstantSnapshot resources contained within the specified zone.
     ///
     /// @Snippet(path: "instantSnapshots_list")
     public func list(
@@ -231,8 +208,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "instantSnapshots_setIamPolicy")
     public func setIamPolicy(
@@ -241,9 +217,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the labels on a instantSnapshot in the given zone. To learn more about
-    /// labels, read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "instantSnapshots_setLabels")
     public func setLabels(
@@ -252,9 +226,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a instantSnapshot in the given zone. To learn more about
-    /// labels, read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on a instantSnapshot in the given zone. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "instantSnapshots_setLabels")
     public func setLabels(

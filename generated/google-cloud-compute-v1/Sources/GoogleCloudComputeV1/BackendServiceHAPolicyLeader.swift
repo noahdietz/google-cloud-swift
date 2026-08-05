@@ -21,21 +21,10 @@
   public struct BackendServiceHAPolicyLeader: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A fully-qualified URL (starting with https://www.googleapis.com/)
-    /// of the zonal Network Endpoint Group (NEG) with `GCE_VM_IP` endpoints
-    /// that the leader is attached to.
-    ///
-    /// The leader's backendGroup must already be specified as a backend of
-    /// this backend service. Removing a backend that is designated as the
-    /// leader's backendGroup is not permitted.
+    /// A fully-qualified URL (starting with https://www.googleapis.com/) of the zonal Network Endpoint Group (NEG) with `GCE_VM_IP` endpoints that the leader is attached to. The leader's backendGroup must already be specified as a backend of this backend service. Removing a backend that is designated as the leader's backendGroup is not permitted.
     public var backendGroup: Swift.String? = nil
 
-    /// The network endpoint within the leader.backendGroup that is
-    /// designated as the leader.
-    ///
-    /// This network endpoint cannot be detached from the NEG specified in
-    /// the haPolicy.leader.backendGroup until the leader is updated with
-    /// another network endpoint, or the leader is removed from the haPolicy.
+    /// The network endpoint within the leader.backendGroup that is designated as the leader. This network endpoint cannot be detached from the NEG specified in the haPolicy.leader.backendGroup until the leader is updated with another network endpoint, or the leader is removed from the haPolicy.
     public var networkEndpoint: BackendServiceHAPolicyLeaderNetworkEndpoint? = nil
 
     /// Initialize a new instance of `BackendServiceHAPolicyLeader`.

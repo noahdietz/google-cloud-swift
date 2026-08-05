@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specify bandwidth percentages [1-100] for various traffic classes in
-  /// BandwidthPercentagePolicy. The sum of all percentages must equal 100.
-  /// All traffic classes must have a percentage value specified.
+  /// Specify bandwidth percentages [1-100] for various traffic classes in BandwidthPercentagePolicy. The sum of all percentages must equal 100. All traffic classes must have a percentage value specified.
   public struct InterconnectApplicationAwareInterconnectBandwidthPercentage: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable

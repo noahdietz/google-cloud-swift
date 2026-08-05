@@ -42,8 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Adds a key for validating requests with signed URLs for this backend
-    /// service.
+    /// Adds a key for validating requests with signed URLs for this backend service.
     ///
     /// @Snippet(path: "backendServices_addSignedUrlKey")
     public func addSignedUrlKey(
@@ -52,8 +51,7 @@
       try await self.inner.addSignedUrlKey(request: request, options: options)
     }
 
-    /// Adds a key for validating requests with signed URLs for this backend
-    /// service.
+    /// Adds a key for validating requests with signed URLs for this backend service.
     ///
     /// @Snippet(path: "backendServices_addSignedUrlKey")
     public func addSignedUrlKey(
@@ -94,11 +92,7 @@
       )
     }
 
-    /// Retrieves the list of all BackendService resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "backendServices_aggregatedList")
     public func aggregatedList(
@@ -107,11 +101,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all BackendService resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all BackendService resources, regional and global, available to the specified project. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "backendServices_aggregatedList")
     public func aggregatedList(
@@ -175,8 +165,7 @@
       )
     }
 
-    /// Deletes a key for validating requests with signed URLs for this backend
-    /// service.
+    /// Deletes a key for validating requests with signed URLs for this backend service.
     ///
     /// @Snippet(path: "backendServices_deleteSignedUrlKey")
     public func deleteSignedUrlKey(
@@ -186,8 +175,7 @@
       try await self.inner.deleteSignedUrlKey(request: request, options: options)
     }
 
-    /// Deletes a key for validating requests with signed URLs for this backend
-    /// service.
+    /// Deletes a key for validating requests with signed URLs for this backend service.
     ///
     /// @Snippet(path: "backendServices_deleteSignedUrlKey")
     public func deleteSignedUrlKey(
@@ -247,14 +235,7 @@
       try await self.inner.getEffectiveSecurityPolicies(request: request, options: options)
     }
 
-    /// Gets the most recent health check results for this
-    /// BackendService.
-    ///
-    /// Example request body:
-    ///
-    /// {
-    ///   "group": "/zones/us-east1-b/instanceGroups/lb-backend-example"
-    /// }
+    /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
     ///
     /// @Snippet(path: "backendServices_getHealth")
     public func getHealth(
@@ -263,8 +244,7 @@
       try await self.inner.getHealth(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "backendServices_getIamPolicy")
     public func getIamPolicy(
@@ -273,9 +253,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a BackendService resource in the specified project using
-    /// the data included in the request. For more information, see
-    /// Backend services overview.
+    /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
     ///
     /// @Snippet(path: "backendServices_insert")
     public func insert(
@@ -284,9 +262,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a BackendService resource in the specified project using
-    /// the data included in the request. For more information, see
-    /// Backend services overview.
+    /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
     ///
     /// @Snippet(path: "backendServices_insert")
     public func insert(
@@ -326,8 +302,7 @@
       )
     }
 
-    /// Retrieves the list of BackendService resources available to the specified
-    /// project.
+    /// Retrieves the list of BackendService resources available to the specified project.
     ///
     /// @Snippet(path: "backendServices_list")
     public func list(
@@ -336,8 +311,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of BackendService resources available to the specified
-    /// project.
+    /// Retrieves the list of BackendService resources available to the specified project.
     ///
     /// @Snippet(path: "backendServices_list")
     public func list(
@@ -352,10 +326,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of all usable backend services for Application Load
-    /// Balancers and Proxy Network Load Balancers in the specified project.
-    /// Backend services for external and internal passthrough Network Load
-    /// Balancers are not included in the response.
+    /// Retrieves a list of all usable backend services for Application Load Balancers and Proxy Network Load Balancers in the specified project. Backend services for external and internal passthrough Network Load Balancers are not included in the response.
     ///
     /// @Snippet(path: "backendServices_listUsable")
     public func listUsable(
@@ -364,10 +335,7 @@
       try await self.inner.listUsable(request: request, options: options)
     }
 
-    /// Retrieves a list of all usable backend services for Application Load
-    /// Balancers and Proxy Network Load Balancers in the specified project.
-    /// Backend services for external and internal passthrough Network Load
-    /// Balancers are not included in the response.
+    /// Retrieves a list of all usable backend services for Application Load Balancers and Proxy Network Load Balancers in the specified project. Backend services for external and internal passthrough Network Load Balancers are not included in the response.
     ///
     /// @Snippet(path: "backendServices_listUsable")
     public func listUsable(
@@ -382,11 +350,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified BackendService resource with the data included in the
-    /// request. For more information, see
-    /// Backend services overview. This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "backendServices_patch")
     public func patch(
@@ -395,11 +359,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified BackendService resource with the data included in the
-    /// request. For more information, see
-    /// Backend services overview. This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "backendServices_patch")
     public func patch(
@@ -490,8 +450,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "backendServices_setIamPolicy")
     public func setIamPolicy(
@@ -500,9 +459,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified backend
-    /// service. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "backendServices_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -512,9 +469,7 @@
       try await self.inner.setSecurityPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified backend
-    /// service. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "backendServices_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -565,9 +520,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified BackendService resource with the data included in the
-    /// request. For more information, seeBackend
-    /// services overview.
+    /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
     ///
     /// @Snippet(path: "backendServices_update")
     public func update(
@@ -576,9 +529,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified BackendService resource with the data included in the
-    /// request. For more information, seeBackend
-    /// services overview.
+    /// Updates the specified BackendService resource with the data included in the request. For more information, see Backend services overview.
     ///
     /// @Snippet(path: "backendServices_update")
     public func update(

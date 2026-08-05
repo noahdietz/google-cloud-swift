@@ -18,69 +18,41 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A network peering attached to a network resource. The message includes the
-  /// peering name, peer network, peering state, and a flag indicating whether
-  /// Google Compute Engine should automatically create routes for the peering.
+  /// A network peering attached to a network resource. The message includes the peering name, peer network, peering state, and a flag indicating whether Google Compute Engine should automatically create routes for the peering.
   public struct NetworkPeering: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// This field will be deprecated soon. Use theexchange_subnet_routes field instead.
-    /// Indicates whether full mesh connectivity is created and managed
-    /// automatically between peered networks. Currently this field should always
-    /// be true since Google Compute Engine will automatically create and manage
-    /// subnetwork routes between two networks when peering state isACTIVE.
+    /// This field will be deprecated soon. Use the exchange_subnet_routes field instead. Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
     public var autoCreateRoutes: Swift.Bool? = nil
 
-    /// Output only. [Output Only] The effective state of the peering connection
-    /// as a whole.
+    /// Output only. [Output Only] The effective state of the peering connection as a whole.
     public var connectionStatus: NetworkPeeringConnectionStatus? = nil
 
-    /// Indicates whether full mesh connectivity is created and managed
-    /// automatically between peered networks. Currently this field should always
-    /// be true since Google Compute Engine will automatically create and manage
-    /// subnetwork routes between two networks when peering state isACTIVE.
+    /// Indicates whether full mesh connectivity is created and managed automatically between peered networks. Currently this field should always be true since Google Compute Engine will automatically create and manage subnetwork routes between two networks when peering state is ACTIVE.
     public var exchangeSubnetRoutes: Swift.Bool? = nil
 
-    /// Whether to export the custom routes to peer network. The default value is
-    /// false.
+    /// Whether to export the custom routes to peer network. The default value is false.
     public var exportCustomRoutes: Swift.Bool? = nil
 
-    /// Whether subnet routes with public IP range are exported. The default value
-    /// is true, all subnet routes are exported.IPv4
-    /// special-use ranges are always
-    /// exported to peers and are not controlled by this field.
+    /// Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. IPv4 special-use ranges are always exported to peers and are not controlled by this field.
     public var exportSubnetRoutesWithPublicIp: Swift.Bool? = nil
 
-    /// Whether to import the custom routes from peer network. The default value is
-    /// false.
+    /// Whether to import the custom routes from peer network. The default value is false.
     public var importCustomRoutes: Swift.Bool? = nil
 
-    /// Whether subnet routes with public IP range are imported. The default value
-    /// is false.IPv4
-    /// special-use ranges are always
-    /// imported from peers and are not controlled by this field.
+    /// Whether subnet routes with public IP range are imported. The default value is false. IPv4 special-use ranges are always imported from peers and are not controlled by this field.
     public var importSubnetRoutesWithPublicIp: Swift.Bool? = nil
 
-    /// Name of this peering. Provided by the client when the peering is created.
-    /// The name must comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a
-    /// lowercase letter, and all the following characters must be a dash,
-    /// lowercase letter, or digit, except the last character, which cannot be a
-    /// dash.
+    /// Name of this peering. Provided by the client when the peering is created. The name must comply with RFC1035. Specifically, the name must be 1-63 characters long and match regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all the following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The URL of the peer network. It can be either full URL or partial URL. The
-    /// peer network may belong to a different project. If the partial URL does not
-    /// contain project, it is assumed that the peer network is in the same project
-    /// as the current network.
+    /// The URL of the peer network. It can be either full URL or partial URL. The peer network may belong to a different project. If the partial URL does not contain project, it is assumed that the peer network is in the same project as the current network.
     public var network: Swift.String? = nil
 
     /// Output only. [Output Only] Maximum Transmission Unit in bytes of the peer network.
     public var peerMtu: Swift.Int32? = nil
 
-    /// Which IP version(s) of traffic and routes are allowed to be imported or
-    /// exported between peer networks. The default value is IPV4_ONLY.
+    /// Which IP version(s) of traffic and routes are allowed to be imported or exported between peer networks. The default value is IPV4_ONLY.
     public var stackType: NetworkPeering.StackType? = nil
 
     /// Output only. [Output Only] State for the peering.
@@ -89,8 +61,7 @@
     /// Output only. [Output Only] Details about the current state of the peering.
     public var stateDetails: Swift.String? = nil
 
-    /// The update strategy determines the semantics for updates and deletes to the
-    /// peering connection configuration.
+    /// The update strategy determines the semantics for updates and deletes to the peering connection configuration.
     public var updateStrategy: NetworkPeering.UpdateStrategy? = nil
 
     /// Initialize a new instance of `NetworkPeering`.
@@ -113,13 +84,9 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeering.stackType]: <doc:NetworkPeering/StackType>
     public enum StackType: Codable, Equatable, Sendable {
-      /// This Peering will allow IPv4 traffic and routes to be
-      /// exchanged. Additionally if the matching peering is
-      /// IPV4_IPV6, IPv6 traffic and routes will be exchanged as
-      /// well.
+      /// This Peering will allow IPv4 traffic and routes to be exchanged. Additionally if the matching peering is IPV4_IPV6, IPv6 traffic and routes will be exchanged as well.
       case ipv4Ipv6
-      /// This Peering will only allow IPv4 traffic and routes to be
-      /// exchanged, even if the matching peering is IPV4_IPV6.
+      /// This Peering will only allow IPv4 traffic and routes to be exchanged, even if the matching peering is IPV4_IPV6.
       case ipv4Only
       /// Encodes an unknown integer value.
       ///
@@ -219,8 +186,7 @@
     public enum State: Codable, Equatable, Sendable {
       /// Matching configuration exists on the peer.
       case active
-      /// There is no matching configuration on the peer, including the case when
-      /// peer does not exist.
+      /// There is no matching configuration on the peer, including the case when peer does not exist.
       case inactive
       /// Encodes an unknown integer value.
       ///
@@ -318,19 +284,11 @@
     ///
     /// [google.cloud.compute.v1.NetworkPeering.updateStrategy]: <doc:NetworkPeering/UpdateStrategy>
     public enum UpdateStrategy: Codable, Equatable, Sendable {
-      /// Updates are reflected in the local peering but aren't applied to the
-      /// peering connection until a complementary change is made to the
-      /// matching peering.
-      /// To delete a peering with the consensus update strategy, both the peerings
-      /// must request the deletion of the peering before the peering can be
-      /// deleted.
+      /// Updates are reflected in the local peering but aren't applied to the peering connection until a complementary change is made to the matching peering. To delete a peering with the consensus update strategy, both the peerings must request the deletion of the peering before the peering can be deleted.
       case consensus
-      /// In this mode, changes to the peering configuration can
-      /// be unilaterally altered by changing either side of the peering.
-      /// This is the default value if the field is unspecified.
+      /// In this mode, changes to the peering configuration can be unilaterally altered by changing either side of the peering. This is the default value if the field is unspecified.
       case independent
-      /// Peerings with update strategy UNSPECIFIED are created with
-      /// update strategy INDEPENDENT.
+      /// Peerings with update strategy UNSPECIFIED are created with update strategy INDEPENDENT.
       case unspecified
       /// Encodes an unknown integer value.
       ///

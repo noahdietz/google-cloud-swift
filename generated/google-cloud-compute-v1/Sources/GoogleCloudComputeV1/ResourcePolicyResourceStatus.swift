@@ -18,16 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Contains output only fields.
-  /// Use this sub-message for all output fields set on ResourcePolicy.
-  /// The internal structure of this "status" field should mimic the structure
-  /// of ResourcePolicy proto specification.
+  /// Contains output only fields. Use this sub-message for all output fields set on ResourcePolicy. The internal structure of this "status" field should mimic the structure of ResourcePolicy proto specification.
   public struct ResourcePolicyResourceStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Specifies a set of output values reffering to
-    /// the instance_schedule_policy system status.
-    /// This field should have the same name as corresponding policy field.
+    /// Output only. [Output Only] Specifies a set of output values reffering to the instance_schedule_policy system status. This field should have the same name as corresponding policy field.
     public var instanceSchedulePolicy: ResourcePolicyResourceStatusInstanceSchedulePolicyStatus? =
       nil
 

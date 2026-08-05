@@ -49,8 +49,7 @@
       case disable
       /// The load balancer will attempt to negotiate QUIC with clients.
       case enable
-      /// No overrides to the default QUIC policy. This option is implicit if
-      /// no QUIC override has been specified in the request.
+      /// No overrides to the default QUIC policy. This option is implicit if no QUIC override has been specified in the request.
       case `none`
       /// Encodes an unknown integer value.
       ///

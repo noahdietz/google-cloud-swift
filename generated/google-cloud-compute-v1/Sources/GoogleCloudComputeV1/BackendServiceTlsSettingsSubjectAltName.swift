@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A Subject Alternative Name that the load balancer matches against the SAN
-  /// field in the TLS certificate provided by the backend, specified as either
-  /// a DNS name or a URI, in accordance with RFC 5280 4.2.1.6
+  /// A Subject Alternative Name that the load balancer matches against the SAN field in the TLS certificate provided by the backend, specified as either a DNS name or a URI, in accordance with RFC 5280 4.2.1.6
   public struct BackendServiceTlsSettingsSubjectAltName: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

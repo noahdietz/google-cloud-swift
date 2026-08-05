@@ -23,14 +23,10 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. [Output only] Detailed statuses of the domains specified for managed
-    /// certificate resource.
+    /// Output only. [Output only] Detailed statuses of the domains specified for managed certificate resource.
     public var domainStatus: [Swift.String: SslCertificateManagedSslCertificate.DomainStatus] = [:]
 
-    /// The domains for which a managed SSL certificate will be generated. Each
-    /// Google-managed SSL certificate supports up to the [maximum number of
-    /// domains per Google-managed SSL
-    /// certificate](/load-balancing/docs/quotas#ssl_certificates).
+    /// The domains for which a managed SSL certificate will be generated. Each Google-managed SSL certificate supports up to the [maximum number of domains per Google-managed SSL certificate](/load-balancing/docs/quotas#ssl_certificates).
     public var domains: [Swift.String] = []
 
     /// Output only. [Output only] Status of the managed certificate resource.
@@ -61,16 +57,13 @@
       case unspecified
       /// Failed to check CAA records for the domain.
       case failedCaaChecking
-      /// Certificate issuance forbidden by an explicit CAA record for the
-      /// domain.
+      /// Certificate issuance forbidden by an explicit CAA record for the domain.
       case failedCaaForbidden
-      /// There seems to be problem with the user's DNS or load balancer
-      /// configuration for this domain.
+      /// There seems to be problem with the user's DNS or load balancer configuration for this domain.
       case failedNotVisible
       /// Reached rate-limit for certificates per top-level private domain.
       case failedRateLimited
-      /// Certificate provisioning for this domain is under way. GCP will
-      /// attempt to provision the first certificate.
+      /// Certificate provisioning for this domain is under way. GCP will attempt to provision the first certificate.
       case provisioning
       /// Encodes an unknown integer value.
       ///
@@ -193,27 +186,16 @@
     ///
     /// [google.cloud.compute.v1.SslCertificateManagedSslCertificate.status]: <doc:SslCertificateManagedSslCertificate/Status>
     public enum Status: Codable, Equatable, Sendable {
-      /// The certificate management is working, and a certificate has been
-      /// provisioned.
+      /// The certificate management is working, and a certificate has been provisioned.
       case active
       case managedCertificateStatusUnspecified
-      /// The certificate management is working. GCP will attempt to provision
-      /// the first certificate.
+      /// The certificate management is working. GCP will attempt to provision the first certificate.
       case provisioning
-      /// Certificate provisioning failed due to an issue with the DNS
-      /// or load balancing configuration.
-      /// For details of which domain failed, consult domain_status field.
+      /// Certificate provisioning failed due to an issue with the DNS or load balancing configuration. For details of which domain failed, consult domain_status field.
       case provisioningFailed
-      /// Certificate provisioning failed due to an issue with the DNS
-      /// or load balancing configuration. It won't be retried. To try again
-      /// delete and create a new managed SslCertificate resource.
-      /// For details of which domain failed, consult domain_status field.
+      /// Certificate provisioning failed due to an issue with the DNS or load balancing configuration. It won't be retried. To try again delete and create a new managed SslCertificate resource. For details of which domain failed, consult domain_status field.
       case provisioningFailedPermanently
-      /// Renewal of the certificate has failed due to an issue with the DNS
-      /// or load balancing configuration. The existing cert is still serving;
-      /// however, it will expire shortly. To provision a renewed certificate,
-      /// delete and create a new managed SslCertificate resource.
-      /// For details on which domain failed, consult domain_status field.
+      /// Renewal of the certificate has failed due to an issue with the DNS or load balancing configuration. The existing cert is still serving; however, it will expire shortly. To provision a renewed certificate, delete and create a new managed SslCertificate resource. For details on which domain failed, consult domain_status field.
       case renewalFailed
       /// Encodes an unknown integer value.
       ///

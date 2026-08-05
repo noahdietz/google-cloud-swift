@@ -22,9 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The URL of thezone.
-    /// The zone must exist in the region where the managed instance group is
-    /// located.
+    /// The URL of the zone. The zone must exist in the region where the managed instance group is located.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `DistributionPolicyZoneConfiguration`.

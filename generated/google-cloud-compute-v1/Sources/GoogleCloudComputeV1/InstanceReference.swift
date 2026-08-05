@@ -21,8 +21,7 @@
   public struct InstanceReference: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The URL for a specific instance.
-    /// @required compute.instancegroups.addInstances/removeInstances
+    /// The URL for a specific instance. @required compute.instancegroups.addInstances/removeInstances
     public var instance: Swift.String? = nil
 
     /// Initialize a new instance of `InstanceReference`.

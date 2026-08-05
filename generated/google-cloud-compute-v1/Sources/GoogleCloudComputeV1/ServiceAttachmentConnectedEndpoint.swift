@@ -31,12 +31,10 @@
     /// The url of a connected endpoint with resource id.
     public var endpointWithId: Swift.String? = nil
 
-    /// NAT IPs of the connected PSC endpoint and those of other endpoints
-    /// propagated from it.
+    /// NAT IPs of the connected PSC endpoint and those of other endpoints propagated from it.
     public var natIps: [Swift.String] = []
 
-    /// The number of consumer Network Connectivity Center spokes that the
-    /// connected Private Service Connect endpoint has propagated to.
+    /// The number of consumer Network Connectivity Center spokes that the connected Private Service Connect endpoint has propagated to.
     public var propagatedConnectionCount: Swift.UInt32? = nil
 
     /// The PSC connection id of the connected endpoint.
@@ -69,9 +67,7 @@
       case accepted
       /// The connection has been closed by the producer.
       case closed
-      /// The connection has been accepted by the producer, but the producer
-      /// needs to take further action before the forwarding rule can serve
-      /// traffic.
+      /// The connection has been accepted by the producer, but the producer needs to take further action before the forwarding rule can serve traffic.
       case needsAttention
       /// The connection is pending acceptance by the producer.
       case pending

@@ -18,21 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A LabelSelector is applied to a VM only if it matches all the specified
-  /// labels.
+  /// A LabelSelector is applied to a VM only if it matches all the specified labels.
   public struct VmExtensionPolicyLabelSelector: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. A map of key-value pairs representing VM labels.
-    /// VMs must have all of the labels specified in this map to be selected
-    /// (logical AND).
-    ///
-    /// e.g. If the `inclusion_labels` are {("key1", "value1"), ("key2",
-    /// "value2")}, the VM labels must contain both ("key1", "value1") and
-    /// ("key2", "value2") to be selected. If the VM labels are ("key1",
-    /// "value1") and ("something", "else"), it will not be selected.
-    ///
-    /// If the map is empty, it's considered a match.
+    /// Optional. A map of key-value pairs representing VM labels. VMs must have all of the labels specified in this map to be selected (logical AND). e.g. If the `inclusion_labels` are {("key1", "value1"), ("key2", "value2")}, the VM labels must contain both ("key1", "value1") and ("key2", "value2") to be selected. If the VM labels are ("key1", "value1") and ("something", "else"), it will not be selected. If the map is empty, it's considered a match.
     public var inclusionLabels: [Swift.String: Swift.String] = [:]
 
     /// Initialize a new instance of `VmExtensionPolicyLabelSelector`.

@@ -43,16 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Inserts an association for the specified security policy.
-    ///
-    /// This has billing implications.  Projects in the hierarchy with effective
-    /// hierarchical security policies will be automatically enrolled into Cloud
-    /// Armor Enterprise if not already enrolled.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.addAssociation
-    /// instead.
+    /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.addAssociation instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_addAssociation")
     public func addAssociation(
@@ -62,16 +53,7 @@
       try await self.inner.addAssociation(request: request, options: options)
     }
 
-    /// Inserts an association for the specified security policy.
-    ///
-    /// This has billing implications.  Projects in the hierarchy with effective
-    /// hierarchical security policies will be automatically enrolled into Cloud
-    /// Armor Enterprise if not already enrolled.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.addAssociation
-    /// instead.
+    /// Inserts an association for the specified security policy. This has billing implications. Projects in the hierarchy with effective hierarchical security policies will be automatically enrolled into Cloud Armor Enterprise if not already enrolled. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.addAssociation instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_addAssociation")
     public func addAssociation(
@@ -111,11 +93,7 @@
       )
     }
 
-    /// Inserts a rule into a security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.addRule instead.
+    /// Inserts a rule into a security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.addRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_addRule")
     public func addRule(
@@ -125,11 +103,7 @@
       try await self.inner.addRule(request: request, options: options)
     }
 
-    /// Inserts a rule into a security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.addRule instead.
+    /// Inserts a rule into a security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.addRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_addRule")
     public func addRule(
@@ -169,12 +143,7 @@
       )
     }
 
-    /// Copies rules to the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.cloneRules
-    /// instead.
+    /// Copies rules to the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.cloneRules instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_copyRules")
     public func copyRules(
@@ -184,12 +153,7 @@
       try await self.inner.copyRules(request: request, options: options)
     }
 
-    /// Copies rules to the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.cloneRules
-    /// instead.
+    /// Copies rules to the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.cloneRules instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_copyRules")
     public func copyRules(
@@ -229,11 +193,7 @@
       )
     }
 
-    /// Deletes the specified policy.
-    ///
-    /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to remove firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.delete instead.
+    /// Deletes the specified policy. Use this API to remove Cloud Armor policies. Previously, alpha and beta versions of this API were used to remove firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.delete instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_delete")
     public func delete(
@@ -243,11 +203,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified policy.
-    ///
-    /// Use this API to remove Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to remove firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.delete instead.
+    /// Deletes the specified policy. Use this API to remove Cloud Armor policies. Previously, alpha and beta versions of this API were used to remove firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.delete instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_delete")
     public func delete(
@@ -287,11 +243,7 @@
       )
     }
 
-    /// List all of the ordered rules present in a single specified policy.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.get instead.
+    /// List all of the ordered rules present in a single specified policy. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.get instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_get")
     public func `get`(
@@ -300,12 +252,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets an association with the specified name.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.getAssociation
-    /// instead.
+    /// Gets an association with the specified name. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.getAssociation instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_getAssociation")
     public func getAssociation(
@@ -315,11 +262,7 @@
       try await self.inner.getAssociation(request: request, options: options)
     }
 
-    /// Gets a rule at the specified priority.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.getRule instead.
+    /// Gets a rule at the specified priority. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.getRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_getRule")
     public func getRule(
@@ -329,12 +272,7 @@
       try await self.inner.getRule(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified organization using the data included
-    /// in the request.
-    ///
-    /// Use this API to add Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to add firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.insert instead.
+    /// Creates a new policy in the specified organization using the data included in the request. Use this API to add Cloud Armor policies. Previously, alpha and beta versions of this API were used to add firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.insert instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_insert")
     public func insert(
@@ -344,12 +282,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified organization using the data included
-    /// in the request.
-    ///
-    /// Use this API to add Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to add firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.insert instead.
+    /// Creates a new policy in the specified organization using the data included in the request. Use this API to add Cloud Armor policies. Previously, alpha and beta versions of this API were used to add firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.insert instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_insert")
     public func insert(
@@ -389,12 +322,7 @@
       )
     }
 
-    /// List all the policies that have been configured for the specified
-    /// organization.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.list instead.
+    /// List all the policies that have been configured for the specified organization. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.list instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_list")
     public func list(
@@ -404,12 +332,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// List all the policies that have been configured for the specified
-    /// organization.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is now
-    /// disabled for most organizations. Use firewallPolicies.list instead.
+    /// List all the policies that have been configured for the specified organization. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.list instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_list")
     public func list(
@@ -424,12 +347,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists associations of a specified target, i.e., organization or folder.
-    ///
-    /// Use this API to read Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to read firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.listAssociations
-    /// instead.
+    /// Lists associations of a specified target, i.e., organization or folder. Use this API to read Cloud Armor policies. Previously, alpha and beta versions of this API were used to read firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.listAssociations instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_listAssociations")
     public func listAssociations(
@@ -439,8 +357,7 @@
       try await self.inner.listAssociations(request: request, options: options)
     }
 
-    /// Gets the current list of preconfigured Web Application Firewall (WAF)
-    /// expressions.
+    /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_listPreconfiguredExpressionSets")
     public func listPreconfiguredExpressionSets(
@@ -450,11 +367,7 @@
       try await self.inner.listPreconfiguredExpressionSets(request: request, options: options)
     }
 
-    /// Moves the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.move instead.
+    /// Moves the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.move instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_move")
     public func move(
@@ -464,11 +377,7 @@
       try await self.inner.move(request: request, options: options)
     }
 
-    /// Moves the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.move instead.
+    /// Moves the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.move instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_move")
     public func move(
@@ -508,11 +417,7 @@
       )
     }
 
-    /// Patches the specified policy with the data included in the request.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.patch instead.
+    /// Patches the specified policy with the data included in the request. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.patch instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_patch")
     public func patch(
@@ -522,11 +427,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified policy with the data included in the request.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.patch instead.
+    /// Patches the specified policy with the data included in the request. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.patch instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_patch")
     public func patch(
@@ -566,12 +467,7 @@
       )
     }
 
-    /// Patches a rule at the specified priority.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.patchRule
-    /// instead.
+    /// Patches a rule at the specified priority. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.patchRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_patchRule")
     public func patchRule(
@@ -581,12 +477,7 @@
       try await self.inner.patchRule(request: request, options: options)
     }
 
-    /// Patches a rule at the specified priority.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.patchRule
-    /// instead.
+    /// Patches a rule at the specified priority. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.patchRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_patchRule")
     public func patchRule(
@@ -626,12 +517,7 @@
       )
     }
 
-    /// Removes an association for the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.removeAssociation
-    /// instead.
+    /// Removes an association for the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.removeAssociation instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_removeAssociation")
     public func removeAssociation(
@@ -641,12 +527,7 @@
       try await self.inner.removeAssociation(request: request, options: options)
     }
 
-    /// Removes an association for the specified security policy.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.removeAssociation
-    /// instead.
+    /// Removes an association for the specified security policy. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.removeAssociation instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_removeAssociation")
     public func removeAssociation(
@@ -686,12 +567,7 @@
       )
     }
 
-    /// Deletes a rule at the specified priority.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.removeRule
-    /// instead.
+    /// Deletes a rule at the specified priority. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.removeRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_removeRule")
     public func removeRule(
@@ -701,12 +577,7 @@
       try await self.inner.removeRule(request: request, options: options)
     }
 
-    /// Deletes a rule at the specified priority.
-    ///
-    /// Use this API to modify Cloud Armor policies. Previously, alpha and beta
-    /// versions of this API were used to modify firewall policies. This usage is
-    /// now disabled for most organizations. Use firewallPolicies.removeRule
-    /// instead.
+    /// Deletes a rule at the specified priority. Use this API to modify Cloud Armor policies. Previously, alpha and beta versions of this API were used to modify firewall policies. This usage is now disabled for most organizations. Use firewallPolicies.removeRule instead.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_removeRule")
     public func removeRule(
@@ -746,8 +617,7 @@
       )
     }
 
-    /// Retrieves the specified Operations resource. Gets a list of operations
-    /// by making a `list()` request.
+    /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
     ///
     /// @Snippet(path: "organizationSecurityPolicies_getOperation")
     func getOperation(

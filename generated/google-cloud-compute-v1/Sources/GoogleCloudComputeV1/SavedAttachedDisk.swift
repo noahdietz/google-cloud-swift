@@ -18,17 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// DEPRECATED: Please use compute#savedDisk instead.
-  /// An instance-attached disk resource.
+  /// DEPRECATED: Please use compute#savedDisk instead. An instance-attached disk resource.
   public struct SavedAttachedDisk: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies whether the disk will be auto-deleted when the instance is
-    /// deleted (but not when the disk is detached from the instance).
+    /// Specifies whether the disk will be auto-deleted when the instance is deleted (but not when the disk is detached from the instance).
     public var autoDelete: Swift.Bool? = nil
 
-    /// Indicates that this is a boot disk. The virtual machine will use the first
-    /// partition of the disk for its root filesystem.
+    /// Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
     public var boot: Swift.Bool? = nil
 
     /// Specifies the name of the disk attached to the source instance.
@@ -40,48 +37,37 @@
     /// The size of the disk in base-2 GB.
     public var diskSizeGb: Swift.Int64? = nil
 
-    /// Output only. [Output Only] URL of the disk type resource. For example:projects/project/zones/zone/diskTypes/pd-standard or
-    /// pd-ssd
+    /// Output only. [Output Only] URL of the disk type resource. For example: projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
     public var diskType: Swift.String? = nil
 
-    /// A list of features to enable on the guest operating system. Applicable only
-    /// for bootable images. Read
-    /// Enabling guest operating system features to see a list of available
-    /// options.
+    /// A list of features to enable on the guest operating system. Applicable only for bootable images. Read Enabling guest operating system features to see a list of available options.
     public var guestOsFeatures: [GuestOsFeature] = []
 
-    /// Output only. Specifies zero-based index of the disk that is attached to the source
-    /// instance.
+    /// Output only. Specifies zero-based index of the disk that is attached to the source instance.
     public var index: Swift.Int32? = nil
 
-    /// Specifies the disk interface to use for attaching this disk, which is
-    /// either SCSI or NVME.
+    /// Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
     public var interface: SavedAttachedDisk.Interface? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached disks.
+    /// Output only. [Output Only] Type of the resource. Always compute#attachedDisk for attached disks.
     public var kind: Swift.String? = nil
 
     /// Output only. [Output Only] Any valid publicly visible licenses.
     public var licenses: [Swift.String] = []
 
-    /// The mode in which this disk is attached to the source instance, eitherREAD_WRITE or READ_ONLY.
+    /// The mode in which this disk is attached to the source instance, either READ_WRITE or READ_ONLY.
     public var mode: SavedAttachedDisk.Mode? = nil
 
     /// Specifies a URL of the disk attached to the source instance.
     public var source: Swift.String? = nil
 
-    /// Output only. [Output Only] A size of the storage used by the disk's snapshot by this
-    /// machine image.
+    /// Output only. [Output Only] A size of the storage used by the disk's snapshot by this machine image.
     public var storageBytes: Swift.Int64? = nil
 
-    /// Output only. [Output Only] An indicator whether storageBytes is in a
-    /// stable state or it is being adjusted as a result of shared storage
-    /// reallocation. This status can either be UPDATING, meaning
-    /// the size of the snapshot is being updated, or UP_TO_DATE,
-    /// meaning the size of the snapshot is up-to-date.
+    /// Output only. [Output Only] An indicator whether storageBytes is in a stable state or it is being adjusted as a result of shared storage reallocation. This status can either be UPDATING, meaning the size of the snapshot is being updated, or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
     public var storageBytesStatus: SavedAttachedDisk.StorageBytesStatus? = nil
 
-    /// Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
+    /// Specifies the type of the attached disk, either SCRATCH or PERSISTENT.
     public var type: SavedAttachedDisk.Type_? = nil
 
     /// Initialize a new instance of `SavedAttachedDisk`.
@@ -202,11 +188,9 @@
     ///
     /// [google.cloud.compute.v1.SavedAttachedDisk.mode]: <doc:SavedAttachedDisk/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// Attaches this disk in read-only mode. Multiple virtual machines can use
-      /// a disk in read-only mode at a time.
+      /// Attaches this disk in read-only mode. Multiple virtual machines can use a disk in read-only mode at a time.
       case readOnly
-      /// *[Default]* Attaches this disk in read-write mode. Only one
-      /// virtual machine at a time can be attached to a disk in read-write mode.
+      /// *[Default]* Attaches this disk in read-write mode. Only one virtual machine at a time can be attached to a disk in read-write mode.
       case readWrite
       /// Encodes an unknown integer value.
       ///

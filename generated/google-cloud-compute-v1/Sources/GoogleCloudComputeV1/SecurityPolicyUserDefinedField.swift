@@ -21,32 +21,16 @@
   public struct SecurityPolicyUserDefinedField: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The base relative to which 'offset' is measured. Possible values are:
-    ///
-    ///    - IPV4: Points to the beginning of the IPv4 header.
-    ///    - IPV6: Points to the beginning of the IPv6 header.
-    ///    - TCP: Points to the beginning of the TCP header, skipping
-    ///    over any IPv4 options or IPv6 extension headers. Not present for
-    ///    non-first fragments.
-    ///    - UDP: Points to the beginning of the UDP header, skipping
-    ///    over any IPv4 options or IPv6 extension headers. Not present for
-    ///    non-first fragments.
-    ///
-    ///
-    /// required
+    /// The base relative to which 'offset' is measured. Possible values are: - IPV4: Points to the beginning of the IPv4 header. - IPV6: Points to the beginning of the IPv6 header. - TCP: Points to the beginning of the TCP header, skipping over any IPv4 options or IPv6 extension headers. Not present for non-first fragments. - UDP: Points to the beginning of the UDP header, skipping over any IPv4 options or IPv6 extension headers. Not present for non-first fragments. required
     public var base: SecurityPolicyUserDefinedField.Base? = nil
 
-    /// If specified, apply this mask (bitwise AND) to the field to ignore bits
-    /// before matching. Encoded as a hexadecimal number (starting with "0x").
-    /// The last byte of the field (in network byte order) corresponds to the
-    /// least significant byte of the mask.
+    /// If specified, apply this mask (bitwise AND) to the field to ignore bits before matching. Encoded as a hexadecimal number (starting with "0x"). The last byte of the field (in network byte order) corresponds to the least significant byte of the mask.
     public var mask: Swift.String? = nil
 
     /// The name of this field. Must be unique within the policy.
     public var name: Swift.String? = nil
 
-    /// Offset of the first byte of the field (in network byte order) relative to
-    /// 'base'.
+    /// Offset of the first byte of the field (in network byte order) relative to 'base'.
     public var offset: Swift.Int32? = nil
 
     /// Size of the field in bytes. Valid values: 1-4.

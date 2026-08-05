@@ -52,8 +52,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves the list of instance group resources contained within
-    /// the specified region.
+    /// Retrieves the list of instance group resources contained within the specified region.
     ///
     /// @Snippet(path: "regionInstanceGroups_list")
     public func list(
@@ -62,8 +61,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of instance group resources contained within
-    /// the specified region.
+    /// Retrieves the list of instance group resources contained within the specified region.
     ///
     /// @Snippet(path: "regionInstanceGroups_list")
     public func list(
@@ -78,10 +76,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists the instances in the specified instance group and displays
-    /// information about the named ports. Depending on the specified options, this
-    /// method can list all instances or only the instances that are running.
-    /// The orderBy query parameter is not supported.
+    /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
     ///
     /// @Snippet(path: "regionInstanceGroups_listInstances")
     public func listInstances(
@@ -91,10 +86,7 @@
       try await self.inner.listInstances(request: request, options: options)
     }
 
-    /// Lists the instances in the specified instance group and displays
-    /// information about the named ports. Depending on the specified options, this
-    /// method can list all instances or only the instances that are running.
-    /// The orderBy query parameter is not supported.
+    /// Lists the instances in the specified instance group and displays information about the named ports. Depending on the specified options, this method can list all instances or only the instances that are running. The orderBy query parameter is not supported.
     ///
     /// @Snippet(path: "regionInstanceGroups_listInstances")
     public func listInstances(

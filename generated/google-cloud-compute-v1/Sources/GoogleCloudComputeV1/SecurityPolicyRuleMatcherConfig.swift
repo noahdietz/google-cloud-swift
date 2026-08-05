@@ -21,8 +21,7 @@
   public struct SecurityPolicyRuleMatcherConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// CIDR IP address range.
-    /// Maximum number of src_ip_ranges allowed is 10.
+    /// CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
     public var srcIpRanges: [Swift.String] = []
 
     /// Initialize a new instance of `SecurityPolicyRuleMatcherConfig`.

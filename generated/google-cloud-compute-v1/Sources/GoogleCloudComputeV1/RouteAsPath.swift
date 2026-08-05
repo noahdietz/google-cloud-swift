@@ -24,18 +24,7 @@
     /// [Output Only] The AS numbers of the AS Path.
     public var asLists: [Swift.UInt32] = []
 
-    /// [Output Only] The type of the AS Path, which can be one of the following
-    /// values:
-    /// - 'AS_SET': unordered set of autonomous systems that the route
-    /// in has traversed
-    /// - 'AS_SEQUENCE': ordered set of autonomous
-    /// systems that the route has traversed
-    /// - 'AS_CONFED_SEQUENCE':
-    /// ordered set of Member Autonomous Systems in the local confederation that
-    /// the route has traversed
-    /// - 'AS_CONFED_SET': unordered set of
-    /// Member Autonomous Systems in the local confederation that the route has
-    /// traversed
+    /// [Output Only] The type of the AS Path, which can be one of the following values: - 'AS_SET': unordered set of autonomous systems that the route in has traversed - 'AS_SEQUENCE': ordered set of autonomous systems that the route has traversed - 'AS_CONFED_SEQUENCE': ordered set of Member Autonomous Systems in the local confederation that the route has traversed - 'AS_CONFED_SET': unordered set of Member Autonomous Systems in the local confederation that the route has traversed
     public var pathSegmentType: RouteAsPath.PathSegmentType? = nil
 
     /// Initialize a new instance of `RouteAsPath`.

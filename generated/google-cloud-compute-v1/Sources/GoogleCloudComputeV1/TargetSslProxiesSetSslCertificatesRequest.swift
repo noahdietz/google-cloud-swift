@@ -22,9 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// New set of URLs to SslCertificate resources to associate with this
-    /// TargetSslProxy. At least one SSL certificate must be specified.
-    /// Currently, you may specify up to 15 SSL certificates.
+    /// New set of URLs to SslCertificate resources to associate with this TargetSslProxy. At least one SSL certificate must be specified. Currently, you may specify up to 15 SSL certificates.
     public var sslCertificates: [Swift.String] = []
 
     /// Initialize a new instance of `TargetSslProxiesSetSslCertificatesRequest`.

@@ -43,8 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Deletes the specified instance template. Deleting an instance template is
-    /// permanent and cannot be undone.
+    /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
     ///
     /// @Snippet(path: "regionInstanceTemplates_delete")
     public func delete(
@@ -53,8 +52,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified instance template. Deleting an instance template is
-    /// permanent and cannot be undone.
+    /// Deletes the specified instance template. Deleting an instance template is permanent and cannot be undone.
     ///
     /// @Snippet(path: "regionInstanceTemplates_delete")
     public func delete(
@@ -105,8 +103,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates an instance template in the specified project and region using the
-    /// global instance template whose URL is included in the request.
+    /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
     ///
     /// @Snippet(path: "regionInstanceTemplates_insert")
     public func insert(
@@ -115,8 +112,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an instance template in the specified project and region using the
-    /// global instance template whose URL is included in the request.
+    /// Creates an instance template in the specified project and region using the global instance template whose URL is included in the request.
     ///
     /// @Snippet(path: "regionInstanceTemplates_insert")
     public func insert(
@@ -158,8 +154,7 @@
       )
     }
 
-    /// Retrieves a list of instance templates that are contained within the
-    /// specified project and region.
+    /// Retrieves a list of instance templates that are contained within the specified project and region.
     ///
     /// @Snippet(path: "regionInstanceTemplates_list")
     public func list(
@@ -168,8 +163,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of instance templates that are contained within the
-    /// specified project and region.
+    /// Retrieves a list of instance templates that are contained within the specified project and region.
     ///
     /// @Snippet(path: "regionInstanceTemplates_list")
     public func list(

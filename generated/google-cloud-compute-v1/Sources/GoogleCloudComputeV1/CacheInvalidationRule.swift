@@ -21,22 +21,10 @@
   public struct CacheInvalidationRule: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A list of cache tags used to identify cached objects.
-    ///
-    ///
-    ///    - Cache tags are specified when the response is first cached, by setting
-    ///    the `Cache-Tag` response header at the origin.
-    ///    - Multiple cache tags in the same invalidation request are treated as
-    ///    Boolean `OR` - for example, `tag1 OR tag2 OR tag3`.
-    ///    - If other fields are also specified, these are treated as Boolean `AND`
-    ///    with any tags.
-    ///
-    ///
-    /// Up to 10 tags can be specified in a single invalidation request.
+    /// A list of cache tags used to identify cached objects. - Cache tags are specified when the response is first cached, by setting the `Cache-Tag` response header at the origin. - Multiple cache tags in the same invalidation request are treated as Boolean `OR` - for example, `tag1 OR tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean `AND` with any tags. Up to 10 tags can be specified in a single invalidation request.
     public var cacheTags: [Swift.String] = []
 
-    /// If set, this invalidation rule will only apply to requests with a Host
-    /// header matching host.
+    /// If set, this invalidation rule will only apply to requests with a Host header matching host.
     public var host: Swift.String? = nil
 
     public var path: Swift.String? = nil

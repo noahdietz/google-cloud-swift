@@ -21,8 +21,7 @@
   public struct ReservationsResizeRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Number of allocated resources can be resized with minimum = 1 and
-    /// maximum = 1000.
+    /// Number of allocated resources can be resized with minimum = 1 and maximum = 1000.
     public var specificSkuCount: Swift.Int64? = nil
 
     /// Initialize a new instance of `ReservationsResizeRequest`.

@@ -25,8 +25,7 @@
 
     public var endTime: Swift.String? = nil
 
-    /// Start time of the Future Reservation. The start_time is an RFC3339
-    /// string.
+    /// Start time of the Future Reservation. The start_time is an RFC3339 string.
     public var startTime: Swift.String? = nil
 
     /// Initialize a new instance of `FutureReservationTimeWindow`.

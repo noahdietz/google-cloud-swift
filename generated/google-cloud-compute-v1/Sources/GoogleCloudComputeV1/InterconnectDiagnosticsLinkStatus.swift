@@ -21,9 +21,7 @@
   public struct InterconnectDiagnosticsLinkStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A list of InterconnectDiagnostics.ARPEntry objects,
-    /// describing the ARP neighbor entries seen on this link.
-    /// This will be empty if the link is bundled
+    /// A list of InterconnectDiagnostics.ARPEntry objects, describing the ARP neighbor entries seen on this link. This will be empty if the link is bundled
     public var arpCaches: [InterconnectDiagnosticsARPEntry] = []
 
     /// The unique ID for this link assigned during turn up by Google.
@@ -40,12 +38,10 @@
     /// The operational status of the link.
     public var operationalStatus: InterconnectDiagnosticsLinkStatus.OperationalStatus? = nil
 
-    /// An InterconnectDiagnostics.LinkOpticalPower object,
-    /// describing the current value and status of the received light level.
+    /// An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of the received light level.
     public var receivingOpticalPower: InterconnectDiagnosticsLinkOpticalPower? = nil
 
-    /// An InterconnectDiagnostics.LinkOpticalPower object,
-    /// describing the current value and status of the transmitted light level.
+    /// An InterconnectDiagnostics.LinkOpticalPower object, describing the current value and status of the transmitted light level.
     public var transmittingOpticalPower: InterconnectDiagnosticsLinkOpticalPower? = nil
 
     /// Initialize a new instance of `InterconnectDiagnosticsLinkStatus`.

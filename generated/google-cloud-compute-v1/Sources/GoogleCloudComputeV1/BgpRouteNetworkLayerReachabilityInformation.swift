@@ -23,8 +23,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// If the BGP session supports multiple paths (RFC 7911), the path
-    /// identifier for this route.
+    /// If the BGP session supports multiple paths (RFC 7911), the path identifier for this route.
     public var pathId: Swift.UInt32? = nil
 
     /// Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16.

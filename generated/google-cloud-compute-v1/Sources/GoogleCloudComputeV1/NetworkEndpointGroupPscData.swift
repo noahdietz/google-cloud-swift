@@ -18,23 +18,17 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// All data that is specifically relevant to only network endpoint groups of
-  /// type PRIVATE_SERVICE_CONNECT.
+  /// All data that is specifically relevant to only network endpoint groups of type PRIVATE_SERVICE_CONNECT.
   public struct NetworkEndpointGroupPscData: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Address allocated from given subnetwork for PSC. This IP
-    /// address acts as a VIP for a PSC NEG, allowing it to act as an endpoint in
-    /// L7 PSC-XLB.
+    /// Output only. [Output Only] Address allocated from given subnetwork for PSC. This IP address acts as a VIP for a PSC NEG, allowing it to act as an endpoint in L7 PSC-XLB.
     public var consumerPscAddress: Swift.String? = nil
 
-    /// The psc producer port is used to connect PSC NEG with specific port on
-    /// the PSC Producer side; should only be used for the
-    /// PRIVATE_SERVICE_CONNECT NEG type
+    /// The psc producer port is used to connect PSC NEG with specific port on the PSC Producer side; should only be used for the PRIVATE_SERVICE_CONNECT NEG type
     public var producerPort: Swift.Int32? = nil
 
-    /// Output only. [Output Only] The PSC connection id of the PSC Network Endpoint Group
-    /// Consumer.
+    /// Output only. [Output Only] The PSC connection id of the PSC Network Endpoint Group Consumer.
     public var pscConnectionId: Swift.UInt64? = nil
 
     /// Output only. [Output Only] The connection status of the PSC Forwarding Rule.
@@ -62,12 +56,9 @@
     public enum PscConnectionStatus: Codable, Equatable, Sendable {
       /// The connection has been accepted by the producer.
       case accepted
-      /// The connection has been closed by the producer and will not serve
-      /// traffic going forward.
+      /// The connection has been closed by the producer and will not serve traffic going forward.
       case closed
-      /// The connection has been accepted by the producer, but the producer
-      /// needs to take further action before the forwarding rule can serve
-      /// traffic.
+      /// The connection has been accepted by the producer, but the producer needs to take further action before the forwarding rule can serve traffic.
       case needsAttention
       /// The connection is pending acceptance by the producer.
       case pending

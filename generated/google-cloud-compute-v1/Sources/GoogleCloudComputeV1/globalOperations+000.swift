@@ -38,10 +38,7 @@
       self.inner = inner
     }
 
-    /// Retrieves an aggregated list of all operations.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of all operations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "globalOperations_aggregatedList")
     public func aggregatedList(
@@ -50,10 +47,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of all operations.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of all operations. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "globalOperations_aggregatedList")
     public func aggregatedList(
@@ -86,8 +80,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves a list of Operation resources contained within the specified
-    /// project.
+    /// Retrieves a list of Operation resources contained within the specified project.
     ///
     /// @Snippet(path: "globalOperations_list")
     public func list(
@@ -96,8 +89,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of Operation resources contained within the specified
-    /// project.
+    /// Retrieves a list of Operation resources contained within the specified project.
     ///
     /// @Snippet(path: "globalOperations_list")
     public func list(
@@ -111,22 +103,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Waits for the specified Operation resource to return as `DONE`
-    /// or for the request to approach the 2 minute deadline, and retrieves the
-    /// specified Operation resource. This method differs from the
-    /// `GET` method in that it waits for no more than the default
-    /// deadline (2 minutes) and then returns the current state of the operation,
-    /// which might be `DONE` or still in progress.
-    ///
-    /// This method is called on a best-effort basis. Specifically:
-    ///
-    ///
-    ///     - In uncommon cases, when the server is overloaded, the request might
-    ///     return before the default deadline is reached, or might return after zero
-    ///     seconds.
-    ///    - If the default deadline is reached, there is no guarantee that the
-    ///     operation is actually done when the method returns. Be prepared to retry
-    ///     if the operation is not `DONE`.
+    /// Waits for the specified Operation resource to return as `DONE` or for the request to approach the 2 minute deadline, and retrieves the specified Operation resource. This method differs from the `GET` method in that it waits for no more than the default deadline (2 minutes) and then returns the current state of the operation, which might be `DONE` or still in progress. This method is called on a best-effort basis. Specifically: - In uncommon cases, when the server is overloaded, the request might return before the default deadline is reached, or might return after zero seconds. - If the default deadline is reached, there is no guarantee that the operation is actually done when the method returns. Be prepared to retry if the operation is not `DONE`.
     ///
     /// @Snippet(path: "globalOperations_wait")
     public func wait(

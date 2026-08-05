@@ -18,18 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Information about any potential InterconnectAttachments between an
-  /// Interconnect at a specific InterconnectLocation, and a specific Cloud
-  /// Region.
+  /// Information about any potential InterconnectAttachments between an Interconnect at a specific InterconnectLocation, and a specific Cloud Region.
   public struct InterconnectLocationRegionInfo: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. Expected round-trip time in milliseconds, from this InterconnectLocation
-    /// to a VM in this region.
+    /// Output only. Expected round-trip time in milliseconds, from this InterconnectLocation to a VM in this region.
     public var expectedRttMs: Swift.Int64? = nil
 
-    /// Output only. Identifies whether L2 Interconnect Attachments can be created in this
-    /// region for interconnects that are in this location.
+    /// Output only. Identifies whether L2 Interconnect Attachments can be created in this region for interconnects that are in this location.
     public var l2ForwardingEnabled: Swift.Bool? = nil
 
     /// Output only. Identifies the network presence of this location.
@@ -58,17 +54,13 @@
     ///
     /// [google.cloud.compute.v1.InterconnectLocationRegionInfo.locationPresence]: <doc:InterconnectLocationRegionInfo/LocationPresence>
     public enum LocationPresence: Codable, Equatable, Sendable {
-      /// This region is not in any common network presence with this
-      /// InterconnectLocation.
+      /// This region is not in any common network presence with this InterconnectLocation.
       case global
-      /// This region shares the same regional network presence as this
-      /// InterconnectLocation.
+      /// This region shares the same regional network presence as this InterconnectLocation.
       case localRegion
-      /// [Deprecated] This region is not in any common network presence with
-      /// this InterconnectLocation.
+      /// [Deprecated] This region is not in any common network presence with this InterconnectLocation.
       case lpGlobal
-      /// [Deprecated] This region shares the same regional network presence as
-      /// this InterconnectLocation.
+      /// [Deprecated] This region shares the same regional network presence as this InterconnectLocation.
       case lpLocalRegion
       /// Encodes an unknown integer value.
       ///

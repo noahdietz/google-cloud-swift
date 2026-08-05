@@ -102,8 +102,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the most recent health check results for this
-    /// regional BackendService.
+    /// Gets the most recent health check results for this regional BackendService.
     ///
     /// @Snippet(path: "regionBackendServices_getHealth")
     public func getHealth(
@@ -112,8 +111,7 @@
       try await self.inner.getHealth(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "regionBackendServices_getIamPolicy")
     public func getIamPolicy(
@@ -123,9 +121,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a regional BackendService resource in the specified project using
-    /// the data included in the request. For more information, see
-    /// Backend services overview.
+    /// Creates a regional BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview.
     ///
     /// @Snippet(path: "regionBackendServices_insert")
     public func insert(
@@ -134,9 +130,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a regional BackendService resource in the specified project using
-    /// the data included in the request. For more information, see
-    /// Backend services overview.
+    /// Creates a regional BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview.
     ///
     /// @Snippet(path: "regionBackendServices_insert")
     public func insert(
@@ -177,8 +171,7 @@
       )
     }
 
-    /// Retrieves the list of regional BackendService resources available to the
-    /// specified project in the given region.
+    /// Retrieves the list of regional BackendService resources available to the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendServices_list")
     public func list(
@@ -187,8 +180,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of regional BackendService resources available to the
-    /// specified project in the given region.
+    /// Retrieves the list of regional BackendService resources available to the specified project in the given region.
     ///
     /// @Snippet(path: "regionBackendServices_list")
     public func list(
@@ -203,10 +195,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Retrieves a list of all usable backend services for Application Load
-    /// Balancers and Proxy Network Load Balancers in the specified project in the
-    /// given region. Backend services for external and internal passthrough
-    /// Network Load Balancers are not included in the response.
+    /// Retrieves a list of all usable backend services for Application Load Balancers and Proxy Network Load Balancers in the specified project in the given region. Backend services for external and internal passthrough Network Load Balancers are not included in the response.
     ///
     /// @Snippet(path: "regionBackendServices_listUsable")
     public func listUsable(
@@ -215,10 +204,7 @@
       try await self.inner.listUsable(request: request, options: options)
     }
 
-    /// Retrieves a list of all usable backend services for Application Load
-    /// Balancers and Proxy Network Load Balancers in the specified project in the
-    /// given region. Backend services for external and internal passthrough
-    /// Network Load Balancers are not included in the response.
+    /// Retrieves a list of all usable backend services for Application Load Balancers and Proxy Network Load Balancers in the specified project in the given region. Backend services for external and internal passthrough Network Load Balancers are not included in the response.
     ///
     /// @Snippet(path: "regionBackendServices_listUsable")
     public func listUsable(
@@ -233,11 +219,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified regional BackendService resource with the data
-    /// included in the request. For more information, see
-    /// Understanding backend services This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional BackendService resource with the data included in the request. For more information, see Understanding backend services This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionBackendServices_patch")
     public func patch(
@@ -246,11 +228,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified regional BackendService resource with the data
-    /// included in the request. For more information, see
-    /// Understanding backend services This method
-    /// supports PATCH semantics and uses the JSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional BackendService resource with the data included in the request. For more information, see Understanding backend services This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionBackendServices_patch")
     public func patch(
@@ -291,8 +269,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "regionBackendServices_setIamPolicy")
     public func setIamPolicy(
@@ -302,9 +279,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified backend
-    /// service. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "regionBackendServices_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -314,9 +289,7 @@
       try await self.inner.setSecurityPolicy(request: request, options: options)
     }
 
-    /// Sets the Google Cloud Armor security policy for the specified backend
-    /// service. For more information, seeGoogle
-    /// Cloud Armor Overview
+    /// Sets the Google Cloud Armor security policy for the specified backend service. For more information, see Google Cloud Armor Overview
     ///
     /// @Snippet(path: "regionBackendServices_setSecurityPolicy")
     public func setSecurityPolicy(
@@ -368,10 +341,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Updates the specified regional BackendService resource with the data
-    /// included in the request. For more information,
-    /// see
-    /// Backend services overview.
+    /// Updates the specified regional BackendService resource with the data included in the request. For more information, see Backend services overview .
     ///
     /// @Snippet(path: "regionBackendServices_update")
     public func update(
@@ -380,10 +350,7 @@
       try await self.inner.update(request: request, options: options)
     }
 
-    /// Updates the specified regional BackendService resource with the data
-    /// included in the request. For more information,
-    /// see
-    /// Backend services overview.
+    /// Updates the specified regional BackendService resource with the data included in the request. For more information, see Backend services overview .
     ///
     /// @Snippet(path: "regionBackendServices_update")
     public func update(

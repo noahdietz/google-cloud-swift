@@ -22,15 +22,13 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. Topology in the format of: "16x16", "4x4x4", etc.
-    /// The value is the same as configured in the WorkloadPolicy.
+    /// Output only. Topology in the format of: "16x16", "4x4x4", etc. The value is the same as configured in the WorkloadPolicy.
     public var acceleratorTopology: Swift.String? = nil
 
     /// Output only. The state of the accelerator topology.
     public var state: InstanceGroupManagerStatusAcceleratorTopology.State? = nil
 
-    /// Output only. The result of the latest accelerator topology state
-    /// check.
+    /// Output only. The result of the latest accelerator topology state check.
     public var stateDetails:
       InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails? = nil
 
@@ -62,8 +60,7 @@
       case deactivating
       /// The accelerator topology failed.
       case failed
-      /// The configuration is incomplete and the accelerator topology cannot
-      /// be activated due to insufficient number of running VMs.
+      /// The configuration is incomplete and the accelerator topology cannot be activated due to insufficient number of running VMs.
       case incomplete
       /// The accelerator topology is being reactivated.
       case reactivating

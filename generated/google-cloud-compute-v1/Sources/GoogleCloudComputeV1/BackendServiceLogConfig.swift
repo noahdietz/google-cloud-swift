@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The available logging options for the load balancer traffic served by this
-  /// backend service.
+  /// The available logging options for the load balancer traffic served by this backend service.
   public struct BackendServiceLogConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Denotes whether to enable logging for the load balancer
-    /// traffic served by this backend service. The default value is false.
+    /// Denotes whether to enable logging for the load balancer traffic served by this backend service. The default value is false.
     public var enable: Swift.Bool? = nil
 
     /// The list of request headers that will be logged to Stackdriver.
@@ -33,24 +31,13 @@
     /// The list of response headers that will be logged to Stackdriver.
     public var loggingHttpResponseHeaders: [BackendServiceLogConfigLoggingHttpHeader] = []
 
-    /// This field can only be specified if logging is enabled for this backend
-    /// service and "logConfig.optionalMode" was set to CUSTOM. Contains a list
-    /// of optional fields you want to include in the logs. For example:
-    /// serverInstance, serverGkeDetails.cluster,
-    /// serverGkeDetails.pod.podNamespace
+    /// This field can only be specified if logging is enabled for this backend service and "logConfig.optionalMode" was set to CUSTOM. Contains a list of optional fields you want to include in the logs. For example: serverInstance, serverGkeDetails.cluster, serverGkeDetails.pod.podNamespace
     public var optionalFields: [Swift.String] = []
 
-    /// This field can only be specified if logging is enabled for this backend
-    /// service. Configures whether all, none or a subset of optional fields
-    /// should be added to the reported logs. One of [INCLUDE_ALL_OPTIONAL,
-    /// EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
+    /// This field can only be specified if logging is enabled for this backend service. Configures whether all, none or a subset of optional fields should be added to the reported logs. One of [INCLUDE_ALL_OPTIONAL, EXCLUDE_ALL_OPTIONAL, CUSTOM]. Default is EXCLUDE_ALL_OPTIONAL.
     public var optionalMode: BackendServiceLogConfig.OptionalMode? = nil
 
-    /// This field can only be specified if logging is enabled for this backend
-    /// service. The value of the field must be in [0, 1]. This configures the
-    /// sampling rate of requests to the load balancer where 1.0 means all logged
-    /// requests are reported and 0.0 means no logged requests are reported. The
-    /// default value is 1.0.
+    /// This field can only be specified if logging is enabled for this backend service. The value of the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0.
     public var sampleRate: Swift.Float? = nil
 
     /// Initialize a new instance of `BackendServiceLogConfig`.

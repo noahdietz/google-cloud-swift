@@ -21,18 +21,10 @@
   public struct RegionAddressesMoveRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// An optional destination address description if intended to be different
-    /// from the source.
+    /// An optional destination address description if intended to be different from the source.
     public var description: Swift.String? = nil
 
-    /// The URL of the destination address to move to. This can be a full or
-    /// partial URL. For example, the following are all valid URLs to a address:
-    ///
-    ///    - https://www.googleapis.com/compute/v1/projects/project/regions/region/addresses/address
-    ///    - projects/project/regions/region/addresses/address
-    ///
-    ///
-    /// Note that destination project must be different from the source project. So/regions/region/addresses/address is not valid partial url.
+    /// The URL of the destination address to move to. This can be a full or partial URL. For example, the following are all valid URLs to a address: - https://www.googleapis.com/compute/v1/projects/project/regions/region /addresses/address - projects/project/regions/region/addresses/address Note that destination project must be different from the source project. So /regions/region/addresses/address is not valid partial url.
     public var destinationAddress: Swift.String? = nil
 
     /// Initialize a new instance of `RegionAddressesMoveRequest`.

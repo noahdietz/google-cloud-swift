@@ -25,8 +25,7 @@
     /// The URL of the reservation for this IP address.
     public var address: Swift.String? = nil
 
-    /// An IPv4 internal network address to assign to the instance for this
-    /// network interface.
+    /// An IPv4 internal network address to assign to the instance for this network interface.
     public var literal: Swift.String? = nil
 
     /// Initialize a new instance of `PreservedStatePreservedNetworkIpIpAddress`.

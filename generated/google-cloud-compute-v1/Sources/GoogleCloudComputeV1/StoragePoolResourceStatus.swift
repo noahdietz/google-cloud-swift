@@ -28,52 +28,40 @@
     /// Output only. [Output Only] Maximum allowed read IOPS for this Exapool.
     public var exapoolMaxReadIops: Swift.Int64? = nil
 
-    /// Output only. [Output Only] Maximum allowed read throughput in MiB/s for
-    /// this Exapool.
+    /// Output only. [Output Only] Maximum allowed read throughput in MiB/s for this Exapool.
     public var exapoolMaxReadThroughput: Swift.Int64? = nil
 
     /// Output only. [Output Only] Maximum allowed write IOPS for this Exapool.
     public var exapoolMaxWriteIops: Swift.Int64? = nil
 
-    /// Output only. [Output Only] Maximum allowed write throughput in MiB/s
-    /// for this Exapool.
+    /// Output only. [Output Only] Maximum allowed write throughput in MiB/s for this Exapool.
     public var exapoolMaxWriteThroughput: Swift.Int64? = nil
 
-    /// Output only. [Output Only] Timestamp of the last successful resize inRFC3339 text format.
+    /// Output only. [Output Only] Timestamp of the last successful resize in RFC3339 text format.
     public var lastResizeTimestamp: Swift.String? = nil
 
     /// [Output Only] Maximum allowed aggregate disk size in GiB.
     public var maxTotalProvisionedDiskCapacityGb: Swift.Int64? = nil
 
-    /// [Output Only] Space used by data stored in disks within the storage pool
-    /// (in bytes). This will reflect the total number of bytes written to the
-    /// disks in the pool, in contrast to the capacity of those disks.
+    /// [Output Only] Space used by data stored in disks within the storage pool (in bytes). This will reflect the total number of bytes written to the disks in the pool, in contrast to the capacity of those disks.
     public var poolUsedCapacityBytes: Swift.Int64? = nil
 
-    /// [Output Only] Sum of all the disks' provisioned IOPS, minus some amount
-    /// that is allowed per disk that is not counted towards pool's IOPS
-    /// capacity. For more information, see
-    /// https://cloud.google.com/compute/docs/disks/storage-pools.
+    /// [Output Only] Sum of all the disks' provisioned IOPS, minus some amount that is allowed per disk that is not counted towards pool's IOPS capacity. For more information, see https://cloud.google.com/compute/docs/disks/storage-pools.
     public var poolUsedIops: Swift.Int64? = nil
 
     /// [Output Only] Sum of all the disks' provisioned throughput in MiB/s.
     public var poolUsedThroughput: Swift.Int64? = nil
 
-    /// [Output Only] Amount of data written into the pool, before it is
-    /// compacted.
+    /// [Output Only] Amount of data written into the pool, before it is compacted.
     public var poolUserWrittenBytes: Swift.Int64? = nil
 
-    /// [Output Only] Sum of all the disks' provisioned capacity (in GiB) in
-    /// this storage pool. A disk's provisioned capacity is the same as its total
-    /// capacity.
+    /// [Output Only] Sum of all the disks' provisioned capacity (in GiB) in this storage pool. A disk's provisioned capacity is the same as its total capacity.
     public var totalProvisionedDiskCapacityGb: Swift.Int64? = nil
 
     /// [Output Only] Sum of all the disks' provisioned IOPS.
     public var totalProvisionedDiskIops: Swift.Int64? = nil
 
-    /// [Output Only] Sum of all the disks' provisioned throughput in MiB/s,
-    /// minus some amount that is allowed per disk that is not counted towards
-    /// pool's throughput capacity.
+    /// [Output Only] Sum of all the disks' provisioned throughput in MiB/s, minus some amount that is allowed per disk that is not counted towards pool's throughput capacity.
     public var totalProvisionedDiskThroughput: Swift.Int64? = nil
 
     /// Initialize a new instance of `StoragePoolResourceStatus`.

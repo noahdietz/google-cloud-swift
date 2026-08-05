@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The information about the HTTP Cookie on which the hash function is based
-  /// for load balancing policies that use a consistent hash.
+  /// The information about the HTTP Cookie on which the hash function is based for load balancing policies that use a consistent hash.
   public struct ConsistentHashLoadBalancerSettingsHttpCookie: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

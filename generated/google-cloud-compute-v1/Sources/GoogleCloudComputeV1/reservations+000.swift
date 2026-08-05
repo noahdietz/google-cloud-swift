@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of reservations.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of reservations. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "reservations_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of reservations.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of reservations. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "reservations_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "reservations_getIamPolicy")
     public func getIamPolicy(
@@ -141,8 +134,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a new reservation. For more information, readReserving zonal
-    /// resources.
+    /// Creates a new reservation. For more information, read Reserving zonal resources.
     ///
     /// @Snippet(path: "reservations_insert")
     public func insert(
@@ -151,8 +143,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new reservation. For more information, readReserving zonal
-    /// resources.
+    /// Creates a new reservation. For more information, read Reserving zonal resources.
     ///
     /// @Snippet(path: "reservations_insert")
     public func insert(
@@ -193,8 +184,7 @@
       )
     }
 
-    /// A list of all the reservations that have been configured for the
-    /// specified project in specified zone.
+    /// A list of all the reservations that have been configured for the specified project in specified zone.
     ///
     /// @Snippet(path: "reservations_list")
     public func list(
@@ -203,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// A list of all the reservations that have been configured for the
-    /// specified project in specified zone.
+    /// A list of all the reservations that have been configured for the specified project in specified zone.
     ///
     /// @Snippet(path: "reservations_list")
     public func list(
@@ -269,9 +258,7 @@
       )
     }
 
-    /// Resizes the reservation (applicable to standalone reservations only). For
-    /// more information, readModifying
-    /// reservations.
+    /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
     ///
     /// @Snippet(path: "reservations_resize")
     public func resize(
@@ -280,9 +267,7 @@
       try await self.inner.resize(request: request, options: options)
     }
 
-    /// Resizes the reservation (applicable to standalone reservations only). For
-    /// more information, readModifying
-    /// reservations.
+    /// Resizes the reservation (applicable to standalone reservations only). For more information, read Modifying reservations.
     ///
     /// @Snippet(path: "reservations_resize")
     public func resize(
@@ -323,8 +308,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "reservations_setIamPolicy")
     public func setIamPolicy(

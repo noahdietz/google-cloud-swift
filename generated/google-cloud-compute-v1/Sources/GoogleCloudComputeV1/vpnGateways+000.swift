@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of VPN gateways.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of VPN gateways. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "vpnGateways_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of VPN gateways.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of VPN gateways. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "vpnGateways_aggregatedList")
     public func aggregatedList(
@@ -140,8 +134,7 @@
       try await self.inner.getStatus(request: request, options: options)
     }
 
-    /// Creates a VPN gateway in the specified project and region using
-    /// the data included in the request.
+    /// Creates a VPN gateway in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "vpnGateways_insert")
     public func insert(
@@ -150,8 +143,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a VPN gateway in the specified project and region using
-    /// the data included in the request.
+    /// Creates a VPN gateway in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "vpnGateways_insert")
     public func insert(
@@ -192,8 +184,7 @@
       )
     }
 
-    /// Retrieves a list of VPN gateways available to the specified
-    /// project and region.
+    /// Retrieves a list of VPN gateways available to the specified project and region.
     ///
     /// @Snippet(path: "vpnGateways_list")
     public func list(
@@ -202,8 +193,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of VPN gateways available to the specified
-    /// project and region.
+    /// Retrieves a list of VPN gateways available to the specified project and region.
     ///
     /// @Snippet(path: "vpnGateways_list")
     public func list(
@@ -217,8 +207,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the labels on a VpnGateway. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a VpnGateway. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "vpnGateways_setLabels")
     public func setLabels(
@@ -227,8 +216,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a VpnGateway. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a VpnGateway. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "vpnGateways_setLabels")
     public func setLabels(

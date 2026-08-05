@@ -21,8 +21,7 @@
   public struct TestPermissionsRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The set of permissions to check for the 'resource'. Permissions with
-    /// wildcards (such as '*' or 'storage.*') are not allowed.
+    /// The set of permissions to check for the 'resource'. Permissions with wildcards (such as '*' or 'storage.*') are not allowed.
     public var permissions: [Swift.String] = []
 
     /// Initialize a new instance of `TestPermissionsRequest`.

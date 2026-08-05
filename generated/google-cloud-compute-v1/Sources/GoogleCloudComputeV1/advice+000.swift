@@ -38,10 +38,7 @@
       self.inner = inner
     }
 
-    /// Advise how, where and when to create the requested amount of instances
-    /// with specified accelerators, within the specified time and location limits.
-    /// The method recommends creating future reservations for the requested
-    /// resources.
+    /// Advise how, where and when to create the requested amount of instances with specified accelerators, within the specified time and location limits. The method recommends creating future reservations for the requested resources.
     ///
     /// @Snippet(path: "advice_calendarMode")
     public func calendarMode(

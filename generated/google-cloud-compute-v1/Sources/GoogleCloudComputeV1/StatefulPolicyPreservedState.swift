@@ -22,19 +22,13 @@
   public struct StatefulPolicyPreservedState: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Disks created on the instances that will be preserved on instance
-    /// delete, update, etc. This map is keyed with the device names of
-    /// the disks.
+    /// Disks created on the instances that will be preserved on instance delete, update, etc. This map is keyed with the device names of the disks.
     public var disks: [Swift.String: StatefulPolicyPreservedStateDiskDevice] = [:]
 
-    /// External network IPs assigned to the instances that will be preserved on
-    /// instance delete, update, etc. This map is keyed with the network
-    /// interface name.
+    /// External network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
     public var externalIps: [Swift.String: StatefulPolicyPreservedStateNetworkIp] = [:]
 
-    /// Internal network IPs assigned to the instances that will be preserved on
-    /// instance delete, update, etc. This map is keyed with the network
-    /// interface name.
+    /// Internal network IPs assigned to the instances that will be preserved on instance delete, update, etc. This map is keyed with the network interface name.
     public var internalIps: [Swift.String: StatefulPolicyPreservedStateNetworkIp] = [:]
 
     /// Initialize a new instance of `StatefulPolicyPreservedState`.

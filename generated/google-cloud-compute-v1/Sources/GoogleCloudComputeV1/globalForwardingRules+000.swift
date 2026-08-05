@@ -92,8 +92,7 @@
       )
     }
 
-    /// Returns the specified GlobalForwardingRule resource. Gets a list of
-    /// available forwarding rules by making a list() request.
+    /// Returns the specified GlobalForwardingRule resource. Gets a list of available forwarding rules by making a list() request.
     ///
     /// @Snippet(path: "globalForwardingRules_get")
     public func `get`(
@@ -102,8 +101,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a GlobalForwardingRule resource in the specified project using
-    /// the data included in the request.
+    /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "globalForwardingRules_insert")
     public func insert(
@@ -112,8 +110,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a GlobalForwardingRule resource in the specified project using
-    /// the data included in the request.
+    /// Creates a GlobalForwardingRule resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "globalForwardingRules_insert")
     public func insert(
@@ -153,8 +150,7 @@
       )
     }
 
-    /// Retrieves a list of GlobalForwardingRule resources available to the
-    /// specified project.
+    /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
     ///
     /// @Snippet(path: "globalForwardingRules_list")
     public func list(
@@ -163,8 +159,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of GlobalForwardingRule resources available to the
-    /// specified project.
+    /// Retrieves a list of GlobalForwardingRule resources available to the specified project.
     ///
     /// @Snippet(path: "globalForwardingRules_list")
     public func list(
@@ -179,11 +174,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified forwarding rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules. Currently, you can only
-    /// patch the network_tier field.
+    /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
     ///
     /// @Snippet(path: "globalForwardingRules_patch")
     public func patch(
@@ -192,11 +183,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified forwarding rule with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules. Currently, you can only
-    /// patch the network_tier field.
+    /// Updates the specified forwarding rule with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. Currently, you can only patch the network_tier field.
     ///
     /// @Snippet(path: "globalForwardingRules_patch")
     public func patch(
@@ -236,9 +223,7 @@
       )
     }
 
-    /// Sets the labels on the specified resource. To learn more about labels,
-    /// read the
-    /// Labeling resources documentation.
+    /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
     ///
     /// @Snippet(path: "globalForwardingRules_setLabels")
     public func setLabels(
@@ -247,9 +232,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on the specified resource. To learn more about labels,
-    /// read the
-    /// Labeling resources documentation.
+    /// Sets the labels on the specified resource. To learn more about labels, read the Labeling resources documentation.
     ///
     /// @Snippet(path: "globalForwardingRules_setLabels")
     public func setLabels(
@@ -290,8 +273,7 @@
       )
     }
 
-    /// Changes target URL for the GlobalForwardingRule resource. The new target
-    /// should be of the same type as the old target.
+    /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
     ///
     /// @Snippet(path: "globalForwardingRules_setTarget")
     public func setTarget(
@@ -300,8 +282,7 @@
       try await self.inner.setTarget(request: request, options: options)
     }
 
-    /// Changes target URL for the GlobalForwardingRule resource. The new target
-    /// should be of the same type as the old target.
+    /// Changes target URL for the GlobalForwardingRule resource. The new target should be of the same type as the old target.
     ///
     /// @Snippet(path: "globalForwardingRules_setTarget")
     public func setTarget(

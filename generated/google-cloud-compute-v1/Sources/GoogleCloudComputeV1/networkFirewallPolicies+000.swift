@@ -195,12 +195,7 @@
       )
     }
 
-    /// Retrieves an aggregated list of network firewall policies, listing network
-    /// firewall policies from all applicable scopes (global and regional) and
-    /// grouping the results per scope.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkFirewallPolicies_aggregatedList")
     public func aggregatedList(
@@ -210,12 +205,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of network firewall policies, listing network
-    /// firewall policies from all applicable scopes (global and regional) and
-    /// grouping the results per scope.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of network firewall policies, listing network firewall policies from all applicable scopes (global and regional) and grouping the results per scope. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkFirewallPolicies_aggregatedList")
     public func aggregatedList(
@@ -352,8 +342,7 @@
       try await self.inner.getAssociation(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "networkFirewallPolicies_getIamPolicy")
     public func getIamPolicy(
@@ -382,8 +371,7 @@
       try await self.inner.getRule(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networkFirewallPolicies_insert")
     public func insert(
@@ -392,8 +380,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networkFirewallPolicies_insert")
     public func insert(
@@ -763,8 +750,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "networkFirewallPolicies_setIamPolicy")
     public func setIamPolicy(

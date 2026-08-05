@@ -22,8 +22,7 @@
   public struct VmExtensionPolicyExtensionPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. The specific version of the extension to install. If not set, the latest
-    /// version is used.
+    /// Optional. The specific version of the extension to install. If not set, the latest version is used.
     public var pinnedVersion: Swift.String? = nil
 
     /// Optional. String-based configuration data for the extension.

@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Initial State for shielded instance,
-  /// these are public keys which are safe to store in public
+  /// Initial State for shielded instance, these are public keys which are safe to store in public
   public struct InitialStateConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

@@ -25,9 +25,7 @@
     /// The label key-value pairs that you want to patch onto the instance.
     public var labels: [Swift.String: Swift.String] = [:]
 
-    /// The metadata key-value pairs that you want to patch onto the instance. For
-    /// more information, see Project and
-    /// instance metadata.
+    /// The metadata key-value pairs that you want to patch onto the instance. For more information, see Project and instance metadata.
     public var metadata: [Swift.String: Swift.String] = [:]
 
     /// Initialize a new instance of `InstancePropertiesPatch`.

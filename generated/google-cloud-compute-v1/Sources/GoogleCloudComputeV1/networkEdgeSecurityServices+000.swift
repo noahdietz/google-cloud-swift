@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all NetworkEdgeSecurityService resources available to
-    /// the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all NetworkEdgeSecurityService resources available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkEdgeSecurityServices_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all NetworkEdgeSecurityService resources available to
-    /// the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all NetworkEdgeSecurityService resources available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkEdgeSecurityServices_aggregatedList")
     public func aggregatedList(
@@ -141,8 +133,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a new service in the specified project using the data included in
-    /// the request.
+    /// Creates a new service in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networkEdgeSecurityServices_insert")
     public func insert(
@@ -152,8 +143,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new service in the specified project using the data included in
-    /// the request.
+    /// Creates a new service in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networkEdgeSecurityServices_insert")
     public func insert(

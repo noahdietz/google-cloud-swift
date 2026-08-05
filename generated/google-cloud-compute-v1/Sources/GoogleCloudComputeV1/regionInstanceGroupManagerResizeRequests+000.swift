@@ -45,10 +45,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Cancels the specified resize request.
-    /// Cancelled resize request no longer waits for the resources to be
-    /// provisioned. Cancel is only possible for requests that are in accepted
-    /// state.
+    /// Cancels the specified resize request. Cancelled resize request no longer waits for the resources to be provisioned. Cancel is only possible for requests that are in accepted state.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_cancel")
     public func cancel(
@@ -58,10 +55,7 @@
       try await self.inner.cancel(request: request, options: options)
     }
 
-    /// Cancels the specified resize request.
-    /// Cancelled resize request no longer waits for the resources to be
-    /// provisioned. Cancel is only possible for requests that are in accepted
-    /// state.
+    /// Cancels the specified resize request. Cancelled resize request no longer waits for the resources to be provisioned. Cancel is only possible for requests that are in accepted state.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_cancel")
     public func cancel(
@@ -103,9 +97,7 @@
       )
     }
 
-    /// Deletes the specified, inactive resize request. Requests that are still
-    /// active cannot be deleted. Deleting request does not delete instances that
-    /// were provisioned previously.
+    /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_delete")
     public func delete(
@@ -115,9 +107,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified, inactive resize request. Requests that are still
-    /// active cannot be deleted. Deleting request does not delete instances that
-    /// were provisioned previously.
+    /// Deletes the specified, inactive resize request. Requests that are still active cannot be deleted. Deleting request does not delete instances that were provisioned previously.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_delete")
     public func delete(
@@ -169,8 +159,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a new Resize Request that starts provisioning VMs immediately
-    /// or queues VM creation.
+    /// Creates a new Resize Request that starts provisioning VMs immediately or queues VM creation.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_insert")
     public func insert(
@@ -180,8 +169,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new Resize Request that starts provisioning VMs immediately
-    /// or queues VM creation.
+    /// Creates a new Resize Request that starts provisioning VMs immediately or queues VM creation.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_insert")
     public func insert(
@@ -223,8 +211,7 @@
       )
     }
 
-    /// Retrieves a list of Resize Requests that are contained in the
-    /// managed instance group.
+    /// Retrieves a list of Resize Requests that are contained in the managed instance group.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_list")
     public func list(
@@ -234,8 +221,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of Resize Requests that are contained in the
-    /// managed instance group.
+    /// Retrieves a list of Resize Requests that are contained in the managed instance group.
     ///
     /// @Snippet(path: "regionInstanceGroupManagerResizeRequests_list")
     public func list(

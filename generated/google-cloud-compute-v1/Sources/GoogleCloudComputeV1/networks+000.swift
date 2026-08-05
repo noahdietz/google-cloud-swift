@@ -91,9 +91,7 @@
       )
     }
 
-    /// Cancel requests to remove a peering from the specified network. Applicable
-    /// only for PeeringConnection with update_strategy=CONSENSUS.  Cancels a
-    /// request to remove a peering from the specified network.
+    /// Cancel requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS. Cancels a request to remove a peering from the specified network.
     ///
     /// @Snippet(path: "networks_cancelRequestRemovePeering")
     public func cancelRequestRemovePeering(
@@ -103,9 +101,7 @@
       try await self.inner.cancelRequestRemovePeering(request: request, options: options)
     }
 
-    /// Cancel requests to remove a peering from the specified network. Applicable
-    /// only for PeeringConnection with update_strategy=CONSENSUS.  Cancels a
-    /// request to remove a peering from the specified network.
+    /// Cancel requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS. Cancels a request to remove a peering from the specified network.
     ///
     /// @Snippet(path: "networks_cancelRequestRemovePeering")
     public func cancelRequestRemovePeering(
@@ -213,8 +209,7 @@
       try await self.inner.getEffectiveFirewalls(request: request, options: options)
     }
 
-    /// Creates a network in the specified project using the data included
-    /// in the request.
+    /// Creates a network in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networks_insert")
     public func insert(
@@ -223,8 +218,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a network in the specified project using the data included
-    /// in the request.
+    /// Creates a network in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "networks_insert")
     public func insert(
@@ -311,8 +305,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified network with the data included in the request.
-    /// Only routingConfig can be modified.
+    /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
     ///
     /// @Snippet(path: "networks_patch")
     public func patch(
@@ -321,8 +314,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified network with the data included in the request.
-    /// Only routingConfig can be modified.
+    /// Patches the specified network with the data included in the request. Only routingConfig can be modified.
     ///
     /// @Snippet(path: "networks_patch")
     public func patch(
@@ -411,8 +403,7 @@
       )
     }
 
-    /// Requests to remove a peering from the specified network. Applicable only
-    /// for PeeringConnection with update_strategy=CONSENSUS.
+    /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
     ///
     /// @Snippet(path: "networks_requestRemovePeering")
     public func requestRemovePeering(
@@ -421,8 +412,7 @@
       try await self.inner.requestRemovePeering(request: request, options: options)
     }
 
-    /// Requests to remove a peering from the specified network. Applicable only
-    /// for PeeringConnection with update_strategy=CONSENSUS.
+    /// Requests to remove a peering from the specified network. Applicable only for PeeringConnection with update_strategy=CONSENSUS.
     ///
     /// @Snippet(path: "networks_requestRemovePeering")
     public func requestRemovePeering(
@@ -512,9 +502,7 @@
       )
     }
 
-    /// Updates the specified network peering with the data included in the
-    /// request. You can only modify the NetworkPeering.export_custom_routes field
-    /// and the NetworkPeering.import_custom_routes field.
+    /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
     ///
     /// @Snippet(path: "networks_updatePeering")
     public func updatePeering(
@@ -523,9 +511,7 @@
       try await self.inner.updatePeering(request: request, options: options)
     }
 
-    /// Updates the specified network peering with the data included in the
-    /// request. You can only modify the NetworkPeering.export_custom_routes field
-    /// and the NetworkPeering.import_custom_routes field.
+    /// Updates the specified network peering with the data included in the request. You can only modify the NetworkPeering.export_custom_routes field and the NetworkPeering.import_custom_routes field.
     ///
     /// @Snippet(path: "networks_updatePeering")
     public func updatePeering(

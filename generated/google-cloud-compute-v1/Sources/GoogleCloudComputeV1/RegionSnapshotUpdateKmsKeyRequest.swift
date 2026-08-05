@@ -21,14 +21,7 @@
   public struct RegionSnapshotUpdateKmsKeyRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. The new KMS key to replace the current one on the snapshot. If empty, the
-    /// snapshot will be re-encrypted using the primary version of the snapshot's
-    /// current KMS key.
-    ///
-    /// The KMS key can be provided in the following formats:
-    ///
-    ///
-    ///      - projects/project_id/locations/region/keyRings/region/cryptoKeys/key
+    /// Optional. The new KMS key to replace the current one on the snapshot. If empty, the snapshot will be re-encrypted using the primary version of the snapshot's current KMS key. The KMS key can be provided in the following formats: - projects/project_id/locations/region/keyRings/region/cryptoKeys/key
     public var kmsKeyName: Swift.String? = nil
 
     /// Initialize a new instance of `RegionSnapshotUpdateKmsKeyRequest`.

@@ -18,21 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represent a sole-tenant Node Type resource.
-  ///
-  /// Each node within a node group must have a node type. A node type specifies
-  /// the total amount of cores and memory for that node. Currently, the only
-  /// available node type is n1-node-96-624 node type that has 96
-  /// vCPUs and 624 GB of memory, available in multiple zones. For more information
-  /// readNode types.
+  /// Represent a sole-tenant Node Type resource. Each node within a node group must have a node type. A node type specifies the total amount of cores and memory for that node. Currently, the only available node type is n1-node-96-624 node type that has 96 vCPUs and 624 GB of memory, available in multiple zones. For more information read Node types.
   public struct NodeType: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// [Output Only] The CPU platform used by this node type.
     public var cpuPlatform: Swift.String? = nil
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// [Output Only] The deprecation status associated with this node type.
@@ -41,15 +34,13 @@
     /// [Output Only] An optional textual description of the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The number of virtual CPUs that are available to the node
-    /// type.
+    /// [Output Only] The number of virtual CPUs that are available to the node type.
     public var guestCpus: Swift.Int32? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] The type of the resource. Alwayscompute#nodeType for node types.
+    /// Output only. [Output Only] The type of the resource. Always compute#nodeType for node types.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Local SSD available to the node type, defined in GB.
@@ -58,8 +49,7 @@
     /// Output only. [Output Only] Maximum number of VMs that can be created for this node type.
     public var maxVms: Swift.Int32? = nil
 
-    /// [Output Only] The amount of physical memory available to the node type,
-    /// defined in MB.
+    /// [Output Only] The amount of physical memory available to the node type, defined in MB.
     public var memoryMb: Swift.Int32? = nil
 
     /// [Output Only] Name of the resource.
@@ -68,8 +58,7 @@
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] The name of the zone where the node type resides,
-    /// such as us-central1-a.
+    /// Output only. [Output Only] The name of the zone where the node type resides, such as us-central1-a.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `NodeType`.

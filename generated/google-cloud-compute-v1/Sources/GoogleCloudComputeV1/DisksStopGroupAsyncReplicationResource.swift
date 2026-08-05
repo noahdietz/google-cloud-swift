@@ -18,25 +18,12 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A transient resource used in compute.disks.stopGroupAsyncReplication and
-  /// compute.regionDisks.stopGroupAsyncReplication. It is only used to process
-  /// requests and is not persisted.
+  /// A transient resource used in compute.disks.stopGroupAsyncReplication and compute.regionDisks.stopGroupAsyncReplication. It is only used to process requests and is not persisted.
   public struct DisksStopGroupAsyncReplicationResource: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// The URL of the DiskConsistencyGroupPolicy for the group of disks to stop.
-    /// This may be a full or partial URL, such as:
-    ///
-    ///
-    ///      -
-    ///        https://www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///
-    ///      -
-    ///        projects/project/regions/region/resourcePolicies/resourcePolicy
-    ///
-    ///      -
-    ///        regions/region/resourcePolicies/resourcePolicy
+    /// The URL of the DiskConsistencyGroupPolicy for the group of disks to stop. This may be a full or partial URL, such as: - https://www.googleapis.com/compute/v1/projects/project/regions/region /resourcePolicies/resourcePolicy - projects/project/regions/region/resourcePolicies/resourcePolicy - regions/region/resourcePolicies/resourcePolicy
     public var resourcePolicy: Swift.String? = nil
 
     /// Initialize a new instance of `DisksStopGroupAsyncReplicationResource`.

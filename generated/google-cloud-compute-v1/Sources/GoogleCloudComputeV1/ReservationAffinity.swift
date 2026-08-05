@@ -22,19 +22,13 @@
   public struct ReservationAffinity: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies the type of reservation from which this instance can consume
-    /// resources: ANY_RESERVATION (default),SPECIFIC_RESERVATION, or NO_RESERVATION. See
-    /// Consuming reserved instances for examples.
+    /// Specifies the type of reservation from which this instance can consume resources: ANY_RESERVATION (default), SPECIFIC_RESERVATION, or NO_RESERVATION. See Consuming reserved instances for examples.
     public var consumeReservationType: ReservationAffinity.ConsumeReservationType? = nil
 
-    /// Corresponds to the label key of a reservation resource. To target aSPECIFIC_RESERVATION by name, specifygoogleapis.com/reservation-name as the key and specify
-    /// the name of your reservation as its value.
+    /// Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify googleapis.com/reservation-name as the key and specify the name of your reservation as its value.
     public var key: Swift.String? = nil
 
-    /// Corresponds to the label values of a reservation resource. This can be
-    /// either a name to a reservation in the same project or
-    /// "projects/different-project/reservations/some-reservation-name" to target a
-    /// shared reservation in the same zone but in a different project.
+    /// Corresponds to the label values of a reservation resource. This can be either a name to a reservation in the same project or "projects/different-project/reservations/some-reservation-name" to target a shared reservation in the same zone but in a different project.
     public var values: [Swift.String] = []
 
     /// Initialize a new instance of `ReservationAffinity`.
@@ -61,8 +55,7 @@
       case anyReservation
       /// Do not consume from any allocated capacity.
       case noReservation
-      /// Must consume from a specific reservation. Must specify key value fields
-      /// for specifying the reservations.
+      /// Must consume from a specific reservation. Must specify key value fields for specifying the reservations.
       case specificReservation
       case unspecified
       /// Encodes an unknown integer value.

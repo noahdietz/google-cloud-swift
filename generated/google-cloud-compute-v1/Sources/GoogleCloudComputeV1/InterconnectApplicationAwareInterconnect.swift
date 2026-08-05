@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration information for application awareness on this Cloud
-  /// Interconnect.
+  /// Configuration information for application awareness on this Cloud Interconnect.
   public struct InterconnectApplicationAwareInterconnect: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -27,13 +26,10 @@
     public var bandwidthPercentagePolicy:
       InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy? = nil
 
-    /// Description for the application awareness profile on this Cloud
-    /// Interconnect.
+    /// Description for the application awareness profile on this Cloud Interconnect.
     public var profileDescription: Swift.String? = nil
 
-    /// Optional field to specify a list of shape average percentages to be
-    /// applied in conjunction with StrictPriorityPolicy or
-    /// BandwidthPercentagePolicy.
+    /// Optional field to specify a list of shape average percentages to be applied in conjunction with StrictPriorityPolicy or BandwidthPercentagePolicy.
     public var shapeAveragePercentages:
       [InterconnectApplicationAwareInterconnectBandwidthPercentage] = []
 

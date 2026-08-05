@@ -91,11 +91,7 @@
       )
     }
 
-    /// Retrieves the list of all SecurityPolicy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "securityPolicies_aggregatedList")
     public func aggregatedList(
@@ -104,11 +100,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all SecurityPolicy resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SecurityPolicy resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "securityPolicies_aggregatedList")
     public func aggregatedList(
@@ -190,8 +182,7 @@
       try await self.inner.getRule(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "securityPolicies_insert")
     public func insert(
@@ -200,8 +191,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project using the data included in
-    /// the request.
+    /// Creates a new policy in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "securityPolicies_insert")
     public func insert(
@@ -265,8 +255,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Gets the current list of preconfigured Web Application Firewall (WAF)
-    /// expressions.
+    /// Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
     ///
     /// @Snippet(path: "securityPolicies_listPreconfiguredExpressionSets")
     public func listPreconfiguredExpressionSets(
@@ -276,11 +265,7 @@
       try await self.inner.listPreconfiguredExpressionSets(request: request, options: options)
     }
 
-    /// Patches the specified policy with the data included in the request. To
-    /// clear fields in the policy, leave the fields empty and specify them in the
-    /// updateMask. This cannot be used to be update the rules in the policy.
-    /// Please use the per rule methods like addRule, patchRule, and removeRule
-    /// instead.
+    /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
     ///
     /// @Snippet(path: "securityPolicies_patch")
     public func patch(
@@ -289,11 +274,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified policy with the data included in the request. To
-    /// clear fields in the policy, leave the fields empty and specify them in the
-    /// updateMask. This cannot be used to be update the rules in the policy.
-    /// Please use the per rule methods like addRule, patchRule, and removeRule
-    /// instead.
+    /// Patches the specified policy with the data included in the request. To clear fields in the policy, leave the fields empty and specify them in the updateMask. This cannot be used to be update the rules in the policy. Please use the per rule methods like addRule, patchRule, and removeRule instead.
     ///
     /// @Snippet(path: "securityPolicies_patch")
     public func patch(
@@ -333,8 +314,7 @@
       )
     }
 
-    /// Patches a rule at the specified priority. To clear fields in the rule,
-    /// leave the fields empty and specify them in the updateMask.
+    /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
     ///
     /// @Snippet(path: "securityPolicies_patchRule")
     public func patchRule(
@@ -343,8 +323,7 @@
       try await self.inner.patchRule(request: request, options: options)
     }
 
-    /// Patches a rule at the specified priority. To clear fields in the rule,
-    /// leave the fields empty and specify them in the updateMask.
+    /// Patches a rule at the specified priority. To clear fields in the rule, leave the fields empty and specify them in the updateMask.
     ///
     /// @Snippet(path: "securityPolicies_patchRule")
     public func patchRule(
@@ -433,9 +412,7 @@
       )
     }
 
-    /// Sets the labels on a security policy. To learn more about labels,
-    /// read the Labeling Resources
-    /// documentation.
+    /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "securityPolicies_setLabels")
     public func setLabels(
@@ -444,9 +421,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a security policy. To learn more about labels,
-    /// read the Labeling Resources
-    /// documentation.
+    /// Sets the labels on a security policy. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "securityPolicies_setLabels")
     public func setLabels(

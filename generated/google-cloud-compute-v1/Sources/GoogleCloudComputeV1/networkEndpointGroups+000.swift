@@ -43,10 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of network endpoint groups and sorts them by zone.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkEndpointGroups_aggregatedList")
     public func aggregatedList(
@@ -56,10 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of network endpoint groups and sorts them by zone.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of network endpoint groups and sorts them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "networkEndpointGroups_aggregatedList")
     public func aggregatedList(
@@ -128,10 +122,7 @@
       )
     }
 
-    /// Deletes the specified network endpoint group. The network endpoints in the
-    /// NEG and the VM instances they belong to are not terminated when the NEG is
-    /// deleted. Note that the NEG cannot be deleted if there are backend services
-    /// referencing it.
+    /// Deletes the specified network endpoint group. The network endpoints in the NEG and the VM instances they belong to are not terminated when the NEG is deleted. Note that the NEG cannot be deleted if there are backend services referencing it.
     ///
     /// @Snippet(path: "networkEndpointGroups_delete")
     public func delete(
@@ -140,10 +131,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified network endpoint group. The network endpoints in the
-    /// NEG and the VM instances they belong to are not terminated when the NEG is
-    /// deleted. Note that the NEG cannot be deleted if there are backend services
-    /// referencing it.
+    /// Deletes the specified network endpoint group. The network endpoints in the NEG and the VM instances they belong to are not terminated when the NEG is deleted. Note that the NEG cannot be deleted if there are backend services referencing it.
     ///
     /// @Snippet(path: "networkEndpointGroups_delete")
     public func delete(
@@ -184,8 +172,7 @@
       )
     }
 
-    /// Detach a list of network endpoints from the specified network endpoint
-    /// group.
+    /// Detach a list of network endpoints from the specified network endpoint group.
     ///
     /// @Snippet(path: "networkEndpointGroups_detachNetworkEndpoints")
     public func detachNetworkEndpoints(
@@ -195,8 +182,7 @@
       try await self.inner.detachNetworkEndpoints(request: request, options: options)
     }
 
-    /// Detach a list of network endpoints from the specified network endpoint
-    /// group.
+    /// Detach a list of network endpoints from the specified network endpoint group.
     ///
     /// @Snippet(path: "networkEndpointGroups_detachNetworkEndpoints")
     public func detachNetworkEndpoints(
@@ -247,22 +233,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a network endpoint group in the specified project using the
-    /// parameters that are included in the request.
-    ///
-    /// Note: Use the following APIs to manage network endpoint groups:
-    ///
-    ///    -
-    ///    To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
-    ///    NEGs): zonal
-    ///    API
-    ///    -
-    ///    To manage NEGs with regional scope (such as regional internet NEGs,
-    ///    serverless NEGs, Private Service Connect NEGs): regional
-    ///    API
-    ///    -
-    ///    To manage NEGs with global scope (such as global internet NEGs):global
-    ///    API
+    /// Creates a network endpoint group in the specified project using the parameters that are included in the request. Note: Use the following APIs to manage network endpoint groups: - To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity NEGs): zonal API - To manage NEGs with regional scope (such as regional internet NEGs, serverless NEGs, Private Service Connect NEGs): regional API - To manage NEGs with global scope (such as global internet NEGs): global API
     ///
     /// @Snippet(path: "networkEndpointGroups_insert")
     public func insert(
@@ -271,22 +242,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a network endpoint group in the specified project using the
-    /// parameters that are included in the request.
-    ///
-    /// Note: Use the following APIs to manage network endpoint groups:
-    ///
-    ///    -
-    ///    To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity
-    ///    NEGs): zonal
-    ///    API
-    ///    -
-    ///    To manage NEGs with regional scope (such as regional internet NEGs,
-    ///    serverless NEGs, Private Service Connect NEGs): regional
-    ///    API
-    ///    -
-    ///    To manage NEGs with global scope (such as global internet NEGs):global
-    ///    API
+    /// Creates a network endpoint group in the specified project using the parameters that are included in the request. Note: Use the following APIs to manage network endpoint groups: - To manage NEGs with zonal scope (such as zonal NEGs, hybrid connectivity NEGs): zonal API - To manage NEGs with regional scope (such as regional internet NEGs, serverless NEGs, Private Service Connect NEGs): regional API - To manage NEGs with global scope (such as global internet NEGs): global API
     ///
     /// @Snippet(path: "networkEndpointGroups_insert")
     public func insert(
@@ -327,8 +283,7 @@
       )
     }
 
-    /// Retrieves the list of network endpoint groups that are located in the
-    /// specified project and zone.
+    /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
     ///
     /// @Snippet(path: "networkEndpointGroups_list")
     public func list(
@@ -337,8 +292,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of network endpoint groups that are located in the
-    /// specified project and zone.
+    /// Retrieves the list of network endpoint groups that are located in the specified project and zone.
     ///
     /// @Snippet(path: "networkEndpointGroups_list")
     public func list(

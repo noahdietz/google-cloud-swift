@@ -18,9 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] How reliable this topology is configured to be, and why
-  /// this group does or does not meet the requirements for the intended
-  /// capability.
+  /// [Output Only] How reliable this topology is configured to be, and why this group does or does not meet the requirements for the intended capability.
   public struct InterconnectGroupConfiguredTopologyCapability: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

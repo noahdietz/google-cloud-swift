@@ -23,9 +23,14 @@
       ._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The full resource name of the reservation that this
-    /// instance is consuming from.
+    /// Output only. [Output Only] The full resource name of the reservation that this instance is consuming from.
     public var consumedReservation: Swift.String? = nil
+
+    /// Output only. [Output Only] The full resource name of the reservation block that this instance is consuming from.
+    public var consumedReservationBlock: Swift.String? = nil
+
+    /// Output only. [Output Only] The full resource name of the reservation sub-block that this instance is consuming from.
+    public var consumedReservationSubBlock: Swift.String? = nil
 
     /// Initialize a new instance of `ResourceStatusReservationConsumptionInfo`.
     public init() {}

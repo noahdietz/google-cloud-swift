@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Message containing what to include in the cache key for a request for
-  /// Cloud CDN.
+  /// Message containing what to include in the cache key for a request for Cloud CDN.
   public struct BackendBucketCdnPolicyCacheKeyPolicy: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
@@ -27,9 +26,7 @@
     /// Allows HTTP request headers (by name) to be used in the cache key.
     public var includeHttpHeaders: [Swift.String] = []
 
-    /// Names of query string parameters to include in cache keys. Default
-    /// parameters are always included. '&' and '=' will be percent encoded
-    /// and not treated as delimiters.
+    /// Names of query string parameters to include in cache keys. Default parameters are always included. '&' and '=' will be percent encoded and not treated as delimiters.
     public var queryStringWhitelist: [Swift.String] = []
 
     /// Initialize a new instance of `BackendBucketCdnPolicyCacheKeyPolicy`.

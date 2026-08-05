@@ -22,47 +22,17 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Optional. Specifies the behavior of the rollout if a conflict is detected in a
-    /// project during a rollout. This only applies to `insert` and `update`
-    /// methods.
-    ///
-    /// A conflict occurs in the following cases:
-    ///
-    /// * `insert` method: If the zonal policy already exists when the insert
-    ///   happens.
-    /// * `update` method: If the zonal policy was modified by a zonal API call
-    ///   outside of this rollout.
-    ///
-    /// Possible values are the following:
-    ///
-    /// * `""` (empty string): If a conflict occurs, the local value is not
-    ///   overwritten. This is the default behavior.
-    /// * `"overwrite"`: If a conflict occurs, the local value is overwritten
-    ///   with the rollout value.
+    /// Optional. Specifies the behavior of the rollout if a conflict is detected in a project during a rollout. This only applies to `insert` and `update` methods. A conflict occurs in the following cases: * `insert` method: If the zonal policy already exists when the insert happens. * `update` method: If the zonal policy was modified by a zonal API call outside of this rollout. Possible values are the following: * `""` (empty string): If a conflict occurs, the local value is not overwritten. This is the default behavior. * `"overwrite"`: If a conflict occurs, the local value is overwritten with the rollout value.
     public var conflictBehavior: Swift.String? = nil
 
-    /// Optional. The name of the rollout plan.
-    /// Ex.
-    /// projects//locations/global/rolloutPlans/.
+    /// Optional. The name of the rollout plan. Ex. projects//locations/global/rolloutPlans/.
     public var name: Swift.String? = nil
 
-    /// Optional. Specifies the predefined rollout plan for the policy. Valid values
-    /// are `SLOW_ROLLOUT` and `FAST_ROLLOUT`. The recommended value is
-    /// `SLOW_ROLLOUT` for progressive rollout. For more information, see Rollout
-    /// plans for global policies.
+    /// Optional. Specifies the predefined rollout plan for the policy. Valid values are `SLOW_ROLLOUT` and `FAST_ROLLOUT`. The recommended value is `SLOW_ROLLOUT` for progressive rollout. For more information, see Rollout plans for global policies.
     public var predefinedRolloutPlan:
       GlobalVmExtensionPolicyRolloutOperationRolloutInput.PredefinedRolloutPlan? = nil
 
-    /// Optional. The UUID that identifies a policy rollout retry attempt for update and
-    /// delete operations. Set this field only when retrying a rollout for an
-    /// existing extension policy.
-    ///
-    /// * `update` method: Lets you retry policy rollout without changes.
-    /// An error occurs if you set retry_uuid but the policy is modified.
-    /// * `delete` method: Lets you retry policy deletion rollout if the
-    /// previous deletion rollout is not finished and the policy is in the
-    /// DELETING state. If you set this field when the policy is not in the
-    /// DELETING state, an error occurs.
+    /// Optional. The UUID that identifies a policy rollout retry attempt for update and delete operations. Set this field only when retrying a rollout for an existing extension policy. * `update` method: Lets you retry policy rollout without changes. An error occurs if you set retry_uuid but the policy is modified. * `delete` method: Lets you retry policy deletion rollout if the previous deletion rollout is not finished and the policy is in the DELETING state. If you set this field when the policy is not in the DELETING state, an error occurs.
     public var retryUuid: Swift.String? = nil
 
     /// Initialize a new instance of `GlobalVmExtensionPolicyRolloutOperationRolloutInput`.

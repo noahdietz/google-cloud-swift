@@ -18,61 +18,32 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an Interconnect Attachment (VLAN) Location resource.
-  ///
-  /// You can use this resource to find location details about an Interconnect
-  /// attachment (VLAN). For more information about interconnect attachments, read
-  /// Creating VLAN Attachments.
+  /// Represents an Interconnect Attachment (VLAN) Location resource. You can use this resource to find location details about an Interconnect attachment (VLAN). For more information about interconnect attachments, read Creating VLAN Attachments.
   public struct InterconnectLocation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The postal address of the Point of Presence, each line in
-    /// the address is separated by a newline character.
+    /// Output only. [Output Only] The postal address of the Point of Presence, each line in the address is separated by a newline character.
     public var address: Swift.String? = nil
 
-    /// [Output Only] Availability zone for this InterconnectLocation. Within a
-    /// metropolitan area (metro), maintenance will not be simultaneously scheduled
-    /// in more than one availability zone.  Example: "zone1" or "zone2".
+    /// [Output Only] Availability zone for this InterconnectLocation. Within a metropolitan area (metro), maintenance will not be simultaneously scheduled in more than one availability zone. Example: "zone1" or "zone2".
     public var availabilityZone: Swift.String? = nil
 
-    /// [Output only] List of features available at this InterconnectLocation,
-    /// which can take one of the following values:
-    ///
-    ///    - IF_MACSEC
-    ///    - IF_CROSS_SITE_NETWORK
+    /// [Output only] List of features available at this InterconnectLocation, which can take one of the following values: - IF_MACSEC - IF_CROSS_SITE_NETWORK
     public var availableFeatures: [InterconnectLocation.AvailableFeatures] = []
 
-    /// [Output only] List of link types available at this InterconnectLocation,
-    /// which can take one of the following values:
-    ///
-    ///    - LINK_TYPE_ETHERNET_10G_LR
-    ///    - LINK_TYPE_ETHERNET_100G_LR
-    ///    - LINK_TYPE_ETHERNET_400G_LR4
+    /// [Output only] List of link types available at this InterconnectLocation, which can take one of the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR - LINK_TYPE_ETHERNET_400G_LR4
     public var availableLinkTypes: [InterconnectLocation.AvailableLinkTypes] = []
 
-    /// [Output Only] Metropolitan area designator that indicates which city an
-    /// interconnect is located.
-    /// For example: "Chicago, IL", "Amsterdam, Netherlands".
+    /// [Output Only] Metropolitan area designator that indicates which city an interconnect is located. For example: "Chicago, IL", "Amsterdam, Netherlands".
     public var city: Swift.String? = nil
 
-    /// [Output Only] Continent for this location, which can take one of the
-    /// following values:
-    ///
-    ///    - AFRICA
-    ///    - ASIA_PAC
-    ///    - EUROPE
-    ///    - NORTH_AMERICA
-    ///    - SOUTH_AMERICA
+    /// [Output Only] Continent for this location, which can take one of the following values: - AFRICA - ASIA_PAC - EUROPE - NORTH_AMERICA - SOUTH_AMERICA
     public var continent: InterconnectLocation.Continent? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo
-    /// objects, that describe where Cross-Site Interconnect wires may connect to
-    /// from this location and associated connection parameters. Cross-Site
-    /// Interconnect isn't allowed to locations which are not listed.
+    /// [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe where Cross-Site Interconnect wires may connect to from this location and associated connection parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
     public var crossSiteInterconnectInfos: [InterconnectLocationCrossSiteInterconnectInfo] = []
 
     /// Output only. [Output Only] An optional description of the resource.
@@ -81,44 +52,31 @@
     /// Output only. [Output Only] The name of the provider for this facility (e.g., EQUINIX).
     public var facilityProvider: Swift.String? = nil
 
-    /// Output only. [Output Only] A provider-assigned Identifier for this facility (e.g.,
-    /// Ashburn-DC1).
+    /// Output only. [Output Only] A provider-assigned Identifier for this facility (e.g., Ashburn-DC1).
     public var facilityProviderFacilityId: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#interconnectLocation for interconnect locations.
+    /// Output only. [Output Only] Type of the resource. Always compute#interconnectLocation for interconnect locations.
     public var kind: Swift.String? = nil
 
     /// Output only. [Output Only] Name of the resource.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] The peeringdb identifier for this facility (corresponding
-    /// with a netfac type in peeringdb).
+    /// Output only. [Output Only] The peeringdb identifier for this facility (corresponding with a netfac type in peeringdb).
     public var peeringdbFacilityId: Swift.String? = nil
 
-    /// Output only. [Output Only] A list of InterconnectLocation.RegionInfo objects, that
-    /// describe parameters pertaining to the relation between this
-    /// InterconnectLocation and various Google Cloud regions.
+    /// Output only. [Output Only] A list of InterconnectLocation.RegionInfo objects, that describe parameters pertaining to the relation between this InterconnectLocation and various Google Cloud regions.
     public var regionInfos: [InterconnectLocationRegionInfo] = []
 
     /// Output only. [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] URLs of the other locations that can pair up with this
-    /// location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and
-    /// iad-zone2-5467 are Single-Region 99.99% peer locations of each other.
+    /// Output only. [Output Only] URLs of the other locations that can pair up with this location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-zone2-5467 are Single-Region 99.99% peer locations of each other.
     public var singleRegionProductionCriticalPeerLocations: [Swift.String] = []
 
-    /// [Output Only] The status of this InterconnectLocation, which can take one
-    /// of the following values:
-    ///
-    ///    - CLOSED: The InterconnectLocation is closed and is unavailable for
-    ///    provisioning new Interconnects.
-    ///    - AVAILABLE: The InterconnectLocation is available for provisioning new
-    ///    Interconnects.
+    /// [Output Only] The status of this InterconnectLocation, which can take one of the following values: - CLOSED: The InterconnectLocation is closed and is unavailable for provisioning new Interconnects. - AVAILABLE: The InterconnectLocation is available for provisioning new Interconnects.
     public var status: InterconnectLocation.Status? = nil
 
     /// Output only. [Output Only] Reserved for future use.
@@ -253,8 +211,7 @@
     public enum AvailableLinkTypes: Codable, Equatable, Sendable {
       /// 100G Ethernet, LR Optics.
       case linkTypeEthernet100GLr
-      /// 10G Ethernet, LR Optics.
-      /// [(rate_bps) =  10000000000];
+      /// 10G Ethernet, LR Optics. [(rate_bps) = 10000000000];
       case linkTypeEthernet10GLr
       /// 400G Ethernet, LR4 Optics.
       case linkTypeEthernet400GLr4

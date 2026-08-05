@@ -18,11 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specifies options for controlling advanced machine features.
-  /// Options that would traditionally be configured in a BIOS belong
-  /// here. Features that require operating system support may have
-  /// corresponding entries in the GuestOsFeatures of anImage (e.g., whether or not the OS in theImage supports nested virtualization being enabled or
-  /// disabled).
+  /// Specifies options for controlling advanced machine features. Options that would traditionally be configured in a BIOS belong here. Features that require operating system support may have corresponding entries in the GuestOsFeatures of an Image (e.g., whether or not the OS in the Image supports nested virtualization being enabled or disabled).
   public struct AdvancedMachineFeatures: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -35,25 +31,13 @@
     /// Type of Performance Monitoring Unit requested on instance.
     public var performanceMonitoringUnit: AdvancedMachineFeatures.PerformanceMonitoringUnit? = nil
 
-    /// The number of threads per physical core. To disable simultaneous
-    /// multithreading (SMT) set this to 1. If unset, the maximum number
-    /// of threads supported per core by the underlying processor is
-    /// assumed.
+    /// The number of threads per physical core. To disable simultaneous multithreading (SMT) set this to 1. If unset, the maximum number of threads supported per core by the underlying processor is assumed.
     public var threadsPerCore: Swift.Int32? = nil
 
-    /// Turbo frequency mode to use for the instance.
-    /// Supported modes include:
-    /// * ALL_CORE_MAX
-    ///
-    /// Using empty string or not setting this field will use the platform-specific
-    /// default turbo mode.
+    /// Turbo frequency mode to use for the instance. Supported modes include: * ALL_CORE_MAX Using empty string or not setting this field will use the platform-specific default turbo mode.
     public var turboMode: Swift.String? = nil
 
-    /// The number of physical cores to expose to an instance. Multiply by
-    /// the number of threads per core to compute the total number of virtual
-    /// CPUs to expose to the instance. If unset, the number of cores is
-    /// inferred from the instance's nominal CPU count and the underlying
-    /// platform's SMT width.
+    /// The number of physical cores to expose to an instance. Multiply by the number of threads per core to compute the total number of virtual CPUs to expose to the instance. If unset, the number of cores is inferred from the instance's nominal CPU count and the underlying platform's SMT width.
     public var visibleCoreCount: Swift.Int32? = nil
 
     /// Initialize a new instance of `AdvancedMachineFeatures`.

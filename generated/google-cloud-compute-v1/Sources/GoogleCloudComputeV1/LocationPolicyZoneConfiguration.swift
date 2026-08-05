@@ -21,10 +21,7 @@
   public struct LocationPolicyZoneConfiguration: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The URL of the zone.
-    /// The zone must exist in the region where the request is called.
-    /// Zones must be represented as valid partial URLs,
-    /// such as zones/us-central1-a.
+    /// The URL of the zone. The zone must exist in the region where the request is called. Zones must be represented as valid partial URLs, such as zones/us-central1-a.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `LocationPolicyZoneConfiguration`.

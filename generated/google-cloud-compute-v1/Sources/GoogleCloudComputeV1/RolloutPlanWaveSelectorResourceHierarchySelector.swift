@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Roll out to resources by Cloud Resource Manager resource hierarchy
-  /// nodes such as projects, folders, orgs.
+  /// Roll out to resources by Cloud Resource Manager resource hierarchy nodes such as projects, folders, orgs.
   public struct RolloutPlanWaveSelectorResourceHierarchySelector: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

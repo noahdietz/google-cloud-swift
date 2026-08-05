@@ -25,18 +25,13 @@
     /// Output only. A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
     public var autoAllocatedNatIps: [Swift.String] = []
 
-    /// Output only. A list of IPs auto-allocated for NAT that are in drain mode.
-    /// Example: ["1.1.1.1", "179.12.26.133"].
+    /// Output only. A list of IPs auto-allocated for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
     public var drainAutoAllocatedNatIps: [Swift.String] = []
 
-    /// Output only. A list of IPs user-allocated for NAT that are in drain mode.
-    /// Example: ["1.1.1.1", "179.12.26.133"].
+    /// Output only. A list of IPs user-allocated for NAT that are in drain mode. Example: ["1.1.1.1", "179.12.26.133"].
     public var drainUserAllocatedNatIps: [Swift.String] = []
 
-    /// Output only. The number of extra IPs to allocate. This will be greater than 0 only if
-    /// user-specified IPs are NOT enough to allow all configured VMs to use NAT.
-    /// This value is meaningful only when auto-allocation of NAT IPs is *not*
-    /// used.
+    /// Output only. The number of extra IPs to allocate. This will be greater than 0 only if user-specified IPs are NOT enough to allow all configured VMs to use NAT. This value is meaningful only when auto-allocation of NAT IPs is *not* used.
     public var minExtraNatIpsNeeded: Swift.Int32? = nil
 
     /// Output only. Unique name of this NAT.
@@ -51,8 +46,7 @@
     /// Output only. A list of fully qualified URLs of reserved IP address resources.
     public var userAllocatedNatIpResources: [Swift.String] = []
 
-    /// Output only. A list of IPs user-allocated for NAT.
-    /// They will be raw IP strings like "179.12.26.133".
+    /// Output only. A list of IPs user-allocated for NAT. They will be raw IP strings like "179.12.26.133".
     public var userAllocatedNatIps: [Swift.String] = []
 
     /// Initialize a new instance of `RouterStatusNatStatus`.

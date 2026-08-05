@@ -47,8 +47,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves a list of network profiles available to the specified
-    /// project.
+    /// Retrieves a list of network profiles available to the specified project.
     ///
     /// @Snippet(path: "networkProfiles_list")
     public func list(
@@ -57,8 +56,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of network profiles available to the specified
-    /// project.
+    /// Retrieves a list of network profiles available to the specified project.
     ///
     /// @Snippet(path: "networkProfiles_list")
     public func list(

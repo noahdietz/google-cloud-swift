@@ -92,8 +92,7 @@
       )
     }
 
-    /// Returns the specified externalVpnGateway. Get a list of available
-    /// externalVpnGateways by making a list() request.
+    /// Returns the specified externalVpnGateway. Get a list of available externalVpnGateways by making a list() request.
     ///
     /// @Snippet(path: "externalVpnGateways_get")
     public func `get`(
@@ -102,8 +101,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a ExternalVpnGateway in the specified project using
-    /// the data included in the request.
+    /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "externalVpnGateways_insert")
     public func insert(
@@ -112,8 +110,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a ExternalVpnGateway in the specified project using
-    /// the data included in the request.
+    /// Creates a ExternalVpnGateway in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "externalVpnGateways_insert")
     public func insert(
@@ -153,8 +150,7 @@
       )
     }
 
-    /// Retrieves the list of ExternalVpnGateway available to the specified
-    /// project.
+    /// Retrieves the list of ExternalVpnGateway available to the specified project.
     ///
     /// @Snippet(path: "externalVpnGateways_list")
     public func list(
@@ -163,8 +159,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of ExternalVpnGateway available to the specified
-    /// project.
+    /// Retrieves the list of ExternalVpnGateway available to the specified project.
     ///
     /// @Snippet(path: "externalVpnGateways_list")
     public func list(
@@ -179,9 +174,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
-    /// read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "externalVpnGateways_setLabels")
     public func setLabels(
@@ -190,9 +183,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on an ExternalVpnGateway. To learn more about labels,
-    /// read the Labeling
-    /// Resources documentation.
+    /// Sets the labels on an ExternalVpnGateway. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "externalVpnGateways_setLabels")
     public func setLabels(

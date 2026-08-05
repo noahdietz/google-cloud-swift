@@ -42,14 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Deletes the specified Snapshot resource. Keep in mind that deleting
-    /// a single snapshot might not necessarily delete all the data on that
-    /// snapshot. If any data on the snapshot that is marked for deletion is
-    /// needed for subsequent snapshots, the data will be moved to the next
-    /// corresponding snapshot.
-    ///
-    /// For more information, seeDeleting
-    /// snapshots.
+    /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
     ///
     /// @Snippet(path: "snapshots_delete")
     public func delete(
@@ -58,14 +51,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified Snapshot resource. Keep in mind that deleting
-    /// a single snapshot might not necessarily delete all the data on that
-    /// snapshot. If any data on the snapshot that is marked for deletion is
-    /// needed for subsequent snapshots, the data will be moved to the next
-    /// corresponding snapshot.
-    ///
-    /// For more information, seeDeleting
-    /// snapshots.
+    /// Deletes the specified Snapshot resource. Keep in mind that deleting a single snapshot might not necessarily delete all the data on that snapshot. If any data on the snapshot that is marked for deletion is needed for subsequent snapshots, the data will be moved to the next corresponding snapshot. For more information, see Deleting snapshots.
     ///
     /// @Snippet(path: "snapshots_delete")
     public func delete(
@@ -114,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "snapshots_getIamPolicy")
     public func getIamPolicy(
@@ -124,11 +109,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a snapshot in the specified project using the data included
-    /// in the request. For regular snapshot creation, consider using this method
-    /// instead of disks.createSnapshot,
-    /// as this method supports more features, such as creating snapshots in a
-    /// project different from the source disk project.
+    /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "snapshots_insert")
     public func insert(
@@ -137,11 +118,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a snapshot in the specified project using the data included
-    /// in the request. For regular snapshot creation, consider using this method
-    /// instead of disks.createSnapshot,
-    /// as this method supports more features, such as creating snapshots in a
-    /// project different from the source disk project.
+    /// Creates a snapshot in the specified project using the data included in the request. For regular snapshot creation, consider using this method instead of disks.createSnapshot, as this method supports more features, such as creating snapshots in a project different from the source disk project.
     ///
     /// @Snippet(path: "snapshots_insert")
     public func insert(
@@ -181,8 +158,7 @@
       )
     }
 
-    /// Retrieves the list of Snapshot resources contained within
-    /// the specified project.
+    /// Retrieves the list of Snapshot resources contained within the specified project.
     ///
     /// @Snippet(path: "snapshots_list")
     public func list(
@@ -191,8 +167,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of Snapshot resources contained within
-    /// the specified project.
+    /// Retrieves the list of Snapshot resources contained within the specified project.
     ///
     /// @Snippet(path: "snapshots_list")
     public func list(
@@ -206,8 +181,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "snapshots_setIamPolicy")
     public func setIamPolicy(
@@ -216,8 +190,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "snapshots_setLabels")
     public func setLabels(
@@ -226,8 +199,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a snapshot. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a snapshot. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "snapshots_setLabels")
     public func setLabels(
@@ -276,8 +248,7 @@
       try await self.inner.testIamPermissions(request: request, options: options)
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified snapshot.
+    /// Rotates the customer-managed encryption key to the latest version for the specified snapshot.
     ///
     /// @Snippet(path: "snapshots_updateKmsKey")
     public func updateKmsKey(
@@ -286,8 +257,7 @@
       try await self.inner.updateKmsKey(request: request, options: options)
     }
 
-    /// Rotates the customer-managed
-    /// encryption key to the latest version for the specified snapshot.
+    /// Rotates the customer-managed encryption key to the latest version for the specified snapshot.
     ///
     /// @Snippet(path: "snapshots_updateKmsKey")
     public func updateKmsKey(

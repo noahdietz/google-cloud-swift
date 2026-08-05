@@ -21,28 +21,22 @@
   public struct TestFailure: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The actual output URL evaluated by a load balancer containing the scheme,
-    /// host, path and query parameters.
+    /// The actual output URL evaluated by a load balancer containing the scheme, host, path and query parameters.
     public var actualOutputUrl: Swift.String? = nil
 
-    /// Actual HTTP status code for rule with `urlRedirect`
-    /// calculated by load balancer
+    /// Actual HTTP status code for rule with `urlRedirect` calculated by load balancer
     public var actualRedirectResponseCode: Swift.Int32? = nil
 
-    /// BackendService or BackendBucket returned by load
-    /// balancer.
+    /// BackendService or BackendBucket returned by load balancer.
     public var actualService: Swift.String? = nil
 
-    /// The expected output URL evaluated by a load balancer containing the scheme,
-    /// host, path and query parameters.
+    /// The expected output URL evaluated by a load balancer containing the scheme, host, path and query parameters.
     public var expectedOutputUrl: Swift.String? = nil
 
-    /// Expected HTTP status code for rule with `urlRedirect`
-    /// calculated by load balancer
+    /// Expected HTTP status code for rule with `urlRedirect` calculated by load balancer
     public var expectedRedirectResponseCode: Swift.Int32? = nil
 
-    /// Expected BackendService or BackendBucket resource
-    /// the given URL should be mapped to.
+    /// Expected BackendService or BackendBucket resource the given URL should be mapped to.
     public var expectedService: Swift.String? = nil
 
     /// HTTP headers of the request.

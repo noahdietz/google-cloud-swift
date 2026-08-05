@@ -18,11 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Rollout resource.
-  ///
-  /// A Rollout is a specific instance of a RolloutPlan. It represents a single
-  /// execution of a strategy to roll out a specific resource. It also provides
-  /// APIs to interact with the rollout.
+  /// Rollout resource. A Rollout is a specific instance of a RolloutPlan. It represents a single execution of a strategy to roll out a specific resource. It also provides APIs to interact with the rollout.
   public struct Rollout: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -32,37 +28,25 @@
     /// Output only. The timestamp at which the Rollout was completed.
     public var completionTime: Swift.String? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// Output only. The number of the currently running wave.
-    /// Ex. 1
+    /// Output only. The number of the currently running wave. Ex. 1
     public var currentWaveNumber: Swift.Int64? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Output only. etag of the Rollout
-    /// Ex. abc1234
+    /// Output only. etag of the Rollout Ex. abc1234
     public var etag: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#rollout
-    /// for rollouts.
+    /// Output only. [Output Only] Type of the resource. Always compute#rollout for rollouts.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`
-    /// which means the first character must be a lowercase letter, and all
-    /// following characters must be a dash, lowercase letter, or digit, except
-    /// the last character, which cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     /// Output only. The timestamp at which the Rollout was paused.
@@ -74,8 +58,7 @@
     /// Required. The resource being rolled out.
     public var rolloutEntity: RolloutRolloutEntity? = nil
 
-    /// Required. Rollout Plan used to model the Rollout.
-    /// Ex. compute.googleapis.com/v1/projects/1234/rolloutPlans/rp1
+    /// Required. Rollout Plan used to model the Rollout. Ex. compute.googleapis.com/v1/projects/1234/rolloutPlans/rp1
     public var rolloutPlan: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined fully-qualified URL for this resource.

@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a TargetSslProxy resource in the specified project using
-    /// the data included in the request.
+    /// Creates a TargetSslProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetSslProxies_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a TargetSslProxy resource in the specified project using
-    /// the data included in the request.
+    /// Creates a TargetSslProxy resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "targetSslProxies_insert")
     public func insert(
@@ -151,8 +149,7 @@
       )
     }
 
-    /// Retrieves the list of TargetSslProxy resources
-    /// available to the specified project.
+    /// Retrieves the list of TargetSslProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetSslProxies_list")
     public func list(
@@ -161,8 +158,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of TargetSslProxy resources
-    /// available to the specified project.
+    /// Retrieves the list of TargetSslProxy resources available to the specified project.
     ///
     /// @Snippet(path: "targetSslProxies_list")
     public func list(
@@ -380,10 +376,7 @@
       )
     }
 
-    /// Sets the SSL policy for TargetSslProxy. The SSL policy specifies the
-    /// server-side support for SSL features. This affects connections between
-    /// clients and the load balancer. They do not affect the
-    /// connection between the load balancer and the backends.
+    /// Sets the SSL policy for TargetSslProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the load balancer. They do not affect the connection between the load balancer and the backends.
     ///
     /// @Snippet(path: "targetSslProxies_setSslPolicy")
     public func setSslPolicy(
@@ -392,10 +385,7 @@
       try await self.inner.setSslPolicy(request: request, options: options)
     }
 
-    /// Sets the SSL policy for TargetSslProxy. The SSL policy specifies the
-    /// server-side support for SSL features. This affects connections between
-    /// clients and the load balancer. They do not affect the
-    /// connection between the load balancer and the backends.
+    /// Sets the SSL policy for TargetSslProxy. The SSL policy specifies the server-side support for SSL features. This affects connections between clients and the load balancer. They do not affect the connection between the load balancer and the backends.
     ///
     /// @Snippet(path: "targetSslProxies_setSslPolicy")
     public func setSslPolicy(

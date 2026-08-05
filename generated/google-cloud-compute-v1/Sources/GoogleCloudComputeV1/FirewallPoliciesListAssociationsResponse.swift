@@ -25,8 +25,7 @@
     /// A list of associations.
     public var associations: [FirewallPolicyAssociation] = []
 
-    /// Output only. [Output Only] Type of firewallPolicy associations. Alwayscompute#FirewallPoliciesListAssociations for lists of
-    /// firewallPolicy associations.
+    /// Output only. [Output Only] Type of firewallPolicy associations. Always compute#FirewallPoliciesListAssociations for lists of firewallPolicy associations.
     public var kind: Swift.String? = nil
 
     /// Initialize a new instance of `FirewallPoliciesListAssociationsResponse`.

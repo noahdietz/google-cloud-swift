@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] Which SLA this group is configured to support, and why this
-  /// group does or does not meet that SLA's requirements.
+  /// [Output Only] Which SLA this group is configured to support, and why this group does or does not meet that SLA's requirements.
   public struct InterconnectAttachmentGroupConfiguredAvailabilitySLA: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable

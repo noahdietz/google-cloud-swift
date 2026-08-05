@@ -26,8 +26,7 @@
     /// Output only. [Output Only] The previous share settings of the Future Reservation.
     public var shareSettings: ShareSettings? = nil
 
-    /// Output only. [Output Only] The previous instance related properties of the
-    /// Future Reservation.
+    /// Output only. [Output Only] The previous instance related properties of the Future Reservation.
     public var specificSkuProperties: FutureReservationSpecificSKUProperties? = nil
 
     /// Output only. [Output Only] The previous time window of the Future Reservation.

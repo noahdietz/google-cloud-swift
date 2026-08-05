@@ -18,25 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specification of resources to be created at some time in the future within an
-  /// optionally specified set of locations, and within the specified time range.
+  /// Specification of resources to be created at some time in the future within an optionally specified set of locations, and within the specified time range.
   public struct FutureResourcesSpec: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Indicates if the reservation allocation strategy is static (DENSE) or
-    /// dynamic (STANDARD). Defaults to DENSE.
+    /// Indicates if the reservation allocation strategy is static (DENSE) or dynamic (STANDARD). Defaults to DENSE.
     public var deploymentType: FutureResourcesSpec.DeploymentType? = nil
 
-    /// Optional location policy allowing to exclude some zone(s) in which
-    /// the resources must not be created.
+    /// Optional location policy allowing to exclude some zone(s) in which the resources must not be created.
     public var locationPolicy: FutureResourcesSpecLocationPolicy? = nil
 
     /// Specification of the reserved resources.
     public var targetResources: FutureResourcesSpecTargetResources? = nil
 
-    /// Specification of a time range in which the resources may be created.
-    /// The time range specifies start of resource use and planned end of resource
-    /// use.
+    /// Specification of a time range in which the resources may be created. The time range specifies start of resource use and planned end of resource use.
     public var timeRangeSpec: FlexibleTimeRange? = nil
 
     /// Initialize a new instance of `FutureResourcesSpec`.

@@ -21,12 +21,10 @@
   public struct PacketMirroringForwardingRuleInfo: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Unique identifier for the forwarding rule; defined by the
-    /// server.
+    /// Output only. [Output Only] Unique identifier for the forwarding rule; defined by the server.
     public var canonicalUrl: Swift.String? = nil
 
-    /// Resource URL to the forwarding rule representing the ILB
-    /// configured as destination of the mirrored traffic.
+    /// Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
     public var url: Swift.String? = nil
 
     /// Initialize a new instance of `PacketMirroringForwardingRuleInfo`.

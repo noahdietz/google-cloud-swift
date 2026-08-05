@@ -22,16 +22,13 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Total number of endpoints when determining the health of the
-    /// regionHealthSource.
+    /// Total number of endpoints when determining the health of the regionHealthSource.
     public var endpointCount: Swift.Int32? = nil
 
-    /// Fully qualified URL of an instance group or network endpoint group
-    /// behind the source backend service.
+    /// Fully qualified URL of an instance group or network endpoint group behind the source backend service.
     public var group: Swift.String? = nil
 
-    /// Number of endpoints considered healthy when determining health of the
-    /// regionHealthSource.
+    /// Number of endpoints considered healthy when determining health of the regionHealthSource.
     public var healthyEndpointCount: Swift.Int32? = nil
 
     /// Initialize a new instance of `HealthSourcesGetHealthResponseSourceInfoBackendInfo`.

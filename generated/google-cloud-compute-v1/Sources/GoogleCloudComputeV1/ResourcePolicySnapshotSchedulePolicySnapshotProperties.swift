@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specified snapshot properties for scheduled snapshots created by this
-  /// policy.
+  /// Specified snapshot properties for scheduled snapshots created by this policy.
   public struct ResourcePolicySnapshotSchedulePolicySnapshotProperties: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable
@@ -30,12 +29,10 @@
     /// Indication to perform a 'guest aware' snapshot.
     public var guestFlush: Swift.Bool? = nil
 
-    /// Labels to apply to scheduled snapshots. These can be later modified
-    /// by the setLabels method. Label values may be empty.
+    /// Labels to apply to scheduled snapshots. These can be later modified by the setLabels method. Label values may be empty.
     public var labels: [Swift.String: Swift.String] = [:]
 
-    /// Cloud Storage bucket storage location of the auto snapshot (regional or
-    /// multi-regional).
+    /// Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
     public var storageLocations: [Swift.String] = []
 
     /// Initialize a new instance of `ResourcePolicySnapshotSchedulePolicySnapshotProperties`.

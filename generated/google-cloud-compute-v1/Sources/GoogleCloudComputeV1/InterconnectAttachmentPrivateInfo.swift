@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Information for an interconnect attachment when this belongs to an
-  /// interconnect of type DEDICATED.
+  /// Information for an interconnect attachment when this belongs to an interconnect of type DEDICATED.
   public struct InterconnectAttachmentPrivateInfo: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] 802.1q encapsulation tag to be used for traffic between
-    /// Google and the customer, going to and from this network and region.
+    /// [Output Only] 802.1q encapsulation tag to be used for traffic between Google and the customer, going to and from this network and region.
     public var tag8021Q: Swift.UInt32? = nil
 
     /// Initialize a new instance of `InterconnectAttachmentPrivateInfo`.

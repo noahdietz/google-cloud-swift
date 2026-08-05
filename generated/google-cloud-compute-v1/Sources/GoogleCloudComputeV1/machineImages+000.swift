@@ -42,8 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Deletes the specified machine image. Deleting a machine image is permanent
-    /// and cannot be undone.
+    /// Deletes the specified machine image. Deleting a machine image is permanent and cannot be undone.
     ///
     /// @Snippet(path: "machineImages_delete")
     public func delete(
@@ -52,8 +51,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified machine image. Deleting a machine image is permanent
-    /// and cannot be undone.
+    /// Deletes the specified machine image. Deleting a machine image is permanent and cannot be undone.
     ///
     /// @Snippet(path: "machineImages_delete")
     public func delete(
@@ -102,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "machineImages_getIamPolicy")
     public func getIamPolicy(
@@ -112,11 +109,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates a machine image in the specified project using the
-    /// data that is included in the request. If you are creating a new machine
-    /// image to update an existing instance, your new machine image should use the
-    /// same network or, if applicable, the same subnetwork as the original
-    /// instance.
+    /// Creates a machine image in the specified project using the data that is included in the request. If you are creating a new machine image to update an existing instance, your new machine image should use the same network or, if applicable, the same subnetwork as the original instance.
     ///
     /// @Snippet(path: "machineImages_insert")
     public func insert(
@@ -125,11 +118,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a machine image in the specified project using the
-    /// data that is included in the request. If you are creating a new machine
-    /// image to update an existing instance, your new machine image should use the
-    /// same network or, if applicable, the same subnetwork as the original
-    /// instance.
+    /// Creates a machine image in the specified project using the data that is included in the request. If you are creating a new machine image to update an existing instance, your new machine image should use the same network or, if applicable, the same subnetwork as the original instance.
     ///
     /// @Snippet(path: "machineImages_insert")
     public func insert(
@@ -169,8 +158,7 @@
       )
     }
 
-    /// Retrieves a list of machine images that are contained within
-    /// the specified project.
+    /// Retrieves a list of machine images that are contained within the specified project.
     ///
     /// @Snippet(path: "machineImages_list")
     public func list(
@@ -179,8 +167,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of machine images that are contained within
-    /// the specified project.
+    /// Retrieves a list of machine images that are contained within the specified project.
     ///
     /// @Snippet(path: "machineImages_list")
     public func list(
@@ -194,8 +181,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "machineImages_setIamPolicy")
     public func setIamPolicy(
@@ -204,8 +190,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the labels on a machine image. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a machine image. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "machineImages_setLabels")
     public func setLabels(
@@ -214,8 +199,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on a machine image. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on a machine image. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "machineImages_setLabels")
     public func setLabels(

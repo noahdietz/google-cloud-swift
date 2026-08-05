@@ -23,17 +23,13 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. Whether this Attachment is enabled. This becomes false when the customer
-    /// drains their Attachment.
+    /// Output only. Whether this Attachment is enabled. This becomes false when the customer drains their Attachment.
     public var adminEnabled: Swift.Bool? = nil
 
     /// Output only. The URL of the Attachment being described.
     public var attachment: Swift.String? = nil
 
-    /// Output only. Whether this Attachment is participating in the redundant configuration.
-    /// This will be ACTIVE if and only if the status below is CONNECTION_UP.
-    /// Any INACTIVE Attachments are excluded from the analysis that generates
-    /// operational.availabilitySLA.
+    /// Output only. Whether this Attachment is participating in the redundant configuration. This will be ACTIVE if and only if the status below is CONNECTION_UP. Any INACTIVE Attachments are excluded from the analysis that generates operational.availabilitySLA.
     public var isActive: InterconnectAttachmentGroupsOperationalStatusAttachmentStatus.IsActive? =
       nil
 

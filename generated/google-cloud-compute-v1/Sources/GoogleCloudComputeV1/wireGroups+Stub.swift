@@ -78,7 +78,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/crossSiteNetworks/\(pathVariable1)/wireGroups/\(pathVariable2)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -111,7 +112,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/crossSiteNetworks/\(pathVariable1)/wireGroups/\(pathVariable2)"
         }()
         let query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         var req = try await self.inner.Request(path: path, query: query)
         req.httpMethod = "GET"
@@ -138,7 +140,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/crossSiteNetworks/\(pathVariable1)/wireGroups"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))
@@ -172,7 +175,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/crossSiteNetworks/\(pathVariable1)/wireGroups"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.filter, prefix: "filter"))
@@ -211,7 +215,8 @@
             "/compute/v1/projects/\(pathVariable0)/global/crossSiteNetworks/\(pathVariable1)/wireGroups/\(pathVariable2)"
         }()
         var query = [
-          URLQueryItem(name: "$alt", value: "json")
+          URLQueryItem(name: "$alt", value: "json"),
+          URLQueryItem(name: "$apiVersion", value: "2026-03-01"),
         ]
         let encoder = GoogleCloudGax.QueryParameterEncoder()
         query.append(contentsOf: try encoder.encode(request.requestId, prefix: "requestId"))

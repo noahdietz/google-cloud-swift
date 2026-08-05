@@ -23,18 +23,10 @@
     Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Required in this object. A single IPv4 or IPv6 address used as the
-    /// destination IP address for ingress packets that match on both VLAN
-    /// tags.
+    /// Required in this object. A single IPv4 or IPv6 address used as the destination IP address for ingress packets that match on both VLAN tags.
     public var innerApplianceIpAddress: Swift.String? = nil
 
-    /// Required in this object. Used to match the inner VLAN tag on the
-    /// packet. Each entry can be a single number or a range of numbers in
-    /// the range of 1 to 4094, e.g., ["1", "4001-4094"] is valid. Non-empty
-    /// and Non-overlapping VLAN tag ranges are enforced, and violating
-    /// operations will be rejected.
-    ///
-    /// The inner VLAN tags must have an ethertype value of 0x8100.
+    /// Required in this object. Used to match the inner VLAN tag on the packet. Each entry can be a single number or a range of numbers in the range of 1 to 4094, e.g., ["1", "4001-4094"] is valid. Non-empty and Non-overlapping VLAN tag ranges are enforced, and violating operations will be rejected. The inner VLAN tags must have an ethertype value of 0x8100.
     public var innerVlanTags: [Swift.String] = []
 
     /// Initialize a new instance of `InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapping`.

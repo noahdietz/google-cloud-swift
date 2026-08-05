@@ -18,62 +18,35 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a composite health check.
-  ///
-  /// A composite health check resource specifies the health source resources and
-  /// the health destination resource to which the aggregated health result from
-  /// the health source resources is delivered.
+  /// Represents a composite health check. A composite health check resource specifies the health source resources and the health destination resource to which the aggregated health result from the health source resources is delivered.
   public struct CompositeHealthCheck: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a CompositeHealthCheck. An up-to-date fingerprint
-    /// must be provided in order to patch the CompositeHealthCheck; Otherwise,
-    /// the request will fail with error 412 conditionNotMet. To see
-    /// the latest fingerprint, make a get() request to retrieve the
-    /// CompositeHealthCheck.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a CompositeHealthCheck. An up-to-date fingerprint must be provided in order to patch the CompositeHealthCheck; Otherwise, the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve the CompositeHealthCheck.
     public var fingerprint: Foundation.Data? = nil
 
-    /// URL to the destination resource. Must be set. Must be aForwardingRule. The ForwardingRule must have
-    /// load balancing scheme INTERNAL orINTERNAL_MANAGED and must be regional and in the same region
-    /// as the CompositeHealthCheck (cross-region deployment forINTERNAL_MANAGED is not supported). Can be mutated.
+    /// URL to the destination resource. Must be set. Must be a ForwardingRule. The ForwardingRule must have load balancing scheme INTERNAL or INTERNAL_MANAGED and must be regional and in the same region as the CompositeHealthCheck (cross-region deployment for INTERNAL_MANAGED is not supported). Can be mutated.
     public var healthDestination: Swift.String? = nil
 
-    /// URLs to the HealthSource resources whose results are AND'ed.
-    /// I.e. he aggregated result is is HEALTHY only if all sources
-    /// are HEALTHY. Must have at least 1. Must not have more than 10.
-    /// Must be regional and in the same region as theCompositeHealthCheck. Can be mutated.
+    /// URLs to the HealthSource resources whose results are AND'ed. I.e. he aggregated result is is HEALTHY only if all sources are HEALTHY. Must have at least 1. Must not have more than 10. Must be regional and in the same region as the CompositeHealthCheck. Can be mutated.
     public var healthSources: [Swift.String] = []
 
-    /// Output only. [Output Only] A unique identifier for this resource type. The server
-    /// generates this identifier.
+    /// Output only. [Output Only] A unique identifier for this resource type. The server generates this identifier.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#compositeHealthCheck for composite health checks.
+    /// Output only. [Output Only] Type of the resource. Always compute#compositeHealthCheck for composite health checks.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] URL of the region where the composite health check resides.
-    /// This field applies only to the regional resource. You must specify this
-    /// field as part of the HTTP request URL. It is not settable as a field in
-    /// the request body.
+    /// Output only. [Output Only] URL of the region where the composite health check resides. This field applies only to the regional resource. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
     /// Output only. [Output Only] Server-defined URL for the resource.

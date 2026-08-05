@@ -22,9 +22,7 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. A bit indicating if all of the group's per-instance configurations
-    /// (listed in the output of a listPerInstanceConfigs API call) have
-    /// status EFFECTIVE or there are no per-instance-configs.
+    /// Output only. A bit indicating if all of the group's per-instance configurations (listed in the output of a listPerInstanceConfigs API call) have status EFFECTIVE or there are no per-instance-configs.
     public var allEffective: Swift.Bool? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStatusStatefulPerInstanceConfigs`.

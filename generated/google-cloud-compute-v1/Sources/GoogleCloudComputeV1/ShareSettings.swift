@@ -22,8 +22,7 @@
   public struct ShareSettings: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A map of project id and project config. This is only valid when
-    /// share_type's value is SPECIFIC_PROJECTS.
+    /// A map of project id and project config. This is only valid when share_type's value is SPECIFIC_PROJECTS.
     public var projectMap: [Swift.String: ShareSettingsProjectConfig] = [:]
 
     /// Type of sharing for this shared-reservation

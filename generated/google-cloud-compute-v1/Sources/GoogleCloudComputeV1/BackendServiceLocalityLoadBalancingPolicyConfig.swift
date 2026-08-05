@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Container for either a built-in LB policy supported by gRPC or Envoy or
-  /// a custom one implemented by the end user.
+  /// Container for either a built-in LB policy supported by gRPC or Envoy or a custom one implemented by the end user.
   public struct BackendServiceLocalityLoadBalancingPolicyConfig: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable

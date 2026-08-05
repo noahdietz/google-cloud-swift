@@ -42,8 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Creates multiple instances in a given region. Count specifies the number of
-    /// instances to create.
+    /// Creates multiple instances in a given region. Count specifies the number of instances to create.
     ///
     /// @Snippet(path: "regionInstances_bulkInsert")
     public func bulkInsert(
@@ -52,8 +51,7 @@
       try await self.inner.bulkInsert(request: request, options: options)
     }
 
-    /// Creates multiple instances in a given region. Count specifies the number of
-    /// instances to create.
+    /// Creates multiple instances in a given region. Count specifies the number of instances to create.
     ///
     /// @Snippet(path: "regionInstances_bulkInsert")
     public func bulkInsert(

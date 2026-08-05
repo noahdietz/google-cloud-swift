@@ -25,9 +25,7 @@
     /// Output only. The VPN gateway interface this VPN tunnel is associated with.
     public var localGatewayInterface: Swift.UInt32? = nil
 
-    /// Output only. The peer gateway interface this VPN tunnel is connected to, the peer
-    /// gateway could either be an external VPN gateway or a Google Cloud
-    /// VPN gateway.
+    /// Output only. The peer gateway interface this VPN tunnel is connected to, the peer gateway could either be an external VPN gateway or a Google Cloud VPN gateway.
     public var peerGatewayInterface: Swift.UInt32? = nil
 
     /// Output only. URL reference to the VPN tunnel.

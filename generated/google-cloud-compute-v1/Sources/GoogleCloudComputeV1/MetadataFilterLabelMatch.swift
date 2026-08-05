@@ -18,20 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// MetadataFilter label name value pairs that are expected
-  /// to match corresponding labels presented as metadata to the load balancer.
+  /// MetadataFilter label name value pairs that are expected to match corresponding labels presented as metadata to the load balancer.
   public struct MetadataFilterLabelMatch: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Name of metadata label.
-    ///
-    ///  The name can have a maximum length of 1024 characters and must be at
-    /// least 1 character long.
+    /// Name of metadata label. The name can have a maximum length of 1024 characters and must be at least 1 character long.
     public var name: Swift.String? = nil
 
-    /// The value of the label must match the specified value.
-    ///
-    /// value can have a maximum length of 1024 characters.
+    /// The value of the label must match the specified value. value can have a maximum length of 1024 characters.
     public var value: Swift.String? = nil
 
     /// Initialize a new instance of `MetadataFilterLabelMatch`.

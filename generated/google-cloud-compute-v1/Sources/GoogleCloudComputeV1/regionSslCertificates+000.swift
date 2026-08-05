@@ -93,9 +93,7 @@
       )
     }
 
-    /// Returns the specified SslCertificate resource in the specified region. Get
-    /// a list of available SSL certificates by making a list()
-    /// request.
+    /// Returns the specified SslCertificate resource in the specified region. Get a list of available SSL certificates by making a list() request.
     ///
     /// @Snippet(path: "regionSslCertificates_get")
     public func `get`(
@@ -104,8 +102,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a SslCertificate resource in the specified project and region using
-    /// the data included in the request
+    /// Creates a SslCertificate resource in the specified project and region using the data included in the request
     ///
     /// @Snippet(path: "regionSslCertificates_insert")
     public func insert(
@@ -114,8 +111,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a SslCertificate resource in the specified project and region using
-    /// the data included in the request
+    /// Creates a SslCertificate resource in the specified project and region using the data included in the request
     ///
     /// @Snippet(path: "regionSslCertificates_insert")
     public func insert(
@@ -156,8 +152,7 @@
       )
     }
 
-    /// Retrieves the list of SslCertificate resources available to the specified
-    /// project in the specified region.
+    /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionSslCertificates_list")
     public func list(
@@ -166,8 +161,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of SslCertificate resources available to the specified
-    /// project in the specified region.
+    /// Retrieves the list of SslCertificate resources available to the specified project in the specified region.
     ///
     /// @Snippet(path: "regionSslCertificates_list")
     public func list(

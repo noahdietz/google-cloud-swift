@@ -22,8 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The mode of target size policy based on which the MIG creates its VMs
-    /// individually or all at once.
+    /// The mode of target size policy based on which the MIG creates its VMs individually or all at once.
     public var mode: InstanceGroupManagerTargetSizePolicy.Mode? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerTargetSizePolicy`.
@@ -46,16 +45,11 @@
     ///
     /// [google.cloud.compute.v1.InstanceGroupManagerTargetSizePolicy.mode]: <doc:InstanceGroupManagerTargetSizePolicy/Mode>
     public enum Mode: Codable, Equatable, Sendable {
-      /// The mode in which the MIG creates VMs all at once. In this mode, if the
-      /// MIG is unable to create even one VM, the MIG waits until all VMs can be
-      /// created at the same time.
+      /// The mode in which the MIG creates VMs all at once. In this mode, if the MIG is unable to create even one VM, the MIG waits until all VMs can be created at the same time.
       case bulk
-      /// The mode in which the MIG creates VMs individually. In this mode, if
-      /// the MIG is unable to create a VM, the MIG will continue to create the
-      /// other VMs in the group. This is the default mode.
+      /// The mode in which the MIG creates VMs individually. In this mode, if the MIG is unable to create a VM, the MIG will continue to create the other VMs in the group. This is the default mode.
       case individual
-      /// If mode is unspecified, MIG will behave as in the default `INDIVIDUAL`
-      /// mode.
+      /// If mode is unspecified, MIG will behave as in the default `INDIVIDUAL` mode.
       case unspecifiedMode
       /// Encodes an unknown integer value.
       ///

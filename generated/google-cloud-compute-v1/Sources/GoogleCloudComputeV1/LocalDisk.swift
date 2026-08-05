@@ -27,10 +27,7 @@
     /// Specifies the size of the disk in base-2 GB.
     public var diskSizeGb: Swift.Int32? = nil
 
-    /// Specifies the desired disk type on the node. This disk type must be a
-    /// local storage type (e.g.: local-ssd).
-    /// Note that for nodeTemplates, this should be the name of the disk type and
-    /// not its URL.
+    /// Specifies the desired disk type on the node. This disk type must be a local storage type (e.g.: local-ssd). Note that for nodeTemplates, this should be the name of the disk type and not its URL.
     public var diskType: Swift.String? = nil
 
     /// Initialize a new instance of `LocalDisk`.

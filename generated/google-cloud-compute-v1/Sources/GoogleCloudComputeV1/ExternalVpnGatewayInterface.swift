@@ -22,27 +22,13 @@
   public struct ExternalVpnGatewayInterface: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The numeric ID of this interface.
-    /// The allowed input values for this id for different redundancy types of
-    /// external VPN gateway:
-    ///
-    ///    - SINGLE_IP_INTERNALLY_REDUNDANT - 0
-    ///    - TWO_IPS_REDUNDANCY - 0, 1
-    ///    - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
+    /// The numeric ID of this interface. The allowed input values for this id for different redundancy types of external VPN gateway: - SINGLE_IP_INTERNALLY_REDUNDANT - 0 - TWO_IPS_REDUNDANCY - 0, 1 - FOUR_IPS_REDUNDANCY - 0, 1, 2, 3
     public var id: Swift.UInt32? = nil
 
-    /// IP address of the interface in the external VPN gateway. Only IPv4 is
-    /// supported. This IP address can be either from your on-premise gateway or
-    /// another Cloud provider's VPN gateway, it cannot be an IP address from
-    /// Google Compute Engine.
+    /// IP address of the interface in the external VPN gateway. Only IPv4 is supported. This IP address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine.
     public var ipAddress: Swift.String? = nil
 
-    /// IPv6 address of the interface in the external VPN gateway. This IPv6
-    /// address can be either from your on-premise gateway or another Cloud
-    /// provider's VPN gateway, it cannot be an IP address from Google Compute
-    /// Engine. Must specify an IPv6 address (not IPV4-mapped) using any format
-    /// described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format
-    /// is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+    /// IPv6 address of the interface in the external VPN gateway. This IPv6 address can be either from your on-premise gateway or another Cloud provider's VPN gateway, it cannot be an IP address from Google Compute Engine. Must specify an IPv6 address (not IPV4-mapped) using any format described in RFC 4291 (e.g. 2001:db8:0:0:2d9:51:0:0). The output format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
     public var ipv6Address: Swift.String? = nil
 
     /// Initialize a new instance of `ExternalVpnGatewayInterface`.

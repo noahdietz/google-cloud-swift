@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// [Output Only] The facilities used for this group's Attachments'
-  /// Interconnects.
+  /// [Output Only] The facilities used for this group's Attachments' Interconnects.
   public struct InterconnectAttachmentGroupLogicalStructureRegionMetroFacility: Codable, Equatable,
     GoogleCloudWkt._AnyPackable,
     Sendable

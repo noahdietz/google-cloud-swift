@@ -91,8 +91,7 @@
       )
     }
 
-    /// Disable a service resource (also known as service project) associated with
-    /// this host project.
+    /// Disable a service resource (also known as service project) associated with this host project.
     ///
     /// @Snippet(path: "projects_disableXpnResource")
     public func disableXpnResource(
@@ -101,8 +100,7 @@
       try await self.inner.disableXpnResource(request: request, options: options)
     }
 
-    /// Disable a service resource (also known as service project) associated with
-    /// this host project.
+    /// Disable a service resource (also known as service project) associated with this host project.
     ///
     /// @Snippet(path: "projects_disableXpnResource")
     public func disableXpnResource(
@@ -191,9 +189,7 @@
       )
     }
 
-    /// Enable service resource (a.k.a service project) for a host project, so that
-    /// subnets in the host project can be used by instances in the service
-    /// project.
+    /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
     ///
     /// @Snippet(path: "projects_enableXpnResource")
     public func enableXpnResource(
@@ -202,9 +198,7 @@
       try await self.inner.enableXpnResource(request: request, options: options)
     }
 
-    /// Enable service resource (a.k.a service project) for a host project, so that
-    /// subnets in the host project can be used by instances in the service
-    /// project.
+    /// Enable service resource (a.k.a service project) for a host project, so that subnets in the host project can be used by instances in the service project.
     ///
     /// @Snippet(path: "projects_enableXpnResource")
     public func enableXpnResource(
@@ -244,15 +238,7 @@
       )
     }
 
-    /// Returns the specified Project resource.
-    ///
-    /// To decrease latency for this method, you can optionally omit any unneeded
-    /// information from the response by using a field mask. This practice is
-    /// especially recommended for unused quota information (the `quotas` field).
-    /// To exclude one or more fields, set your request's `fields` query parameter
-    /// to only include the fields you need. For example, to only include the `id`
-    /// and `selfLink` fields, add the query parameter `?fields=id,selfLink` to
-    /// your request.
+    /// Returns the specified Project resource. To decrease latency for this method, you can optionally omit any unneeded information from the response by using a field mask. This practice is especially recommended for unused quota information (the `quotas` field). To exclude one or more fields, set your request's `fields` query parameter to only include the fields you need. For example, to only include the `id` and `selfLink` fields, add the query parameter `?fields=id,selfLink` to your request.
     ///
     /// @Snippet(path: "projects_get")
     public func `get`(
@@ -261,8 +247,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the shared VPC host project that this project links to. May be empty
-    /// if no link exists.
+    /// Gets the shared VPC host project that this project links to. May be empty if no link exists.
     ///
     /// @Snippet(path: "projects_getXpnHost")
     public func getXpnHost(
@@ -271,8 +256,7 @@
       try await self.inner.getXpnHost(request: request, options: options)
     }
 
-    /// Gets service resources (a.k.a service project) associated with this host
-    /// project.
+    /// Gets service resources (a.k.a service project) associated with this host project.
     ///
     /// @Snippet(path: "projects_getXpnResources")
     public func getXpnResources(
@@ -281,8 +265,7 @@
       try await self.inner.getXpnResources(request: request, options: options)
     }
 
-    /// Gets service resources (a.k.a service project) associated with this host
-    /// project.
+    /// Gets service resources (a.k.a service project) associated with this host project.
     ///
     /// @Snippet(path: "projects_getXpnResources")
     public func getXpnResources(
@@ -320,20 +303,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Moves a persistent disk from one zone to another.
-    /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
-    ///
-    /// Starting September 29, 2025, you can't use the moveDisk API on new
-    /// projects. To move a disk to a different region or zone, follow the steps in
-    /// [Change the location of a
-    /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
-    ///
-    /// Projects that already use the moveDisk API can continue usage until
-    /// September 29, 2026.
-    ///
-    /// Starting November 1, 2025, API responses will include a warning message in
-    /// the response body about the upcoming deprecation. You can skip the message
-    /// to continue using the service without interruption.
+    /// Moves a persistent disk from one zone to another. *Note*: The moveDisk API will be deprecated on September 29, 2026. Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
     ///
     /// @Snippet(path: "projects_moveDisk")
     @available(*, deprecated)
@@ -343,20 +313,7 @@
       try await self.inner.moveDisk(request: request, options: options)
     }
 
-    /// Moves a persistent disk from one zone to another.
-    /// *Note*: The moveDisk API will be deprecated on September 29, 2026.
-    ///
-    /// Starting September 29, 2025, you can't use the moveDisk API on new
-    /// projects. To move a disk to a different region or zone, follow the steps in
-    /// [Change the location of a
-    /// disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd).
-    ///
-    /// Projects that already use the moveDisk API can continue usage until
-    /// September 29, 2026.
-    ///
-    /// Starting November 1, 2025, API responses will include a warning message in
-    /// the response body about the upcoming deprecation. You can skip the message
-    /// to continue using the service without interruption.
+    /// Moves a persistent disk from one zone to another. *Note*: The moveDisk API will be deprecated on September 29, 2026. Starting September 29, 2025, you can't use the moveDisk API on new projects. To move a disk to a different region or zone, follow the steps in [Change the location of a disk](https://cloud.google.com/compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already use the moveDisk API can continue usage until September 29, 2026. Starting November 1, 2025, API responses will include a warning message in the response body about the upcoming deprecation. You can skip the message to continue using the service without interruption.
     ///
     /// @Snippet(path: "projects_moveDisk")
     public func moveDisk(
@@ -396,13 +353,7 @@
       )
     }
 
-    /// Moves an instance and its attached persistent disks from one zone to
-    /// another.
-    /// *Note*: Moving VMs or disks by using this method might
-    ///  cause unexpected behavior. For more information, see the [known
-    ///  issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
-    /// [Deprecated] This method is deprecated. See [moving instance across
-    /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
+    /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
     ///
     /// @Snippet(path: "projects_moveInstance")
     @available(*, deprecated)
@@ -412,13 +363,7 @@
       try await self.inner.moveInstance(request: request, options: options)
     }
 
-    /// Moves an instance and its attached persistent disks from one zone to
-    /// another.
-    /// *Note*: Moving VMs or disks by using this method might
-    ///  cause unexpected behavior. For more information, see the [known
-    ///  issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior).
-    /// [Deprecated] This method is deprecated. See [moving instance across
-    /// zones](/compute/docs/instances/moving-instance-across-zones) instead.
+    /// Moves an instance and its attached persistent disks from one zone to another. *Note*: Moving VMs or disks by using this method might cause unexpected behavior. For more information, see the [known issue](/compute/docs/troubleshooting/known-issues#moving_vms_or_disks_using_the_moveinstance_api_or_the_causes_unexpected_behavior). [Deprecated] This method is deprecated. See [moving instance across zones](/compute/docs/instances/moving-instance-across-zones) instead.
     ///
     /// @Snippet(path: "projects_moveInstance")
     public func moveInstance(
@@ -458,10 +403,7 @@
       )
     }
 
-    /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
-    /// billing account of the project must be subscribed to Cloud Armor
-    /// Enterprise. See Subscribing
-    /// to Cloud Armor Enterprise for more information.
+    /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
     ///
     /// @Snippet(path: "projects_setCloudArmorTier")
     public func setCloudArmorTier(
@@ -470,10 +412,7 @@
       try await self.inner.setCloudArmorTier(request: request, options: options)
     }
 
-    /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the
-    /// billing account of the project must be subscribed to Cloud Armor
-    /// Enterprise. See Subscribing
-    /// to Cloud Armor Enterprise for more information.
+    /// Sets the Cloud Armor tier of the project. To set ENTERPRISE or above the billing account of the project must be subscribed to Cloud Armor Enterprise. See Subscribing to Cloud Armor Enterprise for more information.
     ///
     /// @Snippet(path: "projects_setCloudArmorTier")
     public func setCloudArmorTier(
@@ -513,8 +452,7 @@
       )
     }
 
-    /// Sets metadata common to all instances within the specified project using
-    /// the data included in the request.
+    /// Sets metadata common to all instances within the specified project using the data included in the request.
     ///
     /// @Snippet(path: "projects_setCommonInstanceMetadata")
     public func setCommonInstanceMetadata(
@@ -524,8 +462,7 @@
       try await self.inner.setCommonInstanceMetadata(request: request, options: options)
     }
 
-    /// Sets metadata common to all instances within the specified project using
-    /// the data included in the request.
+    /// Sets metadata common to all instances within the specified project using the data included in the request.
     ///
     /// @Snippet(path: "projects_setCommonInstanceMetadata")
     public func setCommonInstanceMetadata(
@@ -566,9 +503,7 @@
       )
     }
 
-    /// Sets the default network tier of the project. The default network tier is
-    /// used when an address/forwardingRule/instance is created without specifying
-    /// the network tier field.
+    /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
     ///
     /// @Snippet(path: "projects_setDefaultNetworkTier")
     public func setDefaultNetworkTier(
@@ -577,9 +512,7 @@
       try await self.inner.setDefaultNetworkTier(request: request, options: options)
     }
 
-    /// Sets the default network tier of the project. The default network tier is
-    /// used when an address/forwardingRule/instance is created without specifying
-    /// the network tier field.
+    /// Sets the default network tier of the project. The default network tier is used when an address/forwardingRule/instance is created without specifying the network tier field.
     ///
     /// @Snippet(path: "projects_setDefaultNetworkTier")
     public func setDefaultNetworkTier(
@@ -620,9 +553,7 @@
       )
     }
 
-    /// Enables the usage export feature and sets theusage export bucket
-    /// where reports are stored. If you provide an empty request body using this
-    /// method, the usage export feature will be disabled.
+    /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
     ///
     /// @Snippet(path: "projects_setUsageExportBucket")
     public func setUsageExportBucket(
@@ -631,9 +562,7 @@
       try await self.inner.setUsageExportBucket(request: request, options: options)
     }
 
-    /// Enables the usage export feature and sets theusage export bucket
-    /// where reports are stored. If you provide an empty request body using this
-    /// method, the usage export feature will be disabled.
+    /// Enables the usage export feature and sets the usage export bucket where reports are stored. If you provide an empty request body using this method, the usage export feature will be disabled.
     ///
     /// @Snippet(path: "projects_setUsageExportBucket")
     public func setUsageExportBucket(

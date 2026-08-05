@@ -26,9 +26,7 @@
     public var error:
       InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails.Error? = nil
 
-    /// Output only. Timestamp is shown only if there is an error. The field
-    /// has // RFC3339 //
-    /// text format.
+    /// Output only. Timestamp is shown only if there is an error. The field has // RFC3339 // text format.
     public var timestamp: GoogleCloudWkt.Timestamp? = nil
 
     /// Initialize a new instance of `InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails`.
@@ -53,8 +51,7 @@
     public struct Error: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] The array of errors encountered while processing this
-      /// operation.
+      /// [Output Only] The array of errors encountered while processing this operation.
       public var errors:
         [InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails.Error.Errors] =
           []
@@ -84,17 +81,12 @@
         /// [Output Only] The error type identifier for this error.
         public var code: Swift.String? = nil
 
-        /// [Output Only] An optional list of messages that contain the error
-        /// details. There is a set of defined message types to use for providing
-        /// details.The syntax depends on the error code. For example,
-        /// QuotaExceededInfo will have details when the error code is
-        /// QUOTA_EXCEEDED.
+        /// [Output Only] An optional list of messages that contain the error details. There is a set of defined message types to use for providing details.The syntax depends on the error code. For example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
         public var errorDetails:
           [InstanceGroupManagerStatusAcceleratorTopologyAcceleratorTopologyStateDetails.Error.Errors
             .ErrorDetails] = []
 
-        /// [Output Only] Indicates the field in the request that caused the error.
-        /// This property is optional.
+        /// [Output Only] Indicates the field in the request that caused the error. This property is optional.
         public var location: Swift.String? = nil
 
         /// [Output Only] An optional, human-readable error message.

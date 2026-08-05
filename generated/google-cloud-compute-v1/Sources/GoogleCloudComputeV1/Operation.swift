@@ -14,151 +14,92 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#if Addresses || Autoscalers || BackendBuckets || BackendServices || CrossSiteNetworks || Disks || ExternalVpnGateways || FirewallPolicies || Firewalls || ForwardingRules || FutureReservations || GlobalAddresses || GlobalForwardingRules || GlobalNetworkEndpointGroups || GlobalOperations || GlobalOrganizationOperations || GlobalPublicDelegatedPrefixes || GlobalVmExtensionPolicies || HealthChecks || HttpHealthChecks || HttpsHealthChecks || Images || InstanceGroupManagerResizeRequests || InstanceGroupManagers || InstanceGroups || InstanceSettings || InstanceTemplates || Instances || InstantSnapshotGroups || InstantSnapshots || InterconnectAttachmentGroups || InterconnectAttachments || InterconnectGroups || Interconnects || Licenses || MachineImages || NetworkAttachments || NetworkEdgeSecurityServices || NetworkEndpointGroups || NetworkFirewallPolicies || Networks || NodeGroups || NodeTemplates || OrganizationSecurityPolicies || PacketMirrorings || PreviewFeatures || Projects || PublicAdvertisedPrefixes || PublicDelegatedPrefixes || RegionAutoscalers || RegionBackendBuckets || RegionBackendServices || RegionCommitments || RegionCompositeHealthChecks || RegionDisks || RegionHealthAggregationPolicies || RegionHealthCheckServices || RegionHealthChecks || RegionHealthSources || RegionInstanceGroupManagerResizeRequests || RegionInstanceGroupManagers || RegionInstanceGroups || RegionInstanceTemplates || RegionInstances || RegionInstantSnapshotGroups || RegionInstantSnapshots || RegionNetworkEndpointGroups || RegionNetworkFirewallPolicies || RegionNotificationEndpoints || RegionOperations || RegionSecurityPolicies || RegionSnapshotSettings || RegionSnapshots || RegionSslCertificates || RegionSslPolicies || RegionTargetHttpProxies || RegionTargetHttpsProxies || RegionTargetTcpProxies || RegionUrlMaps || ReservationBlocks || ReservationSlots || ReservationSubBlocks || Reservations || ResourcePolicies || RolloutPlans || Rollouts || Routers || Routes || SecurityPolicies || ServiceAttachments || SnapshotSettings || Snapshots || SslCertificates || SslPolicies || StoragePools || Subnetworks || TargetGrpcProxies || TargetHttpProxies || TargetHttpsProxies || TargetInstances || TargetPools || TargetSslProxies || TargetTcpProxies || TargetVpnGateways || UrlMaps || VpnGateways || VpnTunnels || WireGroups || ZoneOperations || ZoneVmExtensionPolicies
+#if Addresses || Autoscalers || BackendBuckets || BackendServices || CrossSiteNetworks || Disks || ExternalVpnGateways || FirewallPolicies || Firewalls || ForwardingRules || FutureReservations || GlobalAddresses || GlobalForwardingRules || GlobalNetworkEndpointGroups || GlobalOperations || GlobalOrganizationOperations || GlobalPublicDelegatedPrefixes || GlobalVmExtensionPolicies || HealthChecks || Hosts || HttpHealthChecks || HttpsHealthChecks || Images || InstanceGroupManagerResizeRequests || InstanceGroupManagers || InstanceGroups || InstanceSettings || InstanceTemplates || Instances || InstantSnapshotGroups || InstantSnapshots || InterconnectAttachmentGroups || InterconnectAttachments || InterconnectGroups || Interconnects || Licenses || MachineImages || NetworkAttachments || NetworkEdgeSecurityServices || NetworkEndpointGroups || NetworkFirewallPolicies || Networks || NodeGroups || NodeTemplates || OrganizationSecurityPolicies || PacketMirrorings || PreviewFeatures || Projects || PublicAdvertisedPrefixes || PublicDelegatedPrefixes || RegionAutoscalers || RegionBackendBuckets || RegionBackendServices || RegionCommitments || RegionCompositeHealthChecks || RegionDisks || RegionHealthAggregationPolicies || RegionHealthCheckServices || RegionHealthChecks || RegionHealthSources || RegionInstanceGroupManagerResizeRequests || RegionInstanceGroupManagers || RegionInstanceGroups || RegionInstanceTemplates || RegionInstances || RegionInstantSnapshotGroups || RegionInstantSnapshots || RegionNetworkEndpointGroups || RegionNetworkFirewallPolicies || RegionNotificationEndpoints || RegionOperations || RegionSecurityPolicies || RegionSnapshotSettings || RegionSnapshots || RegionSslCertificates || RegionSslPolicies || RegionTargetHttpProxies || RegionTargetHttpsProxies || RegionTargetTcpProxies || RegionUrlMaps || ReservationBlocks || ReservationSlots || ReservationSubBlocks || Reservations || ResourcePolicies || RolloutPlans || Rollouts || Routers || Routes || SecurityPolicies || ServiceAttachments || SnapshotSettings || Snapshots || SslCertificates || SslPolicies || StoragePools || Subnetworks || TargetGrpcProxies || TargetHttpProxies || TargetHttpsProxies || TargetInstances || TargetPools || TargetSslProxies || TargetTcpProxies || TargetVpnGateways || UrlMaps || VpnGateways || VpnTunnels || WireGroups || ZoneOperations || ZoneVmExtensionPolicies
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an Operation resource.
-  ///
-  /// Google Compute Engine has three Operation resources:
-  ///
-  /// * [Global](/compute/docs/reference/rest/v1/globalOperations)
-  /// * [Regional](/compute/docs/reference/rest/v1/regionOperations)
-  /// * [Zonal](/compute/docs/reference/rest/v1/zoneOperations)
-  ///
-  /// You can use an operation resource to manage asynchronous API requests.
-  /// For more information, readHandling
-  /// API responses.
-  ///
-  /// Operations can be global, regional or zonal.
-  ///
-  ///    - For global operations, use the `globalOperations`
-  ///    resource.
-  ///    - For regional operations, use the
-  ///    `regionOperations` resource.
-  ///    - For zonal operations, use
-  ///    the `zoneOperations` resource.
-  ///
-  ///
-  ///
-  /// For more information, read
-  /// Global, Regional, and Zonal Resources.
-  ///
-  /// Note that completed Operation resources have a limited
-  /// retention period.
+  /// Represents an Operation resource. Google Compute Engine has three Operation resources: * [Global](/compute/docs/reference/rest/v1/globalOperations) * [Regional](/compute/docs/reference/rest/v1/regionOperations) * [Zonal](/compute/docs/reference/rest/v1/zoneOperations) You can use an operation resource to manage asynchronous API requests. For more information, read Handling API responses. Operations can be global, regional or zonal. - For global operations, use the `globalOperations` resource. - For regional operations, use the `regionOperations` resource. - For zonal operations, use the `zoneOperations` resource. For more information, read Global, Regional, and Zonal Resources. Note that completed Operation resources have a limited retention period.
   public struct Operation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] The value of `requestId` if you provided it in the request.
-    /// Not present otherwise.
+    /// [Output Only] The value of `requestId` if you provided it in the request. Not present otherwise.
     public var clientOperationId: Swift.String? = nil
 
     /// [Deprecated] This field is deprecated.
     public var creationTimestamp: Swift.String? = nil
 
-    /// [Output Only] A textual description of the operation, which is
-    /// set when the operation is created.
+    /// [Output Only] A textual description of the operation, which is set when the operation is created.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The time that this operation was completed. This value is inRFC3339
-    /// text format.
+    /// [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
     public var endTime: Swift.String? = nil
 
-    /// [Output Only] If errors are generated during processing of the operation,
-    /// this field will be populated.
+    /// [Output Only] If errors are generated during processing of the operation, this field will be populated.
     public var error: Operation.Error? = nil
 
     public var getVersionOperationMetadata: GetVersionOperationMetadata? = nil
 
-    /// [Output Only] If the operation fails, this field contains the HTTP error
-    /// message that was returned, such as `NOT FOUND`.
+    /// [Output Only] If the operation fails, this field contains the HTTP error message that was returned, such as `NOT FOUND`.
     public var httpErrorMessage: Swift.String? = nil
 
-    /// [Output Only] If the operation fails, this field contains the HTTP error
-    /// status code that was returned. For example, a `404` means the
-    /// resource was not found.
+    /// [Output Only] If the operation fails, this field contains the HTTP error status code that was returned. For example, a `404` means the resource was not found.
     public var httpErrorStatusCode: Swift.Int32? = nil
 
-    /// [Output Only] The unique identifier for the operation. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the operation. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// [Output Only] The time that this operation was requested.
-    /// This value is inRFC3339
-    /// text format.
+    /// [Output Only] The time that this operation was requested. This value is in RFC3339 text format.
     public var insertTime: Swift.String? = nil
 
     public var instancesBulkInsertOperationMetadata: InstancesBulkInsertOperationMetadata? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always `compute#operation` for
-    /// Operation resources.
+    /// Output only. [Output Only] Type of the resource. Always `compute#operation` for Operation resources.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Name of the operation.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] An ID that represents a group of operations, such as when a
-    /// group of operations results from a `bulkInsert` API request.
+    /// Output only. [Output Only] An ID that represents a group of operations, such as when a group of operations results from a `bulkInsert` API request.
     public var operationGroupId: Swift.String? = nil
 
-    /// [Output Only] The type of operation, such as `insert`,
-    /// `update`, or `delete`, and so on.
+    /// [Output Only] The type of operation, such as `insert`, `update`, or `delete`, and so on.
     public var operationType: Swift.String? = nil
 
-    /// [Output Only] An optional progress indicator that ranges from 0 to 100.
-    /// There is no requirement that this be linear or support any granularity of
-    /// operations. This should not be used to guess when the operation will be
-    /// complete. This number should monotonically increase as the operation
-    /// progresses.
+    /// [Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement that this be linear or support any granularity of operations. This should not be used to guess when the operation will be complete. This number should monotonically increase as the operation progresses.
     public var progress: Swift.Int32? = nil
 
-    /// [Output Only] The URL of the region where the operation resides. Only
-    /// applicable when performing regional operations.
+    /// [Output Only] The URL of the region where the operation resides. Only applicable when performing regional operations.
     public var region: Swift.String? = nil
 
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// Output only. [Output Only] If the operation is for projects.setCommonInstanceMetadata,
-    /// this field will contain information on all underlying zonal actions and
-    /// their state.
+    /// Output only. [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will contain information on all underlying zonal actions and their state.
     public var setCommonInstanceMetadataOperationMetadata:
       SetCommonInstanceMetadataOperationMetadata? = nil
 
-    /// [Output Only] The time that this operation was started by the server.
-    /// This value is inRFC3339
-    /// text format.
+    /// [Output Only] The time that this operation was started by the server. This value is in RFC3339 text format.
     public var startTime: Swift.String? = nil
 
-    /// [Output Only] The status of the operation, which can be one of the
-    /// following:
-    /// `PENDING`, `RUNNING`, or `DONE`.
+    /// [Output Only] The status of the operation, which can be one of the following: `PENDING`, `RUNNING`, or `DONE`.
     public var status: Operation.Status? = nil
 
-    /// [Output Only] An optional textual description of the current status of the
-    /// operation.
+    /// [Output Only] An optional textual description of the current status of the operation.
     public var statusMessage: Swift.String? = nil
 
-    /// [Output Only] The unique target ID, which identifies a specific incarnation
-    /// of the target resource.
+    /// [Output Only] The unique target ID, which identifies a specific incarnation of the target resource.
     public var targetId: Swift.UInt64? = nil
 
-    /// [Output Only] The URL of the resource that the operation modifies. For
-    /// operations related to creating a snapshot, this points to the disk
-    /// that the snapshot was created from.
+    /// [Output Only] The URL of the resource that the operation modifies. For operations related to creating a snapshot, this points to the disk that the snapshot was created from.
     public var targetLink: Swift.String? = nil
 
-    /// [Output Only] User who requested the operation, for example:
-    /// `user@example.com` or
-    /// `alice_smith_identifier (global/workforcePools/example-com-us-employees)`.
+    /// [Output Only] User who requested the operation, for example: `user@example.com` or `alice_smith_identifier (global/workforcePools/example-com-us-employees)`.
     public var user: Swift.String? = nil
 
-    /// [Output Only] If warning messages are generated during processing of the
-    /// operation, this field will be populated.
+    /// [Output Only] If warning messages are generated during processing of the operation, this field will be populated.
     public var warnings: [Operation.Warnings] = []
 
-    /// [Output Only] The URL of the zone where the operation resides. Only
-    /// applicable when performing per-zone operations.
+    /// [Output Only] The URL of the zone where the operation resides. Only applicable when performing per-zone operations.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `Operation`.
@@ -183,8 +124,7 @@
     public struct Error: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] The array of errors encountered while processing this
-      /// operation.
+      /// [Output Only] The array of errors encountered while processing this operation.
       public var errors: [Operation.Error.Errors] = []
 
       /// Initialize a new instance of `Error`.
@@ -212,15 +152,10 @@
         /// [Output Only] The error type identifier for this error.
         public var code: Swift.String? = nil
 
-        /// [Output Only] An optional list of messages that contain the error
-        /// details. There is a set of defined message types to use for providing
-        /// details.The syntax depends on the error code. For example,
-        /// QuotaExceededInfo will have details when the error code is
-        /// QUOTA_EXCEEDED.
+        /// [Output Only] An optional list of messages that contain the error details. There is a set of defined message types to use for providing details.The syntax depends on the error code. For example, QuotaExceededInfo will have details when the error code is QUOTA_EXCEEDED.
         public var errorDetails: [Operation.Error.Errors.ErrorDetails] = []
 
-        /// [Output Only] Indicates the field in the request that caused the error.
-        /// This property is optional.
+        /// [Output Only] Indicates the field in the request that caused the error. This property is optional.
         public var location: Swift.String? = nil
 
         /// [Output Only] An optional, human-readable error message.
@@ -315,19 +250,10 @@
     public struct Warnings: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] A warning code, if applicable. For example, Compute
-      /// Engine returns NO_RESULTS_ON_PAGE if there
-      /// are no results in the response.
+      /// [Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
       public var code: Operation.Warnings.Code? = nil
 
-      /// [Output Only] Metadata about this warning in key:
-      /// value format. For example:
-      ///
-      /// "data": [
-      ///   {
-      ///    "key": "scope",
-      ///    "value": "zones/us-east1-d"
-      ///   }
+      /// [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
       public var data: [Operation.Warnings.Data] = []
 
       /// [Output Only] A human-readable description of the warning code.
@@ -355,13 +281,7 @@
       public struct Data: Codable, Equatable, GoogleCloudWkt._AnyPackable,
         Sendable
       {
-        /// [Output Only] A key that provides more detail on the warning being
-        /// returned. For example, for warnings where there are no results in a list
-        /// request for a particular zone, this key might be scope and
-        /// the key value might be the zone name. Other examples might be a key
-        /// indicating a deprecated resource and a suggested replacement, or a
-        /// warning about invalid network settings (for example, if an instance
-        /// attempts to perform IP forwarding but is not enabled for IP forwarding).
+        /// [Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
         public var key: Swift.String? = nil
 
         /// [Output Only] A warning data value corresponding to the key.
@@ -398,76 +318,60 @@
       ///
       /// [google.cloud.compute.v1.Operation.warnings.code]: <doc:Operation/Warnings/Code>
       public enum Code: Codable, Equatable, Sendable {
-        /// Warning about failed cleanup of transient changes made by a failed
-        /// operation.
+        /// Warning about failed cleanup of transient changes made by a failed operation.
         case cleanupFailed
         /// A link to a deprecated resource was created.
         case deprecatedResourceUsed
-        /// When deploying and at least one of the resources has a type marked as
-        /// deprecated
+        /// When deploying and at least one of the resources has a type marked as deprecated
         case deprecatedTypeUsed
         /// The user created a boot disk that is larger than image size.
         case diskSizeLargerThanImageSize
-        /// When deploying and at least one of the resources has a type marked as
-        /// experimental
+        /// When deploying and at least one of the resources has a type marked as experimental
         case experimentalTypeUsed
         /// Warning that is present in an external api call
         case externalApiWarning
-        /// Warning that value of a field has been overridden.
-        /// Deprecated unused field.
+        /// Warning that value of a field has been overridden. Deprecated unused field.
         @available(*, deprecated)
         case fieldValueOverriden
         /// The operation involved use of an injected kernel, which is deprecated.
         case injectedKernelsDeprecated
-        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is
-        /// not of type HTTP/HTTPS/HTTP2.
+        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is not of type HTTP/HTTPS/HTTP2.
         case invalidHealthCheckForDynamicWieghtedLb
         /// When deploying a deployment with a exceedingly large number of resources
         case largeDeploymentWarning
-        /// Resource can't be retrieved due to list overhead quota exceed
-        /// which captures the amount of resources filtered out by
-        /// user-defined list filter.
+        /// Resource can't be retrieved due to list overhead quota exceed which captures the amount of resources filtered out by user-defined list filter.
         case listOverheadQuotaExceed
         /// A resource depends on a missing type
         case missingTypeDependency
-        /// The route's nextHopIp address is not assigned to an instance on the
-        /// network.
+        /// The route's nextHopIp address is not assigned to an instance on the network.
         case nextHopAddressNotAssigned
         /// The route's next hop instance cannot ip forward.
         case nextHopCannotIpForward
-        /// The route's nextHopInstance URL refers to an instance that does not have an
-        /// ipv6 interface on the same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that does not have an ipv6 interface on the same network as the route.
         case nextHopInstanceHasNoIpv6Interface
         /// The route's nextHopInstance URL refers to an instance that does not exist.
         case nextHopInstanceNotFound
-        /// The route's nextHopInstance URL refers to an instance that is not on the
-        /// same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that is not on the same network as the route.
         case nextHopInstanceNotOnNetwork
         /// The route's next hop instance does not have a status of RUNNING.
         case nextHopNotRunning
-        /// Error which is not critical. We decided to continue the process despite
-        /// the mentioned error.
+        /// Error which is not critical. We decided to continue the process despite the mentioned error.
         case notCriticalError
         /// No results are present on a particular list page.
         case noResultsOnPage
         /// Success is reported, but some results may be missing due to errors
         case partialSuccess
-        /// Quota information is not available to client requests (e.g:
-        /// regions.list).
+        /// Quota information is not available to client requests (e.g: regions.list).
         case quotaInfoUnavailable
-        /// The user attempted to use a resource that requires a TOS they have not
-        /// accepted.
+        /// The user attempted to use a resource that requires a TOS they have not accepted.
         case requiredTosAgreement
         /// Warning that a resource is in use.
         case resourceInUseByOtherResourceWarning
-        /// One or more of the resources set to auto-delete could not be deleted
-        /// because they were in use.
+        /// One or more of the resources set to auto-delete could not be deleted because they were in use.
         case resourceNotDeleted
         /// When a resource schema validation is ignored.
         case schemaValidationIgnored
-        /// Instance template used in instance group manager is valid as such, but
-        /// its application does not make a lot of sense, because it allows only
-        /// single instance in instance group.
+        /// Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.
         case singleInstancePropertyTemplate
         /// When undeclared properties in the schema are present
         case undeclaredProperties

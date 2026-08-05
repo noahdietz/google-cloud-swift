@@ -18,18 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a rule that describes one or more match conditions along with
-  /// the action to be taken when traffic matches this condition (allow or deny).
+  /// Represents a rule that describes one or more match conditions along with the action to be taken when traffic matches this condition (allow or deny).
   public struct FirewallPolicyRule: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The Action to perform when the client connection triggers the rule.
-    /// Valid actions for firewall rules are: "allow", "deny",
-    /// "apply_security_profile_group" and "goto_next" (
-    /// "apply_security_profile_group" can be specified only for global
-    /// network firewall policies or hierarchical firewall policies).
-    /// Valid actions for packet mirroring rules are: "mirror", "do_not_mirror"
-    /// and "goto_next".
+    /// The Action to perform when the client connection triggers the rule. Valid actions for firewall rules are: "allow", "deny", "apply_security_profile_group" and "goto_next" ( "apply_security_profile_group" can be specified only for global network firewall policies or hierarchical firewall policies). Valid actions for packet mirroring rules are: "mirror", "do_not_mirror" and "goto_next".
     public var action: Swift.String? = nil
 
     /// An optional description for this resource.
@@ -38,86 +31,46 @@
     /// The direction in which this rule applies.
     public var direction: FirewallPolicyRule.Direction? = nil
 
-    /// Denotes whether the firewall policy rule is disabled. When set to true,
-    /// the firewall policy rule is not enforced and traffic behaves as if it did
-    /// not exist. If this is unspecified, the firewall policy rule will be
-    /// enabled.
+    /// Denotes whether the firewall policy rule is disabled. When set to true, the firewall policy rule is not enforced and traffic behaves as if it did not exist. If this is unspecified, the firewall policy rule will be enabled.
     public var disabled: Swift.Bool? = nil
 
-    /// Denotes whether to enable logging for a particular rule. If logging is
-    /// enabled, logs will be exported to the configured export destination in
-    /// Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you
-    /// cannot enable logging on "goto_next" rules.
+    /// Denotes whether to enable logging for a particular rule. If logging is enabled, logs will be exported to the configured export destination in Stackdriver. Logs may be exported to BigQuery or Pub/Sub. Note: you cannot enable logging on "goto_next" rules.
     public var enableLogging: Swift.Bool? = nil
 
-    /// Output only. [Output only] Type of the resource. Returnscompute#firewallPolicyRule for firewall rules andcompute#packetMirroringRule for packet mirroring rules.
+    /// Output only. [Output only] Type of the resource. Returns compute#firewallPolicyRule for firewall rules and compute#packetMirroringRule for packet mirroring rules.
     public var kind: Swift.String? = nil
 
-    /// A match condition that incoming traffic is evaluated against.
-    /// If it evaluates to true, the corresponding 'action' is enforced.
+    /// A match condition that incoming traffic is evaluated against. If it evaluates to true, the corresponding 'action' is enforced.
     public var match: FirewallPolicyRuleMatcher? = nil
 
-    /// An integer indicating the priority of a rule in the list. The priority
-    /// must be a positive value between 0 and 2147483647.
-    /// Rules are evaluated from highest to lowest priority where 0 is the
-    /// highest priority and 2147483647 is the lowest priority.
+    /// An integer indicating the priority of a rule in the list. The priority must be a positive value between 0 and 2147483647. Rules are evaluated from highest to lowest priority where 0 is the highest priority and 2147483647 is the lowest priority.
     public var priority: Swift.Int32? = nil
 
-    /// An optional name for the rule. This field is not a unique identifier
-    /// and can be updated.
+    /// An optional name for the rule. This field is not a unique identifier and can be updated.
     public var ruleName: Swift.String? = nil
 
-    /// Output only. [Output Only] Calculation of the complexity of a single firewall policy
-    /// rule.
+    /// Output only. [Output Only] Calculation of the complexity of a single firewall policy rule.
     public var ruleTupleCount: Swift.Int32? = nil
 
-    /// A fully-qualified URL of a SecurityProfileGroup resource instance.
-    /// Example:
-    /// https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group
-    /// Must be specified if action is one of 'apply_security_profile_group' or
-    /// 'mirror'. Cannot be specified for other actions. Can be specified only
-    /// for global network firewall policies or hierarchical firewall policies.
+    /// A fully-qualified URL of a SecurityProfileGroup resource instance. Example: https://networksecurity.googleapis.com/v1/projects/{project}/locations/{location}/securityProfileGroups/my-security-profile-group Must be specified if action is one of 'apply_security_profile_group' or 'mirror'. Cannot be specified for other actions. Can be specified only for global network firewall policies or hierarchical firewall policies.
     public var securityProfileGroup: Swift.String? = nil
 
-    /// A list of forwarding rules to which this rule applies.
-    /// This field allows you to control which load balancers get this rule.
-    /// For example, the following are valid values:
-    ///
-    ///
-    ///      - https://www.googleapis.com/compute/v1/projects/project/global/forwardingRules/forwardingRule
-    ///      - https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-    ///      - projects/project/global/
-    ///      forwardingRules/forwardingRule
-    ///      - projects/project/regions/region/forwardingRules/
-    ///      forwardingRule
+    /// A list of forwarding rules to which this rule applies. This field allows you to control which load balancers get this rule. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project /global/forwardingRules/forwardingRule - https://www.googleapis.com/compute/v1/projects/project/regions/region /forwardingRules/forwardingRule - projects/project/global/ forwardingRules/forwardingRule - projects/project/regions/region/forwardingRules/ forwardingRule
     public var targetForwardingRules: [Swift.String] = []
 
-    /// A list of network resource URLs to which this rule applies.  This field
-    /// allows you to control which network's VMs get this rule.  If this field
-    /// is left blank, all VMs within the organization will receive the rule.
+    /// A list of network resource URLs to which this rule applies. This field allows you to control which network's VMs get this rule. If this field is left blank, all VMs within the organization will receive the rule.
     public var targetResources: [Swift.String] = []
 
-    /// A list of secure tags that controls which instances the firewall rule
-    /// applies to. If targetSecureTag are specified, then the
-    /// firewall rule applies only to instances in the VPC network that have one
-    /// of those EFFECTIVE secure tags, if all the target_secure_tag are in
-    /// INEFFECTIVE state, then this rule will be ignored.targetSecureTag may not be set at the same time astargetServiceAccounts.
-    /// If neither targetServiceAccounts nortargetSecureTag are specified, the firewall rule applies
-    /// to all instances on the specified network.
-    /// Maximum number of target label tags allowed is 256.
+    /// A list of secure tags that controls which instances the firewall rule applies to. If targetSecureTag are specified, then the firewall rule applies only to instances in the VPC network that have one of those EFFECTIVE secure tags, if all the target_secure_tag are in INEFFECTIVE state, then this rule will be ignored. targetSecureTag may not be set at the same time as targetServiceAccounts. If neither targetServiceAccounts nor targetSecureTag are specified, the firewall rule applies to all instances on the specified network. Maximum number of target label tags allowed is 256.
     public var targetSecureTags: [FirewallPolicyRuleSecureTag] = []
 
-    /// A list of service accounts indicating the sets of instances that are
-    /// applied with this rule.
+    /// A list of service accounts indicating the sets of instances that are applied with this rule.
     public var targetServiceAccounts: [Swift.String] = []
 
-    /// Target types of the firewall policy rule.
-    /// Default value is INSTANCES.
+    /// Target types of the firewall policy rule. Default value is INSTANCES.
     public var targetType: FirewallPolicyRule.TargetType? = nil
 
-    /// Boolean flag indicating if the traffic should be TLS decrypted.
-    /// Can be set only if action = 'apply_security_profile_group' and cannot
-    /// be set for other actions.
+    /// Boolean flag indicating if the traffic should be TLS decrypted. Can be set only if action = 'apply_security_profile_group' and cannot be set for other actions.
     public var tlsInspect: Swift.Bool? = nil
 
     /// Initialize a new instance of `FirewallPolicyRule`.

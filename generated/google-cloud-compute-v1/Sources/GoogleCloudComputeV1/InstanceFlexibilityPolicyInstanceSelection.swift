@@ -18,28 +18,18 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Specification of machine type to use. Every position inside this message
-  /// is an alternative.
-  /// The count specified in the shape flexibility must not exceed the number
-  /// of entries in per_instance_properties or the capacity of the
-  /// name_pattern, if used.
+  /// Specification of machine type to use. Every position inside this message is an alternative. The count specified in the shape flexibility must not exceed the number of entries in per_instance_properties or the capacity of the name_pattern, if used.
   public struct InstanceFlexibilityPolicyInstanceSelection: Codable, Equatable, GoogleCloudWkt
       ._AnyPackable,
     Sendable
   {
-    /// Disks to be attached to the instances created from in this selection.
-    /// They override the disks specified in the instance properties.
+    /// Disks to be attached to the instances created from in this selection. They override the disks specified in the instance properties.
     public var disks: [AttachedDisk] = []
 
-    /// Alternative machine types to use for instances that are created from
-    /// these properties. This field only accepts a machine type names, for
-    /// example `n2-standard-4` and not URLs or partial URLs.
+    /// Alternative machine types to use for instances that are created from these properties. This field only accepts a machine type names, for example `n2-standard-4` and not URLs or partial URLs.
     public var machineTypes: [Swift.String] = []
 
-    /// Rank when prioritizing the shape flexibilities.
-    /// The instance selections with rank are considered
-    /// first, in the ascending order of the rank.
-    /// If not set, defaults to 0.
+    /// Rank when prioritizing the shape flexibilities. The instance selections with rank are considered first, in the ascending order of the rank. If not set, defaults to 0.
     public var rank: Swift.Int64? = nil
 
     /// Initialize a new instance of `InstanceFlexibilityPolicyInstanceSelection`.

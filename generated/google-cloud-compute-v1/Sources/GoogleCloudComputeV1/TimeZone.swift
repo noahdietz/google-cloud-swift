@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a time zone from the
-  /// [IANA Time Zone Database](https://www.iana.org/time-zones).
+  /// Represents a time zone from the [IANA Time Zone Database](https://www.iana.org/time-zones).
   public struct TimeZone: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

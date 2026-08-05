@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The current IP utilization of all subnetwork ranges. Contains the total
-  /// number of allocated and free IPs in each range.
+  /// The current IP utilization of all subnetwork ranges. Contains the total number of allocated and free IPs in each range.
   public struct SubnetworkUtilizationDetails: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -32,8 +31,7 @@
     /// Utilizations of internal IPV6 IP range.
     public var internalIpv6Utilization: SubnetworkUtilizationDetailsIPV6Utilization? = nil
 
-    /// Utilizations of all IPV4 IP ranges. For primary ranges, the range name
-    /// will be empty.
+    /// Utilizations of all IPV4 IP ranges. For primary ranges, the range name will be empty.
     public var ipv4Utilizations: [SubnetworkUtilizationDetailsIPV4Utilization] = []
 
     /// Initialize a new instance of `SubnetworkUtilizationDetails`.

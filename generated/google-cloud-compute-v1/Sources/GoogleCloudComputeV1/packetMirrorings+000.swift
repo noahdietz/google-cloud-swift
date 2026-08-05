@@ -42,10 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of packetMirrorings.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of packetMirrorings. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "packetMirrorings_aggregatedList")
     public func aggregatedList(
@@ -54,10 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of packetMirrorings.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of packetMirrorings. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "packetMirrorings_aggregatedList")
     public func aggregatedList(
@@ -131,8 +125,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a PacketMirroring resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a PacketMirroring resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "packetMirrorings_insert")
     public func insert(
@@ -141,8 +134,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a PacketMirroring resource in the specified project and region
-    /// using the data included in the request.
+    /// Creates a PacketMirroring resource in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "packetMirrorings_insert")
     public func insert(
@@ -183,8 +175,7 @@
       )
     }
 
-    /// Retrieves a list of PacketMirroring resources available to the specified
-    /// project and region.
+    /// Retrieves a list of PacketMirroring resources available to the specified project and region.
     ///
     /// @Snippet(path: "packetMirrorings_list")
     public func list(
@@ -193,8 +184,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of PacketMirroring resources available to the specified
-    /// project and region.
+    /// Retrieves a list of PacketMirroring resources available to the specified project and region.
     ///
     /// @Snippet(path: "packetMirrorings_list")
     public func list(
@@ -209,10 +199,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified PacketMirroring resource with the data included in
-    /// the request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified PacketMirroring resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "packetMirrorings_patch")
     public func patch(
@@ -221,10 +208,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified PacketMirroring resource with the data included in
-    /// the request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified PacketMirroring resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "packetMirrorings_patch")
     public func patch(

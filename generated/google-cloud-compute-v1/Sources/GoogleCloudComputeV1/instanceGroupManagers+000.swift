@@ -43,21 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Flags the specified instances to be removed from the
-    /// managed instance group. Abandoning an instance does not delete the
-    /// instance, but it does remove the instance from any target pools that are
-    /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
-    /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
-    /// not yet been removed from the group. You must separately verify the
-    /// status of the abandoning action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances to be removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_abandonInstances")
     public func abandonInstances(
@@ -67,21 +53,7 @@
       try await self.inner.abandonInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances to be removed from the
-    /// managed instance group. Abandoning an instance does not delete the
-    /// instance, but it does remove the instance from any target pools that are
-    /// applied by the managed instance group. This method reduces thetargetSize of the managed instance group by the
-    /// number of instances that you abandon. This operation is marked asDONE when the action is scheduled even if the instances have
-    /// not yet been removed from the group. You must separately verify the
-    /// status of the abandoning action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances to be removed from the managed instance group. Abandoning an instance does not delete the instance, but it does remove the instance from any target pools that are applied by the managed instance group. This method reduces the targetSize of the managed instance group by the number of instances that you abandon. This operation is marked as DONE when the action is scheduled even if the instances have not yet been removed from the group. You must separately verify the status of the abandoning action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_abandonInstances")
     public func abandonInstances(
@@ -123,10 +95,7 @@
       )
     }
 
-    /// Retrieves the list of managed instance groups and groups them by zone.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of managed instance groups and groups them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instanceGroupManagers_aggregatedList")
     public func aggregatedList(
@@ -136,10 +105,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of managed instance groups and groups them by zone.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of managed instance groups and groups them by zone. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "instanceGroupManagers_aggregatedList")
     public func aggregatedList(
@@ -156,8 +122,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Applies changes to selected instances on the managed instance group.
-    /// This method can be used to apply new overrides and/or new versions.
+    /// Applies changes to selected instances on the managed instance group. This method can be used to apply new overrides and/or new versions.
     ///
     /// @Snippet(path: "instanceGroupManagers_applyUpdatesToInstances")
     public func applyUpdatesToInstances(
@@ -167,8 +132,7 @@
       try await self.inner.applyUpdatesToInstances(request: request, options: options)
     }
 
-    /// Applies changes to selected instances on the managed instance group.
-    /// This method can be used to apply new overrides and/or new versions.
+    /// Applies changes to selected instances on the managed instance group. This method can be used to apply new overrides and/or new versions.
     ///
     /// @Snippet(path: "instanceGroupManagers_applyUpdatesToInstances")
     public func applyUpdatesToInstances(
@@ -210,10 +174,7 @@
       )
     }
 
-    /// Creates instances with per-instance configurations in this managed instance
-    /// group. Instances are created using the current instance template. Thecreate instances operation is marked DONE if thecreateInstances request is successful. The underlying actions
-    /// take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
-    /// method.
+    /// Creates instances with per-instance configurations in this managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
     ///
     /// @Snippet(path: "instanceGroupManagers_createInstances")
     public func createInstances(
@@ -223,10 +184,7 @@
       try await self.inner.createInstances(request: request, options: options)
     }
 
-    /// Creates instances with per-instance configurations in this managed instance
-    /// group. Instances are created using the current instance template. Thecreate instances operation is marked DONE if thecreateInstances request is successful. The underlying actions
-    /// take additional time. You must separately verify the status of thecreating or actions with the listmanagedinstances
-    /// method.
+    /// Creates instances with per-instance configurations in this managed instance group. Instances are created using the current instance template. The create instances operation is marked DONE if the createInstances request is successful. The underlying actions take additional time. You must separately verify the status of the creating or actions with the listmanagedinstances method.
     ///
     /// @Snippet(path: "instanceGroupManagers_createInstances")
     public func createInstances(
@@ -268,10 +226,7 @@
       )
     }
 
-    /// Deletes the specified managed instance group and all of the instances
-    /// in that group. Note that the instance group must not belong to a
-    /// backend service. Read
-    /// Deleting an instance group for more information.
+    /// Deletes the specified managed instance group and all of the instances in that group. Note that the instance group must not belong to a backend service. Read Deleting an instance group for more information.
     ///
     /// @Snippet(path: "instanceGroupManagers_delete")
     public func delete(
@@ -280,10 +235,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified managed instance group and all of the instances
-    /// in that group. Note that the instance group must not belong to a
-    /// backend service. Read
-    /// Deleting an instance group for more information.
+    /// Deletes the specified managed instance group and all of the instances in that group. Note that the instance group must not belong to a backend service. Read Deleting an instance group for more information.
     ///
     /// @Snippet(path: "instanceGroupManagers_delete")
     public func delete(
@@ -324,21 +276,7 @@
       )
     }
 
-    /// Flags the specified instances in the managed instance group for immediate
-    /// deletion. The instances are also removed from any target
-    /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
-    /// instances that you delete. This operation is marked as DONE
-    /// when the action is scheduled even if the instances are still being deleted.
-    /// You must separately verify the status of the deleting action
-    /// with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group for immediate deletion. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. This operation is marked as DONE when the action is scheduled even if the instances are still being deleted. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_deleteInstances")
     public func deleteInstances(
@@ -348,21 +286,7 @@
       try await self.inner.deleteInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances in the managed instance group for immediate
-    /// deletion. The instances are also removed from any target
-    /// pools of which they were a member. This method reduces thetargetSize of the managed instance group by the number of
-    /// instances that you delete. This operation is marked as DONE
-    /// when the action is scheduled even if the instances are still being deleted.
-    /// You must separately verify the status of the deleting action
-    /// with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group for immediate deletion. The instances are also removed from any target pools of which they were a member. This method reduces the targetSize of the managed instance group by the number of instances that you delete. This operation is marked as DONE when the action is scheduled even if the instances are still being deleted. You must separately verify the status of the deleting action with the listmanagedinstances method. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_deleteInstances")
     public func deleteInstances(
@@ -404,8 +328,7 @@
       )
     }
 
-    /// Deletes selected per-instance configurations for the managed instance
-    /// group.
+    /// Deletes selected per-instance configurations for the managed instance group.
     ///
     /// @Snippet(path: "instanceGroupManagers_deletePerInstanceConfigs")
     public func deletePerInstanceConfigs(
@@ -415,8 +338,7 @@
       try await self.inner.deletePerInstanceConfigs(request: request, options: options)
     }
 
-    /// Deletes selected per-instance configurations for the managed instance
-    /// group.
+    /// Deletes selected per-instance configurations for the managed instance group.
     ///
     /// @Snippet(path: "instanceGroupManagers_deletePerInstanceConfigs")
     public func deletePerInstanceConfigs(
@@ -467,17 +389,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a managed instance group using the information that you specify
-    /// in the request. After the group is created, instances in the group are
-    /// created using the specified instance template.
-    /// This operation is marked as DONE when the group is created
-    /// even if the instances in the group have not yet been created. You
-    /// must separately verify the status of the individual instances with thelistmanagedinstances
-    /// method.
-    ///
-    /// A managed instance group can have up to 1000 VM instances per group. Please
-    /// contact Cloud Support if you need an increase in
-    /// this limit.
+    /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A managed instance group can have up to 1000 VM instances per group. Please contact Cloud Support if you need an increase in this limit.
     ///
     /// @Snippet(path: "instanceGroupManagers_insert")
     public func insert(
@@ -486,17 +398,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a managed instance group using the information that you specify
-    /// in the request. After the group is created, instances in the group are
-    /// created using the specified instance template.
-    /// This operation is marked as DONE when the group is created
-    /// even if the instances in the group have not yet been created. You
-    /// must separately verify the status of the individual instances with thelistmanagedinstances
-    /// method.
-    ///
-    /// A managed instance group can have up to 1000 VM instances per group. Please
-    /// contact Cloud Support if you need an increase in
-    /// this limit.
+    /// Creates a managed instance group using the information that you specify in the request. After the group is created, instances in the group are created using the specified instance template. This operation is marked as DONE when the group is created even if the instances in the group have not yet been created. You must separately verify the status of the individual instances with the listmanagedinstances method. A managed instance group can have up to 1000 VM instances per group. Please contact Cloud Support if you need an increase in this limit.
     ///
     /// @Snippet(path: "instanceGroupManagers_insert")
     public func insert(
@@ -537,8 +439,7 @@
       )
     }
 
-    /// Retrieves a list of managed instance groups that are contained within the
-    /// specified project and zone.
+    /// Retrieves a list of managed instance groups that are contained within the specified project and zone.
     ///
     /// @Snippet(path: "instanceGroupManagers_list")
     public func list(
@@ -547,8 +448,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of managed instance groups that are contained within the
-    /// specified project and zone.
+    /// Retrieves a list of managed instance groups that are contained within the specified project and zone.
     ///
     /// @Snippet(path: "instanceGroupManagers_list")
     public func list(
@@ -563,9 +463,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists all errors thrown by actions on instances for a given managed
-    /// instance group. The filter and orderBy query
-    /// parameters are not supported.
+    /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
     ///
     /// @Snippet(path: "instanceGroupManagers_listErrors")
     public func listErrors(
@@ -574,9 +472,7 @@
       try await self.inner.listErrors(request: request, options: options)
     }
 
-    /// Lists all errors thrown by actions on instances for a given managed
-    /// instance group. The filter and orderBy query
-    /// parameters are not supported.
+    /// Lists all errors thrown by actions on instances for a given managed instance group. The filter and orderBy query parameters are not supported.
     ///
     /// @Snippet(path: "instanceGroupManagers_listErrors")
     public func listErrors(
@@ -592,15 +488,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists all of the instances in the managed instance group. Each instance
-    /// in the list has a currentAction, which indicates the action
-    /// that the managed instance group is performing on the instance. For example,
-    /// if the group is still creating an instance, the currentAction
-    /// is CREATING. If a previous action failed, the
-    /// list displays the errors for that failed action. The orderBy
-    /// query parameter is not supported. The `pageToken` query parameter is
-    /// supported only if the group's `listManagedInstancesResults` field is set
-    /// to `PAGINATED`.
+    /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
     ///
     /// @Snippet(path: "instanceGroupManagers_listManagedInstances")
     public func listManagedInstances(
@@ -610,15 +498,7 @@
       try await self.inner.listManagedInstances(request: request, options: options)
     }
 
-    /// Lists all of the instances in the managed instance group. Each instance
-    /// in the list has a currentAction, which indicates the action
-    /// that the managed instance group is performing on the instance. For example,
-    /// if the group is still creating an instance, the currentAction
-    /// is CREATING. If a previous action failed, the
-    /// list displays the errors for that failed action. The orderBy
-    /// query parameter is not supported. The `pageToken` query parameter is
-    /// supported only if the group's `listManagedInstancesResults` field is set
-    /// to `PAGINATED`.
+    /// Lists all of the instances in the managed instance group. Each instance in the list has a currentAction, which indicates the action that the managed instance group is performing on the instance. For example, if the group is still creating an instance, the currentAction is CREATING. If a previous action failed, the list displays the errors for that failed action. The orderBy query parameter is not supported. The `pageToken` query parameter is supported only if the group's `listManagedInstancesResults` field is set to `PAGINATED`.
     ///
     /// @Snippet(path: "instanceGroupManagers_listManagedInstances")
     public func listManagedInstances(
@@ -635,8 +515,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists all of the per-instance configurations defined for the managed
-    /// instance group. The orderBy query parameter is not supported.
+    /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
     ///
     /// @Snippet(path: "instanceGroupManagers_listPerInstanceConfigs")
     public func listPerInstanceConfigs(
@@ -646,8 +525,7 @@
       try await self.inner.listPerInstanceConfigs(request: request, options: options)
     }
 
-    /// Lists all of the per-instance configurations defined for the managed
-    /// instance group. The orderBy query parameter is not supported.
+    /// Lists all of the per-instance configurations defined for the managed instance group. The orderBy query parameter is not supported.
     ///
     /// @Snippet(path: "instanceGroupManagers_listPerInstanceConfigs")
     public func listPerInstanceConfigs(
@@ -664,21 +542,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates a managed instance group using the information that you specify
-    /// in the request.
-    /// This operation is marked as DONE when the group is patched
-    /// even if the instances in the group are still in the process of being
-    /// patched. You must separately verify the status of the individual instances
-    /// with thelistManagedInstances
-    /// method. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
-    ///
-    /// If you update your group to specify a new template or instance
-    /// configuration, it's possible that your intended specification for each VM
-    /// in the group is different from the current state of that VM. To learn how
-    /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
-    /// a MIG.
+    /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listManagedInstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
     ///
     /// @Snippet(path: "instanceGroupManagers_patch")
     public func patch(
@@ -687,21 +551,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates a managed instance group using the information that you specify
-    /// in the request.
-    /// This operation is marked as DONE when the group is patched
-    /// even if the instances in the group are still in the process of being
-    /// patched. You must separately verify the status of the individual instances
-    /// with thelistManagedInstances
-    /// method. This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
-    ///
-    /// If you update your group to specify a new template or instance
-    /// configuration, it's possible that your intended specification for each VM
-    /// in the group is different from the current state of that VM. To learn how
-    /// to apply an updated configuration to the VMs in a MIG, seeUpdating instances in
-    /// a MIG.
+    /// Updates a managed instance group using the information that you specify in the request. This operation is marked as DONE when the group is patched even if the instances in the group are still in the process of being patched. You must separately verify the status of the individual instances with the listManagedInstances method. This method supports PATCH semantics and uses the JSON merge patch format and processing rules. If you update your group to specify a new template or instance configuration, it's possible that your intended specification for each VM in the group is different from the current state of that VM. To learn how to apply an updated configuration to the VMs in a MIG, see Updating instances in a MIG.
     ///
     /// @Snippet(path: "instanceGroupManagers_patch")
     public func patch(
@@ -742,9 +592,7 @@
       )
     }
 
-    /// Inserts or patches per-instance configurations for the managed instance
-    /// group. perInstanceConfig.name serves as a key used to
-    /// distinguish whether to perform insert or patch.
+    /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
     ///
     /// @Snippet(path: "instanceGroupManagers_patchPerInstanceConfigs")
     public func patchPerInstanceConfigs(
@@ -754,9 +602,7 @@
       try await self.inner.patchPerInstanceConfigs(request: request, options: options)
     }
 
-    /// Inserts or patches per-instance configurations for the managed instance
-    /// group. perInstanceConfig.name serves as a key used to
-    /// distinguish whether to perform insert or patch.
+    /// Inserts or patches per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
     ///
     /// @Snippet(path: "instanceGroupManagers_patchPerInstanceConfigs")
     public func patchPerInstanceConfigs(
@@ -798,19 +644,7 @@
       )
     }
 
-    /// Flags the specified VM instances in the managed instance group to be
-    /// immediately recreated. Each instance is recreated using the group's current
-    /// configuration. This operation is marked as DONE when the flag
-    /// is set even if the instances have not yet been recreated. You must
-    /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
-    /// the status of managed instances.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_recreateInstances")
     public func recreateInstances(
@@ -820,19 +654,7 @@
       try await self.inner.recreateInstances(request: request, options: options)
     }
 
-    /// Flags the specified VM instances in the managed instance group to be
-    /// immediately recreated. Each instance is recreated using the group's current
-    /// configuration. This operation is marked as DONE when the flag
-    /// is set even if the instances have not yet been recreated. You must
-    /// separately verify the status of each instance by checking itscurrentAction field; for more information, see Checking
-    /// the status of managed instances.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified VM instances in the managed instance group to be immediately recreated. Each instance is recreated using the group's current configuration. This operation is marked as DONE when the flag is set even if the instances have not yet been recreated. You must separately verify the status of each instance by checking its currentAction field; for more information, see Checking the status of managed instances. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_recreateInstances")
     public func recreateInstances(
@@ -874,29 +696,7 @@
       )
     }
 
-    /// Resizes the managed instance group. If you increase the size, the group
-    /// creates new instances using the current instance template. If you decrease
-    /// the size, the group deletes instances. The resize operation is markedDONE when the resize actions are scheduled even if the group
-    /// has not yet added or deleted any instances. You must separately
-    /// verify the status of the creating or deleting
-    /// actions with thelistmanagedinstances
-    /// method.
-    ///
-    /// When resizing down, the instance group arbitrarily chooses the order in
-    /// which VMs are deleted. The group takes into account some VM attributes when
-    /// making the selection including:
-    ///
-    /// + The status of the VM instance.
-    /// + The health of the VM instance.
-    /// + The instance template version the VM is based on.
-    /// + For regional managed instance groups, the location of the VM instance.
-    ///
-    /// This list is subject to change.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
+    /// Resizes the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes instances. The resize operation is marked DONE when the resize actions are scheduled even if the group has not yet added or deleted any instances. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. When resizing down, the instance group arbitrarily chooses the order in which VMs are deleted. The group takes into account some VM attributes when making the selection including: + The status of the VM instance. + The health of the VM instance. + The instance template version the VM is based on. + For regional managed instance groups, the location of the VM instance. This list is subject to change. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
     ///
     /// @Snippet(path: "instanceGroupManagers_resize")
     public func resize(
@@ -905,29 +705,7 @@
       try await self.inner.resize(request: request, options: options)
     }
 
-    /// Resizes the managed instance group. If you increase the size, the group
-    /// creates new instances using the current instance template. If you decrease
-    /// the size, the group deletes instances. The resize operation is markedDONE when the resize actions are scheduled even if the group
-    /// has not yet added or deleted any instances. You must separately
-    /// verify the status of the creating or deleting
-    /// actions with thelistmanagedinstances
-    /// method.
-    ///
-    /// When resizing down, the instance group arbitrarily chooses the order in
-    /// which VMs are deleted. The group takes into account some VM attributes when
-    /// making the selection including:
-    ///
-    /// + The status of the VM instance.
-    /// + The health of the VM instance.
-    /// + The instance template version the VM is based on.
-    /// + For regional managed instance groups, the location of the VM instance.
-    ///
-    /// This list is subject to change.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is removed or deleted.
+    /// Resizes the managed instance group. If you increase the size, the group creates new instances using the current instance template. If you decrease the size, the group deletes instances. The resize operation is marked DONE when the resize actions are scheduled even if the group has not yet added or deleted any instances. You must separately verify the status of the creating or deleting actions with the listmanagedinstances method. When resizing down, the instance group arbitrarily chooses the order in which VMs are deleted. The group takes into account some VM attributes when making the selection including: + The status of the VM instance. + The health of the VM instance. + The instance template version the VM is based on. + For regional managed instance groups, the location of the VM instance. This list is subject to change. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is removed or deleted.
     ///
     /// @Snippet(path: "instanceGroupManagers_resize")
     public func resize(
@@ -968,22 +746,7 @@
       )
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
-    /// of the managed instance group by the number of instances that you resume.
-    /// The resumeInstances operation is marked DONE if
-    /// the resumeInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// In this request, you can only specify instances that are suspended. For
-    /// example, if an instance was previously suspended using the suspendInstances
-    /// method, it can be resumed using the resumeInstances method.
-    ///
-    /// If a health check is attached to the managed instance group, the specified
-    /// instances will be verified as healthy after they are resumed.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_resumeInstances")
     public func resumeInstances(
@@ -993,22 +756,7 @@
       try await self.inner.resumeInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// resumed. This method increases thetargetSize and decreases the targetSuspendedSize
-    /// of the managed instance group by the number of instances that you resume.
-    /// The resumeInstances operation is marked DONE if
-    /// the resumeInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theRESUMING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// In this request, you can only specify instances that are suspended. For
-    /// example, if an instance was previously suspended using the suspendInstances
-    /// method, it can be resumed using the resumeInstances method.
-    ///
-    /// If a health check is attached to the managed instance group, the specified
-    /// instances will be verified as healthy after they are resumed.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be resumed. This method increases the targetSize and decreases the targetSuspendedSize of the managed instance group by the number of instances that you resume. The resumeInstances operation is marked DONE if the resumeInstances request is successful. The underlying actions take additional time. You must separately verify the status of the RESUMING action with the listmanagedinstances method. In this request, you can only specify instances that are suspended. For example, if an instance was previously suspended using the suspendInstances method, it can be resumed using the resumeInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are resumed. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_resumeInstances")
     public func resumeInstances(
@@ -1050,9 +798,7 @@
       )
     }
 
-    /// Specifies the instance template to use when creating new instances in this
-    /// group. The templates for existing instances in the group do not change
-    /// unless you run recreateInstances, runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
+    /// Specifies the instance template to use when creating new instances in this group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
     ///
     /// @Snippet(path: "instanceGroupManagers_setInstanceTemplate")
     public func setInstanceTemplate(
@@ -1062,9 +808,7 @@
       try await self.inner.setInstanceTemplate(request: request, options: options)
     }
 
-    /// Specifies the instance template to use when creating new instances in this
-    /// group. The templates for existing instances in the group do not change
-    /// unless you run recreateInstances, runapplyUpdatesToInstances, or set the group'supdatePolicy.type to PROACTIVE.
+    /// Specifies the instance template to use when creating new instances in this group. The templates for existing instances in the group do not change unless you run recreateInstances, run applyUpdatesToInstances, or set the group's updatePolicy.type to PROACTIVE.
     ///
     /// @Snippet(path: "instanceGroupManagers_setInstanceTemplate")
     public func setInstanceTemplate(
@@ -1106,12 +850,7 @@
       )
     }
 
-    /// Modifies the target pools to which all instances in this managed instance
-    /// group are assigned. The target pools automatically apply to all of the
-    /// instances in the managed instance group. This operation is markedDONE when you make the request even if the instances have not
-    /// yet been added to their target pools. The change might take some time to
-    /// apply to all of the instances in the group depending on the size of the
-    /// group.
+    /// Modifies the target pools to which all instances in this managed instance group are assigned. The target pools automatically apply to all of the instances in the managed instance group. This operation is marked DONE when you make the request even if the instances have not yet been added to their target pools. The change might take some time to apply to all of the instances in the group depending on the size of the group.
     ///
     /// @Snippet(path: "instanceGroupManagers_setTargetPools")
     public func setTargetPools(
@@ -1121,12 +860,7 @@
       try await self.inner.setTargetPools(request: request, options: options)
     }
 
-    /// Modifies the target pools to which all instances in this managed instance
-    /// group are assigned. The target pools automatically apply to all of the
-    /// instances in the managed instance group. This operation is markedDONE when you make the request even if the instances have not
-    /// yet been added to their target pools. The change might take some time to
-    /// apply to all of the instances in the group depending on the size of the
-    /// group.
+    /// Modifies the target pools to which all instances in this managed instance group are assigned. The target pools automatically apply to all of the instances in the managed instance group. This operation is marked DONE when you make the request even if the instances have not yet been added to their target pools. The change might take some time to apply to all of the instances in the group depending on the size of the group.
     ///
     /// @Snippet(path: "instanceGroupManagers_setTargetPools")
     public func setTargetPools(
@@ -1168,22 +902,7 @@
       )
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// started. This method increases thetargetSize and decreases the targetStoppedSize
-    /// of the managed instance group by the number of instances that you start.
-    /// The startInstances operation is marked DONE if
-    /// the startInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// In this request, you can only specify instances that are stopped. For
-    /// example, if an instance was previously stopped using the stopInstances
-    /// method, it can be started using the startInstances method.
-    ///
-    /// If a health check is attached to the managed instance group, the specified
-    /// instances will be verified as healthy after they are started.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_startInstances")
     public func startInstances(
@@ -1193,22 +912,7 @@
       try await self.inner.startInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// started. This method increases thetargetSize and decreases the targetStoppedSize
-    /// of the managed instance group by the number of instances that you start.
-    /// The startInstances operation is marked DONE if
-    /// the startInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSTARTING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// In this request, you can only specify instances that are stopped. For
-    /// example, if an instance was previously stopped using the stopInstances
-    /// method, it can be started using the startInstances method.
-    ///
-    /// If a health check is attached to the managed instance group, the specified
-    /// instances will be verified as healthy after they are started.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be started. This method increases the targetSize and decreases the targetStoppedSize of the managed instance group by the number of instances that you start. The startInstances operation is marked DONE if the startInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STARTING action with the listmanagedinstances method. In this request, you can only specify instances that are stopped. For example, if an instance was previously stopped using the stopInstances method, it can be started using the startInstances method. If a health check is attached to the managed instance group, the specified instances will be verified as healthy after they are started. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_startInstances")
     public func startInstances(
@@ -1250,31 +954,7 @@
       )
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// immediately stopped. You can only specify instances that are running in
-    /// this request. This method reduces thetargetSize and increases the targetStoppedSize
-    /// of the managed instance group by the number of instances that you stop.
-    /// The stopInstances operation is marked DONE if
-    /// the stopInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the standbyPolicy.initialDelaySec field is set, the group
-    /// delays stopping the instances until initialDelaySec have
-    /// passed from instance.creationTimestamp (that is, when the
-    /// instance was created). This delay gives your application time to
-    /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
-    /// will be zero delay.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is stopped.
-    ///
-    /// Stopped instances can be started using the startInstances
-    /// method.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_stopInstances")
     public func stopInstances(
@@ -1284,31 +964,7 @@
       try await self.inner.stopInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// immediately stopped. You can only specify instances that are running in
-    /// this request. This method reduces thetargetSize and increases the targetStoppedSize
-    /// of the managed instance group by the number of instances that you stop.
-    /// The stopInstances operation is marked DONE if
-    /// the stopInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSTOPPING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the standbyPolicy.initialDelaySec field is set, the group
-    /// delays stopping the instances until initialDelaySec have
-    /// passed from instance.creationTimestamp (that is, when the
-    /// instance was created). This delay gives your application time to
-    /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
-    /// will be zero delay.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is stopped.
-    ///
-    /// Stopped instances can be started using the startInstances
-    /// method.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be immediately stopped. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetStoppedSize of the managed instance group by the number of instances that you stop. The stopInstances operation is marked DONE if the stopInstances request is successful. The underlying actions take additional time. You must separately verify the status of the STOPPING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays stopping the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is stopped. Stopped instances can be started using the startInstances method. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_stopInstances")
     public func stopInstances(
@@ -1350,31 +1006,7 @@
       )
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// immediately suspended. You can only specify instances that are running in
-    /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
-    /// of the managed instance group by the number of instances that you suspend.
-    /// The suspendInstances operation is marked DONE if
-    /// the suspendInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the standbyPolicy.initialDelaySec field is set, the group
-    /// delays suspension of the instances until initialDelaySec have
-    /// passed from instance.creationTimestamp (that is, when the
-    /// instance was created). This delay gives your application time to
-    /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
-    /// will be zero delay.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is suspended.
-    ///
-    /// Suspended instances can be resumed using the resumeInstances
-    /// method.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_suspendInstances")
     public func suspendInstances(
@@ -1384,31 +1016,7 @@
       try await self.inner.suspendInstances(request: request, options: options)
     }
 
-    /// Flags the specified instances in the managed instance group to be
-    /// immediately suspended. You can only specify instances that are running in
-    /// this request. This method reduces thetargetSize and increases the targetSuspendedSize
-    /// of the managed instance group by the number of instances that you suspend.
-    /// The suspendInstances operation is marked DONE if
-    /// the suspendInstances request is successful. The underlying
-    /// actions take additional time. You must separately verify the status of theSUSPENDING action with thelistmanagedinstances
-    /// method.
-    ///
-    /// If the standbyPolicy.initialDelaySec field is set, the group
-    /// delays suspension of the instances until initialDelaySec have
-    /// passed from instance.creationTimestamp (that is, when the
-    /// instance was created). This delay gives your application time to
-    /// set itself up and initialize on the instance. If more thaninitialDelaySec seconds have passed sinceinstance.creationTimestamp when this method is called, there
-    /// will be zero delay.
-    ///
-    /// If the group is part of a backend
-    /// service that has enabled
-    /// connection draining, it can take up to 60 seconds after the connection
-    /// draining duration has elapsed before the VM instance is suspended.
-    ///
-    /// Suspended instances can be resumed using the resumeInstances
-    /// method.
-    ///
-    /// You can specify a maximum of 1000 instances with this method per request.
+    /// Flags the specified instances in the managed instance group to be immediately suspended. You can only specify instances that are running in this request. This method reduces the targetSize and increases the targetSuspendedSize of the managed instance group by the number of instances that you suspend. The suspendInstances operation is marked DONE if the suspendInstances request is successful. The underlying actions take additional time. You must separately verify the status of the SUSPENDING action with the listmanagedinstances method. If the standbyPolicy.initialDelaySec field is set, the group delays suspension of the instances until initialDelaySec have passed from instance.creationTimestamp (that is, when the instance was created). This delay gives your application time to set itself up and initialize on the instance. If more than initialDelaySec seconds have passed since instance.creationTimestamp when this method is called, there will be zero delay. If the group is part of a backend service that has enabled connection draining, it can take up to 60 seconds after the connection draining duration has elapsed before the VM instance is suspended. Suspended instances can be resumed using the resumeInstances method. You can specify a maximum of 1000 instances with this method per request.
     ///
     /// @Snippet(path: "instanceGroupManagers_suspendInstances")
     public func suspendInstances(
@@ -1450,9 +1058,7 @@
       )
     }
 
-    /// Inserts or updates per-instance configurations for the managed instance
-    /// group. perInstanceConfig.name serves as a key used to
-    /// distinguish whether to perform insert or patch.
+    /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
     ///
     /// @Snippet(path: "instanceGroupManagers_updatePerInstanceConfigs")
     public func updatePerInstanceConfigs(
@@ -1462,9 +1068,7 @@
       try await self.inner.updatePerInstanceConfigs(request: request, options: options)
     }
 
-    /// Inserts or updates per-instance configurations for the managed instance
-    /// group. perInstanceConfig.name serves as a key used to
-    /// distinguish whether to perform insert or patch.
+    /// Inserts or updates per-instance configurations for the managed instance group. perInstanceConfig.name serves as a key used to distinguish whether to perform insert or patch.
     ///
     /// @Snippet(path: "instanceGroupManagers_updatePerInstanceConfigs")
     public func updatePerInstanceConfigs(

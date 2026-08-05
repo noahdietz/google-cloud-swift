@@ -30,8 +30,7 @@
     /// The unique identifier of the capacity host within the capacity sub-block.
     public var host: Swift.String? = nil
 
-    /// The unique identifier of the capacity sub-block within the capacity
-    /// block.
+    /// The unique identifier of the capacity sub-block within the capacity block.
     public var subBlock: Swift.String? = nil
 
     /// Initialize a new instance of `ReservationSlotPhysicalTopology`.

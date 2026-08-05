@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Resource Policy resource. You can use resource policies to
-  /// schedule actions for some Compute Engine resources. For example, you can
-  /// use them toschedule persistent disk
-  /// snapshots.
+  /// Represents a Resource Policy resource. You can use resource policies to schedule actions for some Compute Engine resources. For example, you can use them to schedule persistent disk snapshots.
   public struct ResourcePolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     public var description: Swift.String? = nil
@@ -37,24 +33,16 @@
     /// Resource policy for instances for placement configuration.
     public var groupPlacementPolicy: ResourcePolicyGroupPlacementPolicy? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
     /// Resource policy for scheduling instance operations.
     public var instanceSchedulePolicy: ResourcePolicyInstanceSchedulePolicy? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#resource_policies for resource policies.
+    /// Output only. [Output Only] Type of the resource. Always compute#resource_policies for resource policies.
     public var kind: Swift.String? = nil
 
-    /// The name of the resource, provided by the client when initially creating
-    /// the resource. The resource name must be 1-63 characters long, and comply
-    /// withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// The name of the resource, provided by the client when initially creating the resource. The resource name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
     public var region: Swift.String? = nil

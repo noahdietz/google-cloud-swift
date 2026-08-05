@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// This reservation type allows to pre allocate specific instance
-  ///  configuration.
+  /// This reservation type allows to pre allocate specific instance configuration.
   public struct AllocationSpecificSKUReservation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
@@ -35,16 +34,7 @@
     /// The instance properties for the reservation.
     public var instanceProperties: AllocationSpecificSKUAllocationReservedInstanceProperties? = nil
 
-    /// Specifies the instance template to create the reservation. If you use
-    /// this field, you must exclude the instanceProperties field.
-    ///
-    /// This field is optional, and it can be a full or partial URL. For example,
-    /// the following are all valid URLs to an instance template:
-    ///
-    ///
-    ///       - https://www.googleapis.com/compute/v1/projects/project/global/instanceTemplates/instanceTemplate
-    ///       - projects/project/global/instanceTemplates/instanceTemplate
-    ///       - global/instanceTemplates/instanceTemplate
+    /// Specifies the instance template to create the reservation. If you use this field, you must exclude the instanceProperties field. This field is optional, and it can be a full or partial URL. For example, the following are all valid URLs to an instance template: - https://www.googleapis.com/compute/v1/projects/project /global/instanceTemplates/instanceTemplate - projects/project/global/instanceTemplates/instanceTemplate - global/instanceTemplates/instanceTemplate
     public var sourceInstanceTemplate: Swift.String? = nil
 
     /// Initialize a new instance of `AllocationSpecificSKUReservation`.

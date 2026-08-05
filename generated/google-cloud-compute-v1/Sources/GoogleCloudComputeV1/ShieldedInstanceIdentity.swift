@@ -22,24 +22,19 @@
   public struct ShieldedInstanceIdentity: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// An Endorsement Key (EK) made by the ECC P256 algorithm
-    /// issued to the Shielded Instance's vTPM.
+    /// An Endorsement Key (EK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
     public var eccP256EncryptionKey: ShieldedInstanceIdentityEntry? = nil
 
-    /// An Attestation Key (AK) made by the ECC P256 algorithm
-    /// issued to the Shielded Instance's vTPM.
+    /// An Attestation Key (AK) made by the ECC P256 algorithm issued to the Shielded Instance's vTPM.
     public var eccP256SigningKey: ShieldedInstanceIdentityEntry? = nil
 
-    /// An Endorsement Key (EK) made by the RSA 2048 algorithm
-    /// issued to the Shielded Instance's vTPM.
+    /// An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
     public var encryptionKey: ShieldedInstanceIdentityEntry? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity for shielded Instance
-    /// identity entry.
+    /// Output only. [Output Only] Type of the resource. Always compute#shieldedInstanceIdentity for shielded Instance identity entry.
     public var kind: Swift.String? = nil
 
-    /// An Attestation Key (AK) made by the RSA 2048 algorithm
-    /// issued to the Shielded Instance's vTPM.
+    /// An Attestation Key (AK) made by the RSA 2048 algorithm issued to the Shielded Instance's vTPM.
     public var signingKey: ShieldedInstanceIdentityEntry? = nil
 
     /// Initialize a new instance of `ShieldedInstanceIdentity`.

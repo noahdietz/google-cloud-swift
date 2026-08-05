@@ -26,14 +26,7 @@
     public var timeBasedValidationMetadata: RolloutPlanWaveValidationTimeBasedValidationMetadata? =
       nil
 
-    /// Required. The type of the validation. If a type of validation is associated with
-    /// a metadata object, the appropriate metadata field mapping to the
-    /// validation type must be provided in the validation message. Possible
-    /// values are in quotes below alongside an explanation:
-    ///   "manual": The system waits for an end-user approval API before
-    ///     progressing to the next wave.
-    ///   "time": The system waits for a user specified duration before
-    ///     progressing to the next wave. TimeBasedValidation must be provided.
+    /// Required. The type of the validation. If a type of validation is associated with a metadata object, the appropriate metadata field mapping to the validation type must be provided in the validation message. Possible values are in quotes below alongside an explanation: "manual": The system waits for an end-user approval API before progressing to the next wave. "time": The system waits for a user specified duration before progressing to the next wave. TimeBasedValidation must be provided.
     public var type: Swift.String? = nil
 
     /// Initialize a new instance of `RolloutPlanWaveValidation`.

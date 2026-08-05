@@ -22,14 +22,13 @@
   public struct ReservationSlot: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The creation timestamp, formatted asRFC3339 text.
+    /// Output only. [Output Only] The creation timestamp, formatted as RFC3339 text.
     public var creationTimestamp: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for this resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for this resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] The type of resource. Alwayscompute#reservationSlot for reservation slots.
+    /// Output only. [Output Only] The type of resource. Always compute#reservationSlot for reservation slots.
     public var kind: Swift.String? = nil
 
     /// Output only. [Output Only] The name of the reservation slot.
@@ -45,8 +44,7 @@
     /// Output only. [Output Only] A server-defined URL for this resource with the resource ID.
     public var selfLinkWithId: Swift.String? = nil
 
-    /// Specify share settings to create a shared slot. Set to empty
-    /// to inherit the share settings from a parent resource.
+    /// Specify share settings to create a shared slot. Set to empty to inherit the share settings from a parent resource.
     public var shareSettings: ShareSettings? = nil
 
     /// Output only. [Output Only] The state of the reservation slot.

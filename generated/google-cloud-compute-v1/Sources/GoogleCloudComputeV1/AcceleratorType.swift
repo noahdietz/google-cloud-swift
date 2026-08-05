@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents an Accelerator Type resource.
-  ///
-  /// Google Cloud Platform provides graphics processing units (accelerators) that
-  /// you can add to VM instances to improve or accelerate performance when working
-  /// with intensive workloads. For more information, readGPUs on Compute Engine.
+  /// Represents an Accelerator Type resource. Google Cloud Platform provides graphics processing units (accelerators) that you can add to VM instances to improve or accelerate performance when working with intensive workloads. For more information, read GPUs on Compute Engine.
   public struct AcceleratorType: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] Creation timestamp inRFC3339 text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// [Output Only] The deprecation status associated with this accelerator type.
@@ -35,11 +31,10 @@
     /// [Output Only] An optional textual description of the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] The type of the resource. Alwayscompute#acceleratorType for accelerator types.
+    /// Output only. [Output Only] The type of the resource. Always compute#acceleratorType for accelerator types.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Maximum number of accelerator cards allowed per instance.
@@ -51,10 +46,7 @@
     /// Output only. [Output Only] Server-defined, fully qualified URL for this resource.
     public var selfLink: Swift.String? = nil
 
-    /// [Output Only] The name of the zone where the accelerator type resides,
-    /// such as us-central1-a.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// [Output Only] The name of the zone where the accelerator type resides, such as us-central1-a. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var zone: Swift.String? = nil
 
     /// Initialize a new instance of `AcceleratorType`.

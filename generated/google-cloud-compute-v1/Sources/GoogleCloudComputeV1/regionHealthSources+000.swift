@@ -43,11 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all HealthSource resources (all
-    /// regional) available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthSource resources (all regional) available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthSources_aggregatedList")
     public func aggregatedList(
@@ -57,11 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all HealthSource resources (all
-    /// regional) available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all HealthSource resources (all regional) available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "regionHealthSources_aggregatedList")
     public func aggregatedList(
@@ -136,8 +128,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the most recent health check results for this
-    /// regional HealthSource.
+    /// Gets the most recent health check results for this regional HealthSource.
     ///
     /// @Snippet(path: "regionHealthSources_getHealth")
     public func getHealth(
@@ -146,8 +137,7 @@
       try await self.inner.getHealth(request: request, options: options)
     }
 
-    /// Create a HealthSource in the specified project in the given region
-    /// using the parameters that are included in the request.
+    /// Create a HealthSource in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionHealthSources_insert")
     public func insert(
@@ -156,8 +146,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Create a HealthSource in the specified project in the given region
-    /// using the parameters that are included in the request.
+    /// Create a HealthSource in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionHealthSources_insert")
     public func insert(
@@ -221,10 +210,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified regional HealthSource resource
-    /// with the data included in the request.  This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthSource resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthSources_patch")
     public func patch(
@@ -233,10 +219,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified regional HealthSource resource
-    /// with the data included in the request.  This method supportsPATCH
-    /// semantics and uses theJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified regional HealthSource resource with the data included in the request. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "regionHealthSources_patch")
     public func patch(

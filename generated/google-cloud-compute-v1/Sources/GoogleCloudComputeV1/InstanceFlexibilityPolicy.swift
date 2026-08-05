@@ -22,17 +22,7 @@
   public struct InstanceFlexibilityPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specification of alternative, flexible instance subsets.
-    /// One of them will be selected to create the instances
-    /// based on various criteria, like:
-    /// - ranks,
-    /// - location policy,
-    /// - current capacity,
-    /// - available reservations (you can specify affinity in
-    /// InstanceProperties),
-    /// - SWAN/GOOSE limitations.
-    /// Key is an arbitrary, unique RFC1035 string that identifies the instance
-    /// selection.
+    /// Specification of alternative, flexible instance subsets. One of them will be selected to create the instances based on various criteria, like: - ranks, - location policy, - current capacity, - available reservations (you can specify affinity in InstanceProperties), - SWAN/GOOSE limitations. Key is an arbitrary, unique RFC1035 string that identifies the instance selection.
     public var instanceSelections: [Swift.String: InstanceFlexibilityPolicyInstanceSelection] = [:]
 
     /// Initialize a new instance of `InstanceFlexibilityPolicy`.

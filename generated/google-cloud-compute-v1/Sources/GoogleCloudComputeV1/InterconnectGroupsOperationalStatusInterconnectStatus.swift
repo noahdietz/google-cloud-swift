@@ -26,15 +26,13 @@
     /// Output only. Whether the Interconnect is enabled.
     public var adminEnabled: Swift.Bool? = nil
 
-    /// Output only. The diagnostics of the Interconnect, as returned by the existing
-    /// get-diagnostics method.
+    /// Output only. The diagnostics of the Interconnect, as returned by the existing get-diagnostics method.
     public var diagnostics: InterconnectDiagnostics? = nil
 
     /// Output only. The URL of the Interconnect being described.
     public var interconnect: Swift.String? = nil
 
-    /// Output only. Whether this interconnect is participating in the redundant
-    /// configuration.
+    /// Output only. Whether this interconnect is participating in the redundant configuration.
     public var isActive: InterconnectGroupsOperationalStatusInterconnectStatus.IsActive? = nil
 
     /// Initialize a new instance of `InterconnectGroupsOperationalStatusInterconnectStatus`.

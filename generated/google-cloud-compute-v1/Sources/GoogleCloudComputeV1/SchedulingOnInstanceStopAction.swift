@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Defines the behaviour for instances with the instance_termination_actionSTOP.
+  /// Defines the behaviour for instances with the instance_termination_action STOP.
   public struct SchedulingOnInstanceStopAction: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// If true, the contents of any attached Local SSD disks will be discarded
-    /// else, the Local SSD data will be preserved when the instance is stopped
-    /// at the end of the run duration/termination time.
+    /// If true, the contents of any attached Local SSD disks will be discarded else, the Local SSD data will be preserved when the instance is stopped at the end of the run duration/termination time.
     public var discardLocalSsd: Swift.Bool? = nil
 
     /// Initialize a new instance of `SchedulingOnInstanceStopAction`.

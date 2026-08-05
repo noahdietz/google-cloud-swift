@@ -42,11 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all SslCertificate resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "sslCertificates_aggregatedList")
     public func aggregatedList(
@@ -55,11 +51,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all SslCertificate resources, regional and global,
-    /// available to the specified project.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves the list of all SslCertificate resources, regional and global, available to the specified project. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "sslCertificates_aggregatedList")
     public func aggregatedList(
@@ -132,8 +124,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a SslCertificate resource in the specified project using the data
-    /// included in the request.
+    /// Creates a SslCertificate resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "sslCertificates_insert")
     public func insert(
@@ -142,8 +133,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a SslCertificate resource in the specified project using the data
-    /// included in the request.
+    /// Creates a SslCertificate resource in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "sslCertificates_insert")
     public func insert(
@@ -183,8 +173,7 @@
       )
     }
 
-    /// Retrieves the list of SslCertificate resources available to the specified
-    /// project.
+    /// Retrieves the list of SslCertificate resources available to the specified project.
     ///
     /// @Snippet(path: "sslCertificates_list")
     public func list(
@@ -193,8 +182,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of SslCertificate resources available to the specified
-    /// project.
+    /// Retrieves the list of SslCertificate resources available to the specified project.
     ///
     /// @Snippet(path: "sslCertificates_list")
     public func list(

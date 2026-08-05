@@ -91,9 +91,7 @@
       )
     }
 
-    /// Sets the deprecation status of an image.
-    ///
-    /// If an empty request body is given, clears the deprecation status instead.
+    /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
     ///
     /// @Snippet(path: "images_deprecate")
     public func deprecate(
@@ -102,9 +100,7 @@
       try await self.inner.deprecate(request: request, options: options)
     }
 
-    /// Sets the deprecation status of an image.
-    ///
-    /// If an empty request body is given, clears the deprecation status instead.
+    /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
     ///
     /// @Snippet(path: "images_deprecate")
     public func deprecate(
@@ -153,9 +149,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Returns the latest image that is part of an image family and is not
-    /// deprecated. For more information on image families, seePublic
-    /// image families documentation.
+    /// Returns the latest image that is part of an image family and is not deprecated. For more information on image families, see Public image families documentation.
     ///
     /// @Snippet(path: "images_getFromFamily")
     public func getFromFamily(
@@ -164,8 +158,7 @@
       try await self.inner.getFromFamily(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "images_getIamPolicy")
     public func getIamPolicy(
@@ -174,8 +167,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Creates an image in the specified project using the data included
-    /// in the request.
+    /// Creates an image in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "images_insert")
     public func insert(
@@ -184,8 +176,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates an image in the specified project using the data included
-    /// in the request.
+    /// Creates an image in the specified project using the data included in the request.
     ///
     /// @Snippet(path: "images_insert")
     public func insert(
@@ -225,13 +216,7 @@
       )
     }
 
-    /// Retrieves the list of custom images
-    /// available to the specified project. Custom images are images you
-    /// create that belong to your project. This method does not
-    /// get any images that belong to other projects, including publicly-available
-    /// images, like Debian 8. If you want to get a list of publicly-available
-    /// images, use this method to make a request to the respective image project,
-    /// such as debian-cloud or windows-cloud.
+    /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
     ///
     /// @Snippet(path: "images_list")
     public func list(
@@ -240,13 +225,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves the list of custom images
-    /// available to the specified project. Custom images are images you
-    /// create that belong to your project. This method does not
-    /// get any images that belong to other projects, including publicly-available
-    /// images, like Debian 8. If you want to get a list of publicly-available
-    /// images, use this method to make a request to the respective image project,
-    /// such as debian-cloud or windows-cloud.
+    /// Retrieves the list of custom images available to the specified project. Custom images are images you create that belong to your project. This method does not get any images that belong to other projects, including publicly-available images, like Debian 8. If you want to get a list of publicly-available images, use this method to make a request to the respective image project, such as debian-cloud or windows-cloud.
     ///
     /// @Snippet(path: "images_list")
     public func list(
@@ -260,9 +239,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified image with the data included in the request.
-    /// Only the following fields can be modified: family, description,
-    /// deprecation status.
+    /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
     ///
     /// @Snippet(path: "images_patch")
     public func patch(
@@ -271,9 +248,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified image with the data included in the request.
-    /// Only the following fields can be modified: family, description,
-    /// deprecation status.
+    /// Patches the specified image with the data included in the request. Only the following fields can be modified: family, description, deprecation status.
     ///
     /// @Snippet(path: "images_patch")
     public func patch(
@@ -313,8 +288,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "images_setIamPolicy")
     public func setIamPolicy(
@@ -323,8 +297,7 @@
       try await self.inner.setIamPolicy(request: request, options: options)
     }
 
-    /// Sets the labels on an image. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "images_setLabels")
     public func setLabels(
@@ -333,8 +306,7 @@
       try await self.inner.setLabels(request: request, options: options)
     }
 
-    /// Sets the labels on an image. To learn more about labels, read theLabeling
-    /// Resources documentation.
+    /// Sets the labels on an image. To learn more about labels, read the Labeling Resources documentation.
     ///
     /// @Snippet(path: "images_setLabels")
     public func setLabels(

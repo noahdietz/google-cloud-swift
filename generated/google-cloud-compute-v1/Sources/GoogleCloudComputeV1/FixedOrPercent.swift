@@ -22,25 +22,13 @@
   public struct FixedOrPercent: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. Absolute value of VM instances calculated based on the specific mode.
-    ///
-    ///
-    ///
-    ///     - If the value is fixed, then the calculated
-    ///      value is equal to the fixed value.
-    ///     - If the value is a percent, then the
-    ///     calculated
-    ///      value is percent/100 * targetSize. For example,
-    ///      the calculated value of a 80% of a managed instance group
-    ///      with 150 instances would be (80/100 * 150) = 120 VM instances. If there
-    ///      is a remainder, the number is rounded.
+    /// Output only. Absolute value of VM instances calculated based on the specific mode. - If the value is fixed, then the calculated value is equal to the fixed value. - If the value is a percent, then the calculated value is percent/100 * targetSize. For example, the calculated value of a 80% of a managed instance group with 150 instances would be (80/100 * 150) = 120 VM instances. If there is a remainder, the number is rounded.
     public var calculated: Swift.Int32? = nil
 
     /// Specifies a fixed number of VM instances. This must be a positive integer.
     public var fixed: Swift.Int32? = nil
 
-    /// Specifies a percentage of instances between 0 to 100%, inclusive. For
-    /// example, specify 80 for 80%.
+    /// Specifies a percentage of instances between 0 to 100%, inclusive. For example, specify 80 for 80%.
     public var percent: Swift.Int32? = nil
 
     /// Initialize a new instance of `FixedOrPercent`.

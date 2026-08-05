@@ -21,15 +21,13 @@
   public struct NetworkProfileNetworkFeatures: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies what address purposes are supported. If empty, all address
-    /// purposes are supported.
+    /// Specifies what address purposes are supported. If empty, all address purposes are supported.
     public var addressPurposes: [NetworkProfileNetworkFeatures.AddressPurposes] = []
 
     /// Specifies whether address creation is allowed.
     public var allowAddressCreation: NetworkProfileNetworkFeatures.AllowAddressCreation? = nil
 
-    /// Specifies whether alias IP ranges (and secondary address ranges) are
-    /// allowed.
+    /// Specifies whether alias IP ranges (and secondary address ranges) are allowed.
     public var allowAliasIpRanges: NetworkProfileNetworkFeatures.AllowAliasIpRanges? = nil
 
     /// Specifies whether auto mode subnet creation is allowed.
@@ -48,8 +46,7 @@
     public var allowDefaultNicAttachment: NetworkProfileNetworkFeatures.AllowDefaultNicAttachment? =
       nil
 
-    /// Specifies whether VMs are allowed to have external IP access on network
-    /// interfaces connected to this VPC.
+    /// Specifies whether VMs are allowed to have external IP access on network interfaces connected to this VPC.
     public var allowExternalIpAccess: NetworkProfileNetworkFeatures.AllowExternalIpAccess? = nil
 
     /// Specifies whether firewall policy can be attached to the network.
@@ -114,8 +111,7 @@
 
     public var firewallPolicyTypes: [NetworkProfileNetworkFeatures.FirewallPolicyTypes] = []
 
-    /// If set, limits the interface types that the network supports. If
-    /// empty, all interface types are supported.
+    /// If set, limits the interface types that the network supports. If empty, all interface types are supported.
     public var interfaceTypes: [NetworkProfileNetworkFeatures.InterfaceTypes] = []
 
     /// Specifies which type of multicast is supported.
@@ -339,23 +335,15 @@
       case dnsResolver
       /// VM internal/alias IP, Internal LB service IP, etc.
       case gceEndpoint
-      /// A regional internal IP address range reserved for the VLAN attachment
-      /// that is used in HA VPN over Cloud Interconnect. This regional
-      /// internal IP address range must not overlap with any IP address range
-      /// of subnet/route in the VPC network and its peering networks. After the
-      /// VLAN attachment is created with the reserved IP address range, when
-      /// creating a new VPN gateway, its interface IP address is allocated
-      /// from the associated VLAN attachment’s IP address range.
+      /// A regional internal IP address range reserved for the VLAN attachment that is used in HA VPN over Cloud Interconnect. This regional internal IP address range must not overlap with any IP address range of subnet/route in the VPC network and its peering networks. After the VLAN attachment is created with the reserved IP address range, when creating a new VPN gateway, its interface IP address is allocated from the associated VLAN attachment's IP address range.
       case ipsecInterconnect
       /// External IP automatically reserved for Cloud NAT.
       case natAuto
-      /// A private network IP address that can be used to configure Private
-      /// Service Connect. This purpose can be specified only forGLOBAL addresses of Type INTERNAL
+      /// A private network IP address that can be used to configure Private Service Connect. This purpose can be specified only for GLOBAL addresses of Type INTERNAL
       case privateServiceConnect
       /// A regional internal IP address range reserved for Serverless.
       case serverless
-      /// A private network IP address that can be shared by multiple Internal
-      /// Load Balancer forwarding rules.
+      /// A private network IP address that can be shared by multiple Internal Load Balancer forwarding rules.
       case sharedLoadbalancerVip
       /// IP range for peer networks.
       case vpcPeering
@@ -3665,12 +3653,9 @@
     public enum SubnetworkPurposes: Codable, Equatable, Sendable {
       /// Subnet reserved for Global Envoy-based Load Balancing.
       case globalManagedProxy
-      /// Subnet reserved for Internal HTTP(S) Load Balancing. This is a legacy
-      /// purpose, please use REGIONAL_MANAGED_PROXY instead.
+      /// Subnet reserved for Internal HTTP(S) Load Balancing. This is a legacy purpose, please use REGIONAL_MANAGED_PROXY instead.
       case internalHttpsLoadBalancer
-      /// Subnetwork will be used for Migration from one peered VPC to another.
-      /// (a transient state of subnetwork
-      /// while migrating resources from one project to another).
+      /// Subnetwork will be used for Migration from one peered VPC to another. (a transient state of subnetwork while migrating resources from one project to another).
       case peerMigration
       /// Regular user created or automatically created subnet.
       case `private`
@@ -3812,7 +3797,7 @@
       case ipv4Ipv6
       /// New VMs in this subnet will only be assigned IPv4 addresses.
       case ipv4Only
-      /// New VMs in this subnet will only  be assigned IPv6 addresses.
+      /// New VMs in this subnet will only be assigned IPv6 addresses.
       case ipv6Only
       /// Encodes an unknown integer value.
       ///

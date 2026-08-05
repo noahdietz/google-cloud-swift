@@ -23,29 +23,16 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. List of all drain IP:port-range mappings assigned to this interface
-    /// by this rule.
-    /// These ranges are inclusive, that is, both the first and the last
-    /// ports can be used for NAT. Example: ["2.2.2.2:12345-12355",
-    /// "1.1.1.1:2234-2234"].
+    /// Output only. List of all drain IP:port-range mappings assigned to this interface by this rule. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
     public var drainNatIpPortRanges: [Swift.String] = []
 
-    /// Output only. A list of all IP:port-range mappings assigned to this interface by this
-    /// rule.
-    /// These ranges are inclusive, that is, both the first and the last
-    /// ports can be used for NAT. Example: ["2.2.2.2:12345-12355",
-    /// "1.1.1.1:2234-2234"].
+    /// Output only. A list of all IP:port-range mappings assigned to this interface by this rule. These ranges are inclusive, that is, both the first and the last ports can be used for NAT. Example: ["2.2.2.2:12345-12355", "1.1.1.1:2234-2234"].
     public var natIpPortRanges: [Swift.String] = []
 
-    /// Output only. Total number of drain ports across all NAT IPs allocated to this
-    /// interface by this rule.
-    /// It equals the aggregated port number in the field
-    /// drain_nat_ip_port_ranges.
+    /// Output only. Total number of drain ports across all NAT IPs allocated to this interface by this rule. It equals the aggregated port number in the field drain_nat_ip_port_ranges.
     public var numTotalDrainNatPorts: Swift.Int32? = nil
 
-    /// Output only. Total number of ports across all NAT IPs allocated to this interface
-    /// by this rule.
-    /// It equals the aggregated port number in the field nat_ip_port_ranges.
+    /// Output only. Total number of ports across all NAT IPs allocated to this interface by this rule. It equals the aggregated port number in the field nat_ip_port_ranges.
     public var numTotalNatPorts: Swift.Int32? = nil
 
     /// Output only. Rule number of the NAT Rule.

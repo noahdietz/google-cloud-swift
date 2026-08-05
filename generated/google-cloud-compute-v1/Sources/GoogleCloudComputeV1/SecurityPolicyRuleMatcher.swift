@@ -18,36 +18,20 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a match condition that incoming traffic is evaluated against.
-  /// Exactly one field must be specified.
+  /// Represents a match condition that incoming traffic is evaluated against. Exactly one field must be specified.
   public struct SecurityPolicyRuleMatcher: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The configuration options available when specifying versioned_expr.
-    /// This field must be specified if versioned_expr is specified and cannot
-    /// be specified if versioned_expr is not specified.
+    /// The configuration options available when specifying versioned_expr. This field must be specified if versioned_expr is specified and cannot be specified if versioned_expr is not specified.
     public var config: SecurityPolicyRuleMatcherConfig? = nil
 
-    /// User defined CEVAL expression.
-    /// A CEVAL expression is used to specify match criteria such as origin.ip,
-    /// source.region_code and contents in the request header.
-    /// Expressions containing `evaluateThreatIntelligence` require a Cloud
-    /// Armor Enterprise subscription and are not supported in Edge Policies
-    /// nor in Regional Policies. Expressions containing
-    /// `evaluatePreconfiguredExpr('sourceiplist-*')` require a Cloud Armor
-    /// Enterprise subscription and are only supported in Global Security
-    /// Policies.
+    /// User defined CEVAL expression. A CEVAL expression is used to specify match criteria such as origin.ip, source.region_code and contents in the request header. Expressions containing `evaluateThreatIntelligence` require a Cloud Armor Enterprise subscription and are not supported in Edge Policies nor in Regional Policies. Expressions containing `evaluatePreconfiguredExpr('sourceiplist-*')` require a Cloud Armor Enterprise subscription and are only supported in Global Security Policies.
     public var expr: Expr? = nil
 
-    /// The configuration options available when specifying a user defined
-    /// CEVAL expression (i.e., 'expr').
+    /// The configuration options available when specifying a user defined CEVAL expression (i.e., 'expr').
     public var exprOptions: SecurityPolicyRuleMatcherExprOptions? = nil
 
-    /// Preconfigured versioned expression.
-    /// If this field is specified, config must also be specified.
-    /// Available preconfigured expressions along with their requirements are:
-    /// SRC_IPS_V1 - must specify the corresponding src_ip_range field in
-    /// config.
+    /// Preconfigured versioned expression. If this field is specified, config must also be specified. Available preconfigured expressions along with their requirements are: SRC_IPS_V1 - must specify the corresponding src_ip_range field in config.
     public var versionedExpr: SecurityPolicyRuleMatcher.VersionedExpr? = nil
 
     /// Initialize a new instance of `SecurityPolicyRuleMatcher`.
@@ -70,8 +54,7 @@
     ///
     /// [google.cloud.compute.v1.SecurityPolicyRuleMatcher.versionedExpr]: <doc:SecurityPolicyRuleMatcher/VersionedExpr>
     public enum VersionedExpr: Codable, Equatable, Sendable {
-      /// Matches the source IP address of a request to the IP ranges supplied
-      /// in config.
+      /// Matches the source IP address of a request to the IP ranges supplied in config.
       case srcIpsV1
       /// Encodes an unknown integer value.
       ///

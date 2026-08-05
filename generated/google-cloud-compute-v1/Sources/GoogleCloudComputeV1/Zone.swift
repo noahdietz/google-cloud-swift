@@ -18,19 +18,14 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Zone resource.
-  ///
-  /// A zone is a deployment area. These deployment areas are subsets of a region.
-  /// For example the zone us-east1-b is located in theus-east1 region. For more information, readRegions and
-  /// Zones.
+  /// Represents a Zone resource. A zone is a deployment area. These deployment areas are subsets of a region. For example the zone us-east1-b is located in the us-east1 region. For more information, read Regions and Zones.
   public struct Zone: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// [Output Only] Available cpu/platform selections for the zone.
     public var availableCpuPlatforms: [Swift.String] = []
 
-    /// [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
     /// [Output Only] The deprecation status associated with this zone.
@@ -39,12 +34,10 @@
     /// [Output Only] Textual description of the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Always compute#zone for
-    /// zones.
+    /// Output only. [Output Only] Type of the resource. Always compute#zone for zones.
     public var kind: Swift.String? = nil
 
     /// [Output Only] Name of the resource.
@@ -58,7 +51,7 @@
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// [Output Only] Status of the zone, either UP orDOWN.
+    /// [Output Only] Status of the zone, either UP or DOWN.
     public var status: Zone.Status? = nil
 
     /// Output only. [Output Only] Reserved for future use.

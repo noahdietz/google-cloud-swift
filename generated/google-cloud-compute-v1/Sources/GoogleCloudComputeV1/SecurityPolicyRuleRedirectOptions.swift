@@ -21,16 +21,10 @@
   public struct SecurityPolicyRuleRedirectOptions: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Target for the redirect action. This is required if the type is
-    /// EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
+    /// Target for the redirect action. This is required if the type is EXTERNAL_302 and cannot be specified for GOOGLE_RECAPTCHA.
     public var target: Swift.String? = nil
 
-    /// Type of the redirect action. Possible values are:
-    ///
-    ///    - GOOGLE_RECAPTCHA: redirect to reCAPTCHA for manual
-    ///    challenge assessment.
-    ///    - EXTERNAL_302: redirect to a different URL via a 302
-    ///    response.
+    /// Type of the redirect action. Possible values are: - GOOGLE_RECAPTCHA: redirect to reCAPTCHA for manual challenge assessment. - EXTERNAL_302: redirect to a different URL via a 302 response.
     public var type: SecurityPolicyRuleRedirectOptions.Type_? = nil
 
     /// Initialize a new instance of `SecurityPolicyRuleRedirectOptions`.

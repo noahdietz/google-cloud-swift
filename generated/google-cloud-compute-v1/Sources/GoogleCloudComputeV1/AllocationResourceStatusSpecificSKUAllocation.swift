@@ -26,8 +26,7 @@
     /// ID of the instance template used to populate reservation properties.
     public var sourceInstanceTemplateId: Swift.String? = nil
 
-    /// Per service utilization breakdown. The Key is the Google Cloud managed
-    /// service name.
+    /// Per service utilization breakdown. The Key is the Google Cloud managed service name.
     public var utilizations: [Swift.String: Swift.Int64] = [:]
 
     /// Initialize a new instance of `AllocationResourceStatusSpecificSKUAllocation`.

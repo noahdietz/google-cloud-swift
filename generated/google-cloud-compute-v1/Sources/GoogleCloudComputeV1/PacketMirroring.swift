@@ -18,72 +18,41 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Packet Mirroring resource.
-  ///
-  /// Packet Mirroring clones the traffic of specified instances in your Virtual
-  /// Private Cloud (VPC) network and forwards it to a collector destination,
-  /// such as an instance group of an internal TCP/UDP load balancer, for analysis
-  /// or examination.
-  /// For more information about setting up Packet Mirroring, seeUsing Packet Mirroring.
+  /// Represents a Packet Mirroring resource. Packet Mirroring clones the traffic of specified instances in your Virtual Private Cloud (VPC) network and forwards it to a collector destination, such as an instance group of an internal TCP/UDP load balancer, for analysis or examination. For more information about setting up Packet Mirroring, see Using Packet Mirroring.
   public struct PacketMirroring: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The Forwarding Rule resource of typeloadBalancingScheme=INTERNAL that will be used as collector
-    /// for mirrored traffic.
-    /// The specified forwarding rule must have isMirroringCollector
-    /// set to true.
+    /// The Forwarding Rule resource of type loadBalancingScheme=INTERNAL that will be used as collector for mirrored traffic. The specified forwarding rule must have isMirroringCollector set to true.
     public var collectorIlb: PacketMirroringForwardingRuleInfo? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// Indicates whether or not this packet mirroring takes effect.
-    /// If set to FALSE, this packet mirroring policy will not be enforced on the
-    /// network.
-    ///
-    /// The default is TRUE.
+    /// Indicates whether or not this packet mirroring takes effect. If set to FALSE, this packet mirroring policy will not be enforced on the network. The default is TRUE.
     public var enable: PacketMirroring.Enable? = nil
 
     /// Filter for mirrored traffic. If unspecified, all IPv4 traffic is mirrored.
     public var filter: PacketMirroringFilter? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of the resource. Alwayscompute#packetMirroring for packet mirrorings.
+    /// Output only. [Output Only] Type of the resource. Always compute#packetMirroring for packet mirrorings.
     public var kind: Swift.String? = nil
 
-    /// PacketMirroring mirroredResourceInfos.
-    /// MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks
-    /// and/or tags for which traffic from/to all VM instances will be mirrored.
+    /// PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set of mirrored VM instances, subnetworks and/or tags for which traffic from/to all VM instances will be mirrored.
     public var mirroredResources: PacketMirroringMirroredResourceInfo? = nil
 
-    /// Name of the resource; provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must be
-    /// a dash, lowercase letter, or digit, except the last character, which cannot
-    /// be a dash.
+    /// Name of the resource; provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// Specifies the mirrored VPC network. Only packets in this network will be
-    /// mirrored. All mirrored VMs should have a NIC in the given network.
-    /// All mirrored subnetworks should belong to the given network.
+    /// Specifies the mirrored VPC network. Only packets in this network will be mirrored. All mirrored VMs should have a NIC in the given network. All mirrored subnetworks should belong to the given network.
     public var network: PacketMirroringNetworkInfo? = nil
 
-    /// The priority of applying this configuration. Priority is used to break ties
-    /// in cases where there is more than one matching rule. In the case of two
-    /// rules that apply for a given Instance, the one with the lowest-numbered
-    /// priority value wins.
-    ///
-    /// Default value is 1000. Valid range is 0 through 65535.
+    /// The priority of applying this configuration. Priority is used to break ties in cases where there is more than one matching rule. In the case of two rules that apply for a given Instance, the one with the lowest-numbered priority value wins. Default value is 1000. Valid range is 0 through 65535.
     public var priority: Swift.UInt32? = nil
 
     /// [Output Only] URI of the region where the packetMirroring resides.

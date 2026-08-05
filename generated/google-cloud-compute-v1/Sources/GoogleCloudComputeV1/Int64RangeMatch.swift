@@ -18,8 +18,7 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// HttpRouteRuleMatch criteria for field values that must stay
-  /// within the specified integer range.
+  /// HttpRouteRuleMatch criteria for field values that must stay within the specified integer range.
   public struct Int64RangeMatch: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {

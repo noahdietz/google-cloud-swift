@@ -22,13 +22,10 @@
     GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The last time the schedule successfully ran.
-    /// The timestamp is an RFC3339 string.
+    /// Output only. [Output Only] The last time the schedule successfully ran. The timestamp is an RFC3339 string.
     public var lastRunStartTime: Swift.String? = nil
 
-    /// Output only. [Output Only] The next time the schedule is planned to run.
-    /// The actual time might be slightly different.
-    /// The timestamp is an RFC3339 string.
+    /// Output only. [Output Only] The next time the schedule is planned to run. The actual time might be slightly different. The timestamp is an RFC3339 string.
     public var nextRunStartTime: Swift.String? = nil
 
     /// Initialize a new instance of `ResourcePolicyResourceStatusInstanceSchedulePolicyStatus`.

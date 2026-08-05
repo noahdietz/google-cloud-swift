@@ -18,31 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Provides the configuration for logging a type of permissions.
-  /// Example:
-  ///
-  ///     {
-  ///       "audit_log_configs": [
-  ///         {
-  ///           "log_type": "DATA_READ",
-  ///           "exempted_members": [
-  ///             "user:jose@example.com"
-  ///           ]
-  ///         },
-  ///         {
-  ///           "log_type": "DATA_WRITE"
-  ///         }
-  ///       ]
-  ///     }
-  ///
-  /// This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting
-  /// jose@example.com from DATA_READ logging.
+  /// Provides the configuration for logging a type of permissions. Example: { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:jose@example.com" ] }, { "log_type": "DATA_WRITE" } ] } This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting jose@example.com from DATA_READ logging.
   public struct AuditLogConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Specifies the identities that do not cause logging for this type of
-    /// permission.
-    /// Follows the same format of Binding.members.
+    /// Specifies the identities that do not cause logging for this type of permission. Follows the same format of Binding.members.
     public var exemptedMembers: [Swift.String] = []
 
     /// The log type that this config enables.

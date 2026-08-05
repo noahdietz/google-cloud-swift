@@ -43,10 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves an aggregated list of future reservations.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of future reservations. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "futureReservations_aggregatedList")
     public func aggregatedList(
@@ -56,10 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of future reservations.
-    ///
-    /// To prevent failure, it is recommended that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of future reservations. To prevent failure, it is recommended that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "futureReservations_aggregatedList")
     public func aggregatedList(
@@ -234,8 +228,7 @@
       )
     }
 
-    /// A list of all the future reservations that have been configured for the
-    /// specified project in specified zone.
+    /// A list of all the future reservations that have been configured for the specified project in specified zone.
     ///
     /// @Snippet(path: "futureReservations_list")
     public func list(
@@ -244,8 +237,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// A list of all the future reservations that have been configured for the
-    /// specified project in specified zone.
+    /// A list of all the future reservations that have been configured for the specified project in specified zone.
     ///
     /// @Snippet(path: "futureReservations_list")
     public func list(

@@ -22,75 +22,41 @@
   public struct ManagedInstance: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Output only. [Output Only] The current action that the managed instance group has
-    /// scheduled for the instance. Possible values:
-    ///
-    ///    - NONE The instance is running, and the managed
-    ///    instance group does not have any scheduled actions for this instance.
-    ///    - CREATING The managed instance group is creating this
-    ///    instance. If the group fails to create this instance, it will try again
-    ///    until it is successful.
-    ///    - CREATING_WITHOUT_RETRIES The managed instance group
-    ///    is attempting to create this instance only once. If the group fails
-    ///    to create this instance, it does not try again and the group'stargetSize value is decreased instead.
-    ///    - RECREATING The managed instance group is recreating
-    ///    this instance.
-    ///    - DELETING The managed instance group is permanently
-    ///    deleting this instance.
-    ///    - ABANDONING The managed instance group is abandoning
-    ///    this instance. The instance will be removed from the instance group
-    ///    and from any target pools that are associated with this group.
-    ///    - RESTARTING The managed instance group is restarting
-    ///    the instance.
-    ///    - REFRESHING The managed instance group is applying
-    ///    configuration changes to the instance without stopping it. For example,
-    ///    the group can update the target pool list for an instance without
-    ///    stopping that instance.
-    ///    - VERIFYING The managed instance group has created the
-    ///    instance and it is in the process of being verified.
+    /// Output only. [Output Only] The current action that the managed instance group has scheduled for the instance. Possible values: - NONE The instance is running, and the managed instance group does not have any scheduled actions for this instance. - CREATING The managed instance group is creating this instance. If the group fails to create this instance, it will try again until it is successful. - CREATING_WITHOUT_RETRIES The managed instance group is attempting to create this instance only once. If the group fails to create this instance, it does not try again and the group's targetSize value is decreased instead. - RECREATING The managed instance group is recreating this instance. - DELETING The managed instance group is permanently deleting this instance. - ABANDONING The managed instance group is abandoning this instance. The instance will be removed from the instance group and from any target pools that are associated with this group. - RESTARTING The managed instance group is restarting the instance. - REFRESHING The managed instance group is applying configuration changes to the instance without stopping it. For example, the group can update the target pool list for an instance without stopping that instance. - VERIFYING The managed instance group has created the instance and it is in the process of being verified.
     public var currentAction: ManagedInstance.CurrentAction? = nil
 
-    /// Output only. [Output only] The unique identifier for this resource. This field is empty
-    /// when instance does not exist.
+    /// Output only. [Output only] The unique identifier for this resource. This field is empty when instance does not exist.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] The URL of the instance. The URL can exist even if the
-    /// instance has not yet been created.
+    /// Output only. [Output Only] The URL of the instance. The URL can exist even if the instance has not yet been created.
     public var instance: Swift.String? = nil
 
     /// Output only. [Output Only] Health state of the instance per health-check.
     public var instanceHealth: [ManagedInstanceInstanceHealth] = []
 
-    /// Output only. [Output Only] The status of the instance. This field is empty when
-    /// the instance does not exist.
+    /// Output only. [Output Only] The status of the instance. This field is empty when the instance does not exist.
     public var instanceStatus: ManagedInstance.InstanceStatus? = nil
 
-    /// Output only. [Output Only] Information about the last attempt to create or delete
-    /// the instance.
+    /// Output only. [Output Only] Information about the last attempt to create or delete the instance.
     public var lastAttempt: ManagedInstanceLastAttempt? = nil
 
-    /// Output only. [Output Only] The name of the instance. The name always exists even if the
-    /// instance has not yet been created.
+    /// Output only. [Output Only] The name of the instance. The name always exists even if the instance has not yet been created.
     public var name: Swift.String? = nil
 
-    /// Output only. [Output Only] Preserved state applied from per-instance config
-    /// for this instance.
+    /// Output only. [Output Only] Preserved state applied from per-instance config for this instance.
     public var preservedStateFromConfig: PreservedState? = nil
 
-    /// Output only. [Output Only] Preserved state generated based on stateful policy
-    /// for this instance.
+    /// Output only. [Output Only] Preserved state generated based on stateful policy for this instance.
     public var preservedStateFromPolicy: PreservedState? = nil
 
-    /// Output only. [Output Only] Instance properties selected for this instance resulting from
-    /// InstanceFlexibilityPolicy.
+    /// Output only. [Output Only] Instance properties selected for this instance resulting from InstanceFlexibilityPolicy.
     public var propertiesFromFlexibilityPolicy: ManagedInstancePropertiesFromFlexibilityPolicy? =
       nil
 
     /// Output only. Information about the termination timestamp of the instance, if applicable.
     public var scheduling: ManagedInstanceScheduling? = nil
 
-    /// Output only. Specifies the graceful shutdown details if the instance is in
-    /// `PENDING_STOP` state or there is a programmed stop scheduled.
+    /// Output only. Specifies the graceful shutdown details if the instance is in `PENDING_STOP` state or there is a programmed stop scheduled.
     public var shutdownDetails: ManagedInstanceShutdownDetails? = nil
 
     /// Output only. [Output Only] Intended version of this instance.
@@ -116,29 +82,19 @@
     ///
     /// [google.cloud.compute.v1.ManagedInstance.currentAction]: <doc:ManagedInstance/CurrentAction>
     public enum CurrentAction: Codable, Equatable, Sendable {
-      /// The managed instance group is abandoning this instance. The instance
-      /// will be removed from the instance group and from any target pools that
-      /// are associated with this group.
+      /// The managed instance group is abandoning this instance. The instance will be removed from the instance group and from any target pools that are associated with this group.
       case abandoning
-      /// The managed instance group is creating this instance. If the group
-      /// fails to create this instance, it will try again until it is
-      /// successful.
+      /// The managed instance group is creating this instance. If the group fails to create this instance, it will try again until it is successful.
       case creating
-      /// The managed instance group is attempting to create this instance
-      /// only once. If the group fails to create this instance, it does
-      /// not try again and the group's targetSize value is
-      /// decreased.
+      /// The managed instance group is attempting to create this instance only once. If the group fails to create this instance, it does not try again and the group's targetSize value is decreased.
       case creatingWithoutRetries
       /// The managed instance group is permanently deleting this instance.
       case deleting
-      /// The managed instance group has not scheduled any actions for this
-      /// instance.
+      /// The managed instance group has not scheduled any actions for this instance.
       case `none`
       /// The managed instance group is recreating this instance.
       case recreating
-      /// The managed instance group is applying configuration changes to the
-      /// instance without stopping it. For example, the group can update the
-      /// target pool list for an instance without stopping that instance.
+      /// The managed instance group is applying configuration changes to the instance without stopping it. For example, the group can update the target pool list for an instance without stopping that instance.
       case refreshing
       /// The managed instance group is restarting this instance.
       case restarting
@@ -150,14 +106,7 @@
       case stopping
       /// The managed instance group is suspending this instance.
       case suspending
-      /// The managed instance group is verifying this already created instance.
-      /// Verification happens every time the instance is (re)created or restarted
-      /// and consists of:
-      ///  1. Waiting until health check specified as part of this managed instance
-      ///     group's autohealing policy reports HEALTHY.
-      ///     Note: Applies only if autohealing policy has a health check specified
-      ///  2. Waiting for addition verification steps performed as post-instance
-      ///     creation (subject to future extensions).
+      /// The managed instance group is verifying this already created instance. Verification happens every time the instance is (re)created or restarted and consists of: 1. Waiting until health check specified as part of this managed instance group's autohealing policy reports HEALTHY. Note: Applies only if autohealing policy has a health check specified 2. Waiting for addition verification steps performed as post-instance creation (subject to future extensions).
       case verifying
       /// Encodes an unknown integer value.
       ///
@@ -310,20 +259,19 @@
     ///
     /// [google.cloud.compute.v1.ManagedInstance.instanceStatus]: <doc:ManagedInstance/InstanceStatus>
     public enum InstanceStatus: Codable, Equatable, Sendable {
-      /// The instance is halted and we are performing tear down tasks like network
-      /// deprogramming, releasing quota, IP, tearing down disks etc.
+      /// The instance is halted and we are performing tear down tasks like network deprogramming, releasing quota, IP, tearing down disks etc.
       case deprovisioning
-      /// For Flex Start provisioning instance is waiting for available capacity
-      /// from Dynamic Workload Scheduler (DWS).
+      /// For Flex Start provisioning instance is waiting for available capacity from Dynamic Workload Scheduler (DWS).
       case pending
+      /// The instance is gracefully shutting down.
+      case pendingStop
       /// Resources are being allocated for the instance.
       case provisioning
       /// The instance is in repair.
       case repairing
       /// The instance is running.
       case running
-      /// All required resources have been allocated and the instance
-      /// is being started.
+      /// All required resources have been allocated and the instance is being started.
       case staging
       /// The instance has stopped successfully.
       case stopped
@@ -333,8 +281,7 @@
       case suspended
       /// The instance is suspending.
       case suspending
-      /// The instance has stopped (either by explicit action or underlying
-      /// failure).
+      /// The instance has stopped (either by explicit action or underlying failure).
       case terminated
       /// Encodes an unknown integer value.
       ///
@@ -360,15 +307,16 @@
         switch self {
         case .deprovisioning: return 0
         case .pending: return 1
-        case .provisioning: return 2
-        case .repairing: return 3
-        case .running: return 4
-        case .staging: return 5
-        case .stopped: return 6
-        case .stopping: return 7
-        case .suspended: return 8
-        case .suspending: return 9
-        case .terminated: return 10
+        case .pendingStop: return 2
+        case .provisioning: return 3
+        case .repairing: return 4
+        case .running: return 5
+        case .staging: return 6
+        case .stopped: return 7
+        case .stopping: return 8
+        case .suspended: return 9
+        case .suspending: return 10
+        case .terminated: return 11
         case .unknownIntValue(let v): return v
         case .unknownStringValue: return nil
         }
@@ -381,6 +329,7 @@
         switch self {
         case .deprovisioning: return "DEPROVISIONING"
         case .pending: return "PENDING"
+        case .pendingStop: return "PENDING_STOP"
         case .provisioning: return "PROVISIONING"
         case .repairing: return "REPAIRING"
         case .running: return "RUNNING"
@@ -402,6 +351,7 @@
         switch stringValue {
         case "DEPROVISIONING": self = .deprovisioning
         case "PENDING": self = .pending
+        case "PENDING_STOP": self = .pendingStop
         case "PROVISIONING": self = .provisioning
         case "REPAIRING": self = .repairing
         case "RUNNING": self = .running
@@ -422,15 +372,16 @@
         switch intValue {
         case 0: self = .deprovisioning
         case 1: self = .pending
-        case 2: self = .provisioning
-        case 3: self = .repairing
-        case 4: self = .running
-        case 5: self = .staging
-        case 6: self = .stopped
-        case 7: self = .stopping
-        case 8: self = .suspended
-        case 9: self = .suspending
-        case 10: self = .terminated
+        case 2: self = .pendingStop
+        case 3: self = .provisioning
+        case 4: self = .repairing
+        case 5: self = .running
+        case 6: self = .staging
+        case 7: self = .stopped
+        case 8: self = .stopping
+        case 9: self = .suspended
+        case 10: self = .suspending
+        case 11: self = .terminated
         default: self = .unknownIntValue(intValue)
         }
       }
@@ -458,15 +409,16 @@
         switch self {
         case .deprovisioning: return try container.encode(0)
         case .pending: return try container.encode(1)
-        case .provisioning: return try container.encode(2)
-        case .repairing: return try container.encode(3)
-        case .running: return try container.encode(4)
-        case .staging: return try container.encode(5)
-        case .stopped: return try container.encode(6)
-        case .stopping: return try container.encode(7)
-        case .suspended: return try container.encode(8)
-        case .suspending: return try container.encode(9)
-        case .terminated: return try container.encode(10)
+        case .pendingStop: return try container.encode(2)
+        case .provisioning: return try container.encode(3)
+        case .repairing: return try container.encode(4)
+        case .running: return try container.encode(5)
+        case .staging: return try container.encode(6)
+        case .stopped: return try container.encode(7)
+        case .stopping: return try container.encode(8)
+        case .suspended: return try container.encode(9)
+        case .suspending: return try container.encode(10)
+        case .terminated: return try container.encode(11)
         case .unknownIntValue(let v): return try container.encode(v)
         case .unknownStringValue(let v): return try container.encode(v)
         }

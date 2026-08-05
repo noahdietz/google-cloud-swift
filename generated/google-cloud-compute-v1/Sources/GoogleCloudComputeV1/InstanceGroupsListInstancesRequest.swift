@@ -21,9 +21,7 @@
   public struct InstanceGroupsListInstancesRequest: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A filter for the state of the instances in the instance group. Valid
-    /// options are ALL or RUNNING. If you do not specify
-    /// this parameter the list includes all instances regardless of their state.
+    /// A filter for the state of the instances in the instance group. Valid options are ALL or RUNNING. If you do not specify this parameter the list includes all instances regardless of their state.
     public var instanceState: InstanceGroupsListInstancesRequest.InstanceState? = nil
 
     /// Initialize a new instance of `InstanceGroupsListInstancesRequest`.
@@ -48,8 +46,7 @@
     public enum InstanceState: Codable, Equatable, Sendable {
       /// Includes all instances in the generated list regardless of their state.
       case all
-      /// Includes instances in the generated list only if they have a RUNNING
-      /// state.
+      /// Includes instances in the generated list only if they have a RUNNING state.
       case running
       /// Encodes an unknown integer value.
       ///

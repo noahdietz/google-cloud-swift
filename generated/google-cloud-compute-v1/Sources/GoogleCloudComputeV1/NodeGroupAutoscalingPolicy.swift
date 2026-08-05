@@ -21,16 +21,13 @@
   public struct NodeGroupAutoscalingPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The maximum number of nodes that the group should have. Must be set if
-    /// autoscaling is enabled. Maximum value allowed is 100.
+    /// The maximum number of nodes that the group should have. Must be set if autoscaling is enabled. Maximum value allowed is 100.
     public var maxNodes: Swift.Int32? = nil
 
     /// The minimum number of nodes that the group should have.
     public var minNodes: Swift.Int32? = nil
 
-    /// The autoscaling mode. Set to one of: ON, OFF,
-    /// or ONLY_SCALE_OUT. For more information, see
-    /// Autoscaler modes.
+    /// The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more information, see Autoscaler modes.
     public var mode: NodeGroupAutoscalingPolicy.Mode? = nil
 
     /// Initialize a new instance of `NodeGroupAutoscalingPolicy`.

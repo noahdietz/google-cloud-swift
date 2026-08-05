@@ -18,16 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// MACsec configuration information for the Interconnect connection. Contains
-  /// the generated Connectivity Association Key Name (CKN) and the key (CAK) for
-  /// this Interconnect connection.
+  /// MACsec configuration information for the Interconnect connection. Contains the generated Connectivity Association Key Name (CKN) and the key (CAK) for this Interconnect connection.
   public struct InterconnectMacsecConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// A keychain placeholder describing a set of named key objects
-    /// along with their start times. A MACsec CKN/CAK is generated for each key in
-    /// the key chain. Google router automatically picks the key with the most
-    /// recent startTime when establishing or re-establishing a MACsec secure link.
+    /// A keychain placeholder describing a set of named key objects along with their start times. A MACsec CKN/CAK is generated for each key in the key chain. Google router automatically picks the key with the most recent startTime when establishing or re-establishing a MACsec secure link.
     public var preSharedKeys: [InterconnectMacsecConfigPreSharedKey] = []
 
     /// Initialize a new instance of `InterconnectMacsecConfig`.

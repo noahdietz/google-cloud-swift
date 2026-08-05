@@ -18,513 +18,162 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Backend Service resource.
-  ///
-  /// A backend service defines how Google Cloud load balancers distribute traffic.
-  /// The backend service configuration contains a set of values, such as the
-  /// protocol used to connect to backends, various distribution and session
-  /// settings, health checks, and timeouts. These settings provide fine-grained
-  /// control over how your load balancer behaves. Most of the settings have
-  /// default values that allow for easy configuration if you need to get started
-  /// quickly.
-  ///
-  /// Backend services in Google Compute Engine can be either regionally or
-  /// globally scoped.
-  ///
-  /// * [Global](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices)
-  /// * [Regional](https://cloud.google.com/compute/docs/reference/rest/v1/regionBackendServices)
-  ///
-  /// For more information, seeBackend
-  /// Services.
+  /// Represents a Backend Service resource. A backend service defines how Google Cloud load balancers distribute traffic. The backend service configuration contains a set of values, such as the protocol used to connect to backends, various distribution and session settings, health checks, and timeouts. These settings provide fine-grained control over how your load balancer behaves. Most of the settings have default values that allow for easy configuration if you need to get started quickly. Backend services in Google Compute Engine can be either regionally or globally scoped. * [Global](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) * [Regional](https://cloud.google.com/compute/docs/reference/rest/v1/regionBackendServices) For more information, see Backend Services.
   public struct BackendService: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Lifetime of cookies in seconds. This setting is applicable to Application
-    /// Load Balancers and Traffic Director and requires
-    /// GENERATED_COOKIE or HTTP_COOKIE session affinity.
-    ///
-    /// If set to 0, the cookie is non-persistent and lasts only until
-    /// the end of the browser session (or equivalent). The maximum allowed value
-    /// is two weeks (1,209,600).
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// Lifetime of cookies in seconds. This setting is applicable to Application Load Balancers and Traffic Director and requires GENERATED_COOKIE or HTTP_COOKIE session affinity. If set to 0, the cookie is non-persistent and lasts only until the end of the browser session (or equivalent). The maximum allowed value is two weeks (1,209,600). Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var affinityCookieTtlSec: Swift.Int32? = nil
 
     /// The list of backends that serve this BackendService.
     public var backends: [Backend] = []
 
-    /// Cloud CDN configuration for this BackendService. Only available for
-    /// specified load balancer types.
+    /// Cloud CDN configuration for this BackendService. Only available for specified load balancer types.
     public var cdnPolicy: BackendServiceCdnPolicy? = nil
 
     public var circuitBreakers: CircuitBreakers? = nil
 
-    /// Compress text responses using Brotli or gzip compression, based on
-    /// the client's Accept-Encoding header.
+    /// Compress text responses using Brotli or gzip compression, based on the client's Accept-Encoding header.
     public var compressionMode: BackendService.CompressionMode? = nil
 
     /// connectionDraining cannot be specified with haPolicy.
     public var connectionDraining: ConnectionDraining? = nil
 
-    /// Connection Tracking configuration for this BackendService. Connection
-    /// tracking policy settings are only available for external passthrough
-    /// Network Load Balancers and internal passthrough Network Load Balancers.
-    ///
-    /// connectionTrackingPolicy cannot be specified with haPolicy.
+    /// Connection Tracking configuration for this BackendService. Connection tracking policy settings are only available for external passthrough Network Load Balancers and internal passthrough Network Load Balancers. connectionTrackingPolicy cannot be specified with haPolicy.
     public var connectionTrackingPolicy: BackendServiceConnectionTrackingPolicy? = nil
 
-    /// Consistent Hash-based load balancing can be used to provide soft session
-    /// affinity based on HTTP headers, cookies or other properties. This load
-    /// balancing policy is applicable only for HTTP connections. The affinity to a
-    /// particular destination host will be lost when one or more hosts are
-    /// added/removed from the destination service. This field specifies parameters
-    /// that control consistent hashing. This field is only applicable whenlocalityLbPolicy is set to MAGLEV orRING_HASH.
-    ///
-    /// This field is applicable to either:
-    ///
-    ///    - A regional backend service with the service protocol set to HTTP,
-    ///    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-    ///    INTERNAL_MANAGED.
-    ///    - A global backend service with the
-    ///    load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    /// Consistent Hash-based load balancing can be used to provide soft session affinity based on HTTP headers, cookies or other properties. This load balancing policy is applicable only for HTTP connections. The affinity to a particular destination host will be lost when one or more hosts are added/removed from the destination service. This field specifies parameters that control consistent hashing. This field is only applicable when localityLbPolicy is set to MAGLEV or RING_HASH. This field is applicable to either: - A regional backend service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
     public var consistentHash: ConsistentHashLoadBalancerSettings? = nil
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// List of custom metrics that are used for theWEIGHTED_ROUND_ROBIN locality_lb_policy.
+    /// List of custom metrics that are used for the WEIGHTED_ROUND_ROBIN locality_lb_policy.
     public var customMetrics: [BackendServiceCustomMetric] = []
 
-    /// Headers that the load balancer adds to proxied requests. See [Creating
-    /// custom
-    /// headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+    /// Headers that the load balancer adds to proxied requests. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
     public var customRequestHeaders: [Swift.String] = []
 
-    /// Headers that the load balancer adds to proxied responses. See [Creating
-    /// custom
-    /// headers](https://cloud.google.com/load-balancing/docs/custom-headers).
+    /// Headers that the load balancer adds to proxied responses. See [Creating custom headers](https://cloud.google.com/load-balancing/docs/custom-headers).
     public var customResponseHeaders: [Swift.String] = []
 
-    /// An optional description of this resource. Provide this property when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this property when you create the resource.
     public var description: Swift.String? = nil
 
-    /// [Output Only] The resource URL for the edge security policy associated with
-    /// this backend service.
+    /// [Output Only] The resource URL for the edge security policy associated with this backend service.
     public var edgeSecurityPolicy: Swift.String? = nil
 
-    /// If true, enables Cloud CDN for the backend service of a
-    /// global external Application Load Balancer.
+    /// If true, enables Cloud CDN for the backend service of a global external Application Load Balancer.
     public var enableCdn: Swift.Bool? = nil
 
-    /// Specifies the canary migration state. Possible values are PREPARE,
-    /// TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC.
-    ///
-    /// To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be
-    /// changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before
-    /// the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the
-    /// TEST_BY_PERCENTAGE state can be used to migrate traffic by percentage using
-    /// externalManagedMigrationTestingPercentage.
-    ///
-    /// Rolling back a migration requires the states to be set in reverse order. So
-    /// changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to
-    /// be set to TEST_ALL_TRAFFIC at the same time. Optionally, the
-    /// TEST_BY_PERCENTAGE state can be used to migrate some traffic back to
-    /// EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
+    /// Specifies the canary migration state. Possible values are PREPARE, TEST_BY_PERCENTAGE, and TEST_ALL_TRAFFIC. To begin the migration from EXTERNAL to EXTERNAL_MANAGED, the state must be changed to PREPARE. The state must be changed to TEST_ALL_TRAFFIC before the loadBalancingScheme can be changed to EXTERNAL_MANAGED. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate traffic by percentage using externalManagedMigrationTestingPercentage. Rolling back a migration requires the states to be set in reverse order. So changing the scheme from EXTERNAL_MANAGED to EXTERNAL requires the state to be set to TEST_ALL_TRAFFIC at the same time. Optionally, the TEST_BY_PERCENTAGE state can be used to migrate some traffic back to EXTERNAL or PREPARE can be used to migrate all traffic back to EXTERNAL.
     public var externalManagedMigrationState: BackendService.ExternalManagedMigrationState? = nil
 
-    /// Determines the fraction of requests that should be processed by the Global
-    /// external Application Load Balancer.
-    ///
-    /// The value of this field must be in the range [0, 100].
-    ///
-    /// Session affinity options will slightly affect this routing behavior, for
-    /// more details, see:Session
-    /// Affinity.
-    ///
-    /// This value can only be set if the loadBalancingScheme in the BackendService
-    /// is set to EXTERNAL (when using the classic Application Load Balancer) and
-    /// the migration state is TEST_BY_PERCENTAGE.
+    /// Determines the fraction of requests that should be processed by the Global external Application Load Balancer. The value of this field must be in the range [0, 100]. Session affinity options will slightly affect this routing behavior, for more details, see: Session Affinity. This value can only be set if the loadBalancingScheme in the BackendService is set to EXTERNAL (when using the classic Application Load Balancer) and the migration state is TEST_BY_PERCENTAGE.
     public var externalManagedMigrationTestingPercentage: Swift.Float? = nil
 
-    /// Requires at least one backend instance group to be defined
-    /// as a backup (failover) backend.
-    /// For load balancers that have configurable failover:
-    /// [Internal passthrough Network Load
-    /// Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview)
-    /// and [external passthrough Network Load
-    /// Balancers](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview).
-    ///
-    /// failoverPolicy cannot be specified with haPolicy.
+    /// Requires at least one backend instance group to be defined as a backup (failover) backend. For load balancers that have configurable failover: [Internal passthrough Network Load Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and [external passthrough Network Load Balancers](https://cloud.google.com/load-balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with haPolicy.
     public var failoverPolicy: BackendServiceFailoverPolicy? = nil
 
-    /// Fingerprint of this resource. A hash of the contents stored in this object.
-    /// This field is used in optimistic locking. This field will be ignored when
-    /// inserting a BackendService. An up-to-date fingerprint must be provided in
-    /// order to update the BackendService, otherwise the request will
-    /// fail with error 412 conditionNotMet.
-    ///
-    /// To see the latest fingerprint, make a get() request to
-    /// retrieve a BackendService.
+    /// Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking. This field will be ignored when inserting a BackendService. An up-to-date fingerprint must be provided in order to update the BackendService, otherwise the request will fail with error 412 conditionNotMet. To see the latest fingerprint, make a get() request to retrieve a BackendService.
     public var fingerprint: Foundation.Data? = nil
 
-    /// Configures self-managed High Availability (HA) for External and Internal
-    /// Protocol Forwarding.
-    ///
-    /// The backends of this regional backend service must only specify zonal
-    /// network endpoint groups (NEGs) of type GCE_VM_IP.
-    ///
-    /// When haPolicy is set for an Internal Passthrough Network Load Balancer, the
-    /// regional backend service must set the network field. All zonal NEGs must
-    /// belong to the same network. However, individual NEGs can
-    /// belong to different subnetworks of that network.
-    ///
-    /// When haPolicy is specified, the set of attached network endpoints across
-    /// all backends comprise an High Availability domain from which one endpoint
-    /// is selected as the active endpoint (the leader) that receives all
-    /// traffic.
-    ///
-    /// haPolicy can be added only at backend service creation time. Once set up,
-    /// it cannot be deleted.
-    ///
-    /// Note that haPolicy is not for load balancing, and therefore cannot be
-    /// specified with sessionAffinity, connectionTrackingPolicy, and
-    /// failoverPolicy.
-    ///
-    /// haPolicy requires customers to be responsible for tracking backend
-    /// endpoint health and electing a leader among the healthy endpoints.
-    /// Therefore, haPolicy cannot be specified with healthChecks.
-    ///
-    /// haPolicy can only be specified for External Passthrough Network Load
-    /// Balancers and Internal Passthrough Network Load Balancers.
+    /// Configures self-managed High Availability (HA) for External and Internal Protocol Forwarding. The backends of this regional backend service must only specify zonal network endpoint groups (NEGs) of type GCE_VM_IP. When haPolicy is set for an Internal Passthrough Network Load Balancer, the regional backend service must set the network field. All zonal NEGs must belong to the same network. However, individual NEGs can belong to different subnetworks of that network. When haPolicy is specified, the set of attached network endpoints across all backends comprise an High Availability domain from which one endpoint is selected as the active endpoint (the leader) that receives all traffic. haPolicy can be added only at backend service creation time. Once set up, it cannot be deleted. Note that haPolicy is not for load balancing, and therefore cannot be specified with sessionAffinity, connectionTrackingPolicy, and failoverPolicy. haPolicy requires customers to be responsible for tracking backend endpoint health and electing a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with healthChecks. haPolicy can only be specified for External Passthrough Network Load Balancers and Internal Passthrough Network Load Balancers.
     public var haPolicy: BackendServiceHAPolicy? = nil
 
-    /// The list of URLs to the healthChecks, httpHealthChecks (legacy), or
-    /// httpsHealthChecks (legacy) resource for health checking this backend
-    /// service. Not all backend services support legacy health checks. See
-    /// Load balancer guide. Currently, at most one health check can be
-    /// specified for each backend service. Backend services with
-    /// instance group or zonal NEG backends must have a health check unless
-    /// haPolicy is specified. Backend services with internet or serverless NEG
-    /// backends must not have a health check.
-    ///
-    /// healthChecks[] cannot be specified with haPolicy.
+    /// The list of URLs to the healthChecks, httpHealthChecks (legacy), or httpsHealthChecks (legacy) resource for health checking this backend service. Not all backend services support legacy health checks. See Load balancer guide. Currently, at most one health check can be specified for each backend service. Backend services with instance group or zonal NEG backends must have a health check unless haPolicy is specified. Backend services with internet or serverless NEG backends must not have a health check. healthChecks[] cannot be specified with haPolicy.
     public var healthChecks: [Swift.String] = []
 
-    /// The configurations for Identity-Aware Proxy on this resource.
-    /// Not available for internal passthrough Network Load Balancers and external
-    /// passthrough Network Load Balancers.
+    /// The configurations for Identity-Aware Proxy on this resource. Not available for internal passthrough Network Load Balancers and external passthrough Network Load Balancers.
     public var iap: BackendServiceIAP? = nil
 
-    /// [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Specifies a preference for traffic sent from the proxy to the backend (or
-    /// from the client to the backend for proxyless gRPC).
-    /// The possible values are:
-    ///
-    ///    - IPV4_ONLY: Only send IPv4 traffic to the backends of the
-    ///    backend service (Instance Group, Managed Instance Group, Network Endpoint
-    ///    Group), regardless of traffic from the client to the proxy. Only IPv4
-    ///    health checks are used to check the health of the backends. This is the
-    ///    default setting.
-    ///    - PREFER_IPV6: Prioritize the connection to the endpoint's
-    ///    IPv6 address over its IPv4 address (provided there is a healthy IPv6
-    ///    address).
-    ///    - IPV6_ONLY: Only send IPv6 traffic to the backends of the
-    ///    backend service (Instance Group, Managed Instance Group, Network Endpoint
-    ///    Group), regardless of traffic from the client to the proxy. Only IPv6
-    ///    health checks are used to check the health of the backends.
-    ///
-    ///
-    ///
-    /// This field is applicable to either:
-    ///
-    ///    -  Advanced global external Application Load Balancer (load balancing
-    ///    scheme EXTERNAL_MANAGED),
-    ///    -  Regional external Application Load
-    ///    Balancer,
-    ///    -  Internal proxy Network Load Balancer (load balancing
-    ///    scheme INTERNAL_MANAGED),
-    ///    -  Regional internal Application Load
-    ///    Balancer (load balancing scheme INTERNAL_MANAGED),
-    ///    -  Traffic
-    ///    Director with Envoy proxies and proxyless gRPC (load balancing scheme
-    ///    INTERNAL_SELF_MANAGED).
+    /// Specifies a preference for traffic sent from the proxy to the backend (or from the client to the backend for proxyless gRPC). The possible values are: - IPV4_ONLY: Only send IPv4 traffic to the backends of the backend service (Instance Group, Managed Instance Group, Network Endpoint Group), regardless of traffic from the client to the proxy. Only IPv4 health checks are used to check the health of the backends. This is the default setting. - PREFER_IPV6: Prioritize the connection to the endpoint's IPv6 address over its IPv4 address (provided there is a healthy IPv6 address). - IPV6_ONLY: Only send IPv6 traffic to the backends of the backend service (Instance Group, Managed Instance Group, Network Endpoint Group), regardless of traffic from the client to the proxy. Only IPv6 health checks are used to check the health of the backends. This field is applicable to either: - Advanced global external Application Load Balancer (load balancing scheme EXTERNAL_MANAGED), - Regional external Application Load Balancer, - Internal proxy Network Load Balancer (load balancing scheme INTERNAL_MANAGED), - Regional internal Application Load Balancer (load balancing scheme INTERNAL_MANAGED), - Traffic Director with Envoy proxies and proxyless gRPC (load balancing scheme INTERNAL_SELF_MANAGED).
     public var ipAddressSelectionPolicy: BackendService.IpAddressSelectionPolicy? = nil
 
-    /// Output only. [Output Only] Type of resource. Always compute#backendService
-    /// for backend services.
+    /// Output only. [Output Only] Type of resource. Always compute#backendService for backend services.
     public var kind: Swift.String? = nil
 
-    /// Specifies the load balancer type. A backend service
-    /// created for one type of load balancer cannot be used with another.
-    /// For more information, refer toChoosing
-    /// a load balancer.
+    /// Specifies the load balancer type. A backend service created for one type of load balancer cannot be used with another. For more information, refer to Choosing a load balancer.
     public var loadBalancingScheme: BackendService.LoadBalancingScheme? = nil
 
-    /// A list of locality load-balancing policies to be used in order of
-    /// preference. When you use localityLbPolicies, you must set at least one
-    /// value for either the localityLbPolicies[].policy or the
-    /// localityLbPolicies[].customPolicy field. localityLbPolicies overrides any
-    /// value set in the localityLbPolicy field.
-    ///
-    /// For an example of how to use this field, seeDefine
-    /// a list of preferred policies.
-    ///
-    /// Caution: This field and its children are intended for use in a service mesh
-    /// that includes gRPC clients only. Envoy proxies can't use backend services
-    /// that have this configuration.
+    /// A list of locality load-balancing policies to be used in order of preference. When you use localityLbPolicies, you must set at least one value for either the localityLbPolicies[].policy or the localityLbPolicies[].customPolicy field. localityLbPolicies overrides any value set in the localityLbPolicy field. For an example of how to use this field, see Define a list of preferred policies. Caution: This field and its children are intended for use in a service mesh that includes gRPC clients only. Envoy proxies can't use backend services that have this configuration.
     public var localityLbPolicies: [BackendServiceLocalityLoadBalancingPolicyConfig] = []
 
-    /// The load balancing algorithm used within the scope of the locality. The
-    /// possible values are:
-    ///
-    ///    - ROUND_ROBIN: This is a simple policy in which each healthy
-    ///    backend is selected in round robin order. This is the default.
-    ///    - LEAST_REQUEST: An O(1) algorithm which
-    ///    selects two random healthy hosts and picks the host which has fewer active
-    ///    requests.
-    ///    - RING_HASH: The ring/modulo hash load balancer implements
-    ///    consistent hashing to backends. The algorithm has the property that the
-    ///    addition/removal of a host from a set of N hosts only affects 1/N of the
-    ///    requests.
-    ///    - RANDOM: The load balancer selects a random healthy
-    ///    host.
-    ///    - ORIGINAL_DESTINATION: Backend host is selected
-    ///    based on the client connection metadata, i.e., connections are opened to
-    ///    the same address as the destination address of the incoming connection
-    ///    before the connection was redirected to the load balancer.
-    ///    - MAGLEV: used as a drop in replacement for the ring hash
-    ///    load balancer. Maglev is not as stable as ring hash but has faster table
-    ///    lookup build times and host selection times. For more information about
-    ///    Maglev, see Maglev:
-    ///    A Fast and Reliable Software Network Load Balancer.
-    ///    - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin
-    ///    Load Balancing using weights computed from Backend reported Custom Metrics.
-    ///    If set, the Backend Service responses are expected to contain non-standard
-    ///    HTTP response header field Endpoint-Load-Metrics. The reported
-    ///    metrics to use for computing the weights are specified via thecustomMetrics field.
-    ///
-    ///    This field is applicable to either:
-    ///       - A regional backend service with the service protocol set to HTTP,
-    ///       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-    ///       INTERNAL_MANAGED.
-    ///       - A global backend service with the
-    ///       load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or
-    ///       EXTERNAL_MANAGED.
-    ///
-    ///
-    ///    If sessionAffinity is not configured—that is, if session
-    ///    affinity remains at the default value of NONE—then the
-    ///    default value for localityLbPolicy
-    ///    is ROUND_ROBIN. If session affinity is set to a value other
-    ///    than NONE,
-    ///    then the default value for localityLbPolicy isMAGLEV.
-    ///
-    ///    Only ROUND_ROBIN and RING_HASH are supported
-    ///    when the backend service is referenced by a URL map that is bound to
-    ///    target gRPC proxy that has validateForProxyless field set to true.
-    ///
-    ///    localityLbPolicy cannot be specified with haPolicy.
+    /// The load balancing algorithm used within the scope of the locality. The possible values are: - ROUND_ROBIN: This is a simple policy in which each healthy backend is selected in round robin order. This is the default. - LEAST_REQUEST: An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests. - RING_HASH: The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests. - RANDOM: The load balancer selects a random healthy host. - ORIGINAL_DESTINATION: Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer. - MAGLEV: used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see Maglev: A Fast and Reliable Software Network Load Balancer. - WEIGHTED_ROUND_ROBIN: Per-endpoint Weighted Round Robin Load Balancing using weights computed from Backend reported Custom Metrics. If set, the Backend Service responses are expected to contain non-standard HTTP response header field Endpoint-Load-Metrics. The reported metrics to use for computing the weights are specified via the customMetrics field. This field is applicable to either: - A regional backend service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and load_balancing_scheme set to INTERNAL_MANAGED. - A global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or EXTERNAL_MANAGED. If sessionAffinity is not configured—that is, if session affinity remains at the default value of NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set to a value other than NONE, then the default value for localityLbPolicy is MAGLEV. Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. localityLbPolicy cannot be specified with haPolicy.
     public var localityLbPolicy: BackendService.LocalityLbPolicy? = nil
 
-    /// This field denotes the logging options for the load balancer traffic served
-    /// by this backend service. If logging is enabled, logs will be exported to
-    /// Stackdriver.
+    /// This field denotes the logging options for the load balancer traffic served by this backend service. If logging is enabled, logs will be exported to Stackdriver.
     public var logConfig: BackendServiceLogConfig? = nil
 
-    /// Specifies the default maximum duration (timeout) for streams to this
-    /// service. Duration is computed from the beginning of the stream until the
-    /// response has been completely processed, including all retries. A stream
-    /// that does not complete in this duration is closed.
-    ///
-    /// If not specified, there will be no timeout limit, i.e. the maximum
-    /// duration is infinite.
-    ///
-    /// This value can be overridden in the PathMatcher configuration of the
-    /// UrlMap that references this backend service.
-    ///
-    /// This field is only allowed when the loadBalancingScheme of
-    /// the backend service is INTERNAL_SELF_MANAGED.
+    /// Specifies the default maximum duration (timeout) for streams to this service. Duration is computed from the beginning of the stream until the response has been completely processed, including all retries. A stream that does not complete in this duration is closed. If not specified, there will be no timeout limit, i.e. the maximum duration is infinite. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. This field is only allowed when the loadBalancingScheme of the backend service is INTERNAL_SELF_MANAGED.
     public var maxStreamDuration: Duration? = nil
 
-    /// Deployment metadata associated with the resource to be set by a GKE hub
-    /// controller and read by the backend RCTH
+    /// Deployment metadata associated with the resource to be set by a GKE hub controller and read by the backend RCTH
     public var metadatas: [Swift.String: Swift.String] = [:]
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-    /// character must be a lowercase letter, and all following characters must
-    /// be a dash, lowercase letter, or digit, except the last character, which
-    /// cannot be a dash.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
     public var name: Swift.String? = nil
 
-    /// The URL of the network to which this backend service belongs.
-    ///
-    /// This field must be set for Internal Passthrough Network Load Balancers when
-    /// the haPolicy is enabled, and for External Passthrough Network Load
-    /// Balancers when the haPolicy fastIpMove is enabled.
-    ///
-    /// This field can only be specified when the load balancing scheme is set toINTERNAL, or when the load balancing scheme is set toEXTERNAL and haPolicy fastIpMove is enabled.
+    /// The URL of the network to which this backend service belongs. This field must be set for Internal Passthrough Network Load Balancers when the haPolicy is enabled, and for External Passthrough Network Load Balancers when the haPolicy fastIpMove is enabled. This field can only be specified when the load balancing scheme is set to INTERNAL, or when the load balancing scheme is set to EXTERNAL and haPolicy fastIpMove is enabled.
     public var network: Swift.String? = nil
 
-    /// Configures traffic steering properties of internal passthrough Network
-    /// Load Balancers.
-    ///
-    /// networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
+    /// Configures traffic steering properties of internal passthrough Network Load Balancers. networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
     public var networkPassThroughLbTrafficPolicy: BackendServiceNetworkPassThroughLbTrafficPolicy? =
       nil
 
     /// Information about the resource or system that manages the backend service.
     public var orchestrationInfo: BackendServiceOrchestrationInfo? = nil
 
-    /// Settings controlling the ejection of unhealthy backend endpoints from the
-    /// load balancing pool of each individual proxy instance that processes the
-    /// traffic for the given backend service. If not set, this feature is
-    /// considered disabled.
-    ///
-    /// Results of the outlier detection algorithm (ejection of endpoints from the
-    /// load balancing pool and returning them back to the pool) are executed
-    /// independently by each proxy instance of the load balancer. In most cases,
-    /// more than one proxy instance handles the traffic received by a backend
-    /// service. Thus, it is possible that an unhealthy endpoint is detected and
-    /// ejected by only some of the proxies, and while this happens, other proxies
-    /// may continue to send requests to the same unhealthy endpoint until they
-    /// detect and eject the unhealthy endpoint.
-    ///
-    /// Applicable backend endpoints can be:
-    ///
-    ///    - VM instances in an Instance Group
-    ///    - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT)
-    ///    - Endpoints in a Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT)
-    ///    - Serverless NEGs, that resolve to Cloud Run, App Engine, or Cloud
-    ///    Functions Services
-    ///    - Private Service Connect NEGs, that resolve to
-    ///    Google-managed regional API endpoints or managed services published using
-    ///    Private Service Connect
-    ///
-    ///
-    ///
-    /// Applicable backend service types can be:
-    ///
-    ///    - A global backend service with the loadBalancingScheme set to
-    ///    INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED.
-    ///    - A regional backend
-    ///    service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and
-    ///    loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not
-    ///    supported for Serverless NEGs.
-    ///
-    ///
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
+    /// Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool of each individual proxy instance that processes the traffic for the given backend service. If not set, this feature is considered disabled. Results of the outlier detection algorithm (ejection of endpoints from the load balancing pool and returning them back to the pool) are executed independently by each proxy instance of the load balancer. In most cases, more than one proxy instance handles the traffic received by a backend service. Thus, it is possible that an unhealthy endpoint is detected and ejected by only some of the proxies, and while this happens, other proxies may continue to send requests to the same unhealthy endpoint until they detect and eject the unhealthy endpoint. Applicable backend endpoints can be: - VM instances in an Instance Group - Endpoints in a Zonal NEG (GCE_VM_IP, GCE_VM_IP_PORT) - Endpoints in a Hybrid Connectivity NEG (NON_GCP_PRIVATE_IP_PORT) - Serverless NEGs, that resolve to Cloud Run, App Engine, or Cloud Functions Services - Private Service Connect NEGs, that resolve to Google-managed regional API endpoints or managed services published using Private Service Connect Applicable backend service types can be: - A global backend service with the loadBalancingScheme set to INTERNAL_SELF_MANAGED or EXTERNAL_MANAGED. - A regional backend service with the service protocol set to HTTP, HTTPS, HTTP2 or H2C, and loadBalancingScheme set to INTERNAL_MANAGED or EXTERNAL_MANAGED. Not supported for Serverless NEGs. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true.
     public var outlierDetection: OutlierDetection? = nil
 
-    /// Input only. [Input Only] Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
     public var params: BackendServiceParams? = nil
 
-    /// Deprecated in favor of portName. The TCP port to connect on
-    /// the backend. The default value is 80.
-    /// For internal passthrough Network Load Balancers and external passthrough
-    /// Network Load Balancers, omit port.
+    /// Deprecated in favor of portName. The TCP port to connect on the backend. The default value is 80. For internal passthrough Network Load Balancers and external passthrough Network Load Balancers, omit port.
     @available(*, deprecated)
     public var port: Swift.Int32? = nil
 
-    /// A named port on a backend instance group representing the port for
-    /// communication to the backend VMs in that group. The
-    /// named port must be [defined on each backend instance
-    /// group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports).
-    /// This parameter has no meaning if the backends are NEGs. For internal
-    /// passthrough Network Load Balancers and external passthrough Network Load
-    /// Balancers, omit port_name.
+    /// A named port on a backend instance group representing the port for communication to the backend VMs in that group. The named port must be [defined on each backend instance group](https://cloud.google.com/load-balancing/docs/backend-service#named_ports). This parameter has no meaning if the backends are NEGs. For internal passthrough Network Load Balancers and external passthrough Network Load Balancers, omit port_name.
     public var portName: Swift.String? = nil
 
-    /// The protocol this BackendService uses to communicate
-    /// with backends.
-    ///
-    /// Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC.
-    /// depending on the chosen load balancer or Traffic Director configuration.
-    /// Refer to the documentation for the load balancers or for Traffic Director
-    /// for more information.
-    ///
-    /// Must be set to GRPC when the backend service is referenced by a URL map
-    /// that is bound to target gRPC proxy.
+    /// The protocol this BackendService uses to communicate with backends. Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen load balancer or Traffic Director configuration. Refer to the documentation for the load balancers or for Traffic Director for more information. Must be set to GRPC when the backend service is referenced by a URL map that is bound to target gRPC proxy.
     public var `protocol`: BackendService.Protocol_? = nil
 
-    /// Output only. [Output Only] URL of the region where the regional backend service
-    /// resides. This field is not applicable to global backend services.
-    /// You must specify this field as part of the HTTP request URL. It is
-    /// not settable as a field in the request body.
+    /// Output only. [Output Only] URL of the region where the regional backend service resides. This field is not applicable to global backend services. You must specify this field as part of the HTTP request URL. It is not settable as a field in the request body.
     public var region: Swift.String? = nil
 
-    /// [Output Only] The resource URL for the security policy associated with this
-    /// backend service.
+    /// [Output Only] The resource URL for the security policy associated with this backend service.
     public var securityPolicy: Swift.String? = nil
 
-    /// This field specifies the security settings that apply to this backend
-    /// service. This field is applicable to a global backend service with the
-    /// load_balancing_scheme set to INTERNAL_SELF_MANAGED.
+    /// This field specifies the security settings that apply to this backend service. This field is applicable to a global backend service with the load_balancing_scheme set to INTERNAL_SELF_MANAGED.
     public var securitySettings: SecuritySettings? = nil
 
     /// [Output Only] Server-defined URL for the resource.
     public var selfLink: Swift.String? = nil
 
-    /// URLs of networkservices.ServiceBinding resources.
-    ///
-    /// Can only be set if load balancing scheme is INTERNAL_SELF_MANAGED.
-    /// If set, lists of backends and health checks must be both empty.
+    /// URLs of networkservices.ServiceBinding resources. Can only be set if load balancing scheme is INTERNAL_SELF_MANAGED. If set, lists of backends and health checks must be both empty.
     public var serviceBindings: [Swift.String] = []
 
-    /// URL to networkservices.ServiceLbPolicy resource.
-    ///
-    /// Can only be set if load balancing scheme is EXTERNAL_MANAGED,
-    /// INTERNAL_MANAGED or INTERNAL_SELF_MANAGED and the scope is global.
+    /// URL to networkservices.ServiceLbPolicy resource. Can only be set if load balancing scheme is EXTERNAL_MANAGED, INTERNAL_MANAGED or INTERNAL_SELF_MANAGED for a global backend service, and EXTERNAL_MANAGED or INTERNAL_MANAGED for a regional backend service. For a global backend service, the service lb policy must be global. For a regional backend service, the service lb policy must be regional and in the same region.
     public var serviceLbPolicy: Swift.String? = nil
 
-    /// Type of session affinity to use. The default is NONE.
-    ///
-    /// Only NONE and HEADER_FIELD are supported
-    /// when the backend service is referenced by a URL map that is bound to
-    /// target gRPC proxy that has validateForProxyless field set to true.
-    ///
-    /// For more details, see:
-    /// [Session
-    /// Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity).
-    ///
-    /// sessionAffinity cannot be specified with haPolicy.
+    /// Type of session affinity to use. The default is NONE. Only NONE and HEADER_FIELD are supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. For more details, see: [Session Affinity](https://cloud.google.com/load-balancing/docs/backend-service#session_affinity). sessionAffinity cannot be specified with haPolicy.
     public var sessionAffinity: BackendService.SessionAffinity? = nil
 
-    /// Describes the HTTP cookie used for stateful session affinity. This field is
-    /// applicable and required if the sessionAffinity is set toSTRONG_COOKIE_AFFINITY.
+    /// Describes the HTTP cookie used for stateful session affinity. This field is applicable and required if the sessionAffinity is set to STRONG_COOKIE_AFFINITY.
     public var strongSessionAffinityCookie: BackendServiceHttpCookie? = nil
 
     /// subsetting cannot be specified with haPolicy.
     public var subsetting: Subsetting? = nil
 
-    /// The backend service timeout has a different meaning depending on the
-    /// type of load balancer. For more information see,
-    /// Backend service settings.
-    /// The default is 30 seconds.
-    /// The full range of timeout values allowed goes from 1
-    /// through 2,147,483,647 seconds.
-    ///
-    /// This value can be overridden in the PathMatcher configuration of the
-    /// UrlMap that references this backend service.
-    ///
-    /// Not supported when the backend service is referenced by a URL map that is
-    /// bound to target gRPC proxy that has validateForProxyless field set to true.
-    /// Instead, use maxStreamDuration.
+    /// The backend service timeout has a different meaning depending on the type of load balancer. For more information see, Backend service settings. The default is 30 seconds. The full range of timeout values allowed goes from 1 through 2,147,483,647 seconds. This value can be overridden in the PathMatcher configuration of the UrlMap that references this backend service. Not supported when the backend service is referenced by a URL map that is bound to target gRPC proxy that has validateForProxyless field set to true. Instead, use maxStreamDuration.
     public var timeoutSec: Swift.Int32? = nil
 
-    /// Configuration for Backend Authenticated TLS and mTLS. May only be specified
-    /// when the backend protocol is SSL, HTTPS or HTTP2.
+    /// Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend protocol is SSL, HTTPS or HTTP2.
     public var tlsSettings: BackendServiceTlsSettings? = nil
 
     /// Output only. [Output Only] List of resources referencing given backend service.
@@ -765,11 +414,9 @@
     ///
     /// [google.cloud.compute.v1.BackendService.compressionMode]: <doc:BackendService/CompressionMode>
     public enum CompressionMode: Codable, Equatable, Sendable {
-      /// Automatically uses the best compression based on the Accept-Encoding
-      /// header sent by the client.
+      /// Automatically uses the best compression based on the Accept-Encoding header sent by the client.
       case automatic
-      /// Disables compression. Existing compressed responses cached by
-      /// Cloud CDN will not be served to clients.
+      /// Disables compression. Existing compressed responses cached by Cloud CDN will not be served to clients.
       case disabled
       /// Encodes an unknown integer value.
       ///
@@ -971,21 +618,13 @@
     ///
     /// [google.cloud.compute.v1.BackendService.ipAddressSelectionPolicy]: <doc:BackendService/IpAddressSelectionPolicy>
     public enum IpAddressSelectionPolicy: Codable, Equatable, Sendable {
-      /// Only send IPv4 traffic to the backends of the Backend Service
-      /// (Instance Group, Managed Instance Group, Network Endpoint Group)
-      /// regardless of traffic from the client to the proxy.
-      /// Only IPv4 health-checks are used to check the health of the backends.
-      /// This is the default setting.
+      /// Only send IPv4 traffic to the backends of the Backend Service (Instance Group, Managed Instance Group, Network Endpoint Group) regardless of traffic from the client to the proxy. Only IPv4 health-checks are used to check the health of the backends. This is the default setting.
       case ipv4Only
-      /// Only send IPv6 traffic to the backends of the Backend Service
-      /// (Instance Group, Managed Instance Group, Network Endpoint Group)
-      /// regardless of traffic from the client to the proxy. Only IPv6
-      /// health-checks are used to check the health of the backends.
+      /// Only send IPv6 traffic to the backends of the Backend Service (Instance Group, Managed Instance Group, Network Endpoint Group) regardless of traffic from the client to the proxy. Only IPv6 health-checks are used to check the health of the backends.
       case ipv6Only
       /// Unspecified IP address selection policy.
       case unspecified
-      /// Prioritize the connection to the endpoints IPv6 address
-      /// over its IPv4 address (provided there is a healthy IPv6 address).
+      /// Prioritize the connection to the endpoints IPv6 address over its IPv4 address (provided there is a healthy IPv6 address).
       case preferIpv6
       /// Encodes an unknown integer value.
       ///
@@ -1093,16 +732,11 @@
     ///
     /// [google.cloud.compute.v1.BackendService.loadBalancingScheme]: <doc:BackendService/LoadBalancingScheme>
     public enum LoadBalancingScheme: Codable, Equatable, Sendable {
-      /// Signifies that this will be used for classic Application Load Balancers,
-      /// global external proxy Network Load Balancers,
-      /// or external passthrough Network Load Balancers.
+      /// Signifies that this will be used for classic Application Load Balancers, global external proxy Network Load Balancers, or external passthrough Network Load Balancers.
       case external
-      /// Signifies that this will be used for global external Application Load
-      /// Balancers, regional external Application Load Balancers, or regional
-      /// external proxy Network Load Balancers.
+      /// Signifies that this will be used for global external Application Load Balancers, regional external Application Load Balancers, or regional external proxy Network Load Balancers.
       case externalManaged
-      /// Signifies that this will be used for internal passthrough Network Load
-      /// Balancers.
+      /// Signifies that this will be used for internal passthrough Network Load Balancers.
       case `internal`
       /// Signifies that this will be used for internal Application Load Balancers.
       case internalManaged
@@ -1226,52 +860,23 @@
     /// [google.cloud.compute.v1.BackendService.localityLbPolicy]: <doc:BackendService/LocalityLbPolicy>
     public enum LocalityLbPolicy: Codable, Equatable, Sendable {
       case invalidLbPolicy
-      /// An O(1) algorithm which selects two random healthy hosts and
-      /// picks the host which has fewer active requests.
+      /// An O(1) algorithm which selects two random healthy hosts and picks the host which has fewer active requests.
       case leastRequest
-      /// This algorithm implements consistent hashing to backends. Maglev can be
-      /// used as a drop in replacement for the ring hash load balancer. Maglev is
-      /// not as stable as ring hash but has faster table lookup build times and
-      /// host selection times. For more information about Maglev, seeMaglev:
-      /// A Fast and Reliable Software Network Load Balancer.
+      /// This algorithm implements consistent hashing to backends. Maglev can be used as a drop in replacement for the ring hash load balancer. Maglev is not as stable as ring hash but has faster table lookup build times and host selection times. For more information about Maglev, see Maglev: A Fast and Reliable Software Network Load Balancer.
       case maglev
-      /// Backend host is selected based on the client connection metadata, i.e.,
-      /// connections are opened to the same address as the destination address of
-      /// the incoming connection before the connection was redirected to the load
-      /// balancer.
+      /// Backend host is selected based on the client connection metadata, i.e., connections are opened to the same address as the destination address of the incoming connection before the connection was redirected to the load balancer.
       case originalDestination
       /// The load balancer selects a random healthy host.
       case random
-      /// The ring/modulo hash load balancer implements consistent hashing to
-      /// backends. The algorithm has the property that the addition/removal
-      /// of a host from a set of N hosts only affects 1/N of the requests.
+      /// The ring/modulo hash load balancer implements consistent hashing to backends. The algorithm has the property that the addition/removal of a host from a set of N hosts only affects 1/N of the requests.
       case ringHash
-      /// This is a simple policy in which each healthy backend is selected
-      /// in round robin order. This is the default.
+      /// This is a simple policy in which each healthy backend is selected in round robin order. This is the default.
       case roundRobin
-      /// Per-instance weighted Load Balancing via health check reported weights.
-      /// In internal passthrough network load balancing, it is weighted
-      /// rendezvous hashing.
-      /// This option is only supported in internal passthrough network load
-      /// balancing.
+      /// Per-instance weighted Load Balancing via health check reported weights. In internal passthrough network load balancing, it is weighted rendezvous hashing. This option is only supported in internal passthrough network load balancing.
       case weightedGcpRendezvous
-      /// Per-instance weighted Load Balancing via health check reported weights.
-      /// If set, the Backend Service must configure a non legacy HTTP-based Health
-      /// Check, and health check replies are expected to contain non-standard HTTP
-      /// response header field X-Load-Balancing-Endpoint-Weight to specify the
-      /// per-instance weights.
-      /// If set, Load Balancing is weighted based on the
-      /// per-instance weights reported in the last processed health check replies,
-      /// as long as every instance either reported a valid weight or had
-      /// UNAVAILABLE_WEIGHT. Otherwise, Load Balancing remains equal-weight.
-      /// This option is only supported in Network Load Balancing.
+      /// Per-instance weighted Load Balancing via health check reported weights. If set, the Backend Service must configure a non legacy HTTP-based Health Check, and health check replies are expected to contain non-standard HTTP response header field X-Load-Balancing-Endpoint-Weight to specify the per-instance weights. If set, Load Balancing is weighted based on the per-instance weights reported in the last processed health check replies, as long as every instance either reported a valid weight or had UNAVAILABLE_WEIGHT. Otherwise, Load Balancing remains equal-weight. This option is only supported in Network Load Balancing.
       case weightedMaglev
-      /// Per-endpoint weighted round-robin Load Balancing using weights computed
-      /// from Backend reported Custom Metrics. If set, the Backend Service
-      /// responses are expected to contain non-standard HTTP response header field
-      /// Endpoint-Load-Metrics. The reported metrics
-      /// to use for computing the weights are specified via the
-      /// customMetrics fields.
+      /// Per-endpoint weighted round-robin Load Balancing using weights computed from Backend reported Custom Metrics. If set, the Backend Service responses are expected to contain non-standard HTTP response header field Endpoint-Load-Metrics. The reported metrics to use for computing the weights are specified via the customMetrics fields.
       case weightedRoundRobin
       /// Encodes an unknown integer value.
       ///
@@ -1423,8 +1028,7 @@
       case tcp
       /// UDP.
       case udp
-      /// If a Backend Service has UNSPECIFIED as its protocol, it can be used with
-      /// any L3/L4 Forwarding Rules.
+      /// If a Backend Service has UNSPECIFIED as its protocol, it can be used with any L3/L4 Forwarding Rules.
       case unspecified
       /// Encodes an unknown integer value.
       ///
@@ -1557,40 +1161,23 @@
     ///
     /// [google.cloud.compute.v1.BackendService.sessionAffinity]: <doc:BackendService/SessionAffinity>
     public enum SessionAffinity: Codable, Equatable, Sendable {
-      /// 2-tuple hash on packet's source and destination IP addresses. Connections
-      /// from the same source IP address to the same destination IP address will be
-      /// served by the same backend VM while that VM remains healthy.
+      /// 2-tuple hash on packet's source and destination IP addresses. Connections from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy.
       case clientIp
-      /// 1-tuple hash only on packet's source IP address. Connections from the
-      /// same source IP address will be served by the same backend VM while that VM
-      /// remains healthy. This option can only be used for Internal TCP/UDP
-      /// Load Balancing.
+      /// 1-tuple hash only on packet's source IP address. Connections from the same source IP address will be served by the same backend VM while that VM remains healthy. This option can only be used for Internal TCP/UDP Load Balancing.
       case clientIpNoDestination
-      /// 5-tuple hash on packet's source and destination IP addresses, IP protocol,
-      /// and source and destination ports. Connections for the same IP protocol
-      /// from the same source IP address and port to the same destination IP address
-      /// and port will be served by the same backend VM while that VM remains
-      /// healthy. This option cannot be used for HTTP(S) load balancing.
+      /// 5-tuple hash on packet's source and destination IP addresses, IP protocol, and source and destination ports. Connections for the same IP protocol from the same source IP address and port to the same destination IP address and port will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
       case clientIpPortProto
-      /// 3-tuple hash on packet's source and destination IP addresses, and IP
-      /// protocol. Connections for the same IP protocol from the same source IP
-      /// address to the same destination IP address will be served by the same
-      /// backend VM while that VM remains healthy. This option cannot be used for
-      /// HTTP(S) load balancing.
+      /// 3-tuple hash on packet's source and destination IP addresses, and IP protocol. Connections for the same IP protocol from the same source IP address to the same destination IP address will be served by the same backend VM while that VM remains healthy. This option cannot be used for HTTP(S) load balancing.
       case clientIpProto
-      /// Hash based on a cookie generated by the L7 loadbalancer.
-      /// Only valid for HTTP(S) load balancing.
+      /// Hash based on a cookie generated by the L7 loadbalancer. Only valid for HTTP(S) load balancing.
       case generatedCookie
       /// The hash is based on a user specified header field.
       case headerField
       /// The hash is based on a user provided cookie.
       case httpCookie
-      /// No session affinity. Connections from the same client IP may go
-      /// to any instance in the pool.
+      /// No session affinity. Connections from the same client IP may go to any instance in the pool.
       case `none`
-      /// Strong cookie-based affinity. Connections bearing the same cookie will be
-      /// served by the same backend VM while that VM remains healthy, as long as the
-      /// cookie has not expired.
+      /// Strong cookie-based affinity. Connections bearing the same cookie will be served by the same backend VM while that VM remains healthy, as long as the cookie has not expired.
       case strongCookieAffinity
       /// Encodes an unknown integer value.
       ///

@@ -43,8 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Create Interconnects with redundancy by creating them in a specified
-    /// interconnect group.
+    /// Create Interconnects with redundancy by creating them in a specified interconnect group.
     ///
     /// @Snippet(path: "interconnectGroups_createMembers")
     public func createMembers(
@@ -53,8 +52,7 @@
       try await self.inner.createMembers(request: request, options: options)
     }
 
-    /// Create Interconnects with redundancy by creating them in a specified
-    /// interconnect group.
+    /// Create Interconnects with redundancy by creating them in a specified interconnect group.
     ///
     /// @Snippet(path: "interconnectGroups_createMembers")
     public func createMembers(
@@ -153,8 +151,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Gets the access control policy for a resource. May be empty if no such
-    /// policy or resource exists.
+    /// Gets the access control policy for a resource. May be empty if no such policy or resource exists.
     ///
     /// @Snippet(path: "interconnectGroups_getIamPolicy")
     public func getIamPolicy(
@@ -163,8 +160,7 @@
       try await self.inner.getIamPolicy(request: request, options: options)
     }
 
-    /// Returns the interconnectStatuses for the specified
-    /// InterconnectGroup.
+    /// Returns the interconnectStatuses for the specified InterconnectGroup.
     ///
     /// @Snippet(path: "interconnectGroups_getOperationalStatus")
     public func getOperationalStatus(
@@ -174,8 +170,7 @@
       try await self.inner.getOperationalStatus(request: request, options: options)
     }
 
-    /// Creates a InterconnectGroup in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a InterconnectGroup in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "interconnectGroups_insert")
     public func insert(
@@ -184,8 +179,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a InterconnectGroup in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a InterconnectGroup in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "interconnectGroups_insert")
     public func insert(
@@ -249,10 +243,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Patches the specified InterconnectGroup resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified InterconnectGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnectGroups_patch")
     public func patch(
@@ -261,10 +252,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Patches the specified InterconnectGroup resource with the data included in
-    /// the request. This method supports PATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Patches the specified InterconnectGroup resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "interconnectGroups_patch")
     public func patch(
@@ -304,8 +292,7 @@
       )
     }
 
-    /// Sets the access control policy on the specified resource.
-    /// Replaces any existing policy.
+    /// Sets the access control policy on the specified resource. Replaces any existing policy.
     ///
     /// @Snippet(path: "interconnectGroups_setIamPolicy")
     public func setIamPolicy(

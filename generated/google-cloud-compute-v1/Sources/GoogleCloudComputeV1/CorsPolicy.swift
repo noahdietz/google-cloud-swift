@@ -18,55 +18,32 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The specification for allowing client-side cross-origin requests. For more
-  /// information about the W3C recommendation for cross-origin resource sharing
-  /// (CORS), see Fetch API Living
-  /// Standard.
+  /// The specification for allowing client-side cross-origin requests. For more information about the W3C recommendation for cross-origin resource sharing (CORS), see Fetch API Living Standard.
   public struct CorsPolicy: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// In response to a preflight request, setting this to true
-    /// indicates that
-    /// the actual request can include user credentials. This field translates to
-    /// the Access-Control-Allow-Credentials header.
-    ///
-    /// Default is false.
+    /// In response to a preflight request, setting this to true indicates that the actual request can include user credentials. This field translates to the Access-Control-Allow-Credentials header. Default is false.
     public var allowCredentials: Swift.Bool? = nil
 
-    /// Specifies the content for the Access-Control-Allow-Headers
-    /// header.
+    /// Specifies the content for the Access-Control-Allow-Headers header.
     public var allowHeaders: [Swift.String] = []
 
-    /// Specifies the content for the Access-Control-Allow-Methods
-    /// header.
+    /// Specifies the content for the Access-Control-Allow-Methods header.
     public var allowMethods: [Swift.String] = []
 
-    /// Specifies a regular expression that matches allowed origins. For
-    /// more information, see regular expression syntax.
-    ///
-    /// An origin is allowed if it matches either an item inallowOrigins or an item inallowOriginRegexes.
-    ///
-    /// Regular expressions can only be used when the loadBalancingScheme is
-    /// set to INTERNAL_SELF_MANAGED.
+    /// Specifies a regular expression that matches allowed origins. For more information, see regular expression syntax . An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes. Regular expressions can only be used when the loadBalancingScheme is set to INTERNAL_SELF_MANAGED.
     public var allowOriginRegexes: [Swift.String] = []
 
-    /// Specifies the list of origins that is allowed to do CORS requests.
-    ///
-    /// An origin is allowed if it matches either an item inallowOrigins or an item inallowOriginRegexes.
+    /// Specifies the list of origins that is allowed to do CORS requests. An origin is allowed if it matches either an item in allowOrigins or an item in allowOriginRegexes.
     public var allowOrigins: [Swift.String] = []
 
-    /// If true, disables the CORS policy.
-    /// The default value is false, which indicates that the CORS
-    /// policy is in effect.
+    /// If true, disables the CORS policy. The default value is false, which indicates that the CORS policy is in effect.
     public var disabled: Swift.Bool? = nil
 
-    /// Specifies the content for the Access-Control-Expose-Headers
-    /// header.
+    /// Specifies the content for the Access-Control-Expose-Headers header.
     public var exposeHeaders: [Swift.String] = []
 
-    /// Specifies how long results of a preflight request can be cached in
-    /// seconds. This field translates to the Access-Control-Max-Age
-    /// header.
+    /// Specifies how long results of a preflight request can be cached in seconds. This field translates to the Access-Control-Max-Age header.
     public var maxAge: Swift.Int32? = nil
 
     /// Initialize a new instance of `CorsPolicy`.

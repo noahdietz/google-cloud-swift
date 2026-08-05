@@ -22,10 +22,7 @@
       ._AnyPackable,
     Sendable
   {
-    /// The IP (in CIDR format or netmask) of internal addresses that are legal on
-    /// this Subnetwork. This range should be disjoint from other subnetworks
-    /// within this network. This range can only be larger than (i.e. a superset
-    /// of) the range previously defined before the update.
+    /// The IP (in CIDR format or netmask) of internal addresses that are legal on this Subnetwork. This range should be disjoint from other subnetworks within this network. This range can only be larger than (i.e. a superset of) the range previously defined before the update.
     public var ipCidrRange: Swift.String? = nil
 
     /// Initialize a new instance of `SubnetworksExpandIpCidrRangeRequest`.

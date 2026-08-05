@@ -18,15 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A specification of the parameters to use when creating the instance template
-  /// from a source instance.
+  /// A specification of the parameters to use when creating the instance template from a source instance.
   public struct SourceInstanceParams: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Attached disks configuration. If not provided, defaults are applied:
-    /// For boot disk and any other R/W disks, the source images for each disk
-    /// will be used. For read-only disks, they will be attached in read-only
-    /// mode. Local SSD disks will be created as blank volumes.
+    /// Attached disks configuration. If not provided, defaults are applied: For boot disk and any other R/W disks, the source images for each disk will be used. For read-only disks, they will be attached in read-only mode. Local SSD disks will be created as blank volumes.
     public var diskConfigs: [DiskInstantiationConfig] = []
 
     /// Initialize a new instance of `SourceInstanceParams`.

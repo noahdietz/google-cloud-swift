@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A message containing information about the resource or system that manages
-  /// the backend service.
+  /// A message containing information about the resource or system that manages the backend service.
   public struct BackendServiceOrchestrationInfo: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The resource URI of the resource or system that manages the backend
-    /// service.
+    /// The resource URI of the resource or system that manages the backend service.
     public var resourceUri: Swift.String? = nil
 
     /// Initialize a new instance of `BackendServiceOrchestrationInfo`.

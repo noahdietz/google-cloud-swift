@@ -21,28 +21,22 @@
   public struct HealthStatusForNetworkEndpoint: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// URL of the backend service associated with the health state of the network
-    /// endpoint.
+    /// URL of the backend service associated with the health state of the network endpoint.
     public var backendService: BackendServiceReference? = nil
 
-    /// URL of the forwarding rule associated with the health state of the network
-    /// endpoint.
+    /// URL of the forwarding rule associated with the health state of the network endpoint.
     public var forwardingRule: ForwardingRuleReference? = nil
 
-    /// URL of the health check associated with the health state of the network
-    /// endpoint.
+    /// URL of the health check associated with the health state of the network endpoint.
     public var healthCheck: HealthCheckReference? = nil
 
-    /// URL of the health check service associated with the health state of the
-    /// network endpoint.
+    /// URL of the health check service associated with the health state of the network endpoint.
     public var healthCheckService: HealthCheckServiceReference? = nil
 
-    /// Health state of the network endpoint determined based on the health checks
-    /// configured.
+    /// Health state of the network endpoint determined based on the health checks configured.
     public var healthState: HealthStatusForNetworkEndpoint.HealthState? = nil
 
-    /// Health state of the ipv6 network endpoint determined based on the health
-    /// checks configured.
+    /// Health state of the ipv6 network endpoint determined based on the health checks configured.
     public var ipv6HealthState: HealthStatusForNetworkEndpoint.Ipv6HealthState? = nil
 
     /// Initialize a new instance of `HealthStatusForNetworkEndpoint`.

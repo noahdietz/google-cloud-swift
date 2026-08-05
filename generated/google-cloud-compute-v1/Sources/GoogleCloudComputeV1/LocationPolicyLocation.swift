@@ -21,11 +21,10 @@
   public struct LocationPolicyLocation: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Constraints that the caller requires on the result distribution
-    /// in this zone.
+    /// Constraints that the caller requires on the result distribution in this zone.
     public var constraints: LocationPolicyLocationConstraints? = nil
 
-    /// Preference for a given location. Set to either ALLOW orDENY.
+    /// Preference for a given location. Set to either ALLOW or DENY.
     public var preference: LocationPolicyLocation.Preference? = nil
 
     /// Initialize a new instance of `LocationPolicyLocation`.

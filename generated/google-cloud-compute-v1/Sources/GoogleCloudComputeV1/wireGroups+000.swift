@@ -100,8 +100,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a wire group in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a wire group in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "wireGroups_insert")
     public func insert(
@@ -110,8 +109,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a wire group in the specified project in the given scope
-    /// using the parameters that are included in the request.
+    /// Creates a wire group in the specified project in the given scope using the parameters that are included in the request.
     ///
     /// @Snippet(path: "wireGroups_insert")
     public func insert(
@@ -174,10 +172,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Updates the specified wire group resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified wire group resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "wireGroups_patch")
     public func patch(
@@ -186,10 +181,7 @@
       try await self.inner.patch(request: request, options: options)
     }
 
-    /// Updates the specified wire group resource with the data included in the
-    /// request. This method supportsPATCH
-    /// semantics and usesJSON merge
-    /// patch format and processing rules.
+    /// Updates the specified wire group resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
     ///
     /// @Snippet(path: "wireGroups_patch")
     public func patch(

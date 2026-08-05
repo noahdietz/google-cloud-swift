@@ -18,153 +18,80 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Represents a Route resource.
-  ///
-  /// A route defines a path from VM instances in the VPC network to a specific
-  /// destination. This destination can be inside or outside the VPC network.
-  /// For more information, read theRoutes overview.
+  /// Represents a Route resource. A route defines a path from VM instances in the VPC network to a specific destination. This destination can be inside or outside the VPC network. For more information, read the Routes overview.
   public struct Route: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// Output only. [Output Only] AS path.
     public var asPaths: [RouteAsPath] = []
 
-    /// Output only. [Output Only] Creation timestamp inRFC3339
-    /// text format.
+    /// Output only. [Output Only] Creation timestamp in RFC3339 text format.
     public var creationTimestamp: Swift.String? = nil
 
-    /// An optional description of this resource. Provide this field when you
-    /// create the resource.
+    /// An optional description of this resource. Provide this field when you create the resource.
     public var description: Swift.String? = nil
 
-    /// The destination range of outgoing packets that this route applies to. Both
-    /// IPv4 and IPv6 are supported.
-    /// Must specify an IPv4 range (e.g. 192.0.2.0/24) or an IPv6 range in RFC 4291
-    /// format (e.g. 2001:db8::/32). IPv6 range will be displayed using RFC 5952
-    /// compressed format.
+    /// The destination range of outgoing packets that this route applies to. Both IPv4 and IPv6 are supported. Must specify an IPv4 range (e.g. 192.0.2.0/24) or an IPv6 range in RFC 4291 format (e.g. 2001:db8::/32). IPv6 range will be displayed using RFC 5952 compressed format.
     public var destRange: Swift.String? = nil
 
-    /// Output only. [Output Only] The unique identifier for the resource. This identifier is
-    /// defined by the server.
+    /// Output only. [Output Only] The unique identifier for the resource. This identifier is defined by the server.
     public var id: Swift.UInt64? = nil
 
-    /// Output only. [Output Only] Type of this resource. Always compute#routes for
-    /// Route resources.
+    /// Output only. [Output Only] Type of this resource. Always compute#routes for Route resources.
     public var kind: Swift.String? = nil
 
-    /// Name of the resource. Provided by the client when the resource is created.
-    /// The name must be 1-63 characters long, and comply withRFC1035.
-    /// Specifically, the name must be 1-63 characters long and match the regular
-    /// expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a
-    /// lowercase letter, and all following characters (except for the last
-    /// character) must be a dash, lowercase letter, or digit. The last character
-    /// must be a lowercase letter or digit.
+    /// Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all following characters (except for the last character) must be a dash, lowercase letter, or digit. The last character must be a lowercase letter or digit.
     public var name: Swift.String? = nil
 
     /// Fully-qualified URL of the network that this route applies to.
     public var network: Swift.String? = nil
 
-    /// The URL to a gateway that should handle matching packets.
-    /// You can only specify the internet gateway using a full or
-    /// partial valid URL: projects/project/global/gateways/default-internet-gateway
+    /// The URL to a gateway that should handle matching packets. You can only specify the internet gateway using a full or partial valid URL: projects/ project/global/gateways/default-internet-gateway
     public var nextHopGateway: Swift.String? = nil
 
-    /// Output only. [Output Only] The full resource name of the Network Connectivity Center hub
-    /// that will handle matching packets.
+    /// Output only. [Output Only] The full resource name of the Network Connectivity Center hub that will handle matching packets.
     public var nextHopHub: Swift.String? = nil
 
-    /// The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that should handle matching
-    /// packets or the IP address of the forwarding Rule.
-    /// For example, the following are all valid URLs:
-    ///
-    ///
-    ///       - https://www.googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/forwardingRule
-    ///    - regions/region/forwardingRules/forwardingRule
-    ///
-    ///
-    /// If an IP address is provided, must specify an IPv4 address in dot-decimal
-    /// notation or an IPv6 address in RFC 4291 format. For example, the following
-    /// are all valid IP addresses:
-    ///
-    ///
-    ///       - 10.128.0.56
-    ///       - 2001:db8::2d9:51:0:0
-    ///       - 2001:db8:0:0:2d9:51:0:0
-    ///
-    ///
-    /// IPv6 addresses will be displayed using RFC 5952 compressed format (e.g.
-    /// 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+    /// The URL to a forwarding rule of type loadBalancingScheme=INTERNAL that should handle matching packets or the IP address of the forwarding Rule. For example, the following are all valid URLs: - https://www.googleapis.com/compute/v1/projects/project/regions/region /forwardingRules/forwardingRule - regions/region/forwardingRules/forwardingRule If an IP address is provided, must specify an IPv4 address in dot-decimal notation or an IPv6 address in RFC 4291 format. For example, the following are all valid IP addresses: - 10.128.0.56 - 2001:db8::2d9:51:0:0 - 2001:db8:0:0:2d9:51:0:0 IPv6 addresses will be displayed using RFC 5952 compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
     public var nextHopIlb: Swift.String? = nil
 
-    /// The URL to an instance that should handle matching packets. You can specify
-    /// this as a full or partial URL.
-    /// For example:
-    /// https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
+    /// The URL to an instance that should handle matching packets. You can specify this as a full or partial URL. For example: https://www.googleapis.com/compute/v1/projects/project/zones/zone/instances/
     public var nextHopInstance: Swift.String? = nil
 
-    /// Output only. [Output only] Internal fixed region-to-region cost that Google Cloud
-    /// calculates based on factors such as network performance, distance, and
-    /// available bandwidth between regions.
+    /// Output only. [Output only] Internal fixed region-to-region cost that Google Cloud calculates based on factors such as network performance, distance, and available bandwidth between regions.
     public var nextHopInterRegionCost: Swift.UInt32? = nil
 
-    /// Output only. [Output Only] The URL to an InterconnectAttachment which is the next hop
-    /// for the route.
-    /// This field will only be populated for dynamic routes generated by
-    /// Cloud Router with a linked interconnectAttachment or the static route
-    /// generated by each L2 Interconnect Attachment.
+    /// Output only. [Output Only] The URL to an InterconnectAttachment which is the next hop for the route. This field will only be populated for dynamic routes generated by Cloud Router with a linked interconnectAttachment or the static route generated by each L2 Interconnect Attachment.
     public var nextHopInterconnectAttachment: Swift.String? = nil
 
-    /// The network IP address of an instance that should handle matching packets.
-    /// Both IPv6 address and IPv4 addresses are supported.
-    /// Must specify an IPv4 address in dot-decimal notation (e.g. 192.0.2.99) or
-    /// an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or
-    /// 2001:db8:0:0:2d9:51:0:0). IPv6 addresses will be displayed using RFC 5952
-    /// compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an
-    /// IPv4-mapped IPv6 address.
+    /// The network IP address of an instance that should handle matching packets. Both IPv6 address and IPv4 addresses are supported. Must specify an IPv4 address in dot-decimal notation (e.g. 192.0.2.99) or an IPv6 address in RFC 4291 format (e.g. 2001:db8::2d9:51:0:0 or 2001:db8:0:0:2d9:51:0:0). IPv6 addresses will be displayed using RFC 5952 compressed format (e.g. 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
     public var nextHopIp: Swift.String? = nil
 
-    /// Output only. [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates
-    /// the desirability of a particular route in a network.
+    /// Output only. [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates the desirability of a particular route in a network.
     public var nextHopMed: Swift.UInt32? = nil
 
     /// The URL of the local network if it should handle matching packets.
     public var nextHopNetwork: Swift.String? = nil
 
-    /// Output only. [Output Only] Indicates the origin of the route. Can be IGP
-    /// (Interior Gateway Protocol), EGP (Exterior Gateway Protocol),
-    /// or INCOMPLETE.
+    /// Output only. [Output Only] Indicates the origin of the route. Can be IGP (Interior Gateway Protocol), EGP (Exterior Gateway Protocol), or INCOMPLETE.
     public var nextHopOrigin: Route.NextHopOrigin? = nil
 
-    /// Output only. [Output Only] The network peering name that should handle matching packets,
-    /// which should conform to RFC1035.
+    /// Output only. [Output Only] The network peering name that should handle matching packets, which should conform to RFC1035.
     public var nextHopPeering: Swift.String? = nil
 
     /// The URL to a VpnTunnel that should handle matching packets.
     public var nextHopVpnTunnel: Swift.String? = nil
 
-    /// Input only. [Input Only] Additional params passed with the request, but not persisted
-    /// as part of resource payload.
+    /// Input only. [Input Only] Additional params passed with the request, but not persisted as part of resource payload.
     public var params: RouteParams? = nil
 
-    /// The priority of this route. Priority is used to break ties in cases
-    /// where there is more than one matching route of equal prefix length. In
-    /// cases where multiple routes have equal prefix length, the one with the
-    /// lowest-numbered priority value wins. The default value is `1000`. The
-    /// priority value must be from `0` to `65535`, inclusive.
+    /// The priority of this route. Priority is used to break ties in cases where there is more than one matching route of equal prefix length. In cases where multiple routes have equal prefix length, the one with the lowest-numbered priority value wins. The default value is `1000`. The priority value must be from `0` to `65535`, inclusive.
     public var priority: Swift.UInt32? = nil
 
-    /// [Output only] The status of the route. This status applies to
-    /// dynamic routes learned by Cloud Routers. It is also applicable to routes
-    /// undergoing migration.
+    /// [Output only] The status of the route. This status applies to dynamic routes learned by Cloud Routers. It is also applicable to routes undergoing migration.
     public var routeStatus: Route.RouteStatus? = nil
 
-    /// Output only. [Output Only] The type of this route, which can be one of the following
-    /// values:
-    /// - 'TRANSIT' for a transit route that this router learned from
-    /// another Cloud Router and will readvertise to one of its BGP peers
-    /// - 'SUBNET' for a route from a subnet of the VPC
-    /// - 'BGP' for a route learned from a BGP peer of this router
-    /// - 'STATIC' for a static route
+    /// Output only. [Output Only] The type of this route, which can be one of the following values: - 'TRANSIT' for a transit route that this router learned from another Cloud Router and will readvertise to one of its BGP peers - 'SUBNET' for a route from a subnet of the VPC - 'BGP' for a route learned from a BGP peer of this router - 'STATIC' for a static route
     public var routeType: Route.RouteType? = nil
 
     /// [Output Only] Server-defined fully-qualified URL for this resource.
@@ -173,8 +100,7 @@
     /// A list of instance tags to which this route applies.
     public var tags: [Swift.String] = []
 
-    /// Output only. [Output Only] If potential misconfigurations are detected for this
-    /// route, this field will be populated with warning messages.
+    /// Output only. [Output Only] If potential misconfigurations are detected for this route, this field will be populated with warning messages.
     public var warnings: [Route.Warnings] = []
 
     /// Initialize a new instance of `Route`.
@@ -199,19 +125,10 @@
     public struct Warnings: Codable, Equatable, GoogleCloudWkt._AnyPackable,
       Sendable
     {
-      /// [Output Only] A warning code, if applicable. For example, Compute
-      /// Engine returns NO_RESULTS_ON_PAGE if there
-      /// are no results in the response.
+      /// [Output Only] A warning code, if applicable. For example, Compute Engine returns NO_RESULTS_ON_PAGE if there are no results in the response.
       public var code: Route.Warnings.Code? = nil
 
-      /// [Output Only] Metadata about this warning in key:
-      /// value format. For example:
-      ///
-      /// "data": [
-      ///   {
-      ///    "key": "scope",
-      ///    "value": "zones/us-east1-d"
-      ///   }
+      /// [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key": "scope", "value": "zones/us-east1-d" }
       public var data: [Route.Warnings.Data] = []
 
       /// [Output Only] A human-readable description of the warning code.
@@ -239,13 +156,7 @@
       public struct Data: Codable, Equatable, GoogleCloudWkt._AnyPackable,
         Sendable
       {
-        /// [Output Only] A key that provides more detail on the warning being
-        /// returned. For example, for warnings where there are no results in a list
-        /// request for a particular zone, this key might be scope and
-        /// the key value might be the zone name. Other examples might be a key
-        /// indicating a deprecated resource and a suggested replacement, or a
-        /// warning about invalid network settings (for example, if an instance
-        /// attempts to perform IP forwarding but is not enabled for IP forwarding).
+        /// [Output Only] A key that provides more detail on the warning being returned. For example, for warnings where there are no results in a list request for a particular zone, this key might be scope and the key value might be the zone name. Other examples might be a key indicating a deprecated resource and a suggested replacement, or a warning about invalid network settings (for example, if an instance attempts to perform IP forwarding but is not enabled for IP forwarding).
         public var key: Swift.String? = nil
 
         /// [Output Only] A warning data value corresponding to the key.
@@ -282,76 +193,60 @@
       ///
       /// [google.cloud.compute.v1.Route.warnings.code]: <doc:Route/Warnings/Code>
       public enum Code: Codable, Equatable, Sendable {
-        /// Warning about failed cleanup of transient changes made by a failed
-        /// operation.
+        /// Warning about failed cleanup of transient changes made by a failed operation.
         case cleanupFailed
         /// A link to a deprecated resource was created.
         case deprecatedResourceUsed
-        /// When deploying and at least one of the resources has a type marked as
-        /// deprecated
+        /// When deploying and at least one of the resources has a type marked as deprecated
         case deprecatedTypeUsed
         /// The user created a boot disk that is larger than image size.
         case diskSizeLargerThanImageSize
-        /// When deploying and at least one of the resources has a type marked as
-        /// experimental
+        /// When deploying and at least one of the resources has a type marked as experimental
         case experimentalTypeUsed
         /// Warning that is present in an external api call
         case externalApiWarning
-        /// Warning that value of a field has been overridden.
-        /// Deprecated unused field.
+        /// Warning that value of a field has been overridden. Deprecated unused field.
         @available(*, deprecated)
         case fieldValueOverriden
         /// The operation involved use of an injected kernel, which is deprecated.
         case injectedKernelsDeprecated
-        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is
-        /// not of type HTTP/HTTPS/HTTP2.
+        /// A WEIGHTED_MAGLEV backend service is associated with a health check that is not of type HTTP/HTTPS/HTTP2.
         case invalidHealthCheckForDynamicWieghtedLb
         /// When deploying a deployment with a exceedingly large number of resources
         case largeDeploymentWarning
-        /// Resource can't be retrieved due to list overhead quota exceed
-        /// which captures the amount of resources filtered out by
-        /// user-defined list filter.
+        /// Resource can't be retrieved due to list overhead quota exceed which captures the amount of resources filtered out by user-defined list filter.
         case listOverheadQuotaExceed
         /// A resource depends on a missing type
         case missingTypeDependency
-        /// The route's nextHopIp address is not assigned to an instance on the
-        /// network.
+        /// The route's nextHopIp address is not assigned to an instance on the network.
         case nextHopAddressNotAssigned
         /// The route's next hop instance cannot ip forward.
         case nextHopCannotIpForward
-        /// The route's nextHopInstance URL refers to an instance that does not have an
-        /// ipv6 interface on the same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that does not have an ipv6 interface on the same network as the route.
         case nextHopInstanceHasNoIpv6Interface
         /// The route's nextHopInstance URL refers to an instance that does not exist.
         case nextHopInstanceNotFound
-        /// The route's nextHopInstance URL refers to an instance that is not on the
-        /// same network as the route.
+        /// The route's nextHopInstance URL refers to an instance that is not on the same network as the route.
         case nextHopInstanceNotOnNetwork
         /// The route's next hop instance does not have a status of RUNNING.
         case nextHopNotRunning
-        /// Error which is not critical. We decided to continue the process despite
-        /// the mentioned error.
+        /// Error which is not critical. We decided to continue the process despite the mentioned error.
         case notCriticalError
         /// No results are present on a particular list page.
         case noResultsOnPage
         /// Success is reported, but some results may be missing due to errors
         case partialSuccess
-        /// Quota information is not available to client requests (e.g:
-        /// regions.list).
+        /// Quota information is not available to client requests (e.g: regions.list).
         case quotaInfoUnavailable
-        /// The user attempted to use a resource that requires a TOS they have not
-        /// accepted.
+        /// The user attempted to use a resource that requires a TOS they have not accepted.
         case requiredTosAgreement
         /// Warning that a resource is in use.
         case resourceInUseByOtherResourceWarning
-        /// One or more of the resources set to auto-delete could not be deleted
-        /// because they were in use.
+        /// One or more of the resources set to auto-delete could not be deleted because they were in use.
         case resourceNotDeleted
         /// When a resource schema validation is ignored.
         case schemaValidationIgnored
-        /// Instance template used in instance group manager is valid as such, but
-        /// its application does not make a lot of sense, because it allows only
-        /// single instance in instance group.
+        /// Instance template used in instance group manager is valid as such, but its application does not make a lot of sense, because it allows only single instance in instance group.
         case singleInstancePropertyTemplate
         /// When undeclared properties in the schema are present
         case undeclaredProperties
@@ -709,15 +604,11 @@
     public enum RouteStatus: Codable, Equatable, Sendable {
       /// This route is processed and active.
       case active
-      /// The route is dropped due to the VPC exceeding the dynamic route limit.
-      ///  For dynamic route limit, please refer to the
-      /// Learned route example
+      /// The route is dropped due to the VPC exceeding the dynamic route limit. For dynamic route limit, please refer to the Learned route example
       case dropped
-      /// This route is processed but inactive due to failure from the backend. The
-      /// backend may have rejected the route
+      /// This route is processed but inactive due to failure from the backend. The backend may have rejected the route
       case inactive
-      /// This route is being processed internally. The status will change once
-      /// processed.
+      /// This route is being processed internally. The status will change once processed.
       case pending
       /// Encodes an unknown integer value.
       ///

@@ -49,8 +49,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Retrieves the specified Operations resource. Gets a list of operations
-    /// by making a `list()` request.
+    /// Retrieves the specified Operations resource. Gets a list of operations by making a `list()` request.
     ///
     /// @Snippet(path: "globalOrganizationOperations_get")
     public func `get`(
@@ -59,8 +58,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves a list of Operation resources contained within the specified
-    /// organization.
+    /// Retrieves a list of Operation resources contained within the specified organization.
     ///
     /// @Snippet(path: "globalOrganizationOperations_list")
     public func list(
@@ -70,8 +68,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of Operation resources contained within the specified
-    /// organization.
+    /// Retrieves a list of Operation resources contained within the specified organization.
     ///
     /// @Snippet(path: "globalOrganizationOperations_list")
     public func list(

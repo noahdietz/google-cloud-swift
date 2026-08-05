@@ -18,13 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// Configuration of logging on a health check. If logging is enabled, logs
-  /// will be exported to Stackdriver.
+  /// Configuration of logging on a health check. If logging is enabled, logs will be exported to Stackdriver.
   public struct HealthCheckLogConfig: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Indicates whether or not to export logs. This is false by default, which
-    /// means no health check logging will be done.
+    /// Indicates whether or not to export logs. This is false by default, which means no health check logging will be done.
     public var enable: Swift.Bool? = nil
 
     /// Initialize a new instance of `HealthCheckLogConfig`.

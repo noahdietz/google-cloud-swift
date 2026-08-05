@@ -38,10 +38,7 @@
       self.inner = inner
     }
 
-    /// Retrieves an aggregated list of storage pool types.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of storage pool types. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "storagePoolTypes_aggregatedList")
     public func aggregatedList(
@@ -50,10 +47,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves an aggregated list of storage pool types.
-    ///
-    /// To prevent failure, Google recommends that you set the
-    /// `returnPartialSuccess` parameter to `true`.
+    /// Retrieves an aggregated list of storage pool types. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
     ///
     /// @Snippet(path: "storagePoolTypes_aggregatedList")
     public func aggregatedList(
@@ -77,8 +71,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Retrieves a list of storage pool types available to the specified
-    /// project.
+    /// Retrieves a list of storage pool types available to the specified project.
     ///
     /// @Snippet(path: "storagePoolTypes_list")
     public func list(
@@ -87,8 +80,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Retrieves a list of storage pool types available to the specified
-    /// project.
+    /// Retrieves a list of storage pool types available to the specified project.
     ///
     /// @Snippet(path: "storagePoolTypes_list")
     public func list(

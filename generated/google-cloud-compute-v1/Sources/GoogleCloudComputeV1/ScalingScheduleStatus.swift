@@ -21,18 +21,10 @@
   public struct ScalingScheduleStatus: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// [Output Only] The last time the scaling schedule became active.
-    /// Note: this is a timestamp when a schedule actually became active, not when
-    /// it was planned to do so.
-    /// The timestamp is in RFC3339
-    /// text format.
+    /// [Output Only] The last time the scaling schedule became active. Note: this is a timestamp when a schedule actually became active, not when it was planned to do so. The timestamp is in RFC3339 text format.
     public var lastStartTime: Swift.String? = nil
 
-    /// [Output Only] The next time the scaling schedule is to become active.
-    /// Note: this is a timestamp when a schedule is planned to run, but the actual
-    /// time might be slightly different.
-    /// The timestamp is in RFC3339
-    /// text format.
+    /// [Output Only] The next time the scaling schedule is to become active. Note: this is a timestamp when a schedule is planned to run, but the actual time might be slightly different. The timestamp is in RFC3339 text format.
     public var nextStartTime: Swift.String? = nil
 
     /// [Output Only] The current state of a scaling schedule.
@@ -58,15 +50,13 @@
     ///
     /// [google.cloud.compute.v1.ScalingScheduleStatus.state]: <doc:ScalingScheduleStatus/State>
     public enum State: Codable, Equatable, Sendable {
-      /// The current autoscaling recommendation is influenced by this scaling
-      /// schedule.
+      /// The current autoscaling recommendation is influenced by this scaling schedule.
       case active
       /// This scaling schedule has been disabled by the user.
       case disabled
       /// This scaling schedule will never become active again.
       case obsolete
-      /// The current autoscaling recommendation is not influenced by this scaling
-      /// schedule.
+      /// The current autoscaling recommendation is not influenced by this scaling schedule.
       case ready
       /// Encodes an unknown integer value.
       ///

@@ -24,14 +24,12 @@
   {
     public var loadErrors: [Swift.String] = []
 
-    /// Whether the given UrlMap can be successfully loaded.
-    /// If false, 'loadErrors' indicates the reasons.
+    /// Whether the given UrlMap can be successfully loaded. If false, 'loadErrors' indicates the reasons.
     public var loadSucceeded: Swift.Bool? = nil
 
     public var testFailures: [TestFailure] = []
 
-    /// If successfully loaded, this field indicates whether the test passed.
-    /// If false, 'testFailures's indicate the reason of failure.
+    /// If successfully loaded, this field indicates whether the test passed. If false, 'testFailures's indicate the reason of failure.
     public var testPassed: Swift.Bool? = nil
 
     /// Initialize a new instance of `UrlMapValidationResult`.

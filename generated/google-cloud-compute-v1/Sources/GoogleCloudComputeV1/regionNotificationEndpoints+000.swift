@@ -43,8 +43,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Retrieves the list of all NotificationEndpoint resources,
-    /// regional and global, available to the specified project.
+    /// Retrieves the list of all NotificationEndpoint resources, regional and global, available to the specified project.
     ///
     /// @Snippet(path: "regionNotificationEndpoints_aggregatedList")
     public func aggregatedList(
@@ -54,8 +53,7 @@
       try await self.inner.aggregatedList(request: request, options: options)
     }
 
-    /// Retrieves the list of all NotificationEndpoint resources,
-    /// regional and global, available to the specified project.
+    /// Retrieves the list of all NotificationEndpoint resources, regional and global, available to the specified project.
     ///
     /// @Snippet(path: "regionNotificationEndpoints_aggregatedList")
     public func aggregatedList(
@@ -133,8 +131,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Create a NotificationEndpoint in the specified project in the given region
-    /// using the parameters that are included in the request.
+    /// Create a NotificationEndpoint in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionNotificationEndpoints_insert")
     public func insert(
@@ -144,8 +141,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Create a NotificationEndpoint in the specified project in the given region
-    /// using the parameters that are included in the request.
+    /// Create a NotificationEndpoint in the specified project in the given region using the parameters that are included in the request.
     ///
     /// @Snippet(path: "regionNotificationEndpoints_insert")
     public func insert(

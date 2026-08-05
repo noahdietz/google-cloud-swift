@@ -18,14 +18,11 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// A response containing the recommended way of creating the specified resources
-  /// in the future. It contains (will contain) multiple recommendations that can
-  /// be analyzed by the customer and the best one can be picked.
+  /// A response containing the recommended way of creating the specified resources in the future. It contains (will contain) multiple recommendations that can be analyzed by the customer and the best one can be picked.
   public struct CalendarModeAdviceResponse: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// Recommendations where, how and when to create the requested resources
-    /// in order to maximize their obtainability and minimize cost.
+    /// Recommendations where, how and when to create the requested resources in order to maximize their obtainability and minimize cost.
     public var recommendations: [CalendarModeRecommendation] = []
 
     /// Initialize a new instance of `CalendarModeAdviceResponse`.

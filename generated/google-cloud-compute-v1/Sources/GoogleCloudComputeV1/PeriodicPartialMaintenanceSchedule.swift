@@ -18,27 +18,22 @@
   import Foundation
   import GoogleCloudWkt
 
-  /// The periodic partial maintenance schedule includes 52 weeks worth of
-  /// maintenance windows.
-  /// LINT.IfChange(PeriodicPartialMaintenanceSchedule)
+  /// The periodic partial maintenance schedule includes 52 weeks worth of maintenance windows. LINT.IfChange(PeriodicPartialMaintenanceSchedule)
   public struct PeriodicPartialMaintenanceSchedule: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
     /// The maintenance type in which the zone is during the given window.
     public var subType: PeriodicPartialMaintenanceSchedule.SubType? = nil
 
-    /// The target resource that the maintenance window is for.
-    /// For example, "projects/my-project/zones/us-central1-a".
+    /// The target resource that the maintenance window is for. For example, "projects/my-project/zones/us-central1-a".
     public var targetResource: Swift.String? = nil
 
     public var type: PeriodicPartialMaintenanceSchedule.Type_? = nil
 
-    /// The end civil timestamp of the window (not inclusive).
-    /// This contains a time zone.
+    /// The end civil timestamp of the window (not inclusive). This contains a time zone.
     public var windowEndTime: DateTime? = nil
 
-    /// The start civil timestamp of the window.
-    /// This contains a time zone.
+    /// The start civil timestamp of the window. This contains a time zone.
     public var windowStartTime: DateTime? = nil
 
     /// Initialize a new instance of `PeriodicPartialMaintenanceSchedule`.
@@ -63,14 +58,11 @@
     public enum SubType: Codable, Equatable, Sendable {
       /// Default value.
       case maintenanceSubtypeUnspecified
-      /// A dedicated window for customers to perform their own maintenance. This
-      /// often runs concurrently with a DISRUPTIVE_UPGRADE.
+      /// A dedicated window for customers to perform their own maintenance. This often runs concurrently with a DISRUPTIVE_UPGRADE.
       case maintenanceTypeCustomerMaintenance
-      /// For disruptive updates, including host machine kernel or firmware
-      /// upgrades.
+      /// For disruptive updates, including host machine kernel or firmware upgrades.
       case maintenanceTypeDisruptiveUpgrade
-      /// A post-maintenance window for customers to conduct final testing and
-      /// performance validation before resuming full business operations.
+      /// A post-maintenance window for customers to conduct final testing and performance validation before resuming full business operations.
       case maintenanceTypeStable
       /// For preliminary, non-disruptive tasks such as key rotations.
       case maintenanceTypeTransition

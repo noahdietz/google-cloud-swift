@@ -21,8 +21,7 @@
   public struct ImageFamilyView: Codable, Equatable, GoogleCloudWkt._AnyPackable,
     Sendable
   {
-    /// The latest image that is part of the specified image family in the
-    /// requested location, and that is not deprecated.
+    /// The latest image that is part of the specified image family in the requested location, and that is not deprecated.
     public var image: Image? = nil
 
     /// Initialize a new instance of `ImageFamilyView`.

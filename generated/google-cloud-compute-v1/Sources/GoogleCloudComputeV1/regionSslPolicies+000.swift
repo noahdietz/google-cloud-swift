@@ -42,9 +42,7 @@
       self.pollingBackoffPolicy = options.pollingBackoffPolicy
     }
 
-    /// Deletes the specified SSL policy. The SSL policy resource can be deleted
-    /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
-    /// resources.
+    /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
     ///
     /// @Snippet(path: "regionSslPolicies_delete")
     public func delete(
@@ -53,9 +51,7 @@
       try await self.inner.delete(request: request, options: options)
     }
 
-    /// Deletes the specified SSL policy. The SSL policy resource can be deleted
-    /// only if it is not in use by any TargetHttpsProxy or TargetSslProxy
-    /// resources.
+    /// Deletes the specified SSL policy. The SSL policy resource can be deleted only if it is not in use by any TargetHttpsProxy or TargetSslProxy resources.
     ///
     /// @Snippet(path: "regionSslPolicies_delete")
     public func delete(
@@ -105,8 +101,7 @@
       try await self.inner.`get`(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project and region using the data
-    /// included in the request.
+    /// Creates a new policy in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionSslPolicies_insert")
     public func insert(
@@ -115,8 +110,7 @@
       try await self.inner.insert(request: request, options: options)
     }
 
-    /// Creates a new policy in the specified project and region using the data
-    /// included in the request.
+    /// Creates a new policy in the specified project and region using the data included in the request.
     ///
     /// @Snippet(path: "regionSslPolicies_insert")
     public func insert(
@@ -157,8 +151,7 @@
       )
     }
 
-    /// Lists all the SSL policies that have been configured for the specified
-    /// project and region.
+    /// Lists all the SSL policies that have been configured for the specified project and region.
     ///
     /// @Snippet(path: "regionSslPolicies_list")
     public func list(
@@ -167,8 +160,7 @@
       try await self.inner.list(request: request, options: options)
     }
 
-    /// Lists all the SSL policies that have been configured for the specified
-    /// project and region.
+    /// Lists all the SSL policies that have been configured for the specified project and region.
     ///
     /// @Snippet(path: "regionSslPolicies_list")
     public func list(
@@ -182,8 +174,7 @@
       return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
     }
 
-    /// Lists all features that can be specified in the SSL policy when using
-    /// custom profile.
+    /// Lists all features that can be specified in the SSL policy when using custom profile.
     ///
     /// @Snippet(path: "regionSslPolicies_listAvailableFeatures")
     public func listAvailableFeatures(
